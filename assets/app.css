@@ -1,0 +1,476 @@
+/* Visual language: a Malaysian statute reprint. Marginal section numbers on a
+   left rail, a narrow reading measure, hairline rules that carry structure
+   rather than decorate. */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --paper:  #FBFBF9;
+  --ink:    #1B2A3A;
+  --rule:   #D8D5CC;
+  --sage:   #2F6F62;
+  --oxide:  #9B3B32;
+  --muted:  #6E7278;
+  --raise:  #FFFFFF;
+
+  --serif: 'Spectral', Georgia, serif;
+  --sans:  'IBM Plex Sans', system-ui, sans-serif;
+
+  --rail: 5.5rem;
+  --measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14181D;
+    --ink:   #E6E4DE;
+    --rule:  #333A42;
+    --sage:  #6FB3A2;
+    --oxide: #D48279;
+    --muted: #969CA4;
+    --raise: #1B2026;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+a:hover { text-decoration-color: currentColor; }
+
+:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+
+/* ---------- shell ---------- */
+
+.shell { display: flex; min-height: 100vh; }
+
+.rail {
+  width: 15rem;
+  flex: 0 0 15rem;
+  border-right: 1px solid var(--rule);
+  padding: 2.5rem 1.25rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.rail h1 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 0.35rem;
+}
+
+.rail .sub { color: var(--muted); margin: 0 0 2rem; font-size: 0.78rem; line-height: 1.45; }
+
+.rail nav { display: flex; flex-direction: column; gap: 0.1rem; }
+
+.rail nav a {
+  padding: 0.4rem 0.5rem;
+  border-radius: 2px;
+  text-decoration: none;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.rail nav a:hover { background: var(--raise); color: var(--ink); }
+.rail nav a[aria-current='page'] { color: var(--ink); font-weight: 500; background: var(--raise); }
+
+.rail nav .badge {
+  font-variant-numeric: tabular-nums;
+  color: var(--oxide);
+  font-weight: 500;
+}
+
+.main { flex: 1 1 auto; padding: 3rem 2.5rem 6rem; min-width: 0; }
+.wrap { max-width: var(--measure); }
+.wrap--wide { max-width: 54rem; }
+
+/* ---------- typography ---------- */
+
+h2 { font-size: 1.6rem; font-weight: 600; line-height: 1.25; margin: 0 0 0.4rem; }
+h3 { font-family: var(--sans); font-size: 0.95rem; font-weight: 600; margin: 2.5rem 0 0.75rem; }
+p  { margin: 0 0 1rem; }
+.lede { color: var(--muted); margin: 0 0 2.5rem; }
+.small { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+/* ---------- arrangement of sections (home) ---------- */
+
+.arrangement { border-top: 1px solid var(--rule); margin-top: 1.5rem; }
+
+.arr-row {
+  display: grid;
+  grid-template-columns: var(--rail) 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+}
+.arr-row:hover { background: var(--raise); }
+
+.arr-num {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.arr-title { font-weight: 500; }
+.arr-meta { font-family: var(--sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+
+.arr-state {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.arr-state.is-due { color: var(--oxide); font-weight: 500; }
+.arr-state.is-clear { color: var(--sage); }
+
+.arr-row.is-locked { opacity: 0.55; }
+
+/* ---------- today ---------- */
+
+.today {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--sage);
+  background: var(--raise);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.today.has-due { border-left-color: var(--oxide); }
+.today p { margin: 0 0 0.75rem; }
+.today p:last-child { margin-bottom: 0; }
+
+/* ---------- buttons ---------- */
+
+button, .btn {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--rule);
+  background: var(--raise);
+  color: var(--ink);
+  border-radius: 2px;
+  cursor: pointer;
+}
+button:hover, .btn:hover { border-color: var(--ink); }
+button:disabled { opacity: 0.45; cursor: default; }
+
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-primary:hover { opacity: 0.88; }
+
+.btn-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+/* ---------- review ---------- */
+
+.review { max-width: 40rem; margin: 0 auto; }
+
+.review-progress {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+.card-face { min-height: 8rem; }
+.card-kind {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+.card-front { font-size: 1.35rem; line-height: 1.45; margin: 0 0 2rem; }
+
+.card-back {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+  font-size: 1.1rem;
+}
+.card-note {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+  border-left: 2px solid var(--rule);
+  padding-left: 0.85rem;
+  margin-top: 1.25rem;
+  line-height: 1.5;
+}
+.card-source { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); margin-top: 1.5rem; }
+
+.grades { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 2.5rem; }
+.grade { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.7rem 0.5rem; text-align: center; }
+.grade .g-label { font-weight: 500; }
+.grade .g-int { font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.grade[data-key='again'] { border-color: var(--oxide); }
+.grade[data-key='again'] .g-label { color: var(--oxide); }
+
+.keyhint { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 1.5rem; }
+
+/* ---------- books ---------- */
+
+.book { padding: 1.25rem 0; border-bottom: 1px solid var(--rule); }
+.book-title { font-weight: 600; }
+.book-byline { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); margin: 0.2rem 0 0.5rem; }
+.book-note { font-size: 0.95rem; margin: 0; }
+
+.flag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  margin-left: 0.4rem;
+  vertical-align: 0.15em;
+}
+.flag-unverified { color: var(--oxide); }
+.flag-stale { color: var(--oxide); }
+.flag-student { color: var(--sage); }
+.flag-free { color: var(--sage); }
+
+/* ---------- stats ---------- */
+
+/* Hairlines are drawn by the cells, not by letting a background show through a
+   1px gap. The gap technique paints every *empty* track in the last row as a
+   solid block of rule colour, which reads as a rendering fault — and a grid of
+   four or six stats leaves empty tracks at most widths. */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  margin: 1.5rem 0 2.5rem;
+}
+.stat {
+  background: var(--paper);
+  padding: 1rem 1.15rem;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.stat .n { font-family: var(--sans); font-size: 1.5rem; font-weight: 500; font-variant-numeric: tabular-nums; display: block; }
+.stat .k { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); }
+
+/* ---------- misc ---------- */
+
+.notice {
+  border: 1px solid var(--oxide);
+  border-left-width: 3px;
+  padding: 0.9rem 1.1rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+}
+
+.empty { color: var(--muted); padding: 3rem 0; }
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 2px;
+}
+
+/* ---------- problem questions ---------- */
+/* The facts are set as a statute's recitals: indented, ruled at the left, so
+   that what you are given is visually distinct from what you are asked. */
+
+.problem { max-width: 46rem; }
+.problem h4 { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; margin: 1.75rem 0 0.5rem; }
+
+.facts {
+  border-left: 2px solid var(--rule);
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+.facts p { margin: 0 0 0.9rem; }
+.facts .card-kind { margin-bottom: 1rem; }
+.facts .task {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.clock { font-variant-numeric: tabular-nums; }
+.clock.is-over { color: var(--oxide); font-weight: 500; }
+
+.answer {
+  width: 100%;
+  min-height: 24rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--rule);
+  background: var(--raise);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.75;
+  border-radius: 2px;
+  resize: vertical;
+}
+.answer:focus-visible { outline: 2px solid var(--sage); outline-offset: 2px; }
+
+.write-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.predict { margin: 2rem 0; }
+.predict label { display: block; font-family: var(--sans); font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; }
+.predict input {
+  font-family: var(--sans);
+  font-size: 1.6rem;
+  font-variant-numeric: tabular-nums;
+  width: 6rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--rule);
+  background: var(--raise);
+  color: var(--ink);
+  border-radius: 2px;
+}
+
+/* --- the rubric --- */
+
+.running {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.7rem 0;
+  margin: 2rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+.running #running { font-size: 1.25rem; font-weight: 500; color: var(--ink); }
+
+.crit { padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
+.crit-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.crit-marks { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.crit-text { margin: 0.6rem 0 0; }
+.crit-auth {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0.45rem 0 0;
+}
+
+.band {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 600;
+}
+.band-application, .band-conclusion { color: var(--oxide); }
+
+.credit { display: flex; gap: 0.4rem; margin-top: 0.9rem; }
+.credit button { font-size: 0.8rem; padding: 0.35rem 0.8rem; }
+.credit button.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.fold {
+  border-top: 1px solid var(--rule);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.fold > summary {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style-position: outside;
+}
+.fold[open] > summary { margin-bottom: 1rem; color: var(--muted); }
+.fold ul { padding-left: 1.1rem; }
+.fold li { margin-bottom: 0.5rem; }
+
+.answer-read {
+  white-space: pre-wrap;
+  border-left: 2px solid var(--rule);
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.source-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.25rem; }
+.source-note p { margin-bottom: 0.6rem; }
+
+/* --- band breakdown on the progress page --- */
+
+.bands { margin: 1rem 0 0; }
+.band-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr auto;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.band-name { font-family: var(--sans); font-size: 0.82rem; }
+.band-bar { height: 6px; background: var(--rule); display: block; }
+.band-bar i { display: block; height: 100%; background: var(--sage); }
+.band-num {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@media (max-width: 780px) {
+  .shell { flex-direction: column; }
+  .rail { width: auto; flex: none; height: auto; position: static; border-right: none; border-bottom: 1px solid var(--rule); padding: 1.5rem 1.25rem; }
+  .rail nav { flex-direction: row; flex-wrap: wrap; }
+  .main { padding: 2rem 1.25rem 4rem; }
+  .arr-row { grid-template-columns: 2.5rem 1fr; }
+  .arr-state { grid-column: 2; }
+  .grades { grid-template-columns: repeat(2, 1fr); }
+  .facts { padding-left: 1rem; }
+  .answer { min-height: 18rem; padding: 1rem; }
+  .band-row { grid-template-columns: 5rem 1fr; }
+  .band-num { grid-column: 2; }
+  :root { --rail: 2.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

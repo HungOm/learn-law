@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "note": "Problem questions for the substantive modules. Facts are hypothetical; the authorities are real and are named in each rubric criterion. Every problem carries a `verify` line naming what must be checked against a current source before the reasoning is relied on. The rubric is for self-marking; nothing here is an authority.",
+  "problems": [
+    {
+      "id": "ps-art10-01",
+      "moduleId": "m03-constitutional",
+      "title": "The statement likely to cause disquiet",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "Parliament enacts the Public Information (Amendment) Act 2026, a hypothetical statute. Section 4A makes it an offence, punishable by two years' imprisonment, to “publish any statement likely to cause public disquiet concerning the conduct of the police”. The long title says the Act is to preserve public order.",
+        "Aminah, a Malaysian citizen and a journalist, publishes a documented investigation into three deaths in police custody. Every fact in it is accurate. She is charged under s 4A.",
+        "The Deputy Public Prosecutor says that Article 10(2)(a) allows Parliament to impose such restrictions as it deems necessary or expedient in the interest of public order, that the word “deems” makes the question one for Parliament, and that the court's role is exhausted once the restriction is shown to fall under a permitted head."
+      ],
+      "task": "Advise Aminah on a constitutional challenge to s 4A. Address the Deputy Public Prosecutor's argument on the effect of the word “deems”.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Frames the issue as whether s 4A is a restriction Art 10(2)(a) permits, and how far the court may review Parliament's judgment that it is — not simply as whether free speech was infringed.",
+          "authority": "Federal Constitution, Art 10"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States Art 10(1)(a) as a right of citizens, and confirms Aminah qualifies. States Art 4(1): the Constitution is the supreme law and a law inconsistent with it is void to the extent of the inconsistency.",
+          "authority": "Federal Constitution, Arts 4(1), 10(1)(a)"
+        },
+        {
+          "id": "r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "Sets out Art 10(2)(a) and the closed list of permitted heads, and does not treat the list as open-ended.",
+          "authority": "Federal Constitution, Art 10(2)(a)"
+        },
+        {
+          "id": "r4",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States both sides of the authority: the deferential reading in Pung Chen Choon, and the reasonableness and proportionality reading in Sivarasa Rasiah, with Muhammad Hilman as an instance of a restriction actually struck down.",
+          "authority": "PP v Pung Chen Choon [1994] 1 MLJ 566 (FC); Sivarasa Rasiah v Badan Peguam Malaysia [2010] 2 MLJ 333 (FC); Muhammad Hilman bin Idham v Kerajaan Malaysia [2011] 6 MLJ 507 (CA)"
+        },
+        {
+          "id": "r5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Argues the head first: “public disquiet concerning the conduct of the police” is not public order. Disquiet is a state of opinion; public order is about disorder. A restriction that does not fall within a permitted head fails whatever the standard of review.",
+          "authority": "Art 10(2)(a)"
+        },
+        {
+          "id": "r6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Meets the “deems” argument rather than ignoring it: the word governs the necessity of the restriction, not whether it falls within a head at all, and Art 4(1) would be empty if Parliament's own characterisation were conclusive.",
+          "authority": "Art 4(1)"
+        },
+        {
+          "id": "r7",
+          "band": "application",
+          "marks": 1,
+          "criterion": "Takes the point that truth is no defence under s 4A, and uses it — a provision that catches accurate reporting is hard to justify as proportionate on any view.",
+          "authority": "—"
+        },
+        {
+          "id": "r8",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Advises realistically on the forum and the odds, and does not promise the challenge will succeed.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether s 4A is a restriction that Art 10(2)(a) authorises, and how far a court may go behind Parliament's own view that it is."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Article 10(1)(a) guarantees to every citizen the right to freedom of speech and expression. Aminah is a citizen, so the right is engaged; the qualification matters because Art 10(1)(a) is not a right of everyone.",
+            "Article 10(2)(a) permits Parliament to impose by law such restrictions as it deems necessary or expedient in the interest of the security of the Federation, friendly relations with other countries, public order or morality, and restrictions designed to protect the privileges of Parliament or to provide against contempt of court, defamation, or incitement to any offence. The list is closed.",
+            "Article 4(1) makes the Constitution the supreme law and any inconsistent law void to the extent of the inconsistency.",
+            "The authority pulls in two directions. In Pung Chen Choon the Federal Court took a deferential view, treating “deems necessary or expedient” as leaving the necessity of a restriction to Parliament, with the court asking whether the restriction falls within a permitted head. In Sivarasa Rasiah the Federal Court held that fundamental liberties are to be read generously and that restrictions must be reasonable, importing proportionality. In Muhammad Hilman the Court of Appeal applied that approach and struck down a statutory restriction on student political expression."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The strongest ground is the one that does not depend on which standard of review wins. Section 4A restricts speech “likely to cause public disquiet concerning the conduct of the police”. Public disquiet is a state of public opinion. Public order is the absence of disorder. A provision aimed at preventing people from becoming uneasy about the police is aimed at opinion, not at order, and it therefore does not fall within Art 10(2)(a) at all. A statute cannot bring itself within a permitted head by writing “public order” in the long title.",
+            "That is also the answer to the Deputy Public Prosecutor. “Deems necessary or expedient” goes to whether a restriction within a permitted head is needed. It does not make Parliament the judge of whether the head applies. If it did, Art 10(2) would impose no limit and Art 4(1) would have nothing to bite on, since every restriction would be validated by the legislature's own characterisation of it. Even on the deferential reading in Pung Chen Choon the court decides the head; deference operates inside it.",
+            "If the court reaches proportionality, Aminah's case is stronger still. Section 4A admits no defence of truth. It catches accurate reporting of deaths in custody — speech about the conduct of the State, which is the speech the guarantee most obviously exists to protect. On Sivarasa and Muhammad Hilman a restriction of that width is not a reasonable one, and it is not saved by a two-year penalty attached to publication alone.",
+            "The counter-argument should be faced. Pung Chen Choon is a Federal Court decision upholding a restriction on publication, and the prosecution will say Sivarasa concerned Art 10(1)(c) and Art 8 and did not displace it. The reply is that the two can be read together: the head question is for the court on either authority, and s 4A fails it."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Aminah has a real challenge. The best ground is that s 4A does not fall within any head permitted by Art 10(2)(a), with unreasonableness and disproportion as an alternative. Raise the constitutional point in the criminal proceedings and seek a reference of the constitutional question; do not advise her that the challenge is certain to succeed, because the deferential line of authority has not been overruled."
+          ]
+        }
+      ],
+      "traps": [
+        "Arguing only that the right was infringed. Article 10(1) is always infringed by a restriction; the question is whether Art 10(2) permits it.",
+        "Conceding the head because the long title says public order. The characterisation is for the court.",
+        "Forgetting that Art 10(1)(a) protects citizens only, and not checking that the client is one.",
+        "Citing Sivarasa as though it had overruled Pung Chen Choon. It did not, and a good answer holds both."
+      ],
+      "source": "Federal Constitution Arts 4(1), 10(1)(a), 10(2)(a); PP v Pung Chen Choon [1994] 1 MLJ 566 (FC); Sivarasa Rasiah v Badan Peguam Malaysia [2010] 2 MLJ 333 (FC); Muhammad Hilman bin Idham v Kerajaan Malaysia [2011] 6 MLJ 507 (CA).",
+      "lastVerified": "2026-09-07",
+      "verify": "Check all three citations in a report you can hold, and check whether any later Federal Court decision has resolved the tension between Pung Chen Choon and Sivarasa. This is a live area; the balance may have moved. Article 10(4) is not engaged on these facts but read it before relying on the answer elsewhere."
+    },
+    {
+      "id": "ps-homicide-01",
+      "moduleId": "m04-criminal-law",
+      "title": "One blow with a brass lamp",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "Hakim and Lim have been business partners for eleven years. Hakim comes to Lim's house to discuss a shortfall in the accounts. Lim, laughing, tells him that he has been taking money out of the company for two years, that there is nothing Hakim can do about it, and that Hakim's wife has known throughout and helped him hide it.",
+        "Hakim picks up a heavy brass lamp from the side table and strikes Lim once on the head. Lim falls and dies before the ambulance arrives.",
+        "The pathologist's evidence is that there was a single blow, that it fractured the skull, and that an injury of that kind is sufficient in the ordinary course of nature to cause death. There is no evidence that Hakim knew Lim had a thin skull or any other vulnerability.",
+        "Hakim's account in his cautioned statement is: “I did not plan anything. When he said that about my wife I saw red. I do not remember picking it up.”"
+      ],
+      "task": "Advise on Hakim's liability. Deal with the offence, with any exception he may rely on, and with the consequence if the exception succeeds.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies the structure: culpable homicide is the genus, murder is culpable homicide plus one of the s 300 limbs, and the exceptions reduce murder back to culpable homicide not amounting to murder.",
+          "authority": "Penal Code ss 299, 300"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States s 300(c) accurately: intention to cause the bodily injury actually caused, and that injury being sufficient in the ordinary course of nature to cause death.",
+          "authority": "Penal Code s 300(c)"
+        },
+        {
+          "id": "r3",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies the two limbs of s 300(c) separately, and identifies that the second limb is objective — it turns on the pathologist's evidence and not on what Hakim foresaw.",
+          "authority": "PP v Visuvanathan [1978] 1 MLJ 159, applying Virsa Singh"
+        },
+        {
+          "id": "r4",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Deals with the intention limb on the facts: a deliberate blow to the head with a heavy object supports an intention to cause that injury, and “I saw red” does not negate it.",
+          "authority": "—"
+        },
+        {
+          "id": "r5",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States Exception 1 to s 300 with its elements — grave and sudden provocation, deprivation of the power of self-control, and death caused to the person who gave the provocation — and notes that whether provocation was grave and sudden is a question of fact.",
+          "authority": "Penal Code s 300, Exception 1 and its Explanation"
+        },
+        {
+          "id": "r6",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Argues Exception 1 on the facts in both directions: gravity is arguable on the accusation about the wife; suddenness is the weaker limb because Hakim came to the house to discuss the accounts, and the prosecution will say the words were a revelation rather than a provocation.",
+          "authority": "—"
+        },
+        {
+          "id": "r7",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Reaches the right consequence if the exception succeeds: culpable homicide not amounting to murder under s 304, and identifies which limb of s 304 applies given the finding of intention.",
+          "authority": "Penal Code s 304(a)"
+        },
+        {
+          "id": "r8",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "States the sentencing position for murder with the correct caveat that the death penalty is no longer mandatory, without asserting the detail of the range from memory.",
+          "authority": "Penal Code s 302; Abolition of Mandatory Death Penalty Act 2023"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether Hakim committed murder, and whether the provocation exception reduces it."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Section 299 defines culpable homicide: causing death by an act done with the intention of causing death, or with the intention of causing such bodily injury as is likely to cause death, or with the knowledge that the act is likely to cause death. Section 300 defines when culpable homicide is murder, in four limbs. Section 300(c) is engaged where the act is done with the intention of causing bodily injury to any person, and the bodily injury intended to be inflicted is sufficient in the ordinary course of nature to cause death.",
+            "Section 300(c) has been read as two questions, the first subjective and the second objective: did the accused intend to inflict the injury that was in fact inflicted, and is that injury, objectively, sufficient in the ordinary course of nature to cause death. The accused's own view of how dangerous it was is irrelevant to the second.",
+            "Exception 1 to s 300 provides that culpable homicide is not murder if the offender, whilst deprived of the power of self-control by grave and sudden provocation, causes the death of the person who gave the provocation. The Explanation makes it a question of fact whether the provocation was grave and sudden enough to prevent the offence from being murder. The provisos exclude provocation sought or voluntarily provoked by the offender, provocation from an act done in obedience to the law, and provocation from an act done in the lawful exercise of the right of private defence."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Death was caused by Hakim's act, so culpable homicide under s 299 is made out.",
+            "On s 300(c), the first limb asks whether Hakim intended the injury he inflicted. He picked up a heavy brass lamp and struck Lim on the head. That supports an intention to cause a head injury of that kind. “I saw red” goes to self-control, not to whether the blow was aimed; and “I do not remember picking it up” is a claim about memory rather than about intention. The second limb is answered by the pathologist: an injury of that kind is sufficient in the ordinary course of nature to cause death. That Hakim did not appreciate this does not assist him, and the absence of any known vulnerability in Lim removes the argument that the death was attributable to something unforeseeable rather than to the injury. Section 300(c) is made out and the offence is prima facie murder.",
+            "Exception 1 is Hakim's real case. On gravity, being told in his own partner's house that the partner has stolen from him for two years and that his wife was complicit is capable of amounting to grave provocation, and the Explanation leaves that to the tribunal of fact. Words alone are not excluded.",
+            "Suddenness is weaker, and it is where the case will be lost or won. Hakim went to the house to discuss a shortfall in the accounts, so the theft was already suspected. The prosecution will say the theft was a confirmation rather than a shock, and that what was genuinely new — the allegation about his wife — was an assertion by a man he had just found out was a thief. Against that, the reaction was immediate, there was no interval in which passion could cool, the weapon was to hand rather than fetched, and there was one blow rather than a sustained attack. On the facts as given, the defence has a real argument on suddenness but not an easy one.",
+            "None of the provisos applies: Hakim did not provoke the statement, and Lim was not acting in obedience to law or in private defence."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "The prosecution can establish murder under s 300(c). Hakim's answer is Exception 1, which if accepted reduces the offence to culpable homicide not amounting to murder. Because the finding on s 300(c) is one of intention, the applicable limb is s 304(a) rather than the knowledge limb. On murder, the death penalty is no longer mandatory following the 2023 reform, so a plea in mitigation is worth making even on a murder conviction — but check the current sentencing provision before advising on the range."
+          ]
+        }
+      ],
+      "traps": [
+        "Running s 300(a) — intention to cause death — because someone died. On one blow with an object picked up in the moment, s 300(c) is the natural limb, and it is easier for the prosecution.",
+        "Arguing that Hakim did not realise the blow could kill. Under s 300(c) that is not the question.",
+        "Treating provocation as a defence that acquits. It reduces the offence; it does not answer it.",
+        "Assuming words cannot be provocation. Under the Explanation it is a question of fact.",
+        "Stating the murder sentence from memory. The mandatory death penalty was abolished in 2023 and the provision must be read as it now stands."
+      ],
+      "source": "Penal Code (Act 574) ss 299, 300 and Exception 1, 302, 304; PP v Visuvanathan [1978] 1 MLJ 159; Abolition of Mandatory Death Penalty Act 2023.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read ss 299, 300, 302 and 304 in a current reprint of Act 574 — the sentencing provisions were amended in 2023 and the ranges should not be quoted from memory. Confirm Visuvanathan's citation and check for a more recent Federal Court statement of the s 300(c) test."
+    },
+    {
+      "id": "ps-property-01",
+      "moduleId": "m04-criminal-law",
+      "title": "Three takings at the hardware shop",
+      "kind": "problem",
+      "minutes": 40,
+      "marks": 16,
+      "scenario": [
+        "Meera works as a cashier at a hardware shop. She is authorised to take payment from customers, issue receipts, and put the money in the till at the end of each transaction. Three things happen on the same Saturday.",
+        "(a) A customer pays her RM200 in cash for a set of tools. Meera issues no receipt, does not record the sale, and puts the RM200 in her own pocket.",
+        "(b) On her way out at closing time she takes a cordless drill from the display shelf, puts it in her bag, and leaves without paying. The shop has not consented.",
+        "(c) Earlier in the day she told a customer that the shop offers a delivery service for RM80. It does not. The customer paid her RM80 and she kept it.",
+        "She is arrested. The investigating officer proposes to charge all three as theft."
+      ],
+      "task": "Advise on the correct offence for each of (a), (b) and (c), and explain what distinguishes them. Say whether the investigating officer's proposal is right.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies the organising question as how possession was obtained in each case, rather than what was taken or how much.",
+          "authority": "—"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States s 378 theft: dishonestly taking movable property out of the possession of another, without that person's consent, and moving it in order to take it.",
+          "authority": "Penal Code s 378"
+        },
+        {
+          "id": "r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States s 405 criminal breach of trust: being entrusted with property or with dominion over it, and dishonestly misappropriating or converting it to one's own use.",
+          "authority": "Penal Code s 405"
+        },
+        {
+          "id": "r4",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States s 415 cheating: deceiving a person and thereby fraudulently or dishonestly inducing that person to deliver property, and identifies s 420 as the relevant punishment section where delivery is induced.",
+          "authority": "Penal Code ss 415, 420"
+        },
+        {
+          "id": "r5",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Classifies (a) as criminal breach of trust: Meera received the money lawfully in her capacity as cashier, so she was entrusted with it before she misappropriated it — there was no taking out of anyone's possession.",
+          "authority": "Penal Code s 405, and the aggravated form for a clerk or servant"
+        },
+        {
+          "id": "r6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Classifies (b) as theft: the drill was in the shop's possession, Meera was never entrusted with it, and she moved it dishonestly without consent.",
+          "authority": "Penal Code s 378"
+        },
+        {
+          "id": "r7",
+          "band": "application",
+          "marks": 1,
+          "criterion": "Classifies (c) as cheating: the customer parted with the money because of a deception, so consent was obtained rather than absent.",
+          "authority": "Penal Code ss 415, 420"
+        },
+        {
+          "id": "r8",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Answers the officer directly and gives the reason in one line: consent, and how possession passed, separate the three offences.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether all three takings are theft, and if not, what distinguishes them."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Section 378 defines theft: whoever, intending to take dishonestly any movable property out of the possession of any person without that person's consent, moves that property in order to such taking. The property must be taken out of another's possession, and it must be without consent.",
+            "Section 405 defines criminal breach of trust: whoever, being in any manner entrusted with property, or with any dominion over property, dishonestly misappropriates or converts it to his own use, or dishonestly uses or disposes of it in violation of any direction of law or legal contract. The offender begins with the property lawfully. Where the offender is a clerk or servant the offence is charged in its aggravated form.",
+            "Section 415 defines cheating: whoever, by deceiving any person, fraudulently or dishonestly induces the person so deceived to deliver any property to any person. Where the deception induces delivery, s 420 provides the punishment. Here the victim consents — but the consent is procured by deception."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "(a) Meera was authorised to take payment from customers. The RM200 therefore came into her hands lawfully, in her capacity as the shop's cashier; she held it for the shop. She did not take it out of anyone's possession, because she already had it. What she did was misappropriate property entrusted to her, which is criminal breach of trust under s 405, and as a servant of the shop it is the aggravated form. Failing to issue a receipt and failing to record the sale go to dishonesty and are strong evidence of it.",
+            "(b) The drill is different. It sat on the display shelf in the shop's possession. Meera was never entrusted with it — being a cashier does not put the stock in her hands. She moved it, dishonestly and without the shop's consent, in order to take it. That is theft under s 378.",
+            "(c) The RM80 is different again. The customer handed it over willingly. There was consent, so theft is out; and Meera was not entrusted with the money before it was paid, so criminal breach of trust is out. What made the customer part with it was a deception — a delivery service that does not exist. That is cheating, and because the deception induced delivery of property the charge falls under s 420."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "The investigating officer is wrong on two of the three. Only (b) is theft. (a) is criminal breach of trust and (c) is cheating. The distinguishing question in every case is how the accused came to have the property: taken from another's possession without consent is theft; received lawfully and then misappropriated is criminal breach of trust; obtained by consent procured through deception is cheating."
+          ]
+        }
+      ],
+      "traps": [
+        "Charging (a) as theft because the money belonged to the shop. Ownership is not the test — possession is, and Meera had it lawfully.",
+        "Charging (c) as theft because Meera ended up with money she was not entitled to. The customer consented; the vice is the deception, not the absence of consent.",
+        "Treating the cashier's authority as covering the stock. It covers the transactions she is authorised to handle and nothing else.",
+        "Forgetting the aggravated form of criminal breach of trust where the accused is a clerk or servant."
+      ],
+      "source": "Penal Code (Act 574) ss 378, 379, 405, 408, 415, 420.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read ss 378, 405, 408, 415 and 420 in a current reprint of Act 574 before relying on the section numbers for the aggravated forms and the punishment provisions. The classification reasoning is settled; the numbering is what to check."
+    },
+    {
+      "id": "ps-formation-01",
+      "moduleId": "m06-contract",
+      "title": "Two letters in the post",
+      "kind": "problem",
+      "minutes": 40,
+      "marks": 16,
+      "scenario": [
+        "On 3 March, Syarikat Bina Jaya Sdn Bhd posts a letter to Ravi, a sand supplier in Ipoh, offering to buy 200 tonnes of river sand at RM95 a tonne. The letter states: “This offer is open until 17 March.” Ravi receives it on 5 March.",
+        "On 10 March Bina Jaya's director changes his mind. He posts a letter to Ravi revoking the offer. It is delivered to Ravi's office on 12 March in the afternoon. Ravi is away at a site and does not read it until 14 March.",
+        "On 12 March at 9 in the morning, Ravi posts a letter accepting the offer. It reaches Bina Jaya on 14 March.",
+        "Bina Jaya now refuses to take the sand. It says the offer had been revoked before Ravi accepted, and that in any event Ravi read the revocation before Bina Jaya read the acceptance. Ravi says the offer was open until 17 March and could not be withdrawn."
+      ],
+      "task": "Advise Ravi whether there is a contract. Deal with both parties' arguments.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies the issue as when each communication became complete against the party it is being used against, not as who posted or read first.",
+          "authority": "Contracts Act 1950 s 4"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States s 4(2)(a): communication of an acceptance is complete as against the proposer when it is put in a course of transmission to him, so as to be out of the power of the acceptor.",
+          "authority": "Contracts Act 1950 s 4(2)(a)"
+        },
+        {
+          "id": "r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States s 4(3)(b): communication of a revocation is complete as against the person to whom it is made when it comes to his knowledge — not when it is delivered.",
+          "authority": "Contracts Act 1950 s 4(3)(b)"
+        },
+        {
+          "id": "r4",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States s 5(1): a proposal may be revoked at any time before the communication of its acceptance is complete as against the proposer, but not afterwards.",
+          "authority": "Contracts Act 1950 s 5(1)"
+        },
+        {
+          "id": "r5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies the sections to the dates and gets the order right: acceptance complete against Bina Jaya on 12 March when posted; revocation complete against Ravi on 14 March when read; so the revocation came too late.",
+          "authority": "—"
+        },
+        {
+          "id": "r6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Disposes of Ravi's own argument as well: a promise to keep an offer open is not binding without consideration, so Bina Jaya could have revoked in time. Ravi wins on the timing, not on the promise.",
+          "authority": "Macon Works & Trading Sdn Bhd v Phang Hon Chin [1976] 2 MLJ 177"
+        },
+        {
+          "id": "r7",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Concludes that a contract was formed on 12 March and advises on the practical consequence.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether Bina Jaya's revocation took effect before Ravi's acceptance was complete."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Section 4 of the Contracts Act 1950 fixes when a communication is complete, and it fixes different moments depending on whom the communication is being used against.",
+            "By s 4(2)(a), the communication of an acceptance is complete as against the proposer when it is put in a course of transmission to him, so as to be out of the power of the acceptor. By s 4(2)(b), it is complete as against the acceptor only when it comes to the knowledge of the proposer.",
+            "By s 4(3)(a), the communication of a revocation is complete as against the person who makes it when it is put into a course of transmission. By s 4(3)(b), it is complete as against the person to whom it is made when it comes to his knowledge.",
+            "By s 5(1), a proposal may be revoked at any time before the communication of its acceptance is complete as against the proposer, but not afterwards."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Take the acceptance first. Ravi posted it at 9am on 12 March. Under s 4(2)(a) it was complete as against Bina Jaya, the proposer, at that moment — when it left his hands. It does not matter that Bina Jaya did not receive it until 14 March.",
+            "Now the revocation. Bina Jaya is seeking to use it against Ravi, so the operative provision is s 4(3)(b): complete as against the person to whom it is made when it comes to his knowledge. Ravi did not read it until 14 March. Delivery to his office on the afternoon of 12 March is not knowledge, and s 4(3)(b) says knowledge.",
+            "Section 5(1) then decides the case. The proposal could be revoked at any time before communication of the acceptance was complete as against the proposer — that is, before 9am on 12 March. The revocation did not become effective against Ravi until 14 March. It was too late.",
+            "Bina Jaya's second argument, that Ravi read the revocation on 14 March before Bina Jaya read the acceptance on the same day, is beside the point. Section 4(2)(b) fixes when the acceptance binds the acceptor; it has nothing to do with whether the proposer may still revoke, which is governed by s 4(2)(a) and s 5(1).",
+            "Ravi's own argument should also be corrected, because it is wrong even though he wins. A promise to keep an offer open until a stated date is not binding without consideration: Macon Works & Trading Sdn Bhd v Phang Hon Chin. Had the revocation reached Ravi's knowledge on 11 March it would have been effective, and the words “open until 17 March” would not have saved him. He is protected by the postal rule in s 4(2)(a), not by the promise."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "A contract was formed at 9am on 12 March when Ravi posted his acceptance. The revocation was ineffective. Bina Jaya is in breach by refusing to take the sand, and Ravi may claim under s 74 for the loss naturally arising from the breach, subject to his duty to mitigate by reselling the sand if he can."
+          ]
+        }
+      ],
+      "traps": [
+        "Using one completion rule for everything. Section 4 gives different moments for acceptance and revocation, and different moments depending on which party the communication is used against.",
+        "Treating delivery to the office as communication of the revocation. Section 4(3)(b) says knowledge.",
+        "Accepting Ravi's argument that the offer could not be withdrawn before 17 March. It could; he simply won the race.",
+        "Comparing the two 14 March events as though the later reader loses. That is not what any of the subsections says."
+      ],
+      "source": "Contracts Act 1950 (Act 136) ss 4, 5(1), 6, 74; Macon Works & Trading Sdn Bhd v Phang Hon Chin [1976] 2 MLJ 177.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read ss 4 and 5 in a current reprint of Act 136 and check the subsection lettering against your text before relying on it. Confirm the Macon Works citation."
+    },
+    {
+      "id": "ps-consideration-01",
+      "moduleId": "m06-contract",
+      "title": "Three promises Aishah has not kept",
+      "kind": "problem",
+      "minutes": 40,
+      "marks": 16,
+      "scenario": [
+        "Three separate promises, all made by or to Aishah.",
+        "(a) Aishah's dog went missing. Her neighbour Chong found it wandering two streets away and brought it back. Nobody had asked him to. A week later Aishah wrote and signed a note: “Thank you for finding Bobo. I will pay you RM500.” She has not paid. Chong sues.",
+        "(b) Aishah's father told her, in front of the family at dinner, that he would give her RM20,000 “out of natural love and affection” when she finished her degree. Nothing was written down. She finished the degree. He has not paid. Aishah wants to sue.",
+        "(c) Aishah borrowed RM3,000 from Devi in 2018 and never repaid it. The limitation period has expired. In 2025 Aishah signed a note reading: “I acknowledge that I owe Devi RM3,000 and I will pay it.” She has not paid. Devi sues.",
+        "A junior advises that all three promises fail for want of consideration, on the grounds that a past act is not consideration, that a family promise is not intended to create legal relations, and that a time-barred debt is unenforceable."
+      ],
+      "task": "Advise on each promise. Say where the junior is right and where the junior has applied English law to a Malaysian statute.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Recognises that consideration in Malaysia is defined by statute and that the English rules cannot be assumed to carry over.",
+          "authority": "Contracts Act 1950 ss 2(d), 26"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "Quotes or accurately paraphrases s 2(d), and draws out the two features that differ from English law: the act may be one the promisee 'has done', and it may be done by the promisee 'or any other person'.",
+          "authority": "Contracts Act 1950 s 2(d)"
+        },
+        {
+          "id": "r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States s 26 and its three exceptions with their formalities: near relation with natural love and affection requires writing and registration; compensation for a voluntary past act; and a written signed promise to pay a statute-barred debt.",
+          "authority": "Contracts Act 1950 s 26(a), (b), (c)"
+        },
+        {
+          "id": "r4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Advises that (a) succeeds, and gives both routes: past consideration is good consideration under s 2(d), and s 26(b) independently saves a promise to compensate for something already voluntarily done.",
+          "authority": "s 2(d); s 26(b); Kepong Prospecting Ltd v Schmidt [1968] 1 MLJ 170 (PC)"
+        },
+        {
+          "id": "r5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Advises that (b) fails, and fails on the formality rather than on intention: s 26(a) requires writing and registration, and the promise was oral.",
+          "authority": "Contracts Act 1950 s 26(a)"
+        },
+        {
+          "id": "r6",
+          "band": "application",
+          "marks": 1,
+          "criterion": "Advises that (c) succeeds under s 26(c), the promise being in writing and signed by the person to be charged.",
+          "authority": "Contracts Act 1950 s 26(c)"
+        },
+        {
+          "id": "r7",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Answers the junior specifically, naming which of the three propositions is an English rule that s 2(d) displaces.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether each promise is supported by consideration, or falls within an exception to the requirement."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Section 2(d) of the Contracts Act 1950 defines consideration: when, at the desire of the promisor, the promisee or any other person has done or abstained from doing, or does or abstains from doing, or promises to do or to abstain from doing, something, such act or abstinence or promise is called a consideration for the promise. Two things follow that English law does not give. Consideration may be past — the definition says “has done”. And it need not move from the promisee — the definition says “the promisee or any other person”.",
+            "Section 26 provides that an agreement made without consideration is void, unless it falls within one of three exceptions: (a) it is in writing and registered, and made on account of natural love and affection between parties standing in a near relation to each other; (b) it is a promise to compensate, wholly or in part, a person who has already voluntarily done something for the promisor; or (c) it is a promise, in writing and signed by the person to be charged, to pay wholly or in part a debt of which the creditor might have enforced payment but for the law of limitation.",
+            "Explanation 2 to s 26 adds that an agreement is not void merely because the consideration is inadequate, though inadequacy may be evidence on the question of free consent."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "(a) Chong found the dog before any promise was made, so on English principles this is past consideration and would fail. It does not fail here. Section 2(d) expressly includes an act the promisee “has done”, and the Privy Council in Kepong Prospecting Ltd v Schmidt treated services rendered before the agreement as good consideration under that definition. There is also an independent route: Chong acted voluntarily and for Aishah's benefit, and s 26(b) saves a promise to compensate a person who has already voluntarily done something for the promisor. Chong should succeed. The requirement in s 2(d) that the act be “at the desire of the promisor” is the point to watch, since Chong was not asked — which is why s 26(b) is the safer of the two arguments and should be pleaded first.",
+            "(b) The father's promise is unsupported by consideration in the ordinary sense: finishing a degree she was going to finish anyway was not requested as the price of the promise. It must therefore come within an exception, and the only candidate is s 26(a). That exception has two limbs and both must be satisfied — natural love and affection between parties in a near relation, and writing and registration. Father and daughter are in a near relation and the words “out of natural love and affection” are as clear as they could be. But the promise was made orally at dinner and nothing was written down, let alone registered. It fails on the formality. Aishah cannot sue.",
+            "(c) The debt is time-barred, so Devi could not have sued on the loan. Aishah's note of 2025 is a promise to pay a debt of which the creditor might have enforced payment but for the law of limitation, it is in writing, and it is signed by the person to be charged. It falls squarely within s 26(c) and Devi may enforce it."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "(a) succeeds, (b) fails, (c) succeeds. The junior is right about (b), though for the wrong reason: it fails on the writing and registration required by s 26(a), not on intention to create legal relations. The junior is wrong about (a) and (c). The proposition that a past act is not consideration is English law; s 2(d) says otherwise, and it is the section that governs. The proposition that a statute-barred debt is unenforceable ignores s 26(c), which exists precisely for this case."
+          ]
+        }
+      ],
+      "traps": [
+        "Importing the English rule against past consideration. Section 2(d) says “has done”, and the statute displaces the English position.",
+        "Failing s 26(a) on intention to create legal relations rather than on the missing formality. The Act gives a formality; use it.",
+        "Forgetting that s 26(a) needs registration as well as writing. Writing alone is not enough.",
+        "Missing that s 2(d) also allows consideration to move from a person other than the promisee — not in issue here, but the other half of the same sentence."
+      ],
+      "source": "Contracts Act 1950 (Act 136) ss 2(d), 26 and Explanation 2; Kepong Prospecting Ltd v Schmidt [1968] 1 MLJ 170 (PC).",
+      "lastVerified": "2026-09-07",
+      "verify": "Read s 26 and its exceptions in a current reprint of Act 136 — the registration requirement in exception (a) and the exact wording of (c) are what the answer turns on. Confirm the Kepong Prospecting citation and read what it actually decided about s 2(d), since the case is more often cited for privity."
+    }
+  ]
+}

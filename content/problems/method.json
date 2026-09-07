@@ -1,0 +1,514 @@
+{
+  "schemaVersion": 1,
+  "note": "Problem questions for the method modules. Facts are hypothetical unless a real case is named. Every problem carries the authorities its rubric relies on and a `verify` line naming what must be checked against a current source. The rubric is for self-marking; nothing here is an authority.",
+  "bands": {
+    "issue": "Did you find the question the facts actually raise?",
+    "rule": "Did you state the governing rule, with its source, accurately?",
+    "application": "Did you apply the rule to these facts rather than restate it?",
+    "conclusion": "Did you answer the question that was asked?",
+    "method": "Did you work in the right order?"
+  },
+  "problems": [
+    {
+      "id": "pm-ratio-01",
+      "moduleId": "m00-foundations",
+      "title": "What the drainage case decides",
+      "kind": "analysis",
+      "minutes": 30,
+      "marks": 12,
+      "scenario": [
+        "The following is a hypothetical Court of Appeal judgment, written for this exercise. Puan Tan owns a shop lot. The local authority had for years maintained the storm drain running behind the row of shops. It stopped clearing the drain, the drain blocked, and floodwater ruined Puan Tan's stock. She sued in negligence and succeeded at first instance. The Court of Appeal dismissed the authority's appeal. Four passages from the leading judgment:",
+        "(1) “A public authority which has in fact assumed the task of maintaining a drainage system owes a duty of care to occupiers whose property is foreseeably at risk if that task is abandoned without warning. On these facts the duty was owed, and it was breached.”",
+        "(2) “Had the respondent's loss been purely economic — lost trade, say, with no damage to goods or premises — different considerations would arise. We have not heard argument on the point and express no view upon it.”",
+        "(3) “We would add that the statutory protection in the Street, Drainage and Building Act 1974 was not pleaded before us, and we say nothing about whether it would have availed the appellant.”",
+        "(4) “The appellant's submission that it lacked the funds to clear the drain is, in our judgment, irrelevant. A want of resources is no answer to a duty the authority has already taken upon itself.”"
+      ],
+      "task": "State the ratio decidendi of the case. Identify which passages are obiter and say why. Then advise a High Court judge who is hearing a claim by a neighbouring shopkeeper for lost trade only, with no physical damage, on how far this decision binds them.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Frames the exercise as separating the proposition the decision actually rested on from statements not necessary to it — not as summarising the case.",
+          "authority": "Ratio decidendi / obiter dictum"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States the test: the ratio is the rule the court applied to the material facts to reach its result; a statement is obiter if the outcome would stand without it.",
+          "authority": "Standard common law doctrine"
+        },
+        {
+          "id": "r3",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Identifies passage (1) as the ratio — an assumed task of maintenance gives rise to a duty to foreseeably affected occupiers — and formulates it at a workable level of generality rather than reciting the passage.",
+          "authority": "Passage (1)"
+        },
+        {
+          "id": "r4",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Treats passage (4) as part of the ratio, not obiter, giving the reason: the lack of funds was argued and had to be rejected for the appeal to fail.",
+          "authority": "Passage (4)"
+        },
+        {
+          "id": "r5",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Identifies (2) and (3) as obiter, and notes that both are expressly reserved — the court says it heard no argument, which is the clearest possible marker.",
+          "authority": "Passages (2) and (3)"
+        },
+        {
+          "id": "r6",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Concludes that the High Court is bound by the ratio but that the case decides nothing about pure economic loss; passage (2) is persuasive at most, and arguably not even that.",
+          "authority": "Court of Appeal binds the High Court"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Which proposition in the judgment was necessary to the result, and what is left for a later court to decide."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "The ratio decidendi is the rule of law the court applied to the material facts in order to reach its decision. A statement is obiter dictum if the result would have been the same without it. The test is necessity, not emphasis: a long passage can be obiter and a single sentence can be the ratio."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Passage (1) is the ratio. The authority had assumed the task of maintaining the drain; it abandoned it; Puan Tan's property was foreseeably at risk; the duty was owed and breached. Every element of the result rests on that proposition, and stated at a usable level of generality it is: a public authority that has in fact assumed a maintenance task owes a duty of care to occupiers foreseeably at risk if it abandons the task without warning.",
+            "Passage (4) is also part of the ratio, and it is the passage most often mis-sorted. The authority argued that it had no funds. If that argument were good the appeal would have succeeded, so rejecting it was necessary to the outcome. It is a second limb of the ratio, not a remark.",
+            "Passages (2) and (3) are obiter, and the court has said so in terms. On pure economic loss it states that it has heard no argument and expresses no view. On the statutory protection it notes the point was not pleaded and says nothing about its effect. A court that expressly declines to decide a point has not decided it, however suggestive its language.",
+            "For the neighbouring shopkeeper, the claim is for lost trade with no physical damage. That is precisely the case passage (2) reserved. The Court of Appeal's decision binds the High Court on the ratio — the assumed-task duty and the irrelevance of resources — but the ratio was reached on facts involving physical damage to goods, and the court flagged the distinction itself."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "The High Court judge is bound by passages (1) and (4). On pure economic loss the case is not authority either way; passage (2) is at most a signal that the point is open, and the judge must decide it on principle and on whatever other authority exists. Citing passage (2) as though it decided anything would be an error."
+          ]
+        }
+      ],
+      "traps": [
+        "Treating the resources point as obiter because it reads like an aside. It was argued and rejected; the appeal turned on it.",
+        "Reading passage (2) as authority that pure economic loss is not recoverable. It is authority for nothing — the court reserved the point.",
+        "Stating the ratio at the level of the facts (“the council is liable for the blocked drain”). A ratio that only fits one case binds no later one."
+      ],
+      "source": "Hypothetical facts. The doctrine is standard common law; no Malaysian statute is engaged.",
+      "lastVerified": "2026-09-07",
+      "verify": "Nothing here needs a citator. If you extend the exercise to the Street, Drainage and Building Act 1974 point, check the current text of that Act."
+    },
+    {
+      "id": "pm-sources-01",
+      "moduleId": "m00-foundations",
+      "title": "Which source governs",
+      "kind": "problem",
+      "minutes": 40,
+      "marks": 16,
+      "scenario": [
+        "You are asked to advise on two unrelated matters in the same afternoon.",
+        "First: a dispute in Negeri Sembilan over ancestral land held under adat perpatih. The parties are Malays of the same tribe. One side says the land descends through the female line under the adat; the other says the ordinary rules of inheritance in the Distribution Act 1958 should apply. There is no statute directly resolving the conflict on the facts you are given.",
+        "Second: a commercial agency dispute. There is no Malaysian decision on the precise point. There is an English Court of Appeal decision from 1950 that is squarely on point, and a decision of the English Court of Appeal from 1990 that reaches the opposite conclusion and describes the 1950 case as “no longer good law in this country”.",
+        "The junior drafting the opinion has cited the 1990 English decision as though it were binding."
+      ],
+      "task": "Advise on the sources of law that govern each matter, and correct the junior. Deal specifically with the status of the two English decisions.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Separates the two questions: what counts as law in Malaysia at all, and what weight an English decision carries once it does.",
+          "authority": "Art 160(2); Civil Law Act 1956 s 3"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "Cites Art 160(2) of the Federal Constitution: “law” includes written law, the common law so far as it is in operation, and any custom or usage having the force of law.",
+          "authority": "Federal Constitution, Art 160(2)"
+        },
+        {
+          "id": "r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States s 3(1) of the Civil Law Act 1956 accurately, including the cut-off date for West Malaysia (7 April 1956) and the qualification that it applies only so far as local circumstances and the inhabitants permit.",
+          "authority": "Civil Law Act 1956, s 3(1)(a)"
+        },
+        {
+          "id": "r4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies Art 160(2) to the adat: a custom with the force of law is law, and the adat perpatih is applied by the civil courts rather than displaced by the general law of distribution.",
+          "authority": "Art 160(2); customary tenure legislation of Negeri Sembilan"
+        },
+        {
+          "id": "r5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies the cut-off to the two English cases: the 1950 decision is within the s 3 reception; the 1990 decision is after it and is at most persuasive, whatever it says about English law.",
+          "authority": "Civil Law Act 1956, s 3(1)(a)"
+        },
+        {
+          "id": "r6",
+          "band": "application",
+          "marks": 1,
+          "criterion": "Notes the honest complication: Malaysian courts do in practice cite post-1956 English authority as persuasive, and some judgments treat later English cases as declaring what the common law always was.",
+          "authority": "Practice; contested"
+        },
+        {
+          "id": "r7",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Concludes without overstating: the junior's citation is not wrong to make, but it is wrong to make as though it bound the court.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Two questions. What sources are law in Malaysia for a matter of custom, and how far the English common law is received for a matter on which there is no local authority."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Article 160(2) of the Federal Constitution defines “law” as including written law, the common law in so far as it is in operation in the Federation or any part of it, and any custom or usage having the force of law. Custom is therefore not an inferior source that yields to statute by default; it is law.",
+            "Section 3(1) of the Civil Law Act 1956 provides that the court shall apply the common law of England and the rules of equity as administered in England on 7 April 1956 for West Malaysia (1 December 1951 for Sabah, 12 December 1949 for Sarawak), so far only as the circumstances of the States and their inhabitants permit and subject to such qualifications as local circumstances render necessary. Section 6 excludes English land law."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "On the first matter, adat perpatih is a custom having the force of law in Negeri Sembilan and falls within Art 160(2). It is applied by the civil courts as law, not received as evidence of a practice. The Distribution Act 1958 does not simply override it; the customary tenure legislation of the State governs land held on that tenure, and the question is one of characterising the land and the parties rather than of choosing between a modern statute and an old habit.",
+            "On the second matter, the 1950 English Court of Appeal decision was part of the common law as administered in England on 7 April 1956. It is received under s 3(1) subject to the local-circumstances qualification, and a Malaysian court would treat it as the received rule.",
+            "The 1990 decision is not received. It postdates the cut-off, and s 3 fixes reception at a date rather than creating a rolling link to English law. It may be cited as persuasive reasoning and often is; what it cannot do is displace the received rule by its own force. That the English court says the 1950 case is no longer good law in England is a statement about English law, and English law after 1956 is not our law.",
+            "The complication should be stated rather than hidden. Malaysian courts cite post-1956 English authority regularly, and there is a line of reasoning that treats a later English decision as declaring what the common law always was, which would pull it back inside the cut-off. That argument is available to the other side and the opinion should meet it."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "The adat governs the first matter as law under Art 160(2). On the second, the 1950 decision is the received rule under s 3(1) of the Civil Law Act 1956 and the 1990 decision is persuasive only. The junior may cite it — but as an argument, not as an authority that binds."
+          ]
+        }
+      ],
+      "traps": [
+        "Treating custom as something a statute automatically beats. Art 160(2) puts custom in the definition of law.",
+        "Forgetting that s 3(1) has three different cut-off dates, and using the West Malaysian one for a Sabah or Sarawak matter.",
+        "Citing a post-1956 English case without saying what its status is. The citation is not the error; the silence about its weight is."
+      ],
+      "source": "Federal Constitution Art 160(2); Civil Law Act 1956 ss 3, 6.",
+      "lastVerified": "2026-09-07",
+      "verify": "Check s 3(1) of the Civil Law Act 1956 against a current reprint for the exact dates and wording. Check which Negeri Sembilan customary tenure enactment applies before relying on the first limb in practice."
+    },
+    {
+      "id": "pm-precedent-01",
+      "moduleId": "m01-malaysian-legal-system",
+      "title": "Four decisions, one point",
+      "kind": "problem",
+      "minutes": 35,
+      "marks": 14,
+      "scenario": [
+        "You are advising a High Court judge who must decide a point of contract law. Four decisions bear on it, and they do not agree.",
+        "(i) A Federal Court decision from 1979, squarely on the point, deciding it one way.",
+        "(ii) A Privy Council decision from 1983, on a civil appeal from Malaysia, on the same point, deciding it the other way. It does not mention the 1979 decision.",
+        "(iii) A Court of Appeal decision from 2016 which follows the Privy Council and distinguishes the Federal Court decision on grounds the judge thinks are thin.",
+        "(iv) A High Court decision from 2021 by another judge which follows the 1979 Federal Court decision and does not cite the 2016 Court of Appeal case at all.",
+        "Counsel for the defendant argues that the Federal Court decision is the highest Malaysian authority and must prevail."
+      ],
+      "task": "Advise the judge which decisions bind them and which do not, and what they should do. Address counsel's argument directly.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies the real question as the standing of pre-abolition Privy Council decisions relative to the Federal Court, not simply as a hierarchy exercise.",
+          "authority": "—"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the hierarchy — Federal Court, Court of Appeal, High Court — and that each is bound by those above it.",
+          "authority": "Courts of Judicature Act 1964"
+        },
+        {
+          "id": "r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States that appeals to the Privy Council were abolished in stages, civil appeals last, and that a Privy Council decision delivered while it still sat at the apex on a Malaysian appeal binds courts below as if it were the apex court — so a 1983 civil decision is within that period.",
+          "authority": "Abolition of Privy Council appeals; civil appeals ended 1 January 1985"
+        },
+        {
+          "id": "r4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Concludes that the 1983 Privy Council decision displaces the 1979 Federal Court decision on the point, and that counsel's argument fails because it treats the Federal Court as the apex for the whole period.",
+          "authority": "—"
+        },
+        {
+          "id": "r5",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Holds that the 2016 Court of Appeal decision binds the High Court whether or not the judge finds the distinction convincing — a lower court may not decline to follow a binding decision because it thinks the reasoning weak.",
+          "authority": "Vertical stare decisis"
+        },
+        {
+          "id": "r6",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Treats the 2021 High Court decision as persuasive only, notes judicial comity, and says why it carries little weight here: it did not consider the binding Court of Appeal case.",
+          "authority": "Sundralingam v Ramanathan Chettiar [1967] 2 MLJ 211"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Which of the four decisions bind a judge of the High Court, and how the pre-1985 Privy Council decision fits the Malaysian hierarchy."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "The superior courts run Federal Court, Court of Appeal, High Court, and each is bound by the courts above it. Appeals to the Privy Council were abolished in stages, criminal and constitutional appeals first and civil appeals last, with civil appeals ending on 1 January 1985. Until then the Privy Council was the final court on a Malaysian appeal, and a decision it gave in that period binds the Malaysian courts below in the ordinary way. It is not foreign authority; it is a decision of the apex court of this legal system as that system then stood.",
+            "A judge of the High Court is not bound by another judge of the High Court. Comity favours following a decision of coordinate jurisdiction unless convinced it is wrong: Sundralingam v Ramanathan Chettiar."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Counsel's argument treats the Federal Court as the apex throughout. In 1983 it was not. The Privy Council decision is later and higher, and it displaces the 1979 Federal Court decision on the point even though it does not mention it — a superior court need not distinguish a decision it supersedes.",
+            "The 2016 Court of Appeal decision follows that line and binds the High Court. The judge's view that the distinction drawn is thin does not release them. A lower court that departs from a binding decision because it finds the reasoning weak has substituted itself for the appellate structure. If the reasoning is genuinely poor the remedy is to say so and give leave to appeal, not to disregard it.",
+            "The 2021 High Court decision is persuasive only, and here barely that. It follows a decision that had been superseded and it does not appear to have considered the 2016 Court of Appeal case, so it was reached per incuriam of authority that bound it."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "The judge is bound by the 2016 Court of Appeal decision and should decide the point in accordance with it. Counsel's submission fails. The judge may record disagreement with the reasoning; they may not act on it."
+          ]
+        }
+      ],
+      "traps": [
+        "Assuming a Privy Council decision is merely persuasive because the Privy Council is an English court. Before abolition it sat at the top of this hierarchy.",
+        "Letting the judge “prefer” the Federal Court decision because it is a Malaysian court and higher in name.",
+        "Missing that the 2021 decision is per incuriam of the Court of Appeal case, which is what removes almost all of its persuasive value."
+      ],
+      "source": "Courts of Judicature Act 1964; abolition of Privy Council appeals; Sundralingam v Ramanathan Chettiar [1967] 2 MLJ 211.",
+      "lastVerified": "2026-09-07",
+      "verify": "Confirm the abolition dates and the instruments that effected them (criminal and constitutional appeals ended before civil ones). Confirm Sundralingam's citation and that it is still relied on for comity between High Court judges."
+    },
+    {
+      "id": "pm-121a-01",
+      "moduleId": "m01-malaysian-legal-system",
+      "title": "Two courts, one child",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "Suresh and Kavitha married in 2014 under the Law Reform (Marriage and Divorce) Act 1976. They have two children, aged six and nine. Both parents and both children were Hindu.",
+        "In January Suresh converted to Islam. In March, without telling Kavitha and without her presence or consent, he obtained certificates of conversion for both children from the State Islamic religious department. In May he obtained an order from the Syariah High Court granting him custody of both children.",
+        "Kavitha applies to the civil High Court for judicial review to quash the two conversion certificates, and for custody under the 1976 Act.",
+        "The religious department objects that the civil High Court has no jurisdiction. It relies on Article 121(1A) of the Federal Constitution and says that the conversion of a person to Islam and the custody of Muslim children are matters within the jurisdiction of the Syariah courts."
+      ],
+      "task": "Advise Kavitha on the jurisdictional objection and on the validity of the conversion certificates.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Separates the jurisdictional question from the merits: whether the civil court may hear her at all, and whether the certificates are valid.",
+          "authority": "—"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States Art 121(1A) accurately — the civil High Courts have no jurisdiction in respect of any matter within the jurisdiction of the Syariah courts — and does not paraphrase it as a general ouster in religious matters.",
+          "authority": "Federal Constitution, Art 121(1A)"
+        },
+        {
+          "id": "r3",
+          "band": "rule",
+          "marks": 4,
+          "criterion": "Relies on Indira Gandhi for the two propositions that decide the objection: judicial review is inherent in the civil courts and is part of the basic structure, and Art 121(1A) does not remove it.",
+          "authority": "Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC)"
+        },
+        {
+          "id": "r4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Makes the point that the Syariah courts' jurisdiction is over persons professing the religion of Islam, so a Syariah order cannot bind Kavitha, who is not one.",
+          "authority": "Ninth Schedule, List II, Item 1"
+        },
+        {
+          "id": "r5",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the consent point: Art 12(4) leaves the religion of a person under eighteen to be decided by their parent or guardian, and “parent” is read as requiring the consent of both where both are living.",
+          "authority": "Federal Constitution, Art 12(4); Eleventh Schedule"
+        },
+        {
+          "id": "r6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Applies the consent point to the facts: Kavitha's consent was neither sought nor given, so the certificates are liable to be quashed.",
+          "authority": "—"
+        },
+        {
+          "id": "r7",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Advises on remedy and forum, and does not claim the civil court will decide questions of Islamic law — only that it decides its own jurisdiction and the legality of the department's act.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether Art 121(1A) prevents the civil High Court from hearing Kavitha's application, and whether conversion certificates obtained on one parent's application are valid."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Article 121(1A) provides that the civil High Courts shall have no jurisdiction in respect of any matter within the jurisdiction of the Syariah courts. It is a rule about overlap, not a general withdrawal of the civil courts from anything with a religious element.",
+            "In Indira Gandhi the Federal Court held that judicial review of administrative action is inherent in the civil courts and forms part of the basic structure of the Constitution, and that Art 121(1A) does not oust it. The Syariah courts are creatures of State law with jurisdiction over persons professing the religion of Islam, conferred by the Ninth Schedule, List II, Item 1.",
+            "Article 12(4) provides that the religion of a person under the age of eighteen shall be decided by his parent or guardian. Read with the Eleventh Schedule, under which the singular includes the plural, “parent” requires the consent of both parents where both are living."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The objection misdescribes what Kavitha asks. She does not ask the civil court to rule on Islamic law. She asks it to review the legality of an administrative act — the issue of two certificates by a State department. That is judicial review, and Indira Gandhi holds that Art 121(1A) does not take it away.",
+            "The Syariah custody order cannot be an answer either. The Syariah courts' jurisdiction is over persons professing the religion of Islam. Kavitha does not, was not a party, and could not have been. An order obtained in a forum that has no jurisdiction over her cannot determine her rights against her.",
+            "On the certificates, the consent of both parents was required and Kavitha's was neither sought nor given. She was not told. On that ground the certificates are liable to be quashed.",
+            "The marriage remains one contracted under the 1976 Act, and the civil court retains jurisdiction over its dissolution and over custody as between these parties."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "The jurisdictional objection should fail. The civil High Court may hear the judicial review, the certificates are vulnerable for want of the mother's consent, and the Syariah custody order does not bind Kavitha. Advise her to proceed by judicial review of the certificates and by an application under the 1976 Act for custody."
+          ]
+        }
+      ],
+      "traps": [
+        "Reading Art 121(1A) as “if Islam is involved, the civil court is out”. It is about matters within Syariah jurisdiction, and the Syariah courts' jurisdiction has its own limits.",
+        "Arguing the merits of the conversion under Islamic law. That is exactly what the civil court will not do, and it is not what the application asks.",
+        "Forgetting that Kavitha's own status as a non-Muslim is what puts the Syariah order out of reach."
+      ],
+      "source": "Federal Constitution Arts 12(4), 121(1A), Ninth Schedule List II Item 1, Eleventh Schedule; Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC).",
+      "lastVerified": "2026-09-07",
+      "verify": "Indira Gandhi is the controlling authority and its citation should be checked in a report you can hold. Read the Federal Court's reasoning on basic structure directly rather than through a summary — the case is cited for more than it decides. Check whether any later Federal Court decision has qualified it."
+    },
+    {
+      "id": "pm-research-01",
+      "moduleId": "m02-legal-research",
+      "title": "One case, found on a free portal",
+      "kind": "method",
+      "minutes": 30,
+      "marks": 14,
+      "scenario": [
+        "A senior asks you a question over the partition: “Can a landlord here distrain for rent without going to court first?”",
+        "You search a free case portal and find a High Court decision from 1989 which says, in a passage you can quote, that the landlord may proceed. You have found nothing else. The portal shows the judgment text and nothing more — no subsequent history, no note of any appeal, no list of cases citing it.",
+        "The senior wants an answer in an hour."
+      ],
+      "task": "Set out how you would verify the proposition before advising, in the order you would do it, and say what you would tell the senior at the end of the hour if you cannot complete every step.",
+      "rubric": [
+        {
+          "id": "r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Recognises that the first move is to find the governing statute, not to work outwards from the case. A case is evidence of what the law is; the Act is the law.",
+          "authority": "Distress Act 1951"
+        },
+        {
+          "id": "r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "Identifies the Distress Act 1951 as the governing instrument and that the statutory route runs through an application to the court for a warrant of distress, which answers the question directly.",
+          "authority": "Distress Act 1951"
+        },
+        {
+          "id": "r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Checks the currency of the Act itself — latest reprint, amending Acts, commencement of any amendment — rather than assuming the 1951 text is the operative text.",
+          "authority": "—"
+        },
+        {
+          "id": "r4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "States plainly that a free portal has no citator, so the case cannot be confirmed as good law from that source: no subsequent history, no overruling, no judicial consideration.",
+          "authority": "CLJ, LexisNexis CaseBase, Westlaw Asia"
+        },
+        {
+          "id": "r5",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Weighs the court level: a 1989 High Court decision binds nobody, and later Court of Appeal or Federal Court authority would displace it.",
+          "authority": "—"
+        },
+        {
+          "id": "r6",
+          "band": "application",
+          "marks": 1,
+          "criterion": "Checks the report: whether the text is from an authorised series or an unreported transcript, and whether the passage is ratio or obiter.",
+          "authority": "—"
+        },
+        {
+          "id": "r7",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Gives the senior a defensible answer with its limits stated — what is verified, what is not, and what would change the advice — rather than either a bare yes or a refusal to answer.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether a single unverified High Court decision found on a free portal can support advice, and what must be done before it can."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "Start with the statute. Distress for rent in West Malaysia is governed by the Distress Act 1951, and the Act sets out the route: the landlord applies to a judge for a warrant of distress. That answers the senior's question at the level of the primary source, and it also tells me what the 1989 case can and cannot be about — it cannot authorise a landlord to bypass a procedure the Act lays down.",
+            "Then check the currency of the Act. Find the latest reprint, list the amending Acts, and confirm that any amendment relevant to the point is in force. An out-of-date statute text is the failure mode that a case search will never catch.",
+            "Then place the case. A 1989 High Court decision binds no court. It is persuasive. If there is later Court of Appeal or Federal Court authority the High Court decision is displaced, and the free portal will not tell me whether there is.",
+            "Then confront the gap directly. There is no citator on free Malaysian sources. I cannot establish from that portal that the case has not been overruled, reversed on appeal, distinguished into irrelevance, or superseded by amendment. That check needs CLJ, LexisNexis CaseBase or Westlaw Asia, and it is the one step I cannot do without a subscription.",
+            "Finally, read the judgment rather than the passage. Check whether the sentence I found is the ratio or an aside, what the pleaded issue was, and whether the report is an authorised one or an unreported transcript."
+          ]
+        },
+        {
+          "h": "Advice",
+          "p": [
+            "At the end of the hour I would tell the senior: the governing instrument is the Distress Act 1951 and it requires an application to the court for a warrant, so on the primary source the answer is no. I have one 1989 High Court decision that appears to say otherwise; it binds nobody, I have read it in full, and I have not been able to confirm whether it is still good law because the free sources have no citator. Before this goes to a client we need a citator check, and I would not advise a landlord to distrain without a warrant on the strength of what I have."
+          ]
+        }
+      ],
+      "traps": [
+        "Answering from the case. The case was found first; that is an accident of the search, not an order of authority.",
+        "Treating “not overruled” as established because nothing came up. A free portal not showing an overruling is not evidence that there was none.",
+        "Refusing to advise at all. The senior asked a question with a deadline; the skill is a bounded answer with its limits on the face of it."
+      ],
+      "source": "Distress Act 1951. Method points are general research practice.",
+      "lastVerified": "2026-09-07",
+      "verify": "Confirm the section of the Distress Act 1951 that requires application to a judge, and confirm the Act's territorial application, before treating the statutory answer as settled. The point of this exercise is the method; do not carry the substantive answer into practice unchecked."
+    }
+  ]
+}

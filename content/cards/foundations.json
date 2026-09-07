@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "1.0",
+  "note": "Atomic cards, one fact each (Wozniak minimum information principle). Every card carries a `source` so you can re-verify it. Cards marked type 'trigger' are issue-spotting cues — the closest SRS gets to reasoning, and still only recognition.",
+  "cardTypes": {
+    "term": "Defined term or Latin maxim. Irreducible pair.",
+    "rule": "A black-letter rule or a single element of one.",
+    "ratio": "The principle a case stands for.",
+    "structure": "Institutional or hierarchical fact.",
+    "source": "Where a rule comes from — statute, section, or authority.",
+    "trigger": "A fact cue that should make you think of a doctrine."
+  },
+  "cards": [
+    {
+      "id": "f-ratio-01",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Ratio decidendi — what is it?",
+      "back": "The legal principle a court's decision actually rests on. It is the binding part of a judgment.",
+      "tags": ["precedent", "threshold-concept"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-ratio-02",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Obiter dictum — what is it?",
+      "back": "A statement in a judgment not necessary to the decision. Persuasive only, never binding.",
+      "tags": ["precedent", "threshold-concept"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-ratio-03",
+      "moduleId": "m00-foundations",
+      "type": "rule",
+      "front": "Which part of a judgment binds a lower court — ratio or obiter?",
+      "back": "The ratio only.",
+      "tags": ["precedent"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-stare-01",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Stare decisis — what does it mean?",
+      "back": "Stand by decided matters. Courts follow the rulings of higher courts on the same point of law.",
+      "tags": ["precedent", "latin"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-auth-01",
+      "moduleId": "m00-foundations",
+      "type": "rule",
+      "front": "Binding authority vs persuasive authority — what is the difference?",
+      "back": "Binding authority must be followed. Persuasive authority may be followed but need not be.",
+      "tags": ["precedent", "authority"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-auth-02",
+      "moduleId": "m00-foundations",
+      "type": "rule",
+      "front": "Is a foreign judgment ever binding on a Malaysian court?",
+      "back": "No. Foreign judgments are persuasive at most, however senior the foreign court.",
+      "tags": ["precedent", "authority"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-factlaw-01",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "The fact/law distinction — why does it matter?",
+      "back": "Questions of fact are about what happened; questions of law are about what the rule is. Appeals generally lie on law, not on findings of fact.",
+      "tags": ["threshold-concept"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-pubpriv-01",
+      "moduleId": "m00-foundations",
+      "type": "structure",
+      "front": "Public law vs private law — what divides them?",
+      "back": "Public law governs the relationship between the state and the individual. Private law governs relationships between persons.",
+      "tags": ["taxonomy"],
+      "source": "Standard legal taxonomy"
+    },
+    {
+      "id": "f-civcrim-01",
+      "moduleId": "m00-foundations",
+      "type": "rule",
+      "front": "Who brings a criminal case, and who brings a civil case?",
+      "back": "Criminal: the state, through the prosecution. Civil: the aggrieved person, as plaintiff or claimant.",
+      "tags": ["taxonomy"],
+      "source": "Standard legal taxonomy"
+    },
+    {
+      "id": "f-standard-01",
+      "moduleId": "m00-foundations",
+      "type": "rule",
+      "front": "Standard of proof in a criminal case?",
+      "back": "Beyond reasonable doubt.",
+      "tags": ["proof"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-standard-02",
+      "moduleId": "m00-foundations",
+      "type": "rule",
+      "front": "Standard of proof in a civil case?",
+      "back": "On the balance of probabilities.",
+      "tags": ["proof"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-latin-01",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Ultra vires — what does it mean?",
+      "back": "Beyond the powers. An act done outside the authority granted by law.",
+      "tags": ["latin", "admin-law"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-latin-02",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Audi alteram partem — what does it mean?",
+      "back": "Hear the other side. The rule that a person must be given a chance to be heard before a decision against them.",
+      "tags": ["latin", "natural-justice"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-latin-03",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Nemo judex in causa sua — what does it mean?",
+      "back": "No one should be a judge in their own cause. The rule against bias.",
+      "tags": ["latin", "natural-justice"],
+      "source": "Standard common law doctrine"
+    },
+    {
+      "id": "f-latin-04",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Actus reus — what does it mean?",
+      "back": "The physical element of an offence: the prohibited conduct, circumstances or result.",
+      "tags": ["latin", "criminal"],
+      "source": "Standard criminal law doctrine"
+    },
+    {
+      "id": "f-latin-05",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Mens rea — what does it mean?",
+      "back": "The mental element of an offence: the state of mind the offence requires.",
+      "tags": ["latin", "criminal"],
+      "source": "Standard criminal law doctrine"
+    },
+    {
+      "id": "f-latin-06",
+      "moduleId": "m00-foundations",
+      "type": "term",
+      "front": "Obiter vs per incuriam — what does per incuriam mean?",
+      "back": "Through lack of care. A decision reached in ignorance of a binding authority or statute, and therefore not binding.",
+      "tags": ["latin", "precedent"],
+      "source": "Standard common law doctrine"
+    },
+
+    {
+      "id": "my-court-01",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "structure",
+      "front": "Name the Malaysian civil courts from lowest to highest.",
+      "back": "Magistrates' Court, Sessions Court, High Court, Court of Appeal, Federal Court.",
+      "tags": ["courts", "hierarchy"],
+      "source": "Subordinate Courts Act 1948 (Act 92); Courts of Judicature Act 1964 (Act 91)"
+    },
+    {
+      "id": "my-court-02",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "structure",
+      "front": "Which is Malaysia's apex court?",
+      "back": "The Federal Court.",
+      "tags": ["courts", "hierarchy"],
+      "source": "Courts of Judicature Act 1964 (Act 91)"
+    },
+    {
+      "id": "my-court-03",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "structure",
+      "front": "How many High Courts does Malaysia have, and what are they?",
+      "back": "Two co-ordinate High Courts: the High Court in Malaya, and the High Court in Sabah and Sarawak.",
+      "tags": ["courts", "hierarchy"],
+      "source": "Federal Constitution, Art 121"
+    },
+    {
+      "id": "my-court-04",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "structure",
+      "front": "Which two Acts set out the jurisdiction of the Malaysian courts?",
+      "back": "The Subordinate Courts Act 1948 for the lower courts, and the Courts of Judicature Act 1964 for the superior courts.",
+      "tags": ["courts", "statute"],
+      "source": "Act 92; Act 91"
+    },
+    {
+      "id": "my-court-05",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "structure",
+      "front": "Name the Syariah court hierarchy from lowest to highest.",
+      "back": "Syariah Subordinate Court, Syariah High Court, Syariah Court of Appeal.",
+      "tags": ["courts", "syariah"],
+      "source": "State enactments; see Federal Constitution, Ninth Schedule, State List"
+    },
+    {
+      "id": "my-court-06",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "source",
+      "front": "Which Article bars the civil courts from matters within Syariah court jurisdiction?",
+      "back": "Article 121(1A) of the Federal Constitution.",
+      "tags": ["courts", "syariah", "constitution"],
+      "source": "Federal Constitution, Art 121(1A)",
+      "note": "Scholars dispute how far this creates a genuinely parallel system, since Syariah courts are state courts of limited jurisdiction. Boundary disputes remain live."
+    },
+    {
+      "id": "my-court-07",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "rule",
+      "front": "Over whom do the Syariah courts have jurisdiction?",
+      "back": "Muslims only, and only in the matters assigned to the States — chiefly Islamic personal and family law, and certain religious offences.",
+      "tags": ["courts", "syariah"],
+      "source": "Federal Constitution, Art 74(2) and Ninth Schedule, State List"
+    },
+    {
+      "id": "my-source-01",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "structure",
+      "front": "What is the supreme law of Malaysia?",
+      "back": "The Federal Constitution.",
+      "tags": ["sources", "constitution"],
+      "source": "Federal Constitution"
+    },
+    {
+      "id": "my-source-02",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "source",
+      "front": "Which Act governs the reception of English common law and equity into Malaysia?",
+      "back": "The Civil Law Act 1956 (Act 67).",
+      "tags": ["sources", "statute"],
+      "source": "Civil Law Act 1956 (Act 67)"
+    },
+    {
+      "id": "my-source-03",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "structure",
+      "front": "What is subsidiary legislation?",
+      "back": "Law made by a body other than Parliament under power delegated by a statute — rules, regulations, orders, by-laws.",
+      "tags": ["sources"],
+      "source": "Interpretation Acts 1948 and 1967 (Act 388)"
+    },
+    {
+      "id": "my-parl-01",
+      "moduleId": "m01-malaysian-legal-system",
+      "type": "structure",
+      "front": "Name the two houses of the Malaysian Parliament.",
+      "back": "The Dewan Rakyat (House of Representatives) and the Dewan Negara (Senate).",
+      "tags": ["parliament"],
+      "source": "Federal Constitution, Part IV"
+    },
+    {
+      "id": "my-research-01",
+      "moduleId": "m02-legal-research",
+      "type": "source",
+      "front": "Where do you get the official text of a Malaysian Act, free?",
+      "back": "The AGC Laws of Malaysia portal at lom.agc.gov.my.",
+      "tags": ["research", "sources"],
+      "source": "Attorney General's Chambers",
+      "note": "A print-out from the portal is not a copy of the Gazette and does not constitute prima facie evidence."
+    },
+    {
+      "id": "my-research-02",
+      "moduleId": "m02-legal-research",
+      "type": "rule",
+      "front": "Can you confirm from free Malaysian sources alone that a case is still good law?",
+      "back": "No. Free sources have no reliable citator. You need Westlaw Citator, LexisNexis CaseBase, or equivalent.",
+      "tags": ["research", "noting-up"],
+      "source": "See research report, section 5"
+    },
+    {
+      "id": "my-research-03",
+      "moduleId": "m02-legal-research",
+      "type": "term",
+      "front": "What does 'noting up' a case mean?",
+      "back": "Checking how later courts have treated it — followed, distinguished, doubted, or overruled.",
+      "tags": ["research", "noting-up"],
+      "source": "Standard legal research practice"
+    },
+
+    {
+      "id": "t-contract-01",
+      "moduleId": "m00-foundations",
+      "type": "trigger",
+      "front": "Fact cue: two friends agree over dinner that one will sell the other a car. Which doctrine should you reach for first?",
+      "back": "Intention to create legal relations — social and domestic agreements raise a presumption against it.",
+      "tags": ["issue-spotting", "contract"],
+      "source": "Contract doctrine"
+    },
+    {
+      "id": "t-tort-01",
+      "moduleId": "m00-foundations",
+      "type": "trigger",
+      "front": "Fact cue: someone is injured and asks who should have prevented it. Which doctrine should you reach for first?",
+      "back": "Negligence — start with whether a duty of care was owed.",
+      "tags": ["issue-spotting", "tort"],
+      "source": "Tort doctrine"
+    },
+    {
+      "id": "t-admin-01",
+      "moduleId": "m00-foundations",
+      "type": "trigger",
+      "front": "Fact cue: a government body cancels a licence with no hearing. Which doctrine should you reach for first?",
+      "back": "Natural justice — the right to be heard (audi alteram partem), via judicial review.",
+      "tags": ["issue-spotting", "admin-law"],
+      "source": "Administrative law doctrine"
+    }
+  ]
+}
