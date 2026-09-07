@@ -13,7 +13,10 @@ the page. These are the errors that would otherwise be silent:
   * a problem with no `verify` line, which is the app asserting an authority it
     has not earned;
   * a card that no lesson introduces, or a problem no lesson prepares you for —
-    content reachable only by someone who already knew it was there.
+    content reachable only by someone who already knew it was there;
+  * a quiz question whose `answer` index does not point at an option, which
+    would mark a right answer wrong every time it was asked;
+  * raw HTML in lesson prose, which the renderer escapes and prints literally.
 
 Run it after editing anything under content/:
 
@@ -22,6 +25,7 @@ Run it after editing anything under content/:
 
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -31,6 +35,8 @@ PROBLEM_FIELDS = ["id", "moduleId", "title", "kind", "minutes", "marks", "scenar
 LESSON_FIELDS = ["id", "moduleId", "title", "minutes", "summary", "sections",
                  "source", "lastVerified", "verify"]
 BLOCKS = {"p", "rule", "example", "caution", "list"}
+QUIZ_FIELDS = ["id", "q", "options", "answer", "why"]
+HTML = re.compile(r"<[a-zA-Z/][^>]{0,20}>")
 CARD_FIELDS = ["id", "moduleId", "type", "front", "back", "source"]
 
 
@@ -120,6 +126,23 @@ def main():
                                       f"is not one of {sorted(BLOCKS)}")
                     if b.get("t") == "rule" and not b.get("source"):
                         errors.append(f"{where}: a rule block states a rule with no source")
+            quiz = l.get("quiz") or []
+            qids = [x.get("id") for x in quiz]
+            if len(set(qids)) != len(qids):
+                errors.append(f"{where}: duplicate quiz question ids")
+            for x in quiz:
+                qwhere = f"{where}/{x.get('id', '?')}"
+                for f in QUIZ_FIELDS:
+                    if x.get(f) in (None, "", []):
+                        errors.append(f"{qwhere}: missing {f}")
+                opts = x.get("options") or []
+                if len(opts) < 2:
+                    errors.append(f"{qwhere}: needs at least two options")
+                if len(set(opts)) != len(opts):
+                    errors.append(f"{qwhere}: duplicate options")
+                ans = x.get("answer")
+                if not isinstance(ans, int) or not 0 <= ans < len(opts):
+                    errors.append(f"{qwhere}: answer {ans!r} does not point at an option")
             for cid in l.get("plants") or []:
                 planted.setdefault(cid, []).append(l["id"])
             for pid in l.get("prepares") or []:
@@ -127,6 +150,14 @@ def main():
             for r in l.get("reading") or []:
                 if r.get("bookId") not in {b["id"] for b in books["books"]}:
                     errors.append(f"{where}: unknown book {r.get('bookId')}")
+
+    # Lesson prose is rendered as text with a two-token inline markup (**strong**
+    # and *emphasis*). HTML in it is escaped and printed literally, so a pasted
+    # <b> tag is a visible defect rather than bold text.
+    for path in sorted((ROOT / "content").rglob("*.json")):
+        text = path.read_text(encoding="utf-8")
+        for tag in sorted(set(HTML.findall(text))):
+            errors.append(f"{path.name}: contains raw HTML {tag} — use **strong** or *emphasis*")
 
     # Reachability. A card nothing teaches, or a problem nothing sets up, is
     # content that only somebody who already knew about it would ever find.
@@ -156,7 +187,13 @@ def main():
             if ref not in {s["id"] for s in books["statutes"]}:
                 errors.append(f"books.json:{m['id']}: unknown statute {ref}")
 
-    print(f"{lessons} lessons, {cards} cards, {problems} problems, {len(modules)} modules")
+    quiz_total = sum(
+        len(l.get("quiz") or [])
+        for path in sorted((ROOT / "content/lessons").glob("*.json"))
+        for l in json.loads(path.read_text(encoding="utf-8")).get("lessons", [])
+    )
+    print(f"{lessons} lessons, {cards} cards, {problems} problems, "
+          f"{quiz_total} quiz questions, {len(modules)} modules")
     if errors:
         print(f"\n{len(errors)} problem{'' if len(errors) == 1 else 's'}:")
         for e in errors:

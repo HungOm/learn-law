@@ -1,0 +1,973 @@
+{
+ "schemaVersion": 1,
+ "note": "Method, foundations, research, reasoning and interpretation lessons written after the first pass. Ordered after the lessons in method.json within each module, because they follow them.",
+ "lessons": [
+  {
+   "id": "l-case-brief",
+   "moduleId": "m-study-method",
+   "title": "Briefing a case, and reading a judgment for what binds",
+   "minutes": 25,
+   "summary": "A brief is a discipline, not a summary: material facts, the question, the holding, the reason, and what the court did not decide.",
+   "sections": [
+    {
+     "h": "A summary and a brief are different documents",
+     "body": [
+      {
+       "t": "p",
+       "text": "A summary tells you what happened in a case. A brief tells you what the case is good for. The second is much harder and much shorter, and it is the only one worth writing, because the reason you are reading the judgment at all is to be able to use it on facts that are not these facts."
+      },
+      {
+       "t": "p",
+       "text": "The test of a brief is whether, six months later and without the report in front of you, it lets you say: this is the proposition, these are the facts it was reached on, and here is why the next case is or is not the same."
+      },
+      {
+       "t": "caution",
+       "text": "If your brief is longer than a page, you have summarised. The length is not a style preference — a brief that reproduces the judgment has not done the work of deciding what mattered."
+      }
+     ]
+    },
+    {
+     "h": "The five things a brief must contain",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "**Material facts.** The facts the decision turned on, and no others. Deciding which facts are material is most of the intellectual work; a fact is material if changing it might change the result.",
+        "**Procedural posture.** Which court, hearing what, on appeal from whom. A first-instance ruling and a Federal Court holding on the same words carry entirely different weight.",
+        "**The question.** Stated as a question of law, narrowly. Not 'whether the defendant was liable' but 'whether an authority that has assumed a maintenance task owes a duty to occupiers when it abandons it'.",
+        "**The holding, with the reason.** The proposition plus the step that gets from the facts to it. A holding with no reason attached is a result, and results do not transfer.",
+        "**What was left open.** Reservations, concessions not argued, points expressly not decided. This is the part everyone skips and the part that decides most later arguments."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice that four of the five are about scope. A case is an authority for something narrower than its language suggests, and a brief that does not record the boundary is a brief that will be over-applied."
+      }
+     ]
+    },
+    {
+     "h": "Reading order, which is not the order it is printed in",
+     "body": [
+      {
+       "t": "p",
+       "text": "Judgments are written for a reader who already knows the dispute. Read them in the order that gets you oriented fastest: headnote first for the shape, then the last few paragraphs for the disposal, then the facts, then the reasoning from the beginning."
+      },
+      {
+       "t": "caution",
+       "text": "Never cite from a headnote. It is written by an editor, it is not part of the judgment, and it is wrong often enough that the habit of citing it is a habit of being occasionally and confidently wrong."
+      },
+      {
+       "t": "p",
+       "text": "Where several judgments are given, work out which reasoning commanded a majority before you rely on any of it. A powerful dissent is quotable and binds nobody."
+      }
+     ]
+    },
+    {
+     "h": "Two things that mislead",
+     "body": [
+      {
+       "t": "rule",
+       "text": "A proposition is part of the ratio only if the result would change without it. Length, emphasis and eloquence are not evidence of ratio; necessity is.",
+       "source": "Standard common law doctrine on ratio decidendi and obiter dictum"
+      },
+      {
+       "t": "p",
+       "text": "The second is subtler. A court's own description of what it is deciding is evidence, not proof. Judges sometimes say they are laying down a general rule while actually deciding something narrow on the facts, and sometimes the reverse. What binds is what the decision required."
+      },
+      {
+       "t": "example",
+       "text": "A judge writes eleven paragraphs on the policy of public authority liability and one sentence rejecting the argument the appeal actually turned on. The sentence is the ratio; the eleven paragraphs are persuasive material for the next case and nothing more."
+      }
+     ]
+    },
+    {
+     "h": "Do it by hand, and do it before you look at anything else",
+     "body": [
+      {
+       "t": "p",
+       "text": "Write the brief before you read a textbook's treatment of the case. Once you have read someone else's account of what a case decides you cannot un-read it, and you will find you agree with them — not because they are right but because you no longer have an independent view to compare."
+      },
+      {
+       "t": "p",
+       "text": "This is the same principle as the problem questions in this app: produce first, check second. Reversing the order feels more efficient and teaches almost nothing."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "mm-brief-01",
+    "mm-brief-02",
+    "mm-brief-03",
+    "mm-brief-04"
+   ],
+   "prepares": [],
+   "quiz": [
+    {
+     "id": "qcb1",
+     "q": "What makes a fact 'material' for the purposes of a case brief?",
+     "options": [
+      "Changing it might change the result",
+      "It appears in the headnote",
+      "The judge mentioned it more than once",
+      "It was agreed between the parties"
+     ],
+     "answer": 0,
+     "why": "Materiality is a counterfactual test, not a test of emphasis. If the outcome survives the change, the fact was background."
+    },
+    {
+     "id": "qcb2",
+     "q": "Why should you not cite from a headnote?",
+     "options": [
+      "It is written by an editor and is not part of the judgment",
+      "It is copyrighted separately",
+      "It only appears in paid reports",
+      "It never states the ratio"
+     ],
+     "answer": 0,
+     "why": "The headnote is editorial. It is useful for orientation and unusable as authority — and it is wrong often enough to matter."
+    },
+    {
+     "id": "qcb3",
+     "q": "A judgment devotes eleven paragraphs to policy and one sentence to rejecting the argument the appeal turned on. Which is the ratio?",
+     "options": [
+      "The one sentence",
+      "The eleven paragraphs",
+      "Both equally",
+      "Neither — the disposal is the ratio"
+     ],
+     "answer": 0,
+     "why": "Necessity, not length. The appeal failed because that argument was rejected, so that is what the decision rested on."
+    },
+    {
+     "id": "qcb4",
+     "q": "Which item is most often left out of a brief and most often decides later arguments?",
+     "options": [
+      "What the court expressly did not decide",
+      "The names of counsel",
+      "The procedural history",
+      "The date of the judgment"
+     ],
+     "answer": 0,
+     "why": "Reservations and points not argued define the boundary of the authority, which is precisely what the next case fights about."
+    },
+    {
+     "id": "qcb5",
+     "q": "Why write the brief before reading a textbook's account of the case?",
+     "options": [
+      "Because you cannot form an independent view after reading someone else's",
+      "Because textbooks are usually wrong",
+      "Because it is faster",
+      "Because textbooks omit the facts"
+     ],
+     "answer": 0,
+     "why": "Produce first, check second. Reading the account first replaces your reading with theirs and gives you nothing to compare."
+    }
+   ],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "the chapters on reading and using cases"
+    }
+   ],
+   "source": "Standard common law method on ratio decidendi and obiter dictum; Glanville Williams, Learning the Law.",
+   "lastVerified": "2026-09-07",
+   "verify": "Nothing here is jurisdiction-specific, but the worked habit of separating ratio from dictum should be tested against an actual Malaysian Federal Court judgment before you trust your own application of it — start with one where the court expressly reserves a point."
+  },
+  {
+   "id": "l-exam-technique",
+   "moduleId": "m-study-method",
+   "title": "Writing an answer under time, and where IRAC fails",
+   "minutes": 20,
+   "summary": "IRAC is scaffolding for the application, not a template to be filled. Most marks are lost before the first sentence, in the reading of the facts.",
+   "sections": [
+    {
+     "h": "Marks are lost in the first five minutes",
+     "body": [
+      {
+       "t": "p",
+       "text": "The commonest failure in a problem answer is not ignorance of the law. It is answering a question adjacent to the one asked: advising the wrong party, missing a second issue buried in a subordinate clause, or writing a competent essay on a doctrine the facts do not raise."
+      },
+      {
+       "t": "rule",
+       "text": "Read the task before the facts, then read the facts twice: once for the story, once with the task in mind, marking every fact that could carry legal weight.",
+       "source": "Standard examination technique; the same discipline as identifying material facts in a case brief"
+      },
+      {
+       "t": "caution",
+       "text": "A fact that seems oddly specific — a date, an amount, a form of words, who spoke first — is in the question because it does work. Unused specifics are usually missed issues."
+      }
+     ]
+    },
+    {
+     "h": "What IRAC is for, and what it is not",
+     "body": [
+      {
+       "t": "p",
+       "text": "Issue, Rule, Application, Conclusion is a structure for making your reasoning visible. It is not a form to be completed. Its value is that it forces you to state the rule before you use it, which is the step people skip when they are unsure."
+      },
+      {
+       "t": "list",
+       "items": [
+        "**Issue** — the legal question these facts raise, in one sentence, framed narrowly enough to be answerable.",
+        "**Rule** — the governing provision or principle, with its source. A section number and a case name; not 'the law says'.",
+        "**Application** — the rule against *these* facts, both ways where it is arguable. This is where the marks are.",
+        "**Conclusion** — an answer to the question asked, taking a position."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "The failure mode is a long Rule and a short Application: a page of accurate black letter followed by two sentences of 'therefore, on the facts, X is liable'. That answer has proved you can recall and not that you can reason, and rubric bands are weighted against it on purpose."
+      }
+     ]
+    },
+    {
+     "h": "Argue both ways, then decide",
+     "body": [
+      {
+       "t": "p",
+       "text": "An examiner writes facts that are genuinely arguable. If your answer sees only one side, either you have missed something or the question was easier than it looked, and the second is rare."
+      },
+      {
+       "t": "example",
+       "text": "The offer was posted on Monday and a revocation was posted on Tuesday, arriving Wednesday; the acceptance was posted on Tuesday evening. Do not simply assert the postal rule. Say what turns on whether revocation is effective on posting or on receipt, apply the rule, and then decide."
+      },
+      {
+       "t": "p",
+       "text": "Then decide. An answer that lays out both sides and refuses to choose has done three-quarters of the work and thrown away the conclusion band."
+      }
+     ]
+    },
+    {
+     "h": "Time, and the arithmetic nobody does",
+     "body": [
+      {
+       "t": "p",
+       "text": "Divide the time by the marks before you start writing, and hold to it. A forty-mark question in a two-hour paper is forty-eight minutes, and going ten minutes over on it costs more marks elsewhere than it can possibly earn where you are."
+      },
+      {
+       "t": "p",
+       "text": "This app times every problem attempt against a stated target for that reason. The clock is not decoration: a good answer written at twice the allotted length is not a good answer."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "mm-exam-01",
+    "mm-exam-02",
+    "mm-exam-03"
+   ],
+   "prepares": [],
+   "quiz": [
+    {
+     "id": "qet1",
+     "q": "Where are marks most often lost in a problem answer?",
+     "options": [
+      "In reading the facts and the task",
+      "In the conclusion",
+      "In citation formatting",
+      "In handwriting"
+     ],
+     "answer": 0,
+     "why": "Answering an adjacent question — wrong party, missed second issue — costs more than any gap in doctrine."
+    },
+    {
+     "id": "qet2",
+     "q": "What is the characteristic failure mode of an IRAC answer?",
+     "options": [
+      "A long Rule section and a thin Application",
+      "Too many issues identified",
+      "Concluding too firmly",
+      "Citing the statute"
+     ],
+     "answer": 0,
+     "why": "It proves recall, not reasoning, and the rubric bands are weighted to catch exactly that."
+    },
+    {
+     "id": "qet3",
+     "q": "An oddly specific fact in a problem question — an exact date, a precise sum — usually means what?",
+     "options": [
+      "It does legal work and you have not yet used it",
+      "It is realism, and can be ignored",
+      "It is a distractor",
+      "It sets the jurisdiction"
+     ],
+     "answer": 0,
+     "why": "Examiners do not write specifics for atmosphere. An unused specific is usually a missed issue."
+    },
+    {
+     "id": "qet4",
+     "q": "In a two-hour paper, how long should a forty-mark question out of one hundred take?",
+     "options": [
+      "About forty-eight minutes",
+      "About sixty minutes",
+      "As long as it needs",
+      "About thirty minutes"
+     ],
+     "answer": 0,
+     "why": "Time divided in proportion to marks. Overrunning costs more elsewhere than it can earn here."
+    },
+    {
+     "id": "qet5",
+     "q": "Having argued both sides of a genuinely arguable point, what should the answer do?",
+     "options": [
+      "Take a position and say why",
+      "Leave it open, since it is arguable",
+      "Set out a third view",
+      "Restate the rule"
+     ],
+     "answer": 0,
+     "why": "The conclusion band exists for this. An answer that refuses to decide throws away the marks it has earned everywhere else."
+    }
+   ],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "the chapter on answering questions"
+    }
+   ],
+   "source": "Standard examination technique; the rubric bands used by the problem questions in this app.",
+   "lastVerified": "2026-09-07",
+   "verify": "Technique advice is not law and needs no citation check. What does need checking is the mark allocation of whatever paper you are actually sitting — the arithmetic above only works if you know the weighting."
+  },
+  {
+   "id": "l-civil-criminal",
+   "moduleId": "m00-foundations",
+   "title": "Civil and criminal: two systems, one set of facts",
+   "minutes": 20,
+   "summary": "The same conduct can be a crime and a tort. Who sues, what must be proved, to what standard, and what the court can order all differ — and the answer to one says almost nothing about the other.",
+   "sections": [
+    {
+     "h": "One event, two proceedings",
+     "body": [
+      {
+       "t": "p",
+       "text": "A man drives carelessly and injures a pedestrian. That is potentially an offence, prosecuted by the State, and potentially a tort, sued on by the pedestrian. The two proceedings run on different tracks and can reach different results without either being wrong."
+      },
+      {
+       "t": "rule",
+       "text": "Criminal proceedings are brought in the name of the State to punish; civil proceedings are brought by a private party to compensate or to obtain a remedy. The parties, the standard of proof and the available orders all differ.",
+       "source": "Standard common law distinction; in Malaysia the prosecution power is vested in the Public Prosecutor by Art 145(3) of the Federal Constitution"
+      },
+      {
+       "t": "caution",
+       "text": "An acquittal does not mean the conduct did not happen. It means it was not proved beyond reasonable doubt. A civil court, on the same facts and a lower standard, may perfectly properly find it did."
+      }
+     ]
+    },
+    {
+     "h": "The standard of proof is the difference that does most of the work",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "**Criminal:** the prosecution must prove the case beyond reasonable doubt. The burden does not shift, save where a statute expressly places one on the accused.",
+        "**Civil:** the plaintiff must prove the case on a balance of probabilities — more likely than not.",
+        "**Fraud alleged in a civil case:** in Malaysia this has been contested ground. The Federal Court has held that fraud in civil proceedings is proved on the balance of probabilities, not the criminal standard."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The practical consequence is that the same evidence can lose a prosecution and win a suit. That is not an inconsistency in the system; it is the system working as designed, because the consequences of the two proceedings are different and so is the risk each is willing to run."
+      }
+     ]
+    },
+    {
+     "h": "Who controls the proceedings",
+     "body": [
+      {
+       "t": "p",
+       "text": "A criminal prosecution belongs to the Public Prosecutor, who has discretion under Article 145(3) of the Federal Constitution to institute, conduct or discontinue proceedings. The victim is a witness, not a party, and cannot settle the case."
+      },
+      {
+       "t": "p",
+       "text": "A civil claim belongs to the plaintiff, who may compromise it, discontinue it, or decline to bring it at all. That difference explains most of what looks odd about each system from the other's point of view."
+      },
+      {
+       "t": "example",
+       "text": "A complainant who forgives the accused can withdraw a civil suit; the same forgiveness does not end a prosecution, though it may in practice influence whether one is continued."
+      }
+     ]
+    },
+    {
+     "h": "Different vocabulary for the same shape",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "Criminal: **prosecution** and **accused**; charge; conviction or acquittal; sentence.",
+        "Civil: **plaintiff** and **defendant**; statement of claim; liability or dismissal; judgment, damages, injunction.",
+        "Appeals in both run up the same court hierarchy, but under different statutory routes and with different rules on when leave is needed."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "Do not describe a defendant as 'guilty' of negligence or a company as 'convicted' of breach of contract. The vocabulary slip signals to a reader that the distinction has not landed, and it costs marks in the method band before the substantive law is even reached."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "mm-civcrim-01",
+    "mm-civcrim-02",
+    "mm-civcrim-03",
+    "mm-civcrim-04"
+   ],
+   "prepares": [],
+   "quiz": [
+    {
+     "id": "qcc1",
+     "q": "The accused is acquitted of causing hurt. Can the victim still succeed in a civil claim on the same facts?",
+     "options": [
+      "Yes — the civil standard is lower",
+      "No — the acquittal is conclusive",
+      "Only if new evidence emerges",
+      "Only with the Public Prosecutor's consent"
+     ],
+     "answer": 0,
+     "why": "An acquittal means the case was not proved beyond reasonable doubt. A balance of probabilities is a different question."
+    },
+    {
+     "id": "qcc2",
+     "q": "Who has the constitutional discretion to institute or discontinue criminal proceedings in Malaysia?",
+     "options": [
+      "The Public Prosecutor, under Art 145(3)",
+      "The complainant",
+      "The trial judge",
+      "The Inspector-General of Police"
+     ],
+     "answer": 0,
+     "why": "Article 145(3) vests the prosecution power in the Attorney General as Public Prosecutor.",
+     "source": "Federal Constitution Art 145(3)"
+    },
+    {
+     "id": "qcc3",
+     "q": "What is the civil standard of proof?",
+     "options": [
+      "Balance of probabilities",
+      "Beyond reasonable doubt",
+      "Clear and convincing evidence",
+      "Prima facie case"
+     ],
+     "answer": 0,
+     "why": "More likely than not. The criminal standard is reserved for criminal proceedings."
+    },
+    {
+     "id": "qcc4",
+     "q": "Which phrasing is wrong?",
+     "options": [
+      "'The defendant was convicted of negligence'",
+      "'The accused was acquitted'",
+      "'The defendant was found liable in negligence'",
+      "'The plaintiff was awarded damages'"
+     ],
+     "answer": 0,
+     "why": "Conviction belongs to criminal proceedings; a negligence defendant is found liable, not convicted."
+    },
+    {
+     "id": "qcc5",
+     "q": "A victim forgives the accused and asks that the matter be dropped. What follows?",
+     "options": [
+      "The civil claim can be withdrawn; the prosecution is not the victim's to withdraw",
+      "Both automatically end",
+      "Neither can be discontinued",
+      "The court must discontinue both"
+     ],
+     "answer": 0,
+     "why": "The suit belongs to the plaintiff; the prosecution belongs to the Public Prosecutor."
+    }
+   ],
+   "reading": [
+    {
+     "bookId": "wu-malaysian-legal-system",
+     "where": "the introductory chapters on the two systems"
+    }
+   ],
+   "source": "Federal Constitution Art 145(3); standard common law distinction between criminal and civil proceedings.",
+   "lastVerified": "2026-09-07",
+   "verify": "The standard of proof for fraud alleged in civil proceedings has moved in Malaysia — check the current Federal Court position before relying on the statement above, and check whether any later decision has qualified it."
+  },
+  {
+   "id": "l-citation",
+   "moduleId": "m02-legal-research",
+   "title": "Reading a citation, and what a report tells you before you read it",
+   "minutes": 20,
+   "summary": "A citation encodes court, year, series and status. Reading it correctly tells you how much weight the case can carry before you have read a word of it.",
+   "sections": [
+    {
+     "h": "The anatomy of a Malaysian citation",
+     "body": [
+      {
+       "t": "p",
+       "text": "*Tan Ying Hong v Tan Sian San &amp; Ors* [2010] 2 MLJ 1 (FC) has five parts, and each does work: the parties, the year in square brackets, the volume, the series, the first page, and the court."
+      },
+      {
+       "t": "list",
+       "items": [
+        "**Square brackets** around the year mean the year is needed to find the volume — [2010] 2 MLJ 1 is volume 2 of the 2010 Malayan Law Journal. Round brackets would mean the volume number alone locates it.",
+        "**MLJ** is the Malayan Law Journal; **CLJ** the Current Law Journal; **AMR** the All Malaysia Reports. The same case may appear in more than one, at different pages.",
+        "**The court** in parentheses — (FC), (CA), (HC) — is the single most important part, and it is the part most often dropped when a citation is copied."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "A citation with no court identifier is a citation you cannot weigh. Before you use it, find out which court decided it; a High Court decision and a Federal Court decision on the same point are not interchangeable authorities."
+      }
+     ]
+    },
+    {
+     "h": "Neutral citations and unreported judgments",
+     "body": [
+      {
+       "t": "p",
+       "text": "Many judgments are available from the courts' own portal before, or instead of, appearing in a report series. These carry a case number rather than a report reference, and they are citable — but a judgment that has not been reported has also not been through an editorial process, and it is more likely to contain a slip."
+      },
+      {
+       "t": "p",
+       "text": "Where a case exists in both forms, cite the report. Where it exists only as a court-issued judgment, say so, and give the case number in full so a reader can find the same document."
+      }
+     ]
+    },
+    {
+     "h": "What a citation cannot tell you",
+     "body": [
+      {
+       "t": "rule",
+       "text": "A citation records where a judgment was published. It says nothing about whether the case is still good law.",
+       "source": "Standard research practice; the absence of a free Malaysian citator is a limitation of the sources, not of the method"
+      },
+      {
+       "t": "p",
+       "text": "This is the hard limitation of free research in this jurisdiction. The AGC portal and CommonLII will give you the text; they will not tell you that the decision was overruled four years later. That check needs a paid citator — CLJ, LexisNexis CaseBase, or Westlaw — or a systematic search for later cases citing it."
+      },
+      {
+       "t": "example",
+       "text": "*Adorna Properties Sdn Bhd v Boonsom Boonyanit* was, for nine years, an available and citable Federal Court decision on indefeasibility of title. It was also wrong, and was departed from in *Tan Ying Hong*. Nothing in the text of the first judgment tells you that."
+      }
+     ]
+    },
+    {
+     "h": "Statutes cite differently, and change more quietly",
+     "body": [
+      {
+       "t": "p",
+       "text": "A statute is cited by short title and, where useful, Act number: the Contracts Act 1950 (Act 136); the National Land Code (Act 828, Revised 2020). What matters is which version you are reading. Amendments are not always obvious in a consolidated text, and a reprint carries a date."
+      },
+      {
+       "t": "caution",
+       "text": "Always record the date of the version you consulted, and where you got it. 'Section 26 of the Contracts Act 1950' is not a complete note; 'section 26, as printed in the AGC consolidated text retrieved on *date*' is."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "mm-cite-01",
+    "mm-cite-02",
+    "mm-cite-03",
+    "mm-cite-04"
+   ],
+   "prepares": [],
+   "quiz": [
+    {
+     "id": "qci1",
+     "q": "In [2010] 2 MLJ 1, what does the square bracket around the year signify?",
+     "options": [
+      "The year is needed to locate the volume",
+      "The case is unreported",
+      "The judgment was delivered in 2010",
+      "The report is a second edition"
+     ],
+     "answer": 0,
+     "why": "Square brackets mean the year is part of the address. Round brackets would mean the volume number alone finds it."
+    },
+    {
+     "id": "qci2",
+     "q": "Which part of a citation is most often lost when it is copied, and matters most?",
+     "options": [
+      "The court identifier",
+      "The page number",
+      "The volume number",
+      "The party names"
+     ],
+     "answer": 0,
+     "why": "Without knowing whether it is (FC), (CA) or (HC) you cannot weigh the authority at all."
+    },
+    {
+     "id": "qci3",
+     "q": "What can a citation never tell you?",
+     "options": [
+      "Whether the case is still good law",
+      "Which court decided it",
+      "Where the judgment is published",
+      "The year of the report volume"
+     ],
+     "answer": 0,
+     "why": "A citation is an address, not a status check. That is what a citator is for — and there is no free Malaysian one."
+    },
+    {
+     "id": "qci4",
+     "q": "A case appears both on the courts' portal and in the MLJ. Which should you cite?",
+     "options": [
+      "The MLJ report",
+      "The portal version",
+      "Either, without comment",
+      "Both, always"
+     ],
+     "answer": 0,
+     "why": "Cite the report where one exists; the unreported text has not been through editorial checking."
+    },
+    {
+     "id": "qci5",
+     "q": "What makes a note of a statutory provision complete?",
+     "options": [
+      "The section, plus which version you read and when",
+      "The section number alone",
+      "The Act number alone",
+      "The section and the marginal note"
+     ],
+     "answer": 0,
+     "why": "Consolidated texts change quietly. The version and the date you consulted it are part of the record."
+    }
+   ],
+   "reading": [],
+   "source": "Standard Malaysian citation practice (MLJ, CLJ, AMR series); Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC) as an illustration of a decision superseding an earlier one.",
+   "lastVerified": "2026-09-07",
+   "verify": "Report series abbreviations and the layout of the AGC portal change. Confirm the current form of a neutral/court citation against a judgment issued in the last twelve months before adopting the format above."
+  },
+  {
+   "id": "l-analogy",
+   "moduleId": "m13-legal-reasoning",
+   "title": "Analogy, distinguishing, and the honest use of precedent",
+   "minutes": 25,
+   "summary": "Distinguishing is an argument about materiality, not a way of escaping an inconvenient case. Doing it badly is the most visible weakness in a legal answer.",
+   "sections": [
+    {
+     "h": "Reasoning by analogy is the whole game",
+     "body": [
+      {
+       "t": "p",
+       "text": "Almost no case is on all fours with the one in front of you. The work is arguing that the differences between them do not matter, or that they do — and both arguments have the same shape: they are claims about which facts the earlier decision actually turned on."
+      },
+      {
+       "t": "rule",
+       "text": "To distinguish a binding case, identify a material difference between its facts and yours — a difference such that the reasoning of the earlier decision does not reach your facts. A difference that the earlier reasoning does not depend on is not a distinction.",
+       "source": "Standard common law method; follows from the definition of ratio decidendi"
+      },
+      {
+       "t": "caution",
+       "text": "'The earlier case concerned a lorry and ours concerns a van' is not a distinction unless something in the reasoning turned on the size of the vehicle. Stating a difference is not distinguishing; you have to show the difference does work."
+      }
+     ]
+    },
+    {
+     "h": "Three moves, in descending order of legitimacy",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "**Distinguish.** The rule of the earlier case, properly stated, does not extend to these facts. Legitimate, and available to any court.",
+        "**Confine to its facts.** The earlier decision is read as narrowly as its result allows. Legitimate but weaker, and a court doing it is usually signalling discomfort.",
+        "**Depart or overrule.** Available only to a court with the power to do it. The Federal Court may depart from its own previous decisions, but does so sparingly and with reasons."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A student answer should almost always be doing the first. Asserting that a Federal Court decision is wrong is not an argument available to a High Court, and writing as though it were signals that the hierarchy has not been understood."
+      }
+     ]
+    },
+    {
+     "h": "Persuasive authority, and how to weigh it",
+     "body": [
+      {
+       "t": "p",
+       "text": "Decisions of courts in other common law jurisdictions do not bind a Malaysian court. Their weight depends on the similarity of the statutory scheme, the standing of the court, and how closely the reasoning fits local conditions."
+      },
+      {
+       "t": "caution",
+       "text": "The trap in Malaysian law is the codified subject. Contract is governed by the Contracts Act 1950, not by the English common law of contract, so an English case is useful only where the Act's language raises the same question. An English authority cited against the words of a Malaysian section is worse than no authority."
+      }
+     ]
+    },
+    {
+     "h": "Writing it so a reader can check you",
+     "body": [
+      {
+       "t": "p",
+       "text": "Set out the earlier case's material facts, state its ratio in your own words, then put your facts beside it and say what differs and why the difference matters. Three sentences, done properly, beat a paragraph of assertion."
+      },
+      {
+       "t": "example",
+       "text": "*The authority in the drainage case had assumed the task of maintenance and abandoned it, and the loss was physical damage to goods. Here the authority never began the work, and the loss is lost trade. The first difference goes to whether a duty arose at all; the second was expressly reserved. The case does not decide ours.*"
+      },
+      {
+       "t": "p",
+       "text": "That is what the application band of a rubric is looking for, and it is why an answer that recites two cases and asserts a conclusion scores so much lower than it feels like it should."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "mm-analogy-01",
+    "mm-analogy-02",
+    "mm-analogy-03",
+    "mm-analogy-04"
+   ],
+   "prepares": [
+    "pa-distinguish-01"
+   ],
+   "quiz": [
+    {
+     "id": "qan1",
+     "q": "What makes a difference between two cases a genuine distinction?",
+     "options": [
+      "The earlier reasoning depends on the fact that differs",
+      "The facts are not identical",
+      "The parties are different",
+      "The earlier case is older"
+     ],
+     "answer": 0,
+     "why": "Distinguishing is a claim about materiality. If the earlier reasoning does not turn on it, pointing at it proves nothing."
+    },
+    {
+     "id": "qan2",
+     "q": "A High Court judge thinks a Federal Court decision is wrong. What is the legitimate move?",
+     "options": [
+      "Distinguish it if the facts allow, and otherwise follow it",
+      "Decline to follow it",
+      "Overrule it",
+      "Treat it as persuasive only"
+     ],
+     "answer": 0,
+     "why": "The hierarchy binds. Departing from Federal Court authority is not a move available to the High Court."
+    },
+    {
+     "id": "qan3",
+     "q": "Why are English contract cases used with particular care in Malaysia?",
+     "options": [
+      "Contract is codified in the Contracts Act 1950",
+      "English cases are never persuasive",
+      "The English courts use a different standard of proof",
+      "Contract law is a state matter"
+     ],
+     "answer": 0,
+     "why": "The starting point is the words of the Act. An English authority helps only where the Act raises the same question."
+    },
+    {
+     "id": "qan4",
+     "q": "Which is the weakest of the three legitimate ways of dealing with an inconvenient precedent?",
+     "options": [
+      "Confining it to its facts",
+      "Distinguishing it",
+      "Following it",
+      "Applying it by analogy"
+     ],
+     "answer": 0,
+     "why": "It is legitimate but is usually a signal of discomfort rather than a reasoned limit."
+    },
+    {
+     "id": "qan5",
+     "q": "What does the application band of a rubric reward?",
+     "options": [
+      "Putting the rule against these facts and showing what turns on the difference",
+      "Accurate recitation of the earlier cases",
+      "Naming the correct section",
+      "A firm conclusion"
+     ],
+     "answer": 0,
+     "why": "Recital is the rule band. Application is the work of moving from the rule to the facts in front of you."
+    }
+   ],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "the chapters on precedent and on legal reasoning"
+    }
+   ],
+   "source": "Standard common law method on precedent, distinguishing and persuasive authority; the codification point follows from the Contracts Act 1950 occupying the field.",
+   "lastVerified": "2026-09-07",
+   "verify": "Check the current practice of the Federal Court on departing from its own previous decisions before asserting anything about how freely it may do so — the position has been stated in several judgments and is not identical in all of them."
+  },
+  {
+   "id": "l-aids",
+   "moduleId": "m14-statutory-interpretation",
+   "title": "Aids to interpretation, and the presumptions a reader brings",
+   "minutes": 25,
+   "summary": "Section 17A directs a purposive construction. Around it sit the linguistic canons, the internal and external aids, and a set of presumptions that decide close cases.",
+   "sections": [
+    {
+     "h": "The statutory direction comes first",
+     "body": [
+      {
+       "t": "rule",
+       "text": "In interpreting a provision of an Act, a construction that would promote the purpose or object underlying the Act is to be preferred to a construction that would not.",
+       "source": "Interpretation Acts 1948 and 1967, s 17A"
+      },
+      {
+       "t": "p",
+       "text": "This is not a licence to rewrite. The purposive approach chooses between constructions the words can bear; it does not authorise a reading the language cannot support. Where the words admit of only one meaning, purpose does not displace it."
+      },
+      {
+       "t": "caution",
+       "text": "An answer that leaps to purpose without first showing that the words are capable of two readings has skipped the step that makes s 17A applicable at all."
+      }
+     ]
+    },
+    {
+     "h": "Internal aids: what is inside the Act",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "**The long title and preamble** — evidence of purpose, and admissible as such.",
+        "**The interpretation section** — a definition in the Act displaces ordinary meaning for that Act, and is the first place to look.",
+        "**Marginal notes and headings** — usable as an indication of the drafter's arrangement, but they are not enacted words and cannot control a clear provision.",
+        "**Provisos, illustrations and schedules** — a proviso qualifies the provision it sits under and is read with it, not as a free-standing rule."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Read the whole section before you read the words you came for. The commonest interpretation error in a student answer is quoting a sub-section that a later sub-section qualifies."
+      }
+     ]
+    },
+    {
+     "h": "The linguistic canons",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "**Ejusdem generis** — general words following a list of specifics are read as limited to the same class. 'Cats, dogs and other animals' in a list of household pets is unlikely to include livestock.",
+        "**Noscitur a sociis** — a word takes colour from those around it.",
+        "**Expressio unius est exclusio alterius** — expressing one thing implies the exclusion of others. The weakest of the three, and easily overstated: a drafter's silence is often just silence."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "These are aids, not rules. A canon that produces a result contrary to the evident purpose of the Act does not win — s 17A does."
+      }
+     ]
+    },
+    {
+     "h": "Presumptions the court starts with",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "Against retrospective operation, particularly where a provision affects vested rights or creates a criminal liability.",
+        "That mens rea is required for a criminal offence, unless the statute displaces it expressly or by necessary implication.",
+        "Against ousting the jurisdiction of the courts — an ouster clause is read narrowly.",
+        "That the legislature does not intend to legislate contrary to the Constitution, so where two readings are open the constitutional one is preferred."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Presumptions are displaceable, and the argument in a hard case is usually about whether the statute has displaced one clearly enough. Naming the presumption and then asking that question is a complete piece of reasoning; naming it and stopping is not."
+      }
+     ]
+    },
+    {
+     "h": "External aids, used carefully",
+     "body": [
+      {
+       "t": "p",
+       "text": "Dictionaries establish the range of ordinary meaning, not the meaning in the Act. Earlier statutes on the same subject, and the mischief the Act was passed to address, are legitimate context. Parliamentary material is used with more caution in this jurisdiction than the English debates about *Pepper v Hart* might lead you to expect."
+      },
+      {
+       "t": "caution",
+       "text": "Do not build an argument on Hansard without checking the current Malaysian position on its admissibility. It is a point on which confident student answers are frequently wrong."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "mm-interp-01",
+    "mm-interp-02",
+    "mm-interp-03",
+    "mm-interp-04",
+    "mm-interp-05"
+   ],
+   "prepares": [
+    "pa-interpretation-01"
+   ],
+   "quiz": [
+    {
+     "id": "qai1",
+     "q": "What does s 17A of the Interpretation Acts 1948 and 1967 direct?",
+     "options": [
+      "Prefer a construction that promotes the Act's purpose",
+      "Prefer the literal meaning always",
+      "Read penal provisions narrowly",
+      "Prefer the construction favouring the subject"
+     ],
+     "answer": 0,
+     "why": "Section 17A is the statutory purposive direction — but it chooses between readings the words can bear.",
+     "source": "Interpretation Acts 1948 and 1967, s 17A"
+    },
+    {
+     "id": "qai2",
+     "q": "When does the purposive approach become relevant?",
+     "options": [
+      "Once the words are capable of more than one reading",
+      "Immediately, before reading the words",
+      "Only in criminal cases",
+      "Only where there is a preamble"
+     ],
+     "answer": 0,
+     "why": "Purpose chooses between available constructions. Where the language admits one meaning only, there is nothing to choose."
+    },
+    {
+     "id": "qai3",
+     "q": "'Rifles, shotguns, pistols and other weapons' — which canon limits 'other weapons'?",
+     "options": [
+      "Ejusdem generis",
+      "Expressio unius",
+      "Noscitur a sociis",
+      "The golden rule"
+     ],
+     "answer": 0,
+     "why": "General words following a list of specifics are read as confined to the same class."
+    },
+    {
+     "id": "qai4",
+     "q": "Which presumption applies to an ouster clause?",
+     "options": [
+      "It is read narrowly, against ousting the court's jurisdiction",
+      "It is read broadly, to give effect to purpose",
+      "It is void",
+      "It is presumed retrospective"
+     ],
+     "answer": 0,
+     "why": "Courts start from a presumption against being ousted, and require clear words."
+    },
+    {
+     "id": "qai5",
+     "q": "What is the correct weight of a marginal note?",
+     "options": [
+      "An indication of arrangement that cannot control a clear provision",
+      "Enacted text of equal weight",
+      "Inadmissible for any purpose",
+      "Conclusive of purpose"
+     ],
+     "answer": 0,
+     "why": "Marginal notes are not enacted words. They orient the reader; they do not decide the meaning."
+    },
+    {
+     "id": "qai6",
+     "q": "What should you check before arguing from Hansard in Malaysia?",
+     "options": [
+      "The current position on its admissibility",
+      "The date of the debate",
+      "Whether it was in English",
+      "Whether the Act has a preamble"
+     ],
+     "answer": 0,
+     "why": "The English Pepper v Hart line does not transfer automatically, and confident student answers are often wrong on this."
+    }
+   ],
+   "reading": [],
+   "source": "Interpretation Acts 1948 and 1967, s 17A; standard canons of construction and the common law presumptions.",
+   "lastVerified": "2026-09-07",
+   "verify": "Check s 17A against the current consolidated text, and check the present Malaysian authority on the admissibility of parliamentary material before relying on the caution above — the position has developed and is stated differently in different judgments."
+  }
+ ]
+}

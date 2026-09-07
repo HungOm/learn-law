@@ -1,0 +1,711 @@
+{
+ "schemaVersion": 1,
+ "note": "Cards for the substantive lessons written in the second pass. Section numbers are the point of most of these, and every one carries the source it came from.",
+ "cardTypes": {
+  "term": "Defined term or Latin maxim. Irreducible pair.",
+  "rule": "A black-letter rule or a single element of one.",
+  "ratio": "The principle a case stands for.",
+  "structure": "Institutional or hierarchical fact.",
+  "source": "Where a rule comes from — statute, section, or authority.",
+  "trigger": "A fact cue that should make you think of a doctrine."
+ },
+ "cards": [
+  {
+   "id": "ms-fed-01",
+   "moduleId": "m03-constitutional",
+   "type": "source",
+   "front": "Which Article makes federal law prevail over inconsistent State law?",
+   "back": "Article 75. The State law is void to the extent of the inconsistency.",
+   "tags": [
+    "federalism"
+   ],
+   "source": "Federal Constitution Art 75"
+  },
+  {
+   "id": "ms-fed-02",
+   "moduleId": "m03-constitutional",
+   "type": "structure",
+   "front": "What are the three lists in the Ninth Schedule?",
+   "back": "List I Federal, List II State, List III Concurrent — with supplementary lists for Sabah and Sarawak.",
+   "tags": [
+    "federalism"
+   ],
+   "source": "Federal Constitution, Ninth Schedule"
+  },
+  {
+   "id": "ms-fed-03",
+   "moduleId": "m03-constitutional",
+   "type": "rule",
+   "front": "Land is a State matter. How can the National Land Code be a federal statute?",
+   "back": "Article 76 lets Parliament legislate on State matters for uniformity; the law takes effect in a State on adoption by its legislature.",
+   "tags": [
+    "federalism",
+    "land"
+   ],
+   "source": "Federal Constitution Art 76"
+  },
+  {
+   "id": "ms-fed-04",
+   "moduleId": "m03-constitutional",
+   "type": "source",
+   "front": "What does Article 4(1) provide?",
+   "back": "The Constitution is the supreme law; law inconsistent with it is void to the extent of the inconsistency.",
+   "tags": [
+    "federalism",
+    "supremacy"
+   ],
+   "source": "Federal Constitution Art 4(1)"
+  },
+  {
+   "id": "ms-fed-05",
+   "moduleId": "m03-constitutional",
+   "type": "trigger",
+   "front": "A federal statute is passed on a List II subject. What is the first question?",
+   "back": "Competence, not Article 75. An ultra vires federal law prevails over nothing.",
+   "tags": [
+    "federalism",
+    "competence"
+   ],
+   "source": "Federal Constitution Arts 4(1) and 74"
+  },
+  {
+   "id": "ms-jud-01",
+   "moduleId": "m03-constitutional",
+   "type": "rule",
+   "front": "What did the 1988 amendment do to Article 121(1)?",
+   "back": "It replaced the vesting of judicial power in the courts with jurisdiction 'conferred by or under federal law'.",
+   "tags": [
+    "judicial-power"
+   ],
+   "source": "Constitution (Amendment) Act 1988"
+  },
+  {
+   "id": "ms-jud-02",
+   "moduleId": "m03-constitutional",
+   "type": "source",
+   "front": "What does Article 121(1A) do?",
+   "back": "It removes from the civil courts jurisdiction over matters within the jurisdiction of the Syariah courts.",
+   "tags": [
+    "judicial-power",
+    "syariah"
+   ],
+   "source": "Federal Constitution Art 121(1A)",
+   "note": "It is a subtraction from the civil courts, not a grant to the Syariah courts."
+  },
+  {
+   "id": "ms-jud-03",
+   "moduleId": "m03-constitutional",
+   "type": "term",
+   "front": "What is the basic structure doctrine?",
+   "back": "The argument that certain fundamental features cannot be removed even by a valid constitutional amendment.",
+   "tags": [
+    "judicial-power",
+    "basic-structure"
+   ],
+   "source": "Malaysian and Indian constitutional case law"
+  },
+  {
+   "id": "ms-jud-04",
+   "moduleId": "m03-constitutional",
+   "type": "source",
+   "front": "Which court decides whether a law is invalid for want of legislative competence?",
+   "back": "The Federal Court, exclusively, under Article 128.",
+   "tags": [
+    "judicial-power",
+    "jurisdiction"
+   ],
+   "source": "Federal Constitution Art 128"
+  },
+  {
+   "id": "ms-exc-01",
+   "moduleId": "m04-criminal-law",
+   "type": "source",
+   "front": "Where does the burden of proving a general exception lie, and to what standard?",
+   "back": "On the accused, on the balance of probabilities — s 105 of the Evidence Act 1950.",
+   "tags": [
+    "exceptions",
+    "burden"
+   ],
+   "source": "Evidence Act 1950, s 105"
+  },
+  {
+   "id": "ms-exc-02",
+   "moduleId": "m04-criminal-law",
+   "type": "source",
+   "front": "Which section makes every Penal Code offence subject to the general exceptions?",
+   "back": "Section 6 of the Penal Code.",
+   "tags": [
+    "exceptions"
+   ],
+   "source": "Penal Code, s 6"
+  },
+  {
+   "id": "ms-exc-03",
+   "moduleId": "m04-criminal-law",
+   "type": "rule",
+   "front": "Section 79 of the Penal Code excuses a mistake of what?",
+   "back": "A mistake of fact, made in good faith. Mistake of law does not excuse.",
+   "tags": [
+    "exceptions",
+    "mistake"
+   ],
+   "source": "Penal Code, s 79"
+  },
+  {
+   "id": "ms-exc-04",
+   "moduleId": "m04-criminal-law",
+   "type": "rule",
+   "front": "When is there no right of private defence under s 99(3)?",
+   "back": "Where there is no reasonable apprehension of death or grievous hurt and there is time to have recourse to the public authorities.",
+   "tags": [
+    "exceptions",
+    "private-defence"
+   ],
+   "source": "Penal Code, s 99(3)"
+  },
+  {
+   "id": "ms-exc-05",
+   "moduleId": "m04-criminal-law",
+   "type": "trigger",
+   "front": "An accused kills while exceeding the right of private defence. What should you reach for?",
+   "back": "Exception 2 to s 300 — murder may be reduced to culpable homicide not amounting to murder.",
+   "tags": [
+    "exceptions",
+    "homicide"
+   ],
+   "source": "Penal Code, Exception 2 to s 300"
+  },
+  {
+   "id": "ms-crimpro-01",
+   "moduleId": "m05-criminal-procedure",
+   "type": "term",
+   "front": "What does 'non-bailable offence' mean?",
+   "back": "Bail is in the court's discretion, subject to s 388 — not that bail is unavailable.",
+   "tags": [
+    "bail"
+   ],
+   "source": "Criminal Procedure Code, s 388"
+  },
+  {
+   "id": "ms-crimpro-02",
+   "moduleId": "m05-criminal-procedure",
+   "type": "structure",
+   "front": "Where is an offence classified as bailable or non-bailable?",
+   "back": "The First Schedule to the Criminal Procedure Code, offence by offence.",
+   "tags": [
+    "bail"
+   ],
+   "source": "Criminal Procedure Code, First Schedule"
+  },
+  {
+   "id": "ms-crimpro-03",
+   "moduleId": "m05-criminal-procedure",
+   "type": "source",
+   "front": "How long may a person be held after arrest without a Magistrate's authority?",
+   "back": "Twenty-four hours — Article 5(4) of the Federal Constitution. Longer needs a remand order under s 117 CPC.",
+   "tags": [
+    "arrest",
+    "remand"
+   ],
+   "source": "Federal Constitution Art 5(4); Criminal Procedure Code s 117"
+  },
+  {
+   "id": "ms-crimpro-04",
+   "moduleId": "m05-criminal-procedure",
+   "type": "source",
+   "front": "What is the question at the close of the prosecution case?",
+   "back": "Whether a prima facie case has been made out — s 180 of the Criminal Procedure Code.",
+   "tags": [
+    "trial"
+   ],
+   "source": "Criminal Procedure Code, s 180"
+  },
+  {
+   "id": "ms-crimpro-05",
+   "moduleId": "m05-criminal-procedure",
+   "type": "term",
+   "front": "What is a discharge not amounting to an acquittal?",
+   "back": "A discharge that leaves the accused liable to be recharged on the same facts.",
+   "tags": [
+    "trial",
+    "prosecution"
+   ],
+   "source": "Criminal Procedure Code"
+  },
+  {
+   "id": "ms-vit-01",
+   "moduleId": "m06-contract",
+   "type": "source",
+   "front": "Which section lists what makes consent not free?",
+   "back": "Section 14 of the Contracts Act 1950: coercion, undue influence, fraud, misrepresentation, mistake.",
+   "tags": [
+    "consent"
+   ],
+   "source": "Contracts Act 1950, s 14"
+  },
+  {
+   "id": "ms-vit-02",
+   "moduleId": "m06-contract",
+   "type": "rule",
+   "front": "What is the effect of coercion, fraud or misrepresentation on an agreement?",
+   "back": "It is voidable at the option of the party whose consent was so caused — s 19(1).",
+   "tags": [
+    "consent",
+    "voidable"
+   ],
+   "source": "Contracts Act 1950, s 19(1)"
+  },
+  {
+   "id": "ms-vit-03",
+   "moduleId": "m06-contract",
+   "type": "rule",
+   "front": "What is the effect of a bilateral mistake as to an essential fact?",
+   "back": "The agreement is void — s 21. There is nothing to affirm.",
+   "tags": [
+    "consent",
+    "mistake"
+   ],
+   "source": "Contracts Act 1950, s 21"
+  },
+  {
+   "id": "ms-vit-04",
+   "moduleId": "m06-contract",
+   "type": "rule",
+   "front": "When is silence fraud under s 17?",
+   "back": "Where there is a duty to speak, or where silence is in itself equivalent to speech.",
+   "tags": [
+    "consent",
+    "fraud"
+   ],
+   "source": "Contracts Act 1950, s 17"
+  },
+  {
+   "id": "ms-vit-05",
+   "moduleId": "m06-contract",
+   "type": "source",
+   "front": "Which section requires restoration of an advantage received under a void agreement?",
+   "back": "Section 66 of the Contracts Act 1950.",
+   "tags": [
+    "consent",
+    "restitution"
+   ],
+   "source": "Contracts Act 1950, s 66"
+  },
+  {
+   "id": "ms-rem-01",
+   "moduleId": "m06-contract",
+   "type": "source",
+   "front": "Which section measures damages for breach of contract in Malaysia?",
+   "back": "Section 74 of the Contracts Act 1950 — the rule in Hadley v Baxendale, enacted.",
+   "tags": [
+    "remedies",
+    "damages"
+   ],
+   "source": "Contracts Act 1950, s 74"
+  },
+  {
+   "id": "ms-rem-02",
+   "moduleId": "m06-contract",
+   "type": "source",
+   "front": "Which section governs a sum named in the contract as payable on breach?",
+   "back": "Section 75 of the Contracts Act 1950 — reasonable compensation, not exceeding the sum named.",
+   "tags": [
+    "remedies",
+    "liquidated-damages"
+   ],
+   "source": "Contracts Act 1950, s 75"
+  },
+  {
+   "id": "ms-rem-03",
+   "moduleId": "m06-contract",
+   "type": "ratio",
+   "front": "What did Cubic Electronics v Mars Telecommunications decide about s 75?",
+   "back": "It reformulated the Malaysian approach, moving away from the strict proof-of-actual-loss requirement in Selva Kumar and asking whether the clause protects a legitimate interest.",
+   "tags": [
+    "remedies",
+    "liquidated-damages"
+   ],
+   "source": "Cubic Electronics Sdn Bhd v Mars Telecommunications Sdn Bhd [2019] 2 MLJ 806 (FC)",
+   "note": "Verify this citation and check for anything decided since."
+  },
+  {
+   "id": "ms-rem-04",
+   "moduleId": "m06-contract",
+   "type": "source",
+   "front": "Which statute governs specific performance in Malaysia?",
+   "back": "The Specific Relief Act 1950 — not the Contracts Act.",
+   "tags": [
+    "remedies",
+    "specific-performance"
+   ],
+   "source": "Specific Relief Act 1950"
+  },
+  {
+   "id": "ms-rem-05",
+   "moduleId": "m06-contract",
+   "type": "rule",
+   "front": "What does s 40 give a promisee faced with an entire refusal to perform?",
+   "back": "The right to put an end to the contract, unless he has acquiesced in its continuance.",
+   "tags": [
+    "remedies",
+    "termination"
+   ],
+   "source": "Contracts Act 1950, s 40"
+  },
+  {
+   "id": "ms-tort-01",
+   "moduleId": "m07-tort",
+   "type": "rule",
+   "front": "State the but-for test.",
+   "back": "But for the defendant's breach, would the damage have occurred? If it would, causation fails.",
+   "tags": [
+    "negligence",
+    "causation"
+   ],
+   "source": "Standard common law"
+  },
+  {
+   "id": "ms-tort-02",
+   "moduleId": "m07-tort",
+   "type": "source",
+   "front": "Which provision governs contributory negligence in Malaysia?",
+   "back": "Section 12 of the Civil Law Act 1956 — apportionment, not a complete defence.",
+   "tags": [
+    "negligence",
+    "apportionment"
+   ],
+   "source": "Civil Law Act 1956, s 12"
+  },
+  {
+   "id": "ms-tort-03",
+   "moduleId": "m07-tort",
+   "type": "rule",
+   "front": "State the remoteness rule.",
+   "back": "The kind of damage must be reasonably foreseeable; the extent need not be.",
+   "tags": [
+    "negligence",
+    "remoteness"
+   ],
+   "source": "The Wagon Mound (No 1) [1961] AC 388"
+  },
+  {
+   "id": "ms-tort-04",
+   "moduleId": "m07-tort",
+   "type": "term",
+   "front": "Novus actus interveniens versus contributory negligence — what is the difference?",
+   "back": "The first breaks the chain and defeats the claim; the second reduces the damages.",
+   "tags": [
+    "negligence",
+    "causation"
+   ],
+   "source": "Standard common law"
+  },
+  {
+   "id": "ms-def-01",
+   "moduleId": "m07-tort",
+   "type": "rule",
+   "front": "What are the three elements of defamation?",
+   "back": "The words are defamatory, they refer to the plaintiff, and they were published to a third party.",
+   "tags": [
+    "defamation"
+   ],
+   "source": "Standard common law"
+  },
+  {
+   "id": "ms-def-02",
+   "moduleId": "m07-tort",
+   "type": "term",
+   "front": "What is publication in defamation?",
+   "back": "Communication to at least one person other than the plaintiff.",
+   "tags": [
+    "defamation"
+   ],
+   "source": "Standard common law"
+  },
+  {
+   "id": "ms-def-03",
+   "moduleId": "m07-tort",
+   "type": "rule",
+   "front": "Where does malice bite in a defamation action?",
+   "back": "It defeats qualified privilege and fair comment. It is not an element of the tort.",
+   "tags": [
+    "defamation",
+    "defences"
+   ],
+   "source": "Standard common law"
+  },
+  {
+   "id": "ms-def-04",
+   "moduleId": "m07-tort",
+   "type": "source",
+   "front": "What does s 8 of the Defamation Act 1957 do?",
+   "back": "Justification does not fail merely because every charge is not proved true, if the rest do not materially injure reputation.",
+   "tags": [
+    "defamation",
+    "defences"
+   ],
+   "source": "Defamation Act 1957, s 8"
+  },
+  {
+   "id": "ms-land-01",
+   "moduleId": "m08-property",
+   "type": "rule",
+   "front": "When does a dealing pass an interest in registered land?",
+   "back": "On registration. Before that the purchaser has contractual and equitable rights only.",
+   "tags": [
+    "torrens",
+    "dealings"
+   ],
+   "source": "National Land Code"
+  },
+  {
+   "id": "ms-land-02",
+   "moduleId": "m08-property",
+   "type": "source",
+   "front": "Who may enter a private caveat?",
+   "back": "A person claiming title, or any registrable interest, or to be beneficially entitled under a trust affecting the land — s 323.",
+   "tags": [
+    "caveats"
+   ],
+   "source": "National Land Code, s 323"
+  },
+  {
+   "id": "ms-land-03",
+   "moduleId": "m08-property",
+   "type": "rule",
+   "front": "What must a caveator show on an application to remove a private caveat?",
+   "back": "A serious question to be tried, and that the balance of convenience favours maintaining the caveat.",
+   "tags": [
+    "caveats"
+   ],
+   "source": "Malaysian case law on private caveats"
+  },
+  {
+   "id": "ms-land-04",
+   "moduleId": "m08-property",
+   "type": "structure",
+   "front": "Where does a chargee apply for an order for sale?",
+   "back": "Registry title: the High Court. Land Office title: the Land Administrator.",
+   "tags": [
+    "charges"
+   ],
+   "source": "National Land Code, the order-for-sale provisions"
+  },
+  {
+   "id": "ms-land-05",
+   "moduleId": "m08-property",
+   "type": "ratio",
+   "front": "What did Tan Ying Hong v Tan Sian San decide?",
+   "back": "It restored deferred indefeasibility under s 340, departing from Adorna Properties.",
+   "tags": [
+    "torrens",
+    "indefeasibility"
+   ],
+   "source": "Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC)"
+  },
+  {
+   "id": "ms-co-01",
+   "moduleId": "m09-company",
+   "type": "source",
+   "front": "Which provision states a director's duty to act in good faith in the company's best interest?",
+   "back": "Section 213(1) of the Companies Act 2016. Section 213(2) is the duty of care.",
+   "tags": [
+    "directors"
+   ],
+   "source": "Companies Act 2016, s 213"
+  },
+  {
+   "id": "ms-co-02",
+   "moduleId": "m09-company",
+   "type": "rule",
+   "front": "What does a statutory derivative action require?",
+   "back": "Leave of the court, good faith, and that the action is prima facie in the company's best interest.",
+   "tags": [
+    "remedies",
+    "derivative"
+   ],
+   "source": "Companies Act 2016, ss 347-350"
+  },
+  {
+   "id": "ms-co-03",
+   "moduleId": "m09-company",
+   "type": "source",
+   "front": "Which section gives the oppression remedy?",
+   "back": "Section 346 of the Companies Act 2016.",
+   "tags": [
+    "remedies",
+    "oppression"
+   ],
+   "source": "Companies Act 2016, s 346"
+  },
+  {
+   "id": "ms-co-04",
+   "moduleId": "m09-company",
+   "type": "term",
+   "front": "What is reflective loss?",
+   "back": "A fall in share value caused by harm to the company. The claim belongs to the company, not the member.",
+   "tags": [
+    "remedies",
+    "standing"
+   ],
+   "source": "Standard company law"
+  },
+  {
+   "id": "ms-ev-01",
+   "moduleId": "m10-evidence",
+   "type": "source",
+   "front": "Which section places the legal burden on the person who would fail if no evidence were given?",
+   "back": "Section 102 of the Evidence Act 1950.",
+   "tags": [
+    "burden"
+   ],
+   "source": "Evidence Act 1950, s 102"
+  },
+  {
+   "id": "ms-ev-02",
+   "moduleId": "m10-evidence",
+   "type": "rule",
+   "front": "What is the scope of s 106?",
+   "back": "A specific fact especially within a person's knowledge. It cannot reverse the general burden.",
+   "tags": [
+    "burden"
+   ],
+   "source": "Evidence Act 1950, s 106"
+  },
+  {
+   "id": "ms-ev-03",
+   "moduleId": "m10-evidence",
+   "type": "term",
+   "front": "'May presume', 'shall presume', 'conclusive proof' — what is the difference?",
+   "back": "A discretion; mandatory unless disproved; and admitting no evidence in rebuttal.",
+   "tags": [
+    "presumptions"
+   ],
+   "source": "Evidence Act 1950, s 4"
+  },
+  {
+   "id": "ms-ev-04",
+   "moduleId": "m10-evidence",
+   "type": "source",
+   "front": "What is illustration (g) to s 114?",
+   "back": "That evidence which could be and is not produced would, if produced, be unfavourable to the person who withholds it.",
+   "tags": [
+    "presumptions",
+    "adverse-inference"
+   ],
+   "source": "Evidence Act 1950, s 114 illustration (g)"
+  },
+  {
+   "id": "ms-ev-05",
+   "moduleId": "m10-evidence",
+   "type": "rule",
+   "front": "What must be established before any question of burden arises?",
+   "back": "Admissibility. Relevance is defined by the Act, not at large.",
+   "tags": [
+    "relevancy"
+   ],
+   "source": "Evidence Act 1950, s 5"
+  },
+  {
+   "id": "ms-civ-01",
+   "moduleId": "m11-civil-procedure",
+   "type": "rule",
+   "front": "What must a defendant show to resist summary judgment under Order 14?",
+   "back": "A triable issue, or some other reason why there ought to be a trial — not that the defence will succeed.",
+   "tags": [
+    "summary-judgment"
+   ],
+   "source": "Rules of Court 2012, O 14"
+  },
+  {
+   "id": "ms-civ-02",
+   "moduleId": "m11-civil-procedure",
+   "type": "rule",
+   "front": "On a strike-out for no reasonable cause of action, what evidence is admissible?",
+   "back": "None. The question is taken on the pleading as it stands.",
+   "tags": [
+    "striking-out"
+   ],
+   "source": "Rules of Court 2012, O 18 r 19"
+  },
+  {
+   "id": "ms-civ-03",
+   "moduleId": "m11-civil-procedure",
+   "type": "rule",
+   "front": "State the interlocutory injunction test.",
+   "back": "A serious question to be tried; damages an inadequate remedy; balance of convenience — with an undertaking in damages.",
+   "tags": [
+    "injunctions"
+   ],
+   "source": "Rules of Court 2012, O 29; American Cyanamid as applied in Malaysia"
+  },
+  {
+   "id": "ms-civ-04",
+   "moduleId": "m11-civil-procedure",
+   "type": "source",
+   "front": "What is the general limitation period for contract and tort?",
+   "back": "Six years from the accrual of the cause of action, under the Limitation Act 1953.",
+   "tags": [
+    "limitation"
+   ],
+   "source": "Limitation Act 1953, s 6"
+  },
+  {
+   "id": "ms-adm-01",
+   "moduleId": "m12-administrative",
+   "type": "term",
+   "front": "Audi alteram partem — what does it require?",
+   "back": "Notice of the case against you and a fair opportunity to answer it.",
+   "tags": [
+    "natural-justice"
+   ],
+   "source": "Standard common law"
+  },
+  {
+   "id": "ms-adm-02",
+   "moduleId": "m12-administrative",
+   "type": "rule",
+   "front": "What is the practical test for bias?",
+   "back": "Whether a fair-minded and informed observer would conclude there was a real danger, or real possibility, of bias.",
+   "tags": [
+    "natural-justice"
+   ],
+   "source": "Malaysian and English case law on bias",
+   "note": "Check which formulation the Malaysian courts currently use."
+  },
+  {
+   "id": "ms-adm-03",
+   "moduleId": "m12-administrative",
+   "type": "rule",
+   "front": "Can a legitimate expectation arise from a representation outside the decision-maker's power?",
+   "back": "No. A public body cannot bind itself to act unlawfully.",
+   "tags": [
+    "legitimate-expectation"
+   ],
+   "source": "Standard administrative law"
+  },
+  {
+   "id": "ms-adm-04",
+   "moduleId": "m12-administrative",
+   "type": "structure",
+   "front": "What are the three classic grounds of judicial review?",
+   "back": "Illegality, irrationality, procedural impropriety — with proportionality argued as a fourth.",
+   "tags": [
+    "judicial-review"
+   ],
+   "source": "The GCHQ classification as received in Malaysia"
+  },
+  {
+   "id": "ms-adm-05",
+   "moduleId": "m12-administrative",
+   "type": "source",
+   "front": "What are the two procedural thresholds under Order 53?",
+   "back": "Leave of the court, and an applicant who is adversely affected by the decision — within the prescribed time.",
+   "tags": [
+    "judicial-review",
+    "procedure"
+   ],
+   "source": "Rules of Court 2012, O 53"
+  }
+ ]
+}

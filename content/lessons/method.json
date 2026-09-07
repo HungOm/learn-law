@@ -1,1074 +1,1524 @@
 {
-  "schemaVersion": 1,
-  "note": "Lessons for the method modules. A lesson is exposition: it states the rules, shows how they fit, and hands off to the cards that keep them available and the problem questions that test whether they can be used. Every lesson carries its sources and a `verify` line — the app states a rule, it does not vouch for it.",
-  "lessons": [
+ "schemaVersion": 1,
+ "note": "Lessons for the method modules. A lesson is exposition: it states the rules, shows how they fit, and hands off to the cards that keep them available and the problem questions that test whether they can be used. Every lesson carries its sources and a `verify` line — the app states a rule, it does not vouch for it.",
+ "lessons": [
+  {
+   "id": "l-how-to-study",
+   "moduleId": "m-study-method",
+   "title": "How to study law, and why this app works the way it does",
+   "minutes": 20,
+   "summary": "Retrieval beats re-reading, a case brief is a discipline rather than a summary, and the app is built around both.",
+   "sections": [
     {
-      "id": "l-how-to-study",
-      "moduleId": "m-study-method",
-      "title": "How to study law, and why this app works the way it does",
-      "minutes": 20,
-      "summary": "Retrieval beats re-reading, a case brief is a discipline rather than a summary, and the app is built around both.",
-      "sections": [
-        {
-          "h": "The method matters more here than elsewhere",
-          "body": [
-            {
-              "t": "p",
-              "text": "Law is a large volume of material that has to be recalled precisely, structured well enough to be applied to facts you have never seen, and written down under time pressure. Very few subjects need all three at once. A study method that works for a subject needing only the first will fail here, slowly, in a way you will not notice until an examination."
-            },
-            {
-              "t": "p",
-              "text": "This lesson is about the method. It is short, and it is worth more than any single doctrine below it."
-            }
-          ]
-        },
-        {
-          "h": "Re-reading feels like work and is not",
-          "body": [
-            {
-              "t": "p",
-              "text": "The most robust finding in the learning research is also the least intuitive: re-reading a text produces a strong feeling of mastery and very little durable memory. The feeling comes from fluency — the second pass is easier than the first, and the brain reads ease as knowing."
-            },
-            {
-              "t": "rule",
-              "text": "Retrieval practice beats review. Trying to recall something, and failing, does more for retention than reading it again — provided you then check the answer.",
-              "source": "Make It Stick; the retrieval practice literature"
-            },
-            {
-              "t": "p",
-              "text": "This is why the app makes you answer a card before showing you the back, and why the problem questions make you write the whole answer before the rubric appears. Both are structured to stop you reading the answer and mistaking recognition for recall."
-            },
-            {
-              "t": "caution",
-              "text": "The corollary is uncomfortable: study that feels harder is usually working better. If your revision feels smooth and pleasant, be suspicious of it."
-            }
-          ]
-        },
-        {
-          "h": "Spacing, and why the intervals grow",
-          "body": [
-            {
-              "t": "p",
-              "text": "Material reviewed at increasing intervals is retained far longer than material reviewed in a block. The app schedules cards on that principle, using FSRS, and the intervals lengthen because each successful recall makes the memory more durable."
-            },
-            {
-              "t": "rule",
-              "text": "Space your reviews, and interleave topics rather than blocking them. Mixing contract and criminal in one session feels worse and produces better discrimination between them.",
-              "source": "Make It Stick; the spacing and interleaving literature"
-            },
-            {
-              "t": "p",
-              "text": "Interleaving matters especially in law because the hard skill is telling doctrines apart on facts that do not announce which is which. Studying tort for a solid week teaches you tort; studying tort mixed with contract teaches you to notice which one you are looking at."
-            }
-          ]
-        },
-        {
-          "h": "How to read a case",
-          "body": [
-            {
-              "t": "p",
-              "text": "Reading a judgment straight through, like an article, is the commonest waste of a student's time. A judgment is a document with a structure, and you read it by extracting that structure."
-            },
-            {
-              "t": "list",
-              "items": [
-                "Facts — only the material ones. A fact is material if changing it might change the outcome.",
-                "Procedural history — which court, on appeal from what, and what was decided below.",
-                "Issue — the question of law the court had to answer, stated as a question.",
-                "Holding — the answer to that question.",
-                "Reasoning — why. This is the part worth your attention.",
-                "Ratio — the rule the decision rests on, stated so it could govern a different case.",
-                "Obiter — anything else worth noting, marked as such."
-              ]
-            },
-            {
-              "t": "p",
-              "text": "Write it down. A brief you did not write is a brief you do not have, and the act of compressing a judgment to a page is where the understanding happens. Briefs also mean you never re-read a full judgment for revision."
-            },
-            {
-              "t": "caution",
-              "text": "Do not brief from a headnote. Headnotes are written by editors, are sometimes wrong, and are never authority. Read the judgment."
-            }
-          ]
-        },
-        {
-          "h": "How to answer a problem question",
-          "body": [
-            {
-              "t": "p",
-              "text": "Use IRAC, or the ILAC variant, and use it visibly. Issue, Rule, Application, Conclusion."
-            },
-            {
-              "t": "p",
-              "text": "The marks in a problem question are overwhelmingly in the Application. Students who lose marks usually state the law competently and then stop, or restate the facts without connecting them to the rule. Application means saying which fact satisfies which element, and where the difficulty is."
-            },
-            {
-              "t": "rule",
-              "text": "State the rule with its source. Apply it to these facts. Argue both sides where the point is genuinely arguable. Then answer the question that was asked.",
-              "source": "Standard examination technique"
-            },
-            {
-              "t": "p",
-              "text": "Write under time from the beginning. An answer you could have written in ninety minutes is worth nothing in a forty-minute question, and the only way to learn the pace is to practise at it."
-            }
-          ]
-        },
-        {
-          "h": "What this app is and is not",
-          "body": [
-            {
-              "t": "p",
-              "text": "Three layers. Lessons state the rules and orient you to the reading. Cards keep the rules available, scheduled so you meet them just as they start to fade. Problem questions test whether you can use them, and make you predict your own mark before you see the rubric, because a self-taught student's largest blind spot is their own judgment of their work."
-            },
-            {
-              "t": "p",
-              "text": "What it does not do is replace the textbooks. The lessons are an orientation and say so; the depth is in the reading list, and a lesson here is roughly what a good tutorial would cover before you go away and read properly."
-            },
-            {
-              "t": "caution",
-              "text": "It also cannot mark your writing. Nothing here reads your answer. The self-mark is honest only if you are, and the app is explicit about that on the progress page rather than hiding it behind a number."
-            }
-          ]
-        }
-      ],
-      "plants": [],
-      "prepares": [],
-      "reading": [
-        {
-          "bookId": "make-it-stick",
-          "where": "the whole book — it is short and it is the evidence base for the method above"
-        },
-        {
-          "bookId": "williams-learning-the-law",
-          "where": "on reading cases, and on examination technique"
-        }
-      ],
-      "source": "Retrieval practice and spacing literature as summarised in Make It Stick; standard case-briefing and IRAC technique.",
-      "lastVerified": "2026-09-07",
-      "verify": "Nothing here is a rule of law and none of it needs a citator. The claims about learning are empirical rather than legal — if you want the primary studies rather than the summary, they are cited throughout Make It Stick."
+     "h": "The method matters more here than elsewhere",
+     "body": [
+      {
+       "t": "p",
+       "text": "Law is a large volume of material that has to be recalled precisely, structured well enough to be applied to facts you have never seen, and written down under time pressure. Very few subjects need all three at once. A study method that works for a subject needing only the first will fail here, slowly, in a way you will not notice until an examination."
+      },
+      {
+       "t": "p",
+       "text": "This lesson is about the method. It is short, and it is worth more than any single doctrine below it."
+      }
+     ]
     },
     {
-      "id": "l-shape-of-law",
-      "moduleId": "m00-foundations",
-      "title": "How a legal system is arranged",
-      "minutes": 15,
-      "summary": "Three divisions that decide, before anything else, which rules apply and who has to prove what.",
-      "sections": [
-        {
-          "h": "Why start with divisions",
-          "body": [
-            {
-              "t": "p",
-              "text": "Before you can ask what the law says about a situation, you have to know which body of law is being asked. A punch in a car park can be a crime, a tort, or both at once, and the answer to “what happens next” is completely different in each case — different party bringing it, different standard of proof, different remedy. Getting the division right is the first move in every problem you will ever be given, and it is invisible in a textbook because the textbook has already made it for you by putting the chapter in a particular book."
-            },
-            {
-              "t": "p",
-              "text": "There are three divisions worth holding in your head from the beginning. None of them is difficult. All of them are the sort of thing that is embarrassing to be unsure about in the second year."
-            }
-          ]
-        },
-        {
-          "h": "Public law and private law",
-          "body": [
-            {
-              "t": "p",
-              "text": "Public law governs the relationship between the individual and the State: constitutional law, administrative law, criminal law. Private law governs the relationship between individuals: contract, tort, property, family, company. The dividing question is who is on each side of the dispute and in what capacity."
-            },
-            {
-              "t": "rule",
-              "text": "Public law: the State is a party in its capacity as the State. Private law: the parties meet as equals, and the State supplies only the court.",
-              "source": "Standard classification; see Williams, Learning the Law"
-            },
-            {
-              "t": "p",
-              "text": "The division is not perfectly clean, and you should not expect it to be. A government department that breaches a supply contract is being sued in contract, as an ordinary contracting party, not in public law. The test is the capacity in which the State acts, not the fact that a State body appears on the page."
-            }
-          ]
-        },
-        {
-          "h": "Civil and criminal",
-          "body": [
-            {
-              "t": "p",
-              "text": "This is the division students most often blur, because the same facts frequently support both. Keep them apart by asking who is bringing the case and what they are asking for."
-            },
-            {
-              "t": "p",
-              "text": "A criminal case is brought by the State — in Malaysia, by the Public Prosecutor — against an accused, and it asks for punishment. A civil case is brought by one party, the plaintiff, against another, the defendant, and it asks for a remedy: damages, an injunction, a declaration."
-            },
-            {
-              "t": "rule",
-              "text": "Criminal: prosecution by the State, seeking punishment. Civil: claim by a private party, seeking a remedy.",
-              "source": "Standard classification"
-            },
-            {
-              "t": "example",
-              "text": "A drunk driver injures a pedestrian. The Public Prosecutor charges him under the road traffic legislation — that is the criminal case, and the pedestrian is a witness in it, not a party. The pedestrian separately sues him in negligence for her medical costs and lost income — that is the civil case, and the outcome of the criminal one does not decide it."
-            },
-            {
-              "t": "caution",
-              "text": "An acquittal in the criminal case does not defeat the civil claim, because the standards of proof are different. Failing to prove something beyond reasonable doubt is not the same as failing to prove it on the balance of probabilities."
-            }
-          ]
-        },
-        {
-          "h": "The standards of proof",
-          "body": [
-            {
-              "t": "p",
-              "text": "The two standards follow directly from the division above, and the reason for the gap between them is worth understanding rather than memorising: the consequences of a wrong criminal conviction fall on one person and are close to irreversible, so the system deliberately accepts letting some guilty people go in order to make wrongful convictions rare."
-            },
-            {
-              "t": "rule",
-              "text": "Criminal: beyond reasonable doubt. Civil: on the balance of probabilities — more likely than not.",
-              "source": "Evidence Act 1950; standard common law formulation"
-            },
-            {
-              "t": "p",
-              "text": "“Balance of probabilities” means exactly what it says: if the tribunal thinks it is more likely than not, that is enough, and 51% will do. “Beyond reasonable doubt” is not a percentage and does not become one however hard you press it. It is a state of the tribunal's mind, and the courts have generally resisted attempts to quantify it."
-            }
-          ]
-        },
-        {
-          "h": "Fact and law",
-          "body": [
-            {
-              "t": "p",
-              "text": "The last division is the one that does the most work later and gets the least attention now. A question of fact is what happened. A question of law is what the rules make of it."
-            },
-            {
-              "t": "p",
-              "text": "It matters for three reasons, and each one will cost you marks if you have not internalised it. Appeals are often restricted to questions of law, so how a point is characterised decides whether it can be appealed at all. Precedent attaches to propositions of law, not to findings of fact, so a case is authority for its rule and never for its facts. And in a jury system the division allocated the work between judge and jury — which is historical in Malaysia, jury trial having been abolished, but it is why the distinction is drawn so sharply in the older cases you will read."
-            },
-            {
-              "t": "rule",
-              "text": "Fact: what happened. Law: what follows from it. Appeals, precedent and the division of labour in a trial all turn on which is which.",
-              "source": "Standard common law doctrine"
-            },
-            {
-              "t": "example",
-              "text": "“The defendant was driving at 90 km/h” is a question of fact. “Driving at 90 km/h in those conditions fell below the standard of a reasonable driver” is a question of law, or at least a question of mixed fact and law — which is a third category, and one that is fought over precisely because so much depends on where a point lands."
-            }
-          ]
-        },
-        {
-          "h": "What to do with this",
-          "body": [
-            {
-              "t": "p",
-              "text": "You will not be examined on these divisions directly for very long. They stop being a topic and become the frame you read everything else in — which is why they are worth over-learning now, while there is time. The five cards this lesson plants are deliberately small; they are meant to be automatic rather than thought about."
-            },
-            {
-              "t": "p",
-              "text": "When you meet a set of facts, run the divisions before you reach for any rule: public or private, civil or criminal, and which parts of the story are contested fact and which are contested law. Most misfired answers in a first year come from skipping that step."
-            }
-          ]
-        }
-      ],
-      "plants": [
-        "f-pubpriv-01",
-        "f-civcrim-01",
-        "f-standard-01",
-        "f-standard-02",
-        "f-factlaw-01"
-      ],
-      "prepares": [],
-      "reading": [
-        {
-          "bookId": "williams-learning-the-law",
-          "where": "the opening chapters on the divisions of law"
-        },
-        {
-          "bookId": "mcbride-letters",
-          "where": "the early letters, for why the divisions are drawn where they are"
-        }
-      ],
-      "source": "Standard common law classification; Evidence Act 1950 for the civil standard.",
-      "lastVerified": "2026-09-07",
-      "verify": "Nothing here turns on a section number. If you quote the civil standard from the Evidence Act 1950, read ss 101–103 in a current reprint rather than relying on the formulation above."
+     "h": "Re-reading feels like work and is not",
+     "body": [
+      {
+       "t": "p",
+       "text": "The most robust finding in the learning research is also the least intuitive: re-reading a text produces a strong feeling of mastery and very little durable memory. The feeling comes from fluency — the second pass is easier than the first, and the brain reads ease as knowing."
+      },
+      {
+       "t": "rule",
+       "text": "Retrieval practice beats review. Trying to recall something, and failing, does more for retention than reading it again — provided you then check the answer.",
+       "source": "Make It Stick; the retrieval practice literature"
+      },
+      {
+       "t": "p",
+       "text": "This is why the app makes you answer a card before showing you the back, and why the problem questions make you write the whole answer before the rubric appears. Both are structured to stop you reading the answer and mistaking recognition for recall."
+      },
+      {
+       "t": "caution",
+       "text": "The corollary is uncomfortable: study that feels harder is usually working better. If your revision feels smooth and pleasant, be suspicious of it."
+      }
+     ]
     },
     {
-      "id": "l-precedent",
-      "moduleId": "m00-foundations",
-      "title": "What binds, and what merely persuades",
-      "minutes": 25,
-      "summary": "Stare decisis, the ratio and the obiter, and the four ways a court escapes a decision it does not want to follow.",
-      "sections": [
-        {
-          "h": "The doctrine, stated plainly",
-          "body": [
-            {
-              "t": "p",
-              "text": "Common law systems decide cases by reference to how earlier cases were decided. The doctrine has a Latin name — stare decisis, “to stand by things decided” — and a simple rationale: like cases should be treated alike, and people should be able to arrange their affairs knowing what the law is."
-            },
-            {
-              "t": "rule",
-              "text": "Stare decisis: a court is bound by the decisions of courts above it in the same hierarchy, on the same point of law.",
-              "source": "Standard common law doctrine"
-            },
-            {
-              "t": "p",
-              "text": "Notice the three qualifications built into that sentence. Above it — precedent runs downwards. In the same hierarchy — a court in another country is in another hierarchy. On the same point of law — a case decides what it decides and no more. Almost every argument about precedent you will read is an argument about one of those three."
-            }
-          ]
-        },
-        {
-          "h": "Ratio decidendi",
-          "body": [
-            {
-              "t": "p",
-              "text": "A judgment is a long document. Only part of it binds anybody, and identifying that part is the central skill of case reading."
-            },
-            {
-              "t": "rule",
-              "text": "The ratio decidendi is the legal principle the court's decision actually rests on: the rule applied to the material facts in order to reach the result.",
-              "source": "Standard common law doctrine"
-            },
-            {
-              "t": "p",
-              "text": "The operative word is rests. The test is necessity, not emphasis or length. A judge may spend four pages on a point that turns out to be beside the point, and dispose of the decisive issue in two sentences. Whether a proposition is the ratio is answered by asking whether the outcome would have been the same without it."
-            },
-            {
-              "t": "caution",
-              "text": "A ratio stated at the level of the facts is useless. “The council is liable for the blocked drain” binds no later case, because no later case has that drain in it. You have to state the rule at a level of generality that could govern a different set of facts — and choosing that level is where the argument usually is."
-            }
-          ]
-        },
-        {
-          "h": "Obiter dictum",
-          "body": [
-            {
-              "t": "p",
-              "text": "Everything in the judgment that is not the ratio is obiter dictum — “a thing said by the way”. It does not bind. It may still carry great weight: an observation by the Federal Court on a point it did not have to decide is not binding, but no High Court judge will brush it aside lightly."
-            },
-            {
-              "t": "rule",
-              "text": "Obiter dictum: a statement in a judgment that was not necessary to the decision. Persuasive at most, never binding.",
-              "source": "Standard common law doctrine"
-            },
-            {
-              "t": "example",
-              "text": "The clearest obiter is the kind a court flags itself: “we have heard no argument on this point and express no view upon it.” A court that expressly declines to decide something has not decided it, however suggestive the surrounding language."
-            },
-            {
-              "t": "p",
-              "text": "The hard cases are the ones nobody flags. A court that gives two independent reasons for its result has arguably given two rationes, and later courts will disagree about whether the second one was necessary. Do not expect the line to be clean; expect to argue about where it falls."
-            }
-          ]
-        },
-        {
-          "h": "Binding and persuasive",
-          "body": [
-            {
-              "t": "p",
-              "text": "Binding authority must be followed whether the judge agrees with it or not. Persuasive authority may be followed, and its weight depends on the court, the reasoning, and how close the facts are."
-            },
-            {
-              "t": "rule",
-              "text": "Binding: a decision of a superior court in the same hierarchy, on the same point. Persuasive: everything else — obiter, decisions of coordinate courts, decisions of foreign courts, textbooks.",
-              "source": "Standard common law doctrine"
-            },
-            {
-              "t": "p",
-              "text": "A judge of the High Court is not bound by another judge of the High Court. Judicial comity means they will normally follow a decision of coordinate jurisdiction unless convinced it is wrong, but that is a convention of good practice, not an obligation."
-            },
-            {
-              "t": "p",
-              "text": "Foreign judgments are never binding on a Malaysian court, and this is worth saying flatly because the practice can look otherwise. English, Singaporean, Indian and Australian cases are cited constantly in Malaysian courts, and sometimes followed almost as a matter of course. They are nonetheless persuasive only. A different hierarchy cannot bind this one."
-            }
-          ]
-        },
-        {
-          "h": "The four ways out",
-          "body": [
-            {
-              "t": "p",
-              "text": "A court faced with an inconvenient precedent has a limited set of legitimate moves, and knowing them is how you argue precedent rather than merely recite it."
-            },
-            {
-              "t": "list",
-              "items": [
-                "Distinguishing. The earlier case turned on a material fact that is absent here, so its ratio does not reach this case. This is the everyday move and the one you will use most.",
-                "Overruling. A superior court declares the earlier decision wrong. Only a court above the one that decided it can do this — and, within limits, a final court can do it to itself.",
-                "Reversing. An appellate court sets aside the decision below in the same case. Not the same thing as overruling, though students routinely confuse them: reversing is vertical within one case, overruling is about a different, earlier case.",
-                "Per incuriam. The earlier decision was reached in ignorance of a binding authority or a relevant statute, and so does not bind."
-              ]
-            },
-            {
-              "t": "rule",
-              "text": "Per incuriam: decided in ignorance of a statute or binding authority that would have altered the result. Such a decision does not bind.",
-              "source": "Standard common law doctrine"
-            },
-            {
-              "t": "caution",
-              "text": "Per incuriam is narrow, and it is not a licence to disregard a decision you think is poorly reasoned. The earlier court must have missed something it was obliged to consider. Bad reasoning is not enough; overlooked authority is."
-            }
-          ]
-        },
-        {
-          "h": "What to do with this",
-          "body": [
-            {
-              "t": "p",
-              "text": "This lesson plants seven cards, and they are worth being ruthless about — precedent vocabulary used loosely is the fastest way to look untrained. Then attempt the problem question, which gives you a short judgment and asks you to separate the ratio from the obiter and say what a later court is bound by. It is harder than it looks, and the passage most students mis-sort is the one that reads like an aside but was actually argued."
-            }
-          ]
-        }
-      ],
-      "plants": [
-        "f-stare-01",
-        "f-ratio-01",
-        "f-ratio-02",
-        "f-ratio-03",
-        "f-auth-01",
-        "f-auth-02",
-        "f-latin-06"
-      ],
-      "prepares": [
-        "pm-ratio-01"
-      ],
-      "reading": [
-        {
-          "bookId": "williams-learning-the-law",
-          "where": "the chapter on precedent — the standard treatment in English"
-        },
-        {
-          "bookId": "schauer-thinking-like-a-lawyer",
-          "where": "on why precedent constrains at all, once you start doubting that it should"
-        }
-      ],
-      "source": "Standard common law doctrine. The Malaysian hierarchy it operates in is the subject of a separate lesson.",
-      "lastVerified": "2026-09-07",
-      "verify": "The doctrine here is general and stable. What is jurisdiction-specific — which Malaysian courts bind which, and the status of pre-1985 Privy Council decisions — is covered separately and is what you should check against a Malaysian text."
+     "h": "Spacing, and why the intervals grow",
+     "body": [
+      {
+       "t": "p",
+       "text": "Material reviewed at increasing intervals is retained far longer than material reviewed in a block. The app schedules cards on that principle, using FSRS, and the intervals lengthen because each successful recall makes the memory more durable."
+      },
+      {
+       "t": "rule",
+       "text": "Space your reviews, and interleave topics rather than blocking them. Mixing contract and criminal in one session feels worse and produces better discrimination between them.",
+       "source": "Make It Stick; the spacing and interleaving literature"
+      },
+      {
+       "t": "p",
+       "text": "Interleaving matters especially in law because the hard skill is telling doctrines apart on facts that do not announce which is which. Studying tort for a solid week teaches you tort; studying tort mixed with contract teaches you to notice which one you are looking at."
+      }
+     ]
     },
     {
-      "id": "l-vocabulary",
-      "moduleId": "m00-foundations",
-      "title": "The words you cannot work around",
-      "minutes": 15,
-      "summary": "Five maxims that carry whole doctrines, and three fact cues that should trigger a doctrine before you have finished reading the sentence.",
-      "sections": [
-        {
-          "h": "Why the Latin survives",
-          "body": [
-            {
-              "t": "p",
-              "text": "Legal Latin is not decoration and it is not gatekeeping, whatever it looks like from outside. Each of the phrases below is a compression: a single term that names a whole doctrine, so that judges and counsel can refer to it without restating it. You cannot read a judgment fluently without them, and looking each one up as it appears makes reading four times slower."
-            },
-            {
-              "t": "p",
-              "text": "Learn them as index entries rather than translations. The point is not that you can render audi alteram partem into English; it is that seeing it makes an entire body of administrative law available to you at once."
-            }
-          ]
-        },
-        {
-          "h": "The five that earn their place",
-          "body": [
-            {
-              "t": "rule",
-              "text": "Ultra vires — beyond the powers. An act done outside the authority conferred by the statute or instrument that grants it, and therefore invalid.",
-              "source": "Administrative and company law"
-            },
-            {
-              "t": "p",
-              "text": "This is the engine of judicial review and of a good deal of company law. A public body has only the powers Parliament gave it; a company, historically, only those in its objects. Acting outside them is not merely wrong, it is void."
-            },
-            {
-              "t": "rule",
-              "text": "Audi alteram partem — hear the other side. Nobody should be condemned unheard.",
-              "source": "Natural justice"
-            },
-            {
-              "t": "rule",
-              "text": "Nemo judex in causa sua — no one a judge in his own cause. A decision-maker must not have an interest in the outcome.",
-              "source": "Natural justice"
-            },
-            {
-              "t": "p",
-              "text": "Those two together are the rules of natural justice, and they are the substance of procedural fairness in administrative law. Almost every judicial review application you read will be founded on one of them, and they are among the very few doctrines you can rely on across common law jurisdictions without checking."
-            },
-            {
-              "t": "rule",
-              "text": "Actus reus — the guilty act. The physical element of an offence: the conduct, and any required circumstances or consequences.",
-              "source": "Criminal law"
-            },
-            {
-              "t": "rule",
-              "text": "Mens rea — the guilty mind. The mental element: intention, knowledge, recklessness or negligence, as the offence requires.",
-              "source": "Criminal law"
-            },
-            {
-              "t": "caution",
-              "text": "Both criminal terms are less useful in Malaysia than a common law training suggests, because the Penal Code defines each offence with its own mental element written into the section. The vocabulary still matters for reading the case law and for talking about the structure of an offence, but do not go looking for a general doctrine of mens rea in a codified system. Read the section."
-            }
-          ]
-        },
-        {
-          "h": "Fact cues, and why they are worth drilling",
-          "body": [
-            {
-              "t": "p",
-              "text": "Issue-spotting is a retrieval problem, not a reasoning problem. In a problem question the facts do not announce which body of law they belong to, and the students who do badly are usually not the ones who cannot state the rules — they are the ones who never reached for them."
-            },
-            {
-              "t": "p",
-              "text": "So it is worth building explicit associations between a shape of facts and the doctrine it should summon. Three to begin with:"
-            },
-            {
-              "t": "list",
-              "items": [
-                "A promise, an exchange, and someone who has not performed → contract. Ask whether an agreement was formed, whether it is enforceable, and what the remedy is.",
-                "Someone injured, and a question of who should have prevented it → tort, and negligence first. Ask about duty, breach, causation and remoteness, in that order.",
-                "A public body making a decision that affects someone, with a defect in how it was made → administrative law, and judicial review. Ask about natural justice and about acting within power."
-              ]
-            },
-            {
-              "t": "p",
-              "text": "These are starting points, not answers, and a good set of facts will engage two or three at once. That is fine — the failure mode is engaging none."
-            }
-          ]
-        },
-        {
-          "h": "What to do with this",
-          "body": [
-            {
-              "t": "p",
-              "text": "The eight cards here are the shortest in the deck and should stay that way. If a card is taking you more than a couple of seconds it is carrying too much, and you should split it rather than keep failing it. When a maxim starts appearing in your own writing without being reached for, it has done its job."
-            }
-          ]
-        }
-      ],
-      "plants": [
-        "f-latin-01",
-        "f-latin-02",
-        "f-latin-03",
-        "f-latin-04",
-        "f-latin-05",
-        "t-contract-01",
-        "t-tort-01",
-        "t-admin-01"
-      ],
-      "prepares": [],
-      "reading": [
-        {
-          "bookId": "williams-learning-the-law",
-          "where": "the sections on legal language and on reading cases"
-        }
-      ],
-      "source": "Standard common law vocabulary; the Penal Code caution is specific to codified criminal law.",
-      "lastVerified": "2026-09-07",
-      "verify": "Nothing here needs a citator. Before relying on the actus reus / mens rea framing in a Malaysian criminal answer, read the definition section of the offence in the Penal Code — the Code supplies the mental element expressly and the general doctrine can mislead."
+     "h": "How to read a case",
+     "body": [
+      {
+       "t": "p",
+       "text": "Reading a judgment straight through, like an article, is the commonest waste of a student's time. A judgment is a document with a structure, and you read it by extracting that structure."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Facts — only the material ones. A fact is material if changing it might change the outcome.",
+        "Procedural history — which court, on appeal from what, and what was decided below.",
+        "Issue — the question of law the court had to answer, stated as a question.",
+        "Holding — the answer to that question.",
+        "Reasoning — why. This is the part worth your attention.",
+        "Ratio — the rule the decision rests on, stated so it could govern a different case.",
+        "Obiter — anything else worth noting, marked as such."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Write it down. A brief you did not write is a brief you do not have, and the act of compressing a judgment to a page is where the understanding happens. Briefs also mean you never re-read a full judgment for revision."
+      },
+      {
+       "t": "caution",
+       "text": "Do not brief from a headnote. Headnotes are written by editors, are sometimes wrong, and are never authority. Read the judgment."
+      }
+     ]
     },
     {
-      "id": "l-courts",
-      "moduleId": "m01-malaysian-legal-system",
-      "title": "The courts, and what each one can do",
-      "minutes": 20,
-      "summary": "The civil hierarchy from the Magistrates' Court to the Federal Court, the two High Courts, and the statutes that create them.",
-      "sections": [
-        {
-          "h": "Why the hierarchy comes first",
-          "body": [
-            {
-              "t": "p",
-              "text": "Precedent runs downwards through a hierarchy, so the doctrine you learned in the foundations module is inert until you know the shape of the structure it runs through. Everything about which decisions bind, which can be appealed, and which court can hear a matter at all follows from this diagram."
-            }
-          ]
-        },
-        {
-          "h": "The civil courts, lowest to highest",
-          "body": [
-            {
-              "t": "list",
-              "items": [
-                "Magistrates' Court — the base of the ordinary hierarchy, handling the lower-value civil claims and the less serious criminal matters.",
-                "Sessions Court — above the Magistrates, with a higher civil limit and a wider criminal jurisdiction.",
-                "High Court — unlimited original jurisdiction, and the first of the superior courts. There are two, dealt with below.",
-                "Court of Appeal — hears appeals from the High Court.",
-                "Federal Court — the apex court of Malaysia."
-              ]
-            },
-            {
-              "t": "rule",
-              "text": "Magistrates' Court → Sessions Court → High Court → Court of Appeal → Federal Court. The Federal Court is the apex.",
-              "source": "Courts of Judicature Act 1964; Subordinate Courts Act 1948"
-            },
-            {
-              "t": "p",
-              "text": "There is also the Penghulu's Court, at the very bottom, with a tiny jurisdiction and almost no practical significance today. It is worth knowing it exists so that you are not caught out by a reference to it, and not worth more than that."
-            },
-            {
-              "t": "caution",
-              "text": "The civil jurisdictional limits of the Magistrates' and Sessions Courts are monetary figures set by statute and raised periodically. Do not memorise a number from a textbook — look it up in the current Subordinate Courts Act 1948 each time you need it, because a figure you learned three years ago is likely to be wrong."
-            }
-          ]
-        },
-        {
-          "h": "Two High Courts, not one",
-          "body": [
-            {
-              "t": "p",
-              "text": "This is the fact about the Malaysian structure that most surprises people arriving from an English textbook, and it is constitutionally significant rather than administrative."
-            },
-            {
-              "t": "rule",
-              "text": "There are two High Courts of coordinate jurisdiction: the High Court in Malaya, and the High Court in Sabah and Sarawak.",
-              "source": "Federal Constitution; Courts of Judicature Act 1964"
-            },
-            {
-              "t": "p",
-              "text": "They are coordinate, which means neither binds the other. A decision of the High Court in Malaya is persuasive in Sabah and Sarawak and no more, exactly as one High Court judge's decision is persuasive to another. The arrangement reflects the terms on which the Borneo states entered the Federation, and it is a real feature of the system rather than a quirk of naming."
-            }
-          ]
-        },
-        {
-          "h": "The two statutes",
-          "body": [
-            {
-              "t": "p",
-              "text": "The structure is not in the Constitution alone. Two Acts do the work of setting out jurisdiction, and you should be able to name both without hesitating."
-            },
-            {
-              "t": "rule",
-              "text": "Courts of Judicature Act 1964 — the superior courts: High Courts, Court of Appeal, Federal Court. Subordinate Courts Act 1948 — the Sessions and Magistrates' Courts.",
-              "source": "Courts of Judicature Act 1964; Subordinate Courts Act 1948"
-            },
-            {
-              "t": "p",
-              "text": "The division is easy to remember once you notice it tracks the superior/subordinate line exactly, which is the same line that decides whether a court's decisions can bind anybody at all."
-            }
-          ]
-        },
-        {
-          "h": "The Syariah courts",
-          "body": [
-            {
-              "t": "p",
-              "text": "Running alongside the civil hierarchy is a second one, with its own three tiers: the Syariah Subordinate Court, the Syariah High Court, and the Syariah Appeal Court at the top."
-            },
-            {
-              "t": "rule",
-              "text": "Syariah Subordinate Court → Syariah High Court → Syariah Appeal Court.",
-              "source": "State enactments; Ninth Schedule, List II"
-            },
-            {
-              "t": "p",
-              "text": "Two things about it are structural rather than incidental, and both are dealt with properly in a later lesson. These are State courts, created by State law, not federal ones — so there is no single national Syariah hierarchy but a set of parallel State ones. And they are not below the Federal Court: no appeal runs from the Syariah Appeal Court to the civil courts. Two hierarchies, not one tree with a branch."
-            }
-          ]
-        },
-        {
-          "h": "What to do with this",
-          "body": [
-            {
-              "t": "p",
-              "text": "Five cards, all of them the kind of structural fact that has to be instant. Draw the diagram from memory once a week until it is dull. The reasoning that uses it comes in the next two lessons, and neither will make sense if you are still working out the order of the courts while reading them."
-            }
-          ]
-        }
-      ],
-      "plants": [
-        "my-court-01",
-        "my-court-02",
-        "my-court-03",
-        "my-court-04",
-        "my-court-05"
-      ],
-      "prepares": [],
-      "reading": [
-        {
-          "bookId": "ashgar-malaysian-legal-system",
-          "where": "the chapter on the court structure"
-        },
-        {
-          "bookId": "wan-arfah-first-look",
-          "where": "the introductory treatment, if the above is heavy going"
-        }
-      ],
-      "source": "Federal Constitution; Courts of Judicature Act 1964; Subordinate Courts Act 1948.",
-      "lastVerified": "2026-09-07",
-      "verify": "Monetary jurisdictional limits change — check the current Subordinate Courts Act 1948 rather than any textbook figure. Confirm the Syariah court tier names against the enactment of the State you are concerned with, since they are State creations and the naming is not perfectly uniform."
+     "h": "How to answer a problem question",
+     "body": [
+      {
+       "t": "p",
+       "text": "Use IRAC, or the ILAC variant, and use it visibly. Issue, Rule, Application, Conclusion."
+      },
+      {
+       "t": "p",
+       "text": "The marks in a problem question are overwhelmingly in the Application. Students who lose marks usually state the law competently and then stop, or restate the facts without connecting them to the rule. Application means saying which fact satisfies which element, and where the difficulty is."
+      },
+      {
+       "t": "rule",
+       "text": "State the rule with its source. Apply it to these facts. Argue both sides where the point is genuinely arguable. Then answer the question that was asked.",
+       "source": "Standard examination technique"
+      },
+      {
+       "t": "p",
+       "text": "Write under time from the beginning. An answer you could have written in ninety minutes is worth nothing in a forty-minute question, and the only way to learn the pace is to practise at it."
+      }
+     ]
     },
     {
-      "id": "l-sources",
-      "moduleId": "m01-malaysian-legal-system",
-      "title": "Where Malaysian law comes from",
-      "minutes": 25,
-      "summary": "The Constitution at the top, statute below it, English common law received to a date, and custom that counts as law.",
-      "sections": [
-        {
-          "h": "The definition to start from",
-          "body": [
-            {
-              "t": "p",
-              "text": "It is tempting to assume the sources of law are obvious — statutes and cases — and to move on. In Malaysia that assumption will cost you, because the Constitution itself defines what counts as law and the definition is wider than a common law training expects."
-            },
-            {
-              "t": "rule",
-              "text": "Article 160(2): “law” includes written law, the common law in so far as it is in operation in the Federation or any part of it, and any custom or usage having the force of law.",
-              "source": "Federal Constitution, Art 160(2)"
-            },
-            {
-              "t": "p",
-              "text": "Three sources, then, and the third is the one students forget. Custom is not an inferior thing that yields to statute automatically; where it has the force of law it is law, and the adat of Negeri Sembilan and the native customary law of Sabah and Sarawak are applied by the courts as such."
-            }
-          ]
-        },
-        {
-          "h": "The Constitution is supreme",
-          "body": [
-            {
-              "t": "p",
-              "text": "This is the single most important structural difference between Malaysia and the United Kingdom, and if you carry an English textbook's assumptions across you will get it backwards. The United Kingdom has parliamentary sovereignty. Malaysia does not."
-            },
-            {
-              "t": "rule",
-              "text": "Article 4(1): the Constitution is the supreme law of the Federation, and any law passed after Merdeka Day which is inconsistent with it is void to the extent of the inconsistency.",
-              "source": "Federal Constitution, Art 4(1)"
-            },
-            {
-              "t": "p",
-              "text": "An Act of Parliament can therefore be struck down. That single sentence is what makes constitutional litigation possible at all, and it is the foundation of the fundamental liberties module later on."
-            },
-            {
-              "t": "caution",
-              "text": "Do not write that Parliament is sovereign in Malaysia. It is a common slip carried over from English texts, and it is wrong in a way that undermines everything built on top of it."
-            }
-          ]
-        },
-        {
-          "h": "Legislation, federal and State",
-          "body": [
-            {
-              "t": "p",
-              "text": "Below the Constitution sits written law: Acts of Parliament at federal level, Enactments of the State Legislative Assemblies at State level, and Ordinances in Sarawak. What each may legislate on is fixed by the Ninth Schedule, which divides subjects into the Federal List, the State List and the Concurrent List."
-            },
-            {
-              "t": "rule",
-              "text": "Parliament has two houses: the Dewan Rakyat, the elected lower house, and the Dewan Negara, the appointed and State-elected upper house.",
-              "source": "Federal Constitution"
-            },
-            {
-              "t": "p",
-              "text": "Beneath primary legislation is subsidiary legislation — rules, regulations, orders and by-laws made by a body on which Parliament has conferred power to make them. It is law, it is enforceable, and it is where a great deal of the detail actually lives."
-            },
-            {
-              "t": "rule",
-              "text": "Subsidiary legislation: law made under authority delegated by an Act, by a minister or other body. Valid only within the powers the parent Act confers.",
-              "source": "Interpretation Acts 1948 and 1967"
-            },
-            {
-              "t": "p",
-              "text": "Its validity depends on the parent Act, which is why the ultra vires doctrine from the foundations module bites here: subsidiary legislation made beyond the delegated power is void, and challenging it is ordinary administrative law rather than constitutional litigation."
-            }
-          ]
-        },
-        {
-          "h": "English common law, received to a date",
-          "body": [
-            {
-              "t": "p",
-              "text": "Malaysia is a common law jurisdiction, but the common law did not arrive by osmosis. It was received by statute, and the statute fixes a date."
-            },
-            {
-              "t": "rule",
-              "text": "Civil Law Act 1956, s 3(1): the court shall apply the common law of England and the rules of equity as administered in England on 7 April 1956 for West Malaysia, 1 December 1951 for Sabah, and 12 December 1949 for Sarawak — so far only as the circumstances of the States and their inhabitants permit, and subject to such qualifications as local circumstances render necessary.",
-              "source": "Civil Law Act 1956, s 3(1)"
-            },
-            {
-              "t": "p",
-              "text": "Two things follow. First, there are three different cut-off dates, and using the West Malaysian one for a Sarawak matter is an error that a marker will see immediately. Second, English decisions after the relevant cut-off are not received. They may be cited, and they frequently are, but as persuasive reasoning rather than as law that arrived automatically."
-            },
-            {
-              "t": "p",
-              "text": "Section 6 of the same Act excludes English land law, which matters because Malaysia has a Torrens system of registered title and the English doctrines would cut across it."
-            },
-            {
-              "t": "caution",
-              "text": "Be honest about the complication rather than hiding it. Malaysian courts cite post-1956 English cases constantly, and there is a respectable argument that a later English decision merely declares what the common law always was, which would pull it back inside the cut-off. That argument is available to your opponent. Meet it rather than pretending the date settles everything."
-            }
-          ]
-        },
-        {
-          "h": "Putting the sources in order",
-          "body": [
-            {
-              "t": "p",
-              "text": "For an ordinary dispute, work down: is there a provision of the Constitution in play; is there a Malaysian statute on the point; is there subsidiary legislation under it; is there binding Malaysian case law; and only then, is there received English common law under s 3, subject to local circumstances."
-            },
-            {
-              "t": "example",
-              "text": "A student asked whether a landlord may do something will often find a case first, because a case is what a search engine returns. The order above says find the Act first. A case cannot authorise what a statute forbids, and starting from the case makes it easy to miss that the question was answered by s 5 of an Act nobody looked at."
-            }
-          ]
-        },
-        {
-          "h": "What to do with this",
-          "body": [
-            {
-              "t": "p",
-              "text": "Four cards, then two problem questions that use this material hard. One asks you to choose between sources when a custom, an old English case and a modern one all bear on a matter; the other puts a Federal Court decision against a Privy Council decision and asks which binds. Both are more about knowing what a source is than about the substantive law."
-            }
-          ]
-        }
-      ],
-      "plants": [
-        "my-source-01",
-        "my-source-02",
-        "my-source-03",
-        "my-parl-01"
-      ],
-      "prepares": [
-        "pm-sources-01",
-        "pm-precedent-01"
-      ],
-      "reading": [
-        {
-          "bookId": "ashgar-malaysian-legal-system",
-          "where": "the chapters on the sources of Malaysian law"
-        },
-        {
-          "bookId": "faruqi-our-constitution",
-          "where": "on Art 4 supremacy, if you want the constitutional half properly"
-        }
-      ],
-      "source": "Federal Constitution Arts 4(1), 160(2); Civil Law Act 1956 ss 3, 6; Interpretation Acts 1948 and 1967.",
-      "lastVerified": "2026-09-07",
-      "verify": "Read s 3(1) of the Civil Law Act 1956 in a current reprint — the three reception dates and the local-circumstances proviso are what the answers turn on, and they should be quoted from the Act, not from this page."
-    },
-    {
-      "id": "l-two-systems",
-      "moduleId": "m01-malaysian-legal-system",
-      "title": "Two court systems in one country",
-      "minutes": 20,
-      "summary": "Article 121(1A), what it actually says, and why it is not the general ouster it is usually described as.",
-      "sections": [
-        {
-          "h": "The arrangement",
-          "body": [
-            {
-              "t": "p",
-              "text": "Malaysia runs two court hierarchies side by side. The civil courts you met in the last lesson are federal, created under the Constitution and the Courts of Judicature Act 1964. The Syariah courts are State courts, created by the enactments of each State, with their jurisdiction drawn from the Ninth Schedule."
-            },
-            {
-              "t": "rule",
-              "text": "The Syariah courts have jurisdiction only over persons professing the religion of Islam, and only over the matters listed in the Ninth Schedule, List II, Item 1.",
-              "source": "Federal Constitution, Ninth Schedule, List II, Item 1"
-            },
-            {
-              "t": "p",
-              "text": "Both halves of that sentence are limits, and both get forgotten. The jurisdiction is personal — it reaches Muslims — and it is subject-matter limited, covering Islamic personal and family law, certain offences against the precepts of Islam, and related matters. It is not a general jurisdiction over anything with a religious flavour."
-            }
-          ]
-        },
-        {
-          "h": "Article 121(1A)",
-          "body": [
-            {
-              "t": "p",
-              "text": "In 1988 the Constitution was amended to add clause (1A) to Article 121. It is short, and it is quoted wrongly more often than almost any other provision."
-            },
-            {
-              "t": "rule",
-              "text": "Article 121(1A): the civil High Courts “shall have no jurisdiction in respect of any matter within the jurisdiction of the Syariah courts.”",
-              "source": "Federal Constitution, Art 121(1A)"
-            },
-            {
-              "t": "p",
-              "text": "Read it slowly. It is a rule about overlap. It removes civil jurisdiction over matters that are within Syariah jurisdiction — and therefore does nothing at all about matters that are not. Since Syariah jurisdiction is limited by subject and by the religion of the parties, the reach of 121(1A) is limited in exactly the same way."
-            },
-            {
-              "t": "caution",
-              "text": "The common misstatement is “if Islam is involved, the civil court has no jurisdiction.” That is not what the clause says and not what it does. A dispute involving a Muslim party is not automatically within Syariah jurisdiction, and a non-Muslim cannot be brought before a Syariah court at all."
-            }
-          ]
-        },
-        {
-          "h": "What the clause could not do",
-          "body": [
-            {
-              "t": "p",
-              "text": "For roughly two decades after 1988, 121(1A) was read expansively, and civil courts declined jurisdiction in a series of cases where a party had no other forum available — including non-Muslims who could not, by definition, appear before the court they were being sent to."
-            },
-            {
-              "t": "p",
-              "text": "The Federal Court's decision in Indira Gandhi in 2018 is the turning point, and it rests on a proposition larger than the clause. Judicial review of administrative action is inherent in the civil courts and forms part of the basic structure of the Constitution. A constitutional amendment did not remove it, and 121(1A) did not purport to."
-            },
-            {
-              "t": "rule",
-              "text": "Indira Gandhi: Art 121(1A) does not oust the civil courts' inherent power of judicial review; and the Syariah courts' jurisdiction cannot extend to a person who does not profess the religion of Islam.",
-              "source": "Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC)"
-            },
-            {
-              "t": "p",
-              "text": "The practical consequence is that a non-Muslim spouse or parent is not left without a forum. The civil court decides whether an administrative act was lawful; it does not decide questions of Islamic law, and it is careful to say so."
-            }
-          ]
-        },
-        {
-          "h": "The conversion of minors",
-          "body": [
-            {
-              "t": "p",
-              "text": "The recurring fact pattern is a marriage under the Law Reform (Marriage and Divorce) Act 1976 in which one spouse converts to Islam and then converts the children without telling the other. It is worth knowing the constitutional answer."
-            },
-            {
-              "t": "rule",
-              "text": "Article 12(4): the religion of a person under the age of eighteen shall be decided by his parent or guardian — read with the Eleventh Schedule, under which the singular includes the plural, so the consent of both parents is required where both are living.",
-              "source": "Federal Constitution, Art 12(4); Eleventh Schedule"
-            },
-            {
-              "t": "p",
-              "text": "That reading is what Indira Gandhi settled. It is a small piece of statutory interpretation doing a very large amount of work, which is a good illustration of why the interpretation module later in the curriculum is not an optional extra."
-            }
-          ]
-        },
-        {
-          "h": "What to do with this",
-          "body": [
-            {
-              "t": "p",
-              "text": "Two cards, and then the problem question, which puts a mother in the civil High Court against a jurisdictional objection built on 121(1A). The argument that wins is not about religion; it is about reading the clause as written and noticing that the Syariah court's own jurisdiction has limits."
-            }
-          ]
-        }
-      ],
-      "plants": [
-        "my-court-06",
-        "my-court-07"
-      ],
-      "prepares": [
-        "pm-121a-01"
-      ],
-      "reading": [
-        {
-          "bookId": "faruqi-our-constitution",
-          "where": "the treatment of Art 121(1A) and the two-court arrangement"
-        },
-        {
-          "bookId": "ashgar-malaysian-legal-system",
-          "where": "for the structure of the Syariah courts as State courts"
-        }
-      ],
-      "source": "Federal Constitution Arts 12(4), 121(1A), Ninth Schedule List II Item 1, Eleventh Schedule; Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC).",
-      "lastVerified": "2026-09-07",
-      "verify": "Indira Gandhi is the controlling authority and is cited for more than it decides. Read the Federal Court's reasoning in a report you can hold, and check whether any later Federal Court decision has qualified it before relying on the basic-structure passages."
-    },
-    {
-      "id": "l-research",
-      "moduleId": "m02-legal-research",
-      "title": "Finding the law, and knowing when you have not",
-      "minutes": 20,
-      "summary": "Statute first, case second, and the citator problem that makes free Malaysian sources unsafe to stop at.",
-      "sections": [
-        {
-          "h": "The order of work",
-          "body": [
-            {
-              "t": "p",
-              "text": "Research has an order, and almost every bad answer comes from working out of it. Search engines return cases, so cases are what you find first; but a case is evidence of what the law is, and the Act is the law."
-            },
-            {
-              "t": "list",
-              "items": [
-                "Find the governing statute. Read the section, not a summary of it.",
-                "Check that the statute is current: latest reprint, amending Acts, whether an amendment has actually commenced.",
-                "Look for subsidiary legislation made under it, where the operative detail often lives.",
-                "Then find the cases, and place each one in the hierarchy — which court, what year, ratio or obiter.",
-                "Then check whether those cases are still good law."
-              ]
-            },
-            {
-              "t": "example",
-              "text": "Asked whether a landlord may distrain for rent without going to court, a student finds a High Court decision saying yes and reports it. The governing instrument is the Distress Act 1951, and it sets out a route through an application to the court. Starting from the case made it possible to miss the Act entirely."
-            }
-          ]
-        },
-        {
-          "h": "Where to get the text, free",
-          "body": [
-            {
-              "t": "rule",
-              "text": "The official text of Malaysian Acts is published free by the Attorney General's Chambers on its portal. That is the source to use for statute.",
-              "source": "Attorney General's Chambers, Malaysia"
-            },
-            {
-              "t": "p",
-              "text": "Free case sources exist too, and they are genuinely useful for reading a judgment. What they are not is complete, and the gap is specific rather than general."
-            }
-          ]
-        },
-        {
-          "h": "The citator problem",
-          "body": [
-            {
-              "t": "p",
-              "text": "A citator is the tool that tells you a case's subsequent history: whether it was appealed, reversed, overruled, distinguished, followed, or merely doubted. Noting up a case means running it through one."
-            },
-            {
-              "t": "rule",
-              "text": "Noting up: checking a case's subsequent judicial treatment to establish whether it is still good law.",
-              "source": "Standard research practice"
-            },
-            {
-              "t": "rule",
-              "text": "You cannot confirm from free Malaysian sources alone that a case is still good law. There is no free citator. That check requires CLJ, LexisNexis CaseBase, or Westlaw Asia.",
-              "source": "Practice; the constraint is commercial, not legal"
-            },
-            {
-              "t": "caution",
-              "text": "The dangerous inference is the silent one. A free portal showing no overruling is not evidence that there was none — it is evidence that the portal does not track overruling. Absence of a warning is not a clean bill of health, and treating it as one is how a student advises on a case that was reversed on appeal fifteen years ago."
-            },
-            {
-              "t": "p",
-              "text": "This is not a reason to avoid free sources. It is a reason to know precisely what they cannot tell you, and to say so when you report. An answer that states its own limits is worth more than one that quietly has them."
-            }
-          ]
-        },
-        {
-          "h": "Reporting under a deadline",
-          "body": [
-            {
-              "t": "p",
-              "text": "You will regularly be asked a question with less time than a complete check requires. Refusing to answer is not the professional response; neither is answering as though the check had been done."
-            },
-            {
-              "t": "p",
-              "text": "The form that works: here is the governing provision and what it says; here is the case law I found and where each case sits in the hierarchy; here is what I have not been able to verify and what tool it would need; and here is what I would not advise on this basis. That is a bounded answer, and it is what the problem question in this module asks you to produce."
-            }
-          ]
-        },
-        {
-          "h": "What to do with this",
-          "body": [
-            {
-              "t": "p",
-              "text": "Three cards, which are about where to look and what the limits are rather than about any rule of law. Then the problem question, whose answer is a method rather than a proposition — the only one in the set where a correct substantive conclusion earns almost nothing if the order of work is wrong."
-            }
-          ]
-        }
-      ],
-      "plants": [
-        "my-research-01",
-        "my-research-02",
-        "my-research-03"
-      ],
-      "prepares": [
-        "pm-research-01"
-      ],
-      "reading": [
-        {
-          "bookId": "williams-learning-the-law",
-          "where": "the chapters on finding and using the law"
-        },
-        {
-          "bookId": "mckinney-reading-like-a-lawyer",
-          "where": "on reading a judgment efficiently once you have found it"
-        }
-      ],
-      "source": "General research practice; Attorney General's Chambers portal for statute.",
-      "lastVerified": "2026-09-07",
-      "verify": "Check which commercial databases you actually have access to before planning around them, and confirm the current address of the AGC portal. The Distress Act 1951 example is illustrative — verify the section before treating the substantive point as settled."
+     "h": "What this app is and is not",
+     "body": [
+      {
+       "t": "p",
+       "text": "Three layers. Lessons state the rules and orient you to the reading. Cards keep the rules available, scheduled so you meet them just as they start to fade. Problem questions test whether you can use them, and make you predict your own mark before you see the rubric, because a self-taught student's largest blind spot is their own judgment of their work."
+      },
+      {
+       "t": "p",
+       "text": "What it does not do is replace the textbooks. The lessons are an orientation and say so; the depth is in the reading list, and a lesson here is roughly what a good tutorial would cover before you go away and read properly."
+      },
+      {
+       "t": "caution",
+       "text": "It also cannot mark your writing. Nothing here reads your answer. The self-mark is honest only if you are, and the app is explicit about that on the progress page rather than hiding it behind a number."
+      }
+     ]
     }
-  ]
+   ],
+   "plants": [],
+   "prepares": [],
+   "reading": [
+    {
+     "bookId": "make-it-stick",
+     "where": "the whole book — it is short and it is the evidence base for the method above"
+    },
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "on reading cases, and on examination technique"
+    }
+   ],
+   "source": "Retrieval practice and spacing literature as summarised in Make It Stick; standard case-briefing and IRAC technique.",
+   "lastVerified": "2026-09-07",
+   "verify": "Nothing here is a rule of law and none of it needs a citator. The claims about learning are empirical rather than legal — if you want the primary studies rather than the summary, they are cited throughout Make It Stick.",
+   "quiz": [
+    {
+     "id": "qhs1",
+     "q": "Which does more for durable memory?",
+     "options": [
+      "Trying to recall and failing, then checking",
+      "Re-reading the passage carefully",
+      "Highlighting the key sentences",
+      "Copying the notes out"
+     ],
+     "answer": 0,
+     "why": "Retrieval practice beats review. The failed attempt is doing the work, provided you then check the answer."
+    },
+    {
+     "id": "qhs2",
+     "q": "Your revision feels smooth and pleasant. What should you conclude?",
+     "options": [
+      "Be suspicious — fluency is not memory",
+      "It is working well",
+      "You have found your learning style",
+      "You should move on to the next topic"
+     ],
+     "answer": 0,
+     "why": "Fluency comes from the second pass being easier than the first, and the brain reads ease as knowing."
+    },
+    {
+     "id": "qhs3",
+     "q": "Why interleave contract and criminal law in one session?",
+     "options": [
+      "Mixing topics produces better discrimination between them",
+      "It covers more syllabus per hour",
+      "It is less tiring",
+      "It suits shorter attention spans"
+     ],
+     "answer": 0,
+     "why": "Blocked practice feels better and teaches you less about telling two doctrines apart."
+    },
+    {
+     "id": "qhs4",
+     "q": "What is a fact 'material' to a case?",
+     "options": [
+      "One whose change might change the outcome",
+      "One the judge repeated",
+      "One both parties agreed",
+      "One in the headnote"
+     ],
+     "answer": 0,
+     "why": "Materiality is the counterfactual test, and identifying material facts is most of the work of a brief."
+    },
+    {
+     "id": "qhs5",
+     "q": "Why should you not brief from a headnote?",
+     "options": [
+      "It is written by editors, is sometimes wrong, and is never authority",
+      "It omits the facts",
+      "It is too short",
+      "It is copyrighted"
+     ],
+     "answer": 0,
+     "why": "Read the judgment. The headnote is an editorial convenience."
+    }
+   ]
+  },
+  {
+   "id": "l-shape-of-law",
+   "moduleId": "m00-foundations",
+   "title": "How a legal system is arranged",
+   "minutes": 15,
+   "summary": "Three divisions that decide, before anything else, which rules apply and who has to prove what.",
+   "sections": [
+    {
+     "h": "Why start with divisions",
+     "body": [
+      {
+       "t": "p",
+       "text": "Before you can ask what the law says about a situation, you have to know which body of law is being asked. A punch in a car park can be a crime, a tort, or both at once, and the answer to “what happens next” is completely different in each case — different party bringing it, different standard of proof, different remedy. Getting the division right is the first move in every problem you will ever be given, and it is invisible in a textbook because the textbook has already made it for you by putting the chapter in a particular book."
+      },
+      {
+       "t": "p",
+       "text": "There are three divisions worth holding in your head from the beginning. None of them is difficult. All of them are the sort of thing that is embarrassing to be unsure about in the second year."
+      }
+     ]
+    },
+    {
+     "h": "Public law and private law",
+     "body": [
+      {
+       "t": "p",
+       "text": "Public law governs the relationship between the individual and the State: constitutional law, administrative law, criminal law. Private law governs the relationship between individuals: contract, tort, property, family, company. The dividing question is who is on each side of the dispute and in what capacity."
+      },
+      {
+       "t": "rule",
+       "text": "Public law: the State is a party in its capacity as the State. Private law: the parties meet as equals, and the State supplies only the court.",
+       "source": "Standard classification; see Williams, Learning the Law"
+      },
+      {
+       "t": "p",
+       "text": "The division is not perfectly clean, and you should not expect it to be. A government department that breaches a supply contract is being sued in contract, as an ordinary contracting party, not in public law. The test is the capacity in which the State acts, not the fact that a State body appears on the page."
+      }
+     ]
+    },
+    {
+     "h": "Civil and criminal",
+     "body": [
+      {
+       "t": "p",
+       "text": "This is the division students most often blur, because the same facts frequently support both. Keep them apart by asking who is bringing the case and what they are asking for."
+      },
+      {
+       "t": "p",
+       "text": "A criminal case is brought by the State — in Malaysia, by the Public Prosecutor — against an accused, and it asks for punishment. A civil case is brought by one party, the plaintiff, against another, the defendant, and it asks for a remedy: damages, an injunction, a declaration."
+      },
+      {
+       "t": "rule",
+       "text": "Criminal: prosecution by the State, seeking punishment. Civil: claim by a private party, seeking a remedy.",
+       "source": "Standard classification"
+      },
+      {
+       "t": "example",
+       "text": "A drunk driver injures a pedestrian. The Public Prosecutor charges him under the road traffic legislation — that is the criminal case, and the pedestrian is a witness in it, not a party. The pedestrian separately sues him in negligence for her medical costs and lost income — that is the civil case, and the outcome of the criminal one does not decide it."
+      },
+      {
+       "t": "caution",
+       "text": "An acquittal in the criminal case does not defeat the civil claim, because the standards of proof are different. Failing to prove something beyond reasonable doubt is not the same as failing to prove it on the balance of probabilities."
+      }
+     ]
+    },
+    {
+     "h": "The standards of proof",
+     "body": [
+      {
+       "t": "p",
+       "text": "The two standards follow directly from the division above, and the reason for the gap between them is worth understanding rather than memorising: the consequences of a wrong criminal conviction fall on one person and are close to irreversible, so the system deliberately accepts letting some guilty people go in order to make wrongful convictions rare."
+      },
+      {
+       "t": "rule",
+       "text": "Criminal: beyond reasonable doubt. Civil: on the balance of probabilities — more likely than not.",
+       "source": "Evidence Act 1950; standard common law formulation"
+      },
+      {
+       "t": "p",
+       "text": "“Balance of probabilities” means exactly what it says: if the tribunal thinks it is more likely than not, that is enough, and 51% will do. “Beyond reasonable doubt” is not a percentage and does not become one however hard you press it. It is a state of the tribunal's mind, and the courts have generally resisted attempts to quantify it."
+      }
+     ]
+    },
+    {
+     "h": "Fact and law",
+     "body": [
+      {
+       "t": "p",
+       "text": "The last division is the one that does the most work later and gets the least attention now. A question of fact is what happened. A question of law is what the rules make of it."
+      },
+      {
+       "t": "p",
+       "text": "It matters for three reasons, and each one will cost you marks if you have not internalised it. Appeals are often restricted to questions of law, so how a point is characterised decides whether it can be appealed at all. Precedent attaches to propositions of law, not to findings of fact, so a case is authority for its rule and never for its facts. And in a jury system the division allocated the work between judge and jury — which is historical in Malaysia, jury trial having been abolished, but it is why the distinction is drawn so sharply in the older cases you will read."
+      },
+      {
+       "t": "rule",
+       "text": "Fact: what happened. Law: what follows from it. Appeals, precedent and the division of labour in a trial all turn on which is which.",
+       "source": "Standard common law doctrine"
+      },
+      {
+       "t": "example",
+       "text": "“The defendant was driving at 90 km/h” is a question of fact. “Driving at 90 km/h in those conditions fell below the standard of a reasonable driver” is a question of law, or at least a question of mixed fact and law — which is a third category, and one that is fought over precisely because so much depends on where a point lands."
+      }
+     ]
+    },
+    {
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "You will not be examined on these divisions directly for very long. They stop being a topic and become the frame you read everything else in — which is why they are worth over-learning now, while there is time. The five cards this lesson plants are deliberately small; they are meant to be automatic rather than thought about."
+      },
+      {
+       "t": "p",
+       "text": "When you meet a set of facts, run the divisions before you reach for any rule: public or private, civil or criminal, and which parts of the story are contested fact and which are contested law. Most misfired answers in a first year come from skipping that step."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "f-pubpriv-01",
+    "f-civcrim-01",
+    "f-standard-01",
+    "f-standard-02",
+    "f-factlaw-01"
+   ],
+   "prepares": [],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "the opening chapters on the divisions of law"
+    },
+    {
+     "bookId": "mcbride-letters",
+     "where": "the early letters, for why the divisions are drawn where they are"
+    }
+   ],
+   "source": "Standard common law classification; Evidence Act 1950 for the civil standard.",
+   "lastVerified": "2026-09-07",
+   "verify": "Nothing here turns on a section number. If you quote the civil standard from the Evidence Act 1950, read ss 101–103 in a current reprint rather than relying on the formulation above.",
+   "quiz": [
+    {
+     "id": "qsl1",
+     "q": "What distinguishes public law from private law?",
+     "options": [
+      "In public law the State is a party in its capacity as the State",
+      "Public law is statutory and private law is common law",
+      "Public law is criminal and private law is civil",
+      "Public law is decided in superior courts only"
+     ],
+     "answer": 0,
+     "why": "In private law the parties meet as equals and the State supplies only the court."
+    },
+    {
+     "id": "qsl2",
+     "q": "What are the two standards of proof?",
+     "options": [
+      "Beyond reasonable doubt; balance of probabilities",
+      "Prima facie; conclusive",
+      "Clear and convincing; preponderance",
+      "Certainty; likelihood"
+     ],
+     "answer": 0,
+     "why": "Criminal and civil respectively — and the difference is what allows the same facts to produce different outcomes."
+    },
+    {
+     "id": "qsl3",
+     "q": "Why does an acquittal not defeat a civil claim on the same facts?",
+     "options": [
+      "The standards of proof are different",
+      "The parties are different",
+      "The limitation periods differ",
+      "Civil courts are not bound by criminal findings"
+     ],
+     "answer": 0,
+     "why": "Failing to prove something beyond reasonable doubt is not a finding that it did not happen."
+    },
+    {
+     "id": "qsl4",
+     "q": "What is the fact-law distinction for?",
+     "options": [
+      "It decides appeals, precedent, and the division of labour at trial",
+      "It decides which court has jurisdiction",
+      "It decides the standard of proof",
+      "It decides who pays costs"
+     ],
+     "answer": 0,
+     "why": "Fact is what happened; law is what follows from it, and almost every procedural rule turns on which is which."
+    }
+   ]
+  },
+  {
+   "id": "l-precedent",
+   "moduleId": "m00-foundations",
+   "title": "What binds, and what merely persuades",
+   "minutes": 25,
+   "summary": "Stare decisis, the ratio and the obiter, and the four ways a court escapes a decision it does not want to follow.",
+   "sections": [
+    {
+     "h": "The doctrine, stated plainly",
+     "body": [
+      {
+       "t": "p",
+       "text": "Common law systems decide cases by reference to how earlier cases were decided. The doctrine has a Latin name — stare decisis, “to stand by things decided” — and a simple rationale: like cases should be treated alike, and people should be able to arrange their affairs knowing what the law is."
+      },
+      {
+       "t": "rule",
+       "text": "Stare decisis: a court is bound by the decisions of courts above it in the same hierarchy, on the same point of law.",
+       "source": "Standard common law doctrine"
+      },
+      {
+       "t": "p",
+       "text": "Notice the three qualifications built into that sentence. Above it — precedent runs downwards. In the same hierarchy — a court in another country is in another hierarchy. On the same point of law — a case decides what it decides and no more. Almost every argument about precedent you will read is an argument about one of those three."
+      }
+     ]
+    },
+    {
+     "h": "Ratio decidendi",
+     "body": [
+      {
+       "t": "p",
+       "text": "A judgment is a long document. Only part of it binds anybody, and identifying that part is the central skill of case reading."
+      },
+      {
+       "t": "rule",
+       "text": "The ratio decidendi is the legal principle the court's decision actually rests on: the rule applied to the material facts in order to reach the result.",
+       "source": "Standard common law doctrine"
+      },
+      {
+       "t": "p",
+       "text": "The operative word is rests. The test is necessity, not emphasis or length. A judge may spend four pages on a point that turns out to be beside the point, and dispose of the decisive issue in two sentences. Whether a proposition is the ratio is answered by asking whether the outcome would have been the same without it."
+      },
+      {
+       "t": "caution",
+       "text": "A ratio stated at the level of the facts is useless. “The council is liable for the blocked drain” binds no later case, because no later case has that drain in it. You have to state the rule at a level of generality that could govern a different set of facts — and choosing that level is where the argument usually is."
+      }
+     ]
+    },
+    {
+     "h": "Obiter dictum",
+     "body": [
+      {
+       "t": "p",
+       "text": "Everything in the judgment that is not the ratio is obiter dictum — “a thing said by the way”. It does not bind. It may still carry great weight: an observation by the Federal Court on a point it did not have to decide is not binding, but no High Court judge will brush it aside lightly."
+      },
+      {
+       "t": "rule",
+       "text": "Obiter dictum: a statement in a judgment that was not necessary to the decision. Persuasive at most, never binding.",
+       "source": "Standard common law doctrine"
+      },
+      {
+       "t": "example",
+       "text": "The clearest obiter is the kind a court flags itself: “we have heard no argument on this point and express no view upon it.” A court that expressly declines to decide something has not decided it, however suggestive the surrounding language."
+      },
+      {
+       "t": "p",
+       "text": "The hard cases are the ones nobody flags. A court that gives two independent reasons for its result has arguably given two rationes, and later courts will disagree about whether the second one was necessary. Do not expect the line to be clean; expect to argue about where it falls."
+      }
+     ]
+    },
+    {
+     "h": "Binding and persuasive",
+     "body": [
+      {
+       "t": "p",
+       "text": "Binding authority must be followed whether the judge agrees with it or not. Persuasive authority may be followed, and its weight depends on the court, the reasoning, and how close the facts are."
+      },
+      {
+       "t": "rule",
+       "text": "Binding: a decision of a superior court in the same hierarchy, on the same point. Persuasive: everything else — obiter, decisions of coordinate courts, decisions of foreign courts, textbooks.",
+       "source": "Standard common law doctrine"
+      },
+      {
+       "t": "p",
+       "text": "A judge of the High Court is not bound by another judge of the High Court. Judicial comity means they will normally follow a decision of coordinate jurisdiction unless convinced it is wrong, but that is a convention of good practice, not an obligation."
+      },
+      {
+       "t": "p",
+       "text": "Foreign judgments are never binding on a Malaysian court, and this is worth saying flatly because the practice can look otherwise. English, Singaporean, Indian and Australian cases are cited constantly in Malaysian courts, and sometimes followed almost as a matter of course. They are nonetheless persuasive only. A different hierarchy cannot bind this one."
+      }
+     ]
+    },
+    {
+     "h": "The four ways out",
+     "body": [
+      {
+       "t": "p",
+       "text": "A court faced with an inconvenient precedent has a limited set of legitimate moves, and knowing them is how you argue precedent rather than merely recite it."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Distinguishing. The earlier case turned on a material fact that is absent here, so its ratio does not reach this case. This is the everyday move and the one you will use most.",
+        "Overruling. A superior court declares the earlier decision wrong. Only a court above the one that decided it can do this — and, within limits, a final court can do it to itself.",
+        "Reversing. An appellate court sets aside the decision below in the same case. Not the same thing as overruling, though students routinely confuse them: reversing is vertical within one case, overruling is about a different, earlier case.",
+        "Per incuriam. The earlier decision was reached in ignorance of a binding authority or a relevant statute, and so does not bind."
+       ]
+      },
+      {
+       "t": "rule",
+       "text": "Per incuriam: decided in ignorance of a statute or binding authority that would have altered the result. Such a decision does not bind.",
+       "source": "Standard common law doctrine"
+      },
+      {
+       "t": "caution",
+       "text": "Per incuriam is narrow, and it is not a licence to disregard a decision you think is poorly reasoned. The earlier court must have missed something it was obliged to consider. Bad reasoning is not enough; overlooked authority is."
+      }
+     ]
+    },
+    {
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "This lesson plants seven cards, and they are worth being ruthless about — precedent vocabulary used loosely is the fastest way to look untrained. Then attempt the problem question, which gives you a short judgment and asks you to separate the ratio from the obiter and say what a later court is bound by. It is harder than it looks, and the passage most students mis-sort is the one that reads like an aside but was actually argued."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "f-stare-01",
+    "f-ratio-01",
+    "f-ratio-02",
+    "f-ratio-03",
+    "f-auth-01",
+    "f-auth-02",
+    "f-latin-06"
+   ],
+   "prepares": [
+    "pm-ratio-01"
+   ],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "the chapter on precedent — the standard treatment in English"
+    },
+    {
+     "bookId": "schauer-thinking-like-a-lawyer",
+     "where": "on why precedent constrains at all, once you start doubting that it should"
+    }
+   ],
+   "source": "Standard common law doctrine. The Malaysian hierarchy it operates in is the subject of a separate lesson.",
+   "lastVerified": "2026-09-07",
+   "verify": "The doctrine here is general and stable. What is jurisdiction-specific — which Malaysian courts bind which, and the status of pre-1985 Privy Council decisions — is covered separately and is what you should check against a Malaysian text.",
+   "quiz": [
+    {
+     "id": "qpr1",
+     "q": "State the doctrine of stare decisis.",
+     "options": [
+      "A court is bound by decisions of courts above it in the same hierarchy on the same point",
+      "A court must follow its own earlier decisions absolutely",
+      "All decisions of all courts bind all others",
+      "Precedent binds only where a statute is silent"
+     ],
+     "answer": 0,
+     "why": "Same hierarchy, superior court, same point of law."
+    },
+    {
+     "id": "qpr2",
+     "q": "A ratio stated at the level of the facts — 'the council is liable for the blocked drain' — is useless. Why?",
+     "options": [
+      "No later case has those facts, so it governs nothing",
+      "It is obiter",
+      "It was not argued",
+      "It is too general"
+     ],
+     "answer": 0,
+     "why": "A ratio has to be stated so that it could govern a different case."
+    },
+    {
+     "id": "qpr3",
+     "q": "What is per incuriam?",
+     "options": [
+      "Decided in ignorance of a statute or binding authority that would have altered the result",
+      "Decided without reasons",
+      "Decided by a single judge",
+      "Decided on a concession"
+     ],
+     "answer": 0,
+     "why": "It is narrow, and it is not a licence to ignore a decision you think is poorly reasoned."
+    },
+    {
+     "id": "qpr4",
+     "q": "What is the difference between overruling and reversing?",
+     "options": [
+      "Overruling declares an earlier decision in another case wrong; reversing sets aside the decision below in the same case",
+      "They are the same thing",
+      "Overruling is by the Court of Appeal, reversing by the Federal Court",
+      "Reversing applies only to criminal appeals"
+     ],
+     "answer": 0,
+     "why": "Students routinely use these interchangeably and it is always noticed."
+    },
+    {
+     "id": "qpr5",
+     "q": "Which is the most useful of the four ways out of an inconvenient precedent, for a student answer?",
+     "options": [
+      "Distinguishing",
+      "Overruling",
+      "Reversing",
+      "Per incuriam"
+     ],
+     "answer": 0,
+     "why": "It is the only one available to a court bound by the decision, and the only one a student answer will normally be arguing."
+    }
+   ]
+  },
+  {
+   "id": "l-vocabulary",
+   "moduleId": "m00-foundations",
+   "title": "The words you cannot work around",
+   "minutes": 15,
+   "summary": "Five maxims that carry whole doctrines, and three fact cues that should trigger a doctrine before you have finished reading the sentence.",
+   "sections": [
+    {
+     "h": "Why the Latin survives",
+     "body": [
+      {
+       "t": "p",
+       "text": "Legal Latin is not decoration and it is not gatekeeping, whatever it looks like from outside. Each of the phrases below is a compression: a single term that names a whole doctrine, so that judges and counsel can refer to it without restating it. You cannot read a judgment fluently without them, and looking each one up as it appears makes reading four times slower."
+      },
+      {
+       "t": "p",
+       "text": "Learn them as index entries rather than translations. The point is not that you can render audi alteram partem into English; it is that seeing it makes an entire body of administrative law available to you at once."
+      }
+     ]
+    },
+    {
+     "h": "The five that earn their place",
+     "body": [
+      {
+       "t": "rule",
+       "text": "Ultra vires — beyond the powers. An act done outside the authority conferred by the statute or instrument that grants it, and therefore invalid.",
+       "source": "Administrative and company law"
+      },
+      {
+       "t": "p",
+       "text": "This is the engine of judicial review and of a good deal of company law. A public body has only the powers Parliament gave it; a company, historically, only those in its objects. Acting outside them is not merely wrong, it is void."
+      },
+      {
+       "t": "rule",
+       "text": "Audi alteram partem — hear the other side. Nobody should be condemned unheard.",
+       "source": "Natural justice"
+      },
+      {
+       "t": "rule",
+       "text": "Nemo judex in causa sua — no one a judge in his own cause. A decision-maker must not have an interest in the outcome.",
+       "source": "Natural justice"
+      },
+      {
+       "t": "p",
+       "text": "Those two together are the rules of natural justice, and they are the substance of procedural fairness in administrative law. Almost every judicial review application you read will be founded on one of them, and they are among the very few doctrines you can rely on across common law jurisdictions without checking."
+      },
+      {
+       "t": "rule",
+       "text": "Actus reus — the guilty act. The physical element of an offence: the conduct, and any required circumstances or consequences.",
+       "source": "Criminal law"
+      },
+      {
+       "t": "rule",
+       "text": "Mens rea — the guilty mind. The mental element: intention, knowledge, recklessness or negligence, as the offence requires.",
+       "source": "Criminal law"
+      },
+      {
+       "t": "caution",
+       "text": "Both criminal terms are less useful in Malaysia than a common law training suggests, because the Penal Code defines each offence with its own mental element written into the section. The vocabulary still matters for reading the case law and for talking about the structure of an offence, but do not go looking for a general doctrine of mens rea in a codified system. Read the section."
+      }
+     ]
+    },
+    {
+     "h": "Fact cues, and why they are worth drilling",
+     "body": [
+      {
+       "t": "p",
+       "text": "Issue-spotting is a retrieval problem, not a reasoning problem. In a problem question the facts do not announce which body of law they belong to, and the students who do badly are usually not the ones who cannot state the rules — they are the ones who never reached for them."
+      },
+      {
+       "t": "p",
+       "text": "So it is worth building explicit associations between a shape of facts and the doctrine it should summon. Three to begin with:"
+      },
+      {
+       "t": "list",
+       "items": [
+        "A promise, an exchange, and someone who has not performed → contract. Ask whether an agreement was formed, whether it is enforceable, and what the remedy is.",
+        "Someone injured, and a question of who should have prevented it → tort, and negligence first. Ask about duty, breach, causation and remoteness, in that order.",
+        "A public body making a decision that affects someone, with a defect in how it was made → administrative law, and judicial review. Ask about natural justice and about acting within power."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "These are starting points, not answers, and a good set of facts will engage two or three at once. That is fine — the failure mode is engaging none."
+      }
+     ]
+    },
+    {
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "The eight cards here are the shortest in the deck and should stay that way. If a card is taking you more than a couple of seconds it is carrying too much, and you should split it rather than keep failing it. When a maxim starts appearing in your own writing without being reached for, it has done its job."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "f-latin-01",
+    "f-latin-02",
+    "f-latin-03",
+    "f-latin-04",
+    "f-latin-05",
+    "t-contract-01",
+    "t-tort-01",
+    "t-admin-01"
+   ],
+   "prepares": [],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "the sections on legal language and on reading cases"
+    }
+   ],
+   "source": "Standard common law vocabulary; the Penal Code caution is specific to codified criminal law.",
+   "lastVerified": "2026-09-07",
+   "verify": "Nothing here needs a citator. Before relying on the actus reus / mens rea framing in a Malaysian criminal answer, read the definition section of the offence in the Penal Code — the Code supplies the mental element expressly and the general doctrine can mislead.",
+   "quiz": [
+    {
+     "id": "qvc1",
+     "q": "Ultra vires means what?",
+     "options": [
+      "Beyond the powers conferred, and therefore invalid",
+      "Against public policy",
+      "Without notice",
+      "Beyond the limitation period"
+     ],
+     "answer": 0,
+     "why": "An act outside the authority conferred by the statute or instrument that grants it."
+    },
+    {
+     "id": "qvc2",
+     "q": "Nemo judex in causa sua requires what?",
+     "options": [
+      "That a decision-maker have no interest in the outcome",
+      "That the other side be heard",
+      "That reasons be given",
+      "That the decision be published"
+     ],
+     "answer": 0,
+     "why": "No one a judge in his own cause. Audi alteram partem is the other rule."
+    },
+    {
+     "id": "qvc3",
+     "q": "Why are actus reus and mens rea less useful in Malaysia than a common law training suggests?",
+     "options": [
+      "The Penal Code defines each offence with its own mental element",
+      "They are Latin",
+      "They apply only to common law offences",
+      "They have been abolished"
+     ],
+     "answer": 0,
+     "why": "You reason from the section, not from a general theory of the guilty mind."
+    },
+    {
+     "id": "qvc4",
+     "q": "Facts show a public body making a decision that affects someone, with a defect in how it was made. What is the cue?",
+     "options": [
+      "Administrative law and judicial review",
+      "Contract",
+      "Tort",
+      "Criminal law"
+     ],
+     "answer": 0,
+     "why": "Drilling fact cues is what makes issue-spotting fast enough to be useful under time."
+    }
+   ]
+  },
+  {
+   "id": "l-courts",
+   "moduleId": "m01-malaysian-legal-system",
+   "title": "The courts, and what each one can do",
+   "minutes": 20,
+   "summary": "The civil hierarchy from the Magistrates' Court to the Federal Court, the two High Courts, and the statutes that create them.",
+   "sections": [
+    {
+     "h": "Why the hierarchy comes first",
+     "body": [
+      {
+       "t": "p",
+       "text": "Precedent runs downwards through a hierarchy, so the doctrine you learned in the foundations module is inert until you know the shape of the structure it runs through. Everything about which decisions bind, which can be appealed, and which court can hear a matter at all follows from this diagram."
+      }
+     ]
+    },
+    {
+     "h": "The civil courts, lowest to highest",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "Magistrates' Court — the base of the ordinary hierarchy, handling the lower-value civil claims and the less serious criminal matters.",
+        "Sessions Court — above the Magistrates, with a higher civil limit and a wider criminal jurisdiction.",
+        "High Court — unlimited original jurisdiction, and the first of the superior courts. There are two, dealt with below.",
+        "Court of Appeal — hears appeals from the High Court.",
+        "Federal Court — the apex court of Malaysia."
+       ]
+      },
+      {
+       "t": "rule",
+       "text": "Magistrates' Court → Sessions Court → High Court → Court of Appeal → Federal Court. The Federal Court is the apex.",
+       "source": "Courts of Judicature Act 1964; Subordinate Courts Act 1948"
+      },
+      {
+       "t": "p",
+       "text": "There is also the Penghulu's Court, at the very bottom, with a tiny jurisdiction and almost no practical significance today. It is worth knowing it exists so that you are not caught out by a reference to it, and not worth more than that."
+      },
+      {
+       "t": "caution",
+       "text": "The civil jurisdictional limits of the Magistrates' and Sessions Courts are monetary figures set by statute and raised periodically. Do not memorise a number from a textbook — look it up in the current Subordinate Courts Act 1948 each time you need it, because a figure you learned three years ago is likely to be wrong."
+      }
+     ]
+    },
+    {
+     "h": "Two High Courts, not one",
+     "body": [
+      {
+       "t": "p",
+       "text": "This is the fact about the Malaysian structure that most surprises people arriving from an English textbook, and it is constitutionally significant rather than administrative."
+      },
+      {
+       "t": "rule",
+       "text": "There are two High Courts of coordinate jurisdiction: the High Court in Malaya, and the High Court in Sabah and Sarawak.",
+       "source": "Federal Constitution; Courts of Judicature Act 1964"
+      },
+      {
+       "t": "p",
+       "text": "They are coordinate, which means neither binds the other. A decision of the High Court in Malaya is persuasive in Sabah and Sarawak and no more, exactly as one High Court judge's decision is persuasive to another. The arrangement reflects the terms on which the Borneo states entered the Federation, and it is a real feature of the system rather than a quirk of naming."
+      }
+     ]
+    },
+    {
+     "h": "The two statutes",
+     "body": [
+      {
+       "t": "p",
+       "text": "The structure is not in the Constitution alone. Two Acts do the work of setting out jurisdiction, and you should be able to name both without hesitating."
+      },
+      {
+       "t": "rule",
+       "text": "Courts of Judicature Act 1964 — the superior courts: High Courts, Court of Appeal, Federal Court. Subordinate Courts Act 1948 — the Sessions and Magistrates' Courts.",
+       "source": "Courts of Judicature Act 1964; Subordinate Courts Act 1948"
+      },
+      {
+       "t": "p",
+       "text": "The division is easy to remember once you notice it tracks the superior/subordinate line exactly, which is the same line that decides whether a court's decisions can bind anybody at all."
+      }
+     ]
+    },
+    {
+     "h": "The Syariah courts",
+     "body": [
+      {
+       "t": "p",
+       "text": "Running alongside the civil hierarchy is a second one, with its own three tiers: the Syariah Subordinate Court, the Syariah High Court, and the Syariah Appeal Court at the top."
+      },
+      {
+       "t": "rule",
+       "text": "Syariah Subordinate Court → Syariah High Court → Syariah Appeal Court.",
+       "source": "State enactments; Ninth Schedule, List II"
+      },
+      {
+       "t": "p",
+       "text": "Two things about it are structural rather than incidental, and both are dealt with properly in a later lesson. These are State courts, created by State law, not federal ones — so there is no single national Syariah hierarchy but a set of parallel State ones. And they are not below the Federal Court: no appeal runs from the Syariah Appeal Court to the civil courts. Two hierarchies, not one tree with a branch."
+      }
+     ]
+    },
+    {
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "Five cards, all of them the kind of structural fact that has to be instant. Draw the diagram from memory once a week until it is dull. The reasoning that uses it comes in the next two lessons, and neither will make sense if you are still working out the order of the courts while reading them."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "my-court-01",
+    "my-court-02",
+    "my-court-03",
+    "my-court-04",
+    "my-court-05"
+   ],
+   "prepares": [],
+   "reading": [
+    {
+     "bookId": "ashgar-malaysian-legal-system",
+     "where": "the chapter on the court structure"
+    },
+    {
+     "bookId": "wan-arfah-first-look",
+     "where": "the introductory treatment, if the above is heavy going"
+    }
+   ],
+   "source": "Federal Constitution; Courts of Judicature Act 1964; Subordinate Courts Act 1948.",
+   "lastVerified": "2026-09-07",
+   "verify": "Monetary jurisdictional limits change — check the current Subordinate Courts Act 1948 rather than any textbook figure. Confirm the Syariah court tier names against the enactment of the State you are concerned with, since they are State creations and the naming is not perfectly uniform.",
+   "quiz": [
+    {
+     "id": "qct1",
+     "q": "What is the civil hierarchy, lowest to highest?",
+     "options": [
+      "Magistrates → Sessions → High Court → Court of Appeal → Federal Court",
+      "Sessions → Magistrates → High Court → Federal Court → Court of Appeal",
+      "Magistrates → High Court → Sessions → Court of Appeal → Federal Court",
+      "Magistrates → Sessions → Court of Appeal → High Court → Federal Court"
+     ],
+     "answer": 0,
+     "why": "The Federal Court is the apex."
+    },
+    {
+     "id": "qct2",
+     "q": "How many High Courts are there, and what is their relationship?",
+     "options": [
+      "Two, of coordinate jurisdiction — Malaya, and Sabah and Sarawak",
+      "One, with two registries",
+      "Two, one superior to the other",
+      "Three, one for each region"
+     ],
+     "answer": 0,
+     "why": "Coordinate: neither binds the other, though decisions are highly persuasive."
+    },
+    {
+     "id": "qct3",
+     "q": "Which statute creates the superior courts?",
+     "options": [
+      "The Courts of Judicature Act 1964",
+      "The Subordinate Courts Act 1948",
+      "The Federal Constitution alone",
+      "The Rules of Court 2012"
+     ],
+     "answer": 0,
+     "why": "The Subordinate Courts Act 1948 creates the Sessions and Magistrates' Courts."
+    },
+    {
+     "id": "qct4",
+     "q": "Why should you not memorise the Magistrates' and Sessions Courts' monetary limits?",
+     "options": [
+      "They are statutory figures raised periodically",
+      "They vary by State",
+      "They are not published",
+      "They apply only to contract claims"
+     ],
+     "answer": 0,
+     "why": "Cite them only from a current source; a remembered figure is the fastest way to be confidently out of date."
+    },
+    {
+     "id": "qct5",
+     "q": "What is the Syariah hierarchy?",
+     "options": [
+      "Syariah Subordinate Court → Syariah High Court → Syariah Appeal Court",
+      "Syariah High Court → Syariah Court of Appeal → Federal Court",
+      "A single Syariah Court in each State",
+      "Syariah Subordinate Court → High Court → Federal Court"
+     ],
+     "answer": 0,
+     "why": "It is a separate hierarchy, established by State law, and it does not feed into the Federal Court."
+    }
+   ]
+  },
+  {
+   "id": "l-sources",
+   "moduleId": "m01-malaysian-legal-system",
+   "title": "Where Malaysian law comes from",
+   "minutes": 25,
+   "summary": "The Constitution at the top, statute below it, English common law received to a date, and custom that counts as law.",
+   "sections": [
+    {
+     "h": "The definition to start from",
+     "body": [
+      {
+       "t": "p",
+       "text": "It is tempting to assume the sources of law are obvious — statutes and cases — and to move on. In Malaysia that assumption will cost you, because the Constitution itself defines what counts as law and the definition is wider than a common law training expects."
+      },
+      {
+       "t": "rule",
+       "text": "Article 160(2): “law” includes written law, the common law in so far as it is in operation in the Federation or any part of it, and any custom or usage having the force of law.",
+       "source": "Federal Constitution, Art 160(2)"
+      },
+      {
+       "t": "p",
+       "text": "Three sources, then, and the third is the one students forget. Custom is not an inferior thing that yields to statute automatically; where it has the force of law it is law, and the adat of Negeri Sembilan and the native customary law of Sabah and Sarawak are applied by the courts as such."
+      }
+     ]
+    },
+    {
+     "h": "The Constitution is supreme",
+     "body": [
+      {
+       "t": "p",
+       "text": "This is the single most important structural difference between Malaysia and the United Kingdom, and if you carry an English textbook's assumptions across you will get it backwards. The United Kingdom has parliamentary sovereignty. Malaysia does not."
+      },
+      {
+       "t": "rule",
+       "text": "Article 4(1): the Constitution is the supreme law of the Federation, and any law passed after Merdeka Day which is inconsistent with it is void to the extent of the inconsistency.",
+       "source": "Federal Constitution, Art 4(1)"
+      },
+      {
+       "t": "p",
+       "text": "An Act of Parliament can therefore be struck down. That single sentence is what makes constitutional litigation possible at all, and it is the foundation of the fundamental liberties module later on."
+      },
+      {
+       "t": "caution",
+       "text": "Do not write that Parliament is sovereign in Malaysia. It is a common slip carried over from English texts, and it is wrong in a way that undermines everything built on top of it."
+      }
+     ]
+    },
+    {
+     "h": "Legislation, federal and State",
+     "body": [
+      {
+       "t": "p",
+       "text": "Below the Constitution sits written law: Acts of Parliament at federal level, Enactments of the State Legislative Assemblies at State level, and Ordinances in Sarawak. What each may legislate on is fixed by the Ninth Schedule, which divides subjects into the Federal List, the State List and the Concurrent List."
+      },
+      {
+       "t": "rule",
+       "text": "Parliament has two houses: the Dewan Rakyat, the elected lower house, and the Dewan Negara, the appointed and State-elected upper house.",
+       "source": "Federal Constitution"
+      },
+      {
+       "t": "p",
+       "text": "Beneath primary legislation is subsidiary legislation — rules, regulations, orders and by-laws made by a body on which Parliament has conferred power to make them. It is law, it is enforceable, and it is where a great deal of the detail actually lives."
+      },
+      {
+       "t": "rule",
+       "text": "Subsidiary legislation: law made under authority delegated by an Act, by a minister or other body. Valid only within the powers the parent Act confers.",
+       "source": "Interpretation Acts 1948 and 1967"
+      },
+      {
+       "t": "p",
+       "text": "Its validity depends on the parent Act, which is why the ultra vires doctrine from the foundations module bites here: subsidiary legislation made beyond the delegated power is void, and challenging it is ordinary administrative law rather than constitutional litigation."
+      }
+     ]
+    },
+    {
+     "h": "English common law, received to a date",
+     "body": [
+      {
+       "t": "p",
+       "text": "Malaysia is a common law jurisdiction, but the common law did not arrive by osmosis. It was received by statute, and the statute fixes a date."
+      },
+      {
+       "t": "rule",
+       "text": "Civil Law Act 1956, s 3(1): the court shall apply the common law of England and the rules of equity as administered in England on 7 April 1956 for West Malaysia, 1 December 1951 for Sabah, and 12 December 1949 for Sarawak — so far only as the circumstances of the States and their inhabitants permit, and subject to such qualifications as local circumstances render necessary.",
+       "source": "Civil Law Act 1956, s 3(1)"
+      },
+      {
+       "t": "p",
+       "text": "Two things follow. First, there are three different cut-off dates, and using the West Malaysian one for a Sarawak matter is an error that a marker will see immediately. Second, English decisions after the relevant cut-off are not received. They may be cited, and they frequently are, but as persuasive reasoning rather than as law that arrived automatically."
+      },
+      {
+       "t": "p",
+       "text": "Section 6 of the same Act excludes English land law, which matters because Malaysia has a Torrens system of registered title and the English doctrines would cut across it."
+      },
+      {
+       "t": "caution",
+       "text": "Be honest about the complication rather than hiding it. Malaysian courts cite post-1956 English cases constantly, and there is a respectable argument that a later English decision merely declares what the common law always was, which would pull it back inside the cut-off. That argument is available to your opponent. Meet it rather than pretending the date settles everything."
+      }
+     ]
+    },
+    {
+     "h": "Putting the sources in order",
+     "body": [
+      {
+       "t": "p",
+       "text": "For an ordinary dispute, work down: is there a provision of the Constitution in play; is there a Malaysian statute on the point; is there subsidiary legislation under it; is there binding Malaysian case law; and only then, is there received English common law under s 3, subject to local circumstances."
+      },
+      {
+       "t": "example",
+       "text": "A student asked whether a landlord may do something will often find a case first, because a case is what a search engine returns. The order above says find the Act first. A case cannot authorise what a statute forbids, and starting from the case makes it easy to miss that the question was answered by s 5 of an Act nobody looked at."
+      }
+     ]
+    },
+    {
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "Four cards, then two problem questions that use this material hard. One asks you to choose between sources when a custom, an old English case and a modern one all bear on a matter; the other puts a Federal Court decision against a Privy Council decision and asks which binds. Both are more about knowing what a source is than about the substantive law."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "my-source-01",
+    "my-source-02",
+    "my-source-03",
+    "my-parl-01"
+   ],
+   "prepares": [
+    "pm-sources-01",
+    "pm-precedent-01"
+   ],
+   "reading": [
+    {
+     "bookId": "ashgar-malaysian-legal-system",
+     "where": "the chapters on the sources of Malaysian law"
+    },
+    {
+     "bookId": "faruqi-our-constitution",
+     "where": "on Art 4 supremacy, if you want the constitutional half properly"
+    }
+   ],
+   "source": "Federal Constitution Arts 4(1), 160(2); Civil Law Act 1956 ss 3, 6; Interpretation Acts 1948 and 1967.",
+   "lastVerified": "2026-09-07",
+   "verify": "Read s 3(1) of the Civil Law Act 1956 in a current reprint — the three reception dates and the local-circumstances proviso are what the answers turn on, and they should be quoted from the Act, not from this page.",
+   "quiz": [
+    {
+     "id": "qso1",
+     "q": "How does Article 160(2) define 'law'?",
+     "options": [
+      "Written law, the common law so far as in operation here, and custom having the force of law",
+      "Acts of Parliament only",
+      "Written law and subsidiary legislation",
+      "Statute and judicial decisions"
+     ],
+     "answer": 0,
+     "why": "The definition is the map of the sources.",
+     "source": "Federal Constitution Art 160(2)"
+    },
+    {
+     "id": "qso2",
+     "q": "Which statement about Parliament in Malaysia is wrong?",
+     "options": [
+      "Parliament is sovereign",
+      "Parliament has two houses",
+      "Parliament may legislate on Federal and Concurrent List matters",
+      "Parliament's legislation is subject to the Constitution"
+     ],
+     "answer": 0,
+     "why": "Supremacy belongs to the Constitution under Art 4(1); the slip is carried over from English texts."
+    },
+    {
+     "id": "qso3",
+     "q": "What does s 3(1) of the Civil Law Act 1956 do?",
+     "options": [
+      "Applies English common law and equity as administered on stated cut-off dates",
+      "Abolishes the common law in Malaysia",
+      "Applies all English law as it develops",
+      "Applies English law only to commercial disputes"
+     ],
+     "answer": 0,
+     "why": "7 April 1956 for West Malaysia, with different dates for Sabah and Sarawak — and subject to local circumstances.",
+     "source": "Civil Law Act 1956, s 3(1)"
+    },
+    {
+     "id": "qso4",
+     "q": "What is subsidiary legislation?",
+     "options": [
+      "Law made under authority delegated by an Act, valid only within the powers conferred",
+      "Law made by a State legislature",
+      "Law made by the courts",
+      "A draft Bill"
+     ],
+     "answer": 0,
+     "why": "Its validity is always a question about the parent Act's grant of power."
+    },
+    {
+     "id": "qso5",
+     "q": "What are the two houses of Parliament?",
+     "options": [
+      "Dewan Rakyat and Dewan Negara",
+      "Dewan Rakyat and Dewan Undangan Negeri",
+      "Dewan Negara and Majlis Raja-Raja",
+      "Dewan Rakyat and the Cabinet"
+     ],
+     "answer": 0,
+     "why": "The elected lower house and the appointed and State-elected upper house."
+    }
+   ]
+  },
+  {
+   "id": "l-two-systems",
+   "moduleId": "m01-malaysian-legal-system",
+   "title": "Two court systems in one country",
+   "minutes": 20,
+   "summary": "Article 121(1A), what it actually says, and why it is not the general ouster it is usually described as.",
+   "sections": [
+    {
+     "h": "The arrangement",
+     "body": [
+      {
+       "t": "p",
+       "text": "Malaysia runs two court hierarchies side by side. The civil courts you met in the last lesson are federal, created under the Constitution and the Courts of Judicature Act 1964. The Syariah courts are State courts, created by the enactments of each State, with their jurisdiction drawn from the Ninth Schedule."
+      },
+      {
+       "t": "rule",
+       "text": "The Syariah courts have jurisdiction only over persons professing the religion of Islam, and only over the matters listed in the Ninth Schedule, List II, Item 1.",
+       "source": "Federal Constitution, Ninth Schedule, List II, Item 1"
+      },
+      {
+       "t": "p",
+       "text": "Both halves of that sentence are limits, and both get forgotten. The jurisdiction is personal — it reaches Muslims — and it is subject-matter limited, covering Islamic personal and family law, certain offences against the precepts of Islam, and related matters. It is not a general jurisdiction over anything with a religious flavour."
+      }
+     ]
+    },
+    {
+     "h": "Article 121(1A)",
+     "body": [
+      {
+       "t": "p",
+       "text": "In 1988 the Constitution was amended to add clause (1A) to Article 121. It is short, and it is quoted wrongly more often than almost any other provision."
+      },
+      {
+       "t": "rule",
+       "text": "Article 121(1A): the civil High Courts “shall have no jurisdiction in respect of any matter within the jurisdiction of the Syariah courts.”",
+       "source": "Federal Constitution, Art 121(1A)"
+      },
+      {
+       "t": "p",
+       "text": "Read it slowly. It is a rule about overlap. It removes civil jurisdiction over matters that are within Syariah jurisdiction — and therefore does nothing at all about matters that are not. Since Syariah jurisdiction is limited by subject and by the religion of the parties, the reach of 121(1A) is limited in exactly the same way."
+      },
+      {
+       "t": "caution",
+       "text": "The common misstatement is “if Islam is involved, the civil court has no jurisdiction.” That is not what the clause says and not what it does. A dispute involving a Muslim party is not automatically within Syariah jurisdiction, and a non-Muslim cannot be brought before a Syariah court at all."
+      }
+     ]
+    },
+    {
+     "h": "What the clause could not do",
+     "body": [
+      {
+       "t": "p",
+       "text": "For roughly two decades after 1988, 121(1A) was read expansively, and civil courts declined jurisdiction in a series of cases where a party had no other forum available — including non-Muslims who could not, by definition, appear before the court they were being sent to."
+      },
+      {
+       "t": "p",
+       "text": "The Federal Court's decision in Indira Gandhi in 2018 is the turning point, and it rests on a proposition larger than the clause. Judicial review of administrative action is inherent in the civil courts and forms part of the basic structure of the Constitution. A constitutional amendment did not remove it, and 121(1A) did not purport to."
+      },
+      {
+       "t": "rule",
+       "text": "Indira Gandhi: Art 121(1A) does not oust the civil courts' inherent power of judicial review; and the Syariah courts' jurisdiction cannot extend to a person who does not profess the religion of Islam.",
+       "source": "Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC)"
+      },
+      {
+       "t": "p",
+       "text": "The practical consequence is that a non-Muslim spouse or parent is not left without a forum. The civil court decides whether an administrative act was lawful; it does not decide questions of Islamic law, and it is careful to say so."
+      }
+     ]
+    },
+    {
+     "h": "The conversion of minors",
+     "body": [
+      {
+       "t": "p",
+       "text": "The recurring fact pattern is a marriage under the Law Reform (Marriage and Divorce) Act 1976 in which one spouse converts to Islam and then converts the children without telling the other. It is worth knowing the constitutional answer."
+      },
+      {
+       "t": "rule",
+       "text": "Article 12(4): the religion of a person under the age of eighteen shall be decided by his parent or guardian — read with the Eleventh Schedule, under which the singular includes the plural, so the consent of both parents is required where both are living.",
+       "source": "Federal Constitution, Art 12(4); Eleventh Schedule"
+      },
+      {
+       "t": "p",
+       "text": "That reading is what Indira Gandhi settled. It is a small piece of statutory interpretation doing a very large amount of work, which is a good illustration of why the interpretation module later in the curriculum is not an optional extra."
+      }
+     ]
+    },
+    {
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "Two cards, and then the problem question, which puts a mother in the civil High Court against a jurisdictional objection built on 121(1A). The argument that wins is not about religion; it is about reading the clause as written and noticing that the Syariah court's own jurisdiction has limits."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "my-court-06",
+    "my-court-07"
+   ],
+   "prepares": [
+    "pm-121a-01"
+   ],
+   "reading": [
+    {
+     "bookId": "faruqi-our-constitution",
+     "where": "the treatment of Art 121(1A) and the two-court arrangement"
+    },
+    {
+     "bookId": "ashgar-malaysian-legal-system",
+     "where": "for the structure of the Syariah courts as State courts"
+    }
+   ],
+   "source": "Federal Constitution Arts 12(4), 121(1A), Ninth Schedule List II Item 1, Eleventh Schedule; Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC).",
+   "lastVerified": "2026-09-07",
+   "verify": "Indira Gandhi is the controlling authority and is cited for more than it decides. Read the Federal Court's reasoning in a report you can hold, and check whether any later Federal Court decision has qualified it before relying on the basic-structure passages.",
+   "quiz": [
+    {
+     "id": "qts1",
+     "q": "Over whom do the Syariah courts have jurisdiction?",
+     "options": [
+      "Persons professing the religion of Islam, on List II Item 1 matters",
+      "Anyone in a dispute involving Islam",
+      "All Malaysians in family matters",
+      "Anyone who consents"
+     ],
+     "answer": 0,
+     "why": "Both limbs are required: the person and the subject matter."
+    },
+    {
+     "id": "qts2",
+     "q": "What is the common misstatement of Art 121(1A)?",
+     "options": [
+      "'If Islam is involved, the civil court has no jurisdiction'",
+      "'The Syariah courts are subordinate to the High Court'",
+      "'Article 121(1A) was repealed'",
+      "'Only the Federal Court may interpret it'"
+     ],
+     "answer": 0,
+     "why": "The clause removes jurisdiction only where the matter is within Syariah jurisdiction in the first place."
+    },
+    {
+     "id": "qts3",
+     "q": "What did Indira Gandhi decide about Art 121(1A)?",
+     "options": [
+      "It does not oust the civil courts' inherent power of judicial review",
+      "It gave Syariah courts exclusive family jurisdiction",
+      "It repealed Art 12(4)",
+      "It made Syariah decisions appealable to the Federal Court"
+     ],
+     "answer": 0,
+     "why": "And that Syariah jurisdiction cannot extend to a person who does not profess the religion of Islam."
+    },
+    {
+     "id": "qts4",
+     "q": "Article 12(4) says the religion of a person under eighteen is decided by 'his parent or guardian'. Why does that matter?",
+     "options": [
+      "The Eleventh Schedule means the singular includes the plural",
+      "It excludes guardians appointed by a court",
+      "It applies only to Muslims",
+      "It applies only to citizens"
+     ],
+     "answer": 0,
+     "why": "That reading is what makes the consent of both parents the question in a unilateral conversion case."
+    }
+   ]
+  },
+  {
+   "id": "l-research",
+   "moduleId": "m02-legal-research",
+   "title": "Finding the law, and knowing when you have not",
+   "minutes": 20,
+   "summary": "Statute first, case second, and the citator problem that makes free Malaysian sources unsafe to stop at.",
+   "sections": [
+    {
+     "h": "The order of work",
+     "body": [
+      {
+       "t": "p",
+       "text": "Research has an order, and almost every bad answer comes from working out of it. Search engines return cases, so cases are what you find first; but a case is evidence of what the law is, and the Act is the law."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Find the governing statute. Read the section, not a summary of it.",
+        "Check that the statute is current: latest reprint, amending Acts, whether an amendment has actually commenced.",
+        "Look for subsidiary legislation made under it, where the operative detail often lives.",
+        "Then find the cases, and place each one in the hierarchy — which court, what year, ratio or obiter.",
+        "Then check whether those cases are still good law."
+       ]
+      },
+      {
+       "t": "example",
+       "text": "Asked whether a landlord may distrain for rent without going to court, a student finds a High Court decision saying yes and reports it. The governing instrument is the Distress Act 1951, and it sets out a route through an application to the court. Starting from the case made it possible to miss the Act entirely."
+      }
+     ]
+    },
+    {
+     "h": "Where to get the text, free",
+     "body": [
+      {
+       "t": "rule",
+       "text": "The official text of Malaysian Acts is published free by the Attorney General's Chambers on its portal. That is the source to use for statute.",
+       "source": "Attorney General's Chambers, Malaysia"
+      },
+      {
+       "t": "p",
+       "text": "Free case sources exist too, and they are genuinely useful for reading a judgment. What they are not is complete, and the gap is specific rather than general."
+      }
+     ]
+    },
+    {
+     "h": "The citator problem",
+     "body": [
+      {
+       "t": "p",
+       "text": "A citator is the tool that tells you a case's subsequent history: whether it was appealed, reversed, overruled, distinguished, followed, or merely doubted. Noting up a case means running it through one."
+      },
+      {
+       "t": "rule",
+       "text": "Noting up: checking a case's subsequent judicial treatment to establish whether it is still good law.",
+       "source": "Standard research practice"
+      },
+      {
+       "t": "rule",
+       "text": "You cannot confirm from free Malaysian sources alone that a case is still good law. There is no free citator. That check requires CLJ, LexisNexis CaseBase, or Westlaw Asia.",
+       "source": "Practice; the constraint is commercial, not legal"
+      },
+      {
+       "t": "caution",
+       "text": "The dangerous inference is the silent one. A free portal showing no overruling is not evidence that there was none — it is evidence that the portal does not track overruling. Absence of a warning is not a clean bill of health, and treating it as one is how a student advises on a case that was reversed on appeal fifteen years ago."
+      },
+      {
+       "t": "p",
+       "text": "This is not a reason to avoid free sources. It is a reason to know precisely what they cannot tell you, and to say so when you report. An answer that states its own limits is worth more than one that quietly has them."
+      }
+     ]
+    },
+    {
+     "h": "Reporting under a deadline",
+     "body": [
+      {
+       "t": "p",
+       "text": "You will regularly be asked a question with less time than a complete check requires. Refusing to answer is not the professional response; neither is answering as though the check had been done."
+      },
+      {
+       "t": "p",
+       "text": "The form that works: here is the governing provision and what it says; here is the case law I found and where each case sits in the hierarchy; here is what I have not been able to verify and what tool it would need; and here is what I would not advise on this basis. That is a bounded answer, and it is what the problem question in this module asks you to produce."
+      }
+     ]
+    },
+    {
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "Three cards, which are about where to look and what the limits are rather than about any rule of law. Then the problem question, whose answer is a method rather than a proposition — the only one in the set where a correct substantive conclusion earns almost nothing if the order of work is wrong."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "my-research-01",
+    "my-research-02",
+    "my-research-03"
+   ],
+   "prepares": [
+    "pm-research-01"
+   ],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "the chapters on finding and using the law"
+    },
+    {
+     "bookId": "mckinney-reading-like-a-lawyer",
+     "where": "on reading a judgment efficiently once you have found it"
+    }
+   ],
+   "source": "General research practice; Attorney General's Chambers portal for statute.",
+   "lastVerified": "2026-09-07",
+   "verify": "Check which commercial databases you actually have access to before planning around them, and confirm the current address of the AGC portal. The Distress Act 1951 example is illustrative — verify the section before treating the substantive point as settled.",
+   "quiz": [
+    {
+     "id": "qrs1",
+     "q": "What is the correct order of research?",
+     "options": [
+      "Statute, then check it is current, then subsidiary legislation, then cases, then note up",
+      "Cases first, then statute",
+      "Textbook, then statute, then cases",
+      "Subsidiary legislation, then statute"
+     ],
+     "answer": 0,
+     "why": "Read the section, not a summary of it, and confirm it is in force before you build on it."
+    },
+    {
+     "id": "qrs2",
+     "q": "Where is the official free text of Malaysian Acts published?",
+     "options": [
+      "The Attorney General's Chambers portal",
+      "CommonLII",
+      "The Malayan Law Journal",
+      "The courts' own portal"
+     ],
+     "answer": 0,
+     "why": "That is the source to use for statute."
+    },
+    {
+     "id": "qrs3",
+     "q": "What is 'noting up'?",
+     "options": [
+      "Checking a case's subsequent judicial treatment to see if it is still good law",
+      "Adding your own annotations to a report",
+      "Recording the citation in full",
+      "Summarising the ratio"
+     ],
+     "answer": 0,
+     "why": "And it is the step free Malaysian sources cannot complete for you."
+    },
+    {
+     "id": "qrs4",
+     "q": "A free portal shows no overruling of a case. What does that establish?",
+     "options": [
+      "Nothing — the portal does not track subsequent treatment",
+      "That the case is good law",
+      "That no appeal was brought",
+      "That the case was not appealed within time"
+     ],
+     "answer": 0,
+     "why": "The dangerous inference is the silent one."
+    }
+   ]
+  }
+ ]
 }

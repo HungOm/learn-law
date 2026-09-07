@@ -1,0 +1,300 @@
+{
+ "schemaVersion": 1,
+ "note": "Cards for the method, foundations, research, reasoning and interpretation lessons written in the second pass. One fact per card; every card is planted by exactly one lesson.",
+ "cardTypes": {
+  "term": "Defined term or Latin maxim. Irreducible pair.",
+  "rule": "A black-letter rule or a single element of one.",
+  "ratio": "The principle a case stands for.",
+  "structure": "Institutional or hierarchical fact.",
+  "source": "Where a rule comes from — statute, section, or authority.",
+  "trigger": "A fact cue that should make you think of a doctrine."
+ },
+ "cards": [
+  {
+   "id": "mm-brief-01",
+   "moduleId": "m-study-method",
+   "type": "term",
+   "front": "What makes a fact 'material' in a case brief?",
+   "back": "A fact the decision turned on — one whose change might change the result.",
+   "tags": [
+    "brief",
+    "ratio"
+   ],
+   "source": "Standard common law method"
+  },
+  {
+   "id": "mm-brief-02",
+   "moduleId": "m-study-method",
+   "type": "rule",
+   "front": "Why is a headnote never citable?",
+   "back": "It is written by an editor and is not part of the judgment.",
+   "tags": [
+    "brief",
+    "citation"
+   ],
+   "source": "Standard research practice"
+  },
+  {
+   "id": "mm-brief-03",
+   "moduleId": "m-study-method",
+   "type": "rule",
+   "front": "What single test separates ratio from obiter?",
+   "back": "Necessity: would the result stand without the proposition?",
+   "tags": [
+    "brief",
+    "ratio"
+   ],
+   "source": "Standard common law doctrine",
+   "note": "Length and emphasis are not evidence of ratio."
+  },
+  {
+   "id": "mm-brief-04",
+   "moduleId": "m-study-method",
+   "type": "trigger",
+   "front": "A judgment says the court 'heard no argument and expresses no view' on a point. What follows?",
+   "back": "That point is obiter and undecided; the case is no authority on it.",
+   "tags": [
+    "brief",
+    "obiter"
+   ],
+   "source": "Standard common law doctrine"
+  },
+  {
+   "id": "mm-exam-01",
+   "moduleId": "m-study-method",
+   "type": "rule",
+   "front": "What is the characteristic failure mode of an IRAC answer?",
+   "back": "A long Rule section and a thin Application — recall proved, reasoning not.",
+   "tags": [
+    "technique",
+    "irac"
+   ],
+   "source": "Standard examination technique"
+  },
+  {
+   "id": "mm-exam-02",
+   "moduleId": "m-study-method",
+   "type": "trigger",
+   "front": "A problem question gives an oddly specific date or sum. What does that signal?",
+   "back": "It does legal work. An unused specific is usually a missed issue.",
+   "tags": [
+    "technique",
+    "issue-spotting"
+   ],
+   "source": "Standard examination technique"
+  },
+  {
+   "id": "mm-exam-03",
+   "moduleId": "m-study-method",
+   "type": "rule",
+   "front": "How is writing time allocated across questions?",
+   "back": "In proportion to the marks. Overrunning costs more elsewhere than it earns here.",
+   "tags": [
+    "technique",
+    "timing"
+   ],
+   "source": "Standard examination technique"
+  },
+  {
+   "id": "mm-civcrim-01",
+   "moduleId": "m00-foundations",
+   "type": "rule",
+   "front": "What is the civil standard of proof?",
+   "back": "The balance of probabilities — more likely than not.",
+   "tags": [
+    "civil-criminal",
+    "proof"
+   ],
+   "source": "Standard common law"
+  },
+  {
+   "id": "mm-civcrim-02",
+   "moduleId": "m00-foundations",
+   "type": "source",
+   "front": "Who has the constitutional discretion to institute or discontinue a prosecution in Malaysia?",
+   "back": "The Public Prosecutor, under Article 145(3) of the Federal Constitution.",
+   "tags": [
+    "civil-criminal",
+    "prosecution"
+   ],
+   "source": "Federal Constitution Art 145(3)"
+  },
+  {
+   "id": "mm-civcrim-03",
+   "moduleId": "m00-foundations",
+   "type": "rule",
+   "front": "Does an acquittal prevent a civil claim on the same facts?",
+   "back": "No. The acquittal means the case was not proved beyond reasonable doubt; the civil standard is lower.",
+   "tags": [
+    "civil-criminal",
+    "proof"
+   ],
+   "source": "Standard common law"
+  },
+  {
+   "id": "mm-civcrim-04",
+   "moduleId": "m00-foundations",
+   "type": "term",
+   "front": "Which words belong to criminal proceedings and which to civil?",
+   "back": "Criminal: prosecution, accused, charge, conviction, sentence. Civil: plaintiff, defendant, claim, liability, judgment.",
+   "tags": [
+    "civil-criminal",
+    "vocabulary"
+   ],
+   "source": "Standard usage"
+  },
+  {
+   "id": "mm-cite-01",
+   "moduleId": "m02-legal-research",
+   "type": "rule",
+   "front": "What do square brackets around the year in a citation mean?",
+   "back": "The year is needed to locate the volume — [2010] 2 MLJ 1 is volume 2 of the 2010 MLJ.",
+   "tags": [
+    "citation"
+   ],
+   "source": "Standard citation practice"
+  },
+  {
+   "id": "mm-cite-02",
+   "moduleId": "m02-legal-research",
+   "type": "structure",
+   "front": "What do MLJ, CLJ and AMR stand for?",
+   "back": "Malayan Law Journal, Current Law Journal, All Malaysia Reports.",
+   "tags": [
+    "citation"
+   ],
+   "source": "Standard Malaysian report series"
+  },
+  {
+   "id": "mm-cite-03",
+   "moduleId": "m02-legal-research",
+   "type": "rule",
+   "front": "What can a citation never tell you?",
+   "back": "Whether the case is still good law. That needs a citator, and there is no free Malaysian one.",
+   "tags": [
+    "citation",
+    "citator"
+   ],
+   "source": "Standard research practice"
+  },
+  {
+   "id": "mm-cite-04",
+   "moduleId": "m02-legal-research",
+   "type": "rule",
+   "front": "What makes a note of a statutory provision complete?",
+   "back": "The section, plus which version of the text you read and the date you read it.",
+   "tags": [
+    "citation",
+    "statute"
+   ],
+   "source": "Standard research practice"
+  },
+  {
+   "id": "mm-analogy-01",
+   "moduleId": "m13-legal-reasoning",
+   "type": "rule",
+   "front": "What makes a difference between two cases a genuine distinction?",
+   "back": "The earlier court's reasoning must depend on the fact that differs.",
+   "tags": [
+    "precedent",
+    "distinguishing"
+   ],
+   "source": "Standard common law method"
+  },
+  {
+   "id": "mm-analogy-02",
+   "moduleId": "m13-legal-reasoning",
+   "type": "rule",
+   "front": "What may a High Court judge do with a Federal Court decision he thinks is wrong?",
+   "back": "Distinguish it if the facts allow; otherwise follow it. He cannot decline to follow it.",
+   "tags": [
+    "precedent",
+    "hierarchy"
+   ],
+   "source": "Standard doctrine of precedent"
+  },
+  {
+   "id": "mm-analogy-03",
+   "moduleId": "m13-legal-reasoning",
+   "type": "trigger",
+   "front": "Why are English contract authorities used with care in Malaysia?",
+   "back": "Contract is codified in the Contracts Act 1950, so the starting point is the Act's words.",
+   "tags": [
+    "precedent",
+    "codification"
+   ],
+   "source": "Contracts Act 1950"
+  },
+  {
+   "id": "mm-analogy-04",
+   "moduleId": "m13-legal-reasoning",
+   "type": "term",
+   "front": "What does it mean to 'confine a case to its facts'?",
+   "back": "To read the earlier decision as narrowly as its result allows — legitimate, but a signal of discomfort.",
+   "tags": [
+    "precedent"
+   ],
+   "source": "Standard common law method"
+  },
+  {
+   "id": "mm-interp-01",
+   "moduleId": "m14-statutory-interpretation",
+   "type": "source",
+   "front": "Which provision directs a purposive construction of Malaysian statutes?",
+   "back": "Section 17A of the Interpretation Acts 1948 and 1967.",
+   "tags": [
+    "interpretation",
+    "purposive"
+   ],
+   "source": "Interpretation Acts 1948 and 1967, s 17A"
+  },
+  {
+   "id": "mm-interp-02",
+   "moduleId": "m14-statutory-interpretation",
+   "type": "rule",
+   "front": "When does the purposive approach become relevant?",
+   "back": "Once the words are capable of more than one reading. It chooses between available constructions; it does not create one.",
+   "tags": [
+    "interpretation",
+    "purposive"
+   ],
+   "source": "Interpretation Acts 1948 and 1967, s 17A"
+  },
+  {
+   "id": "mm-interp-03",
+   "moduleId": "m14-statutory-interpretation",
+   "type": "term",
+   "front": "Ejusdem generis — what does it do?",
+   "back": "General words following a list of specifics are read as confined to the same class.",
+   "tags": [
+    "interpretation",
+    "canons"
+   ],
+   "source": "Standard canon of construction"
+  },
+  {
+   "id": "mm-interp-04",
+   "moduleId": "m14-statutory-interpretation",
+   "type": "rule",
+   "front": "What weight does a marginal note carry?",
+   "back": "It indicates arrangement. It is not enacted text and cannot control a clear provision.",
+   "tags": [
+    "interpretation",
+    "internal-aids"
+   ],
+   "source": "Standard canon of construction"
+  },
+  {
+   "id": "mm-interp-05",
+   "moduleId": "m14-statutory-interpretation",
+   "type": "rule",
+   "front": "How is an ouster clause construed?",
+   "back": "Narrowly. Courts start from a presumption against the ouster of their jurisdiction and require clear words.",
+   "tags": [
+    "interpretation",
+    "presumptions"
+   ],
+   "source": "Standard presumption of construction"
+  }
+ ]
+}

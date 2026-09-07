@@ -2,7 +2,7 @@
 // GitHub Pages with no CDN. Version pinned at build time — see README.
 
 import { fsrs, generatorParameters, createEmptyCard, Rating, State }
-  from '../vendor/ts-fsrs.mjs';
+  from '../../vendor/ts-fsrs.mjs';
 import { cardState, reviewLog, meta } from './db.js';
 
 // 0.90 is a sensible default, not a universal optimum. Raising it means more
@@ -176,3 +176,25 @@ export function humanInterval(due, from = new Date()) {
 }
 
 export { State };
+
+/**
+ * Every module's counts in one pass. The per-module page can afford a query
+ * each; the home page cannot — sixteen modules meant sixteen full scans of the
+ * card store on every paint.
+ */
+export async function countsByModule() {
+  const now = new Date();
+  const all = await cardState.all();
+  const out = {};
+  for (const c of all) {
+    const m = (out[c.moduleId] ||= { total: 0, due: 0, fresh: 0, learning: 0, review: 0 });
+    m.total++;
+    if (c.state === State.New) m.fresh++;
+    else if (new Date(c.due) <= now) m.due++;
+    if (c.state === State.Learning || c.state === State.Relearning) m.learning++;
+    if (c.state === State.Review) m.review++;
+  }
+  return out;
+}
+
+export const EMPTY_COUNTS = { total: 0, due: 0, fresh: 0, learning: 0, review: 0 };
