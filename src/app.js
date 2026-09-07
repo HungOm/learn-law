@@ -411,14 +411,14 @@ async function lessonView(_params, base) {
             ${(sec.body || []).map(block).join('')}
           </section>`).join('')}
 
+        ${cards.length || prepares.length ? `
         <div class="handoff">
           <h3>What this lesson hands off to</h3>
           ${cards.length ? `
             <p class="small">It plants ${cards.length} card${cards.length === 1 ? '' : 's'}, which the
               scheduler will start showing you. They are already in the deck — reading this is what
               makes them answerable rather than guessable.</p>
-            <ul class="plantlist">${cards.map(c => `<li>${esc(c.front)}</li>`).join('')}</ul>`
-          : '<p class="small">No cards are attached to this lesson yet.</p>'}
+            <ul class="plantlist">${cards.map(c => `<li>${esc(c.front)}</li>`).join('')}</ul>` : ''}
 
           ${prepares.length ? `
             <p class="small" style="margin-top:1.25rem">It prepares you for:</p>
@@ -431,7 +431,7 @@ async function lessonView(_params, base) {
                   <span class="arr-state">problem</span>
                 </a>`).join('')}
             </div>` : ''}
-        </div>
+        </div>` : ''}
 
         ${(l.reading || []).length ? `
           <h3>Read alongside</h3>

@@ -120,6 +120,10 @@ replacement for it, and it says so. The only state one carries is whether you
 have marked it read; there is no score and no schedule, because re-reading is
 cheap and a spacing algorithm applied to prose would be inventing a measurement.
 
+Every module has at least one. Where a module also has cards or problems the
+lesson hands off to them; where it does not, the lesson ends by pointing at the
+reading, which is the honest thing for it to do.
+
 Cards and problem questions are scored by different machinery on purpose.
 
 A card has one right answer and a recall event, which is what FSRS fits a curve

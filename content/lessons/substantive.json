@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "note": "Lessons for the substantive modules. Exposition of the rules, with the authorities named inline and a `verify` line on every lesson. These modules have no cards yet, so each lesson hands off directly to its problem question.",
+  "note": "Lessons for the substantive modules. Exposition of the rules, with the authorities named inline and a `verify` line on every lesson. Where a module has problem questions the lesson hands off to them; where it has none the lesson stands alone and says so, and the reading list is the route onward.",
   "lessons": [
     {
       "id": "l-liberties",
@@ -645,6 +645,1232 @@
       "source": "Contracts Act 1950 (Act 136) ss 2(d), 26 and Explanation 2; Kepong Prospecting Ltd v Schmidt [1968] 1 MLJ 170 (PC).",
       "lastVerified": "2026-09-07",
       "verify": "Read s 26 and its exceptions in a current reprint of Act 136 — the registration requirement in (a) and the exact wording of (c) are what answers turn on. Read Kepong Prospecting itself rather than a summary, since it is cited for both consideration and privity and the two are easy to run together."
+    },
+    {
+      "id": "l-criminal-procedure",
+      "moduleId": "m05-criminal-procedure",
+      "title": "From arrest to charge",
+      "minutes": 30,
+      "summary": "How the Criminal Procedure Code classifies offences, and what that classification decides about arrest, remand and bail.",
+      "sections": [
+        {
+          "h": "Classification decides almost everything",
+          "body": [
+            {
+              "t": "p",
+              "text": "Criminal procedure looks like a mass of detail until you notice that a small number of classifications in the First Schedule to the Criminal Procedure Code drive most of it. Whether the police may arrest without a warrant, whether they may investigate without an order, and whether bail is available are all answered by looking the offence up rather than by reasoning about it."
+            },
+            {
+              "t": "rule",
+              "text": "The First Schedule to the CPC classifies each offence as seizable or non-seizable, and as bailable, non-bailable or unbailable. Look the offence up before reasoning about the procedure.",
+              "source": "Criminal Procedure Code (Act 593), First Schedule"
+            },
+            {
+              "t": "caution",
+              "text": "Malaysia says seizable where England says arrestable. Using the English vocabulary signals you are working from an English textbook, and the underlying classification is not identical, so it is not merely a naming difference."
+            }
+          ]
+        },
+        {
+          "h": "Arrest, and the constitutional floor",
+          "body": [
+            {
+              "t": "p",
+              "text": "For a seizable offence a police officer may arrest without a warrant. For a non-seizable offence the general position is that a warrant or an order is required. But the powers sit under constitutional guarantees that apply whatever the classification, and those are where the arguments usually are."
+            },
+            {
+              "t": "rule",
+              "text": "Article 5(3): a person arrested shall be informed as soon as may be of the grounds of his arrest and shall be allowed to consult and be defended by a legal practitioner of his choice.",
+              "source": "Federal Constitution, Art 5(3)"
+            },
+            {
+              "t": "rule",
+              "text": "Article 5(4): a person arrested and not released shall without unreasonable delay, and in any case within twenty-four hours, be produced before a magistrate and shall not be further detained without the magistrate's authority.",
+              "source": "Federal Constitution, Art 5(4)"
+            },
+            {
+              "t": "p",
+              "text": "The twenty-four hours excludes the time necessary for the journey to the magistrate. Further detention requires a remand order, and the magistrate is deciding whether continued detention is justified for the investigation rather than rubber-stamping the request."
+            },
+            {
+              "t": "caution",
+              "text": "The right to counsel under Art 5(3) is not always given effect at the moment of arrest, and the case law on when access must be allowed is worth reading in full rather than summarised. This is a live and contested area."
+            }
+          ]
+        },
+        {
+          "h": "Bail",
+          "body": [
+            {
+              "t": "p",
+              "text": "Bail in Malaysia is largely a matter of classification rather than of general judicial discretion, which is a real difference from the English approach a common law textbook will describe."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Bailable — bail is available as of right.",
+                "Non-bailable — bail is at the court's discretion.",
+                "Unbailable — bail is not available at all."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "So the first question is never whether bail should be granted. It is which of the three categories the offence falls into, and that is answered from the Schedule."
+            },
+            {
+              "t": "caution",
+              "text": "Special legislation frequently displaces the ordinary rules, and security and drugs legislation in particular has its own bail provisions. Check whether the charge is under the Penal Code or under a specific Act before applying the general position."
+            }
+          ]
+        },
+        {
+          "h": "Investigation and the charge",
+          "body": [
+            {
+              "t": "p",
+              "text": "Investigation into a seizable offence may proceed without an order; a non-seizable offence generally requires one. The investigation produces the investigation papers, which go to the Deputy Public Prosecutor, and the decision to prosecute is the Public Prosecutor's."
+            },
+            {
+              "t": "rule",
+              "text": "The charge must state the offence, and enough particulars of time, place, and the person or thing concerned, to give the accused notice of what he is charged with.",
+              "source": "Criminal Procedure Code (Act 593)"
+            },
+            {
+              "t": "p",
+              "text": "A defective charge is not automatically fatal — the question is usually whether the accused was prejudiced or misled — but the drafting rules exist because a person cannot answer a case they have not been told."
+            }
+          ]
+        },
+        {
+          "h": "The trial, and the standard at the close of the prosecution case",
+          "body": [
+            {
+              "t": "p",
+              "text": "At the close of the prosecution case the court asks whether a prima facie case has been made out. If it has, the accused is called upon to enter his defence; if not, he is acquitted."
+            },
+            {
+              "t": "rule",
+              "text": "A prima facie case requires the court to undertake a maximum evaluation of the prosecution evidence — to test its credibility — and to ask whether, if unrebutted, it would warrant a conviction.",
+              "source": "Balachandran v PP [2005] 2 MLJ 301 (FC)"
+            },
+            {
+              "t": "p",
+              "text": "That standard matters because a minimum evaluation, which merely asks whether there is some evidence on each element, would put an accused to his defence on evidence no reasonable court could convict on. The point is regularly argued and worth understanding rather than reciting."
+            },
+            {
+              "t": "p",
+              "text": "If the defence is called, the accused may give sworn evidence, make an unsworn statement from the dock, or remain silent, and the consequences of each differ. Conviction still requires proof beyond reasonable doubt on the whole of the evidence."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet. The most useful thing you can do is read the First Schedule itself — not a summary of it — and follow one offence through: its classification, the arrest power it gives, and the bail position that follows. The structure becomes obvious once you have done it once."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "janab-criminal-procedure",
+          "where": "the chapters on arrest, remand, bail and the trial process"
+        }
+      ],
+      "source": "Criminal Procedure Code (Act 593); Federal Constitution Arts 5(3), 5(4); Balachandran v PP [2005] 2 MLJ 301 (FC).",
+      "lastVerified": "2026-09-07",
+      "verify": "Act 593 was amended by Act 846 in 2023 — read the current reprint rather than an older text, and do not quote section numbers for arrest, remand or bail from this page. Confirm the Balachandran citation and check whether the prima facie standard has been restated more recently."
+    },
+    {
+      "id": "l-negligence",
+      "moduleId": "m07-tort",
+      "title": "Negligence, in four questions",
+      "minutes": 30,
+      "summary": "Duty, breach, causation and remoteness — and the two places where Malaysian law has taken its own line.",
+      "sections": [
+        {
+          "h": "The structure",
+          "body": [
+            {
+              "t": "p",
+              "text": "Almost every negligence problem is answered by four questions in order, and answering them out of order is the commonest way to write a poor answer. Establish each before moving to the next, and say which one the case actually turns on."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Duty — did the defendant owe this claimant a duty of care?",
+                "Breach — did the defendant fall below the standard required?",
+                "Causation — did the breach cause the damage, in fact and in law?",
+                "Remoteness — was the damage of a kind that was reasonably foreseeable?"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Damage is required. Negligence is not actionable per se: no loss, no claim, however careless the conduct."
+            }
+          ]
+        },
+        {
+          "h": "Duty",
+          "body": [
+            {
+              "t": "p",
+              "text": "Where the situation is an established one — road users, doctor and patient, employer and employee — a duty exists and the point should be dealt with in a sentence. The three-stage analysis is for novel situations, and using it on a car accident wastes the time you needed for causation."
+            },
+            {
+              "t": "rule",
+              "text": "The three-stage test: reasonable foreseeability of harm, a relationship of proximity between the parties, and whether it is fair, just and reasonable to impose a duty.",
+              "source": "Caparo, adopted in Malaysia in Majlis Perbandaran Ampang Jaya v Steven Phoa Cheng Loon [2006] 2 MLJ 389 (FC)"
+            },
+            {
+              "t": "p",
+              "text": "Ampang Jaya is the Malaysian authority to cite, and it is worth reading rather than citing second-hand, because it also engages the difficult question of a public authority's liability. Lok Kok Beng later revisited the approach and is the other case to know."
+            },
+            {
+              "t": "caution",
+              "text": "Pure economic loss and psychiatric injury have their own restrictive rules and are not simply harder instances of ordinary duty. Identify them as separate categories rather than running the three-stage test and hoping."
+            }
+          ]
+        },
+        {
+          "h": "Breach",
+          "body": [
+            {
+              "t": "p",
+              "text": "The standard is objective: what a reasonable person would have done in the defendant's position. The defendant's own inexperience does not lower it, and the standard for a professional is that of the reasonably competent member of that profession."
+            },
+            {
+              "t": "p",
+              "text": "Whether the standard was met is judged by weighing the likelihood of harm, the seriousness of the harm if it occurs, the cost and practicability of precautions, and the social utility of the activity. Those factors are how you argue breach rather than assert it."
+            },
+            {
+              "t": "rule",
+              "text": "On a doctor's duty to advise of risks, Malaysia has departed from the Bolam test and adopted the approach in Rogers v Whitaker: the question is what a reasonable patient would want to know, not what a responsible body of medical opinion would disclose.",
+              "source": "Foo Fio Na v Dr Soo Fook Mun [2007] 1 MLJ 593 (FC)"
+            },
+            {
+              "t": "caution",
+              "text": "This is the first of the two places where an English textbook will mislead you. Foo Fio Na is a genuine Malaysian departure and a marker will expect you to know it. Note carefully what it decided about — advice and disclosure of risk — and be careful before extending it to diagnosis and treatment."
+            }
+          ]
+        },
+        {
+          "h": "Causation",
+          "body": [
+            {
+              "t": "p",
+              "text": "Factual causation is the but-for test: would the damage have occurred but for the breach? If it would have happened anyway, the breach caused nothing, however negligent it was."
+            },
+            {
+              "t": "p",
+              "text": "Legal causation asks whether anything broke the chain — a novus actus interveniens, whether an act of the claimant, a third party, or a natural event. The question is whether the intervening act was so unreasonable or unforeseeable that it displaces the defendant's responsibility."
+            },
+            {
+              "t": "example",
+              "text": "A doctor negligently fails to examine a patient who was already dying of a poison for which there was no treatment. The failure is a breach. It caused nothing, because the patient would have died regardless — the claim fails at causation, not at breach."
+            }
+          ]
+        },
+        {
+          "h": "Remoteness, and reducing the damages",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Damage is too remote unless it is of a kind that was reasonably foreseeable. The precise manner of its occurrence and its extent need not be.",
+              "source": "The Wagon Mound; standard common law"
+            },
+            {
+              "t": "p",
+              "text": "Two doctrines then reduce or defeat what is recovered. Contributory negligence apportions the damages where the claimant's own carelessness contributed to the harm; it is a reduction rather than a defence, and in Malaysia it is statutory."
+            },
+            {
+              "t": "rule",
+              "text": "Contributory negligence: damages are reduced to such extent as the court thinks just and equitable having regard to the claimant's share in the responsibility.",
+              "source": "Civil Law Act 1956, s 12"
+            },
+            {
+              "t": "p",
+              "text": "Volenti non fit injuria — voluntary assumption of risk — is a complete defence and is correspondingly rare, requiring genuine knowledge of the risk and genuine consent to it."
+            },
+            {
+              "t": "caution",
+              "text": "Watch the limitation period. A tort claim is generally barred six years after the cause of action accrued, and in negligence the cause of action accrues when damage occurs rather than when the careless act was committed."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet. When you read, read Ampang Jaya and Foo Fio Na in full — between them they contain both of the places where Malaysian negligence has taken its own line, and both are commonly examined precisely because an English answer gets them wrong."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "norchaya-torts",
+          "where": "the chapters on negligence: duty, breach, causation and defences"
+        }
+      ],
+      "source": "Majlis Perbandaran Ampang Jaya v Steven Phoa Cheng Loon [2006] 2 MLJ 389 (FC); Lok Kok Beng v Loh Chiak Eong [2015] 4 MLJ 734 (FC); Foo Fio Na v Dr Soo Fook Mun [2007] 1 MLJ 593 (FC); Civil Law Act 1956 s 12; Limitation Act 1953.",
+      "lastVerified": "2026-09-07",
+      "verify": "Check all three case citations in a report you can hold. The scope of Foo Fio Na — whether it extends beyond advice to diagnosis and treatment — is the point most likely to have moved, so check for later Federal Court authority before relying on the boundary as stated."
+    },
+    {
+      "id": "l-torrens",
+      "moduleId": "m08-property",
+      "title": "Title by registration, and the limits of indefeasibility",
+      "minutes": 30,
+      "summary": "The Torrens system, section 340, and the case that had to be overruled to make it work as intended.",
+      "sections": [
+        {
+          "h": "Registration is the title",
+          "body": [
+            {
+              "t": "p",
+              "text": "Malaysian land law is a Torrens system, and the single idea that organises it is that the register is not evidence of title — it is the title. A person becomes the proprietor by being registered, not by having a good chain of documents that registration then records."
+            },
+            {
+              "t": "rule",
+              "text": "Title by registration, not registration of title. The register is conclusive, and a purchaser deals with the register rather than investigating the history behind it.",
+              "source": "National Land Code; the Torrens principle"
+            },
+            {
+              "t": "p",
+              "text": "The point of the system is to make conveyancing safe and cheap by removing the need to trace a chain of deeds back through decades. Everything difficult in the subject comes from the cases where that promise collides with a genuine victim of fraud or forgery."
+            },
+            {
+              "t": "caution",
+              "text": "Section 6 of the Civil Law Act 1956 excludes English land law, and this is why. Importing English doctrines of equitable interests and notice would cut across the register's conclusiveness, which is the whole mechanism."
+            }
+          ]
+        },
+        {
+          "h": "Section 340",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 340(1): the title or interest of any person for the time being registered as proprietor, or in whose name any lease, charge or easement is registered, is indefeasible.",
+              "source": "National Land Code, s 340(1)"
+            },
+            {
+              "t": "p",
+              "text": "That is the promise. Subsection (2) is the set of exceptions, and it is short and exhaustive — indefeasibility is defeated where the registration was obtained by fraud or misrepresentation to which the proprietor was a party or privy, or by forgery or by an insufficient or void instrument, or where the title was unlawfully acquired in purported exercise of a power conferred by written law."
+            },
+            {
+              "t": "p",
+              "text": "Then comes the proviso, which is the provision the whole subject turns on. Where a title is liable to be set aside under subsection (2), it is nevertheless protected in the hands of a purchaser in good faith and for valuable consideration."
+            },
+            {
+              "t": "rule",
+              "text": "Deferred indefeasibility: the immediate registered proprietor whose registration was procured by fraud or forgery takes a defeasible title. A subsequent bona fide purchaser for value takes an indefeasible one.",
+              "source": "National Land Code, s 340(2) and the proviso to s 340(3)"
+            },
+            {
+              "t": "p",
+              "text": "So the forger's transferee can be unwound; the innocent person who then buys from that transferee cannot. The system draws the line one transaction later than a naive reading suggests, and the reason is that the innocent purchaser is the person the register exists to protect."
+            }
+          ]
+        },
+        {
+          "h": "The case that had to be overruled",
+          "body": [
+            {
+              "t": "p",
+              "text": "This is the best example in Malaysian law of the precedent doctrine doing real work, and it is worth knowing as a piece of legal history as well as for the rule."
+            },
+            {
+              "t": "p",
+              "text": "In Adorna Properties the Federal Court read s 340 as conferring immediate indefeasibility — so that even the immediate transferee under a forged instrument obtained a good title. The consequence was that a registered proprietor could lose their land to a forger's purchaser with no remedy, which inverted the protective purpose of the exceptions."
+            },
+            {
+              "t": "rule",
+              "text": "Tan Ying Hong overruled Adorna Properties and restored deferred indefeasibility: a registration obtained by forgery is defeasible in the hands of the immediate transferee.",
+              "source": "Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC)"
+            },
+            {
+              "t": "caution",
+              "text": "Textbooks and judgments predating 2010 may state the Adorna position. Check the date of anything you read on indefeasibility, and note that the intervening years produced decisions applying a rule that is no longer good law."
+            }
+          ]
+        },
+        {
+          "h": "Dealings and interests",
+          "body": [
+            {
+              "t": "p",
+              "text": "The Code provides a closed set of registrable dealings — transfer, lease, charge, easement — and the vocabulary is not the English one. Land is charged, not mortgaged, and the chargee's remedies are statutory: an order for sale, or possession, on the terms the Code lays down."
+            },
+            {
+              "t": "p",
+              "text": "A caveat is the mechanism for protecting an unregistered claim. It does not create an interest; it prevents dealings from being registered while it stands, which buys the caveator time to establish the claim in court. Private, registrar's, lien-holder's and trust caveats each have their own conditions."
+            },
+            {
+              "t": "caution",
+              "text": "A caveat entered without a caveatable interest exposes the caveator to compensation. It is not a free way to obstruct a transaction."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet. Read s 340 itself, slowly, including the proviso — it is a short provision that repays being read five times — and then read Tan Ying Hong to see what the Federal Court thought had gone wrong."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "teo-khaw-land-law",
+          "where": "the chapters on indefeasibility and on dealings"
+        },
+        {
+          "bookId": "salleh-buang-torrens",
+          "where": "for the Torrens principles and the system's history"
+        }
+      ],
+      "source": "National Land Code s 340; Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC); Civil Law Act 1956 s 6.",
+      "lastVerified": "2026-09-07",
+      "verify": "The National Land Code was revised and its Act number should be confirmed before citing — the reading list itself flags this. Read s 340 in the current reprint, and confirm the Tan Ying Hong citation. Anything written before 2010 on indefeasibility must be read with Adorna Properties in mind."
+    },
+    {
+      "id": "l-company",
+      "moduleId": "m09-company",
+      "title": "The company as a person, and the duties that follow",
+      "minutes": 30,
+      "summary": "Separate legal personality, when the courts look behind it, and what the Companies Act 2016 requires of directors.",
+      "sections": [
+        {
+          "h": "One idea, and everything else follows",
+          "body": [
+            {
+              "t": "p",
+              "text": "Company law rests on a single proposition that is stranger than it looks: a company incorporated under the Act is a legal person distinct from the people who own and run it. It can own property, contract, sue and be sued in its own name, and it continues to exist as members come and go."
+            },
+            {
+              "t": "rule",
+              "text": "A company is a body corporate with legal personality separate from its members. Its members are not, by reason only of membership, liable for its obligations.",
+              "source": "Salomon v A Salomon & Co Ltd [1897] AC 22; Companies Act 2016"
+            },
+            {
+              "t": "p",
+              "text": "Salomon is the case, and it matters because the House of Lords upheld the separateness even where one man owned almost all the shares, ran the business, and was also its secured creditor. The company was not his agent and not a sham; it was a different person."
+            },
+            {
+              "t": "p",
+              "text": "Limited liability is a consequence rather than the principle. Because the company owes the debts, the member's exposure is limited to what remains unpaid on their shares."
+            }
+          ]
+        },
+        {
+          "h": "Lifting the veil",
+          "body": [
+            {
+              "t": "p",
+              "text": "The courts will occasionally look behind the separate personality and treat the company and its controllers as one. The circumstances are narrower than students expect, and asserting that the veil should be lifted because a result seems unfair is not an argument."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Statute — where an Act expressly imposes liability on directors or members, which is by far the commonest route.",
+                "Fraud or evasion — where the corporate form is used to evade an existing legal obligation or to conceal wrongdoing.",
+                "Agency — where the company is genuinely acting as agent for its controller on ordinary agency principles, rather than merely being controlled by them."
+              ]
+            },
+            {
+              "t": "caution",
+              "text": "Control alone is never enough. A wholly owned subsidiary is a separate person from its parent, and a one-member company is a separate person from its member — that is precisely what Salomon decided. An answer that lifts the veil because the defendant owned all the shares has not identified a ground."
+            }
+          ]
+        },
+        {
+          "h": "What the 2016 Act changed",
+          "body": [
+            {
+              "t": "p",
+              "text": "The Companies Act 2016 replaced the 1965 Act and made structural changes that older textbooks will not reflect. Three are worth knowing before you read anything on the subject."
+            },
+            {
+              "t": "list",
+              "items": [
+                "The memorandum and articles of association were replaced by a single optional constitution. A company may have none, in which case the Act supplies its internal rules.",
+                "A private company may be formed and run with a single member and a single director.",
+                "The authorised capital concept and the par value of shares were abolished — shares are issued without nominal value."
+              ]
+            },
+            {
+              "t": "caution",
+              "text": "This is the module where an out-of-date text does the most damage. If a book refers to the memorandum and articles or to authorised capital as current law, it predates 2016 and should be treated as history."
+            }
+          ]
+        },
+        {
+          "h": "Directors' duties",
+          "body": [
+            {
+              "t": "p",
+              "text": "The Act states the core duties, and they sit alongside rather than replacing the equitable and common law duties that developed before them."
+            },
+            {
+              "t": "rule",
+              "text": "A director shall at all times exercise his powers in accordance with the Act, for a proper purpose and in good faith in the best interest of the company.",
+              "source": "Companies Act 2016, s 213(1)"
+            },
+            {
+              "t": "rule",
+              "text": "A director shall exercise reasonable care, skill and diligence with the knowledge, skill and experience which may reasonably be expected of a director having the same responsibilities, and any additional knowledge, skill and experience which the director in fact has.",
+              "source": "Companies Act 2016, s 213(2)"
+            },
+            {
+              "t": "p",
+              "text": "Notice the shape of the second duty: an objective floor set by the office, raised for a particular director by whatever additional expertise they actually possess. An accountant on the board is held to more than the minimum, and a director who takes no interest in the company's affairs is not held to less."
+            },
+            {
+              "t": "p",
+              "text": "Two further points recur. The duty in s 213(1) is owed to the company, not to individual shareholders and not to creditors in the ordinary case — which is what makes the question of who may sue on a breach a subject of its own. And a director must not use their position or the company's property, information or opportunity to gain a benefit for themselves or cause detriment to the company."
+            },
+            {
+              "t": "example",
+              "text": "A director learns, in board discussions, of a contract the company is pursuing, and takes it personally. That the company might have failed to win it is not usually an answer: the objection is to the use of the position and the information, not to the loss."
+            }
+          ]
+        },
+        {
+          "h": "Who may complain",
+          "body": [
+            {
+              "t": "p",
+              "text": "Because the duty is owed to the company, the company is the proper claimant when it is breached. That is the source of the rule that an individual member cannot ordinarily sue for a wrong done to the company, and of the statutory routes that exist around it — the derivative action brought with leave on the company's behalf, and the oppression remedy where the affairs of the company are conducted in a manner oppressive to a member."
+            },
+            {
+              "t": "caution",
+              "text": "Keep the two apart. A derivative action vindicates the company's right; an oppression claim vindicates the member's own. Confusing them is a standard way to answer the wrong question."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet, and the reading list has no primary text — the Act itself, with an annotation, is the route in. Read ss 213 and 218 directly; they are short, and most of the duty material in any textbook is commentary on them."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "companies-act-annotation",
+          "where": "the annotations to the directors' duties provisions, read alongside the sections themselves"
+        }
+      ],
+      "source": "Companies Act 2016 (Act 777), ss 213, 218; Salomon v A Salomon & Co Ltd [1897] AC 22.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read ss 213 and 218 in a current reprint of Act 777 and confirm the section numbers for the derivative action and the oppression remedy before citing them — they are not quoted here for that reason. Treat any text predating 2016 as superseded."
+    },
+    {
+      "id": "l-evidence",
+      "moduleId": "m10-evidence",
+      "title": "Relevancy is the gate",
+      "minutes": 30,
+      "summary": "The Evidence Act is a closed list of what may be proved, which is a different system from the English law of admissibility.",
+      "sections": [
+        {
+          "h": "Why an English textbook will mislead you here",
+          "body": [
+            {
+              "t": "p",
+              "text": "The Evidence Act 1950 descends from the Indian Evidence Act of 1872, drafted by Stephen, and it is a code. It does not restate the English law of evidence and it is not organised the way English evidence is organised."
+            },
+            {
+              "t": "p",
+              "text": "The English approach asks whether a piece of evidence is admissible, starting from a general principle that relevant evidence is admissible unless an exclusionary rule bites. The Act inverts this. It sets out, in Part I, the categories of fact that are relevant, and nothing outside those categories may be proved at all."
+            },
+            {
+              "t": "rule",
+              "text": "Evidence may be given of facts in issue and of such other facts as are declared relevant by the Act, and of no others.",
+              "source": "Evidence Act 1950 (Act 56), Part I"
+            },
+            {
+              "t": "caution",
+              "text": "So the question is never simply “is this relevant?” in the ordinary sense. It is “which section makes this relevant?” If you cannot name one, the evidence does not come in — and an answer that argues relevance without a section has missed the structure of the whole Act."
+            }
+          ]
+        },
+        {
+          "h": "The relevancy sections",
+          "body": [
+            {
+              "t": "p",
+              "text": "Part I runs through the categories. You do not need them all at once, but you should know the shape and be able to find the right one."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Facts forming part of the same transaction — the res gestae provision.",
+                "Facts which are the occasion, cause or effect of facts in issue.",
+                "Motive, preparation, and previous or subsequent conduct.",
+                "Facts necessary to explain or introduce a relevant fact.",
+                "Admissions, and confessions as a special class of admission.",
+                "Statements by persons who cannot be called as witnesses — the principal exceptions to the exclusion of hearsay.",
+                "Opinions of experts, on points of science, art, foreign law, handwriting or fingerprints.",
+                "Character, which is relevant in narrow and different circumstances in civil and criminal cases."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Hearsay is worth a note because the Act handles it differently from English law. There is no single hearsay rule with a list of exceptions; rather, statements by absent persons are simply not made relevant except where a section makes them so — which produces similar results by a different route."
+            }
+          ]
+        },
+        {
+          "h": "Burden of proof",
+          "body": [
+            {
+              "t": "p",
+              "text": "Part II deals with proof, and the burden provisions are the ones you will use most often."
+            },
+            {
+              "t": "rule",
+              "text": "Whoever desires any court to give judgment as to any legal right or liability, dependent on the existence of facts which he asserts, must prove that those facts exist.",
+              "source": "Evidence Act 1950, s 101"
+            },
+            {
+              "t": "rule",
+              "text": "The burden of proof in a suit or proceeding lies on that person who would fail if no evidence at all were given on either side.",
+              "source": "Evidence Act 1950, s 102"
+            },
+            {
+              "t": "p",
+              "text": "Section 103 puts the burden as to any particular fact on the person who wishes the court to believe in its existence, and s 106 places on a person the burden of proving a fact especially within their own knowledge. That last one recurs constantly in criminal cases and is regularly over-argued by prosecutors."
+            },
+            {
+              "t": "caution",
+              "text": "Distinguish the legal burden, which does not shift, from the evidential burden, which does. Saying that the burden shifts to the accused, without saying which burden, is the standard error and it matters — the legal burden in a criminal case stays with the prosecution throughout."
+            }
+          ]
+        },
+        {
+          "h": "Presumptions, and the adverse inference",
+          "body": [
+            {
+              "t": "p",
+              "text": "The Act distinguishes facts the court shall presume from facts it may presume. The discretionary presumptions in s 114 are the ones most often argued, and one illustration has a life of its own."
+            },
+            {
+              "t": "rule",
+              "text": "Section 114 illustration (g): the court may presume that evidence which could be and is not produced would, if produced, be unfavourable to the person who withholds it.",
+              "source": "Evidence Act 1950, s 114(g)"
+            },
+            {
+              "t": "p",
+              "text": "It is invoked whenever a party fails to call an available and material witness. It is a permissive presumption, not an automatic consequence, and the court will ask whether the witness was genuinely material and genuinely available before drawing anything from the omission."
+            },
+            {
+              "t": "caution",
+              "text": "Failing to call a witness whose evidence would merely repeat what is already proved does not attract the inference. The provision is about withheld evidence, not about incomplete evidence."
+            }
+          ]
+        },
+        {
+          "h": "Confessions",
+          "body": [
+            {
+              "t": "p",
+              "text": "Confessions are admissions in criminal cases, and the Act treats them as a distinct class with their own conditions. A confession is irrelevant if it appears to have been caused by inducement, threat or promise proceeding from a person in authority and sufficient to give the accused grounds for supposing they would gain an advantage or avoid an evil."
+            },
+            {
+              "t": "p",
+              "text": "This is one of the most heavily litigated parts of the Act and the case law is extensive. Read the sections themselves before any commentary, and be careful with older authority."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet. The single most useful exercise is to take a fact you would want to prove, and find the section that makes it relevant. Doing that ten times teaches the Act better than reading a chapter about it."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "malaysian-law-of-evidence-student",
+          "where": "the chapters on relevancy and on burden of proof"
+        },
+        {
+          "bookId": "sarkar-evidence-malaysia",
+          "where": "as the reference work, section by section, when you need depth on one provision"
+        }
+      ],
+      "source": "Evidence Act 1950 (Act 56), Parts I and II; ss 101, 102, 103, 106, 114.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read the relevancy sections and ss 101–106 and 114 in a current reprint of Act 56 — the section numbers here are the stable ones, but the confession provisions and their case law should be checked directly rather than taken from this summary."
+    },
+    {
+      "id": "l-civil-procedure",
+      "moduleId": "m11-civil-procedure",
+      "title": "How a civil action is shaped",
+      "minutes": 30,
+      "summary": "Choosing the mode of commencement, pleading a case, and the interlocutory steps that dispose of most of them.",
+      "sections": [
+        {
+          "h": "Procedure is not administrative detail",
+          "body": [
+            {
+              "t": "p",
+              "text": "Most civil disputes are never tried. They are decided by a limitation point, a striking out, a summary judgment, or a settlement produced by one of those becoming likely. Procedure is where the outcome is usually determined, and treating it as the boring part is a mistake students make once."
+            },
+            {
+              "t": "p",
+              "text": "The Rules of Court 2012 govern, and they unified what had been separate sets of rules for the High Court and the subordinate courts."
+            }
+          ]
+        },
+        {
+          "h": "Before anything: limitation",
+          "body": [
+            {
+              "t": "p",
+              "text": "The first question on any set of facts is whether the claim is already time-barred, because if it is, nothing else matters."
+            },
+            {
+              "t": "rule",
+              "text": "Actions founded on contract or on tort must generally be brought within six years of the date on which the cause of action accrued; actions to recover land, within twelve.",
+              "source": "Limitation Act 1953"
+            },
+            {
+              "t": "caution",
+              "text": "Accrual is not the same as the wrongful act. In contract the cause of action accrues on breach; in tort it generally accrues when damage occurs, which may be much later. Getting accrual wrong is how a claim is filed a year out of time."
+            }
+          ]
+        },
+        {
+          "h": "Mode of commencement",
+          "body": [
+            {
+              "t": "p",
+              "text": "Two principal modes, and the choice is not stylistic."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Writ — where there is likely to be a substantial dispute of fact. Evidence is given orally and tested by cross-examination.",
+                "Originating summons — where the dispute is one of construction of a document or statute, or of law on essentially undisputed facts. Evidence is by affidavit."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Choosing wrongly is not usually fatal, since the court can order the proceedings to continue as if begun the other way, but it wastes time and costs and it signals inexperience."
+            },
+            {
+              "t": "example",
+              "text": "A dispute about what a clause in a lease means, where nobody disagrees about what was signed, is an originating summons. A dispute about whether a representation was made at a meeting is a writ."
+            }
+          ]
+        },
+        {
+          "h": "Pleadings",
+          "body": [
+            {
+              "t": "p",
+              "text": "Pleadings define the issues. The statement of claim sets out the material facts the plaintiff relies on; the defence answers them; a reply may follow."
+            },
+            {
+              "t": "rule",
+              "text": "Plead material facts, not evidence and not law. A pleading states what happened, in the facts that give rise to the right claimed.",
+              "source": "Rules of Court 2012, Order 18"
+            },
+            {
+              "t": "p",
+              "text": "Two consequences follow and both are examined. A party is bound by their pleadings and cannot run a case at trial that was not pleaded. And an allegation not traversed in the defence is generally taken as admitted, so a bare denial of everything is not a defence and a silence is an admission."
+            },
+            {
+              "t": "caution",
+              "text": "Some matters must be pleaded specifically — fraud, misrepresentation, breach of trust, and any matter which if not pleaded would take the other side by surprise. Pleading fraud without particulars is worse than not pleading it."
+            }
+          ]
+        },
+        {
+          "h": "The interlocutory steps that end cases",
+          "body": [
+            {
+              "t": "list",
+              "items": [
+                "Judgment in default, where the defendant fails to enter appearance or to serve a defence in time.",
+                "Summary judgment, where there is no defence with a real prospect of success and no other reason for a trial.",
+                "Striking out, where a pleading discloses no reasonable cause of action or defence, is scandalous or vexatious, or is an abuse of process.",
+                "Discovery, where each side must disclose the documents relevant to the matters in question — including the documents that hurt them."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Summary judgment and striking out are the two that decide the most cases, and the threshold for both is deliberately high: the court is depriving a party of a trial. The applicant must show the case is clear, and any genuinely triable issue defeats the application."
+            },
+            {
+              "t": "caution",
+              "text": "Do not confuse them. Striking out attacks the pleading on its face — assume the facts pleaded are true and ask whether they disclose a case. Summary judgment looks at the evidence and asks whether the defence is real."
+            }
+          ]
+        },
+        {
+          "h": "Judgment, enforcement and appeal",
+          "body": [
+            {
+              "t": "p",
+              "text": "A judgment is not money. Enforcement is a separate exercise with its own procedures — execution against goods, garnishment of debts owed to the judgment debtor, charging orders over land, and winding up or bankruptcy in the appropriate case. Advising a client that they have won is incomplete advice if the defendant has nothing."
+            },
+            {
+              "t": "p",
+              "text": "Appeals run through the hierarchy under the Courts of Judicature Act 1964, with leave required at certain stages. Time limits for appealing are short and are strictly applied."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet. The exercise that teaches this fastest is to take a simple set of facts and write out the sequence: limitation, mode, pleading, the interlocutory application the other side would make, and what you would need to defeat it."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "janab-civil-procedure",
+          "where": "the chapters on commencement, pleadings and interlocutory applications"
+        },
+        {
+          "bookId": "malaysian-civil-procedure-white-book",
+          "where": "as the reference — the Rules with commentary, order by order"
+        }
+      ],
+      "source": "Rules of Court 2012, Orders 5, 13, 14, 18, 24; Limitation Act 1953; Courts of Judicature Act 1964.",
+      "lastVerified": "2026-09-07",
+      "verify": "Order numbers here are given as orientation and should be confirmed against the current Rules of Court 2012 before being cited. Limitation periods have exceptions — disability, fraud, concealment, and the position on latent damage — which are not covered above and must be read in the Limitation Act 1953 itself."
+    },
+    {
+      "id": "l-judicial-review",
+      "moduleId": "m12-administrative",
+      "title": "Judicial review: the grounds, and how far a court may go",
+      "minutes": 30,
+      "summary": "Illegality, irrationality and procedural impropriety — and the Malaysian decision that let courts review substance, not only process.",
+      "sections": [
+        {
+          "h": "A note about this module's reading",
+          "body": [
+            {
+              "t": "p",
+              "text": "The reading list flags a genuine gap: no current Malaysian student text has been identified for administrative law, and the reference work is English. That matters more here than in most modules, because the Malaysian courts have taken a distinctive line on the central question of how far review may go."
+            },
+            {
+              "t": "caution",
+              "text": "Use the English text for the structure and the vocabulary, which travel well. Do not use it for the scope of review in Malaysia, which is different. Read the Malaysian judgments directly — this is the module where that is not optional advice."
+            }
+          ]
+        },
+        {
+          "h": "What judicial review is, and is not",
+          "body": [
+            {
+              "t": "p",
+              "text": "Judicial review is the supervisory jurisdiction of the High Court over the exercise of public power. It is not an appeal. On an appeal the question is whether the decision was right; on review the traditional question is whether the decision was lawfully made."
+            },
+            {
+              "t": "p",
+              "text": "It runs against public bodies exercising public functions, and the remedies are the prerogative orders — certiorari to quash, prohibition to forbid, mandamus to compel — along with declarations and injunctions. The procedure is by application for leave, then the substantive hearing."
+            },
+            {
+              "t": "rule",
+              "text": "Judicial review is commenced by an application for leave, and an applicant must be adversely affected by the decision complained of.",
+              "source": "Rules of Court 2012, Order 53"
+            },
+            {
+              "t": "p",
+              "text": "The standing requirement was for many years read narrowly, and the trend of the later authority has been to relax it. Check the current position rather than assuming either extreme."
+            }
+          ]
+        },
+        {
+          "h": "The three grounds",
+          "body": [
+            {
+              "t": "p",
+              "text": "The standard classification, which Malaysian courts use, comes from the GCHQ case and is the frame for almost every answer."
+            },
+            {
+              "t": "rule",
+              "text": "Illegality, irrationality, and procedural impropriety.",
+              "source": "Council of Civil Service Unions v Minister for the Civil Service [1985] AC 374 (GCHQ)"
+            },
+            {
+              "t": "list",
+              "items": [
+                "Illegality — the decision-maker misdirected itself in law, acted beyond its powers, used a power for an improper purpose, took into account irrelevant considerations or ignored relevant ones, or fettered its own discretion.",
+                "Irrationality — the decision is so unreasonable that no reasonable authority could have come to it. This is the Wednesbury standard, and it is deliberately demanding.",
+                "Procedural impropriety — a failure to observe the procedure laid down, or a breach of natural justice: the right to be heard, and the rule against bias."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Natural justice is where the two Latin maxims from the foundations module do their work. Audi alteram partem requires that a person affected be heard; nemo judex in causa sua requires that the decision-maker have no interest in the outcome, and the test for bias is generally an objective one about apparent bias rather than proof of actual partiality."
+            },
+            {
+              "t": "p",
+              "text": "Legitimate expectation sits alongside these: where a public body has promised a benefit or a procedure, or has consistently followed a practice, a person may be entitled to expect it to continue, or at least to be heard before it is withdrawn."
+            }
+          ]
+        },
+        {
+          "h": "How far the court may go",
+          "body": [
+            {
+              "t": "p",
+              "text": "This is the question on which Malaysian administrative law departs from the orthodox English position, and it is the thing to know from this module if you know one thing."
+            },
+            {
+              "t": "p",
+              "text": "The traditional view confines review to the decision-making process. The court quashes an unlawful decision and remits it; it does not substitute its own view of the merits, because the power was given to the decision-maker and not to the judge."
+            },
+            {
+              "t": "rule",
+              "text": "R Rama Chandran: on judicial review the court may in appropriate cases examine the substance or merits of a decision, and may grant relief that includes substituting its own decision rather than merely quashing and remitting.",
+              "source": "R Rama Chandran v The Industrial Court of Malaysia [1997] 1 MLJ 145 (FC)"
+            },
+            {
+              "t": "p",
+              "text": "The reasoning is practical as well as doctrinal: remitting a matter to a tribunal that has already reached a conclusion can leave a successful applicant with nothing but delay. The decision has been applied, qualified and debated since, and the boundaries of when substitution is appropriate are not fixed."
+            },
+            {
+              "t": "caution",
+              "text": "Do not overstate it. Rama Chandran did not turn judicial review into an appeal, and later authority has been careful about its limits. Cite it for the proposition that merits review is available in appropriate cases, and then argue whether this is such a case."
+            }
+          ]
+        },
+        {
+          "h": "Ouster clauses",
+          "body": [
+            {
+              "t": "p",
+              "text": "Legislation sometimes provides that a decision shall be final, or shall not be questioned in any court. Whether such a clause defeats review is an old question with a settled direction of travel: the courts read ouster clauses narrowly, and a decision made outside jurisdiction is treated as no decision at all and therefore not protected."
+            },
+            {
+              "t": "p",
+              "text": "In Malaysia this connects to the constitutional material in the legal system module. The Federal Court's reasoning in Semenyih Jaya and Indira Gandhi treats judicial power and judicial review as part of the basic structure, which places a limit on how far any clause — or any amendment — can exclude the courts."
+            },
+            {
+              "t": "rule",
+              "text": "Judicial review of administrative action is inherent in the civil courts and forms part of the basic structure of the Constitution.",
+              "source": "Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC)"
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet. Given the missing text, the best use of your time is to read Rama Chandran in full, then one recent Court of Appeal judicial review decision, and note how the three grounds are actually deployed in argument rather than how they are listed."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "wade-forsyth-admin-law",
+          "where": "for the grounds and the vocabulary — but not for the Malaysian scope of review, which differs"
+        }
+      ],
+      "source": "Rules of Court 2012 Order 53; GCHQ [1985] AC 374; R Rama Chandran v The Industrial Court of Malaysia [1997] 1 MLJ 145 (FC); Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC).",
+      "lastVerified": "2026-09-07",
+      "verify": "This module has no verified Malaysian student text, so treat everything here as a map to primary sources rather than as settled summary. Check the Rama Chandran citation and read the later authority on how far merits review extends; check the current standing requirement under Order 53, which has moved."
+    },
+    {
+      "id": "l-legal-reasoning",
+      "moduleId": "m13-legal-reasoning",
+      "title": "How legal reasoning is actually done",
+      "minutes": 25,
+      "summary": "Rules and standards, reasoning by analogy, and why the answer is often genuinely open without being arbitrary.",
+      "sections": [
+        {
+          "h": "The question this module asks",
+          "body": [
+            {
+              "t": "p",
+              "text": "Everything up to here has taught you rules. This module asks a different question: what kind of thinking is legal reasoning, and why does it so often produce disagreement between competent lawyers reading the same materials?"
+            },
+            {
+              "t": "p",
+              "text": "The answer is not that one side is incompetent or dishonest. It is that the materials genuinely underdetermine the outcome more often than a textbook's confident prose suggests, and knowing where that happens is what separates an argument from a recitation."
+            }
+          ]
+        },
+        {
+          "h": "Rules and standards",
+          "body": [
+            {
+              "t": "p",
+              "text": "Legal directives come in two shapes, and the choice between them is a real design decision with costs on both sides."
+            },
+            {
+              "t": "list",
+              "items": [
+                "A rule specifies its trigger in advance: drive no faster than 90 km/h. It is predictable, cheap to apply, and will sometimes produce a result nobody wanted — the ambulance, the empty road at 3am.",
+                "A standard states the goal and leaves application open: drive at a reasonable speed for the conditions. It fits every case and tells you nothing until a court has ruled."
+              ]
+            },
+            {
+              "t": "rule",
+              "text": "Rules buy predictability at the cost of occasionally getting the individual case wrong. Standards buy accuracy in the individual case at the cost of predictability.",
+              "source": "Schauer, Thinking Like a Lawyer"
+            },
+            {
+              "t": "p",
+              "text": "Noticing which one you are dealing with tells you what kind of argument will work. Against a rule you argue that the trigger is not satisfied, or that this is not a case the rule was meant to reach. Against a standard you argue the factors."
+            },
+            {
+              "t": "example",
+              "text": "Section 300(c) of the Penal Code is close to a rule: intention to inflict the injury, and objective sufficiency to cause death. The reasonable person standard in negligence is a standard. The kind of argument that works against each is different."
+            }
+          ]
+        },
+        {
+          "h": "Reasoning by analogy",
+          "body": [
+            {
+              "t": "p",
+              "text": "Precedent works by analogy, and analogy is not a mechanical operation. Two cases are never identical, so the question is always whether they are alike in the respects that matter — and what matters is decided by the rule you take the earlier case to stand for."
+            },
+            {
+              "t": "p",
+              "text": "That is why the argument about the level of generality at which a ratio is stated, from the precedent lesson, is not a technicality. State it narrowly and the earlier case is distinguishable; state it broadly and it governs. Both statements can be honestly defended from the same judgment."
+            },
+            {
+              "t": "caution",
+              "text": "This is not licence to say precedent means whatever you want. The range of defensible statements is real but bounded, and an argument outside it will simply lose. The skill is knowing where the edges are."
+            }
+          ]
+        },
+        {
+          "h": "The open texture of language",
+          "body": [
+            {
+              "t": "p",
+              "text": "Rules are made of words, and words have a settled core and an uncertain edge. Hart's example is a rule prohibiting vehicles in a park: a car is plainly within it, a bicycle is arguable, and a war memorial tank on a plinth is the sort of case that makes the point."
+            },
+            {
+              "t": "rule",
+              "text": "Legal language has a core of settled meaning and a penumbra of doubt. Most cases are decided in the core and never litigated; the cases you read are disproportionately from the penumbra.",
+              "source": "Hart, on the open texture of legal language"
+            },
+            {
+              "t": "p",
+              "text": "This explains something about your reading that is otherwise disorienting. The law reports contain the hard cases, because the easy ones settle or never start. Reading only reported cases gives a systematically distorted impression of how indeterminate the law is."
+            }
+          ]
+        },
+        {
+          "h": "Formalism and realism",
+          "body": [
+            {
+              "t": "p",
+              "text": "Two positions worth being able to state, because arguments about judicial decision-making usually reduce to a version of them."
+            },
+            {
+              "t": "p",
+              "text": "Formalism holds that legal outcomes follow from legal materials — the rules, applied to the facts, give the answer, and the judge's role is to find it. Realism holds that outcomes are substantially driven by other factors, and the legal reasoning is a justification constructed afterwards."
+            },
+            {
+              "t": "p",
+              "text": "Neither extreme survives contact with practice. Most cases really are determined by the materials; some really are not, and in those the judge is choosing. The useful question is not which camp is right but which kind of case you are in, because it decides whether your best argument is doctrinal or consequential."
+            },
+            {
+              "t": "caution",
+              "text": "Do not deploy realism as a way of avoiding doctrine. An answer that says the judge will decide as they please is not a legal argument, and it is wrong about the great majority of cases."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet. The exercise that pays here is to take a case you have already briefed and write the ratio twice — once as narrowly as the judgment honestly allows, once as broadly. Then say which side would argue for which, and why. That is the whole module in one page."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "schauer-thinking-like-a-lawyer",
+          "where": "the whole book — rules, precedent, analogy and the realist challenge"
+        },
+        {
+          "bookId": "bingham-rule-of-law",
+          "where": "for what the constraint on judges is supposed to be for"
+        }
+      ],
+      "source": "Schauer, Thinking Like a Lawyer; Hart on open texture; standard jurisprudential material.",
+      "lastVerified": "2026-09-07",
+      "verify": "Nothing here is a rule of Malaysian law and none of it needs a citator. The positions described are contested in the literature by design — read the book rather than treating this summary as the argument."
+    },
+    {
+      "id": "l-interpretation",
+      "moduleId": "m14-statutory-interpretation",
+      "title": "Reading a statute",
+      "minutes": 30,
+      "summary": "Malaysia has made the purposive approach statutory, which changes what the traditional rules are for.",
+      "sections": [
+        {
+          "h": "The provision that changes the subject",
+          "body": [
+            {
+              "t": "p",
+              "text": "Most treatments of statutory interpretation begin with three common law rules — literal, golden and mischief — and work towards the purposive approach as a modern development. In Malaysia that ordering is misleading, because the purposive approach is not a judicial preference. It is enacted."
+            },
+            {
+              "t": "rule",
+              "text": "In the interpretation of a provision of an Act, a construction that would promote the purpose or object underlying the Act shall be preferred to a construction that would not promote that purpose or object.",
+              "source": "Interpretation Acts 1948 and 1967 (Act 388), s 17A"
+            },
+            {
+              "t": "p",
+              "text": "Read that carefully: shall be preferred. It is a direction to the court, not an option among approaches. Any answer on Malaysian statutory interpretation that works through the three common law rules and reaches purposive construction as a possible modern alternative has the structure backwards."
+            },
+            {
+              "t": "caution",
+              "text": "This is the single most common error in this module, and it comes directly from using English or older textbooks. Start from s 17A."
+            }
+          ]
+        },
+        {
+          "h": "What the traditional rules are still for",
+          "body": [
+            {
+              "t": "p",
+              "text": "They are not obsolete. They describe recurring moves within a purposive framework rather than competing methods."
+            },
+            {
+              "t": "list",
+              "items": [
+                "The literal approach — give the words their ordinary meaning. Still the starting point: purpose does not licence ignoring the text, and a construction the words cannot bear is not available however desirable.",
+                "The golden rule — depart from the literal meaning where it produces an absurdity. Now largely subsumed, since an absurd result is strong evidence that a construction does not promote the Act's purpose.",
+                "The mischief rule — ask what defect in the previous law the Act was passed to remedy. This is the closest ancestor of s 17A and remains a good way to identify the purpose the section directs you to serve."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "So the structure of a good answer is: what do the words naturally mean; what is the purpose of the Act; and does the natural meaning promote it. Where the answer to the last is no, s 17A tells you which construction to prefer."
+            }
+          ]
+        },
+        {
+          "h": "Aids to interpretation",
+          "body": [
+            {
+              "t": "p",
+              "text": "Internal aids are parts of the Act itself: the long title, the preamble where there is one, headings, marginal notes, the interpretation section, provisos, explanations and schedules. The interpretation section is the one students skip and should not — a defined term means what the Act says it means, whatever it means elsewhere."
+            },
+            {
+              "t": "p",
+              "text": "External aids sit outside the Act: dictionaries, earlier legislation on the same subject, international conventions the Act implements, and parliamentary material. The use of Hansard is the contested one, and you should check the current Malaysian position rather than assuming the English rule applies."
+            },
+            {
+              "t": "rule",
+              "text": "Words in the singular include the plural and words in the plural include the singular, unless a contrary intention appears.",
+              "source": "Interpretation Acts 1948 and 1967"
+            },
+            {
+              "t": "p",
+              "text": "That looks trivial and is not. It is the provision, applied to “parent” in Article 12(4), that decided the conversion question in Indira Gandhi — a rule of interpretation carrying a constitutional case."
+            }
+          ]
+        },
+        {
+          "h": "Presumptions and canons",
+          "body": [
+            {
+              "t": "p",
+              "text": "Presumptions are default positions that the legislature is taken to have intended unless it says otherwise."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Against retrospective operation, particularly for provisions affecting substantive rights.",
+                "Against ousting the jurisdiction of the courts.",
+                "In favour of a mental element in a criminal offence, so that strict liability is not lightly inferred.",
+                "That penal provisions are construed strictly, and ambiguity resolved in favour of the accused."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "The linguistic canons are narrower tools. Ejusdem generis: general words following a list of specific items are read as limited to the same class. Noscitur a sociis: a word takes colour from its neighbours. Expressio unius est exclusio alterius: expressing one thing implies the exclusion of others — the weakest of the three, and easily over-applied."
+            },
+            {
+              "t": "example",
+              "text": "A provision applying to “cars, vans, lorries and other vehicles” will, under ejusdem generis, probably not reach a bicycle: the specific items share a class, and the general words are read within it."
+            }
+          ]
+        },
+        {
+          "h": "Interpreting the Constitution is different",
+          "body": [
+            {
+              "t": "p",
+              "text": "A constitution is not an ordinary statute and is not read like one. The Malaysian courts have repeatedly said that fundamental liberties are to be construed generously and not with the narrowness appropriate to a penal provision, and that a constitution should be read as a living document rather than as a conveyance."
+            },
+            {
+              "t": "p",
+              "text": "The Eleventh Schedule applies certain provisions of the Interpretation Acts to the Constitution, which is how the singular-includes-plural rule reached Article 12(4). But the interpretive posture is different, and importing the strict approach appropriate to a taxing statute into Part II is an error."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards or problems for this module yet. Read s 17A itself — it is one sentence — and then take any section you have already worked with and construct the argument both ways: the literal reading, the purposive reading, and which s 17A directs you to prefer."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "schauer-thinking-like-a-lawyer",
+          "where": "the chapters on the interpretation of statutes, for the theory behind the canons"
+        }
+      ],
+      "source": "Interpretation Acts 1948 and 1967 (Act 388), s 17A; Federal Constitution, Eleventh Schedule.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read s 17A in a current reprint of Act 388, and check the Malaysian position on the admissibility of Hansard before relying on parliamentary material — that point is not settled the way the English rule is, and it is not stated here for that reason."
     }
   ]
 }

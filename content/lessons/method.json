@@ -3,6 +3,151 @@
   "note": "Lessons for the method modules. A lesson is exposition: it states the rules, shows how they fit, and hands off to the cards that keep them available and the problem questions that test whether they can be used. Every lesson carries its sources and a `verify` line — the app states a rule, it does not vouch for it.",
   "lessons": [
     {
+      "id": "l-how-to-study",
+      "moduleId": "m-study-method",
+      "title": "How to study law, and why this app works the way it does",
+      "minutes": 20,
+      "summary": "Retrieval beats re-reading, a case brief is a discipline rather than a summary, and the app is built around both.",
+      "sections": [
+        {
+          "h": "The method matters more here than elsewhere",
+          "body": [
+            {
+              "t": "p",
+              "text": "Law is a large volume of material that has to be recalled precisely, structured well enough to be applied to facts you have never seen, and written down under time pressure. Very few subjects need all three at once. A study method that works for a subject needing only the first will fail here, slowly, in a way you will not notice until an examination."
+            },
+            {
+              "t": "p",
+              "text": "This lesson is about the method. It is short, and it is worth more than any single doctrine below it."
+            }
+          ]
+        },
+        {
+          "h": "Re-reading feels like work and is not",
+          "body": [
+            {
+              "t": "p",
+              "text": "The most robust finding in the learning research is also the least intuitive: re-reading a text produces a strong feeling of mastery and very little durable memory. The feeling comes from fluency — the second pass is easier than the first, and the brain reads ease as knowing."
+            },
+            {
+              "t": "rule",
+              "text": "Retrieval practice beats review. Trying to recall something, and failing, does more for retention than reading it again — provided you then check the answer.",
+              "source": "Make It Stick; the retrieval practice literature"
+            },
+            {
+              "t": "p",
+              "text": "This is why the app makes you answer a card before showing you the back, and why the problem questions make you write the whole answer before the rubric appears. Both are structured to stop you reading the answer and mistaking recognition for recall."
+            },
+            {
+              "t": "caution",
+              "text": "The corollary is uncomfortable: study that feels harder is usually working better. If your revision feels smooth and pleasant, be suspicious of it."
+            }
+          ]
+        },
+        {
+          "h": "Spacing, and why the intervals grow",
+          "body": [
+            {
+              "t": "p",
+              "text": "Material reviewed at increasing intervals is retained far longer than material reviewed in a block. The app schedules cards on that principle, using FSRS, and the intervals lengthen because each successful recall makes the memory more durable."
+            },
+            {
+              "t": "rule",
+              "text": "Space your reviews, and interleave topics rather than blocking them. Mixing contract and criminal in one session feels worse and produces better discrimination between them.",
+              "source": "Make It Stick; the spacing and interleaving literature"
+            },
+            {
+              "t": "p",
+              "text": "Interleaving matters especially in law because the hard skill is telling doctrines apart on facts that do not announce which is which. Studying tort for a solid week teaches you tort; studying tort mixed with contract teaches you to notice which one you are looking at."
+            }
+          ]
+        },
+        {
+          "h": "How to read a case",
+          "body": [
+            {
+              "t": "p",
+              "text": "Reading a judgment straight through, like an article, is the commonest waste of a student's time. A judgment is a document with a structure, and you read it by extracting that structure."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Facts — only the material ones. A fact is material if changing it might change the outcome.",
+                "Procedural history — which court, on appeal from what, and what was decided below.",
+                "Issue — the question of law the court had to answer, stated as a question.",
+                "Holding — the answer to that question.",
+                "Reasoning — why. This is the part worth your attention.",
+                "Ratio — the rule the decision rests on, stated so it could govern a different case.",
+                "Obiter — anything else worth noting, marked as such."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Write it down. A brief you did not write is a brief you do not have, and the act of compressing a judgment to a page is where the understanding happens. Briefs also mean you never re-read a full judgment for revision."
+            },
+            {
+              "t": "caution",
+              "text": "Do not brief from a headnote. Headnotes are written by editors, are sometimes wrong, and are never authority. Read the judgment."
+            }
+          ]
+        },
+        {
+          "h": "How to answer a problem question",
+          "body": [
+            {
+              "t": "p",
+              "text": "Use IRAC, or the ILAC variant, and use it visibly. Issue, Rule, Application, Conclusion."
+            },
+            {
+              "t": "p",
+              "text": "The marks in a problem question are overwhelmingly in the Application. Students who lose marks usually state the law competently and then stop, or restate the facts without connecting them to the rule. Application means saying which fact satisfies which element, and where the difficulty is."
+            },
+            {
+              "t": "rule",
+              "text": "State the rule with its source. Apply it to these facts. Argue both sides where the point is genuinely arguable. Then answer the question that was asked.",
+              "source": "Standard examination technique"
+            },
+            {
+              "t": "p",
+              "text": "Write under time from the beginning. An answer you could have written in ninety minutes is worth nothing in a forty-minute question, and the only way to learn the pace is to practise at it."
+            }
+          ]
+        },
+        {
+          "h": "What this app is and is not",
+          "body": [
+            {
+              "t": "p",
+              "text": "Three layers. Lessons state the rules and orient you to the reading. Cards keep the rules available, scheduled so you meet them just as they start to fade. Problem questions test whether you can use them, and make you predict your own mark before you see the rubric, because a self-taught student's largest blind spot is their own judgment of their work."
+            },
+            {
+              "t": "p",
+              "text": "What it does not do is replace the textbooks. The lessons are an orientation and say so; the depth is in the reading list, and a lesson here is roughly what a good tutorial would cover before you go away and read properly."
+            },
+            {
+              "t": "caution",
+              "text": "It also cannot mark your writing. Nothing here reads your answer. The self-mark is honest only if you are, and the app is explicit about that on the progress page rather than hiding it behind a number."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [],
+      "reading": [
+        {
+          "bookId": "make-it-stick",
+          "where": "the whole book — it is short and it is the evidence base for the method above"
+        },
+        {
+          "bookId": "williams-learning-the-law",
+          "where": "on reading cases, and on examination technique"
+        }
+      ],
+      "source": "Retrieval practice and spacing literature as summarised in Make It Stick; standard case-briefing and IRAC technique.",
+      "lastVerified": "2026-09-07",
+      "verify": "Nothing here is a rule of law and none of it needs a citator. The claims about learning are empirical rather than legal — if you want the primary studies rather than the summary, they are cited throughout Make It Stick."
+    },
+    {
       "id": "l-shape-of-law",
       "moduleId": "m00-foundations",
       "title": "How a legal system is arranged",
