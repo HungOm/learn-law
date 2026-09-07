@@ -1,6 +1,7 @@
 import * as content from './content.js';
 import * as sched from './scheduler.js';
 import * as prob from './problems.js';
+import * as lessons from './lessons.js';
 import { cardState, reviewLog, attempts, meta, exportAll, importAll } from './db.js';
 
 const root = document.getElementById('view');
@@ -40,6 +41,7 @@ const routes = {
   '': home,
   '#/': home,
   '#/review': review,
+  '#/lessons': lessonIndex,
   '#/problems': problems,
   '#/books': books,
   '#/progress': progress,
@@ -49,6 +51,7 @@ const routes = {
 const prefixRoutes = [
   ['#/module/', moduleView],
   ['#/problem/', problemView],
+  ['#/lesson/', lessonView],
 ];
 
 function route() {
@@ -83,6 +86,7 @@ async function refreshRailBadge() {
 async function home() {
   const c = await sched.counts();
   await refreshRailBadge();
+  const nextLesson = lessons.nextUnread(cat.lessons, await lessons.readMap());
 
   const perModule = await Promise.all(
     cat.modules.map(async m => ({ m, c: await sched.counts(m.id) }))
@@ -111,10 +115,14 @@ async function home() {
       </div>
 
       <div class="today" style="margin-top:2.5rem">
-        <p><strong>${cat.problems.length} problem questions</strong> across ${new Set(cat.problems.map(p => p.moduleId)).size} modules.
-          Reviews keep the rules available; a problem question is where you find out
-          whether you can use them.</p>
-        <div class="btn-row"><a class="btn" href="#/problems">Problem questions</a></div>
+        <p><strong>Three layers.</strong> ${cat.lessons.length} lessons state the rules,
+          ${cat.cards.length} cards keep them available, and ${cat.problems.length} problem
+          questions are where you find out whether you can use them.</p>
+        ${nextLesson ? `<p class="small">Next unread lesson: ${esc(nextLesson.title)} — ${nextLesson.minutes} minutes.</p>` : ''}
+        <div class="btn-row">
+          <a class="btn ${nextLesson ? 'btn-primary' : ''}" href="#/lessons">Lessons</a>
+          <a class="btn" href="#/problems">Problem questions</a>
+        </div>
       </div>
 
       <p class="small" style="margin-top:2rem">
@@ -153,13 +161,15 @@ async function moduleView(_params, base) {
   const id = base.replace('#/module/', '');
   const m = cat.modules.find(x => x.id === id);
   if (!m) return notFound();
-  const [mc, latest] = await Promise.all([sched.counts(id), prob.latestByProblem()]);
+  const [mc, latest, readMap] = await Promise.all([
+    sched.counts(id), prob.latestByProblem(), lessons.readMap(),
+  ]);
 
   root.innerHTML = `
     <div class="wrap">
       <p class="small"><a href="#/">← Arrangement of modules</a></p>
       <h2>${esc(m.title)}</h2>
-      <p class="lede">${m.level === null ? 'Method module' : `Level ${m.level}`} · ${mc.total} card${mc.total === 1 ? '' : 's'}</p>
+      <p class="lede">${m.level === null ? 'Method module' : `Level ${m.level}`} · ${m.lessons.length} lesson${m.lessons.length === 1 ? '' : 's'} · ${mc.total} card${mc.total === 1 ? '' : 's'} · ${m.problems.length} problem${m.problems.length === 1 ? '' : 's'}</p>
 
       ${m.gap ? `<div class="notice"><strong>Known gap.</strong> ${esc(m.gap)}</div>` : ''}
 
@@ -172,6 +182,13 @@ async function moduleView(_params, base) {
       ${mc.due + mc.fresh
         ? `<div class="btn-row"><a class="btn btn-primary" href="#/review?module=${id}">Review this module</a></div>`
         : `<p class="small">Nothing due in this module.</p>`}
+
+      <h3>Lessons</h3>
+      ${m.lessons.length
+        ? `<div class="arrangement">${m.lessons.map(l => lessonRow(l, readMap[l.id])).join('')}</div>`
+        : `<p class="small">No lesson written for this module yet. The reading list below is the
+             route in, and it is the honest one — a lesson here would be a summary of a book
+             nobody has read.</p>`}
 
       <h3>Problem questions</h3>
       ${m.problems.length
@@ -301,6 +318,176 @@ async function review(params) {
 }
 
 // --------------------------------------------------------------------------
+// lessons — the exposition
+//
+// The layer that was missing. Cards keep a rule available and problems test
+// whether it can be used; neither teaches, and without this the module pages
+// were a reading list with a testing harness attached.
+
+async function lessonIndex() {
+  const read = await lessons.readMap();
+  const next = lessons.nextUnread(cat.lessons, read);
+  const byModule = cat.modules
+    .map(m => ({ m, list: m.lessons }))
+    .filter(g => g.list.length);
+  const doneCount = cat.lessons.filter(l => read[l.id]).length;
+
+  root.innerHTML = `
+    <div class="wrap">
+      <h2>Lessons</h2>
+      <p class="lede">${cat.lessons.length} lessons, about ${lessons.totalMinutes(cat.lessons)} minutes of reading.
+        You have marked ${doneCount} as read.</p>
+
+      ${next ? `
+        <div class="today has-due">
+          <p><strong>Next:</strong> ${esc(next.title)} — ${next.minutes} minutes.</p>
+          <p class="small">${esc(next.summary)}</p>
+          <div class="btn-row"><a class="btn btn-primary" href="#/lesson/${next.id}">Read it</a></div>
+        </div>`
+      : `<div class="today"><p>Every lesson is marked read. The work is now in the cards and the
+           problem questions — and in the textbooks, which is where the depth is.</p></div>`}
+
+      <div class="notice">
+        A lesson states rules. It does not vouch for them: each one names its sources and
+        carries a line saying what must be checked against a current text. Treat it as an
+        orientation to the reading, not a replacement for it.
+      </div>
+
+      ${byModule.map(({ m, list }) => `
+        <h3>${esc(m.title)}</h3>
+        <div class="arrangement">${list.map(l => lessonRow(l, read[l.id])).join('')}</div>
+      `).join('')}
+    </div>`;
+}
+
+function lessonRow(l, readAt) {
+  const state = readAt
+    ? `<span class="arr-state is-clear">read ${daysAgo(readAt)}</span>`
+    : '<span class="arr-state">unread</span>';
+  const links = [
+    (l.plants || []).length ? `${l.plants.length} card${l.plants.length === 1 ? '' : 's'}` : '',
+    (l.prepares || []).length ? `${l.prepares.length} problem${l.prepares.length === 1 ? '' : 's'}` : '',
+  ].filter(Boolean).join(' · ');
+  return `
+    <a class="arr-row" href="#/lesson/${l.id}">
+      <span class="arr-num">${l.minutes}′</span>
+      <span>
+        <span class="arr-title">${esc(l.title)}</span>
+        <span class="arr-meta">${esc(l.summary)}${links ? ` — ${links}` : ''}</span>
+      </span>
+      ${state}
+    </a>`;
+}
+
+async function lessonView(_params, base) {
+  const id = base.replace('#/lesson/', '');
+  const l = cat.byId.lesson[id];
+  if (!l) return notFound();
+
+  const mod = cat.byId.module[l.moduleId] || {};
+  const read = await lessons.readMap();
+  const siblings = mod.lessons || [];
+  const i = siblings.findIndex(x => x.id === l.id);
+  const nextInModule = siblings[i + 1] || null;
+
+  const cards = (l.plants || []).map(cid => cat.byId.card[cid]).filter(Boolean);
+  const prepares = (l.prepares || []).map(pid => cat.byId.problem[pid]).filter(Boolean);
+
+  function render() {
+    const readAt = read[l.id];
+    root.innerHTML = `
+      <div class="wrap lesson">
+        <div class="review-progress">
+          <span><a href="#/lessons">← Lessons</a> · <a href="#/module/${l.moduleId}">${esc(mod.title || '')}</a></span>
+          <span>${l.minutes} minutes${siblings.length > 1 ? ` · ${i + 1} of ${siblings.length}` : ''}</span>
+        </div>
+
+        <h2>${esc(l.title)}</h2>
+        <p class="lede">${esc(l.summary)}</p>
+
+        ${(l.sections || []).map(sec => `
+          <section class="lsec">
+            <h3>${esc(sec.h)}</h3>
+            ${(sec.body || []).map(block).join('')}
+          </section>`).join('')}
+
+        <div class="handoff">
+          <h3>What this lesson hands off to</h3>
+          ${cards.length ? `
+            <p class="small">It plants ${cards.length} card${cards.length === 1 ? '' : 's'}, which the
+              scheduler will start showing you. They are already in the deck — reading this is what
+              makes them answerable rather than guessable.</p>
+            <ul class="plantlist">${cards.map(c => `<li>${esc(c.front)}</li>`).join('')}</ul>`
+          : '<p class="small">No cards are attached to this lesson yet.</p>'}
+
+          ${prepares.length ? `
+            <p class="small" style="margin-top:1.25rem">It prepares you for:</p>
+            <div class="arrangement">
+              ${prepares.map(pr => `
+                <a class="arr-row" href="#/problem/${pr.id}">
+                  <span class="arr-num">${pr.minutes}′</span>
+                  <span><span class="arr-title">${esc(pr.title)}</span>
+                    <span class="arr-meta">${prob.totalMarks(pr)} marks · written to follow this lesson</span></span>
+                  <span class="arr-state">problem</span>
+                </a>`).join('')}
+            </div>` : ''}
+        </div>
+
+        ${(l.reading || []).length ? `
+          <h3>Read alongside</h3>
+          ${l.reading.map(r => {
+            const b = cat.byId.book[r.bookId];
+            return b ? `<div class="book">
+              <div class="book-title">${esc(b.title)}</div>
+              <p class="book-byline">${esc([b.author, b.edition ? `${b.edition} ed.` : null].filter(Boolean).join(' · '))}</p>
+              <p class="book-note">${esc(r.where)}</p>
+            </div>` : '';
+          }).join('')}` : ''}
+
+        <div class="source-note">
+          <p class="small"><strong>Sources.</strong> ${esc(l.source)}</p>
+          <p class="small"><strong>Verify before relying on this.</strong> ${esc(l.verify)}
+            Last checked by the author of this lesson on ${esc(l.lastVerified)}.</p>
+        </div>
+
+        <div class="btn-row" style="margin-top:2rem">
+          <button class="${readAt ? '' : 'btn-primary'}" id="toggle">${readAt ? 'Mark unread' : 'Mark as read'}</button>
+          ${nextInModule ? `<a class="btn" href="#/lesson/${nextInModule.id}">Next: ${esc(nextInModule.title)}</a>` : ''}
+          ${prepares.length ? `<a class="btn" href="#/problem/${prepares[0].id}">Attempt the problem</a>` : ''}
+        </div>
+        ${readAt ? `<p class="small">Marked read ${daysAgo(readAt)}. Re-reading costs nothing and is not
+          tracked — only whether you have been through it once.</p>` : ''}
+      </div>`;
+
+    document.getElementById('toggle').onclick = async () => {
+      const m = read[l.id] ? await lessons.markUnread(l.id) : await lessons.markRead(l.id);
+      Object.keys(read).forEach(k => delete read[k]);
+      Object.assign(read, m);
+      render();
+      window.scrollTo(0, document.body.scrollHeight);
+    };
+  }
+
+  render();
+}
+
+function block(b) {
+  switch (b.t) {
+    case 'rule':
+      return `<div class="ruleblock"><p>${esc(b.text)}</p>${
+        b.source ? `<p class="rb-src">${esc(b.source)}</p>` : ''}</div>`;
+    case 'example':
+      return `<div class="exblock"><p><span class="xlabel">Example</span>${esc(b.text)}</p></div>`;
+    case 'caution':
+      return `<div class="cautionblock"><p><span class="xlabel">Careful</span>${esc(b.text)}</p></div>`;
+    case 'list':
+      return `<ul class="lsec-list">${(b.items || []).map(t => `<li>${esc(t)}</li>`).join('')}</ul>`;
+    default:
+      return `<p>${esc(b.text)}</p>`;
+  }
+}
+
+// --------------------------------------------------------------------------
 // problem questions — the reasoning layer
 //
 // Three stages, in this order and not a different one. You write under time
@@ -381,6 +568,7 @@ async function problemView(_params, base) {
   const total = prob.totalMarks(p);
   const mod = cat.byId.module[p.moduleId] || {};
   const history = await prob.historyFor(id);
+  const lesson = lessons.lessonForProblem(cat.lessons, id);
 
   const saved = await prob.draft.load(id);
   const run = saved || {
@@ -440,6 +628,9 @@ async function problemView(_params, base) {
           rubric first turns the exercise into a checklist and destroys the only
           measurement it makes.
         </div>
+
+        ${lesson ? `<p class="small">This question was written to follow
+          <a href="#/lesson/${lesson.id}">${esc(lesson.title)}</a>. Read it first if you have not.</p>` : ''}
 
         <div class="btn-row">
           <button class="btn-primary" id="start">${run.text ? 'Carry on writing' : 'Start writing'}</button>
@@ -798,7 +989,9 @@ function statuteRow(s) {
 // progress
 
 async function progress() {
-  const [logs, c, tries] = await Promise.all([reviewLog.all(), sched.counts(), attempts.all()]);
+  const [logs, c, tries, readMap] = await Promise.all([
+    reviewLog.all(), sched.counts(), attempts.all(), lessons.readMap(),
+  ]);
   const now = Date.now();
   const day = 86400000;
 
@@ -829,6 +1022,9 @@ async function progress() {
         split them into single facts rather than lowering the retention setting.
       </div>` : ''}
 
+      <h3>The reading layer</h3>
+      ${readingSection(readMap)}
+
       <h3>The reasoning layer</h3>
       ${reasoningSection(tries)}
 
@@ -842,6 +1038,22 @@ async function progress() {
         or an answer read by someone who knows the law better than you do. Neither is
         a thing a static site can supply.</p>
     </div>`;
+}
+
+function readingSection(readMap) {
+  const done = cat.lessons.filter(l => readMap[l.id]);
+  const next = lessons.nextUnread(cat.lessons, readMap);
+  if (!done.length) {
+    return `<p>No lessons marked read. ${cat.lessons.length} are written, about
+      ${lessons.totalMinutes(cat.lessons)} minutes in all —
+      <a href="#/lessons">start with the first</a>.</p>`;
+  }
+  return `<p>${done.length} of ${cat.lessons.length} lessons marked read.
+    ${next ? `Next: <a href="#/lesson/${next.id}">${esc(next.title)}</a>, ${next.minutes} minutes.`
+           : 'All of them.'}</p>
+    <p class="small">This is the weakest signal on the page and it is meant to be. It records
+    that you pressed a button, not that you understood anything — the cards and the problem
+    marks are what test that.</p>`;
 }
 
 function reasoningSection(tries) {

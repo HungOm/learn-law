@@ -30,8 +30,10 @@ src/
   db.js          IndexedDB: card state, review log, attempts, settings
   scheduler.js   FSRS wrapper — queue building, grading, intervals
   problems.js    problem attempts: drafts, self-marking, calibration
+  lessons.js     lesson read-state and the links between the three layers
 content/
   books.json     reading list, statutes, modules, vendors
+  lessons/*.json   exposition — the rules, stated, with sources
   cards/*.json   flashcard decks
   problems/*.json  problem questions with rubrics and model answers
 vendor/
@@ -50,8 +52,9 @@ There is no build step, so nothing stands between a hand-edited JSON file and th
 page. Run this after editing anything under `content/`. It catches the errors
 that are otherwise silent: a reused card id (the new card inherits the old card's
 review history), a rubric whose marks do not sum to the problem's stated total, a
-reference to a module or book that does not exist, and a problem with no `verify`
-line.
+reference to a module or book that does not exist, a `verify` line missing from a
+lesson or problem, a `rule` block asserting a rule with no source, and a card or
+problem that no lesson reaches.
 
 ## Adding problem questions
 
@@ -85,7 +88,37 @@ re-verify it later, which matters because Malaysian textbooks go stale.
 Settings → Export backup writes a JSON file with all card state, the full review
 log, and your settings. Do it monthly. Import replaces everything.
 
-## The two layers
+## Adding lessons
+
+Drop a JSON file in `content/lessons/` and register it in `LESSON_SETS` in
+`src/content.js`. Order inside the file is the order they are taught in — it is
+pedagogical and nothing in the data can derive it.
+
+A lesson needs `summary`, `minutes`, `sections`, and the same `source`,
+`lastVerified` and `verify` a problem needs. Each section is `{h, body}`, and a
+body is a list of typed blocks: `p`, `rule`, `example`, `caution`, `list`. **A
+`rule` block must carry a `source`** — the validator refuses a rule stated with
+nothing behind it, because a pulled-out black-letter box is the most
+authoritative-looking thing on the page.
+
+Two fields tie the layers together. `plants` lists the card ids the lesson
+introduces; `prepares` lists the problem ids it sets up. They are checked in both
+directions: every card must be planted by exactly one lesson, every problem must
+be prepared by at least one, and a lesson may not name a card or problem that
+does not exist. That is what stops content from becoming reachable only by
+someone who already knew it was there.
+
+## The three layers
+
+Lessons, cards and problem questions do different work and are measured
+differently on purpose.
+
+**Lessons state the rules.** They are exposition — the thing the app had none of
+for a long time, which made the module pages a reading list with a testing
+harness bolted to it. A lesson is an orientation to the reading, not a
+replacement for it, and it says so. The only state one carries is whether you
+have marked it read; there is no score and no schedule, because re-reading is
+cheap and a spacing algorithm applied to prose would be inventing a measurement.
 
 Cards and problem questions are scored by different machinery on purpose.
 
@@ -132,6 +165,10 @@ Re-atomise them rather than lowering retention.
 Both layers are self-reported. The reviews record whether you pressed **Forgot**
 honestly; the problem marks record whether you marked yourself honestly. Nothing
 in a static site can check either, and the progress page says so.
+
+The lesson counter is weaker still, and deliberately so: it records that you
+pressed a button, not that you understood anything. The cards and the problem
+marks are what test that, which is why the progress page says as much next to it.
 
 The calibration figure is the closest it gets, because it compares one judgment
 against another you made a few minutes later and catches drift between them. It

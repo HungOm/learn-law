@@ -1,0 +1,650 @@
+{
+  "schemaVersion": 1,
+  "note": "Lessons for the substantive modules. Exposition of the rules, with the authorities named inline and a `verify` line on every lesson. These modules have no cards yet, so each lesson hands off directly to its problem question.",
+  "lessons": [
+    {
+      "id": "l-liberties",
+      "moduleId": "m03-constitutional",
+      "title": "Fundamental liberties, and how a restriction is tested",
+      "minutes": 25,
+      "summary": "Part II rights, the closed list of permitted restrictions in Art 10(2), and the unresolved argument about how hard a court may look.",
+      "sections": [
+        {
+          "h": "Rights that can be enforced",
+          "body": [
+            {
+              "t": "p",
+              "text": "Part II of the Federal Constitution contains the fundamental liberties: liberty of the person under Art 5, equality under Art 8, freedom of speech, assembly and association under Art 10, freedom of religion under Art 11, and others. Because Art 4(1) makes the Constitution supreme, these are enforceable against Parliament and not merely aspirations."
+            },
+            {
+              "t": "p",
+              "text": "What makes constitutional litigation difficult in practice is not finding the right; it is that most of the rights come with an express power to restrict them, and the argument is almost always about the restriction rather than the right."
+            }
+          ]
+        },
+        {
+          "h": "The structure of Article 10",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Article 10(1)(a): every citizen has the right to freedom of speech and expression.",
+              "source": "Federal Constitution, Art 10(1)(a)"
+            },
+            {
+              "t": "caution",
+              "text": "Citizens. Article 10(1) is not a right of everyone within the jurisdiction, unlike Art 5 which speaks of persons. Check your client's status before building an answer on it — it is a one-line point that disposes of an argument entirely."
+            },
+            {
+              "t": "rule",
+              "text": "Article 10(2)(a): Parliament may by law impose on the right conferred by 10(1)(a) such restrictions as it deems necessary or expedient in the interest of the security of the Federation, friendly relations with other countries, public order or morality, and restrictions designed to protect the privileges of Parliament or to provide against contempt of court, defamation, or incitement to any offence.",
+              "source": "Federal Constitution, Art 10(2)(a)"
+            },
+            {
+              "t": "p",
+              "text": "The list is closed. That is the most important structural fact about the provision, and it gives you an argument that does not depend on any contested standard of review: if a restriction does not fall within one of the named heads, it is not authorised at all, and how deferential the court is prepared to be never arises."
+            }
+          ]
+        },
+        {
+          "h": "The argument that is not settled",
+          "body": [
+            {
+              "t": "p",
+              "text": "Once a restriction is within a head, how closely may a court examine whether it was necessary? Two lines of authority pull in different directions, and you should know both rather than picking the one you prefer."
+            },
+            {
+              "t": "rule",
+              "text": "PP v Pung Chen Choon: the words “deems necessary or expedient” leave the necessity of a restriction largely to Parliament; the court's role is to ask whether the restriction falls within a permitted head.",
+              "source": "PP v Pung Chen Choon [1994] 1 MLJ 566 (FC)"
+            },
+            {
+              "t": "rule",
+              "text": "Sivarasa Rasiah: fundamental liberties are to be read generously, restrictions must be reasonable, and proportionality is imported through Art 8(1).",
+              "source": "Sivarasa Rasiah v Badan Peguam Malaysia [2010] 2 MLJ 333 (FC)"
+            },
+            {
+              "t": "p",
+              "text": "Muhammad Hilman is the case where the second approach did real work: the Court of Appeal struck down a statutory restriction on students' political expression as an unreasonable restriction. It shows the reasonableness line is not merely rhetorical."
+            },
+            {
+              "t": "caution",
+              "text": "Do not write that Sivarasa overruled Pung Chen Choon. It did not, and a marker who knows the area will notice. Hold both, argue that the head question is for the court on either view, and put reasonableness as your alternative rather than your only ground."
+            }
+          ]
+        },
+        {
+          "h": "How to build the answer",
+          "body": [
+            {
+              "t": "list",
+              "items": [
+                "Identify the right and confirm the claimant can hold it — citizen, for Art 10(1).",
+                "Identify the restricting law and what exactly it prohibits.",
+                "Ask whether the restriction falls within a head permitted by Art 10(2). This is for the court, not for Parliament's own characterisation, or Art 4(1) would have nothing to bite on.",
+                "Only then argue reasonableness and proportionality, as the alternative.",
+                "Reach a conclusion about validity under Art 4(1) — void to the extent of the inconsistency, not void entirely."
+              ]
+            },
+            {
+              "t": "example",
+              "text": "A statute penalising “any statement likely to cause public disquiet about the conduct of the police” is aimed at a state of public opinion. Public order is about disorder. Naming public order in the long title does not put the provision inside the head, because characterisation is for the court."
+            },
+            {
+              "t": "caution",
+              "text": "The effect of a law matters more than its form. A statute that does not mention a right at all can still restrict it, and the court looks at what the law does rather than at how it is drafted."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "No cards yet for this module — the reading list is where the detail lives, and the problem question is the test. It gives you a journalist charged under a fictional provision and a prosecutor arguing that “deems” makes the question one for Parliament. The answer that scores meets that argument directly rather than reciting the right."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [
+        "ps-art10-01"
+      ],
+      "reading": [
+        {
+          "bookId": "faruqi-our-constitution",
+          "where": "the chapters on fundamental liberties"
+        },
+        {
+          "bookId": "faruqi-document-of-destiny",
+          "where": "for the longer treatment once the outline is secure"
+        }
+      ],
+      "source": "Federal Constitution Arts 4(1), 5, 8, 10, 11; PP v Pung Chen Choon [1994] 1 MLJ 566 (FC); Sivarasa Rasiah v Badan Peguam Malaysia [2010] 2 MLJ 333 (FC); Muhammad Hilman bin Idham v Kerajaan Malaysia [2011] 6 MLJ 507 (CA).",
+      "lastVerified": "2026-09-07",
+      "verify": "This is a live area. Check all three citations in a report you can hold, and check whether any later Federal Court decision has resolved the tension between Pung Chen Choon and Sivarasa — if one has, the shape of the answer changes."
+    },
+    {
+      "id": "l-homicide",
+      "moduleId": "m04-criminal-law",
+      "title": "Homicide: the structure of sections 299 and 300",
+      "minutes": 30,
+      "summary": "Culpable homicide as the genus, murder as the species, and the exceptions that push a case back down.",
+      "sections": [
+        {
+          "h": "Read the Code, not the common law",
+          "body": [
+            {
+              "t": "p",
+              "text": "Malaysian criminal law is codified. The Penal Code defines each offence with its own mental element written into the section, and a general common law doctrine of mens rea is not the route to an answer. Your first move in any criminal problem is to find the section and read it."
+            },
+            {
+              "t": "p",
+              "text": "Homicide is the best illustration, because the structure is unusually clean once you see it and completely opaque if you approach it with English categories."
+            }
+          ]
+        },
+        {
+          "h": "The architecture",
+          "body": [
+            {
+              "t": "p",
+              "text": "Section 299 defines culpable homicide. Section 300 tells you when culpable homicide is murder. The exceptions to s 300 tell you when it drops back. Three steps, always in that order."
+            },
+            {
+              "t": "rule",
+              "text": "Section 299: culpable homicide is causing death by an act done with the intention of causing death, or with the intention of causing such bodily injury as is likely to cause death, or with the knowledge that the act is likely to cause death.",
+              "source": "Penal Code, s 299"
+            },
+            {
+              "t": "p",
+              "text": "Culpable homicide is the genus. Murder is a species of it. So you never ask “is this murder or culpable homicide” as though they were alternatives — you ask whether it is culpable homicide, and then whether it is the kind that s 300 makes murder."
+            }
+          ]
+        },
+        {
+          "h": "The four limbs of section 300",
+          "body": [
+            {
+              "t": "p",
+              "text": "Section 300 has four limbs, lettered (a) to (d). Any one of them turns culpable homicide into murder."
+            },
+            {
+              "t": "list",
+              "items": [
+                "(a) the act is done with the intention of causing death;",
+                "(b) with the intention of causing bodily injury the offender knows to be likely to cause the death of the person harmed;",
+                "(c) with the intention of causing bodily injury, and the injury intended is sufficient in the ordinary course of nature to cause death;",
+                "(d) with knowledge that the act is so imminently dangerous that it must in all probability cause death or such bodily injury as is likely to cause death, and without any excuse for incurring the risk."
+              ]
+            },
+            {
+              "t": "rule",
+              "text": "Section 300(c) is two questions: did the accused intend to inflict the injury actually inflicted, and is that injury objectively sufficient in the ordinary course of nature to cause death.",
+              "source": "Penal Code, s 300(c); PP v Visuvanathan [1978] 1 MLJ 159, applying Virsa Singh"
+            },
+            {
+              "t": "p",
+              "text": "Limb (c) is the one the prosecution reaches for most often, because the second question is objective and answered by the pathologist rather than by anything in the accused's head. That the accused did not realise the blow could kill is simply not the question."
+            },
+            {
+              "t": "caution",
+              "text": "Students reflexively run limb (a) because someone died. On a single blow with something picked up in the moment, (a) is hard and (c) is straightforward. Choosing the wrong limb is choosing a harder case than the prosecution has to prove."
+            }
+          ]
+        },
+        {
+          "h": "The exceptions",
+          "body": [
+            {
+              "t": "p",
+              "text": "If a limb of s 300 is made out, the offence is murder unless an exception applies. The exceptions do not acquit — they reduce murder to culpable homicide not amounting to murder. That is the single most common error in a homicide answer: treating provocation as a defence rather than as a reduction."
+            },
+            {
+              "t": "rule",
+              "text": "Exception 1: culpable homicide is not murder if the offender, whilst deprived of the power of self-control by grave and sudden provocation, causes the death of the person who gave the provocation.",
+              "source": "Penal Code, s 300, Exception 1"
+            },
+            {
+              "t": "p",
+              "text": "Both adjectives have to be satisfied and they fail in different ways. Grave asks how serious the provocation was; sudden asks whether there was time for passion to cool. A long-brewing grievance may be grave and is unlikely to be sudden."
+            },
+            {
+              "t": "p",
+              "text": "The Explanation makes whether the provocation was grave and sudden a question of fact, which is what allows words alone to amount to provocation. There are three provisos: the provocation must not have been sought or voluntarily provoked by the offender, nor given by anything done in obedience to the law or by a public servant acting lawfully, nor by anything done in the lawful exercise of the right of private defence."
+            },
+            {
+              "t": "p",
+              "text": "Exception 4 covers a sudden fight in the heat of passion upon a sudden quarrel, without the offender taking undue advantage or acting in a cruel or unusual manner. It is worth checking on any facts involving a scuffle."
+            }
+          ]
+        },
+        {
+          "h": "Sentence",
+          "body": [
+            {
+              "t": "p",
+              "text": "Section 302 punishes murder; section 304 punishes culpable homicide not amounting to murder, and it splits by mental element — the intention limb and the knowledge limb carry different maxima, so your finding on which limb was satisfied determines which applies."
+            },
+            {
+              "t": "caution",
+              "text": "The mandatory death penalty for murder was abolished in 2023 and sentencing is now discretionary. Do not state the range from memory or from an older textbook; read the current provision. This is the single most likely thing on this page to have moved since it was written."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "Work the problem question, which gives you a single blow, an unambiguous pathologist, and a provocation that is arguably grave and doubtfully sudden. The marks are in taking s 300(c) in its two separate parts and then arguing both sides of suddenness rather than asserting one."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [
+        "ps-homicide-01"
+      ],
+      "reading": [
+        {
+          "bookId": "yeo-morgan-chan-criminal-law",
+          "where": "the chapters on homicide and on the general exceptions"
+        }
+      ],
+      "source": "Penal Code (Act 574) ss 299, 300 and Exceptions 1 and 4, 302, 304; PP v Visuvanathan [1978] 1 MLJ 159.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read ss 299, 300, 302 and 304 in a current reprint of Act 574. The sentencing provisions were amended in 2023 and must not be quoted from memory. Confirm the Visuvanathan citation and look for a more recent Federal Court statement of the s 300(c) test."
+    },
+    {
+      "id": "l-property-offences",
+      "moduleId": "m04-criminal-law",
+      "title": "Property offences: how possession was obtained",
+      "minutes": 25,
+      "summary": "Theft, criminal breach of trust and cheating are separated by one question, and it is not what was taken.",
+      "sections": [
+        {
+          "h": "The organising question",
+          "body": [
+            {
+              "t": "p",
+              "text": "Three offences cover most dishonest dealings with property, and students routinely charge all of them as theft because the accused ended up with something they were not entitled to. That is the wrong question. The right one is how the accused came to have the property in the first place."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Taken out of another's possession without consent → theft.",
+                "Received lawfully, then misappropriated → criminal breach of trust.",
+                "Obtained by consent, where the consent was procured by deception → cheating."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Ownership is not the test. In all three the property belongs to someone else; that is what makes each of them an offence. Possession and consent are what separate them."
+            }
+          ]
+        },
+        {
+          "h": "Theft",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 378: whoever, intending to take dishonestly any movable property out of the possession of any person without that person's consent, moves that property in order to such taking, commits theft.",
+              "source": "Penal Code, s 378"
+            },
+            {
+              "t": "p",
+              "text": "Two elements do the work: the property must be taken out of another's possession, and it must be without consent. Note also that only movable property can be stolen, and that the offence is complete on moving the property — it is not necessary that the accused get away with it."
+            }
+          ]
+        },
+        {
+          "h": "Criminal breach of trust",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 405: whoever, being in any manner entrusted with property, or with any dominion over property, dishonestly misappropriates or converts it to his own use, or dishonestly uses or disposes of it in violation of any direction of law or legal contract, commits criminal breach of trust.",
+              "source": "Penal Code, s 405"
+            },
+            {
+              "t": "p",
+              "text": "Here the accused begins with the property lawfully. There is no taking out of anyone's possession because they already had it. The wrong is the misappropriation of something entrusted."
+            },
+            {
+              "t": "p",
+              "text": "Where the accused is a clerk or servant, an aggravated form applies with a heavier penalty, and it is the form that fits most employee cases."
+            },
+            {
+              "t": "example",
+              "text": "A cashier authorised to take payment from customers receives RM200 and pockets it, recording no sale. She had the money lawfully in her capacity as cashier, so this is criminal breach of trust and not theft. If instead she takes a drill from the display shelf on her way out, that is theft — the stock was in the shop's possession and she was never entrusted with it. Being a cashier does not put the whole shop in her hands."
+            },
+            {
+              "t": "caution",
+              "text": "Whether an employee has possession or mere custody of what passes through their hands is a genuine question, and the answer depends on the scope of what they were entrusted with. Argue it rather than asserting it."
+            }
+          ]
+        },
+        {
+          "h": "Cheating",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 415: whoever, by deceiving any person, fraudulently or dishonestly induces the person so deceived to deliver any property to any person, commits cheating.",
+              "source": "Penal Code, s 415"
+            },
+            {
+              "t": "p",
+              "text": "Cheating is the odd one out, because the victim consents. They hand the property over willingly. What vitiates the consent is the deception that produced it, and that is the element to establish."
+            },
+            {
+              "t": "p",
+              "text": "Where the deception induces delivery of property, the punishment section is s 420 rather than the general one — a distinction worth getting right, because charging under the wrong punishment section is a real error rather than a stylistic one."
+            }
+          ]
+        },
+        {
+          "h": "Working a mixed set of facts",
+          "body": [
+            {
+              "t": "p",
+              "text": "Problem questions in this area typically give you three or four incidents in a single narrative and invite you to label them all the same way. Take each incident separately and ask the organising question of each. The examiner is testing whether you can distinguish, not whether you can recite three definitions."
+            },
+            {
+              "t": "caution",
+              "text": "Do not forget that the same facts can support more than one charge, and that alternative charges are ordinary practice. Saying which is the better charge and why is worth more than picking one and moving on."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "The problem question gives you a cashier and three incidents on one Saturday, with an investigating officer who proposes to charge all three as theft. Only one of them is. The marks are in the reason, stated in a line: how the accused came to have the property."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [
+        "ps-property-01"
+      ],
+      "reading": [
+        {
+          "bookId": "yeo-morgan-chan-criminal-law",
+          "where": "the chapters on offences against property"
+        }
+      ],
+      "source": "Penal Code (Act 574) ss 378, 379, 405, 408, 415, 420.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read ss 378, 405, 408, 415 and 420 in a current reprint of Act 574. The classification reasoning is settled; the section numbers for the aggravated and punishment provisions are what to confirm."
+    },
+    {
+      "id": "l-formation",
+      "moduleId": "m06-contract",
+      "title": "Formation: the moment a contract exists",
+      "minutes": 25,
+      "summary": "Section 4 fixes different moments for different communications, and section 5 decides the race between acceptance and revocation.",
+      "sections": [
+        {
+          "h": "A statute, not the common law",
+          "body": [
+            {
+              "t": "p",
+              "text": "Malaysian contract law is statutory. The Contracts Act 1950 codifies formation, and it does not always match the English rules that a common law textbook will give you. Reading English contract law across without checking the Act is the most reliable way to get a Malaysian contract answer wrong."
+            },
+            {
+              "t": "p",
+              "text": "Formation is the clearest case, because the Act codifies the postal rule in a form that produces results the English cases do not."
+            }
+          ]
+        },
+        {
+          "h": "Proposal and acceptance",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 2(a): when one person signifies to another his willingness to do or to abstain from doing anything, with a view to obtaining the assent of that other, he is said to make a proposal.",
+              "source": "Contracts Act 1950, s 2(a)"
+            },
+            {
+              "t": "p",
+              "text": "The Act says proposal where an English text says offer, and promise where it says acceptance. The concepts are the same; the vocabulary should follow the statute you are working in."
+            },
+            {
+              "t": "p",
+              "text": "A proposal must be distinguished from an invitation to treat — a display of goods, an advertisement, an auction notice — which invites proposals rather than making one. That distinction is common law and carries over."
+            }
+          ]
+        },
+        {
+          "h": "When a communication is complete",
+          "body": [
+            {
+              "t": "p",
+              "text": "This is the section that decides most formation problems, and the thing to notice is that it fixes different moments depending on which communication it is and which party it is being used against. There is no single rule to apply."
+            },
+            {
+              "t": "rule",
+              "text": "Section 4(1): communication of a proposal is complete when it comes to the knowledge of the person to whom it is made.",
+              "source": "Contracts Act 1950, s 4(1)"
+            },
+            {
+              "t": "rule",
+              "text": "Section 4(2): communication of an acceptance is complete — (a) as against the proposer, when it is put in a course of transmission to him, so as to be out of the power of the acceptor; and (b) as against the acceptor, when it comes to the knowledge of the proposer.",
+              "source": "Contracts Act 1950, s 4(2)"
+            },
+            {
+              "t": "rule",
+              "text": "Section 4(3): communication of a revocation is complete — (a) as against the person who makes it, when it is put into a course of transmission; and (b) as against the person to whom it is made, when it comes to his knowledge.",
+              "source": "Contracts Act 1950, s 4(3)"
+            },
+            {
+              "t": "p",
+              "text": "Read those three together and the pattern appears. Posting is enough to bind the person the communication is aimed at only in one case: acceptance, as against the proposer. Everywhere else the section requires knowledge. That asymmetry is deliberate and it is where the marks are."
+            }
+          ]
+        },
+        {
+          "h": "Revocation, and the race",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 5(1): a proposal may be revoked at any time before the communication of its acceptance is complete as against the proposer, but not afterwards.",
+              "source": "Contracts Act 1950, s 5(1)"
+            },
+            {
+              "t": "p",
+              "text": "Combine s 5(1) with s 4(2)(a) and the deadline is precise: the proposer may revoke until the moment the acceptance is posted, and not after. Combine it with s 4(3)(b) and the revocation only reaches the acceptor when the acceptor knows of it."
+            },
+            {
+              "t": "example",
+              "text": "An offer is posted on 3 March. The offeror posts a revocation on 10 March, delivered to the offeree's office on 12 March in the afternoon but unread until 14 March. The offeree posts an acceptance at 9am on 12 March. The acceptance was complete against the proposer when posted, at 9am on 12 March. The revocation was complete against the offeree only on 14 March, when he read it. The revocation is too late and there is a contract."
+            },
+            {
+              "t": "caution",
+              "text": "Delivery is not knowledge. Section 4(3)(b) says knowledge, and a letter sitting unopened on a desk has not been communicated. This is the step most answers skip."
+            },
+            {
+              "t": "p",
+              "text": "Section 6 sets out the modes of revocation: notice, lapse of time, failure to fulfil a condition precedent, and the death or mental disorder of the proposer where that fact is known to the acceptor before acceptance."
+            }
+          ]
+        },
+        {
+          "h": "An offer held open",
+          "body": [
+            {
+              "t": "p",
+              "text": "A proposal stated to be open until a date is not thereby irrevocable. A promise to keep an offer open is itself a promise, and without consideration it does not bind."
+            },
+            {
+              "t": "rule",
+              "text": "A promise to keep an offer open for a stated period is not binding unless supported by consideration; the proposer may revoke within the period.",
+              "source": "Macon Works & Trading Sdn Bhd v Phang Hon Chin [1976] 2 MLJ 177"
+            },
+            {
+              "t": "caution",
+              "text": "Students who spot this often over-apply it. It means the offeror could have revoked in time — not that they did. Check the timing under ss 4 and 5 before concluding either way."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "The problem question is two letters crossing in the post, with both parties advancing an argument that is wrong. Working it properly means applying a different subsection to each communication rather than reaching for one rule and using it everywhere."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [
+        "ps-formation-01"
+      ],
+      "reading": [
+        {
+          "bookId": "cheong-contract-law-malaysia",
+          "where": "the chapters on offer and acceptance"
+        },
+        {
+          "bookId": "sinnadurai-law-of-contract",
+          "where": "for the fuller treatment and the case law"
+        }
+      ],
+      "source": "Contracts Act 1950 (Act 136) ss 2(a), 4, 5, 6; Macon Works & Trading Sdn Bhd v Phang Hon Chin [1976] 2 MLJ 177.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read ss 4 and 5 in a current reprint of Act 136 and check the subsection lettering against your text before quoting it. Confirm the Macon Works citation."
+    },
+    {
+      "id": "l-consideration",
+      "moduleId": "m06-contract",
+      "title": "Consideration under a statute, not the common law",
+      "minutes": 25,
+      "summary": "Section 2(d) differs from English law in two ways that decide cases, and section 26 saves three promises that would otherwise fail.",
+      "sections": [
+        {
+          "h": "Why this lesson exists",
+          "body": [
+            {
+              "t": "p",
+              "text": "Consideration is the topic where importing English law does the most damage, because the English rules are famous and the Malaysian definition is statutory and different. Two of the differences are decisive on ordinary facts, and both appear in a single sentence of the Act."
+            }
+          ]
+        },
+        {
+          "h": "The definition",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 2(d): when, at the desire of the promisor, the promisee or any other person has done or abstained from doing, or does or abstains from doing, or promises to do or to abstain from doing, something, such act or abstinence or promise is called a consideration for the promise.",
+              "source": "Contracts Act 1950, s 2(d)"
+            },
+            {
+              "t": "p",
+              "text": "Read the sentence twice and two phrases should stand out."
+            },
+            {
+              "t": "list",
+              "items": [
+                "“has done or abstained from doing” — a past act counts. English law's rule that past consideration is no consideration does not apply here.",
+                "“the promisee or any other person” — consideration need not move from the promisee. It may come from a stranger to the promise."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Kepong Prospecting is the authority usually cited for the first, the Privy Council having treated services rendered before the agreement as good consideration under s 2(d)."
+            },
+            {
+              "t": "rule",
+              "text": "Past consideration is good consideration in Malaysia, and consideration need not move from the promisee.",
+              "source": "Contracts Act 1950, s 2(d); Kepong Prospecting Ltd v Schmidt [1968] 1 MLJ 170 (PC)"
+            },
+            {
+              "t": "caution",
+              "text": "The second point does not abolish privity. Consideration may come from a stranger; a stranger to the contract still cannot sue on it. Keep the two rules apart — they are often confused, and Kepong Prospecting is cited for both."
+            },
+            {
+              "t": "p",
+              "text": "The words “at the desire of the promisor” remain a real requirement. An act done spontaneously, that nobody asked for, is not obviously consideration even though it is past — which is where s 26 becomes the safer argument."
+            }
+          ]
+        },
+        {
+          "h": "Section 26 and its three exceptions",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 26: an agreement made without consideration is void, unless — (a) it is in writing and registered, and made on account of natural love and affection between parties standing in a near relation to each other; (b) it is a promise to compensate, wholly or in part, a person who has already voluntarily done something for the promisor; or (c) it is a promise, in writing and signed by the person to be charged, to pay wholly or in part a debt of which the creditor might have enforced payment but for the law of limitation.",
+              "source": "Contracts Act 1950, s 26"
+            },
+            {
+              "t": "p",
+              "text": "Each exception has its own formality, and the formality is usually what decides the case rather than the substance."
+            },
+            {
+              "t": "list",
+              "items": [
+                "(a) needs writing AND registration. Writing alone is not enough, and this is the limb students most often fail to state fully.",
+                "(b) needs the earlier act to have been voluntary and done for the promisor. This is the safe route for the spontaneous good turn that s 2(d) leaves doubtful.",
+                "(c) needs writing signed by the person to be charged, and a debt that is time-barred rather than merely unpaid."
+              ]
+            },
+            {
+              "t": "example",
+              "text": "A neighbour returns a lost dog unasked; a week later the owner signs a note promising RM500. Section 2(d) arguably covers it as past consideration, but “at the desire of the promisor” is awkward because nobody asked. Section 26(b) covers it squarely — a promise to compensate someone who has already voluntarily done something for the promisor. Plead (b) first."
+            },
+            {
+              "t": "example",
+              "text": "A father promises RM20,000 orally, out of natural love and affection, when his daughter finishes her degree. Near relation, plainly. Natural love and affection, expressly. But nothing was written and nothing was registered, so s 26(a) is not satisfied and the promise is void."
+            },
+            {
+              "t": "caution",
+              "text": "Failing that second example on intention to create legal relations is the wrong answer with the right outcome. The Act gives you a formality; use it. Marks go to the provision, not to the conclusion."
+            }
+          ]
+        },
+        {
+          "h": "Adequacy",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Explanation 2 to s 26: an agreement is not void merely because the consideration is inadequate, but inadequacy may be taken into account in determining whether the promisor's consent was freely given.",
+              "source": "Contracts Act 1950, s 26, Explanation 2"
+            },
+            {
+              "t": "p",
+              "text": "This codifies the familiar rule that the courts do not police the bargain, with the familiar qualification that a grossly one-sided bargain is evidence of something having gone wrong in the making of it."
+            }
+          ]
+        },
+        {
+          "h": "What to do with this",
+          "body": [
+            {
+              "t": "p",
+              "text": "The problem question gives you three promises and a junior who has advised that all three fail, on grounds taken straight from an English textbook. Two of the three succeed. The exercise is noticing which of the junior's propositions is English law that the Act displaces."
+            }
+          ]
+        }
+      ],
+      "plants": [],
+      "prepares": [
+        "ps-consideration-01"
+      ],
+      "reading": [
+        {
+          "bookId": "cheong-contract-law-malaysia",
+          "where": "the chapter on consideration"
+        },
+        {
+          "bookId": "sinnadurai-law-of-contract",
+          "where": "on s 26 and the exceptions in detail"
+        }
+      ],
+      "source": "Contracts Act 1950 (Act 136) ss 2(d), 26 and Explanation 2; Kepong Prospecting Ltd v Schmidt [1968] 1 MLJ 170 (PC).",
+      "lastVerified": "2026-09-07",
+      "verify": "Read s 26 and its exceptions in a current reprint of Act 136 — the registration requirement in (a) and the exact wording of (c) are what answers turn on. Read Kepong Prospecting itself rather than a summary, since it is cited for both consideration and privity and the two are easy to run together."
+    }
+  ]
+}

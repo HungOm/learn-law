@@ -305,6 +305,63 @@ button:disabled { opacity: 0.45; cursor: default; }
   border-radius: 2px;
 }
 
+/* ---------- lessons ---------- */
+/* Exposition reads as body text; the black-letter rule is pulled out into a
+   ruled block with its source under it, the way a statute reprint sets the
+   provision apart from the annotation. */
+
+.lesson { max-width: 44rem; }
+.lesson h3 { margin-top: 2.75rem; }
+.lsec p { margin: 0 0 1.1rem; }
+.lsec-list { padding-left: 1.15rem; margin: 0 0 1.2rem; }
+.lsec-list li { margin-bottom: 0.55rem; }
+
+.ruleblock {
+  border-left: 3px solid var(--sage);
+  background: var(--raise);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.ruleblock p { margin: 0; font-size: 1.02rem; }
+.ruleblock .rb-src {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.6rem;
+}
+
+.exblock, .cautionblock {
+  border-left: 2px solid var(--rule);
+  padding: 0.15rem 0 0.15rem 1.15rem;
+  margin: 1.4rem 0;
+}
+.cautionblock { border-left-color: var(--oxide); }
+.exblock p, .cautionblock p { margin: 0; font-size: 0.97rem; }
+
+.xlabel {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 0.6rem;
+}
+.cautionblock .xlabel { color: var(--oxide); }
+
+.handoff {
+  border-top: 1px solid var(--rule);
+  margin-top: 3rem;
+  padding-top: 0.5rem;
+}
+.plantlist {
+  padding-left: 1.15rem;
+  margin: 0.75rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.plantlist li { margin-bottom: 0.35rem; }
+
 /* ---------- problem questions ---------- */
 /* The facts are set as a statute's recitals: indented, ruled at the left, so
    that what you are given is visually distinct from what you are asked. */
@@ -465,6 +522,8 @@ button:disabled { opacity: 0.45; cursor: default; }
   .arr-state { grid-column: 2; }
   .grades { grid-template-columns: repeat(2, 1fr); }
   .facts { padding-left: 1rem; }
+  .ruleblock { padding: 0.85rem 1rem; }
+  .exblock, .cautionblock { padding-left: 0.9rem; }
   .answer { min-height: 18rem; padding: 1rem; }
   .band-row { grid-template-columns: 5rem 1fr; }
   .band-num { grid-column: 2; }

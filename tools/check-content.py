@@ -11,7 +11,9 @@ the page. These are the errors that would otherwise be silent:
   * a card or problem pointing at a module that does not exist, which drops it
     out of every list without an error;
   * a problem with no `verify` line, which is the app asserting an authority it
-    has not earned.
+    has not earned;
+  * a card that no lesson introduces, or a problem no lesson prepares you for —
+    content reachable only by someone who already knew it was there.
 
 Run it after editing anything under content/:
 
@@ -26,6 +28,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 BANDS = {"issue", "rule", "application", "method", "conclusion"}
 PROBLEM_FIELDS = ["id", "moduleId", "title", "kind", "minutes", "marks", "scenario",
                   "task", "rubric", "modelAnswer", "source", "lastVerified", "verify"]
+LESSON_FIELDS = ["id", "moduleId", "title", "minutes", "summary", "sections",
+                 "source", "lastVerified", "verify"]
+BLOCKS = {"p", "rule", "example", "caution", "list"}
 CARD_FIELDS = ["id", "moduleId", "type", "front", "back", "source"]
 
 
@@ -91,6 +96,58 @@ def main():
                 if not b.get("h") or not b.get("p"):
                     errors.append(f"{where}: a model answer block is missing `h` or `p`")
 
+    lessons = 0
+    planted, prepared = {}, {}
+    for path in sorted((ROOT / "content/lessons").glob("*.json")):
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        for l in doc.get("lessons", []):
+            lessons += 1
+            where = f"{path.name}:{l.get('id', '?')}"
+            for f in LESSON_FIELDS:
+                if not l.get(f):
+                    errors.append(f"{where}: missing {f}")
+            if l["id"] in seen:
+                errors.append(f"{where}: id already used in {seen[l['id']]}")
+            seen[l["id"]] = path.name
+            if l.get("moduleId") not in modules:
+                errors.append(f"{where}: unknown module {l.get('moduleId')}")
+            for sec in l.get("sections") or []:
+                if not sec.get("h") or not sec.get("body"):
+                    errors.append(f"{where}: a section is missing `h` or `body`")
+                for b in sec.get("body") or []:
+                    if b.get("t") not in BLOCKS:
+                        errors.append(f"{where}: block type {b.get('t')!r} "
+                                      f"is not one of {sorted(BLOCKS)}")
+                    if b.get("t") == "rule" and not b.get("source"):
+                        errors.append(f"{where}: a rule block states a rule with no source")
+            for cid in l.get("plants") or []:
+                planted.setdefault(cid, []).append(l["id"])
+            for pid in l.get("prepares") or []:
+                prepared.setdefault(pid, []).append(l["id"])
+            for r in l.get("reading") or []:
+                if r.get("bookId") not in {b["id"] for b in books["books"]}:
+                    errors.append(f"{where}: unknown book {r.get('bookId')}")
+
+    # Reachability. A card nothing teaches, or a problem nothing sets up, is
+    # content that only somebody who already knew about it would ever find.
+    for path in sorted((ROOT / "content/cards").glob("*.json")):
+        for c in json.loads(path.read_text(encoding="utf-8")).get("cards", []):
+            if c["id"] not in planted:
+                errors.append(f"{c['id']}: no lesson plants this card")
+            elif len(planted[c["id"]]) > 1:
+                errors.append(f"{c['id']}: planted by {len(planted[c['id']])} lessons "
+                              f"({', '.join(planted[c['id']])})")
+    for path in sorted((ROOT / "content/problems").glob("*.json")):
+        for pr in json.loads(path.read_text(encoding="utf-8")).get("problems", []):
+            if pr["id"] not in prepared:
+                errors.append(f"{pr['id']}: no lesson prepares this problem")
+    for cid in planted:
+        if cid not in seen:
+            errors.append(f"a lesson plants {cid}, which is not a card")
+    for pid in prepared:
+        if pid not in seen:
+            errors.append(f"a lesson prepares {pid}, which is not a problem")
+
     for m in books["modules"]:
         for ref in m.get("primary", []) + m.get("reference", []):
             if ref not in {b["id"] for b in books["books"]}:
@@ -99,7 +156,7 @@ def main():
             if ref not in {s["id"] for s in books["statutes"]}:
                 errors.append(f"books.json:{m['id']}: unknown statute {ref}")
 
-    print(f"{cards} cards, {problems} problems, {len(modules)} modules")
+    print(f"{lessons} lessons, {cards} cards, {problems} problems, {len(modules)} modules")
     if errors:
         print(f"\n{len(errors)} problem{'' if len(errors) == 1 else 's'}:")
         for e in errors:

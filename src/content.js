@@ -13,31 +13,42 @@ const PROBLEM_SETS = [
   'content/problems/substantive.json',
 ];
 
+// Lessons: the exposition. Ordered here rather than sorted at runtime, because
+// the sequence within a module is pedagogical and not derivable from any field.
+const LESSON_SETS = [
+  'content/lessons/method.json',
+  'content/lessons/substantive.json',
+];
+
 let _catalogue = null;
 
 export async function load() {
   if (_catalogue) return _catalogue;
 
-  const [books, decks, sets] = await Promise.all([
+  const [books, decks, sets, lessonSets] = await Promise.all([
     fetchJSON('content/books.json'),
     Promise.all(DECKS.map(fetchJSON)),
     Promise.all(PROBLEM_SETS.map(fetchJSON)),
+    Promise.all(LESSON_SETS.map(fetchJSON)),
   ]);
 
   const cards = decks.flatMap(d => d.cards || []);
   const problems = sets.flatMap(s => s.problems || []);
+  const lessons = lessonSets.flatMap(s => s.lessons || []);
   const byId = {
     book: index(books.books),
     statute: index(books.statutes),
     module: index(books.modules),
     card: index(cards),
     problem: index(problems),
+    lesson: index(lessons),
   };
 
   const modules = books.modules.map(m => ({
     ...m,
     cardCount: cards.filter(c => c.moduleId === m.id).length,
     problems: problems.filter(p => p.moduleId === m.id),
+    lessons: lessons.filter(l => l.moduleId === m.id),
     books: [...m.primary, ...m.reference].map(id => byId.book[id]).filter(Boolean),
     statuteRefs: m.statutes.map(id => byId.statute[id]).filter(Boolean),
   }));
@@ -50,6 +61,7 @@ export async function load() {
     modules,
     cards,
     problems,
+    lessons,
     byId,
     cardTypes: decks[0]?.cardTypes || {},
     bands: sets.find(s => s.bands)?.bands || {},
