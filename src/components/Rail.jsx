@@ -10,6 +10,7 @@ const NAV = [
   { to: '/quiz',       label: 'Quizzes' },
   { to: '/problems',   label: 'Problems' },
   { to: '/cases',      label: 'Cases' },
+  { to: '/writing',    label: 'Writing' },
   { to: '/books',      label: 'Reading' },
   { to: '/progress',   label: 'Progress' },
   { to: '/seals',      label: 'Seals',    badge: 'seals' },
