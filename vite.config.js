@@ -71,11 +71,22 @@ function serviceWorker() {
 
 // `base: './'` so the built site works from a repository sub-path on GitHub
 // Pages without knowing the repository name at build time.
+// The Pages site is served straight from this branch's root, so the root has to
+// hold the BUILT site. That leaves nowhere at the root for Vite's own entry —
+// a source index.html pointing at /src/main.jsx is exactly what was being
+// published, and no browser can execute JSX. So the entry lives in app/ and the
+// build is copied to the root by tools/publish-pages.mjs.
 export default defineConfig({
   base: './',
+  root: 'app',
+  // public/ and dist/ stay where they were: the icon checker writes into
+  // public/, and both smoke.mjs and responsive.mjs serve dist/.
+  publicDir: '../public',
   plugins: [react(), serviceWorker()],
+  server: { fs: { allow: ['..'] } },
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
+    emptyOutDir: true,
     // The content JSON is imported, not fetched, so a hand-edited rule change
     // is a rebuild rather than a silent 404. Keep it in its own chunk so a
     // content edit does not invalidate the application bundle.
