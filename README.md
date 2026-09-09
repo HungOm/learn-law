@@ -6,7 +6,8 @@ There is no backend and nothing is sent anywhere.
 
 Four layers: **lessons** state the rules, **quizzes** check you recognise them,
 **cards** keep them available under FSRS, and **problem questions** find out
-whether you can use them. A game layer — XP, ranks, streaks and seals — sits on
+whether you can use them. A **glossary** of 189 terms runs underneath all four,
+linked automatically into the prose at two depths. A game layer — XP, ranks, streaks and seals — sits on
 top and counts work done. It is careful not to pretend to be a measurement; see
 [The game layer](#the-game-layer).
 
@@ -51,18 +52,30 @@ src/
     scheduler.js      FSRS wrapper — queue building, grading, intervals
     problems.js       problem attempts: drafts, self-marking, calibration
     lessons.js        lesson read-state and the links between the layers
+    glossary.js       the term index and the prose tokeniser
     quiz.js           quiz runs, arena scoring, high scores
     game.js           XP, ranks, streaks, seals — the whole game layer
     fx.js             confetti and haptics, both reduced-motion aware
     format.js         dates, clocks, pluralisation, clipboard
-  components/         Rail, Bits (rings/rows/stats), Seal, Overlays, Inline
+  components/         Rail, Bits (rings/rows/stats), Seal, Overlays
+    Term.jsx          the glossary popover, and the prose linker
+    Blocks.jsx        one lesson block — prose, table, chart, diagram, figure
+    Diagram.jsx       seven SVG diagram kinds
+    Chart.jsx         bar and stacked bar, with a table view
+    CommandPalette.jsx  Cmd-K across everything
+    CurriculumMap.jsx   sixteen rings, one per module
+    plates/           the illustration plates: kit, scenes, frame
   routes/             one file per screen
   styles/
+    tokens.css        the design system's roles (see DESIGN.md)
     base.css          the statute-reprint visual language
     game.css          rings, seals, combo meters, the level-up card
+    learn.css         glossary, lesson layout, contents rail, palette
+    plates.css        plates, diagrams, charts, tables
 content/
   books.json          reading list, statutes, modules, vendors
-  lessons/*.json      exposition — the rules, stated, with sources and quizzes
+  glossary.json       189 terms, each at two depths
+  lessons/*.json      exposition — the rules, with sources, quizzes and figures
   cards/*.json        flashcard decks
   problems/*.json     problem questions with rubrics and model answers
 vendor/
@@ -128,6 +141,72 @@ of where the right answer sat.
 tells you that you were wrong and not why has taught nothing, and the
 explanation is shown on a right answer too — being right for the wrong reason is
 the failure this layer is best placed to catch.
+
+## The glossary
+
+`content/glossary.json` holds 189 terms. Each carries three things, and the
+split is the point:
+
+- `gloss` — one line, for the popover header.
+- `intermediate` — two or three sentences, for a reader who met the word in a
+  sentence they were part-way through and wants to be let go.
+- `advanced` — the contested edges, the Malaysian departures from English law,
+  and how the point is actually argued. It is deliberately harder reading, and
+  it is out of scope for any reading-level pass.
+
+Terms are **not** marked up in the lesson content. An author writes ordinary
+prose and the linker finds the term: `src/lib/glossary.js` builds one regex from
+every alias, longest first, and a term is linked the first time it appears in a
+lesson and left alone afterwards. Linking every occurrence turns a page of
+exposition into a page of underlines, and by the fourth "consideration" the
+reader has either looked it up or decided not to.
+
+Two rules the content check enforces. An alias may be claimed by only one term,
+because a duplicate means one of the two silently never links; and a term's own
+name must be among its aliases, or the term will not link to itself.
+
+## Figures: plates, diagrams, charts and tables
+
+A lesson block may be `p`, `rule`, `example`, `caution`, `list` — or one of the
+visual types: `table`, `chart`, `diagram`, `figure`, `steps`, `compare`.
+
+**Plates** are the illustration at the head of each lesson. They are drawn, not
+sourced: original engraving-style SVG in `src/components/plates/`, composed from
+a shared motif kit. Photographs would have been the obvious answer and the wrong
+one — the app is offline-first with no CDN, and a picture whose licence nobody
+can vouch for sits badly in an app that makes every lesson name its sources.
+There are 58 scenes; every lesson names one in its `plate` field, with a
+`plateCaption` saying what it shows.
+
+**Diagrams** come in seven kinds — `hierarchy`, `flow`, `branch`, `timeline`,
+`matrix`, `stack`, `spectrum` — and re-encode a structure that is hard to hold
+in a sentence. Each needs `alt`, because a structure available only as a picture
+is a structure some readers do not get.
+
+**Charts** are deliberately few. A law lesson has very little genuinely
+quantitative content, and a chart over invented numbers would be exactly the
+authoritative-looking claim the rest of this app refuses to make. Every chart
+must carry a `source`; the content check fails the build without one. The series
+colours are the design system's `--viz-series-1..3`, capped at three, because a
+fourth categorical hue cannot be reliably separated — past three the data goes
+out as a table instead.
+
+### Anchors
+
+A figure is placed by an `anchor` key on the section it belongs to
+(`"anchor": "fig-l-courts-0"`). Do not delete one. Headings are free to be
+rewritten — that is what the anchor is for — but a section that loses its anchor
+loses its figure. Moving the key to a different section moves the figure.
+
+## Navigation
+
+- **Cmd-K** (or `/`) opens one search across lessons, modules, problems,
+  quizzes, glossary terms and the app's own pages. At 55 lessons, 25 problems
+  and 189 terms a rail cannot hold it any more.
+- Each lesson has a **contents rail** with scroll-spy, and previous/next links
+  that run in **curriculum order** rather than within the module.
+- The home page opens with a **curriculum map**: one ring per module, filled by
+  the lessons read, with a dot where cards are due.
 
 ## Adding cards
 
@@ -247,6 +326,11 @@ CSS rule cannot reach.
 FSRS-6 via [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) 5.4.2,
 vendored at `vendor/ts-fsrs.mjs`. Default desired retention 0.90.
 
+The vendored copy is upstream's `dist/index.mjs` with one line removed: the
+trailing `//# sourceMappingURL=index.mjs.map`. The map is not vendored, so
+leaving the comment made the dev server log an ENOENT on every load. Strip it
+again when re-vendoring.
+
 Press **Forgot** when you actually failed. Using **Hard** as a soft fail is the
 most common way people break FSRS — it inflates every subsequent interval.
 
@@ -273,3 +357,4 @@ What is left over is a timed answer written under supervision, and an answer
 read by someone who knows the law better than you do. Neither is a thing this
 app can supply, and no feature added to it will change that — least of all the
 XP total, which rewards showing up, a different virtue from being right.
+# learn-law
