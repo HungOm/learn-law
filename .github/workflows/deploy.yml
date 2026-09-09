@@ -46,14 +46,24 @@ jobs:
       # token this job already holds, rather than depending on someone visiting
       # a settings page. Non-fatal: if the token is refused, say so plainly and
       # let the deploy step report the rest.
+      # Plain curl against the REST API with the token this job already holds —
+      # no CLI to install, authenticate or trust. 409 means it is already on
+      # the Actions source, which is a success for our purposes.
       - name: Put Pages on the Actions source
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          if gh api -X PUT "repos/${{ github.repository }}/pages" -f build_type=workflow; then
-            echo "Pages source is now GitHub Actions."
+          code=$(curl -sS -o /tmp/pages.json -w '%{http_code}' \
+            -X PUT \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ github.token }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/pages" \
+            -d '{"build_type":"workflow"}')
+          echo "PUT /pages -> $code"
+          cat /tmp/pages.json || true
+          if [ "$code" = "204" ] || [ "$code" = "200" ] || [ "$code" = "409" ]; then
+            echo "Pages source is GitHub Actions."
           else
-            echo "::warning::Could not switch the Pages source. Set Settings -> Pages -> Source to 'GitHub Actions' by hand."
+            echo "::warning::Could not switch the Pages source (HTTP $code). Set Settings -> Pages -> Source to 'GitHub Actions' by hand."
           fi
 
       - uses: actions/configure-pages@v5
