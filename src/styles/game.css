@@ -1,81 +1,194 @@
-/* The game layer's visual language.
-   The rest of the app is set like a statute reprint, and this does not abandon
-   that: the seals are registry stamps, the rank ladder is a marginal number
-   column, and the only saturated colour is the gold reserved for a thing you
-   have actually finished. Motion is where the play lives, not decoration. */
+/* Warta — the game layer.
+ *
+ * The rest of the app is set like a statute reprint, and this does not abandon
+ * that: the seals are registry stamps, the rank ladder is a marginal number
+ * column, and the only saturated colour is the gold reserved for a thing you
+ * have actually finished. Motion is where the play lives, not decoration.
+ *
+ * Two conventions in this file, both deliberate:
+ *
+ *  - Legacy colour-named state classes (.is-sage, .is-oxide, .is-gold) are
+ *    dual-selected alongside semantic ones (.is-correct, .is-wrong,
+ *    .is-mastery) so routes can migrate without a flag day. Write the semantic
+ *    name in anything new; .is-sage stops being true the moment a colour is
+ *    retuned, which is exactly what happened to it.
+ *  - Gold means earned. It is not an emphasis colour and not a decoration. If
+ *    a thing has not been finished by the learner, it is not gold.
+ */
 
-/* ---------- rail: rank, XP, meters ---------- */
+/* No `@import './tokens.css'` here, and that is a fix rather than an omission.
+   See the note in interactive.css: each @import inlines another unconditional
+   `:root { --rail-width: 15rem }`, and this file is imported after base.css, so
+   its copy landed after base.css's responsive overrides and silently undid all
+   three of them. main.jsx imports tokens.css first, so every token here still
+   resolves and lint rule 7 still finds the file reachable. */
+
+/* ---------- the breakpoint ladder ----------
+ *
+ * Everything below is written phone-first: the rules outside a media query are
+ * the phone, and each step up adds room rather than taking it away. There is
+ * one narrow-only block, at the head of the ladder, for the handful of things
+ * that are removed rather than resized on a small screen — a rule that takes
+ * something away cannot be written as a step upward.
+ *
+ *   (base)        up to 600    phone
+ *   >= 601        601-780      large phone, small tablet — the rail is still a
+ *                              horizontal strip across the top (base.css)
+ *   >= 781        781-1023     tablet — the rail becomes a sidebar, so the
+ *                              content pane loses --rail-width of its width
+ *   >= 1024       1024-1439    laptop — the map goes to two rows of eight and
+ *                              the layer cards to 3 + 2
+ *   >= 1440       1440-1799    desktop — the first width at which the hero and
+ *                              the day's card side by side is an improvement
+ *   >= 1800       1800+        wide — the shell stops growing at --shell-max,
+ *                              so this step spends the last of the room on air
+ *
+ * No component needs all six. Each one needs enough of them that there is no
+ * width at which it looks like it was designed for the width either side.
+ */
+
+/* ---------- rail: rank, XP, meters ----------
+ *
+ * The rank plate is the first thing in the rail and the only place that says,
+ * in one glance, how far the learner has come. It used to be a stack of four
+ * form rows; it is now one plate — disc, title, meter, line — with the two
+ * counters ruled off underneath as a pair.
+ */
 
 .rankbox {
-  border: 1px solid var(--rule);
-  background: var(--raise);
-  border-radius: 3px;
-  padding: 0.85rem 0.9rem 0.75rem;
-  margin: 0 0 1.75rem;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  /* Raised at the top, settling into the sunk surface at the bottom. It is
+     surface modelling, not colour: the plate has to read as an object in the
+     rail without a shadow, and a reprint does not use shadow on a card. */
+  background: linear-gradient(
+    180deg,
+    var(--surface-raised),
+    color-mix(in srgb, var(--surface-sunk) 60%, var(--surface-raised))
+  );
+  padding: var(--space-4);
+  margin: 0 0 var(--space-5);
 }
 
-.rankbox-head { display: flex; gap: 0.65rem; align-items: center; }
+.rankbox-head { display: flex; gap: var(--space-3); align-items: center; }
+.rankbox-head > span:last-child { min-width: 0; }
 
+/* Gold, and legitimately: a rank is a thing the learner has finished earning.
+   The same disc appears on the level-up crest (.levelup-num) meaning the same
+   thing, which is why the two are built alike. */
 .rank-level {
   flex: 0 0 auto;
-  width: 2rem; height: 2rem;
+  width: 2.25rem; height: 2.25rem;
   display: grid; place-items: center;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  border-radius: 50%;
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  font-weight: 600;
+  border: 2px solid var(--signal-mastery);
+  background: var(--fill-mastery);
+  color: var(--signal-mastery-text);
+  border-radius: var(--radius-circle);
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  font-weight: var(--weight-semi);
   font-variant-numeric: tabular-nums;
 }
 
-.rank-title { display: block; font-weight: 600; font-size: 0.86rem; line-height: 1.2; }
-.rank-xp { display: block; color: var(--muted); font-size: 0.74rem; font-variant-numeric: tabular-nums; }
+.rank-title {
+  display: block;
+  font-weight: var(--weight-semi);
+  font-size: var(--type-base);
+  line-height: var(--leading-tight);
+  color: var(--text-strong);
+}
+.rank-xp {
+  display: block;
+  color: var(--text-secondary);
+  font-size: var(--type-xs);
+  font-variant-numeric: tabular-nums;
+  margin-top: var(--space-1);
+}
 
+/* A meter track is information, not decoration — an empty bar and a full one
+   differ only by this line — so the track sits at the 3:1 non-text floor. */
 .xpbar {
-  height: 5px;
-  background: var(--rule);
-  border-radius: 3px;
+  height: 6px;
+  background: var(--border-strong);
+  border-radius: var(--radius-pill);
   overflow: hidden;
-  margin: 0.7rem 0 0.4rem;
+  margin: var(--space-4) 0 var(--space-2);
 }
 .xpbar i {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, var(--sage), var(--gold));
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--signal-correct), var(--signal-mastery));
 }
 
-.rank-next { font-size: 0.72rem; color: var(--muted); margin: 0; line-height: 1.4; }
+.rank-next {
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: var(--leading-base);
+}
+.rank-next strong { color: var(--text-strong); font-weight: var(--weight-semi); }
 
+/* Two counters, ruled off and given equal width, so they read as a pair of
+   readings rather than as two stray fields on a form. */
 .rail-meters {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.7rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid var(--rule);
-  font-size: 0.72rem;
-  color: var(--muted);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  align-items: center;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
   font-variant-numeric: tabular-nums;
 }
-.meter { display: inline-flex; align-items: center; gap: 0.3rem; }
-.meter.is-live { color: var(--oxide); }
-.meter.is-done { color: var(--sage); }
-.meter-bar { width: 2.2rem; height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden; }
-.meter-bar i { display: block; height: 100%; background: currentColor; }
+.meter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  transition: color var(--dur-base) var(--ease-out);
+}
+.meter.is-live { color: var(--signal-wrong-text); }
+.meter.is-done { color: var(--signal-correct-text); }
+.meter-bar {
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  height: 4px;
+  background: var(--border-strong);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.meter-bar i {
+  display: block; height: 100%;
+  background: currentColor;
+  border-radius: var(--radius-pill);
+}
 
-.flame { fill: var(--rule); }
-.flame.is-lit { fill: var(--oxide); }
+.flame { fill: var(--border-strong); transition: fill var(--dur-base) var(--ease-out); }
+.flame.is-lit { fill: var(--signal-wrong); }
 
-.rail nav a { align-items: center; }
-.badge-unread { color: var(--muted); font-weight: 400; }
-.badge-seals { color: var(--gold); }
+/* The nav rows. base.css builds them; this adds the state that makes a sidebar
+   feel like a sidebar rather than a list — see the >= 781 step for the marker
+   that only makes sense once the rail is a column. */
+.rail nav a {
+  position: relative;
+  align-items: center;
+  transition:
+    background-color var(--dur-instant) var(--ease-out),
+    color var(--dur-instant) var(--ease-out),
+    transform var(--dur-quick) var(--ease-out);
+}
+.badge-unread { color: var(--text-secondary); font-weight: var(--weight-regular); }
+.badge-seals { color: var(--signal-mastery-text); }
 
 .rail-foot {
-  margin-top: 1.75rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-  font-size: 0.72rem;
-  line-height: 1.45;
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  font-size: var(--type-xs);
+  line-height: var(--leading-base);
 }
 
 /* ---------- rings ---------- */
@@ -84,87 +197,452 @@
 .ring-face {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  font-family: var(--sans);
-  line-height: 1.1;
+  font-family: var(--font-sans);
+  line-height: var(--leading-tight);
 }
-.ring-label { font-size: 1.35rem; font-weight: 600; font-variant-numeric: tabular-nums; }
-.ring-sub { font-size: 0.66rem; color: var(--muted); margin-top: 0.15rem; text-align: center; }
+.ring-label {
+  font-size: var(--type-xl);
+  font-weight: var(--weight-semi);
+  font-variant-numeric: tabular-nums;
+}
+.ring-sub {
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+  text-align: center;
+}
 
-/* ---------- home ---------- */
+/* ---------- home ----------
+ *
+ * .home-top is the grid the hero and the "today" card share. It is a single
+ * column until there is genuinely room for two (>= 1024), because the hero is
+ * the flagship and a half-width flagship on a laptop is worse than a full-width
+ * one. Both children keep working standalone if the route does not render the
+ * wrapper — the wrapper only zeroes the margins it takes over.
+ */
 
+.home-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+/* The hero. It carries the learner's own state — rank, today's goal, the three
+   things they can do next — so it is the one card on the page allowed to take
+   room. Presence comes from size, air and a modelled surface rather than from
+   colour or shadow: a reprint is flat, and the only saturated colour in reach
+   is the gold that means earned. */
 .hero {
+  position: relative;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
   align-items: center;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  background: var(--raise);
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.75rem;
+  text-align: center;
+  gap: var(--space-4);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    180deg,
+    var(--surface-raised),
+    color-mix(in srgb, var(--surface-sunk) 35%, var(--surface-raised))
+  );
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
 }
+
+/* A plate behind the ring, so the ring reads as set into the card rather than
+   floating on it. Painted before the SVG in DOM order, so it stays underneath
+   without a z-index. */
+.hero .ring::before {
+  content: '';
+  position: absolute;
+  inset: calc(var(--space-3) * -1);
+  border-radius: var(--radius-circle);
+  background: color-mix(in srgb, var(--surface-sunk) 70%, transparent);
+}
+
 .hero-body { min-width: 0; }
-.hero-rank { font-family: var(--sans); font-size: 0.78rem; color: var(--muted); margin: 0 0 0.3rem; }
-.hero-line { margin: 0 0 0.9rem; }
+
+/* Set as a kicker, not a sentence: it is a standing label on the card, and at
+   sentence weight it competed with the line under it. Short, uppercase, which
+   is the one thing --type-2xs is for. */
+.hero-rank {
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  font-weight: var(--weight-semi);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-2);
+}
+.hero-rank strong { color: var(--text-strong); font-weight: var(--weight-bold); }
+
+.hero-line {
+  font-size: var(--type-body);
+  line-height: var(--leading-snug);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-4);
+}
+
+/* The hero's controls are the primary controls of the whole app, so they clear
+   the tap floor with room to spare and fill the width on a phone. */
+.hero .btn-row { justify-content: center; width: 100%; }
+.hero .btn {
+  min-height: calc(var(--tap-min) + var(--space-1));
+  padding: var(--space-2) var(--space-5);
+  transition:
+    border-color var(--dur-instant) var(--ease-out),
+    background-color var(--dur-instant) var(--ease-out),
+    transform var(--dur-quick) var(--ease-out);
+}
+.hero .btn:active { transform: translateY(1px); }
+
+/* Declared after .hero so it actually wins: the wrapper owns the spacing
+   between the two cards once it is the thing laying them out. */
+.home-top > * { margin-bottom: 0; }
 
 .minibar {
   display: block;
   height: 3px;
   width: 100%;
   max-width: 12rem;
-  background: var(--rule);
-  border-radius: 2px;
-  margin-top: 0.4rem;
+  background: var(--border-strong);
+  border-radius: var(--radius-pill);
+  margin-top: var(--space-1);
   overflow: hidden;
 }
-.minibar i { display: block; height: 100%; background: var(--sage); }
+.minibar i { display: block; height: 100%; background: var(--signal-correct); }
 
+/* Five cards, and the count is load-bearing: auto-fit left them as four and a
+   stranded fifth at most laptop widths. The steps in the ladder below set the
+   spans explicitly so every row is full — 1 up, then 2+2+1-across, then 3+2,
+   then 5 in a row. If a sixth layer is ever added, those spans are what has to
+   be retuned. */
 .layer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 0.75rem;
-  margin-top: 2.5rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-6);
 }
 .layer-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  background: var(--raise);
-  padding: 1rem 1.1rem;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  padding: var(--space-4);
   text-decoration: none;
+  transition:
+    border-color var(--dur-quick) var(--ease-out),
+    background-color var(--dur-quick) var(--ease-out),
+    transform var(--dur-instant) var(--ease-out);
 }
-.layer-card:hover { border-color: var(--ink); }
+/* The affordance: a rule that draws itself along the foot of the card. It is a
+   scaled transform, not a width, so it is composited and cannot reflow the
+   grid it sits in. */
+.layer-card::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: var(--line-marker);
+  background: var(--border-active);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform var(--dur-quick) var(--ease-out);
+}
+.layer-card:hover,
+.layer-card:focus-visible {
+  border-color: var(--border-active);
+  background: color-mix(in srgb, var(--surface-sunk) 55%, var(--surface-raised));
+}
+.layer-card:hover::after,
+.layer-card:focus-visible::after { transform: scaleX(1); }
+/* Pressed: the card takes the press itself. The lift on hover belongs to the
+   wrapper (framer-motion), so the two never fight over one transform. */
+.layer-card:active { transform: translateY(1px); }
+
 .layer-n {
-  font-family: var(--sans); font-size: 1.5rem; font-weight: 500;
-  font-variant-numeric: tabular-nums; line-height: 1;
+  font-family: var(--font-sans);
+  font-size: var(--type-xl);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: var(--text-strong);
 }
-.layer-title { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; margin: 0.35rem 0 0.4rem; }
-.layer-body { font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+.layer-title {
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  font-weight: var(--weight-semi);
+  margin: var(--space-1) 0 var(--space-2);
+}
+.layer-body { font-size: var(--type-base); color: var(--text-secondary); line-height: var(--leading-base); }
+
+/* ---------- the curriculum map ----------
+ *
+ * Sixteen module nodes. The map used to be one 58rem row inside a 68ch column
+ * with `overflow-x: auto`, which on every screen in the world meant a reader
+ * saw six modules and had to discover a horizontal scrollbar to learn that the
+ * other ten existed. A curriculum that answers "where am I" cannot be the one
+ * thing on the page you have to scroll sideways to see.
+ *
+ * So it wraps instead: a grid that reflows to the width it is given, ending as
+ * two clean rows of eight on a laptop and wider. Nothing is ever truncated and
+ * nothing scrolls.
+ *
+ * The map answers to its own width and not to the window's, which is why it is
+ * the one component here on container queries rather than on the ladder. The
+ * pane it sits in is set by the shell — a rail appears at 781, the gutters
+ * grow with the viewport, and another session may retune either — so a
+ * viewport breakpoint is a guess about how much room the map got. Measured on
+ * the guess: at 1024 the eight-column rule fired into a 652px pane and made
+ * every node 59px wide, narrower than the four-column state 1px below it. A
+ * component that gets worse as the screen grows is a component being asked the
+ * wrong question.
+ *
+ * Where container queries are unsupported the base rule stands and the map is
+ * four across at every width, which is correct, just not optimal.
+ *
+ * Cascade note: .mapwrap/.maprow/.mapnode are declared in learn.css, which is
+ * imported AFTER this file, so these selectors are doubled to win on
+ * specificity rather than on order. When the map block moves out of learn.css,
+ * the doubling comes out with it.
+ */
+
+.mapwrap.mapwrap {
+  container: warta-map / inline-size;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--surface-sunk);
+  padding: var(--space-3);
+  margin-bottom: var(--space-6);
+  /* It wraps now, so there is nothing to clip — and a scroll container would
+     crop the hover lift off the top row. */
+  overflow: visible;
+}
+
+/* Four across, then eight. Sixteen modules divide by both, so the last row is
+   never a stranded one or two — which is what a fluid `auto-fit` gave at most
+   widths (5 + 5 + 5 + 1 on a tablet, measured). The count is fixed and the
+   nodes take whatever width the pane has; a plate that grows is better than a
+   row that ends badly. */
+.maprow.maprow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-1);
+  min-width: 0;
+}
+/* A grid child will not shrink below its content unless told to, so the
+   wrappers need this or a long module name widens its whole column. It used to
+   carry !important, to outrank an inline min-width: 5.75rem that
+   CurriculumMap.jsx put on each wrapper — an inline style being the one thing
+   a stylesheet cannot outrank. That inline style is gone, so the !important
+   went with it. */
+.maprow.maprow > * { min-width: 0; }
+
+.mapnode.mapnode {
+  /* The node is a grid child of a wrapper, not of the grid, so it has to be
+     told to fill the row height its wrapper was stretched to — otherwise a
+     two-line module name leaves the plate beside it visibly short. */
+  height: 100%;
+  min-width: var(--tap-min);
+  min-height: var(--tap-min);
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-1);
+  border: var(--line-hairline) solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  transition:
+    background-color var(--dur-quick) var(--ease-out),
+    border-color var(--dur-quick) var(--ease-out),
+    transform var(--dur-quick) var(--ease-out);
+}
+.mapnode.mapnode:hover,
+.mapnode.mapnode:focus-visible {
+  border-color: var(--border-active);
+  transform: translateY(-2px);
+}
+.mapnode.mapnode:active { transform: translateY(0); }
+
+/* Module identity, per DESIGN.md 2.9. The colour is reinforcement and the name
+   is the identifier — .mapnode-label is directly under every one of these, so
+   a reader who cannot separate two tints has lost nothing.
+   Body text on the softest tint measures 12.8:1, module ink on its own tint
+   6.1:1 (light) / 7.2:1 (dark), so both are above their floors.
+   The progress arc is deliberately NOT recoloured: it is a quantity, and green
+   for "in good standing" / gold for "finished" is the app's language for that
+   everywhere else. Identity is carried by the plate and the numeral. */
+.mapnode[data-module] { background: var(--module-tint); }
+.mapnode[data-module] .mapnode-n { color: var(--module-ink); }
+/* The plate keeps its tint on hover — learn.css washes the node to
+   --surface-raised, which would drop the module's colour at exactly the moment
+   the reader is pointing at it. The hover cue is the ink border and the lift;
+   deepening the tint instead was measured and rejected, because 12% of the ink
+   mixed in takes the label to 4.8:1 and the ring track to 2.6:1, under both
+   floors. */
+.mapnode[data-module]:hover,
+.mapnode[data-module]:focus-visible {
+  background: var(--module-tint);
+  border-color: var(--module-ink);
+}
+
+/* ---- the node's own structure ----
+   These were in learn.css and came out with the duplicate map block. The
+   rebuild above redeclared the wrapper, the row and the node's box, and left
+   these behind — so the ring, the track and the arc had no rules at all, which
+   in SVG does not fail loudly: an unstyled <circle> is a solid BLACK disc,
+   because `fill` defaults to black and `stroke` to none. The map rendered as
+   sixteen filled circles with their labels overlapping.
+
+   Worth stating plainly, because it is the reason this happened: deleting a
+   duplicate is only safe when the survivor is complete, and "game.css declares
+   .mapwrap, .maprow and .mapnode" was checked while "game.css declares
+   everything learn.css did" was assumed. Two files declaring the same
+   selectors is not the same as two files declaring the same rules.
+
+   Single selectors, not doubled: the doubling upstream exists only to outrank
+   learn.css's copy, and there is no longer a copy to outrank. */
+
+.mapnode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.mapnode-ring { position: relative; flex: none; }
+.mapnode-ring.mapnode-ring { width: 2.5rem; height: 2.5rem; }
+/* Rotated so the arc starts at twelve o'clock. The stroke is drawn on a
+   48-unit box, so 4 units is a 4/48 ring at whatever size the container
+   query settles on — it scales with the ring rather than needing a step. */
+.mapnode-ring svg { display: block; width: 100%; height: 100%; transform: rotate(-90deg); }
+
+/* A meter track is information, not decoration: an empty ring and a full one
+   differ only by this line, so it takes --border-strong and clears the 3:1
+   non-text floor. --border-hairline here would be 1.4:1. DESIGN.md 2.4. */
+.mapnode-track { fill: none; stroke: var(--border-strong); stroke-width: 4; }
+/* Green while filling, gold when the module is finished — the app's language
+   for a quantity in good standing, and for something earned. Deliberately not
+   recoloured per module: see the note above. */
+.mapnode-arc {
+  fill: none;
+  stroke: var(--signal-correct);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.mapnode-arc.is-full { stroke: var(--signal-mastery); }
+
+/* The numeral sits inside the ring, centred on it. */
+.mapnode-n {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+.mapnode-label {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  line-height: var(--leading-snug);
+  color: var(--text-primary);
+}
+
+/* Work due is set in the heaviest ink and made semibold, never in the verdict
+   red — a queue is an invitation, not a correction. DESIGN.md 2.6. */
+.mapnode.is-due .mapnode-label {
+  color: var(--text-strong);
+  font-weight: var(--weight-semi);
+}
+
+/* Module names are set for a page heading, and short() only trims the front of
+   them: "Interpretation" is a single 14-character word that has to fit a
+   column narrower than itself. Breaking it beats overflowing the plate. */
+.mapnode-label.mapnode-label { overflow-wrap: break-word; }
+
+/* A due module is marked by ink and weight on its label (learn.css) and by
+   this pip. Never by the verdict red: a queue of work is an invitation, not a
+   correction — DESIGN.md 2.6. --state-attention is 17.8:1 on light and 15.9:1
+   on dark, which is the loudest a 8px dot can be. */
+.mapnode-dot.mapnode-dot {
+  /* Pushed to the foot of the plate so the pips line up across a row instead
+     of riding up and down with one- and two-line module names. */
+  margin-top: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-circle);
+  background: var(--state-attention);
+}
+
+/* The map's own steps. Each threshold is the width at which the next state is
+   actually better, worked back from the node it produces:
+
+     26rem  four across gives a ~98px node — room for a bigger ring
+     34rem  ~130px — the ring can take its full size
+     56rem  eight across still gives ~100px, so two rows of eight beat four
+            rows of four; below this it would be narrower, not wider
+     68rem  ~125px at eight across — the last step is air, not size
+
+   Sixteen divides by four and by eight, so no arrangement here ends in a
+   stranded row. .mapwrap's own padding cannot live in these blocks: an element
+   is not a descendant of itself, so it stays on the viewport ladder below. */
+
+@container warta-map (min-width: 26rem) {
+  .maprow.maprow { gap: var(--space-2); }
+  .mapnode-ring.mapnode-ring { width: 2.75rem; height: 2.75rem; }
+}
+@container warta-map (min-width: 34rem) {
+  .mapnode-ring.mapnode-ring { width: 3.25rem; height: 3.25rem; }
+  .mapnode.mapnode { padding: var(--space-4) var(--space-2); }
+}
+@container warta-map (min-width: 56rem) {
+  .maprow.maprow { grid-template-columns: repeat(8, minmax(0, 1fr)); gap: var(--space-3); }
+}
+@container warta-map (min-width: 68rem) {
+  .maprow.maprow { gap: var(--space-4); }
+  .mapnode-ring.mapnode-ring { width: 3.5rem; height: 3.5rem; }
+}
 
 .bigbar {
   position: relative;
   height: 10px;
-  background: var(--rule);
-  border-radius: 5px;
-  margin: 0 0 2rem;
+  background: var(--border-strong);
+  border-radius: var(--radius-pill);
+  margin: 0 0 var(--space-6);
 }
 .bigbar i {
   display: block; height: 100%;
-  background: linear-gradient(90deg, var(--sage), var(--gold));
-  border-radius: 5px;
-  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  background: linear-gradient(90deg, var(--signal-correct), var(--signal-mastery));
+  border-radius: var(--radius-pill);
+  transition: width var(--dur-slow) var(--ease-out);
 }
 .bigbar span {
   position: absolute; right: 0; top: 14px;
-  font-family: var(--sans); font-size: 0.72rem; color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
 }
 
 /* ---------- shared progress bar ---------- */
 
-.qbar { height: 4px; background: var(--rule); border-radius: 2px; margin: 0 0 1.5rem; overflow: hidden; }
-.qbar i { display: block; height: 100%; background: var(--sage); }
-.qbar i.is-over { background: var(--oxide); }
+.qbar {
+  height: 4px;
+  background: var(--border-strong);
+  border-radius: var(--radius-pill);
+  margin: 0 0 var(--space-5);
+  overflow: hidden;
+}
+.qbar i { display: block; height: 100%; background: var(--signal-correct); }
+.qbar i.is-over { background: var(--signal-wrong); }
 
 /* ---------- review: flip card, combo, XP ---------- */
 
@@ -172,22 +650,22 @@
 
 .combo { height: 2.4rem; display: flex; justify-content: center; align-items: center; }
 .combo-pill {
-  display: inline-flex; align-items: baseline; gap: 0.4rem;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  padding: 0.25rem 0.85rem;
-  font-family: var(--sans);
-  background: var(--raise);
+  display: inline-flex; align-items: baseline; gap: var(--space-1);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-sans);
+  background: var(--surface-raised);
 }
-.combo-n { font-size: 1rem; font-weight: 600; font-variant-numeric: tabular-nums; }
-.combo-k { font-size: 0.7rem; color: var(--muted); }
-.combo-pill.is-hot { border-color: var(--gold); color: var(--gold); }
-.combo-pill.is-hot .combo-k { color: var(--gold); opacity: 0.8; }
+.combo-n { font-size: var(--type-base); font-weight: var(--weight-semi); font-variant-numeric: tabular-nums; }
+.combo-k { font-size: var(--type-xs); color: var(--text-secondary); }
+.combo-pill.is-hot { border-color: var(--signal-mastery); color: var(--signal-mastery-text); }
+.combo-pill.is-hot .combo-k { color: var(--signal-mastery-text); }
 .combo-pill.is-blaze {
-  border-color: var(--oxide); color: var(--oxide);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--oxide) 12%, transparent);
+  border-color: var(--signal-wrong); color: var(--signal-wrong-text);
+  box-shadow: 0 0 0 4px var(--fill-wrong);
 }
-.combo-pill.is-blaze .combo-k { color: var(--oxide); opacity: 0.8; }
+.combo-pill.is-blaze .combo-k { color: var(--signal-wrong-text); }
 
 .flipwrap { perspective: 1400px; min-height: 15rem; }
 .flipcard {
@@ -198,94 +676,103 @@
 .flip-face {
   position: absolute; inset: 0;
   backface-visibility: hidden;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background: var(--raise);
-  padding: 1.75rem 1.9rem;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  padding: var(--space-5);
   display: flex; flex-direction: column;
 }
 .flip-back { transform: rotateX(180deg); }
 
-.card-back-text { font-size: 1.12rem; line-height: 1.55; margin: 0 0 1rem; }
+.card-back-text { font-size: var(--type-body); line-height: var(--leading-base); margin: 0 0 var(--space-4); }
 .flip-front .card-front { flex: 1 1 auto; }
 .flip-front .keyhint { margin-top: auto; margin-bottom: 0; }
 .flip-back .card-source { margin-top: auto; }
 
-.review-actions { position: relative; margin-top: 2rem; }
+.review-actions { position: relative; margin-top: var(--space-6); }
 
-.btn-big { font-size: 1rem; padding: 0.75rem 1.9rem; }
+.btn-big { font-size: var(--type-body); padding: var(--space-3) var(--space-6); }
 
-.grade { position: relative; padding-top: 1.4rem; }
+.grade { position: relative; padding-top: var(--space-5); }
 .g-num {
-  position: absolute; top: 0.35rem; left: 0.5rem;
-  font-size: 0.62rem; color: var(--muted);
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  padding: 0 0.25rem;
+  position: absolute; top: var(--space-1); left: var(--space-2);
+  font-size: var(--type-xs); color: var(--text-secondary);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: 0 var(--space-1);
 }
 
 .xp-float {
   position: absolute;
   left: 50%; top: 0;
   transform: translateX(-50%);
-  font-family: var(--sans);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--sage);
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  font-weight: var(--weight-semi);
+  color: var(--signal-correct-text);
   pointer-events: none;
-  text-shadow: 0 1px 0 var(--paper);
 }
 
 /* A quick wash of colour across the whole screen: green for a hit, oxide for a
-   miss. Short enough not to be a transition, long enough to be felt. */
+   miss. Short enough not to be a transition, long enough to be felt. It is a
+   second cue on top of the flip-card verdict, never the only one. */
 .review.flash-hit::after,
 .review.flash-miss::after {
   content: '';
   position: fixed; inset: 0;
   pointer-events: none;
-  animation: wash 320ms ease-out;
+  animation: wash var(--dur-base) ease-out;
 }
-.review.flash-hit::after  { background: radial-gradient(circle at 50% 55%, color-mix(in srgb, var(--sage) 22%, transparent), transparent 65%); }
-.review.flash-miss::after { background: radial-gradient(circle at 50% 55%, color-mix(in srgb, var(--oxide) 22%, transparent), transparent 65%); }
+.review.flash-hit::after  { background: radial-gradient(circle at 50% 55%, color-mix(in srgb, var(--signal-correct) 22%, transparent), transparent 65%); }
+.review.flash-miss::after { background: radial-gradient(circle at 50% 55%, color-mix(in srgb, var(--signal-wrong) 22%, transparent), transparent 65%); }
 @keyframes wash { from { opacity: 1; } to { opacity: 0; } }
 
 .xp-banner {
-  display: flex; align-items: baseline; gap: 0.6rem;
-  border: 1px solid var(--gold);
-  border-left-width: 3px;
-  border-radius: 3px;
-  padding: 0.9rem 1.2rem;
-  margin: 1.5rem 0;
-  background: var(--raise);
+  display: flex; align-items: baseline; gap: var(--space-3);
+  border: var(--line-hairline) solid var(--signal-mastery);
+  border-left-width: var(--line-marker);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin: var(--space-5) 0;
+  background: var(--surface-raised);
 }
 .xp-banner-n {
-  font-family: var(--sans); font-size: 1.9rem; font-weight: 600;
-  color: var(--gold); font-variant-numeric: tabular-nums; line-height: 1;
+  font-family: var(--font-sans);
+  font-size: var(--type-2xl);
+  font-weight: var(--weight-semi);
+  color: var(--signal-mastery-text);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
-.xp-banner-k { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
+.xp-banner-k { font-family: var(--font-sans); font-size: var(--type-sm); color: var(--text-secondary); }
 
-.stat.is-oxide .n { color: var(--oxide); }
-.stat.is-sage .n  { color: var(--sage); }
-.stat.is-gold .n  { color: var(--gold); }
+/* Legacy colour-named state classes, dual-selected with the semantic ones. */
+/* These numerals are 26px, which WCAG counts as large text at 3:1, so the plain
+   signals would be legal here. They use the -text variants anyway: a stat is
+   read, not glanced at, and this readership is the reason the whole palette
+   targets AAA for things people read. */
+.stat.is-oxide .n, .stat.is-wrong .n   { color: var(--signal-wrong-text); }
+.stat.is-sage .n,  .stat.is-correct .n { color: var(--signal-correct-text); }
+.stat.is-gold .n,  .stat.is-mastery .n { color: var(--signal-mastery-text); }
 
 /* ---------- lessons ---------- */
 
 .readbar {
   position: fixed; top: 0; left: 0; right: 0;
   height: 3px;
-  background: var(--sage);
+  background: var(--signal-correct);
   transform-origin: 0 50%;
   z-index: 5;
 }
 
 .quiz-invite {
-  display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;
-  border: 1px solid var(--sage);
-  border-left-width: 3px;
-  border-radius: 3px;
-  background: var(--raise);
-  padding: 1.25rem 1.5rem;
-  margin: 2.5rem 0 0;
+  display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap;
+  border: var(--line-hairline) solid var(--signal-correct);
+  border-left-width: var(--line-marker);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  padding: var(--space-4) var(--space-5);
+  margin: var(--space-6) 0 0;
 }
 .quiz-invite > div { flex: 1 1 18rem; }
 .quiz-invite p:last-child { margin-bottom: 0; }
@@ -293,131 +780,195 @@
 /* ---------- quizzes ---------- */
 
 .arena-card {
-  display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;
-  border: 1px solid var(--ink);
-  border-radius: 4px;
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.75rem;
-  background:
-    linear-gradient(120deg, color-mix(in srgb, var(--gold) 9%, transparent), transparent 60%),
-    var(--raise);
+  display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap;
+  border: var(--line-hairline) solid var(--border-active);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
+  background: var(--fill-mastery);
 }
 .arena-card-body { flex: 1 1 20rem; }
-.arena-card-body p { margin-bottom: 0.5rem; }
+.arena-card-body p { margin-bottom: var(--space-2); }
 .arena-kicker {
-  font-family: var(--sans); font-size: 0.66rem; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  font-weight: var(--weight-semi);
+  text-transform: uppercase;
+  color: var(--signal-mastery-text);
 }
-.arena-title { font-family: var(--serif); font-size: 1.3rem; margin: 0.2rem 0 0.6rem; }
+.arena-title { font-family: var(--font-serif); font-size: var(--type-xl); margin: var(--space-1) 0 var(--space-2); }
 
 .quiz-hud {
-  display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;
-  margin-bottom: 1.75rem;
+  display: flex; gap: var(--space-2); align-items: center; flex-wrap: wrap;
+  margin-bottom: var(--space-5);
 }
 .hud-pill {
-  font-family: var(--sans); font-size: 0.74rem;
-  border: 1px solid var(--rule); border-radius: 999px;
-  padding: 0.2rem 0.7rem;
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
   font-variant-numeric: tabular-nums;
-  background: var(--raise);
+  background: var(--surface-raised);
 }
-.hud-xp { color: var(--sage); border-color: color-mix(in srgb, var(--sage) 45%, var(--rule)); }
-.hud-streak { color: var(--ink); }
-.hud-streak.is-hot { color: var(--gold); border-color: var(--gold); }
+.hud-xp { color: var(--signal-correct-text); border-color: var(--signal-correct); }
+.hud-streak { color: var(--text-primary); }
+.hud-streak.is-hot { color: var(--signal-mastery-text); border-color: var(--signal-mastery); }
 .hud-streak.is-blaze {
-  color: var(--oxide); border-color: var(--oxide);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--oxide) 14%, transparent);
+  color: var(--signal-wrong-text); border-color: var(--signal-wrong);
+  box-shadow: 0 0 0 3px var(--fill-wrong);
 }
 
-.quiz-q { font-size: 1.28rem; line-height: 1.45; margin: 0 0 1.5rem; }
+.quiz-q { font-size: var(--type-lg); line-height: var(--leading-snug); margin: 0 0 var(--space-5); }
 
-.quiz-options { display: flex; flex-direction: column; gap: 0.55rem; }
+.quiz-options { display: flex; flex-direction: column; gap: var(--space-2); }
 .quiz-option {
   display: grid;
   grid-template-columns: 1.7rem 1fr auto;
-  gap: 0.8rem;
+  gap: var(--space-3);
   align-items: baseline;
   text-align: left;
-  font-family: var(--serif);
-  font-size: 1rem;
-  line-height: 1.5;
-  padding: 0.85rem 1rem;
-  border-radius: 3px;
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  line-height: var(--leading-base);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
 }
 .quiz-option:disabled { opacity: 1; cursor: default; }
+/* A legend showing which key to press — not a control. It must not pick up the
+   tap floor, which would make every option row 44px taller for nothing. */
 .quiz-key {
-  font-family: var(--sans); font-size: 0.7rem; color: var(--muted);
-  border: 1px solid var(--rule); border-radius: 2px;
-  text-align: center; padding: 0.05rem 0;
+  min-height: 0;
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  padding: 0;
 }
+/* The verdict is carried three ways — border, fill, and the tick or cross in
+   .quiz-tick / .quiz-cross — because the two colours must never be the only
+   thing separating a right answer from a wrong one. */
 .quiz-option.is-right {
-  border-color: var(--sage);
-  background: color-mix(in srgb, var(--sage) 12%, var(--raise));
+  border-color: var(--signal-correct);
+  border-width: 2px;
+  background: var(--fill-correct);
 }
 .quiz-option.is-wrong {
-  border-color: var(--oxide);
-  background: color-mix(in srgb, var(--oxide) 12%, var(--raise));
+  border-color: var(--signal-wrong);
+  border-width: 2px;
+  background: var(--fill-wrong);
 }
 .quiz-option.is-dim { opacity: 0.42; }
-.quiz-tick { color: var(--sage); font-weight: 700; }
-.quiz-cross { color: var(--oxide); font-weight: 700; }
+.quiz-tick { color: var(--signal-correct-text); font-weight: var(--weight-bold); }
+.quiz-cross { color: var(--signal-wrong-text); font-weight: var(--weight-bold); }
 
 .quiz-why {
   overflow: hidden;
-  margin-top: 1.25rem;
-  border-left: 3px solid var(--rule);
-  padding-left: 1.1rem;
+  margin-top: var(--space-4);
+  border-left: var(--line-marker) solid var(--border-strong);
+  padding-left: var(--space-4);
 }
-.quiz-why.is-right { border-left-color: var(--sage); }
-.quiz-why.is-wrong { border-left-color: var(--oxide); }
-.quiz-why-head { font-family: var(--sans); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; }
-.quiz-why.is-right .quiz-why-head { color: var(--sage); }
-.quiz-why.is-wrong .quiz-why-head { color: var(--oxide); }
-.quiz-src { margin-top: 0.5rem; }
+.quiz-why.is-right { border-left-color: var(--signal-correct); }
+.quiz-why.is-wrong { border-left-color: var(--signal-wrong); }
+.quiz-why-head {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semi);
+  font-size: var(--type-base);
+  margin-bottom: var(--space-1);
+}
+.quiz-why.is-right .quiz-why-head { color: var(--signal-correct-text); }
+.quiz-why.is-wrong .quiz-why-head { color: var(--signal-wrong-text); }
+.quiz-src { margin-top: var(--space-2); }
 
 .result-head {
-  display: flex; gap: 1.75rem; align-items: center; flex-wrap: wrap;
-  margin: 1rem 0 2rem;
+  display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap;
+  margin: var(--space-4) 0 var(--space-6);
 }
-.result-head h2 { margin-bottom: 0.3rem; }
+.result-head h2 { margin-bottom: var(--space-1); }
 .result-xp {
-  font-family: var(--sans); font-size: 0.95rem; font-weight: 600;
-  color: var(--sage); font-variant-numeric: tabular-nums; margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  font-weight: var(--weight-semi);
+  color: var(--signal-correct-text);
+  font-variant-numeric: tabular-nums;
+  margin: 0;
 }
 
-.missed { border-top: 1px solid var(--rule); }
-.missed-row { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
-.missed-q { font-weight: 500; margin-bottom: 0.35rem; }
-.missed-a { color: var(--sage); margin-bottom: 0.4rem; }
+.missed { border-top: var(--line-hairline) solid var(--border-hairline); }
+.missed-row { padding: var(--space-4) 0; border-bottom: var(--line-hairline) solid var(--border-hairline); }
+.missed-q { font-weight: var(--weight-medium); margin-bottom: var(--space-1); }
+.missed-a { color: var(--signal-correct-text); margin-bottom: var(--space-1); }
 
-.rules { padding-left: 1.15rem; margin: 0 0 1.5rem; }
-.rules li { margin-bottom: 0.5rem; }
+.rules { padding-left: var(--space-4); margin: 0 0 var(--space-5); }
+.rules li { margin-bottom: var(--space-2); }
 
 /* ---------- arena ---------- */
 
 .arena-hud {
-  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 1rem;
-  margin-bottom: 1.75rem;
+  display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
 }
-.arena-hud-mid { flex: 1 1 auto; display: flex; align-items: center; gap: 0.75rem; }
-.arena-hud-right { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.arena-hud-mid { flex: 1 1 auto; display: flex; align-items: center; gap: var(--space-3); }
+.arena-hud-right { display: flex; gap: var(--space-1); flex-wrap: wrap; }
 
-.lives { display: flex; gap: 0.25rem; font-size: 1.1rem; }
-.life { opacity: 0.25; color: var(--muted); }
-.life.is-on { opacity: 1; color: var(--oxide); }
+.lives { display: flex; gap: var(--space-1); font-size: var(--type-body); }
+.life { opacity: 0.25; color: var(--text-secondary); }
+.life.is-on { opacity: 1; color: var(--signal-wrong); }
 
-.arena-from { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.5rem; }
+.arena-from {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
 .arena-why {
-  font-family: var(--sans); font-size: 0.85rem; color: var(--muted);
-  border-left: 2px solid var(--oxide); padding-left: 0.9rem; margin-top: 1.1rem;
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  color: var(--text-secondary);
+  border-left: 2px solid var(--signal-wrong);
+  padding-left: var(--space-3);
+  margin-top: var(--space-4);
 }
-.arena.is-urgent .ring-label { color: var(--oxide); }
-.arena.is-urgent { animation: pulse-edge 1s ease-in-out infinite; }
+/* The last fifteen seconds. The colour is reinforcement, not the signal: the
+   ring in the HUD carries the seconds as a numeral and drains as an arc, so a
+   reader who sees no red still knows exactly how long is left.
+
+   The glow lives on a pseudo-element and the animation runs on OPACITY. It
+   used to animate box-shadow on .arena itself, which was wrong twice over:
+   it repainted a full-width panel every frame, once a second, continuously,
+   on the one screen in the app that is under time pressure — and .arena is
+   also .wrap.sheet, whose own box-shadow lifts the sheet off the background
+   field, so the two rules fought over one property and the sheet lost its
+   lift for the whole last stretch of a run. Static shadow, composited
+   animation, separate elements: all three problems go at once. */
+.arena.is-urgent .ring-label { color: var(--signal-wrong-text); }
+.arena { position: relative; }
+.arena.is-urgent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* `inherit` is not an off-scale radius, it is the sheet's own: --radius-lg
+     at >= 1024 where the sheet is lifted and rounded, 0 below it where the
+     sheet is full-bleed. Naming either value here would be a second copy of
+     base.css's decision, and wrong at one of the two widths.
+
+     The marker has to sit on the declaration's own line or the one directly
+     above it — lint_file() reads `line` and `lines[i-2]` and nothing further
+     back, so an allow at the top of a multi-line comment does not reach the
+     line it was written for. */
+  border-radius: inherit; /* design-lint: allow — the sheet's own radius */
+  box-shadow: inset 0 0 60px -30px var(--signal-wrong);
+  animation: pulse-edge 1s ease-in-out infinite;
+}
 @keyframes pulse-edge {
-  0%, 100% { box-shadow: inset 0 0 0 0 transparent; }
-  50% { box-shadow: inset 0 0 60px -30px var(--oxide); }
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 /* ---------- seals ---------- */
@@ -430,23 +981,26 @@
 
 .seal-sigil {
   position: relative;
-  font-family: var(--sans);
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--type-base);
   letter-spacing: 0.02em;
   color: currentColor;
 }
-.seal[style*='72px'] .seal-sigil { font-size: 1rem; }
+.seal[style*='72px'] .seal-sigil { font-size: var(--type-body); }
 
-.seal-sage   { color: var(--sage); }
-.seal-gold   { color: var(--gold); }
-.seal-oxide  { color: var(--oxide); }
-.seal-locked { color: var(--rule); }
+/* Legacy colour-named tones, dual-selected with the semantic ones. */
+.seal-sage,  .seal-correct { color: var(--signal-correct-text); }
+.seal-gold,  .seal-mastery { color: var(--signal-mastery-text); }
+.seal-oxide, .seal-wrong   { color: var(--signal-wrong-text); }
+/* A locked seal is quiet, not invisible: it still has to read as a shape you
+   have not earned yet, which means it still has to be visible. */
+.seal-locked { color: var(--border-strong); }
 
 .seal.is-earned { filter: drop-shadow(0 1px 2px color-mix(in srgb, currentColor 30%, transparent)); }
 
 .seal-shine {
-  position: absolute; inset: 0; border-radius: 50%;
+  position: absolute; inset: 0; border-radius: var(--radius-circle);
   background: linear-gradient(115deg, transparent 42%, color-mix(in srgb, currentColor 26%, transparent) 50%, transparent 58%);
   animation: shine 4.5s ease-in-out infinite;
   pointer-events: none;
@@ -459,182 +1013,386 @@
 
 .sealgrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  gap: 0.75rem;
-  margin-top: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
 }
 .sealcard {
   display: flex; flex-direction: column; align-items: center; text-align: center;
-  gap: 0.4rem;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  background: var(--raise);
-  padding: 1.2rem 0.9rem 1rem;
+  gap: var(--space-1);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  padding: var(--space-4) var(--space-3);
 }
 .sealcard.is-locked { opacity: 0.62; }
-.sealcard-name { font-family: var(--sans); font-size: 0.82rem; font-weight: 600; margin-top: 0.35rem; }
-.sealcard-hint { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); line-height: 1.45; }
-.sealcard-when { font-family: var(--sans); font-size: 0.68rem; color: var(--sage); }
+.sealcard-name {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-weight: var(--weight-semi);
+  margin-top: var(--space-1);
+}
+.sealcard-hint {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  line-height: var(--leading-base);
+}
+.sealcard-when {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--signal-correct-text);
+}
 
 .rank-panel {
-  display: flex; gap: 1.6rem; align-items: center; flex-wrap: wrap;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  background: var(--raise);
-  padding: 1.35rem 1.5rem;
-  margin: 1.5rem 0 2.5rem;
+  display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  padding: var(--space-5);
+  margin: var(--space-5) 0 var(--space-6);
 }
+/* :not(.ring) matters — without it the ring's positioning box is stretched to
+   18rem and its centred label is thrown off centre. */
 .rank-panel > div:not(.ring) { flex: 1 1 18rem; }
 .rank-panel p:last-child { margin-bottom: 0; }
 
-.ladder { display: flex; gap: 0.3rem; margin: 0.75rem 0; flex-wrap: wrap; }
+.ladder { display: flex; gap: var(--space-1); margin: var(--space-3) 0; flex-wrap: wrap; }
 .rung {
   width: 1.5rem; height: 1.5rem;
   display: grid; place-items: center;
-  border: 1px solid var(--rule);
-  border-radius: 50%;
-  font-family: var(--sans); font-size: 0.68rem;
-  color: var(--muted);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-circle);
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
   font-variant-numeric: tabular-nums;
 }
-.rung.is-done { border-color: var(--gold); color: var(--gold); }
-.rung.is-here { background: var(--gold); color: var(--paper); border-color: var(--gold); }
+.rung.is-done { border-color: var(--signal-mastery); color: var(--signal-mastery-text); }
+.rung.is-here {
+  background: var(--fill-mastery);
+  border-color: var(--signal-mastery);
+  color: var(--signal-mastery-text);
+  font-weight: var(--weight-bold);
+}
 
 /* ---------- the 28-day strip ---------- */
 
 .strip {
   display: flex; align-items: flex-end; gap: 3px;
-  height: 5rem;
-  border-bottom: 1px solid var(--rule);
-  margin: 1.25rem 0 0.5rem;
+  height: 3.5rem;
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+  margin: var(--space-4) 0 var(--space-2);
 }
 .strip-bar {
   flex: 1 1 0;
-  background: var(--rule);
-  border-radius: 2px 2px 0 0;
+  background: var(--border-strong);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   min-height: 2px;
 }
-.strip-bar.is-on { background: linear-gradient(180deg, var(--gold), var(--sage)); }
+.strip-bar.is-on { background: linear-gradient(180deg, var(--signal-mastery), var(--signal-correct)); }
 
 /* ---------- problem question extras ---------- */
 
 .predict-panel {
-  display: flex; gap: 1.75rem; align-items: center; flex-wrap: wrap;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  background: var(--raise);
-  padding: 1.5rem;
-  margin: 2rem 0;
+  display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  padding: var(--space-5);
+  margin: var(--space-6) 0;
 }
 .predict-panel .predict { flex: 1 1 16rem; margin: 0; }
-.predict-range { width: 100%; margin: 0.5rem 0 0.9rem; accent-color: var(--oxide); }
+.predict-range { width: 100%; margin: var(--space-2) 0 var(--space-3); accent-color: var(--signal-correct); }
 
-.running { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
-.running-n { font-size: 1.25rem; font-weight: 500; color: var(--ink); }
+.running { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.running-n { font-size: var(--type-lg); font-weight: var(--weight-medium); color: var(--text-primary); }
 .running-bar {
-  flex: 1 1 6rem; height: 5px; background: var(--rule);
-  border-radius: 3px; overflow: hidden; min-width: 4rem;
+  flex: 1 1 6rem; height: 5px;
+  background: var(--border-strong);
+  border-radius: var(--radius-pill); overflow: hidden; min-width: 4rem;
 }
 .running-bar i {
-  display: block; height: 100%; background: var(--sage);
-  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  display: block; height: 100%; background: var(--signal-correct);
+  transition: width var(--dur-base) var(--ease-out);
 }
-.running-k { font-size: 0.75rem; }
+.running-k { font-size: var(--type-xs); }
 
-.arr-state.is-gold { color: var(--gold); font-weight: 500; }
+.arr-state.is-gold, .arr-state.is-mastery { color: var(--signal-mastery-text); font-weight: var(--weight-medium); }
 .arr-row.is-static { cursor: default; }
 
-.notice-sage { border-color: var(--sage); }
+.notice-sage, .notice-correct { border-color: var(--signal-correct); }
 
 /* ---------- toasts, seal popups, level-up ---------- */
 
 .toast-stack {
   position: fixed;
-  bottom: 1.5rem; left: 50%;
+  bottom: var(--space-5); left: 50%;
   transform: translateX(-50%);
-  display: flex; flex-direction: column; gap: 0.5rem; align-items: center;
+  display: flex; flex-direction: column; gap: var(--space-2); align-items: center;
   z-index: 40;
   pointer-events: none;
 }
-.toast { position: static; transform: none; box-shadow: 0 6px 20px rgb(0 0 0 / 0.18); }
-.toast-sage { background: var(--sage); }
-.toast-gold { background: var(--gold); color: #14181D; }
+/* A toast is a callout that happens to float, so it is built like every other
+   callout in the app: raised surface, hairline border, a signal-coloured left
+   marker. It used to be an inverted dark pill, which cannot work — the
+   inverted ground is near-white in dark mode, and gold on near-white fails. */
+.toast {
+  position: static; transform: none;
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-left: var(--line-marker) solid var(--border-active);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pop);
+}
+.toast-plain { border-left-color: var(--border-active); }
+.toast-sage, .toast-correct { border-left-color: var(--signal-correct); }
+.toast-gold, .toast-mastery { border-left-color: var(--signal-mastery); }
+.toast-oxide, .toast-wrong  { border-left-color: var(--signal-wrong); }
 
 .sealpop {
   position: fixed;
-  top: 1.25rem; right: 1.25rem;
+  top: var(--space-4); right: var(--space-4);
   z-index: 45;
-  display: flex; gap: 0.85rem; align-items: center; text-align: left;
+  display: flex; gap: var(--space-3); align-items: center; text-align: left;
   max-width: 21rem;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--gold);
-  border-radius: 4px;
-  background: var(--raise);
-  box-shadow: 0 10px 30px rgb(0 0 0 / 0.18);
+  padding: var(--space-3) var(--space-4);
+  border: var(--line-hairline) solid var(--signal-mastery);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-overlay);
   cursor: pointer;
 }
-.sealpop-text { display: flex; flex-direction: column; gap: 0.12rem; min-width: 0; }
+.sealpop-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .sealpop-kicker {
-  font-family: var(--sans); font-size: 0.62rem; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  font-weight: var(--weight-semi);
+  text-transform: uppercase;
+  color: var(--signal-mastery-text);
 }
-.sealpop-name { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; }
-.sealpop-hint { font-family: var(--sans); font-size: 0.74rem; color: var(--muted); line-height: 1.4; }
+.sealpop-name { font-family: var(--font-sans); font-size: var(--type-base); font-weight: var(--weight-semi); }
+.sealpop-hint {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  line-height: var(--leading-base);
+}
 
 .scrim {
   position: fixed; inset: 0;
   z-index: 50;
   display: grid; place-items: center;
-  padding: 1.5rem;
-  background: color-mix(in srgb, var(--ink) 62%, transparent);
+  padding: var(--space-5);
+  background: var(--scrim);
   backdrop-filter: blur(3px);
 }
 
 .levelup {
   width: min(30rem, 100%);
   text-align: center;
-  border: 1px solid var(--gold);
-  border-radius: 6px;
-  background: var(--paper);
-  padding: 2.25rem 2rem 2rem;
-  box-shadow: 0 24px 70px rgb(0 0 0 / 0.35);
+  border: var(--line-hairline) solid var(--signal-mastery);
+  border-radius: var(--radius-lg);
+  background: var(--surface-page);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-modal);
 }
-.levelup-crest { position: relative; width: 120px; height: 120px; margin: 0 auto 1rem; }
+.levelup-crest { position: relative; width: 120px; height: 120px; margin: 0 auto var(--space-4); }
 .levelup-crest svg { width: 100%; height: 100%; }
-.crest-ring  { fill: none; stroke: var(--gold); stroke-width: 2.5; }
-.crest-ring2 { fill: none; stroke: var(--gold); stroke-width: 1; opacity: 0.45; stroke-dasharray: 3 5; }
-.crest-mark  { stroke: var(--ink); stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.crest-ring  { fill: none; stroke: var(--signal-mastery); stroke-width: 2.5; }
+.crest-ring2 { fill: none; stroke: var(--signal-mastery); stroke-width: 1; opacity: 0.45; stroke-dasharray: 3 5; }
+.crest-mark  { stroke: var(--text-primary); stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+/* The rank pip matches .rank-level in the rail — the same disc meaning the same
+   thing in two places. It was white-on-gold, which is 3.1:1 and was carrying a
+   numeral. */
 .levelup-num {
   position: absolute; bottom: -6px; right: -2px;
   width: 2rem; height: 2rem;
   display: grid; place-items: center;
-  background: var(--gold); color: var(--paper);
-  border-radius: 50%;
-  font-family: var(--sans); font-size: 0.9rem; font-weight: 700;
+  background: var(--surface-page);
+  border: 2px solid var(--signal-mastery);
+  color: var(--signal-mastery-text);
+  border-radius: var(--radius-circle);
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  font-weight: var(--weight-bold);
 }
 .levelup-kicker {
-  font-family: var(--sans); font-size: 0.66rem; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--gold); margin: 0 0 0.35rem;
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  font-weight: var(--weight-semi);
+  text-transform: uppercase;
+  color: var(--signal-mastery-text);
+  margin: 0 0 var(--space-1);
 }
-.levelup-title { font-size: 1.75rem; font-weight: 600; margin: 0 0 0.75rem; line-height: 1.15; }
+.levelup-title {
+  font-size: var(--type-2xl);
+  font-weight: var(--weight-semi);
+  margin: 0 0 var(--space-3);
+  line-height: var(--leading-tight);
+  color: var(--text-strong);
+}
 .levelup-title span { display: inline-block; white-space: pre; }
-.levelup-note { color: var(--muted); margin: 0 0 0.5rem; }
-.levelup-next { margin-bottom: 1.5rem; }
-.levelup-btn { margin-top: 0.5rem; }
+.levelup-note { color: var(--text-secondary); margin: 0 0 var(--space-2); }
+.levelup-next { margin-bottom: var(--space-5); }
+.levelup-btn { margin-top: var(--space-2); }
 
-/* ---------- narrow ---------- */
+/* ================= the ladder ==============================================
+ *
+ * Phone-first from here down. The one narrow-only block is first, and it holds
+ * only the things that are REMOVED rather than resized: a rule that takes
+ * something away cannot be expressed as a step upward.
+ */
 
 @media (max-width: 780px) {
-  .hero, .rank-panel, .result-head, .predict-panel { gap: 1rem; }
-  .layer-grid { grid-template-columns: 1fr 1fr; }
-  .sealgrid { grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); }
-  .rankbox { margin-bottom: 1rem; }
+  /* The rail is a strip across the top on a narrow screen, and a paragraph of
+     explanation in a strip is a paragraph in the way. */
   .rail-foot { display: none; }
-  .sealpop { left: 1rem; right: 1rem; max-width: none; }
-  .strip { height: 3.5rem; }
-  .quiz-q { font-size: 1.1rem; }
+  /* A 21rem popup pinned to the right of a 360px screen is a popup half off
+     the screen. */
+  .sealpop { left: var(--space-4); right: var(--space-4); max-width: none; }
+  .rankbox { margin-bottom: var(--space-4); }
+  .rank-panel, .result-head, .predict-panel { gap: var(--space-4); }
+  .quiz-q { font-size: var(--type-body); }
 }
 
-/* Reduced motion is honoured globally in base.css, which kills every animation
-   and transition. The confetti library is told separately, because it paints on
-   a canvas that a CSS rule cannot reach. */
+/* ---- >= 601: large phone, small tablet ----------------------------------
+   The hero can hold its ring beside its text, the layer cards can pair up, and
+   everything gets a step more air. The rail is still a horizontal strip. */
+
+@media (min-width: 601px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: var(--space-5);
+    padding: var(--space-5) var(--space-6);
+  }
+  .hero .btn-row { justify-content: flex-start; width: auto; }
+
+  /* 2 + 2 + 1: the fifth card takes the full width rather than sitting alone
+     in a half-empty row. It is the problem questions — the deepest layer — so
+     the wide slot is not an accident of the count. */
+  .layer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .layer-grid > *:nth-child(5) { grid-column: 1 / -1; }
+
+  .mapwrap.mapwrap { padding: var(--space-4); }
+
+  .strip { height: 5rem; }
+}
+
+/* ---- >= 781: tablet -----------------------------------------------------
+   The rail becomes a sidebar (base.css), which is where a vertical nav needs
+   the marker and the spacing of one. The content pane loses --rail-width to
+   it, so the map stays at four across and spends the width on bigger rings
+   instead of more columns. */
+
+@media (min-width: 781px) {
+  /* The rail's own padding stays with base.css, which ladders it — what is
+     added here is the state INSIDE it: the rows, their marker, their rhythm. */
+  .rail nav { gap: var(--space-1); }
+  .rail nav a {
+    padding-left: var(--space-4);
+    padding-right: var(--space-3);
+    border-radius: var(--radius-md);
+  }
+  /* The active marker: a rule in the margin, which is how this app marks a
+     current thing everywhere else. It scales rather than grows a width, so
+     hovering down a nav of nine items costs no layout. */
+  .rail nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: var(--space-2);
+    bottom: var(--space-2);
+    width: var(--line-marker);
+    border-radius: var(--radius-pill);
+    background: var(--border-active);
+    transform: scaleY(0);
+    transform-origin: 50% 50%;
+    transition: transform var(--dur-quick) var(--ease-out);
+  }
+  .rail nav a:hover { transform: translateX(2px); }
+  .rail nav a.active::before,
+  .rail nav a[aria-current='page']::before { transform: scaleY(1); }
+
+  .sealgrid { grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); }
+}
+
+/* ---- >= 1024: laptop ----------------------------------------------------
+   The hero is still full width here, and deliberately: measured, the pane at
+   this step gives it about 700px, and its three controls need 620 of them to
+   stay on one line. Side by side at this width the flagship gets 430px and its
+   own buttons stack into a column, which is worse than not being side by side
+   at all. The map settles into two rows of eight and the layer cards find the
+   3 + 2 arrangement that fills both rows. */
+
+@media (min-width: 1024px) {
+  .hero { gap: var(--space-6); padding: var(--space-6) var(--space-7); }
+  .hero-line { font-size: var(--type-lg); line-height: var(--leading-snug); }
+
+  .layer-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--space-4);
+    margin-top: var(--space-7);
+  }
+  .layer-grid > * { grid-column: span 2; }
+  .layer-grid > *:nth-child(4),
+  .layer-grid > *:nth-child(5) { grid-column: span 3; }
+  .layer-card { padding: var(--space-5); }
+
+  .mapwrap.mapwrap { padding: var(--space-5); }
+
+  .rank-panel, .predict-panel, .arena-card, .quiz-invite { padding: var(--space-6); }
+  /* The 28-day strip does NOT grow past 5rem. Its height is resolution, and a
+     new learner's strip is empty — a taller box would spend the extra pixels
+     on a void on the one screen most likely to be someone's first. */
+}
+
+/* ---- >= 1440: desktop ---------------------------------------------------
+   The first width at which two-up is an improvement rather than a squeeze.
+   The ratio was set by measuring rather than by taste: at 1.6fr the hero came
+   out 593px and its button row broke onto a second line; 1.8fr gives it 619px,
+   which is the width its ring, its line and its three controls actually need,
+   and still leaves the day's card 344px. All five layer cards come into one
+   row, and the last of the growth goes into air around things rather than into
+   making anything bigger to read. */
+
+@media (min-width: 1440px) {
+  .home-top {
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+    gap: var(--space-5);
+    align-items: stretch;
+  }
+  .home-top .today { display: flex; flex-direction: column; justify-content: center; }
+
+  .rail nav a { min-height: calc(var(--tap-min) + var(--space-1)); }
+
+  .hero { padding: var(--space-7); gap: var(--space-6); }
+
+  .layer-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .layer-grid > *,
+  .layer-grid > *:nth-child(4),
+  .layer-grid > *:nth-child(5) { grid-column: auto; }
+
+  .sealgrid { grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: var(--space-4); }
+}
+
+/* ---- >= 1800: wide ------------------------------------------------------
+   The shell stops at --shell-max, so past here the screen grows and the app
+   does not. What is left to give is space. */
+
+@media (min-width: 1800px) {
+  .home-top { gap: var(--space-6); }
+  .mapwrap.mapwrap { padding: var(--space-6); }
+  .layer-grid { gap: var(--space-5); }
+}
+
+/* Reduced motion takes three separate mechanisms, and it took all three:
+   base.css kills CSS animations and transitions; <MotionConfig reducedMotion="user">
+   in main.jsx covers framer-motion, which animates inline styles a CSS rule
+   cannot touch; and fx.js tells canvas-confetti, which paints on a canvas
+   neither of the others can reach. */

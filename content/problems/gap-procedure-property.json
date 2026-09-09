@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "note": "Practice for the criminal procedure and property on-ramp lessons. Facts are hypothetical unless a real case is named. The first problem is guided: the steps are given and part of the reasoning is done, so that a beginner has something between a flashcard and an unassisted question. The rubric is for self-marking; nothing here is an authority.",
+  "problems": [
+    {
+      "id": "pd-p-guided-arrest",
+      "moduleId": "m05-criminal-procedure",
+      "title": "Guided: Rahim is still in the lock-up",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "This is a guided problem. The steps are set out for you and part of the reasoning is done. Answer each step in a sentence or two, in order, and only then read the model answer.",
+        "Rahim is thirty-four and works as a lorry attendant in Klang. On Sunday night at about nine, police stop his motorcycle near a row of shops. They tell him there has been a snatch theft nearby.",
+        "They handcuff him and put him in the car. He asks what he is supposed to have done. Nobody answers. At the station his phone is taken and he is put in the lock-up.",
+        "On Monday afternoon he is questioned for two hours. He asks to telephone his wife, Sarah, and he asks for a lawyer. He is told both can wait until the questioning is finished.",
+        "It is now Tuesday at noon. Rahim is still in the lock-up. He has not been taken before a Magistrate and he has not been charged. Sarah has heard nothing from anyone."
+      ],
+      "task": "Work through five steps. Step 1 — fix the start of the clock. The arrest happened at about nine on Sunday night, because that is the moment Rahim stopped being free to leave; write down the time at which twenty-four hours runs out. Step 2 — Rahim was never told why he was taken. State in one sentence what Article 5(3) requires about the grounds of arrest, and say whether it was met here. Step 3 — he asked for two different things, a call home and a lawyer. Name both rights and say where each comes from; one is in Article 5(3) and one is in the Criminal Procedure Code. Step 4 — by Tuesday at noon about thirty-nine hours have passed. State what Article 5(4) required to happen before the limit expired, and name the order the police would need in order to hold him any longer. Step 5 — write two sentences of practical advice for Sarah: what she should ask for, and where she should go.",
+      "rubric": [
+        {
+          "id": "pd-r-ga1",
+          "band": "issue",
+          "marks": 1,
+          "criterion": "Fixes the arrest at about nine on Sunday night and gives the expiry of the twenty-four hours as about nine on Monday night — not from the time of questioning or of arrival at the station.",
+          "authority": "Federal Constitution, Art 5(4)"
+        },
+        {
+          "id": "pd-r-ga2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States Article 5(3): an arrested person must be informed as soon as may be of the grounds of his arrest, and must be allowed to consult and be defended by a lawyer of his choice.",
+          "authority": "Federal Constitution, Art 5(3)"
+        },
+        {
+          "id": "pd-r-ga3",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States the twenty-four hour limit under Article 5(4), and identifies a remand order from a Magistrate under s 117 of the Criminal Procedure Code as the only way to hold him longer.",
+          "authority": "Federal Constitution, Art 5(4); Criminal Procedure Code (Act 593), s 117"
+        },
+        {
+          "id": "pd-r-ga4",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Applies both rules to these facts: no grounds were given at all, the lawyer and the call home were put off, and about thirty-nine hours have passed with no production before a Magistrate.",
+          "authority": "The facts as given"
+        },
+        {
+          "id": "pd-r-ga5",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Gives Sarah something she can actually do: go to the station, ask what offence he is held for, ask whether a remand order was made and for how long, and get a lawyer or legal aid.",
+          "authority": "Practical advice"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Step 1 — the clock",
+          "p": [
+            "The arrest was at about nine on Sunday night. Twenty-four hours runs out at about nine on Monday night.",
+            "The clock starts at the arrest, not at the questioning and not at the moment the paperwork is opened. That is why fixing the time first is worth doing before anything else."
+          ]
+        },
+        {
+          "h": "Step 2 — the grounds",
+          "p": [
+            "Article 5(3) requires that a person arrested be informed as soon as may be of the grounds of his arrest.",
+            "It was not met. Rahim asked and got no answer, and he still did not know on Tuesday. Being told there was a snatch theft nearby is not being told what he is held for."
+          ]
+        },
+        {
+          "h": "Step 3 — the two requests",
+          "p": [
+            "The right to consult and be defended by a lawyer of his choice is in Article 5(3) of the Federal Constitution.",
+            "The right to have a relative or friend told where he is comes from the Criminal Procedure Code, in s 28A. They are separate rights, and answering only one of them does not satisfy the other.",
+            "Note honestly that when access to a lawyer must be given effect is contested in the courts. Police often say after questioning. That does not make the request pointless: it should be made, repeated, and the time recorded."
+          ]
+        },
+        {
+          "h": "Step 4 — the limit",
+          "p": [
+            "Article 5(4) required that Rahim be released, or produced before a Magistrate, within twenty-four hours of the arrest. That is by about nine on Monday night.",
+            "To hold him beyond that the police needed a remand order from a Magistrate under s 117 of the Criminal Procedure Code. On the facts none was obtained, and about thirty-nine hours have now passed."
+          ]
+        },
+        {
+          "h": "Step 5 — what Sarah should do",
+          "p": [
+            "Go to the station where he is held and ask, in these words, what offence Rahim is being held for and whether a remand order has been made and for how long.",
+            "Get a lawyer. If the family cannot pay, ask about legal aid or the Bar Council legal aid centre, and keep a written note of every time and every name."
+          ]
+        }
+      ],
+      "traps": [
+        "Starting the clock at the questioning rather than the arrest. The moment of arrest is when he stopped being free to leave, on the roadside.",
+        "Treating the lawyer and the call home as one right. They come from different places and each has to be answered.",
+        "Arguing that Rahim did not do it. Nothing in this problem turns on guilt; it turns on time and on what he was told."
+      ],
+      "source": "Federal Constitution Arts 5(3) and 5(4); Criminal Procedure Code (Act 593), ss 28A and 117. Facts are hypothetical.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read Arts 5(3) and 5(4) in a current reprint of the Federal Constitution, and read s 28A of the Criminal Procedure Code in a current reprint before relying on the detail — it has been amended. The case law on when access to counsel must be allowed is live; do not treat the position in the model answer as settled."
+    },
+    {
+      "id": "pd-p-remand-bail",
+      "moduleId": "m05-criminal-procedure",
+      "title": "Five days, then a charge",
+      "kind": "problem",
+      "minutes": 40,
+      "marks": 16,
+      "scenario": [
+        "Suriani works in a factory in Seremban. Her son Danial is nineteen and in his first year at a local college. He lives at home.",
+        "On Thursday morning police arrest Danial over an alleged break-in at a hardware shop two streets away. The family are told nothing until a neighbour telephones that evening.",
+        "On Friday morning Danial is taken before a Magistrate. The investigating officer asks for seven days, saying that witnesses have still to be traced and a recording has to be recovered. Nobody appears for Danial and he says nothing. The Magistrate allows five days.",
+        "On the fifth day Danial is produced in court and a charge under the Penal Code is read to him. He claims trial. The prosecution objects to bail, saying he may interfere with a witness, because one of the shop workers lives on the same road.",
+        "Danial has no previous record. Suriani has held her factory job for eleven years and the family has about three thousand ringgit in savings. She asks you what she should have done, and what she should do now."
+      ],
+      "task": "Advise Suriani. Deal with the remand hearing and what could have been said at it; whether bail is available and on what basis; what she is committing to if she stands surety; and what happens now that the charge has been read. Say plainly what you cannot answer without checking the charge itself.",
+      "rubric": [
+        {
+          "id": "pd-r-rb1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Separates the three stages the facts run through — detention before charge, bail after charge, and the trial — instead of answering the single question 'will he get out'.",
+          "authority": "Structure of the Criminal Procedure Code"
+        },
+        {
+          "id": "pd-r-rb2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the detention rule accurately: twenty-four hours under Art 5(4), and beyond that a remand order from a Magistrate under s 117 of the Code, made for the investigation and for the period the Magistrate thinks fit.",
+          "authority": "Federal Constitution, Art 5(4); Criminal Procedure Code (Act 593), s 117"
+        },
+        {
+          "id": "pd-r-rb3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the bail rule by classification: the First Schedule marks each offence bailable or non-bailable; for a bailable offence release on bail is an entitlement, for a non-bailable one it is a discretion under s 388.",
+          "authority": "Criminal Procedure Code (Act 593), First Schedule and s 388"
+        },
+        {
+          "id": "pd-r-rb4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies the remand rule to the hearing: the officer had to show why more time was needed, and Danial could have asked for a shorter period, pointed to his age and fixed address, and asked what remained to be done. Notes that guilt was not the question.",
+          "authority": "Criminal Procedure Code (Act 593), s 117"
+        },
+        {
+          "id": "pd-r-rb5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies the bail discretion to these facts: no record, a fixed address, a mother in steady work, a college place — and meets the witness objection with a proposed condition rather than a denial that any risk exists.",
+          "authority": "Criminal Procedure Code (Act 593), s 388"
+        },
+        {
+          "id": "pd-r-rb6",
+          "band": "method",
+          "marks": 1,
+          "criterion": "Looks at the Act the charge is brought under before applying the Code's scheme, because special legislation carries its own bail provisions and some exclude bail.",
+          "authority": "Criminal Procedure Code (Act 593), First Schedule; special legislation"
+        },
+        {
+          "id": "pd-r-rb7",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Ends with something Suriani can act on, and states its limits: what a surety commits to, what the money is for, and what cannot be advised without seeing the charge.",
+          "authority": "Practical advice"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Three questions, and they belong to three different stages. Was the five day detention properly ordered, and what could have been said about it. Is bail available now that a charge has been read, and on what terms. What is Suriani taking on if she stands surety."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Detention. Article 5(4) of the Federal Constitution allows the police twenty-four hours before an arrested person must be released or produced before a Magistrate. Longer detention needs a remand order under s 117 of the Criminal Procedure Code. The order is made for the purposes of the investigation, for the period the Magistrate thinks fit within the statutory maximum, and the maximum is graduated by the sentence the offence carries.",
+            "Bail. The First Schedule to the Code classifies each offence. For a bailable offence the accused is entitled to be released on bail. For a non-bailable offence bail is in the discretion of the court, subject to s 388. So the first question is never whether bail ought to be granted; it is which classification the offence falls into.",
+            "Where the discretion is exercised, the question the court is answering is whether the accused will attend, and whether any risk from his release can be managed by conditions."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The remand hearing was a real hearing, not a formality. The officer had to show why the investigation needed more time. Danial, or anyone speaking for him, could have asked what specifically remained to be done, pointed out that he is nineteen, lives at home, and is at college, and asked for a shorter period. The Magistrate cut seven days to five without hearing any of that, which suggests a shorter period was available for the asking.",
+            "What would not have helped is a protest that Danial did not do it. Guilt is not the question at a remand hearing, and spending the only opportunity on it is the standard mistake.",
+            "On bail, the first step is to look the offence up rather than argue about it. If it is bailable, release on bail is an entitlement and the objection goes only to the amount and the conditions. If it is non-bailable, the court has a discretion and the prosecution's objection has to be met.",
+            "The objection here is interference with a witness who lives on the same road. The answer is not to say there is no risk. It is to propose conditions that manage it: an undertaking not to contact or approach the shop or its workers, reporting to the station weekly, and surrender of any travel document. A concrete set of conditions is a better answer than an assertion of good character.",
+            "Everything else on the facts points towards release. There is no record, the address is fixed, the mother has eleven years in the same job and can stand surety, and the sum available is modest but real."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "Before any of this is applied, check which Act the charge is brought under. The facts say the Penal Code, which puts the ordinary scheme of the Code in play. Had it been brought under security or drugs legislation, that Act might have its own bail provisions and could shut bail out altogether. This check comes first, and it is the one most often skipped."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Advise Suriani that a lawyer should have been at the remand hearing and can be at the next one, and that the point to argue there is necessity rather than innocence.",
+            "On bail, find the classification of the offence charged. If bail is available, apply with a concrete set of conditions aimed at the witness objection. If she stands surety, she is promising the court that Danial will attend on every date; if he does not, the money she has put up is at risk, and it comes back at the end of the case if the dates are kept.",
+            "State the limit honestly. Without seeing the charge itself, nobody can tell her whether the offence is bailable or what the likely amount will be. That is the first thing to get a copy of."
+          ]
+        }
+      ],
+      "traps": [
+        "Arguing innocence at the remand hearing. The question there is whether further detention is needed for the investigation.",
+        "Assuming 'non-bailable' means no bail. It means the court has a discretion.",
+        "Meeting a witness-interference objection by denying the risk instead of proposing a condition that manages it.",
+        "Applying the Code's bail scheme without first checking which Act the charge is brought under."
+      ],
+      "source": "Federal Constitution Art 5(4); Criminal Procedure Code (Act 593), s 117, s 388 and the First Schedule. Facts are hypothetical.",
+      "lastVerified": "2026-09-07",
+      "verify": "Check the current text of s 117 for the maximum remand periods, which are graduated and have been amended. Check the First Schedule classification of the actual offence charged, and check the Act the charge is brought under for its own bail provisions before applying s 388. Bail amounts and local practice vary between courts."
+    },
+    {
+      "id": "pd-p-kampung-title",
+      "moduleId": "m08-property",
+      "title": "The land still in grandfather's name",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "Pak Hamid died in 2009. He left a lot of about half a hectare in Kuala Selangor, held under agricultural category. The title has never changed: the register still shows him as proprietor.",
+        "He had four children. Rosli, the eldest, has lived on the land since 1998 and grows oil palm on it. There was never any written agreement; the family simply understood that Rosli would work the land and look after it.",
+        "In 2024 Salmah, the second child, produced a transfer form dated 2008 bearing what is said to be Pak Hamid's signature, and was registered as sole proprietor. Rosli, Azman and Kalsom say the signature is nothing like their father's, and that he was in hospital for most of that month.",
+        "Salmah has now signed an agreement to sell the land to Sinar Maju Sdn Bhd, a small developer. The company has paid a deposit and is waiting for the transfer to be presented at the land office.",
+        "Rosli arrives with a plastic bag of fertiliser receipts, an old quit rent receipt, and no title document. He wants to know whether twenty-six years on the land count for anything, and how to stop the sale."
+      ],
+      "task": "Advise Rosli. Deal with whether his occupation gives him anything; how the land should have passed when Pak Hamid died; what the alleged forgery does to Salmah's registration; whether the developer would be safe once it is registered; and what he should do this week, in order.",
+      "rubric": [
+        {
+          "id": "pd-r-kt1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies three separate questions — occupation, succession, and a registration obtained by a defective instrument — and notices that a pending sale puts the whole matter under time pressure.",
+          "authority": "National Land Code (Act 828)"
+        },
+        {
+          "id": "pd-r-kt2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States title by registration under the National Land Code, and that long occupation does not by itself give title to registered land however many years it has run.",
+          "authority": "National Land Code (Act 828)"
+        },
+        {
+          "id": "pd-r-kt3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the succession position: land registered in a dead proprietor's name moves only when a distribution of the estate is obtained and registered against the title — at the Land Office for a small estate, otherwise through the court.",
+          "authority": "National Land Code (Act 828); Small Estates (Distribution) Act 1955"
+        },
+        {
+          "id": "pd-r-kt4",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States s 340: a registered title is indefeasible, subject to exceptions including fraud, forgery and a void or insufficient instrument; and that Tan Ying Hong restored deferred indefeasibility.",
+          "authority": "National Land Code (Act 828), s 340; Tan Ying Hong v Tan Sian San (FC)"
+        },
+        {
+          "id": "pd-r-kt5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies the exception to Salmah: if the transfer was forged, her registration falls within s 340(2) and her title is defeasible in her own hands, whatever the register now shows.",
+          "authority": "National Land Code (Act 828), s 340"
+        },
+        {
+          "id": "pd-r-kt6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Applies the proviso to the developer: a subsequent purchaser in good faith and for valuable consideration may take an indefeasible title, so registration of the sale could leave the family suing for money instead of recovering the land.",
+          "authority": "National Land Code (Act 828), s 340 proviso"
+        },
+        {
+          "id": "pd-r-kt7",
+          "band": "method",
+          "marks": 1,
+          "criterion": "Works in the right order — official land search first to see what the register actually shows today, then protective steps, then proceedings — rather than starting from the family's account.",
+          "authority": "Standard practice"
+        },
+        {
+          "id": "pd-r-kt8",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Concludes honestly: Rosli's own occupation gives him nothing, his standing comes from being one of his father's heirs, and a caveat carries a compensation risk if the claim is not a proper one.",
+          "authority": "National Land Code (Act 828)"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Three questions, and a clock running behind all of them. Does twenty-six years of occupation give Rosli any title. How should the land have moved when Pak Hamid died. And what does an allegedly forged transfer do to the registration Salmah now holds, and to the sale she has agreed."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Malaysia has a Torrens system under the National Land Code. A person becomes the owner of land by being registered as proprietor. The register is the title. Long occupation does not by itself give title to registered land, so the years and the receipts do not make Rosli an owner.",
+            "When a registered proprietor dies, the land does not pass to the children by itself. The register keeps showing the dead person until a distribution of the estate is obtained and registered against the title. A small estate is distributed at the Land Office; where there is a will, or the estate is larger, the matter goes to the court for a grant.",
+            "Section 340 gives the registered proprietor an indefeasible title, but it sets out exceptions. Registration obtained by fraud or misrepresentation to which the proprietor was a party, or by forgery, or by a void or insufficient instrument, is open to challenge. The proviso then protects a purchaser in good faith and for valuable consideration. In Tan Ying Hong v Tan Sian San the Federal Court restored that deferred position, departing from Adorna Properties."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Rosli's occupation gives him nothing as such. He has no title document, no registered interest, and no written agreement. The fertiliser receipts prove he worked the land, which is not the same as owning it. What he does have is a claim as one of the four children of the registered proprietor, and that is the footing on which everything else stands.",
+            "The land should have gone through a distribution of Pak Hamid's estate after 2009. Nothing was done for fifteen years, which is exactly the delay that makes these cases hard. Had the distribution been taken out, the four children's shares would have been registered and there would have been no title standing in a dead man's name for anyone to move.",
+            "Salmah's registration rests on a transfer said to be forged. If that is made out, it falls squarely within the exceptions in s 340(2), and her title is defeasible in her own hands. The register showing her name today does not settle the question; that is what the exceptions are for.",
+            "The developer is the real danger. If the sale is registered and Sinar Maju is a purchaser in good faith and for valuable consideration, the proviso may protect it, and the family would be left with a claim for money against Salmah rather than a claim to the land. Every day the transfer is not stopped, that risk grows.",
+            "So the family's interest is in stopping registration now, not in winning an argument later."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "Do the steps in this order. First, an official land search on the lot, to see what the register actually shows today and whether anything has already been presented for registration. Facts told across a kitchen table are not the register.",
+            "Second, protect the position. A private caveat is the standard urgent step, lodged on the footing of the claim to a share of Pak Hamid's estate. Be straight with Rosli about the price of getting this wrong: a caveat entered without a proper claim exposes the caveator to compensation, and whether a particular claim qualifies can be argued about.",
+            "Third, take out the distribution of Pak Hamid's estate, so that the family's entitlement is on a formal footing rather than an oral one.",
+            "Fourth, proceedings to set aside the 2024 transfer, with the forgery as the ground and evidence on the signature and the hospital records."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Tell Rosli plainly that his twenty-six years give him no title. His standing is as one of his father's heirs, and that is enough to act on.",
+            "The urgent thing is a search and then a caveat, because the sale is the event that could put the land out of reach. The forgery claim, if it can be proved, meets the registration Salmah obtained; it does not automatically defeat an innocent buyer who gets registered first.",
+            "None of this can be finalised without the search, sight of the 2024 instrument, and advice on the caveat from someone who has seen both."
+          ]
+        }
+      ],
+      "traps": [
+        "Advising that twenty-six years of occupation founds a claim to the land. It does not, against registered title under the Code.",
+        "Treating the register as the end of the argument because Salmah's name is on it. Section 340 has exceptions, and forgery is one of them.",
+        "Leaving the developer out of the answer. The proviso protecting a later purchaser in good faith for value is what makes the timing urgent.",
+        "Recommending a caveat as a free holding move. It carries a compensation risk if the claim behind it is not a proper one."
+      ],
+      "source": "National Land Code (Act 828), including s 340; Small Estates (Distribution) Act 1955; Tan Ying Hong v Tan Sian San (FC), departing from Adorna Properties Sdn Bhd v Boonsom Boonyanit. Facts are hypothetical.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read s 340 of the National Land Code, including subsection (2) and the proviso, in a current reprint, and confirm the Act number after revision. Confirm the citations of Tan Ying Hong and Adorna Properties in reports you can hold, and check whether anything later has qualified them. Confirm the current small estates procedure and the value threshold, which is statutory and has been raised. Sabah and Sarawak have separate land legislation and this analysis does not carry across."
+    }
+  ]
+}

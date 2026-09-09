@@ -5,6 +5,8 @@ import { useStudy } from '../state/StudyContext.jsx';
 import * as prob from '../lib/problems.js';
 import * as lessonsLib from '../lib/lessons.js';
 import { ArrRow, CountUp, ProgressRing, Stat, StatGrid } from '../components/Bits.jsx';
+import { Rehearsal, RehearsalScore } from '../components/Rehearsal.jsx';
+import { CalibrationLine } from '../components/Insight.jsx';
 import { fanfare } from '../lib/fx.js';
 import { copyText, daysAgo, fmtClock, plural, round1 } from '../lib/format.js';
 import NotFound from './NotFound.jsx';
@@ -92,7 +94,17 @@ export default function ProblemView() {
   }, [id]);
 
   if (!p) return <NotFound />;
-  if (!run) return <div className="wrap"><p className="lede">Opening the question…</p></div>;
+  // The catalogue already knows this question's title, so the loading branch
+  // opens with the same h1 the loaded page does rather than with no heading at
+  // all — nothing jumps when the draft arrives.
+  if (!run) {
+    return (
+      <div className="wrap sheet" data-module={p.moduleId}>
+        <h1>{p.title}</h1>
+        <p className="lede" role="status">Opening the question…</p>
+      </div>
+    );
+  }
 
   const total = prob.totalMarks(p);
   const mod = cat.byId.module[p.moduleId] || {};
@@ -103,25 +115,35 @@ export default function ProblemView() {
   // keystroke in the answer box.
   const header = (right) => (
     <div className="review-progress">
-      <span><Link to="/problems">← Problem questions</Link> · {mod.title || ''}</span>
+      <span className="crumb-row"><Link className="crumb" to="/problems">← Problem questions</Link> {mod.title || ''}</span>
       <span>{right}</span>
     </div>
   );
 
-  const facts = (
+  const guided = p.kind === 'guided';
+  const factsInner = (
     <div className="facts">
-      <p className="card-kind">{p.kind} · {plural(p.minutes, 'minute')} · {total} marks</p>
+      <p className="card-kind">
+        {guided ? '' : `${p.kind} · `}{plural(p.minutes, 'minute')} · {total} marks
+      </p>
       {(p.scenario || []).map((t, i) => <p key={i}>{t}</p>)}
       <p className="task"><strong>{p.task}</strong></p>
     </div>
   );
+  // A guided problem is a rehearsal, and the frame says so. See
+  // components/Rehearsal.jsx — sunk, dashed, and never a signal colour.
+  const facts = guided ? <Rehearsal>{factsInner}</Rehearsal> : factsInner;
 
   // --- stage 1: read ------------------------------------------------------
   if (run.stage === 'read') {
     return (
-      <div className="wrap problem">
+      // Forty minutes of reading facts and writing an answer. Prose from top
+      // to bottom, so it keeps the measure and takes the sheet; data-module
+      // puts the question in its part of the curriculum, with the module's
+      // name already printed in the bar above.
+      <div className="wrap sheet problem" data-module={p.moduleId}>
         {header(history.length ? plural(history.length, 'previous attempt', 'previous attempts') : '')}
-        <h2>{p.title}</h2>
+        <h1>{p.title}</h1>
         {facts}
 
         <div className="notice">
@@ -131,7 +153,7 @@ export default function ProblemView() {
 
         {lesson && (
           <p className="small">
-            This question was written to follow <Link to={`/lesson/${lesson.id}`}>{lesson.title}</Link>.
+            This question was written to follow <Link className="tap-exempt" to={`/lesson/${lesson.id}`}>{lesson.title}</Link>.
             Read it first if you have not.
           </p>
         )}
@@ -151,11 +173,12 @@ export default function ProblemView() {
 
         {history.length > 0 && (
           <>
-            <h3>Previous attempts</h3>
+            <h2>Previous attempts</h2>
             <div className="arrangement">
               {history.map((a, i) => (
                 <ArrRow
                   key={a.attemptId ?? i}
+                  moduleId={p.moduleId}
                   index={i}
                   num={`${a.score}/${a.total}`}
                   title={daysAgo(a.markedAt)}
@@ -207,7 +230,8 @@ export default function ProblemView() {
             'They will score zero. Save anyway?')) return;
           const row = await prob.record(p, { ...run, elapsedMs: run.elapsedMs });
           const res = await award({
-            kind: 'problem', score: row.score, total: row.total, gap: row.predicted - row.score,
+            kind: 'problem', guided: p.kind === 'guided',
+            score: row.score, total: row.total, gap: row.predicted - row.score,
           });
           setAwardedXp(res.xp);
           setSaved(row);
@@ -220,7 +244,14 @@ export default function ProblemView() {
   }
 
   // --- stage 5: done ------------------------------------------------------
-  if (!saved) return <div className="wrap"><p className="lede">Saved. <Link to="/problems">Back to the questions.</Link></p></div>;
+  if (!saved) {
+    return (
+      <div className="wrap sheet" data-module={p.moduleId}>
+        <h1>{p.title}</h1>
+        <p className="lede" role="status">Saved. <Link to="/problems">Back to the questions.</Link></p>
+      </div>
+    );
+  }
   return <DoneStage p={p} a={saved} xp={awardedXp} header={header} />;
 }
 
@@ -249,16 +280,20 @@ function WriteStage({ p, run, update, persist, clockIn, elapsed, header, facts, 
   const pct = Math.min(100, (ms / (p.minutes * 60000)) * 100);
 
   return (
-    <div className="wrap problem">
+    <div className="wrap sheet problem" data-module={p.moduleId}>
       {header(<><span className={`clock${over ? ' is-over' : ''}`}>{fmtClock(ms)}</span> of {p.minutes}′</>)}
       <div className="qbar" aria-hidden="true">
         <motion.i className={over ? 'is-over' : ''} animate={{ width: `${pct}%` }} transition={{ duration: 0.4 }} />
       </div>
-      <h2>{p.title}</h2>
+      <h1>{p.title}</h1>
       {facts}
+      {/* The placeholder is not a name: it disappears the moment anything is
+          typed, and it is not exposed as one. This is the only control on the
+          screen, so it says what it is. */}
       <textarea
         ref={taRef}
         className="answer"
+        aria-label="Your answer"
         spellCheck
         value={run.text}
         placeholder="Issue. Rule. Application. Conclusion. Write it as you would in the hall — full sentences, authorities named, no notes to yourself."
@@ -290,9 +325,9 @@ function PredictStage({ p, run, total, header, onBack, onReveal, toast }) {
   const pct = value === '' ? 0 : Math.min(100, (Number(value) / total) * 100);
 
   return (
-    <div className="wrap problem">
+    <div className="wrap sheet problem" data-module={p.moduleId}>
       {header(`${prob.countWords(run.text)} words · ${fmtClock(run.elapsedMs)}`)}
-      <h2>Before the rubric</h2>
+      <h1>Before the rubric</h1>
       <p className="lede">
         The rubric has {plural((p.rubric || []).length, 'criterion', 'criteria')} and {total} marks.
         You have not seen it. What do you think that answer earned?
@@ -300,12 +335,15 @@ function PredictStage({ p, run, total, header, onBack, onReveal, toast }) {
 
       <motion.div className="predict-panel"
         initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.35 }}>
-        <ProgressRing value={pct} size={128} stroke={9} tone="oxide"
+        <ProgressRing value={pct} size={128} stroke={9} tone="series"
           label={value === '' ? '?' : value} sub={`of ${total}`} />
         <div className="predict">
-          <label htmlFor="pred">Your prediction, out of {total}</label>
+          <label id="pred-label" htmlFor="pred">Your prediction, out of {total}</label>
+          {/* The slider and the number box are two ways into one value, so they
+              take the one visible label rather than the slider going unnamed. */}
           <input
             type="range" id="pred-range" min="0" max={total} step="0.5"
+            aria-labelledby="pred-label"
             value={value === '' ? 0 : value}
             onChange={e => setValue(e.target.value)}
             className="predict-range"
@@ -351,9 +389,9 @@ function MarkStage({ p, run, update, total, persist, header, onSave, toast }) {
   };
 
   return (
-    <div className="wrap problem">
+    <div className="wrap sheet problem" data-module={p.moduleId}>
       {header(`predicted ${run.predicted} / ${total}`)}
-      <h2>Mark your own answer</h2>
+      <h1>Mark your own answer</h1>
       <p className="lede">
         Be strict. A mark you award yourself for a point you nearly made is a mark you will not
         make in the hall.
@@ -403,7 +441,7 @@ function MarkStage({ p, run, update, total, persist, header, onSave, toast }) {
         <summary>Model answer</summary>
         {(p.modelAnswer || []).map((b, i) => (
           <div key={i}>
-            <h4>{b.h}</h4>
+            <h2>{b.h}</h2>
             {(b.p || []).map((t, k) => <p key={k}>{t}</p>)}
           </div>
         ))}
@@ -443,6 +481,12 @@ function MarkStage({ p, run, update, total, persist, header, onSave, toast }) {
 function DoneStage({ p, a, xp, header }) {
   const gap = a.predicted - a.score;
   const pct = prob.percent(a.score, a.total);
+  const guided = p.kind === 'guided';
+  // A rehearsal is not marked in green or red: those colours mean a verdict on
+  // an attempt, and following a correct argument is not the same event as
+  // constructing one. It also earns no calibration bonus — predicting your mark
+  // is easy when the steps are handed to you — so the page must not claim one.
+  const calibrated = !guided && Math.abs(gap) <= 1;
   const verdict = Math.abs(gap) <= 1
     ? 'Your sense of the answer matched the rubric. That is the harder half of this exercise.'
     : gap > 0
@@ -454,20 +498,21 @@ function DoneStage({ p, a, xp, header }) {
     .sort((x, y) => prob.bandRank(x.band) - prob.bandRank(y.band));
 
   return (
-    <div className="wrap problem">
+    <div className="wrap sheet problem" data-module={p.moduleId}>
       {header('')}
       <motion.div className="result-head"
         initial={{ scale: 0.88, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 190, damping: 18 }}>
         <ProgressRing value={pct} size={150} stroke={10}
-          tone={pct >= 70 ? 'sage' : pct >= 50 ? 'gold' : 'oxide'}
+          tone={guided ? 'neutral' : pct >= 70 ? 'correct' : pct >= 50 ? 'neutral' : 'wrong'}
           label={`${a.score}/${a.total}`} sub={`${pct}%`} />
         <div>
-          <h2 style={{ marginBottom: '0.25rem' }}>{a.score} out of {a.total}</h2>
+          <h1 style={{ marginBottom: '0.25rem' }}>{a.score} out of {a.total}</h1>
           <p className="lede" style={{ marginBottom: '0.75rem' }}>
             {a.words} words in {plural(a.minutesSpent, 'minute')} against a {p.minutes}-minute target.
           </p>
-          <p className="result-xp">+<CountUp value={xp} /> XP{Math.abs(gap) <= 1 ? ' · calibration bonus' : ''}</p>
+          {guided && <RehearsalScore scored={a.score} total={a.total} />}
+          <p className="result-xp">+<CountUp value={xp} /> XP{calibrated ? ' · calibration bonus' : ''}</p>
         </div>
       </motion.div>
 
@@ -478,11 +523,22 @@ function DoneStage({ p, a, xp, header }) {
           tone={Math.abs(gap) <= 1 ? 'sage' : 'oxide'} delay={0.12} />
       </StatGrid>
 
+      {/* One attempt's gap says little; the trend across attempts is the thing a
+          learner studying alone has no other way to see.
+
+          Not on a rehearsal. Predicting your own mark is easy when the steps
+          are pre-ordered and half the reasoning is handed over, which is the
+          same reason game.js keeps guided problems out of the `calibrated`
+          seal. A trend sentence under a rehearsal would be the reward system
+          asserting something about self-assessment that the task did not
+          test. */}
+      {!guided && <CalibrationLine />}
+
       <p>{verdict}</p>
 
       {missed.length > 0 ? (
         <>
-          <h3>What to take away</h3>
+          <h2>What to take away</h2>
           <div className="arrangement">
             {missed.map((r, i) => (
               <ArrRow

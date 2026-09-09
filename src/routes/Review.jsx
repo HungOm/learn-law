@@ -79,13 +79,24 @@ export default function Review() {
     return () => window.removeEventListener('keydown', onKey);
   }, [revealed, done, submit]);
 
-  if (!queue) return <div className="review"><p className="lede">Building the queue…</p></div>;
+  // The loading state gets a heading like every other state. Without one the
+  // page announces nothing to a screen reader while it waits, and on a cold
+  // first visit — an empty database, 186 cards being seeded — that wait is the
+  // longest one in the app.
+  if (!queue) {
+    return (
+      <div className="wrap sheet review">
+        <h1>Review</h1>
+        <p className="lede" role="status">Building the queue…</p>
+      </div>
+    );
+  }
 
   if (!queue.length) {
     return (
-      <div className="wrap review">
-        <p className="small"><Link to="/">← Arrangement of modules</Link></p>
-        <h2>Nothing due</h2>
+      <div className="wrap sheet review">
+        <p className="small taplink-row"><Link className="taplink" to="/">← Arrangement of modules</Link></p>
+        <h1>Nothing due</h1>
         <p className="lede">Come back tomorrow. Consistency beats volume — FSRS assumes you show up.</p>
         <div className="btn-row">
           <Link className="btn btn-primary" to="/arena">Play the Arena instead</Link>
@@ -107,7 +118,16 @@ export default function Review() {
   const pct = Math.round((i / queue.length) * 100);
 
   return (
-    <div className={`review${flash ? ` flash-${flash}` : ''}`}>
+    // This screen had no pane at all: the flip card ran the full width of the
+    // main column, so on a wide screen a one-line question was set across a
+    // metre of glass. It is a card read for meaning, so it takes the reading
+    // measure and the sheet like the rest of the route. The wash overlay is
+    // position: fixed and still covers the viewport, not this box.
+    //
+    // data-module is the card's own module — its title is already printed in
+    // the bar above, so the colour is the retrieval cue and the words are what
+    // identify it.
+    <div className={`wrap sheet review${flash ? ` flash-${flash}` : ''}`} data-module={card.moduleId}>
       <div className="review-progress">
         <span>{i + 1} of {queue.length}</span>
         <span>{mod.title || ''}</span>
@@ -129,16 +149,27 @@ export default function Review() {
         >
           <div className="flip-face flip-front">
             <p className="card-kind">{cat.cardTypes[card.type] ? card.type : 'card'}</p>
-            <p className="card-front">{card.front}</p>
+            {/* The question is the page's subject, so it is the page's heading.
+                Without it the review screen — the surface a reader spends most
+                of their time on — offered a screen reader no heading at all to
+                orient by. Styled by .card-front, not by the tag. */}
+            <h1 className="card-front">{card.front}</h1>
             <p className="keyhint">Space or Enter to reveal. Try to answer out loud first.</p>
           </div>
           <div className="flip-face flip-back">
             <p className="card-kind">answer</p>
             <p className="card-back-text">{card.back}</p>
             {card.note && <p className="card-note">{card.note}</p>}
+            {/* This one DOES take the exemption, and the measurement is why:
+                the link sits after the source citation and the words "· from"
+                in one running line (215x15 at 1920, 270x35 when it wraps at
+                360). Padding a target inside a line is the case WCAG 2.5.5
+                exempts, and a min-height here would only make every line
+                containing it taller. Marked rather than left bare, so the next
+                audit sweep reads a decision instead of a defect. */}
             <p className="card-source">
               {card.source}
-              {lesson && <> · from <Link to={`/lesson/${lesson.id}`}>{lesson.title}</Link></>}
+              {lesson && <> · from <Link className="tap-exempt" to={`/lesson/${lesson.id}`}>{lesson.title}</Link></>}
             </p>
           </div>
         </motion.div>
@@ -245,10 +276,10 @@ function Finish({ queue, tally, xpTotal, bestCombo, startedAt }) {
   const recall = graded ? Math.round((1 - tally.again / graded) * 100) : 0;
 
   return (
-    <div className="wrap review">
+    <div className="wrap sheet review">
       <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 200, damping: 18 }}>
-        <h2>Session done</h2>
+        <h1>Session done</h1>
         <p className="lede">
           {plural(queue.length, 'card')} in about {plural(mins, 'minute')}.
         </p>

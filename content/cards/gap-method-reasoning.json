@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "1.0",
+  "note": "Cards for the beginner on-ramp lessons in the four skill modules. These are habits and method rather than doctrine: how to run a study session, how to judge a source, how to build an argument, and how to take a section apart. Each is planted by one lesson in content/lessons/gap-method-reasoning.json.",
+  "cardTypes": {
+    "term": "Defined term or Latin maxim. Irreducible pair.",
+    "rule": "A black-letter rule or a single element of one.",
+    "ratio": "The principle a case stands for.",
+    "structure": "Institutional or hierarchical fact.",
+    "source": "Where a rule comes from — statute, section, or authority.",
+    "trigger": "A fact cue that should make you think of a doctrine."
+  },
+  "cards": [
+    {
+      "id": "pf-study-01",
+      "moduleId": "m-study-method",
+      "type": "rule",
+      "front": "Why does re-reading feel like it is working?",
+      "back": "The second pass is easier than the first, and the brain reads ease as knowing. That feeling is fluency, not memory.",
+      "tags": ["method", "retrieval"],
+      "source": "Make It Stick; the retrieval practice literature"
+    },
+    {
+      "id": "pf-study-02",
+      "moduleId": "m-study-method",
+      "type": "rule",
+      "front": "What should the first ten minutes of a study session be?",
+      "back": "Answering questions on old material from memory, before you look at anything. Testing comes before reviewing.",
+      "tags": ["method", "retrieval"],
+      "source": "Make It Stick; the retrieval practice literature"
+    },
+    {
+      "id": "pf-study-03",
+      "moduleId": "m-study-method",
+      "type": "rule",
+      "front": "Four half-hours across a week, or one two-hour session?",
+      "back": "Four half-hours. The gaps let you forget a little, and pulling it back is what makes the memory last.",
+      "tags": ["method", "spacing"],
+      "source": "Make It Stick; the spacing literature"
+    },
+    {
+      "id": "pf-study-04",
+      "moduleId": "m-study-method",
+      "type": "rule",
+      "front": "Why mix topics inside one sitting instead of doing one topic per week?",
+      "back": "Real facts never say which rule they belong to. Mixing feels worse and trains you to choose.",
+      "tags": ["method", "interleaving"],
+      "source": "Make It Stick; the interleaving literature"
+    },
+    {
+      "id": "pf-study-05",
+      "moduleId": "m-study-method",
+      "type": "rule",
+      "front": "How do you restart after missing a week of study?",
+      "back": "Ten minutes on material you already know, not a new topic. Restarting is a habit problem, not a knowledge problem.",
+      "tags": ["method", "habit"],
+      "source": "Standard study practice"
+    },
+    {
+      "id": "pf-study-06",
+      "moduleId": "m-study-method",
+      "type": "rule",
+      "front": "What is the strongest way to test your own understanding when you study alone?",
+      "back": "Explain it to somebody with no legal training. If you cannot say it in ordinary words, you do not have it yet.",
+      "tags": ["method", "self-testing"],
+      "source": "Standard study practice"
+    },
+
+    {
+      "id": "pf-res-01",
+      "moduleId": "m02-legal-research",
+      "type": "rule",
+      "front": "Is a page printed from the government statute portal the same as the Gazette?",
+      "back": "No. It is the official published text and it is right for study, but a print-out is not a copy of the Gazette.",
+      "tags": ["research", "sources"],
+      "source": "Attorney General's Chambers, Malaysia"
+    },
+    {
+      "id": "pf-res-02",
+      "moduleId": "m02-legal-research",
+      "type": "rule",
+      "front": "What are the three kinds of thing you find when you search for law?",
+      "back": "The law itself, the record of what a court decided, and somebody talking about the law. Only the first two are sources.",
+      "tags": ["research", "sources"],
+      "source": "Standard research practice"
+    },
+    {
+      "id": "pf-res-03",
+      "moduleId": "m02-legal-research",
+      "type": "trigger",
+      "front": "An article says the law says something but names no Act and no section. What follows?",
+      "back": "You cannot check it, so you cannot rely on it. Use it only as a lead to the primary text.",
+      "tags": ["research", "sources"],
+      "source": "Standard research practice"
+    },
+    {
+      "id": "pf-res-04",
+      "moduleId": "m02-legal-research",
+      "type": "term",
+      "front": "What is a citation for?",
+      "back": "It is an address. It tells any reader where to find the same words, and usually which court decided the case.",
+      "tags": ["research", "citation"],
+      "source": "Standard research practice"
+    },
+    {
+      "id": "pf-res-05",
+      "moduleId": "m02-legal-research",
+      "type": "rule",
+      "front": "What must a research note contain to be worth keeping?",
+      "back": "The source, the exact provision, the words you relied on, and the date you read it. Research you cannot retrace is not research.",
+      "tags": ["research", "method"],
+      "source": "Standard research practice"
+    },
+    {
+      "id": "pf-res-06",
+      "moduleId": "m02-legal-research",
+      "type": "trigger",
+      "front": "A search hands you a case first. What do you do before reading it?",
+      "back": "Look for the Act that governs the point. A case is evidence of what the law is; the Act is the law.",
+      "tags": ["research", "order-of-work"],
+      "source": "Standard research practice"
+    },
+
+    {
+      "id": "pf-reason-01",
+      "moduleId": "m13-legal-reasoning",
+      "type": "term",
+      "front": "What makes a question an issue?",
+      "back": "The facts leave it genuinely open and both answers are arguable. If only one answer is possible, it is not the issue.",
+      "tags": ["reasoning", "issue-spotting"],
+      "source": "Standard problem-question technique"
+    },
+    {
+      "id": "pf-reason-02",
+      "moduleId": "m13-legal-reasoning",
+      "type": "rule",
+      "front": "What is the first thing to do with a rule before applying it?",
+      "back": "Split it into its elements and list them, one per line. Each element is a separate question that has to be answered.",
+      "tags": ["reasoning", "structure"],
+      "source": "Standard problem-question technique"
+    },
+    {
+      "id": "pf-reason-03",
+      "moduleId": "m13-legal-reasoning",
+      "type": "rule",
+      "front": "What does application actually mean?",
+      "back": "Putting one specific fact next to one specific element of the rule. Retelling the story is not application.",
+      "tags": ["reasoning", "application"],
+      "source": "Standard problem-question technique"
+    },
+    {
+      "id": "pf-reason-04",
+      "moduleId": "m13-legal-reasoning",
+      "type": "trigger",
+      "front": "A sentence in your answer would still be true if the facts changed. What is it?",
+      "back": "Padding. Application only counts when it depends on these facts and no others.",
+      "tags": ["reasoning", "application"],
+      "source": "Standard problem-question technique"
+    },
+    {
+      "id": "pf-reason-05",
+      "moduleId": "m13-legal-reasoning",
+      "type": "rule",
+      "front": "Why write out the other side's best argument?",
+      "back": "A real issue has two arguable sides, and stating the stronger one against you shows you saw the difficulty. Then you decide.",
+      "tags": ["reasoning", "argument"],
+      "source": "Standard problem-question technique"
+    },
+    {
+      "id": "pf-reason-06",
+      "moduleId": "m13-legal-reasoning",
+      "type": "rule",
+      "front": "Before using an earlier case, what must you identify?",
+      "back": "The facts the earlier decision actually turned on. Only those facts make it close to yours.",
+      "tags": ["reasoning", "analogy"],
+      "source": "Standard common law reasoning"
+    },
+
+    {
+      "id": "pf-sec-01",
+      "moduleId": "m14-statutory-interpretation",
+      "type": "rule",
+      "front": "What is the first physical step in reading a hard section?",
+      "back": "Copy it out with one clause per line, breaking at every and, or, if, unless and subject to.",
+      "tags": ["interpretation", "method"],
+      "source": "Standard statutory reading practice"
+    },
+    {
+      "id": "pf-sec-02",
+      "moduleId": "m14-statutory-interpretation",
+      "type": "rule",
+      "front": "What four things are you hunting for in a section?",
+      "back": "Who it applies to, what it requires or allows, the conditions, and the consequence of breaking it.",
+      "tags": ["interpretation", "method"],
+      "source": "Standard statutory reading practice"
+    },
+    {
+      "id": "pf-sec-03",
+      "moduleId": "m14-statutory-interpretation",
+      "type": "rule",
+      "front": "In a list of conditions, what separates and from or?",
+      "back": "**And** requires every item. **Or** requires any one. Changing the word can reverse the answer.",
+      "tags": ["interpretation", "language"],
+      "source": "Standard statutory construction"
+    },
+    {
+      "id": "pf-sec-04",
+      "moduleId": "m14-statutory-interpretation",
+      "type": "rule",
+      "front": "A definition says includes rather than means. What follows?",
+      "back": "**Means** gives a closed list. **Includes** adds to the ordinary meaning without shutting it down.",
+      "tags": ["interpretation", "definitions"],
+      "source": "Standard statutory construction"
+    },
+    {
+      "id": "pf-sec-05",
+      "moduleId": "m14-statutory-interpretation",
+      "type": "term",
+      "front": "What is a proviso?",
+      "back": "A clause that cuts a piece out of the provision it is attached to, usually starting with *provided that*. It does not reach other sections.",
+      "tags": ["interpretation", "structure"],
+      "source": "Standard statutory construction"
+    },
+    {
+      "id": "pf-sec-06",
+      "moduleId": "m14-statutory-interpretation",
+      "type": "source",
+      "front": "Where do you look for the meaning of a word used in an Act?",
+      "back": "The section itself, then the Act's own interpretation section, then the Interpretation Acts 1948 and 1967.",
+      "tags": ["interpretation", "definitions"],
+      "source": "Interpretation Acts 1948 and 1967"
+    }
+  ]
+}

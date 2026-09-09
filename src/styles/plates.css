@@ -1,0 +1,527 @@
+/* Figures: illustration plates, diagrams, charts and tables.
+   Owned by the lessons work. Consumes semantic roles only — no primitives, no
+   raw hex. Colour is never the only cue: every chart series carries a direct
+   label, and every plate and diagram carries a text alternative. */
+
+/* ============================================================ plates ======
+   The engraved illustration at the head of a lesson. The frame is constant so
+   the drawing inside reads as a figure in a printed text; the ink classes below
+   are the whole vocabulary the scenes are allowed to draw with. */
+
+.plate {
+  margin: 0 0 var(--space-6);
+}
+/* overflow-x rather than overflow: the frame still has to clip its own corner
+   radius, and it now also has to be the plate's scroll box — see the floor
+   below. overflow-y stays hidden so a scrollbar can never appear on an axis
+   the drawing does not use. */
+.plate-frame {
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunk);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+}
+/* The SVG type floor, pinned rather than hoped for.
+ *
+ * An SVG font-size in viewBox units is a RATIO, not a size. The plates are
+ * drawn on an 800-unit box and the smallest text on them is .pl-tag at 15
+ * units, so:
+ *
+ *     min_rendered_px = 11 x (800 / 15) = 587px  ->  37rem
+ *
+ * The comment this replaces claimed the floor held "at the narrowest layout".
+ * It does not, and could not: at 800/15 the frame has to be 587px wide before
+ * a tag reaches 11px, and on a 390px phone the same label renders at 6.7px.
+ * A number nobody could have measured is not evidence, which is exactly the
+ * failure DESIGN.md 3 describes.
+ *
+ * So the width is declared and the box scrolls. The cost is real and belongs
+ * in the open: below about a 592px pane — every phone, and the low end of the
+ * tablet band — the plate is now dragged sideways rather than shrunk. That is
+ * the right way round. A plate carries a full text alternative and a caption;
+ * a label at 6.7px carries neither, to the readers who need it most.
+ *
+ * The fix that would remove the scroll is a larger design size for .pl-tag in
+ * the scenes themselves, which is a change to 97 label positions across 55
+ * drawings and belongs to whoever owns them.
+ */
+.plate-svg { display: block; width: 100%; min-width: 37rem; height: auto; }
+/* Capped above the floor, not below it. 34rem put every inline plate under the
+   11px line on every screen in the app, desktop included. */
+.plate-inline .plate-frame { max-width: 40rem; margin-inline: auto; }
+.plate-caption {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-snug);
+  margin-top: var(--space-3);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--border-hairline);
+}
+
+/* --- the drawing vocabulary --- */
+
+.pl-ink { color: var(--figure-ink); }
+.pl-stroke { stroke: var(--figure-ink); stroke-width: 1.5; fill: none; }
+.pl-line { stroke: var(--border-strong); stroke-width: 1; }
+.pl-line-light { stroke: var(--border-hairline); stroke-width: 1; }
+.pl-hatch { stroke: var(--border-strong); stroke-width: 0.7; opacity: 0.55; }
+.pl-fill { fill: var(--surface-raised); stroke: var(--figure-ink); stroke-width: 1.5; }
+.pl-paper { fill: var(--surface-page); }
+.pl-dark { fill: var(--figure-ink); opacity: 0.14; }
+.pl-shadow { fill: var(--figure-ink); opacity: 0.09; }
+.pl-glass { fill: var(--surface-page); opacity: 0.72; }
+.pl-muted-figure { opacity: 0.55; }
+
+.pl-accent { fill: var(--figure-accent); opacity: 0.55; }
+.pl-accent-fill { fill: var(--figure-accent); }
+.pl-accent-stroke { stroke: var(--figure-accent); stroke-width: 2; fill: none; }
+.pl-accent-text { fill: var(--figure-accent); font-family: var(--font-sans); font-weight: var(--weight-semi); }
+.pl-accent-box { fill: var(--figure-wash); stroke: var(--figure-accent); stroke-width: 1.5; }
+
+.pl-sky-a { stop-color: var(--surface-sunk); }
+.pl-sky-b { stop-color: var(--surface-page); }
+.pl-glow-a { stop-color: var(--figure-accent); stop-opacity: 0.28; }
+.pl-glow-b { stop-color: var(--figure-accent); stop-opacity: 0; }
+
+/* Plate text. Sized in viewBox units against an 800-unit box, so at the
+   narrowest layout the smallest of these still lands above the 11px floor. */
+.plate-svg text { font-family: var(--font-sans); fill: var(--text-secondary); }
+.pl-tag { font-size: 15px; fill: var(--text-secondary); text-anchor: middle; }
+.pl-tag.is-left { text-anchor: start; }
+.pl-latin { font-family: var(--font-serif); font-size: 19px; font-style: italic; fill: var(--text-primary); }
+.pl-cite { font-family: var(--font-serif); font-size: 21px; fill: var(--text-primary); }
+.pl-cite.is-accent { fill: var(--figure-accent); font-weight: var(--weight-semi); }
+.pl-stamp {
+  font-family: var(--font-sans); font-size: 34px; font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-caps); fill: var(--figure-accent);
+}
+
+.pl-rule-outer { stroke: var(--border-strong); stroke-width: 1.5; fill: none; }
+.pl-rule-inner { stroke: var(--border-hairline); stroke-width: 1; fill: none; }
+
+/* ============================================================ diagrams ==== */
+
+.dia { margin: var(--space-6) 0; }
+.dia-title {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-weight: var(--weight-semi);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+.dia-body {
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunk);
+  padding: var(--space-4);
+  /* Wide diagrams scroll inside their own box rather than making the page
+     scroll — and the floor below is what keeps the labels legible. */
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+/* THIS DECLARATION SETS THE TYPE FLOOR FOR EVERY DIAGRAM IN THE APP, AND
+ * Diagram.jsx IS WRITTEN AGAINST THE NUMBER IN IT.
+ *
+ * ==> If you move this min-width, move `MIN_RENDERED` in Diagram.jsx with it.
+ *     That constant is 608 because this is 38rem, every unit size in that file
+ *     is computed from it, and nothing in either file will fail if they drift.
+ *     A label would simply get smaller, silently, everywhere.
+ *
+ * Read DESIGN.md 3 before changing it. An SVG font-size in viewBox units is a
+ * ratio, not a size, so this min-width is the only thing that turns a unit
+ * size into a pixel size. On Diagram.jsx's 760-unit box:
+ *
+ *     rendered_px = units x (min_width_px / 760)
+ *
+ * At 38rem / 608px, with the unit sizes Diagram.jsx now sets:
+ *
+ *     role                       units    rendered
+ *     .dia-label                 18.1     14.5px
+ *     .dia-note, .dia-head       16.9     13.5px
+ *     .dia-year                  17.5     14.0px
+ *     .dia-num                   16.9     13.5px
+ *
+ * all of them clear of the 11px floor, and clear of the 12px floor for text
+ * that is a sentence. At the 34rem (544px) this replaces, five of the seven
+ * roles were UNDER 11px — .dia-num rendered at 8.6px — because the pin and the
+ * unit sizes had never been checked against each other.
+ *
+ * Nothing in this file sets a diagram's font-size. Diagram.jsx owns the unit
+ * sizes; this file owns the pin. Two layers each setting a size is how a
+ * correct fix in one of them produces a wrong result on screen.
+ *
+ * What the pin costs. A diagram already scrolled on every phone at 34rem (a
+ * 360px handset has about a 328px pane), so on a phone this is 64px more drag
+ * on a box that was already dragging. What it buys is that from 1024 up a
+ * diagram does not scroll at all: learn.css's --fig-bleed gives the figure
+ * 612px, 644px and 676px of box at laptop, desktop and wide.
+ */
+.dia-svg { display: block; width: 100%; min-width: 38rem; height: auto; }
+.dia-caption {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-snug);
+  margin-top: var(--space-3);
+}
+.dia-alt { margin-top: var(--space-2); }
+
+.dia-svg text { font-family: var(--font-sans); }
+.dia-label { fill: var(--text-primary); text-anchor: middle; }
+.dia-label.is-left { text-anchor: start; }
+.dia-note { fill: var(--text-secondary); text-anchor: middle; }
+.dia-note.is-left { text-anchor: start; }
+.dia-note.is-right { text-anchor: end; }
+.dia-head { fill: var(--text-secondary); text-anchor: middle; font-weight: var(--weight-semi); }
+.dia-head.is-right { text-anchor: end; }
+.dia-cond { fill: var(--text-secondary); text-anchor: middle; font-style: italic; }
+.dia-year { fill: var(--text-primary); font-weight: var(--weight-semi); font-variant-numeric: tabular-nums; }
+/* No font-size here, deliberately. Diagram.jsx owns the unit sizes and this
+   file owns the pin that turns them into pixels — one owner per number. A CSS
+   font-size would win over the SVG presentation attribute and silently undo
+   whatever the drawing decided, which is exactly how this rule briefly held
+   the numeral at 14 units while the JSX had already raised it to 16.9. */
+.dia-num { fill: var(--text-inverse); text-anchor: middle; font-weight: var(--weight-semi); }
+.dia-num-bg { fill: var(--text-primary); }
+
+.dia-box { fill: var(--surface-raised); stroke: var(--border-strong); stroke-width: 1.25; }
+.dia-box.is-question { fill: var(--surface-page); stroke: var(--border-active); stroke-width: 1.5; }
+.dia-box.is-apex { fill: var(--surface-page); stroke: var(--border-active); stroke-width: 1.75; }
+/* The verdict rests on the glyph and the stroke, never on the fill. The two
+   verdict tints differ by a ΔE of 0.024 in normal vision, which is at the
+   just-noticeable threshold and below it under deuteranopia — they are
+   reinforcement for a border and a drawn mark that are already doing the work. */
+.dia-box.is-correct { fill: var(--fill-correct); stroke: var(--signal-correct); stroke-width: 2.5; }
+.dia-box.is-wrong { fill: var(--fill-wrong); stroke: var(--signal-wrong); stroke-width: 2.5; }
+.dia-cell { fill: var(--surface-raised); stroke: var(--border-hairline); stroke-width: 1; }
+.dia-cell.is-correct { fill: var(--fill-correct); stroke: var(--signal-correct); stroke-width: 2.5; }
+.dia-cell.is-wrong { fill: var(--fill-wrong); stroke: var(--signal-wrong); stroke-width: 2.5; }
+
+.dia-spine { stroke: var(--border-strong); stroke-width: 1.25; }
+.dia-arrow { stroke: var(--border-strong); stroke-width: 1.25; fill: none; }
+.dia-arrowhead { fill: var(--border-strong); }
+.dia-dot { fill: var(--surface-page); stroke: var(--border-active); stroke-width: 2; }
+
+/* A tick or a cross, drawn. Shape is the channel that survives greyscale,
+   dichromacy and forced-colours; the colour underneath is the second cue. */
+.dia-verdict-disc { fill: var(--surface-page); stroke-width: 2.5; }
+.dia-verdict-mark { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.dia-verdict.is-correct .dia-verdict-disc { stroke: var(--signal-correct); }
+.dia-verdict.is-correct .dia-verdict-mark { stroke: var(--signal-correct); }
+.dia-verdict.is-wrong .dia-verdict-disc { stroke: var(--signal-wrong); }
+.dia-verdict.is-wrong .dia-verdict-mark { stroke: var(--signal-wrong); }
+.dia-spec-a { stop-color: var(--viz-series-3); }
+.dia-spec-b { stop-color: var(--viz-series-1); }
+
+/* ============================================================ charts ====== */
+
+.chart {
+  margin: var(--space-6) 0;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunk);
+  padding: var(--space-4) var(--space-5) var(--space-4);
+}
+.chart-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+.chart-title {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-weight: var(--weight-semi);
+  color: var(--text-primary);
+}
+.chart-toggle {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  padding: var(--space-1) var(--space-3);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.chart-toggle:hover { border-color: var(--border-active); color: var(--text-primary); }
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+.chart-key {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+}
+.chart-swatch {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* Horizontal bars. Rounded data-ends, anchored to a common baseline, with a
+   surface-coloured gap between stacked segments so adjoining fills never touch. */
+.bars { display: flex; flex-direction: column; gap: var(--space-3); }
+/* The label column takes the width its content needs, capped at 12rem — not
+   12rem regardless of content.
+   `minmax(6rem, 12rem)` gave the column its full growth limit whatever was in
+   it, so a 103px label reserved 192px and the bar track, which is the part
+   carrying the data, got what was left. Measured, it was worst at 1024, where
+   the chart came out *worse than at 780*: a 201px track against 528px, because
+   the <=780 rule below drops the track onto its own full-width row. A laptop
+   reader was getting the smallest bars in the app.
+   `fit-content(12rem)` keeps the same ceiling for genuinely long labels, and
+   the column is still shared across rows, so the bars stay aligned to a common
+   baseline. Tracks measured after: 1024 201->291px, 1440 361->434, 1920
+   393->466, with no clipped labels and no extra label lines at any width. */
+.bar-row {
+  display: grid;
+  grid-template-columns: fit-content(12rem) 1fr auto;
+  gap: var(--space-3);
+  align-items: center;
+}
+.bar-label {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-primary);
+  line-height: var(--leading-snug);
+}
+.bar-track {
+  display: flex;
+  gap: var(--gap-hairline);
+  height: 0.8rem;
+  background: var(--surface-raised);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+/* Once the track passes ~430px the 12.8px bar reads as a hairline rather than
+   as a quantity. The bar is the data; it grows with the space the row gained. */
+@media (min-width: 1440px) {
+  .bar-track { height: 1rem; }
+}
+.bar-fill { display: block; height: 100%; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.bar-fill.is-seg { border-radius: var(--radius-sm); }
+.bar-value {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+.bar-note {
+  grid-column: 2 / -1;
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+}
+
+.viz-1, .chart-swatch.viz-1 { background: var(--viz-series-1); }
+.viz-2, .chart-swatch.viz-2 { background: var(--viz-series-2); }
+.viz-3, .chart-swatch.viz-3 { background: var(--viz-series-3); }
+
+.chart-caption {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-snug);
+  margin-top: var(--space-4);
+}
+.chart-note { margin-top: var(--space-2); }
+.chart-source {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+}
+
+/* ============================================================ tables ====== */
+
+.dtable-fig { margin: var(--space-6) 0; }
+.dtable-cap {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-weight: var(--weight-semi);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+.table-wrap { overflow-x: auto; }
+.dtable {
+  width: 100%;
+  min-width: 24rem;
+  border-collapse: collapse;
+  font-size: var(--type-sm);
+}
+.dtable th, .dtable td {
+  text-align: left;
+  padding: var(--space-3);
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+  vertical-align: top;
+  line-height: var(--leading-snug);
+}
+.dtable thead th {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semi);
+  color: var(--text-secondary);
+  border-bottom-color: var(--border-strong);
+  white-space: nowrap;
+}
+.dtable tbody th {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+/* A lone link in a table cell is a control, not a link inside a sentence, so
+   the WCAG 2.5.5 inline exemption does not reach it. Measured in a browser at
+   six widths: the module links in the "By module" table on #/progress were
+   17px tall from 780px up and 35px at 360-600. Width was never the problem
+   (74-167px) — the height was coming from whether the label happened to wrap,
+   which is why the desktop reading was the WORSE one.
+
+   That is the case DESIGN.md 3 says to check for. There, a min-height had been
+   put on a target whose WIDTH was under the floor, a fix that could not have
+   worked. Here the failing dimension really is height, so a height floor is
+   the right instrument — and the measurement could have disagreed with the
+   declaration, because there was no declaration to agree with.
+
+   The table gets about 160px taller for it. That is the cost of the rule and
+   nothing shrinks to pay for it. */
+.dtable tbody th a {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+}
+.dtable .is-num { text-align: right; font-variant-numeric: tabular-nums; }
+.dtable tbody tr:last-child th, .dtable tbody tr:last-child td { border-bottom: none; }
+.dtable-note {
+  display: block;
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  font-weight: var(--weight-regular);
+}
+.dtable-note-line { margin-top: var(--space-2); }
+
+/* ============================================================ steps ======= */
+
+.stepsblock { margin: var(--space-5) 0; }
+.steps-title {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-weight: var(--weight-semi);
+  margin-bottom: var(--space-3);
+}
+.steps-list { list-style: none; padding: 0; margin: 0; }
+.steps-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+}
+.steps-list li:last-child { border-bottom: none; }
+.steps-n {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  border: var(--line-hairline) solid var(--border-strong);
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+.steps-h { font-family: var(--font-sans); font-size: var(--type-sm); }
+
+/* ============================================================ compare ===== */
+
+.compareblock {
+  margin: var(--space-6) 0;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.compare-title {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-weight: var(--weight-semi);
+  padding: var(--space-3) var(--space-4);
+  margin: 0;
+  background: var(--surface-sunk);
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+}
+.compare-cols { display: grid; grid-template-columns: 1fr 1fr; }
+.compare-col { padding: var(--space-4); }
+.compare-col.is-a { border-right: var(--line-hairline) solid var(--border-hairline); }
+.compare-h {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-3);
+}
+.compare-col ul { margin: 0; padding-left: var(--space-4); }
+.compare-col li { margin-bottom: var(--space-2); line-height: var(--leading-snug); }
+
+/* ============================================================ the ladder ==
+   Figures follow the same six states as the reading surface. Two things change
+   across them and only two:
+
+     - how wide the figure's box is, which is decided in learn.css by
+       --fig-bleed, because it is a property of the sheet's margins rather than
+       of the figure;
+     - how big the writing around a figure is, which is decided here.
+
+   A caption at 13px is right on a phone held at arm's length and small on a
+   1920px monitor two feet away, so captions and table text step up once. They
+   never step down: the floor is a floor. */
+
+/* ---- phone and large phone: <= 780 ---- */
+@media (max-width: 780px) {
+  .compare-cols { grid-template-columns: 1fr; }
+  .compare-col.is-a {
+    border-right: none;
+    border-bottom: var(--line-hairline) solid var(--border-hairline);
+  }
+  .bar-row { grid-template-columns: 1fr auto; }
+  .bar-track { grid-column: 1 / -1; grid-row: 2; }
+  .dia-body { padding: var(--space-3); }
+  /* A caption is prose about a figure and it is the thing a reader falls back
+     on when the figure is scrolled off its own edge, so it does not get to be
+     the smallest text on the page. */
+  .plate-caption, .dia-caption, .chart-caption { font-size: var(--type-sm); }
+}
+
+/* ---- tablet: 781-1023 ----
+   The narrowest reading pane in the app. Compare goes back to two columns
+   here — a pane of ~480px at 781 is tight, so the padding comes in a step to
+   keep two columns of text rather than two columns of padding. */
+@media (min-width: 781px) and (max-width: 1023px) {
+  .compare-col { padding: var(--space-3); }
+  .dia-body { padding: var(--space-3); }
+}
+
+/* ---- desktop: >= 1440 ----
+   The figure's box is already wider by then (learn.css, --fig-bleed). This is
+   the writing around it catching up. */
+@media (min-width: 1440px) {
+  .plate-caption, .dia-caption, .chart-caption { font-size: var(--type-base); }
+  .dia-title, .dtable-cap, .chart-title, .steps-title, .compare-title {
+    font-size: var(--type-base);
+  }
+  .dtable { font-size: var(--type-base); }
+  .bar-label, .bar-value { font-size: var(--type-base); }
+  .compare-col { padding: var(--space-5); }
+}

@@ -4,10 +4,18 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useStudy } from '../state/StudyContext.jsx';
 import * as quizLib from '../lib/quiz.js';
 import { ARENA_LIVES, ARENA_SECONDS } from '../lib/quiz.js';
+import { loadQuizPool } from '../lib/content.js';
 import { CountUp, ProgressRing } from '../components/Bits.jsx';
 import { burstFrom, fanfare, buzz } from '../lib/fx.js';
 
 const STAGE = { ready: 'ready', playing: 'playing', over: 'over' };
+
+/* Where the clock speaks, descending. Announcing every second is unusable and
+   announcing nothing leaves a screen-reader reader unaware the clock is
+   running out; these are the points where the answer changes what a reader
+   would do. Descending order is load-bearing — the crossed-below search below
+   takes the first match, which must be the highest threshold not yet spoken. */
+const THRESHOLDS = [30, 10, 5, 4, 3, 2, 1];
 
 export default function Arena() {
   const { cat, award, toast } = useStudy();
@@ -31,12 +39,21 @@ export default function Arena() {
   const boardRef = useRef(null);
   const advanceTimer = useRef(null);
 
-  const pool = cat.quizPool;
+  // The Arena is the one screen that wants every question, so it is the one
+  // screen that pays for every module chunk. Fetched on arrival rather than on
+  // Begin, so the wait overlaps with reading the rules.
+  const [pool, setPool] = useState(null);
 
   useEffect(() => { quizLib.arenaBest().then(setRecord); }, []);
+  useEffect(() => {
+    let live = true;
+    loadQuizPool().then(p => { if (live) setPool(p); });
+    return () => { live = false; };
+  }, []);
   useEffect(() => () => clearTimeout(advanceTimer.current), []);
 
   const start = useCallback(() => {
+    if (!pool) return;
     setDeck(quizLib.prepare(pool));
     setI(0); setPicked(null); setLives(ARENA_LIVES);
     setCorrect(0); setAnswered(0); setStreak(0); setBest(0); setXp(0);
@@ -61,6 +78,46 @@ export default function Arena() {
     return () => cancelAnimationFrame(raf);
   }, [stage]);
 
+  /* The clock is announced at thresholds and never continuously. A countdown
+     that speaks every second is unusable; one that never speaks leaves a
+     screen-reader user with no idea time is running out, which on a ninety-
+     second board is the whole game. The visible numeral stays in the
+     accessibility tree rather than being aria-hidden — threshold announcements
+     say when it matters, and the readable numeral answers "how long have I
+     got?" whenever the reader asks. Losing the second to get the first would
+     be a bad trade.
+
+     Keyed on `secs`, not `msLeft`: msLeft is driven by requestAnimationFrame,
+     so this would otherwise run sixty times a second to say nothing. */
+  const secs = Math.ceil(msLeft / 1000);
+  const [timeSay, setTimeSay] = useState('');
+  const said = useRef(new Set());
+  useEffect(() => {
+    if (stage !== STAGE.playing) { setTimeSay(''); said.current.clear(); return; }
+    // Crossed-below, not equality. msLeft is driven by requestAnimationFrame,
+    // and a frame drop on a loaded phone — which is the device this audience
+    // actually has — can take the clock from 31 straight to 29. An `=== 30`
+    // test would then never fire at all, and the reader who most needs the
+    // warning is the one whose phone is struggling. Anything at or under a
+    // threshold counts as having crossed it.
+    const hit = THRESHOLDS.find(t => secs <= t && !said.current.has(t));
+    if (hit === undefined) return;
+    // Once per run, not once per crossing: a right answer buys two seconds
+    // back, so the clock can fall through 10, return to 12 and fall again, and
+    // repeating a warning is chattiest exactly when a reader is concentrating
+    // hardest.
+    //
+    // `t >= secs`, not `t >= hit`. Mark every threshold at or above where the
+    // clock actually IS, not at or above the one this tick happened to match.
+    // With `hit`, a jump from 40 to 8 marks only 30 — leaving 10 unmarked, so
+    // the next tick at 7 satisfies `7 <= 10` and announces a second time, one
+    // second after the first, for what is a single crossing.
+    THRESHOLDS.forEach(t => { if (t >= secs) said.current.add(t); });
+    // Announce the real remaining time rather than the threshold's name: after
+    // a skip they are not the same number, and the true one is the useful one.
+    setTimeSay(secs === 1 ? 'One second left.' : `${secs} seconds left.`);
+  }, [secs, stage]);
+
   const q = stage === STAGE.playing ? deck[i % Math.max(1, deck.length)] : null;
 
   const finish = useCallback(async (finalLives, finalCorrect, finalBest, finalAnswered) => {
@@ -76,7 +133,7 @@ export default function Arena() {
     setRecord(b);
     setNewRecord(improved);
     await award({ kind: 'quizRun', arena: true, score, total: finalAnswered, correct: finalCorrect, perfect: false });
-    if (improved) { fanfare(); toast(`New Arena record — ${score.toLocaleString()}`, 'gold'); }
+    if (improved) { fanfare(); toast(`New Arena record — ${score.toLocaleString()}`, 'mastery'); }
   }, [award, toast]);
 
   // Time out ends the run wherever it is.
@@ -135,10 +192,16 @@ export default function Arena() {
 
   if (stage === STAGE.ready) {
     return (
-      <div className="wrap arena-intro">
-        <h2>The Arena</h2>
+      // The Arena stays at the reading measure through all three of its
+      // screens rather than taking the dashboard pane. Its options are
+      // sentences and its explanations are prose, and a run that changed width
+      // when you pressed Begin would be a layout you notice instead of a
+      // question you read. The sheet keeps every one of those words off the
+      // field.
+      <div className="wrap sheet arena-intro">
+        <h1>The Arena</h1>
         <p className="lede">
-          {ARENA_SECONDS} seconds. {ARENA_LIVES} lives. {pool.length} questions drawn from every
+          {ARENA_SECONDS} seconds. {ARENA_LIVES} lives. {cat.quizCount} questions drawn from every
           lesson in the catalogue, in an order you cannot memorise.
         </p>
         <ul className="rules">
@@ -157,7 +220,10 @@ export default function Arena() {
         )}
         <div className="btn-row">
           <motion.button className="btn-primary btn-big" onClick={start}
-            whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>Begin</motion.button>
+            disabled={!pool} aria-busy={!pool}
+            whileHover={pool ? { scale: 1.04 } : {}} whileTap={pool ? { scale: 0.96 } : {}}>
+            {pool ? 'Begin' : 'Fetching the questions…'}
+          </motion.button>
           <Link className="btn" to="/quiz">Lesson quizzes</Link>
         </div>
       </div>
@@ -166,7 +232,7 @@ export default function Arena() {
 
   if (stage === STAGE.over) {
     return (
-      <div className="wrap arena-over">
+      <div className="wrap sheet arena-over">
         <motion.div
           className="result-head"
           initial={{ scale: 0.85, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
@@ -176,12 +242,12 @@ export default function Arena() {
             value={100}
             size={150}
             stroke={10}
-            tone={newRecord ? 'gold' : 'sage'}
+            tone={newRecord ? 'mastery' : 'correct'}
             label={<CountUp value={finalScore} />}
             sub="points"
           />
           <div>
-            <h2>{lives <= 0 ? 'Out of lives' : 'Time'}</h2>
+            <h1>{lives <= 0 ? 'Out of lives' : 'Time'}</h1>
             <p className="lede">
               {correct} of {answered} right, longest run {best}. +{xp} XP.
             </p>
@@ -200,14 +266,18 @@ export default function Arena() {
   }
 
   return (
-    <div className={`wrap arena${urgent ? ' is-urgent' : ''}`} ref={boardRef}>
+    <div className={`wrap sheet arena${urgent ? ' is-urgent' : ''}`} ref={boardRef}>
+      {/* Polite, so a threshold warning never interrupts the question a reader
+          is part-way through hearing. */}
+      <p className="sr-only" role="status" aria-live="polite">{timeSay}</p>
+
       <div className="arena-hud">
         <ProgressRing
           value={timePct}
           size={72}
           stroke={6}
           spin
-          tone={urgent ? 'oxide' : 'sage'}
+          tone={urgent ? 'wrong' : 'correct'}
           label={Math.ceil(msLeft / 1000)}
         />
         <div className="arena-hud-mid">
@@ -249,7 +319,10 @@ export default function Arena() {
             transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="arena-from">{q.lessonTitle}</p>
-            <p className="quiz-q">{q.q}</p>
+            {/* Once the run starts, the intro's h1 is gone and the question is
+                the only subject on screen — so it is the heading, as on the
+                review card and the lesson quiz. Styled by .quiz-q. */}
+            <h1 className="quiz-q">{q.q}</h1>
             <div className="quiz-options">
               {q.options.map((text, n) => {
                 const decided = picked !== null;

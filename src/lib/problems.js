@@ -119,16 +119,23 @@ export async function latestByProblem() {
  * Marks lost by rubric band, across every attempt. This is the diagnosis a
  * total score cannot give: losing marks on `issue` is a different problem from
  * losing them on `application`, and they are fixed by different work.
+ *
+ * `attempts` is how many attempts the band is drawn from. It is the denominator
+ * to show: `available` is marks, not attempts, and one attempt at one problem
+ * can produce "Conclusion 1/1 · 100%", which reads like a diagnosis and is a
+ * single criterion.
  */
 export function bandBreakdown(problemsById, rows) {
   const acc = {};
   for (const a of rows) {
     const p = problemsById[a.problemId];
     if (!p) continue;
+    const touched = new Set();
     for (const r of p.rubric || []) {
-      const b = (acc[r.band] ||= { band: r.band, earned: 0, available: 0 });
+      const b = (acc[r.band] ||= { band: r.band, earned: 0, available: 0, attempts: 0 });
       b.available += r.marks;
       b.earned += r.marks * (a.awarded?.[r.id] ?? 0);
+      if (!touched.has(r.band)) { touched.add(r.band); b.attempts++; }
     }
   }
   return Object.values(acc)

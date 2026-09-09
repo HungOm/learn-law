@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- viewport-fit=cover is what makes env(safe-area-inset-*) return a real
+     number on a notched phone. Without it the insets are all 0, and a bottom
+     navigation bar sits under the home indicator on every iPhone since the X —
+     which is the hardware this audience is most likely to be holding. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Malaysian law — self-study</title>
 <meta name="description" content="A self-directed curriculum in Malaysian law: lessons, spaced review, quizzes and problem questions.">
-<meta name="theme-color" content="#1B2A3A">
+<meta name="theme-color" content="#FCFBF9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14181D" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="manifest" href="./manifest.webmanifest">
+<!-- Fonts are self-hosted: see src/styles/fonts.css. No third-party origin, no
+     render-blocking request, and the typography survives a first visit offline. -->
 </head>
 <body>
 <div id="root"></div>

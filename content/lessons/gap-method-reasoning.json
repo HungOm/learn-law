@@ -1,0 +1,1334 @@
+{
+ "schemaVersion": 1,
+ "note": "Beginner on-ramp lessons for the four skill modules: how to study alone, how to find the law for free, how to build an argument in steps, and how to read a section clause by clause. These sit below the existing lessons in each module. They assume no course, no library and no one to ask.",
+ "lessons": [
+  {
+   "id": "pf-lesson-study",
+   "moduleId": "m-study-method",
+   "title": "Studying alone, after work",
+   "minutes": 18,
+   "summary": "A week you can actually keep, an hour split into three parts, and what to do on the days you get nothing done.",
+   "sections": [
+    {
+     "id": "sec-pf-lesson-study-0",
+     "readMinutes": 1,
+     "keypoint": "You are studying without anyone to check on you, so the method has to do the checking.",
+     "h": "Nobody is coming to check",
+     "body": [
+      {
+       "t": "p",
+       "text": "Aida works at a clinic in Ipoh. She finishes at six, eats, and has maybe an hour left. She wants to understand the law well enough to read her own tenancy agreement. Nobody sets her homework, and nobody notices if she stops."
+      },
+      {
+       "t": "p",
+       "text": "That is the real difficulty with studying alone. It is not that the law is too hard for her. It is that there is no structure, so every bit of the effort has to come from her, every time."
+      },
+      {
+       "t": "p",
+       "text": "This lesson is about building that structure. It is practical rather than clever. None of it is law, and all of it decides whether you learn any."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-study-1",
+     "readMinutes": 2,
+     "keypoint": "Split an hour into recall, reading and writing — and put the recall first.",
+     "h": "One hour, three parts",
+     "body": [
+      {
+       "t": "predict",
+       "prompt": "Aida read the chapter on deposits last week. Tonight she has one hour. Which of these will leave her remembering more next month?",
+       "options": [
+        "Read the chapter again, slowly, from the start",
+        "Copy the important parts into neat notes",
+        "Write down what the chapter said, from memory, before opening it"
+       ],
+       "answer": 2,
+       "reveal": "The third, and it is the least appealing of the three. Trying to remember and half failing does more for memory than reading it again — as long as you then check what you got wrong. Re-reading and copying are work. They are just the wrong work. If this is how you have studied, nothing is wasted. You were buying the cheaper version of the same hour."
+      },
+      {
+       "t": "p",
+       "text": "An hour of study is not one activity. Split it, and let each part do a different job."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Ten minutes: answer questions on old material, from memory, before you look at anything.",
+        "Thirty minutes: read something new, slowly, stopping to write.",
+        "Ten minutes: close the book and write down what you just learned.",
+        "Ten minutes spare, because something always runs over."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The first and last parts feel like the least work. They do the most. Reading puts material in front of you; only the other two tell you whether any of it went in."
+      },
+      {
+       "t": "rule",
+       "text": "Test yourself before you review, not after. Trying to recall something and failing does more for memory than reading it again, as long as you then check the answer.",
+       "source": "Make It Stick; the retrieval practice literature"
+      },
+      {
+       "t": "caution",
+       "text": "If your hour is only reading, you will feel well informed and remember little. That feeling is fluency, not memory, and it fades in about a week. The fix is not more hours. It is ten minutes of the right kind."
+      },
+      {
+       "t": "diagram",
+       "kind": "flow",
+       "title": "One hour, split so each part does a different job",
+       "caption": "The first and last parts feel like the least work. They do the most. Reading puts material in front of you; only the other two tell you whether any of it stayed.",
+       "alt": "An hour in four parts. Ten minutes answering questions on old material from memory, before looking at anything. Thirty minutes reading something new, slowly, stopping to write. Ten minutes with the book closed, writing down what you just learned. Ten minutes spare, because something always runs over.",
+       "steps": [
+        {
+         "label": "10 min — recall",
+         "note": "old material, from memory, before you look"
+        },
+        {
+         "label": "30 min — read new",
+         "note": "slowly, stopping to write"
+        },
+        {
+         "label": "10 min — book closed",
+         "note": "write what you just learned"
+        },
+        {
+         "label": "10 min — spare",
+         "note": "something always runs over"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-study-2",
+     "readMinutes": 1,
+     "keypoint": "Re-reading feels productive and is not; if revision feels smooth, be suspicious of it.",
+     "h": "Why re-reading tricks you",
+     "body": [
+      {
+       "t": "p",
+       "text": "The second pass through a page is easier than the first. Your brain reads that ease as knowing. It is not the same thing."
+      },
+      {
+       "t": "example",
+       "text": "Aida reads the page about deposits three times on Monday. On Friday a friend asks what a landlord may keep. She knows she read it. She cannot say it. Nothing is wrong with her memory. She practised recognising a page, and she needed to practise producing an answer."
+      },
+      {
+       "t": "p",
+       "text": "Recognising and producing are two different skills. Only one of them is any use when somebody asks you a question."
+      },
+      {
+       "t": "rule",
+       "text": "Study that feels harder is usually working better. Smooth, pleasant revision is a warning sign rather than a good one.",
+       "source": "Make It Stick; the desirable difficulties literature"
+      },
+      {
+       "t": "compare",
+       "title": "Two different skills, and only one gets tested",
+       "left": {
+        "h": "Recognising — what re-reading trains",
+        "items": [
+         "The second pass through a page is easier than the first.",
+         "Your brain reads that ease as knowing.",
+         "On Friday, Aida knows she read it.",
+         "This is fluency. It fades in about a week."
+        ]
+       },
+       "right": {
+        "h": "Producing — what a question demands",
+        "items": [
+         "Saying the rule with the book closed.",
+         "On Friday, Aida cannot say what a landlord may keep.",
+         "This is the only one that is any use when somebody asks you.",
+         "It feels harder. That is the signal it is working."
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-study-3",
+     "readMinutes": 1,
+     "keypoint": "Leave gaps between reviews and mix topics inside one sitting, even though both feel worse.",
+     "h": "Spread it out, and mix it up",
+     "body": [
+      {
+       "t": "p",
+       "text": "Four half-hours across a week beat one two-hour session. The gaps are not wasted. Forgetting a little and then pulling it back is exactly what makes a memory last."
+      },
+      {
+       "t": "rule",
+       "text": "Review at growing gaps, and mix topics inside one sitting rather than giving each topic its own week.",
+       "source": "Make It Stick; the spacing and interleaving literature"
+      },
+      {
+       "t": "p",
+       "text": "Mixing feels worse. That is the point of it. In real life a set of facts never tells you which rule it belongs to, so you have to practise choosing."
+      },
+      {
+       "t": "example",
+       "text": "Aida does ten cards on contract, then five on the court structure, then five on reading a statute. It feels scrappy and slow. She is training the one skill she actually needs, which is noticing what she is looking at."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-study-4",
+     "readMinutes": 1,
+     "keypoint": "Three cheap ways to test yourself when there is nobody to ask.",
+     "h": "Testing yourself with nobody to ask",
+     "body": [
+      {
+       "t": "p",
+       "text": "A study group tells you when you are talking nonsense. Alone, you need a substitute. Three cheap ones work."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Say it out loud to an empty room, in ordinary words. If you stall, you do not have it yet.",
+        "Write the rule from memory, then check it word by word against the source.",
+        "Explain it to somebody with no legal training. A child is ideal, and brutal."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The third is the strongest test there is. You cannot hide behind a phrase like *reasonable in the circumstances*, because the listener will simply ask what that means."
+      },
+      {
+       "t": "caution",
+       "text": "Do not mistake a neat set of notes for understanding. Copying is a hand skill. The test is whether you can produce the rule with the notes closed."
+      },
+      {
+       "t": "diagram",
+       "kind": "stack",
+       "title": "Three substitutes for a study group, strongest first",
+       "caption": "The first is the strongest test there is. You cannot hide behind a phrase like *reasonable in the circumstances*, because the listener will simply ask what it means.",
+       "alt": "Three ways to test yourself alone, strongest first. Explain it to somebody with no legal training; a child is ideal, and brutal. Write the rule from memory, then check it word by word against the source. Say it out loud to an empty room, in ordinary words.",
+       "layers": [
+        {
+         "label": "Explain it to a non-lawyer",
+         "note": "a child is ideal, and brutal"
+        },
+        {
+         "label": "Write it from memory, then check",
+         "note": "word by word, against the source"
+        },
+        {
+         "label": "Say it out loud to an empty room",
+         "note": "if you stall, you do not have it yet"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-study-5",
+     "readMinutes": 1,
+     "keypoint": "After a missed week, restart with ten minutes of old material — it is a habit problem, not a knowledge one.",
+     "h": "The week you miss",
+     "body": [
+      {
+       "t": "p",
+       "text": "You will miss days. Work runs late, a child gets sick, or you are simply tired. This is the point where most people studying alone stop for good."
+      },
+      {
+       "t": "p",
+       "text": "So decide now, while it is not happening, what you will do. The rule is small, and it works."
+      },
+      {
+       "t": "rule",
+       "text": "After a break, restart with ten minutes of old material rather than a new topic. Restarting is a habit problem, not a knowledge problem.",
+       "source": "Standard study practice"
+      },
+      {
+       "t": "example",
+       "text": "Aida misses eleven days. On the night she comes back she does not open the new chapter. She does fifteen cards she already knows, and feels competent for the first time in a fortnight. The next night she reads."
+      },
+      {
+       "t": "p",
+       "text": "Never restart by planning a bigger week to catch up. A plan you cannot keep fails twice. It does not happen, and it also teaches you that you cannot do this."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-study-6",
+     "readMinutes": 1,
+     "keypoint": "Build the week on paper tonight, against your real diary rather than an ideal one.",
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "Six cards, and one guided exercise that builds a real week out of a real diary. Do it on paper tonight rather than in your head."
+      },
+      {
+       "t": "p",
+       "text": "None of this is clever, and that is the good news. Most of the difference between people who learn something hard alone and people who do not is that the first group kept turning up."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pf-study-01",
+    "pf-study-02",
+    "pf-study-03",
+    "pf-study-04",
+    "pf-study-05",
+    "pf-study-06"
+   ],
+   "prepares": [
+    "pf-prob-study"
+   ],
+   "reading": [
+    {
+     "bookId": "make-it-stick",
+     "where": "the chapters on retrieval and on spacing — it is short and it is the evidence behind this lesson"
+    },
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "on organising your own study, if you want the older and more formal version"
+    }
+   ],
+   "source": "Retrieval practice, spacing and interleaving research as summarised in Make It Stick. The habit advice is ordinary study practice.",
+   "lastVerified": "2026-09-07",
+   "verify": "None of this is law and none of it needs a citator. The claims about learning are empirical, and the underlying studies are cited throughout Make It Stick if you want them rather than the summary.",
+   "quiz": [
+    {
+     "id": "pf-q-study-1",
+     "q": "What should the first ten minutes of a study session be?",
+     "options": [
+      "Reading the new chapter",
+      "Copying out yesterday's notes",
+      "Planning the rest of the week",
+      "Answering questions on old material from memory"
+     ],
+     "answer": 3,
+     "why": "Testing comes before reviewing. Reading first feels better and teaches less.",
+     "source": "Retrieval practice research, as summarised in Make It Stick"
+    },
+    {
+     "id": "pf-q-study-2",
+     "q": "Why does re-reading feel like it is working?",
+     "options": [
+      "The second pass is easier, and ease feels like knowing",
+      "Repetition always builds memory",
+      "It takes longer, so more goes in",
+      "It suits people who learn by reading"
+     ],
+     "answer": 0,
+     "why": "That feeling is fluency. It fades in about a week and it is not the same as memory.",
+     "source": "Retrieval practice research, as summarised in Make It Stick"
+    },
+    {
+     "id": "pf-q-study-3",
+     "q": "Four half-hours across a week, or one two-hour session?",
+     "options": [
+      "One two-hour session",
+      "It makes no difference",
+      "Four half-hours",
+      "Whichever is less tiring"
+     ],
+     "answer": 2,
+     "why": "The gaps let you forget a little. Pulling it back is what makes it last.",
+     "source": "Spacing research, as summarised in Make It Stick"
+    },
+    {
+     "id": "pf-q-study-4",
+     "q": "Why mix topics inside one sitting?",
+     "options": [
+      "Real facts do not say which rule they belong to",
+      "It covers more pages in an hour",
+      "It is less tiring",
+      "It keeps your notes tidy"
+     ],
+     "answer": 0,
+     "why": "Mixing feels worse and trains the choice you will actually have to make.",
+     "source": "Interleaving research, as summarised in Make It Stick"
+    },
+    {
+     "id": "pf-q-study-5",
+     "q": "You have missed a week. What do you do on the first night back?",
+     "options": [
+      "A double session to catch up",
+      "Start the next module",
+      "Rewrite the timetable",
+      "Ten minutes on material you already know"
+     ],
+     "answer": 3,
+     "why": "Restarting is a habit problem. A bigger plan fails twice over.",
+     "source": "Ordinary study practice"
+    }
+   ],
+   "plate": "lone-desk",
+   "plateCaption": "A kitchen table at half past eight. The constraint this lesson is written for is not ability but the hour that is actually left in the day.",
+   "readMinutes": 8
+  },
+  {
+   "id": "pf-lesson-research",
+   "moduleId": "m02-legal-research",
+   "title": "Finding the law with a phone and no library",
+   "minutes": 20,
+   "summary": "Sorting what you find into three piles, telling a real source from a blog, and tracing a claim back to the words of the Act.",
+   "sections": [
+    {
+     "id": "sec-pf-lesson-research-0",
+     "readMinutes": 1,
+     "keypoint": "A forwarded message about the law is a claim, not a source, and the difference is checkable.",
+     "h": "A message that might be wrong",
+     "body": [
+      {
+       "t": "p",
+       "text": "Someone forwards Hafiz a message. It says a landlord may keep the whole deposit if a tenant moves out early. Hafiz has three weeks left on a room in Cheras and eight hundred ringgit at stake."
+      },
+      {
+       "t": "p",
+       "text": "He has a phone, no law library, and no subscription to anything. That is the normal position in this country, and it is the position this lesson is written for."
+      },
+      {
+       "t": "predict",
+       "prompt": "Hafiz wants to read the law about his deposit — not a summary of it, but the words themselves. He has a phone and nothing to spend. What will that cost him?",
+       "options": [
+        "Nothing. The full text is published free by the government",
+        "A subscription to a legal database",
+        "A lawyer's fee for a copy of the section",
+        "A day off work and a trip to a university library"
+       ],
+       "answer": 0,
+       "reveal": "Nothing, and most people never find this out. The words of every federal Act are published free by the Attorney General's Chambers, and anybody may read them. If you assumed the law sat behind a paywall or behind a lawyer, that is what almost everyone assumes."
+      },
+      {
+       "t": "p",
+       "text": "The good news is real. The full text of every federal Act in Malaysia is published free by the government, and anyone may read it."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-research-1",
+     "readMinutes": 1,
+     "keypoint": "The Attorney General's Chambers publishes the official text of every Act, free.",
+     "h": "What counts as a source",
+     "body": [
+      {
+       "t": "p",
+       "text": "Not everything on a screen is the same kind of thing. Sort what you find into three piles before you read any of it."
+      },
+      {
+       "t": "list",
+       "items": [
+        "The law itself: the Constitution, an Act, and the rules made under an Act.",
+        "A record of what a court decided: the text of a judgment.",
+        "Somebody talking about the law: a news story, a firm's article, a forum post, a video."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The third pile is not worthless. It is often how you find the first two. What it is never is the answer, and you should not quote it as one."
+      },
+      {
+       "t": "rule",
+       "text": "The official text of Malaysian Acts is published free by the Attorney General's Chambers. Use that for statute.",
+       "source": "Attorney General's Chambers, Malaysia"
+      },
+      {
+       "t": "caution",
+       "text": "A page you print from that portal is not a copy of the Gazette. For study and for ordinary research it is exactly what you want. If something formal turns on the precise words, the gazetted version is the one that counts."
+      },
+      {
+       "t": "diagram",
+       "kind": "stack",
+       "title": "Three piles, in descending order of authority",
+       "caption": "The third pile is not worthless. It is often how you find the first two. What it never is, is the answer, and you should not quote it as one.",
+       "alt": "Three layers. At the top, the law itself: the Constitution, an Act, and the rules made under an Act. Below it, a record of what a court decided: the text of a judgment. At the bottom, somebody talking about the law: a news story, a firm's article, a forum post, a video.",
+       "layers": [
+        {
+         "label": "The law itself",
+         "note": "the Constitution, an Act, the rules made under it"
+        },
+        {
+         "label": "A record of what a court decided",
+         "note": "the text of a judgment"
+        },
+        {
+         "label": "Somebody talking about the law",
+         "note": "a news story, an article, a forum post, a video"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-research-2",
+     "readMinutes": 2,
+     "keypoint": "Four questions separate a real source from a confident blog post on a small screen.",
+     "h": "Telling a real source from a blog",
+     "body": [
+      {
+       "t": "p",
+       "text": "A blog post and an Act can look equally confident on a small screen. Four questions separate them quickly."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Who published it? A government body, a court, a law report, or somebody else.",
+        "Does it name the Act and the section, or does it only say that the law says?",
+        "Does it carry a date, and does it tell you which version of the law it describes?",
+        "Does the writer have something to sell you?"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "An article that names a section is doing you a favour. You can go and read that section yourself. An article that never names one cannot be checked, so it cannot be relied on."
+      },
+      {
+       "t": "example",
+       "text": "The forwarded message names no Act and no section. It ends with the name of a page selling tenancy templates. Hafiz stops reading it and searches the free portal for the Act about contracts instead. Now he is reading law rather than opinion."
+      },
+      {
+       "t": "caution",
+       "text": "Age is a trap of its own. A guide written five years ago may describe an Act that has since been amended. Always check the date on the writing, and then check the date on the law."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-research-3",
+     "readMinutes": 1,
+     "keypoint": "A citation is an address: it tells you where a case is, not whether it was right.",
+     "h": "A citation is an address",
+     "body": [
+      {
+       "t": "p",
+       "text": "Case names come with a string of letters and numbers after them. Beginners find this frightening and it is not. A citation is an address."
+      },
+      {
+       "t": "p",
+       "text": "It tells you the year, which set of reports carries the case, the volume, the page, and often which court decided it. That is all. It exists so that any reader can find the same words you read."
+      },
+      {
+       "t": "rule",
+       "text": "A citation locates a case. It does not tell you the case was right, or that it is still good law.",
+       "source": "Standard research practice"
+      },
+      {
+       "t": "p",
+       "text": "Statutes have addresses too. An Act is named by its title and year, and Malaysian Acts also carry a number. Give both when you write it down."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-research-4",
+     "readMinutes": 1,
+     "keypoint": "Write down the provision, the words you relied on and the date — research you cannot retrace is not research.",
+     "h": "Keep a trail",
+     "body": [
+      {
+       "t": "p",
+       "text": "You will need to find this again. You will also need to say how you know it, whether that is to a landlord, an officer, or just to yourself in three weeks."
+      },
+      {
+       "t": "rule",
+       "text": "Record the source, the exact provision, the words you relied on, and the date you read it. Research you cannot retrace is not research.",
+       "source": "Standard research practice"
+      },
+      {
+       "t": "example",
+       "text": "Hafiz writes four lines in his notes app: the name of the Act, the words he read, the address of the page, and the date. It takes forty seconds. It is the difference between a claim and a finding."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-research-5",
+     "readMinutes": 1,
+     "keypoint": "Free sources give you the text and never the later history, which is the check that matters most.",
+     "h": "What free sources cannot do",
+     "body": [
+      {
+       "t": "p",
+       "text": "Free sources give you the statute and, often, the text of a judgment. What they do not give you is the later history of a case."
+      },
+      {
+       "t": "caution",
+       "text": "A free portal showing no sign that a case was overturned is not evidence that it never was. It is evidence that the portal does not track that. Silence is not a clean bill of health."
+      },
+      {
+       "t": "p",
+       "text": "This is a reason to know the limit, not to give up. Say what you checked, say what you could not check, and say what would change your view. An answer that states its own limits is worth more than one that quietly has them."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-research-6",
+     "readMinutes": 1,
+     "keypoint": "Walk one forwarded message back to a primary source; it is the thing you will do most often.",
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "Six cards, then a guided exercise that takes a forwarded message and walks it back to a primary source. It is the exact thing you will do most often, and almost nobody is ever shown how."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pf-res-01",
+    "pf-res-02",
+    "pf-res-03",
+    "pf-res-04",
+    "pf-res-05",
+    "pf-res-06"
+   ],
+   "prepares": [
+    "pf-prob-research"
+   ],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "the chapters on finding and using the law"
+    },
+    {
+     "bookId": "mckinney-reading-like-a-lawyer",
+     "where": "on reading slowly and on purpose once you have found the right page"
+    }
+   ],
+   "source": "General research practice. The Attorney General's Chambers portal is the official free publication of federal statute.",
+   "lastVerified": "2026-09-07",
+   "verify": "Confirm the current address of the Attorney General's Chambers portal before relying on a bookmark. Nothing in this lesson states a rule of substantive law, so no citator check applies to the lesson itself.",
+   "quiz": [
+    {
+     "id": "pf-q-res-1",
+     "q": "An article about an Act, and the Act itself. Which can you rely on?",
+     "options": [
+      "The article, because it is easier to follow",
+      "Either, since they say the same thing",
+      "Neither, without a lawyer",
+      "The Act, because you can read the words yourself"
+     ],
+     "answer": 3,
+     "why": "Comment is a lead to the primary text. It is never a substitute for it.",
+     "source": "Standard research practice; the primary text governs, not the comment on it"
+    },
+    {
+     "id": "pf-q-res-2",
+     "q": "A post says that the law says something, and names no Act or section. What follows?",
+     "options": [
+      "You cannot check it, so you cannot rely on it",
+      "It is probably wrong",
+      "It is fine if the site looks professional",
+      "It counts if several posts agree"
+     ],
+     "answer": 0,
+     "why": "Treat it as a lead. Use it to find the provision, then read the provision.",
+     "source": "Standard research practice"
+    },
+    {
+     "id": "pf-q-res-3",
+     "q": "Is a page printed from the government statute portal the same as the Gazette?",
+     "options": [
+      "No — it is the official text, but a print-out is not a copy of the Gazette",
+      "Yes, in every respect",
+      "Yes, if you print the whole Act",
+      "No, and it may not be used at all"
+     ],
+     "answer": 0,
+     "why": "It is right for study and research. A formal setting may need the gazetted version.",
+     "source": "Attorney General's Chambers portal, the official free publication of federal statute"
+    },
+    {
+     "id": "pf-q-res-4",
+     "q": "What is a citation for?",
+     "options": [
+      "It proves the case was correctly decided",
+      "It shows the case is still good law",
+      "It is an address, so any reader can find the same words",
+      "It ranks the case against others"
+     ],
+     "answer": 2,
+     "why": "It tells you where to look and usually which court. It settles nothing by itself.",
+     "source": "Standard Malaysian citation practice"
+    },
+    {
+     "id": "pf-q-res-5",
+     "q": "What must a research note contain to be worth keeping?",
+     "options": [
+      "The conclusion you reached",
+      "A link on its own",
+      "The provision, the words you relied on, where you found it, and the date",
+      "The name of the person who told you"
+     ],
+     "answer": 2,
+     "why": "Research you cannot retrace is not research.",
+     "source": "Standard research practice"
+    },
+    {
+     "id": "pf-q-res-6",
+     "q": "A free portal shows nothing to suggest a case was overturned. What have you established?",
+     "options": [
+      "That the case is still good law",
+      "Nothing — free portals do not track what happened later",
+      "That no appeal was filed",
+      "That later courts followed it"
+     ],
+     "answer": 1,
+     "why": "Silence is not a clean bill of health. That check needs a paid service.",
+     "source": "Standard research practice; free Malaysian sources include no citator"
+    }
+   ],
+   "plate": "phone-portal",
+   "plateCaption": "A phone, the free portal, and the gap it cannot close: the text is free and the answer to “is this still good law” is not.",
+   "readMinutes": 8
+  },
+  {
+   "id": "pf-lesson-reason",
+   "moduleId": "m13-legal-reasoning",
+   "title": "Building an argument, one step at a time",
+   "minutes": 20,
+   "summary": "Turn a story into a question, break the rule into parts, put one fact against each part, and then say what follows.",
+   "sections": [
+    {
+     "id": "sec-pf-lesson-reason-0",
+     "readMinutes": 1,
+     "keypoint": "A story is not yet a legal question, and turning one into the other is the first move.",
+     "h": "A story is not yet a question",
+     "body": [
+      {
+       "t": "p",
+       "text": "Rosli parks his motorbike outside a kedai runcit in Klang. The owner moves it so a delivery lorry can get to the door, and drops it. The mirror snaps off."
+      },
+      {
+       "t": "p",
+       "text": "That is a story. Nothing in it tells you what there is to argue about. The first move in legal reasoning is turning a story into a question that a rule can answer."
+      },
+      {
+       "t": "p",
+       "text": "Beginners skip this step and start reciting rules. The rules then have nothing to bite on, and the answer reads like a list of facts about the law."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-reason-1",
+     "readMinutes": 1,
+     "keypoint": "An issue is a question the facts leave genuinely open; if only one answer is possible there is no issue.",
+     "h": "Spotting the issue",
+     "body": [
+      {
+       "t": "p",
+       "text": "An issue is a question the facts leave genuinely open. Both answers are arguable, and it is stated in legal words rather than in feelings."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Too vague: was the shop owner in the wrong.",
+        "Better: did the shop owner owe Rosli a duty to take care while moving the bike.",
+        "Better still: and if he did, was dropping it a failure to take that care."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice the shape of the good versions. Each names a legal idea. Each can be answered yes or no. Each has a decent argument on both sides."
+      },
+      {
+       "t": "rule",
+       "text": "An issue is a legal question the facts leave open. If only one answer is possible, it is not the issue.",
+       "source": "Standard problem-question technique"
+      },
+      {
+       "t": "caution",
+       "text": "Most sets of facts hide two or three issues rather than one. Find them all before you argue any of them. Otherwise you spend your best paragraph on the easy one and run out of room."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-reason-2",
+     "readMinutes": 1,
+     "keypoint": "Break a rule into its elements and test each one, because an element you never mention is one you never proved.",
+     "h": "Break the rule into parts",
+     "body": [
+      {
+       "t": "p",
+       "text": "A legal rule is almost never one thing. It is a short list of conditions, and normally all of them must be met."
+      },
+      {
+       "t": "example",
+       "text": "Take a rule in this shape: a person who takes charge of another's property must take reasonable care of it, and answers for loss caused by failing to do so. That is four questions. Did he take charge? Was it another's property? Did he fall below reasonable care? Did that failure cause the loss?"
+      },
+      {
+       "t": "p",
+       "text": "Write the parts out, one per line, before you argue anything. Then take them one at a time. This is dull, and it is most of why a trained answer looks organised and an untrained one does not."
+      },
+      {
+       "t": "rule",
+       "text": "Split every rule into its elements and test each element against a fact. An element you never mention is an element you never proved.",
+       "source": "Standard problem-question technique"
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-reason-3",
+     "readMinutes": 1,
+     "keypoint": "Application means putting one specific fact next to one specific element — not retelling the story.",
+     "h": "One fact per element",
+     "body": [
+      {
+       "t": "p",
+       "text": "Application means putting a specific fact next to a specific element. It is not retelling the story, and it is not restating the rule in longer words."
+      },
+      {
+       "t": "example",
+       "text": "Weak: the shop owner was careless, so he must pay. Strong: he lifted a loaded bike on his own, on a wet five-foot way, while two men stood beside him doing nothing. That is what falling below reasonable care looks like on these facts."
+      },
+      {
+       "t": "caution",
+       "text": "Here is a quick test. If a sentence in your answer would still be true after you changed the facts, it is not application. It is padding, and it earns nothing."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-reason-4",
+     "readMinutes": 1,
+     "keypoint": "Put the other side's best version, then decide; leaving it hanging throws away the answer.",
+     "h": "Argue the other side, then decide",
+     "body": [
+      {
+       "t": "p",
+       "text": "Every real issue has a second side. Write it out. A one-sided answer looks like you never noticed the difficulty."
+      },
+      {
+       "t": "example",
+       "text": "For the shop owner: he moved the bike to let a delivery through, Rosli had left it against the door, and nobody asked him to become its keeper. That account fits the same facts. Two accounts fitting the same facts is what makes something an issue."
+      },
+      {
+       "t": "rule",
+       "text": "Put the strongest version of the other side, then say which side is stronger and why. Do not leave the question hanging.",
+       "source": "Standard problem-question technique"
+      },
+      {
+       "t": "p",
+       "text": "A conclusion may be tentative. It may not be absent. On balance, and for these reasons, is a proper ending to an answer."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-reason-5",
+     "readMinutes": 1,
+     "keypoint": "An earlier case is close only on the facts its result actually depended on.",
+     "h": "Using an earlier case",
+     "body": [
+      {
+       "t": "p",
+       "text": "Often the strongest thing you have is a decided case with facts like yours. Using it well means saying why it is like yours."
+      },
+      {
+       "t": "p",
+       "text": "Ask first which facts the earlier decision actually turned on. If those facts are here too, the case helps you. If one of them is missing, the other side will say so, and lawyers call that distinguishing the case."
+      },
+      {
+       "t": "rule",
+       "text": "A case is close only on the facts its result depended on. A difference matters only if it goes to the reason for the earlier decision.",
+       "source": "Standard common law reasoning"
+      },
+      {
+       "t": "caution",
+       "text": "Any two cases differ in a hundred ways. Different people, a different town, a different year. Pointing at a difference is not yet an argument. You have to say why that difference should change the answer."
+      },
+      {
+       "t": "diagram",
+       "kind": "branch",
+       "title": "When an earlier case is actually close",
+       "caption": "Any two cases differ in a hundred ways. Different people, a different town, a different year. Pointing at a difference is not yet an argument.",
+       "alt": "A question — are the facts the earlier decision turned on present here too? — branching two ways. Yes: the case helps you, and you can say why it is like yours. No, one of them is missing: the other side has something to argue, and you must say why the difference goes to the reason for the earlier decision.",
+       "question": "Are the facts that decision turned on here too?",
+       "branches": [
+        {
+         "cond": "yes",
+         "label": "The case helps you",
+         "note": "say why it is like yours"
+        },
+        {
+         "cond": "one is missing",
+         "label": "The other side has an argument",
+         "note": "and you must meet it"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-reason-6",
+     "readMinutes": 1,
+     "keypoint": "Write the motorbike problem in five visible steps, so you can see your own structure.",
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "Six cards, then a problem about a dropped motorbike. Write it in the five steps above, in order, with the steps visible on the page. Being able to see your own structure is half the point."
+      },
+      {
+       "t": "steps",
+       "title": "The five steps, in order, with the steps visible on the page",
+       "items": [
+        {
+         "h": "Spot the issue.",
+         "text": "Turn the story into a legal question the facts leave open. Most sets of facts hide two or three, so find them all before you argue any of them."
+        },
+        {
+         "h": "Break the rule into parts.",
+         "text": "A rule is a short list of conditions. Write them one per line before you argue anything. An element you never mention is an element you never proved."
+        },
+        {
+         "h": "One fact per element.",
+         "text": "Put a specific fact next to a specific element. If a sentence would still be true after you changed the facts, it is padding and it earns nothing."
+        },
+        {
+         "h": "Argue the other side.",
+         "text": "Put the strongest version of it, then say which side is stronger and why. A conclusion may be tentative. It may not be absent."
+        },
+        {
+         "h": "Use an earlier case, carefully.",
+         "text": "A case is close only on the facts its result depended on. A difference matters only if it goes to the reason for that decision."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pf-reason-01",
+    "pf-reason-02",
+    "pf-reason-03",
+    "pf-reason-04",
+    "pf-reason-05",
+    "pf-reason-06"
+   ],
+   "prepares": [
+    "pf-prob-reason"
+   ],
+   "reading": [
+    {
+     "bookId": "williams-learning-the-law",
+     "where": "on solving legal problems — read it after you have tried one, not before"
+    },
+    {
+     "bookId": "schauer-thinking-like-a-lawyer",
+     "where": "on analogy and precedent, once the steps here feel ordinary"
+    }
+   ],
+   "source": "Standard problem-question technique and standard common law reasoning by analogy. The facts are invented for this lesson.",
+   "lastVerified": "2026-09-07",
+   "verify": "Nothing here states a rule of Malaysian law and nothing needs a citator. The rule used in the worked example is a shape, not an authority. Before using it on real facts, find the governing statute or the actual case law on the point.",
+   "quiz": [
+    {
+     "id": "pf-q-reason-1",
+     "q": "What makes a question an issue?",
+     "options": [
+      "It is the first question you thought of",
+      "It is about a rule you know well",
+      "The parties disagree about what happened",
+      "The facts leave it open and both answers are arguable"
+     ],
+     "answer": 3,
+     "why": "If only one answer is possible, it is not the issue. Find the ones that are actually open.",
+     "source": "Standard problem-question technique"
+    },
+    {
+     "id": "pf-q-reason-2",
+     "q": "What is the first thing to do with a rule before you apply it?",
+     "options": [
+      "Find a case about it",
+      "Write it out in full",
+      "Split it into elements and list them",
+      "Decide who ought to win"
+     ],
+     "answer": 2,
+     "why": "An element you never mention is an element you never proved.",
+     "source": "Standard problem-question technique; a rule is applied element by element"
+    },
+    {
+     "id": "pf-q-reason-3",
+     "q": "Which of these is application?",
+     "options": [
+      "He was careless, so he must pay",
+      "The law requires reasonable care",
+      "He lifted a loaded bike alone on a wet walkway with help standing beside him",
+      "The bike was damaged"
+     ],
+     "answer": 2,
+     "why": "Application ties one fact to one element. The others restate the rule or the story.",
+     "source": "Standard problem-question technique; the application band of the rubric"
+    },
+    {
+     "id": "pf-q-reason-4",
+     "q": "Why write out the other side's best argument?",
+     "options": [
+      "It fills space",
+      "It lets you avoid taking a position",
+      "A real issue has two arguable sides and you have to show you saw both",
+      "Longer answers score better"
+     ],
+     "answer": 2,
+     "why": "You set out the difficulty and then decide. Setting it out is not the same as ducking it.",
+     "source": "Standard problem-question technique"
+    },
+    {
+     "id": "pf-q-reason-5",
+     "q": "Before using an earlier case, what must you identify?",
+     "options": [
+      "The name of the judge",
+      "How long the judgment is",
+      "Whether it is recent",
+      "The facts the earlier decision actually turned on"
+     ],
+     "answer": 3,
+     "why": "Only those facts make it close to yours, and only a difference in them is worth arguing.",
+     "source": "Standard common law method on ratio decidendi"
+    }
+   ],
+   "plate": "ladder-argument",
+   "plateCaption": "An argument built one rung at a time. Skipping a rung is what makes an answer feel confident and score badly.",
+   "readMinutes": 7
+  },
+  {
+   "id": "pf-lesson-section",
+   "moduleId": "m14-statutory-interpretation",
+   "title": "Reading a section slowly",
+   "minutes": 22,
+   "summary": "A section is not a paragraph. Cut it at the joints, watch the small words, find the definitions, and read it in its place.",
+   "sections": [
+    {
+     "id": "sec-pf-lesson-section-0",
+     "readMinutes": 1,
+     "keypoint": "Read a section like a machine rather than a story — slowly, and in pieces.",
+     "h": "Read it like a machine, not a story",
+     "body": [
+      {
+       "t": "p",
+       "text": "Mei Ling wants to know if she can be fined. She finds the section. It is one sentence, ninety words long, with three commas and a *provided that*. She reads it three times and understands nothing."
+      },
+      {
+       "t": "p",
+       "text": "Nothing is wrong with her reading. A section is not written to be read straight through like a paragraph in a book. It is written to be taken apart."
+      },
+      {
+       "t": "p",
+       "text": "This lesson teaches the physical habit. Pen, paper, one clause at a time. It is slow for the first ten sections and quick forever afterwards."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-section-1",
+     "readMinutes": 1,
+     "keypoint": "Cut a provision at its joints before interpreting it; interpreting an unisolated clause is guesswork.",
+     "h": "Cut it at the joints",
+     "body": [
+      {
+       "t": "p",
+       "text": "Copy the section out with one clause per line. Break the line at every and, or, if, unless, except, subject to, and at every comma."
+      },
+      {
+       "t": "p",
+       "text": "Then label your lines. You are hunting for four things, and every section has them somewhere."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Who it applies to. Find the subject: a person, an owner, the Minister.",
+        "What it does. Find the verb: shall pay, may refuse, commits an offence.",
+        "When it applies. Find the conditions: the ifs and the unlesses.",
+        "What happens if it is broken. Find the consequence, which is often in a different subsection."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Ninety words become four short lines. Now you can see the shape of the rule, and you can point at the one line you are unsure about."
+      },
+      {
+       "t": "rule",
+       "text": "Take a section apart before you interpret it. Interpreting a clause you have not isolated is guesswork.",
+       "source": "Standard statutory reading practice"
+      },
+      {
+       "t": "steps",
+       "title": "How to take a section apart",
+       "items": [
+        {
+         "h": "Copy it out, one clause per line.",
+         "text": "Break the line at every and, or, if, unless, except and subject to, and at every comma. Ninety words become four short lines."
+        },
+        {
+         "h": "Find the subject.",
+         "text": "Who it applies to. A person, an owner, the Minister. If you cannot name who is bound, you have not found the rule yet."
+        },
+        {
+         "h": "Find the verb.",
+         "text": "What it does. Shall pay, may refuse, commits an offence. This is where shall and may decide the answer."
+        },
+        {
+         "h": "Find the conditions.",
+         "text": "When it applies. The ifs and the unlesses. These are usually the lines you are actually unsure about."
+        },
+        {
+         "h": "Find the consequence.",
+         "text": "What happens if it is broken. This is often in a different subsection, so look before you conclude there is none."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-section-2",
+     "readMinutes": 1,
+     "keypoint": "'Shall' and 'may', 'and' and 'or' decide cases, and they are the easiest words to skim past.",
+     "h": "The small words carry the weight",
+     "body": [
+      {
+       "t": "p",
+       "text": "Shall and may are not the same. And and or are not the same. These are the words that decide cases, and they are the easiest to skim past."
+      },
+      {
+       "t": "list",
+       "items": [
+        "**shall** — it must happen. **may** — it is permitted, and somebody has a choice.",
+        "**and** — every item on the list is required. **or** — any one item is enough.",
+        "**subject to** — another provision wins over this one, so go and read that one.",
+        "**notwithstanding** — this provision wins, even against the one it names."
+       ]
+      },
+      {
+       "t": "example",
+       "text": "A clause applies to a person who is over eighteen **and** resident in the State. Someone aged twenty living elsewhere falls outside it. Change that one word to **or** and the same person falls inside. One word, two opposite answers."
+      },
+      {
+       "t": "caution",
+       "text": "Do not treat this as automatic. Courts read shall and may in context, and a may has sometimes been read as a duty where the power exists for somebody else's benefit. Read the whole section before you decide."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-section-3",
+     "readMinutes": 1,
+     "keypoint": "Look for the definitions first — the Interpretation Acts supply meanings unless the Act says otherwise.",
+     "h": "Find the definitions first",
+     "body": [
+      {
+       "t": "predict",
+       "prompt": "A by-law fines anyone leaving a vehicle on the pavement. Its small print says *vehicle* includes a handcart. Is it caught?",
+       "options": [
+        "No, a handcart is not a vehicle",
+        "Yes, the by-law says what its own word means"
+       ],
+       "answer": 1,
+       "reveal": "Yes. A word means what the Act says it means. So hunt the definitions first."
+      },
+      {
+       "t": "p",
+       "text": "Statutes redefine ordinary words. A word in an Act means what the Act says it means, whatever a dictionary says."
+      },
+      {
+       "t": "p",
+       "text": "Look in three places, in this order. The section itself, because a definition often sits at the end of it. Then the interpretation section of the same Act. Then the general legislation on interpretation."
+      },
+      {
+       "t": "rule",
+       "text": "The Interpretation Acts 1948 and 1967 supply general meanings for words used across Malaysian legislation, unless the particular Act says otherwise.",
+       "source": "Interpretation Acts 1948 and 1967"
+      },
+      {
+       "t": "example",
+       "text": "An Act about vehicles may define a vehicle to include a trailer with no engine of its own. Arguing about what a vehicle normally means is then wasted effort. The Act has already answered you."
+      },
+      {
+       "t": "diagram",
+       "kind": "flow",
+       "title": "Where to look for what a word means, in order",
+       "caption": "Watch whether a definition says *means* or *includes*. Means gives a closed list, and nothing outside it counts. Includes adds to the ordinary meaning without shutting it down.",
+       "alt": "Three places to look, in this order. The section itself, because a definition often sits at the end of it. Then the interpretation section of the Act. Then the Interpretation Acts 1948 and 1967, which supply general meanings unless the particular Act says otherwise.",
+       "steps": [
+        {
+         "label": "The section itself",
+         "note": "a definition often sits at the end"
+        },
+        {
+         "label": "The Act's interpretation section",
+         "note": "definitions for the whole Act"
+        },
+        {
+         "label": "The Interpretation Acts",
+         "note": "1948 and 1967 — unless the Act says otherwise"
+        }
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "Watch whether a definition says *means* or *includes*. Means gives a closed list, and nothing outside it counts. Includes adds to the ordinary meaning without shutting it down, so the ordinary sense still matters and can still be argued."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-section-4",
+     "readMinutes": 2,
+     "keypoint": "A proviso cuts down the provision it is attached to and travels no further.",
+     "h": "Provisos and exceptions",
+     "body": [
+      {
+       "t": "p",
+       "text": "A proviso is a clause that cuts a piece out of the rule just stated. It usually starts with the words *provided that*."
+      },
+      {
+       "t": "p",
+       "text": "Read the main rule on its own first. Then read the proviso and ask exactly what it removes. Most people read the two at once and end up holding neither."
+      },
+      {
+       "t": "example",
+       "text": "The rule: every owner shall renew the licence each year. The proviso: provided that an owner aged over seventy need renew only once in three years. The rule still stands for everybody else. The proviso carves out one group and no more."
+      },
+      {
+       "t": "rule",
+       "text": "A proviso cuts down the provision it is attached to, and no further. It does not travel to other sections.",
+       "source": "Standard statutory construction"
+      },
+      {
+       "t": "caution",
+       "text": "Keep an exception and a defence apart in your head. An exception means the conduct was never covered by the rule at all. A defence means it was covered and there is an answer to it. Who has to prove what can turn on which one you are looking at."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-section-5",
+     "readMinutes": 1,
+     "keypoint": "Read a provision so as to promote the Act's purpose, which is what the Interpretation Acts direct.",
+     "h": "Read it in its place",
+     "body": [
+      {
+       "t": "p",
+       "text": "One section is rarely the whole answer. Look up and down the page. Read the Part it sits in, the section before it, the section after it, and anything it says it is subject to."
+      },
+      {
+       "t": "p",
+       "text": "Then ask a different kind of question. What is this provision for? What was the problem it was written to deal with?"
+      },
+      {
+       "t": "rule",
+       "text": "Read a provision so as to promote the purpose behind the Act. The Interpretation Acts 1948 and 1967 direct that approach.",
+       "source": "Interpretation Acts 1948 and 1967"
+      },
+      {
+       "t": "p",
+       "text": "Purpose does not let you rewrite the words. It chooses between the meanings the words can already carry. If the words can only mean one thing, purpose has nothing left to do."
+      }
+     ]
+    },
+    {
+     "id": "sec-pf-lesson-section-6",
+     "readMinutes": 1,
+     "keypoint": "Cut up a short by-law yourself and apply it to three ordinary people.",
+     "h": "What to do with this",
+     "body": [
+      {
+       "t": "p",
+       "text": "Six cards, then a guided exercise on a short by-law written for the purpose. You will cut it into lines, find its definitions, and apply it to three ordinary people. Two of the three are easy and one is not."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pf-sec-01",
+    "pf-sec-02",
+    "pf-sec-03",
+    "pf-sec-04",
+    "pf-sec-05",
+    "pf-sec-06"
+   ],
+   "prepares": [
+    "pf-prob-section"
+   ],
+   "reading": [
+    {
+     "bookId": "schauer-thinking-like-a-lawyer",
+     "where": "on rules and on the language they are written in"
+    }
+   ],
+   "source": "Interpretation Acts 1948 and 1967 for the general meanings and for the purposive direction. The reading habit is standard practice; the by-law examples are invented.",
+   "lastVerified": "2026-09-07",
+   "verify": "Read the Interpretation Acts 1948 and 1967 in a current reprint before quoting them. The examples in this lesson are invented illustrations and are not the text of any Act.",
+   "quiz": [
+    {
+     "id": "pf-q-sec-1",
+     "q": "What is the first physical step with a hard section?",
+     "options": [
+      "Read it three times",
+      "Look for a case about it",
+      "Read a summary of it first",
+      "Copy it out with one clause per line"
+     ],
+     "answer": 3,
+     "why": "You cannot interpret a clause you have not isolated.",
+     "source": "Standard practice for reading a provision"
+    },
+    {
+     "id": "pf-q-sec-2",
+     "q": "A condition says over eighteen and resident in the State. Who qualifies?",
+     "options": [
+      "Only a person who is both",
+      "Anyone who is either",
+      "Anyone over eighteen",
+      "Anyone resident in the State"
+     ],
+     "answer": 0,
+     "why": "And needs every item. Swap it for or and the answer reverses.",
+     "source": "Standard practice for reading a provision; a conjunctive condition needs every limb"
+    },
+    {
+     "id": "pf-q-sec-3",
+     "q": "A definition says includes rather than means. What follows?",
+     "options": [
+      "The ordinary meaning stays, and the definition adds to it",
+      "The list is closed",
+      "The definition applies to every Act",
+      "The word has no settled meaning"
+     ],
+     "answer": 0,
+     "why": "Means gives a closed list. Includes extends the ordinary sense without shutting it down.",
+     "source": "Standard drafting convention; 'includes' extends the ordinary meaning, 'means' defines exhaustively"
+    },
+    {
+     "id": "pf-q-sec-4",
+     "q": "What does a proviso do?",
+     "options": [
+      "It states the purpose of the Act",
+      "It cuts a piece out of the provision it is attached to",
+      "It applies across the whole Act",
+      "It creates a defence in every section"
+     ],
+     "answer": 1,
+     "why": "It cuts down that provision and travels no further.",
+     "source": "Standard drafting convention; a proviso qualifies the provision it is attached to"
+    },
+    {
+     "id": "pf-q-sec-5",
+     "q": "Where do you look for the meaning of a word used in an Act?",
+     "options": [
+      "A dictionary",
+      "The section, then the Act's interpretation section, then the Interpretation Acts",
+      "A textbook on the subject",
+      "The heading printed beside the section"
+     ],
+     "answer": 1,
+     "why": "A statute means what it says it means, whatever ordinary usage suggests.",
+     "source": "Interpretation Acts 1948 and 1967"
+    },
+    {
+     "id": "pf-q-sec-6",
+     "q": "What is the purpose behind an Act allowed to do?",
+     "options": [
+      "Add words the Act does not contain",
+      "Override a clear definition",
+      "Decide the case on its own",
+      "Choose between meanings the words can already carry"
+     ],
+     "answer": 3,
+     "why": "If the words can bear only one meaning, purpose has nothing left to choose between.",
+     "source": "Interpretation Acts 1948 and 1967, s 17A"
+    }
+   ],
+   "plate": "section-anatomy",
+   "plateCaption": "One section cut at its joints: who, does what, when, and unless. Most interpretation questions are answered by the fourth.",
+   "readMinutes": 8
+  }
+ ]
+}

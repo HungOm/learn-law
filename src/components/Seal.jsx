@@ -5,9 +5,17 @@ import { motion } from 'framer-motion';
  * with a sigil in it, the way a registry stamps a filed document. Locked seals
  * are shown pressed but blank, so the shape of what is left is visible without
  * giving away what earns it beyond the hint.
+ *
+ * `decorative` is for the case where the seal sits next to text that already
+ * names it — the popup does this. There the seal is an illustration of a
+ * sentence, and letting it announce itself as well says everything twice.
  */
-export function Seal({ a, earned = false, size = 64, animate = false, delay = 0 }) {
+export function Seal({ a, earned = false, size = 64, animate = false, delay = 0, decorative = false }) {
   const tone = earned ? (a.tone || 'sage') : 'locked';
+  // `title` alone was doing two jobs badly: it is a hover tooltip that never
+  // appears on a touch device, and it is not a dependable accessible name.
+  // The name is given as one, and kept as a tooltip for the pointer.
+  const label = earned ? a.name : `${a.name} — not yet earned`;
   return (
     <motion.div
       className={`seal seal-${tone}${earned ? ' is-earned' : ''}`}
@@ -16,6 +24,9 @@ export function Seal({ a, earned = false, size = 64, animate = false, delay = 0 
       animate={animate ? { scale: 1, rotate: 0, opacity: 1 } : undefined}
       transition={{ type: 'spring', stiffness: 260, damping: 14, delay }}
       title={a.name}
+      role={decorative ? 'presentation' : 'img'}
+      aria-label={decorative ? undefined : label}
+      aria-hidden={decorative ? 'true' : undefined}
     >
       <svg viewBox="0 0 100 100" aria-hidden="true">
         <circle cx="50" cy="50" r="46" className="seal-outer" />
@@ -29,7 +40,7 @@ export function Seal({ a, earned = false, size = 64, animate = false, delay = 0 
           />
         ))}
       </svg>
-      <span className="seal-sigil">{earned ? a.sigil : '·'}</span>
+      <span className="seal-sigil" aria-hidden="true">{earned ? a.sigil : '·'}</span>
       {earned && <span className="seal-shine" aria-hidden="true" />}
     </motion.div>
   );

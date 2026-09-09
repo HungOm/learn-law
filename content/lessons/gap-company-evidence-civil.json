@@ -1,0 +1,1848 @@
+{
+ "schemaVersion": 1,
+ "note": "Beginner on-ramp lessons for company law, evidence and civil procedure. These sit below the existing lessons in the same three modules: they assume no company, no courtroom and no legal vocabulary, and they hand off to the harder lessons rather than repeating them. Every lesson carries its sources and a `verify` line — the app states a rule, it does not vouch for it.",
+ "lessons": [
+  {
+   "id": "pe-l-company-person",
+   "moduleId": "m09-company",
+   "title": "The company that owes the money is not you",
+   "minutes": 20,
+   "summary": "Two friends open a shop. The day they register a company, the law adds a third person to the story, and that third person owes the debts.",
+   "sections": [
+    {
+     "id": "sec-pe-l-company-person-0",
+     "readMinutes": 1,
+     "keypoint": "Two people sell nasi lemak on credit. If the shop fails, who owes the rice supplier?",
+     "h": "Why anyone bothers to register",
+     "body": [
+      {
+       "t": "p",
+       "text": "Aina and Rosli sell nasi lemak from a rented shoplot in Klang. They buy their rice on credit. If the shop fails, who owes the rice supplier?"
+      },
+      {
+       "t": "p",
+       "text": "If they registered nothing, the answer is both of them, personally. Their savings. Their motorbike. The money in their bank accounts. Nothing stands between the debt and them."
+      },
+      {
+       "t": "p",
+       "text": "Registering a company changes that answer. It is the main reason small businesses do it."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-person-1",
+     "readMinutes": 1,
+     "keypoint": "Registration creates a body corporate with a legal personality separate from its owners.",
+     "h": "What registration creates",
+     "body": [
+      {
+       "t": "p",
+       "text": "They pay a fee and file forms with the Companies Commission of Malaysia, known as SSM. A few days later, Nasi Lemak Aina Sdn Bhd exists."
+      },
+      {
+       "t": "predict",
+       "prompt": "Two years later the shop fails, owing the rice supplier RM9,000. There is nothing left in the business, and the supplier wants paying. Whose RM9,000 is it?",
+       "options": [
+        "Aina's and Rosli's, because they ordered the rice",
+        "Aina's and Rosli's, but only half each",
+        "The company's, and the supplier must look to the company"
+       ],
+       "answer": 2,
+       "reveal": "The company's. The supplier's argument is now with a thing rather than with two people, and that thing has no savings and no motorbike. The first answer is the one nearly everybody gives, and it would have been exactly right the day before they registered. One filing changed it. That is worth sitting with, because it is the whole reason small businesses bother."
+      },
+      {
+       "t": "p",
+       "text": "It is not just a name on a signboard. In the eyes of the law it is a new person, separate from Aina and separate from Rosli."
+      },
+      {
+       "t": "rule",
+       "text": "A company registered under the Companies Act 2016 is a body corporate. It has a legal personality separate from the people who own it.",
+       "source": "Companies Act 2016"
+      },
+      {
+       "t": "p",
+       "text": "That person can own things. It can sign a lease. It can sue, and be sued, under its own name."
+      },
+      {
+       "t": "example",
+       "text": "The rice supplier's account is now with the company. If the bill goes unpaid, the supplier sues the company. Not Aina. Not Rosli."
+      },
+      {
+       "t": "p",
+       "text": "Lawyers call this **separate legal personality**. The phrase sounds abstract. The idea is the most practical one in this module."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-person-2",
+     "readMinutes": 1,
+     "keypoint": "Salomon: the company was a real person in law even though one man held almost every share.",
+     "h": "The famous case, in one paragraph",
+     "body": [
+      {
+       "t": "p",
+       "text": "A man named Salomon ran a boot business and turned it into a company. He held almost every share. When the business failed, the creditors argued that the company was really just him in a hat."
+      },
+      {
+       "t": "p",
+       "text": "The court disagreed. The company had been properly registered, so it was a separate person, and its debts were its own. The case is *Salomon v A Salomon and Co Ltd*."
+      },
+      {
+       "t": "caution",
+       "text": "It is an English decision from 1897, and Malaysian courts apply the principle. Do not read the age of a case as a sign that it is stale. Some old decisions hold up the whole building."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-person-3",
+     "readMinutes": 1,
+     "keypoint": "Limited liability limits what a member risks, not what the company owes.",
+     "h": "What limited liability limits",
+     "body": [
+      {
+       "t": "p",
+       "text": "Aina pays RM500 for her shares. Rosli pays RM500 for his. That money now belongs to the company."
+      },
+      {
+       "t": "p",
+       "text": "Say the company collapses owing RM80,000. Aina and Rosli lose their RM500 each. They do not have to find the RM80,000."
+      },
+      {
+       "t": "rule",
+       "text": "A member of a company limited by shares is not liable for the company's debts merely because they are a member. Their exposure is limited to any amount still unpaid on their shares.",
+       "source": "Companies Act 2016"
+      },
+      {
+       "t": "p",
+       "text": "That is what *limited* means in Sendirian Berhad. It limits the owner's loss. It does not limit the company's."
+      },
+      {
+       "t": "caution",
+       "text": "The company still owes every ringgit. Creditors take everything the company owns first, down to the last chair. Only then do they run out of things to take."
+      },
+      {
+       "t": "compare",
+       "title": "What *limited* limits, and what it does not",
+       "left": {
+        "h": "Aina's loss is limited",
+        "items": [
+         "She paid RM500 for her shares.",
+         "If the company collapses she loses that RM500.",
+         "She does not have to find the RM80,000.",
+         "Her savings and her motorbike are hers."
+        ]
+       },
+       "right": {
+        "h": "The company's debt is not",
+        "items": [
+         "The company still owes every ringgit of it.",
+         "Creditors take everything the company owns first.",
+         "Down to the last chair in the shop.",
+         "Only then do they run out of things to take."
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-person-4",
+     "readMinutes": 1,
+     "keypoint": "The commonest hole in the protection is a personal guarantee the bank asks for anyway.",
+     "h": "The commonest hole in the protection",
+     "body": [
+      {
+       "t": "p",
+       "text": "A bank is asked to lend the shop RM30,000. The bank looks at a company with two years of history and RM1,000 of paid-up capital. It is not reassured."
+      },
+      {
+       "t": "p",
+       "text": "So it asks Aina to sign a **personal guarantee**. That is a separate promise: if the company does not pay, she will."
+      },
+      {
+       "t": "example",
+       "text": "The shop closes owing the bank RM28,000. The bank sues the company for the debt and Aina on her guarantee. Rosli signed nothing, so Rosli owes nothing."
+      },
+      {
+       "t": "caution",
+       "text": "Notice what did the damage. Not her shares, and not her seat on the board. A contract she signed with her own hand. Small business owners sign these routinely and are shocked later."
+      },
+      {
+       "t": "p",
+       "text": "Guarantees are not the only way through. A statute can put liability on a director, and a court can sometimes look behind a company that was set up to dodge something. The next lesson deals with both."
+      },
+      {
+       "t": "diagram",
+       "kind": "branch",
+       "title": "The question a lender's paperwork turns on",
+       "caption": "Notice what did the damage. Not her shares, and not her seat on the board. A contract she signed with her own hand.",
+       "alt": "A question — did she sign a personal guarantee? — branching two ways. No: the company owes the debt, and her exposure stops at any amount still unpaid on her shares. Yes: she owes it as well, under a separate promise made in her own name.",
+       "question": "Did she sign a personal guarantee?",
+       "branches": [
+        {
+         "cond": "no",
+         "label": "The company owes it",
+         "note": "her exposure stops at her shares"
+        },
+        {
+         "cond": "yes",
+         "label": "She owes it too",
+         "note": "a separate promise, in her own name"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-person-5",
+     "readMinutes": 1,
+     "keypoint": "There are three parties in this story, not two: Aina, Rosli, and the company.",
+     "h": "What to hold on to",
+     "body": [
+      {
+       "t": "p",
+       "text": "One idea carries the rest of the module. There are three parties in this story, not two: Aina, Rosli, and the company."
+      },
+      {
+       "t": "p",
+       "text": "When a company question confuses you, ask two things. Who did the law treat as acting? Who owes the money? Most of the time the answer to both is the company."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pe-c-co-01",
+    "pe-c-co-02",
+    "pe-c-co-03",
+    "pe-c-co-04"
+   ],
+   "prepares": [
+    "pe-p-company-01"
+   ],
+   "reading": [
+    {
+     "bookId": "companies-act-annotation",
+     "where": "the opening provisions on incorporation and the effect of registration"
+    }
+   ],
+   "source": "Companies Act 2016 (Act 777); Salomon v A Salomon and Co Ltd.",
+   "lastVerified": "2026-09-07",
+   "verify": "The Act is free at lom.agc.gov.my. This lesson deliberately cites no section numbers except by describing the rule; before you rely on any of it, read the incorporation provisions of the Companies Act 2016 and check for amendments.",
+   "quiz": [
+    {
+     "id": "pe-q-cop-1",
+     "q": "Aina and Rosli register a company. The company then buys rice on credit and cannot pay. Who owes the supplier?",
+     "options": [
+      "Aina and Rosli, because they run the shop",
+      "Whoever placed the order",
+      "The company",
+      "Aina, Rosli and the company together"
+     ],
+     "answer": 2,
+     "why": "The company made the contract, so the company owes the money. The trap is thinking that the person who did the shopping is the person who owes.",
+     "source": "Companies Act 2016 (Act 777); the company contracts in its own name"
+    },
+    {
+     "id": "pe-q-cop-2",
+     "q": "What does the word 'limited' limit?",
+     "options": [
+      "How much the company can owe",
+      "How long the company can trade",
+      "How much the owners can lose",
+      "How many shares can be issued"
+     ],
+     "answer": 2,
+     "why": "The company still owes the full debt. Only the members' exposure is capped, at whatever is still unpaid on their shares.",
+     "source": "Companies Act 2016 (Act 777); members' liability is limited to any amount unpaid on their shares"
+    },
+    {
+     "id": "pe-q-cop-3",
+     "q": "Salomon owned almost all the shares and ran the whole business himself. What did the court hold?",
+     "options": [
+      "The company was still a separate person, and the debts were its own",
+      "One-man control made the company a sham",
+      "He was liable because he was also a creditor",
+      "The company was separate only for tax"
+     ],
+     "answer": 0,
+     "why": "Total control is not a reason to ignore the company. That is the exact point the case settled, and it is why control alone will not lift the veil.",
+     "source": "Salomon v A Salomon & Co Ltd [1897] AC 22"
+    },
+    {
+     "id": "pe-q-cop-4",
+     "q": "The bank can reach Aina's savings but not Rosli's. Why?",
+     "options": [
+      "She holds more shares than he does",
+      "She is a director and he is not",
+      "She was the one who dealt with the bank",
+      "She signed a personal guarantee and he did not"
+     ],
+     "answer": 3,
+     "why": "The guarantee is a separate contract she made herself. Being a shareholder or a director would not have exposed her savings.",
+     "source": "Standard contract principle; a personal guarantee is a separate contract"
+    },
+    {
+     "id": "pe-q-cop-5",
+     "q": "The company owns the shop's oven. Who else owns it?",
+     "options": [
+      "Aina and Rosli, half each",
+      "The bank, until the loan is repaid",
+      "Aina and Rosli jointly with the company",
+      "Nobody. The members own shares, not the company's things"
+     ],
+     "answer": 3,
+     "why": "Owning shares is not owning the company's property. Missing this is what makes separate personality feel like a technicality when it is not.",
+     "source": "Salomon v A Salomon & Co Ltd [1897] AC 22; members own shares, not the company's property"
+    }
+   ],
+   "plate": "debt-wall",
+   "plateCaption": "The debt stops at the company. That wall is the whole of why anybody incorporates, and the reason a member cannot usually be pursued.",
+   "readMinutes": 6
+  },
+  {
+   "id": "pe-l-company-roles",
+   "moduleId": "m09-company",
+   "title": "Who runs a company, who owns it, and when a court looks behind it",
+   "minutes": 22,
+   "summary": "In a small company the same two people own it and run it. The law still keeps those jobs apart, and gives each one different powers and different duties.",
+   "sections": [
+    {
+     "id": "sec-pe-l-company-roles-0",
+     "readMinutes": 1,
+     "keypoint": "Two people wearing two hats each — owner and director are different jobs.",
+     "h": "Two people, three jobs",
+     "body": [
+      {
+       "t": "p",
+       "text": "Aina and Rosli own all the shares in their nasi lemak company. They also run it day to day. On paper they are wearing two hats each."
+      },
+      {
+       "t": "list",
+       "items": [
+        "The **company** owns the business, makes the contracts and owes the debts.",
+        "The **members**, also called shareholders, own the shares. They own the company, not the things the company owns.",
+        "The **directors** manage it. They make the decisions and sign for it."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In a small Sdn Bhd the same two people hold every hat. In a large one the owners and the managers are strangers."
+      },
+      {
+       "t": "caution",
+       "text": "Do not skip this because it looks obvious. Most errors in this module come from treating a shareholder's complaint as the company's, or the company's as a shareholder's."
+      },
+      {
+       "t": "table",
+       "caption": "In a small Sdn Bhd the same two people hold every hat, which is exactly why the hats have to be kept apart. Most errors in this module come from mixing them up.",
+       "columns": [
+        {
+         "label": "Who"
+        },
+        {
+         "label": "What they own, or do"
+        },
+        {
+         "label": "The error to avoid"
+        }
+       ],
+       "rows": [
+        [
+         "The company",
+         "Owns the business, makes the contracts, owes the debts",
+         "Treating its loss as a shareholder's loss"
+        ],
+        [
+         "The members",
+         "Own the shares — not the things the company owns",
+         "Thinking a shareholder may direct the managers"
+        ],
+        [
+         "The directors",
+         "Manage it. They decide, and they sign for it",
+         "Treating the company's money as their own"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-roles-1",
+     "readMinutes": 1,
+     "keypoint": "The till money belongs to the company, and taking it is not a loan to yourself.",
+     "h": "The company's money is not their money",
+     "body": [
+      {
+       "t": "p",
+       "text": "The till takes RM400 on a good day. Aina cannot put it in her handbag."
+      },
+      {
+       "t": "p",
+       "text": "That cash belongs to the company. She can be paid a salary as an employee, fees as a director, or a dividend as a shareholder. Each of the three has its own rules."
+      },
+      {
+       "t": "example",
+       "text": "Rosli pays his son's school fees from the company account and writes nothing down. That is not a private matter between two friends. It is company money taken by a director."
+      },
+      {
+       "t": "caution",
+       "text": "This is the commonest trouble in small Malaysian companies. It turns a quarrel between partners into a claim the company itself can bring."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-roles-2",
+     "readMinutes": 2,
+     "keypoint": "A director acts for a proper purpose, in good faith, in the company's best interest.",
+     "h": "What a director must do",
+     "body": [
+      {
+       "t": "p",
+       "text": "A director is trusted with someone else's business. The Act spells out what that trust requires."
+      },
+      {
+       "t": "rule",
+       "text": "A director shall at all times exercise his powers for a proper purpose and in good faith in the best interest of the company.",
+       "source": "Companies Act 2016, s 213(1)"
+      },
+      {
+       "t": "rule",
+       "text": "A director shall exercise reasonable care, skill and diligence with the knowledge, skill and experience reasonably expected of a director with the same responsibilities, plus any extra knowledge or experience he actually has.",
+       "source": "Companies Act 2016, s 213(2)"
+      },
+      {
+       "t": "p",
+       "text": "Read the second one twice. There is a floor that every director must meet. If you happen to be an accountant, your own floor is higher."
+      },
+      {
+       "t": "rule",
+       "text": "A director shall not improperly use the company's property, position or information to gain a benefit or to cause harm to the company.",
+       "source": "Companies Act 2016, s 218"
+      },
+      {
+       "t": "example",
+       "text": "A customer offers the company a catering job. Aina takes it in her own name and keeps the fee. The objection is not that the company lost money. It is that the chance belonged to the company."
+      },
+      {
+       "t": "caution",
+       "text": "A bad decision is treated differently from a disloyal one. Section 214 shelters a director who made a business judgement in good faith and without a personal interest. It must also be a decision made on a reasonably informed basis, which he rationally believed was in the company's interest."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-roles-3",
+     "readMinutes": 1,
+     "keypoint": "Shareholders do not manage, and cannot hand the directors instructions on a Tuesday.",
+     "h": "What a shareholder can actually do",
+     "body": [
+      {
+       "t": "p",
+       "text": "People overestimate this badly. A shareholder does not manage the company and cannot hand the directors instructions on a Tuesday afternoon."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Vote at meetings, in proportion to the shares held.",
+        "Appoint directors, and in the right circumstances remove them.",
+        "Receive a dividend, but only if the company declares one and is permitted to pay it.",
+        "See the records and accounts the Act requires the company to keep.",
+        "Sell the shares, if a buyer exists and the company's constitution allows it.",
+        "Ask a court for help, where the company is being run oppressively."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "In a small private company the last two are weak. Nobody wants to buy a minority stake in a family business, so an unhappy holder is stuck. That is exactly why the court remedy matters here."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-roles-4",
+     "readMinutes": 1,
+     "keypoint": "When something goes wrong, ask who the injured party is before asking who is angry.",
+     "h": "When something goes wrong, who sues?",
+     "body": [
+      {
+       "t": "p",
+       "text": "Rosli finds out that Aina has been taking catering jobs privately. Who is the injured party?"
+      },
+      {
+       "t": "p",
+       "text": "The company. The duty in s 213 is owed to the company, so the company is the right claimant."
+      },
+      {
+       "t": "p",
+       "text": "But directors decide whether the company sues, and Aina is a director. That is the whole difficulty, and the Act answers it with two routes."
+      },
+      {
+       "t": "list",
+       "items": [
+        "A **derivative action**. A member asks the court for permission to sue in the company's name, because the company will not sue itself.",
+        "An **oppression** claim under s 346. A member complains that the company's affairs are run in a way that is oppressive to them, or unfairly disregards their interests."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "Keep the two apart. A derivative action enforces the company's right. An oppression claim enforces the member's own right. Picking the wrong one is a standard way to lose a good case."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-roles-5",
+     "readMinutes": 1,
+     "keypoint": "Lifting the veil happens far less often than people expect, and control alone is never enough.",
+     "h": "When a court looks behind the company",
+     "body": [
+      {
+       "t": "p",
+       "text": "Occasionally a court treats the company and the people behind it as one. This is called **lifting the corporate veil**. It happens far less often than people hope."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Where a statute says so. This is by far the commonest route.",
+        "Where the company was used as a device to escape an obligation that already existed.",
+        "Where there is fraud."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "Control is not a ground. Owning every share and making every decision is not a reason to lift the veil; it is what Salomon held to be lawful. 'In the interests of justice' is not a ground either, however often it is argued."
+      },
+      {
+       "t": "p",
+       "text": "If you want to reach a person standing behind a company, look first for a guarantee they signed or a statute that names them. Those routes work. The veil usually does not."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-company-roles-6",
+     "readMinutes": 1,
+     "keypoint": "Who acted? Whose loss is it? Who is allowed to complain about it?",
+     "h": "Three questions to carry away",
+     "body": [
+      {
+       "t": "p",
+       "text": "Ask these of any company problem. Who acted? Whose loss is it? Who is allowed to complain about it?"
+      },
+      {
+       "t": "p",
+       "text": "Most of the time the answers are a director, the company's, and the company. The exceptions are where the interesting law lives."
+      },
+      {
+       "t": "steps",
+       "title": "Ask these three, in this order, of any company problem",
+       "items": [
+        {
+         "h": "Who acted?",
+         "text": "Usually a director. The company acts through people, so name the person and the hat they were wearing at the time."
+        },
+        {
+         "h": "Whose loss is it?",
+         "text": "Usually the company's. A fall in the value of every member's shares because the company was harmed is the company's loss, not theirs."
+        },
+        {
+         "h": "Who is allowed to complain about it?",
+         "text": "Usually the company. Where the directors are the wrongdoers, that is what the derivative action and the oppression claim exist to solve."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pe-c-co-05",
+    "pe-c-co-06",
+    "pe-c-co-07",
+    "pe-c-co-08"
+   ],
+   "prepares": [
+    "pe-p-company-01"
+   ],
+   "reading": [
+    {
+     "bookId": "companies-act-annotation",
+     "where": "the notes to ss 213, 214, 218 and 346"
+    }
+   ],
+   "source": "Companies Act 2016 (Act 777), ss 213, 214, 218 and 346; Salomon v A Salomon and Co Ltd.",
+   "lastVerified": "2026-09-07",
+   "verify": "Read ss 213, 214, 218 and 346 in the current text at lom.agc.gov.my before relying on any of this. They are short. The 2016 Act replaced the Companies Act 1965, so anything written before 2017 may describe repealed law.",
+   "quiz": [
+    {
+     "id": "pe-q-cor-1",
+     "q": "Aina owns half the shares. Does she own half the company's oven?",
+     "options": [
+      "Yes, half of every asset",
+      "Yes, but only once the company is wound up",
+      "Only if the constitution says so",
+      "No. She owns shares; the company owns the oven"
+     ],
+     "answer": 3,
+     "why": "Shares are a bundle of rights against the company, not slices of its property. The trap is treating a small company as if it were a partnership.",
+     "source": "Salomon v A Salomon & Co Ltd [1897] AC 22"
+    },
+    {
+     "id": "pe-q-cor-2",
+     "q": "A director who happens to be a qualified accountant is judged by which standard of care?",
+     "options": [
+      "The ordinary standard for any director",
+      "The ordinary standard, raised by the extra skill she actually has",
+      "The standard of a professional accountant only",
+      "Whatever standard the constitution sets"
+     ],
+     "answer": 1,
+     "why": "Section 213(2) sets an objective floor and then adds any extra knowledge or experience the particular director has. Half-remembering the section as purely objective is the usual slip.",
+     "source": "Companies Act 2016 s 213(2)"
+    },
+    {
+     "id": "pe-q-cor-3",
+     "q": "Aina secretly takes a catering job that was offered to the company. Who is the proper claimant?",
+     "options": [
+      "The company",
+      "Rosli, as the other shareholder",
+      "Rosli and the company together",
+      "The Companies Commission"
+     ],
+     "answer": 0,
+     "why": "The duty is owed to the company, so the loss is the company's. Rosli's route is to get permission to sue in the company's name, not to sue in his own.",
+     "source": "Companies Act 2016 ss 347-350; the duty is owed to the company"
+    },
+    {
+     "id": "pe-q-cor-4",
+     "q": "Which of these on its own is a reason to lift the corporate veil?",
+     "options": [
+      "One person owns every share",
+      "One person makes every decision",
+      "The company has almost no money",
+      "None of them"
+     ],
+     "answer": 3,
+     "why": "Control and thin capital are ordinary features of small companies. Lifting the veil needs a statute, fraud, or the use of the company to evade an existing obligation.",
+     "source": "Salomon v A Salomon & Co Ltd [1897] AC 22; control alone is not enough"
+    },
+    {
+     "id": "pe-q-cor-5",
+     "q": "The company made a profit this year. Can a shareholder simply take a share of it?",
+     "options": [
+      "Yes, in proportion to shares held",
+      "Yes, if the other shareholders agree informally",
+      "Yes, but only in cash",
+      "No. Profit reaches shareholders only as a declared dividend"
+     ],
+     "answer": 3,
+     "why": "Until a dividend is properly declared, the profit is the company's money. Helping yourself to it is a director taking company property.",
+     "source": "Companies Act 2016 (Act 777); profit reaches members only as a declared dividend"
+    }
+   ],
+   "plate": "boardroom",
+   "plateCaption": "Directors run it, members own it, and the meeting is where the two meet. Most company disputes are about which hat someone was wearing.",
+   "readMinutes": 8
+  },
+  {
+   "id": "pe-l-evidence-relevance",
+   "moduleId": "m10-evidence",
+   "title": "What a court is allowed to listen to",
+   "minutes": 20,
+   "summary": "A court does not hear everything that is true. It hears a defined list of things, and the Evidence Act 1950 is that list.",
+   "sections": [
+    {
+     "id": "sec-pe-l-evidence-relevance-0",
+     "readMinutes": 1,
+     "keypoint": "A judge stops a witness mid-sentence. It looks like a technicality and it is not.",
+     "h": "The thing everyone gets wrong about trials",
+     "body": [
+      {
+       "t": "p",
+       "text": "You read a report of a case. A witness starts to say something and the judge stops them. It looks like a trick, or a technicality."
+      },
+      {
+       "t": "p",
+       "text": "It is neither. A court does not listen to everything that might be true. It listens to a defined set of things, and the rest never gets through the door."
+      },
+      {
+       "t": "p",
+       "text": "This lesson is about that door."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-relevance-1",
+     "readMinutes": 1,
+     "keypoint": "Facts in issue are what must be proved for the claim to succeed — the pleadings fix them.",
+     "h": "Facts in issue",
+     "body": [
+      {
+       "t": "p",
+       "text": "Take a small case. Devi says her neighbour Chong reversed his car into her gate and broke it. She wants RM1,200."
+      },
+      {
+       "t": "p",
+       "text": "Only two things are really in dispute. Did Chong hit the gate? What did the damage cost to put right?"
+      },
+      {
+       "t": "p",
+       "text": "Those are the **facts in issue** — the facts the case turns on. Everything the court hears has to earn its place by connecting to one of them."
+      },
+      {
+       "t": "example",
+       "text": "That Chong is rude to people at the surau is not a fact in issue. It may be perfectly true. It still does not help decide who broke the gate."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-relevance-2",
+     "readMinutes": 1,
+     "keypoint": "The Act is a closed list: facts in issue, facts it declares relevant, and nothing else.",
+     "h": "Relevancy is set by the Act, not by common sense",
+     "body": [
+      {
+       "t": "p",
+       "text": "The Evidence Act 1950 lists the kinds of fact that may be proved. It is a code, and it works as a closed list."
+      },
+      {
+       "t": "rule",
+       "text": "Evidence may be given of facts in issue and of such other facts as the Act declares to be relevant, and of no others.",
+       "source": "Evidence Act 1950, s 5"
+      },
+      {
+       "t": "p",
+       "text": "So the real question is never 'is this relevant?' in the everyday sense. It is 'which section makes this relevant?'"
+      },
+      {
+       "t": "p",
+       "text": "The list is generous. It covers the cause and effect of a fact in issue, motive, preparation, and what a person did before and after the event."
+      },
+      {
+       "t": "caution",
+       "text": "An English textbook starts from the opposite end: relevant evidence comes in unless a rule keeps it out. Malaysia inverts that. If you cannot name a section, the evidence stays out."
+      },
+      {
+       "t": "diagram",
+       "kind": "branch",
+       "title": "The question at the door",
+       "caption": "An English textbook starts from the opposite end: relevant evidence comes in unless a rule keeps it out. Malaysia inverts that. The list is generous, but it is a list.",
+       "alt": "A question — can you name the section of the Evidence Act that makes this fact relevant? — branching two ways. Yes: it may be proved. No: it does not come in, because there is no general route for evidence that merely seems relevant.",
+       "question": "Can you name the section that makes this fact relevant?",
+       "branches": [
+        {
+         "cond": "yes",
+         "label": "It may be proved",
+         "note": "the Act declares it relevant"
+        },
+        {
+         "cond": "no",
+         "label": "It does not come in",
+         "note": "there is no 'seems relevant' route"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-relevance-3",
+     "readMinutes": 1,
+     "keypoint": "Oral evidence must be direct — a witness speaks to what that witness perceived.",
+     "h": "Hearsay, in outline",
+     "body": [
+      {
+       "t": "p",
+       "text": "Devi's cousin was not there that day. He wants to tell the court that a passer-by told him Chong hit the gate."
+      },
+      {
+       "t": "predict",
+       "prompt": "Devi's cousin was not there that day. He wants to tell the judge that a passer-by told him he saw Chong hit the gate. Will the court listen?",
+       "options": [
+        "Yes, he is willing to swear to it",
+        "Yes, if the passer-by cannot be found",
+        "Generally not, because the man who saw it is not here"
+       ],
+       "answer": 2,
+       "reveal": "Generally not, and it feels unfair at first. Nobody is calling the cousin a liar. It is that only the passer-by can be asked how far away he was, or how sure."
+      },
+      {
+       "t": "p",
+       "text": "The court will generally not take that. The passer-by is the one who saw it, and the passer-by is not in the room to be questioned."
+      },
+      {
+       "t": "rule",
+       "text": "Oral evidence must be direct. A witness speaks to what that witness saw, heard or otherwise perceived.",
+       "source": "Evidence Act 1950"
+      },
+      {
+       "t": "p",
+       "text": "A second-hand account, offered to prove that what was said is true, is called **hearsay**."
+      },
+      {
+       "t": "caution",
+       "text": "There are real exceptions, and in Malaysia they are statutory. Never write that hearsay is never admissible. Write that it does not come in unless a provision lets it in, then go and find the provision."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-relevance-4",
+     "readMinutes": 1,
+     "keypoint": "An admission can be proved against the person who made it.",
+     "h": "Admissions: the words that come back",
+     "body": [
+      {
+       "t": "p",
+       "text": "Two weeks after the gate broke, Chong sent Devi a message: 'Sorry lah, I will pay for the gate this month.'"
+      },
+      {
+       "t": "p",
+       "text": "That message is the best thing Devi has. A statement by a party that points to a fact against their own interest is an **admission**."
+      },
+      {
+       "t": "rule",
+       "text": "An admission may be proved against the person who made it.",
+       "source": "Evidence Act 1950"
+      },
+      {
+       "t": "p",
+       "text": "This is why lawyers tell clients to stop explaining themselves on WhatsApp. The apology is evidence and it does not go away."
+      },
+      {
+       "t": "caution",
+       "text": "An admission does not end a case. It is evidence, and the maker may explain it. In a criminal case an admission by an accused is a confession, and confessions are governed by stricter conditions."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-relevance-5",
+     "readMinutes": 1,
+     "keypoint": "'Ruled inadmissible' rarely means the truth was hidden.",
+     "h": "How to read a trial report from now on",
+     "body": [
+      {
+       "t": "p",
+       "text": "When a report says evidence was 'ruled inadmissible', it rarely means the truth was hidden."
+      },
+      {
+       "t": "p",
+       "text": "It means nobody could point to the rule that lets the court use it. That is a different complaint, and a much smaller one."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pe-c-ev-01",
+    "pe-c-ev-02",
+    "pe-c-ev-03",
+    "pe-c-ev-04"
+   ],
+   "prepares": [
+    "pe-p-evidence-01"
+   ],
+   "reading": [
+    {
+     "bookId": "mazlina-law-of-evidence",
+     "where": "the opening chapters on relevancy, and the chapter on admissions"
+    }
+   ],
+   "source": "Evidence Act 1950 (Act 56), s 5 and the relevancy provisions in Part I; the provisions on oral evidence and on admissions.",
+   "lastVerified": "2026-09-07",
+   "verify": "The Act is free at lom.agc.gov.my. Section 5 is quoted in substance, not word for word. The hearsay and admission rules are described generally on purpose — read the sections themselves in Parts I and II before relying on them.",
+   "quiz": [
+    {
+     "id": "pe-q-evr-1",
+     "q": "Devi sues Chong over a broken gate. Which of these is a fact in issue?",
+     "options": [
+      "Whether Chong's car hit the gate",
+      "Whether Chong is disliked in the neighbourhood",
+      "Whether Chong has been sued before",
+      "Whether Devi can afford the repair"
+     ],
+     "answer": 0,
+     "why": "A fact in issue is one the case turns on. The others may be true and still change nothing about who broke the gate.",
+     "source": "Evidence Act 1950 s 5"
+    },
+    {
+     "id": "pe-q-evr-2",
+     "q": "Under the Evidence Act 1950, what is the right question to ask about a piece of evidence?",
+     "options": [
+      "Which section of the Act makes this relevant?",
+      "Is there a rule that excludes it?",
+      "Does it feel important to the case?",
+      "Would an ordinary person want to hear it?"
+     ],
+     "answer": 0,
+     "why": "The Act is a closed list, so relevancy has to be found in a section. Starting from the English question, whether anything excludes it, gets the system backwards.",
+     "source": "Evidence Act 1950, Part I; relevancy is a closed list"
+    },
+    {
+     "id": "pe-q-evr-3",
+     "q": "A witness wants to repeat what an absent passer-by told him, to prove that it happened. What is that?",
+     "options": [
+      "An admission",
+      "Circumstantial evidence",
+      "Hearsay",
+      "Expert evidence"
+     ],
+     "answer": 2,
+     "why": "It is second-hand and offered for its truth, and the person who saw the event cannot be questioned. Calling it circumstantial evidence confuses the source with the strength.",
+     "source": "Evidence Act 1950; oral evidence must be direct"
+    },
+    {
+     "id": "pe-q-evr-4",
+     "q": "Chong messages Devi: 'Sorry, I will pay for the gate this month.' What is the message worth to her?",
+     "options": [
+      "It is an admission and may be proved against him",
+      "Nothing, because it was not made in court",
+      "Nothing, because an apology is not a promise",
+      "It settles the case and ends the trial"
+     ],
+     "answer": 0,
+     "why": "A party's own words pointing against their interest may be proved against them. But an admission is evidence, not the end of the case, and he may still explain it.",
+     "source": "Evidence Act 1950; the provisions on admissions"
+    },
+    {
+     "id": "pe-q-evr-5",
+     "q": "A news report says a judge ruled some evidence inadmissible. What does that usually mean?",
+     "options": [
+      "The judge decided it was untrue",
+      "No rule allowed the court to use it",
+      "The witness was found to be lying",
+      "The evidence was obtained illegally"
+     ],
+     "answer": 1,
+     "why": "Admissibility is about whether a rule lets the material in, not about whether it is true. Reading it as a finding of falsehood is the usual mistake.",
+     "source": "Evidence Act 1950; admissibility is decided by the Act, not by whether the material is true"
+    }
+   ],
+   "plate": "earshot",
+   "plateCaption": "What reaches the bench and what does not. The question is never whether evidence is interesting but which section lets it in.",
+   "readMinutes": 6
+  },
+  {
+   "id": "pe-l-evidence-proof",
+   "moduleId": "m10-evidence",
+   "title": "Who has to prove it, and how sure the judge must be",
+   "minutes": 20,
+   "summary": "A court starts from a blank page. Which side has to fill it, and how convincingly, decides more cases than any clever argument.",
+   "sections": [
+    {
+     "id": "sec-pe-l-evidence-proof-0",
+     "readMinutes": 1,
+     "keypoint": "A court starts with a blank page, and nothing goes on it because somebody said it loudly.",
+     "h": "The default is that nothing happened",
+     "body": [
+      {
+       "t": "p",
+       "text": "A court begins with a blank page. Nothing goes on it because somebody said it loudly, or said it first."
+      },
+      {
+       "t": "p",
+       "text": "Somebody has to fill that page. Working out which side that is may be the most useful thing in this module."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-proof-1",
+     "readMinutes": 1,
+     "keypoint": "Whoever asserts a fact his case depends on must prove it.",
+     "h": "Whoever asserts, must prove",
+     "body": [
+      {
+       "t": "p",
+       "text": "Kumar says he lent his neighbour Hafiz RM3,000 in cash. Hafiz says it was a gift for his wedding. Kumar sues."
+      },
+      {
+       "t": "rule",
+       "text": "Whoever wants a court to give judgment on a right or liability that depends on facts he asserts must prove that those facts exist.",
+       "source": "Evidence Act 1950, s 101"
+      },
+      {
+       "t": "p",
+       "text": "So Kumar must prove the loan. If neither side calls a single witness, Kumar loses."
+      },
+      {
+       "t": "rule",
+       "text": "The burden of proof lies on the person who would fail if no evidence at all were given on either side.",
+       "source": "Evidence Act 1950, s 102"
+      },
+      {
+       "t": "p",
+       "text": "That is a handy test. Picture an empty trial, and ask who walks out disappointed."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-proof-2",
+     "readMinutes": 1,
+     "keypoint": "The legal burden stays put; the evidential burden moves as the evidence goes in.",
+     "h": "Two burdens, and why they get mixed up",
+     "body": [
+      {
+       "t": "p",
+       "text": "Kumar produces a bank transfer slip and a message from Hafiz saying 'I will return it next month'. Hafiz is now in trouble unless he answers."
+      },
+      {
+       "t": "p",
+       "text": "The need to answer has moved across the table. The risk of losing has not."
+      },
+      {
+       "t": "list",
+       "items": [
+        "The **legal burden** is the risk of losing if the judge is not persuaded. It sits with one side from start to finish.",
+        "The **evidential burden** is the practical need to put up some evidence now. It moves back and forth as the trial goes on."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "'The burden shifted to the defendant' is the sloppiest sentence in this subject. Say which burden you mean. The legal burden moves only where a statute moves it."
+      },
+      {
+       "t": "compare",
+       "title": "Two burdens. Only one of them moves.",
+       "left": {
+        "h": "The legal burden",
+        "items": [
+         "The risk of losing if the judge is not persuaded.",
+         "It sits with one side from the start of the case to the end of it.",
+         "It moves only where a statute moves it.",
+         "This is the one that decides who wins on an even balance."
+        ]
+       },
+       "right": {
+        "h": "The evidential burden",
+        "items": [
+         "The practical need to put up some evidence now.",
+         "It moves back and forth as the case goes on.",
+         "Kumar's transfer slip moved it to Hafiz.",
+         "Moving it does not change who loses if nobody persuades the judge."
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-proof-3",
+     "readMinutes": 1,
+     "keypoint": "Balance of probabilities in a civil case; beyond reasonable doubt in a criminal one.",
+     "h": "How sure is sure enough",
+     "body": [
+      {
+       "t": "p",
+       "text": "There are two standards, and everything turns on which one you are under."
+      },
+      {
+       "t": "rule",
+       "text": "In a civil case the claimant proves his case on the balance of probabilities. More likely than not is enough.",
+       "source": "Standard doctrine under the Evidence Act 1950, Part II"
+      },
+      {
+       "t": "rule",
+       "text": "In a criminal case the prosecution must prove guilt beyond reasonable doubt.",
+       "source": "Standard doctrine under the Evidence Act 1950, Part II"
+      },
+      {
+       "t": "p",
+       "text": "The gap between the two is wide. A judge may think it fairly likely that the accused did it and must still acquit."
+      },
+      {
+       "t": "diagram",
+       "kind": "spectrum",
+       "title": "The two standards, on one scale",
+       "caption": "The gap between them is wide. A judge may think it fairly likely that the accused did it and must still acquit. The same facts can lose a prosecution and win a civil suit.",
+       "alt": "A scale running from no confidence at all to certainty. The balance of probabilities sits just past halfway, and is the civil standard. Beyond reasonable doubt sits near the far end, and is the criminal standard.",
+       "from": "not persuaded at all",
+       "to": "certain",
+       "marks": [
+        {
+         "at": 0.52,
+         "label": "balance of probabilities — civil"
+        },
+        {
+         "at": 0.88,
+         "label": "beyond reasonable doubt — criminal"
+        }
+       ]
+      },
+      {
+       "t": "example",
+       "text": "A man is acquitted of hurting his neighbour. The neighbour then sues him for the injury and wins. Nothing has gone wrong. The second case needed less."
+      },
+      {
+       "t": "caution",
+       "text": "Fraud alleged in a civil case is a known wrinkle. Malaysian courts have gone back and forth over whether it needs the criminal standard. Check the current position before you rely on either view."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-proof-4",
+     "readMinutes": 1,
+     "keypoint": "A fact especially within your knowledge is yours to explain.",
+     "h": "Some facts are yours to explain",
+     "body": [
+      {
+       "t": "rule",
+       "text": "When a fact is especially within the knowledge of a person, the burden of proving that fact is on him.",
+       "source": "Evidence Act 1950, s 106"
+      },
+      {
+       "t": "example",
+       "text": "A man is stopped riding a motorcycle without plates. Where he got the machine, and whether he holds a licence, are things only he can readily explain."
+      },
+      {
+       "t": "caution",
+       "text": "Section 106 is the most over-used provision in the Act. It does not move the main burden. The prosecution still proves its case, and s 106 reaches only a narrow fact peculiarly within one person's knowledge."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-proof-5",
+     "readMinutes": 1,
+     "keypoint": "A court may presume that evidence withheld would have been unfavourable.",
+     "h": "The evidence nobody produced",
+     "body": [
+      {
+       "t": "rule",
+       "text": "A court may presume that evidence which could be produced, and is not produced, would be unfavourable to the party who withholds it.",
+       "source": "Evidence Act 1950, s 114 illustration (g)"
+      },
+      {
+       "t": "p",
+       "text": "May, not must. The party asking for the inference has to show that the witness or document was available and mattered."
+      },
+      {
+       "t": "caution",
+       "text": "A gap is not the same as a withholding. If the missing witness would only repeat what is already proved, no inference follows."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-evidence-proof-6",
+     "readMinutes": 1,
+     "keypoint": "'Acquitted' does not mean innocent — it means the prosecution did not reach its standard.",
+     "h": "Reading the news again",
+     "body": [
+      {
+       "t": "p",
+       "text": "'Acquitted' does not mean a court found the person innocent. It means the prosecution did not reach its standard."
+      },
+      {
+       "t": "p",
+       "text": "'She failed to prove it' does not mean she lied. It means she carried a burden and fell short."
+      },
+      {
+       "t": "p",
+       "text": "Once you see this, half of what people argue about after a verdict stops making sense. That is progress."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pe-c-ev-05",
+    "pe-c-ev-06",
+    "pe-c-ev-07",
+    "pe-c-ev-08"
+   ],
+   "prepares": [
+    "pe-p-evidence-01"
+   ],
+   "reading": [
+    {
+     "bookId": "malaysian-law-of-evidence-student",
+     "where": "the chapters on burden and standard of proof, and on presumptions"
+    }
+   ],
+   "source": "Evidence Act 1950 (Act 56), ss 101, 102, 106 and 114 illustration (g); the standards of proof as ordinarily stated.",
+   "lastVerified": "2026-09-07",
+   "verify": "Sections 101, 102, 106 and 114 are quoted in substance and should be read in the current text at lom.agc.gov.my. The standard of proof for fraud alleged in civil proceedings has been litigated in Malaysia; check the current authority before advancing either standard.",
+   "quiz": [
+    {
+     "id": "pe-q-evp-1",
+     "q": "Kumar says he lent Hafiz RM3,000. Hafiz says it was a gift. Neither calls any evidence. What happens?",
+     "options": [
+      "Kumar loses, because he asserted the loan",
+      "Hafiz loses, because he asserted the gift",
+      "The judge splits it between them",
+      "The case is adjourned for evidence"
+     ],
+     "answer": 0,
+     "why": "Section 102 puts the burden on whoever would fail on an empty record. Kumar wants judgment, so the blank page defeats him.",
+     "source": "Evidence Act 1950 s 102"
+    },
+    {
+     "id": "pe-q-evp-2",
+     "q": "Which burden moves back and forth during a trial?",
+     "options": [
+      "The legal burden",
+      "Both, together",
+      "Neither; burdens are fixed by the pleadings",
+      "The evidential burden"
+     ],
+     "answer": 3,
+     "why": "The legal burden is the risk of not persuading the court and stays put. Saying only that 'the burden shifted' hides which one you mean.",
+     "source": "Evidence Act 1950 ss 101 and 102"
+    },
+    {
+     "id": "pe-q-evp-3",
+     "q": "A man is acquitted of assault, then loses a civil claim brought by the same victim. Is that a contradiction?",
+     "options": [
+      "Yes. One court must be wrong",
+      "No, but only because different judges heard them",
+      "No. The civil case needed a lower standard of proof",
+      "Yes, unless new evidence appeared"
+     ],
+     "answer": 2,
+     "why": "Beyond reasonable doubt is a much higher bar than more likely than not. Treating an acquittal as a finding of innocence is the trap.",
+     "source": "Standard classification; the criminal and civil standards of proof differ"
+    },
+    {
+     "id": "pe-q-evp-4",
+     "q": "What does s 106 of the Evidence Act 1950 do?",
+     "options": [
+      "Moves the whole burden to the accused",
+      "Lets a court presume guilt from silence",
+      "Puts the burden of a fact especially within someone's knowledge on that person",
+      "Sets the standard of proof in criminal cases"
+     ],
+     "answer": 2,
+     "why": "It reaches one narrow fact only. Using it to relieve the prosecution of proving its case is the standard misuse of the section.",
+     "source": "Evidence Act 1950 s 106"
+    },
+    {
+     "id": "pe-q-evp-5",
+     "q": "A party could have called an available and material witness and did not. What may the court do?",
+     "options": [
+      "It must presume the evidence would have been unfavourable",
+      "It must strike out that party's case",
+      "It must draw no inference at all",
+      "It may presume the evidence would have been unfavourable to that party"
+     ],
+     "answer": 3,
+     "why": "Illustration (g) to s 114 is permissive. Treating it as automatic is the mistake, and so is invoking it for a witness who would add nothing.",
+     "source": "Evidence Act 1950 s 114 illustration (g)"
+    }
+   ],
+   "plate": "who-proves",
+   "plateCaption": "Who has to prove it, and how sure the judge must be. Two separate questions that answers routinely run together.",
+   "readMinutes": 7
+  },
+  {
+   "id": "pe-l-civil-start",
+   "moduleId": "m11-civil-procedure",
+   "title": "How a court case actually starts",
+   "minutes": 20,
+   "summary": "Nobody just takes someone to court. There is a letter, a document, a fee, a delivery and a deadline, and this lesson walks through all of them.",
+   "sections": [
+    {
+     "id": "sec-pe-l-civil-start-0",
+     "readMinutes": 1,
+     "keypoint": "Owed a RM1,500 deposit and threatening court — what does that actually involve?",
+     "h": "Nobody just takes someone to court",
+     "body": [
+      {
+       "t": "p",
+       "text": "Nurul is owed her RM1,500 rental deposit. She tells her landlord she will take him to court. What does that actually involve?"
+      },
+      {
+       "t": "p",
+       "text": "A letter. A document. A fee at a counter. A delivery. Then a clock starts running for the other side."
+      },
+      {
+       "t": "p",
+       "text": "Almost all of a civil case is paperwork and dates. That surprises people, and it should change how you picture a lawsuit."
+      },
+      {
+       "t": "diagram",
+       "kind": "flow",
+       "title": "What taking someone to court actually involves",
+       "caption": "Almost all of a civil case is paperwork and dates. That surprises people, and it should change how you picture a lawsuit.",
+       "alt": "Six steps. A letter of demand, which is not compulsory and is cheap. Check the limitation clock: six years, running from when the right to sue arose. Choose the court and the document, which is decided by what you claim. File and pay the fee at the counter. Serve it, and they must actually receive it. Then their clock starts, with a deadline to answer.",
+       "steps": [
+        {
+         "label": "Letter of demand",
+         "note": "not compulsory, and cheap"
+        },
+        {
+         "label": "Check the clock",
+         "note": "six years, from when the right arose"
+        },
+        {
+         "label": "Court and document",
+         "note": "what you claim decides where"
+        },
+        {
+         "label": "File and pay",
+         "note": "the fee at the counter"
+        },
+        {
+         "label": "Serve it",
+         "note": "they must actually receive it"
+        },
+        {
+         "label": "Their clock starts",
+         "note": "a deadline to answer"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-start-1",
+     "readMinutes": 1,
+     "keypoint": "Send the letter, and watch the clock: six years for contract and tort, from accrual.",
+     "h": "Before the court: the letter, and the clock",
+     "body": [
+      {
+       "t": "p",
+       "text": "The usual first step is a letter of demand. It is a written request to pay by a stated date. It is not compulsory and it is cheap."
+      },
+      {
+       "t": "p",
+       "text": "It often works, and it costs a claimant nothing to be able to show the court that they asked first."
+      },
+      {
+       "t": "p",
+       "text": "Then check the clock, because a claim brought too late is dead however good it is."
+      },
+      {
+       "t": "rule",
+       "text": "Actions founded on contract or on tort must generally be brought within six years from the date on which the cause of action accrued.",
+       "source": "Limitation Act 1953"
+      },
+      {
+       "t": "caution",
+       "text": "The six years run from when the right to sue arose, not from when you found out or when you got angry. In contract that is the breach. In tort it is usually when the damage happened."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-start-2",
+     "readMinutes": 1,
+     "keypoint": "The courts are tiered by the size of the claim, and the document depends on the kind of dispute.",
+     "h": "Which court, and which document",
+     "body": [
+      {
+       "t": "p",
+       "text": "Malaysia's civil courts are tiered by the size of the claim. The Magistrates' Court takes the smallest cases, the Sessions Court the middle range, the High Court the rest."
+      },
+      {
+       "t": "caution",
+       "text": "The money limits sit in the Subordinate Courts Act 1948 and have been raised over the years. Look up the current figures before filing. Do not trust a number from an old textbook or a blog."
+      },
+      {
+       "t": "p",
+       "text": "Then pick the document that starts the case. Under the Rules of Court 2012 there are two main ones."
+      },
+      {
+       "t": "list",
+       "items": [
+        "A **writ**, where the fight is about what happened. Witnesses come and are questioned by the other side.",
+        "An **originating summons**, where the facts are agreed and the fight is about what a document means."
+       ]
+      },
+      {
+       "t": "example",
+       "text": "Arguing over whether the landlord promised to return the whole deposit is a writ. Arguing over what clause 8 of a signed tenancy agreement means is an originating summons."
+      },
+      {
+       "t": "p",
+       "text": "The person suing is the **plaintiff**. The person sued is the **defendant**."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-start-3",
+     "readMinutes": 1,
+     "keypoint": "Filing is not enough; the defendant must be served, and service must be proved.",
+     "h": "Filing, and then service",
+     "body": [
+      {
+       "t": "p",
+       "text": "Filing means lodging the document with the court and paying the fee. The case now has a number and exists."
+      },
+      {
+       "t": "p",
+       "text": "Service means getting that document into the defendant's hands, in the manner the rules require. It is a formal step with its own proof."
+      },
+      {
+       "t": "rule",
+       "text": "Proceedings must be served on the defendant in the manner prescribed by the Rules of Court 2012, and service must be proved to the court.",
+       "source": "Rules of Court 2012"
+      },
+      {
+       "t": "caution",
+       "text": "People underrate service constantly. A defendant who was never properly served can have a judgment set aside months later, on that ground alone."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-start-4",
+     "readMinutes": 1,
+     "keypoint": "Once served, the defendant has a short fixed period to enter an appearance.",
+     "h": "The defendant's clock starts",
+     "body": [
+      {
+       "t": "p",
+       "text": "Once served, the defendant has a short fixed period to enter an **appearance**. That is a filed notice saying they intend to contest the claim."
+      },
+      {
+       "t": "p",
+       "text": "Then a further period to file a **defence**, which is the document answering the claim point by point."
+      },
+      {
+       "t": "p",
+       "text": "Miss either and the plaintiff may ask for **judgment in default**. That is judgment without a trial, because nobody turned up to argue."
+      },
+      {
+       "t": "caution",
+       "text": "A default judgment can often be set aside, but not for free and not as of right. The deadlines are the real subject matter of this module."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-start-5",
+     "readMinutes": 1,
+     "keypoint": "A case number, two documents, and a defendant who knows — that is all 'starting a case' means.",
+     "h": "What you have at the end of all that",
+     "body": [
+      {
+       "t": "p",
+       "text": "A case number, two documents, and a defendant who knows he is being sued. That is the whole of 'starting a case'."
+      },
+      {
+       "t": "p",
+       "text": "Nothing has been decided yet. What happens next is the next lesson."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pe-c-cp-01",
+    "pe-c-cp-02",
+    "pe-c-cp-03",
+    "pe-c-cp-04"
+   ],
+   "prepares": [
+    "pe-p-civil-01"
+   ],
+   "reading": [
+    {
+     "bookId": "janab-civil-procedure",
+     "where": "the chapters on commencement of proceedings and on service"
+    }
+   ],
+   "source": "Rules of Court 2012; Limitation Act 1953; Subordinate Courts Act 1948.",
+   "lastVerified": "2026-09-07",
+   "verify": "Check the current Rules of Court 2012 at lom.agc.gov.my for the modes of commencement, the time to enter appearance and the time to file a defence. The monetary limits of the subordinate courts are deliberately not stated here; look them up before filing.",
+   "quiz": [
+    {
+     "id": "pe-q-cvs-1",
+     "q": "A tenancy dispute is about whether the landlord promised to return the whole deposit. He denies saying it. Which document starts the case?",
+     "options": [
+      "An originating summons",
+      "A writ",
+      "Either, they are interchangeable",
+      "A letter of demand"
+     ],
+     "answer": 1,
+     "why": "The parties disagree about what happened, so witnesses are needed and a writ is the right mode. An originating summons is for agreed facts and a question of construction.",
+     "source": "Rules of Court 2012, Order 5"
+    },
+    {
+     "id": "pe-q-cvs-2",
+     "q": "When does the six-year limitation period for a contract claim start running?",
+     "options": [
+      "When the cause of action accrued, which in contract is the breach",
+      "When the claimant found out about the problem",
+      "When the claimant first asked for payment",
+      "When the case is filed in court"
+     ],
+     "answer": 0,
+     "why": "Accrual is not discovery and not anger. Confusing accrual with the day you noticed is how a good claim gets thrown out.",
+     "source": "Limitation Act 1953 s 6; in contract the cause of action accrues on breach"
+    },
+    {
+     "id": "pe-q-cvs-3",
+     "q": "Why is service treated as a formal step rather than a formality?",
+     "options": [
+      "The court fee is only payable on service",
+      "It fixes the limitation date",
+      "It decides which court hears the case",
+      "A judgment can be set aside later if service was defective"
+     ],
+     "answer": 3,
+     "why": "Proper service is what makes the proceedings binding on a defendant. Sloppy service is one of the commonest ways a plaintiff loses ground they had already won.",
+     "source": "Rules of Court 2012; the provisions on service of originating process"
+    },
+    {
+     "id": "pe-q-cvs-4",
+     "q": "The defendant is served and then does nothing at all. What can the plaintiff seek?",
+     "options": [
+      "An immediate trial date",
+      "A striking out of the defence",
+      "Judgment in default",
+      "Nothing, until the defendant appears"
+     ],
+     "answer": 2,
+     "why": "Missing the deadline to enter appearance or file a defence exposes a defendant to judgment without a trial. It can often be set aside, but not as of right.",
+     "source": "Rules of Court 2012, Order 13"
+    },
+    {
+     "id": "pe-q-cvs-5",
+     "q": "You want to know the money limit of the Sessions Court. What should you do?",
+     "options": [
+      "Use the figure in the most popular textbook",
+      "Ask the court clerk and rely on that",
+      "Assume it is the same as the High Court",
+      "Look up the current figure in the Subordinate Courts Act 1948"
+     ],
+     "answer": 3,
+     "why": "The limits have been raised over the years, so older sources are wrong rather than merely dated. Checking the statute takes a minute and filing in the wrong court wastes months.",
+     "source": "Subordinate Courts Act 1948; the limits are statutory figures, raised from time to time"
+    }
+   ],
+   "plate": "letter-of-demand",
+   "plateCaption": "Before any court: a letter and a deadline. Most disputes that end well end here.",
+   "readMinutes": 6
+  },
+  {
+   "id": "pe-l-civil-journey",
+   "moduleId": "m11-civil-procedure",
+   "title": "From papers to judgment, and then to getting paid",
+   "minutes": 22,
+   "summary": "Pleadings, discovery, the applications that kill cases early, the trial, and the fact that winning is not the same as being paid.",
+   "sections": [
+    {
+     "id": "sec-pe-l-civil-journey-0",
+     "readMinutes": 1,
+     "keypoint": "Most civil claims never reach trial: they end on a missed deadline or a short application.",
+     "h": "Where cases are really decided",
+     "body": [
+      {
+       "t": "p",
+       "text": "Most civil claims never reach a trial. They end on a missed deadline, a badly drafted document, or an application heard in twenty minutes."
+      },
+      {
+       "t": "p",
+       "text": "Films get this wrong. The courtroom speech is the rarest part of a case, and often the least important."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-journey-1",
+     "readMinutes": 1,
+     "keypoint": "A pleading states the material facts, not the evidence for them and not the law.",
+     "h": "Pleadings: the fence around the argument",
+     "body": [
+      {
+       "t": "p",
+       "text": "The statement of claim sets out the facts the plaintiff relies on. The defence answers them, point by point. Together these are the **pleadings**."
+      },
+      {
+       "t": "rule",
+       "text": "A pleading states the material facts relied on, not the evidence for them and not the law.",
+       "source": "Rules of Court 2012"
+      },
+      {
+       "t": "p",
+       "text": "Their job is to fix what the case is about, so that neither side is ambushed on the day."
+      },
+      {
+       "t": "caution",
+       "text": "You are bound by your pleadings. A case you did not plead generally cannot be run at trial, however true it is. And an allegation the defence does not answer is usually treated as admitted."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-journey-2",
+     "readMinutes": 1,
+     "keypoint": "Each side must disclose the relevant documents it holds, including the ones that hurt.",
+     "h": "Discovery: showing the other side your papers",
+     "body": [
+      {
+       "t": "p",
+       "text": "Each side must disclose the documents it holds that are relevant to the case. Including the ones that hurt."
+      },
+      {
+       "t": "example",
+       "text": "A landlord must disclose his own repair invoices, even though they show he charged two tenants for the same broken door."
+      },
+      {
+       "t": "p",
+       "text": "This stage is called **discovery**, or disclosure. Non-lawyers find it the most surprising rule in the whole system."
+      },
+      {
+       "t": "caution",
+       "text": "It is not unlimited. Some documents are privileged, such as legal advice from your own lawyer. Those are listed but not handed over."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-journey-3",
+     "readMinutes": 1,
+     "keypoint": "Default judgment, summary judgment, striking out — the applications that end cases early.",
+     "h": "The applications that end cases early",
+     "body": [
+      {
+       "t": "list",
+       "items": [
+        "**Judgment in default**, where the defendant simply missed a deadline.",
+        "**Summary judgment** under Order 14, where the plaintiff says the defence has no substance and there is nothing worth trying.",
+        "**Striking out** under Order 18 rule 19, where a pleading is so bad on its face that it discloses no case at all."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "The last two ask different questions. Striking out looks at the document and assumes the pleaded facts are true. Summary judgment looks at the evidence and asks whether there is a triable issue."
+      },
+      {
+       "t": "p",
+       "text": "The threshold for both is deliberately high. The court is taking a trial away from a party, and it does not do that lightly."
+      },
+      {
+       "t": "compare",
+       "title": "Two applications, two different questions",
+       "left": {
+        "h": "Striking out — O 18 r 19",
+        "items": [
+         "Looks at the document.",
+         "Assumes the pleaded facts are true.",
+         "Asks whether the pleading discloses any reasonable cause of action at all.",
+         "The complaint is that it is bad on its face."
+        ]
+       },
+       "right": {
+        "h": "Summary judgment — O 14",
+        "items": [
+         "Looks at the evidence.",
+         "Asks whether there is a real defence fit to be tried.",
+         "The facts are not assumed; they are examined on affidavit.",
+         "The complaint is that the defence has no substance."
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-journey-4",
+     "readMinutes": 1,
+     "keypoint": "Case management fixes dates and pushes both sides along before any trial.",
+     "h": "Case management, then trial",
+     "body": [
+      {
+       "t": "p",
+       "text": "Before trial the court holds case management hearings. It fixes dates, checks that documents have been exchanged, and pushes both sides along."
+      },
+      {
+       "t": "p",
+       "text": "At trial the witnesses give evidence and are cross-examined. The judge delivers judgment, sometimes that day, often months later."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-journey-5",
+     "readMinutes": 1,
+     "keypoint": "Winning gives you a piece of paper saying you are owed something.",
+     "h": "A judgment is not money",
+     "body": [
+      {
+       "t": "predict",
+       "prompt": "Nurul wins. The court orders the landlord to pay her RM1,500, and he does nothing at all. What happens next?",
+       "options": [
+        "The court collects the money and passes it to her",
+        "He must pay, or go to prison",
+        "Nothing by itself. Getting the money is a separate job, and it is hers"
+       ],
+       "answer": 2,
+       "reveal": "The third. It surprises nearly everybody. The judgment is a piece of paper saying the debt exists. Turning it into ringgit is a separate job, with its own fees, and the court does not start it for you. Assuming a win ends the matter is sensible, and it is what this section corrects."
+      },
+      {
+       "t": "p",
+       "text": "Here is the part nobody expects. Winning gives you a piece of paper saying you are owed something."
+      },
+      {
+       "t": "p",
+       "text": "Turning that paper into ringgit is a separate exercise called **enforcement**, with its own procedures and its own costs."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Seizure and sale of the debtor's goods.",
+        "Garnishee proceedings, which capture money a third party owes the debtor, such as a bank balance.",
+        "A charge over land the debtor owns.",
+        "Winding up a company, or bankruptcy proceedings against a person."
+       ]
+      },
+      {
+       "t": "caution",
+       "text": "A judgment against someone with nothing is worth nothing. Ask what a defendant can actually pay before you spend two years suing them."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-journey-6",
+     "readMinutes": 1,
+     "keypoint": "Appeals run upward, sometimes needing permission, and carry the shortest deadline in the case.",
+     "h": "Appeals, and the shortest deadline in the case",
+     "body": [
+      {
+       "t": "p",
+       "text": "A losing party may appeal upward through the court hierarchy. At some levels the court's permission is needed first."
+      },
+      {
+       "t": "caution",
+       "text": "The time to file a notice of appeal is short and it is applied strictly. Missing it usually ends the matter, whatever the merits were."
+      }
+     ]
+    },
+    {
+     "id": "sec-pe-l-civil-journey-7",
+     "readMinutes": 1,
+     "keypoint": "Demand, file, serve, plead, disclose, manage, try, judge, enforce, appeal.",
+     "h": "The shape to remember",
+     "body": [
+      {
+       "t": "p",
+       "text": "Demand, file, serve, plead, disclose, manage, try, judge, enforce, appeal."
+      },
+      {
+       "t": "diagram",
+       "kind": "flow",
+       "title": "The whole shape, end to end",
+       "caption": "Every one of these carries a deadline. That, rather than eloquence, is what a litigation practice mostly consists of.",
+       "alt": "Ten stages, each carrying a deadline. Demand, a letter before action. File, by writ or originating summons. Serve, and they must actually get it. Plead, which fences the argument. Disclose, including what hurts you. Manage, where the court fixes the dates. Try, with witnesses cross-examined. Judge, that day or months later. Enforce, because a judgment is not money. Appeal, on the shortest deadline of all.",
+       "steps": [
+        {
+         "label": "Demand",
+         "note": "a letter before action"
+        },
+        {
+         "label": "File",
+         "note": "writ, or originating summons"
+        },
+        {
+         "label": "Serve",
+         "note": "they must actually get it"
+        },
+        {
+         "label": "Plead",
+         "note": "the fence around the argument"
+        },
+        {
+         "label": "Disclose",
+         "note": "including what hurts you"
+        },
+        {
+         "label": "Manage",
+         "note": "the court fixes the dates"
+        },
+        {
+         "label": "Try",
+         "note": "witnesses, cross-examined"
+        },
+        {
+         "label": "Judge",
+         "note": "that day, or months later"
+        },
+        {
+         "label": "Enforce",
+         "note": "a judgment is not money"
+        },
+        {
+         "label": "Appeal",
+         "note": "the shortest deadline of all"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Every one of those steps carries a deadline. That, rather than eloquence, is what a litigation practice mostly consists of."
+      }
+     ]
+    }
+   ],
+   "plants": [
+    "pe-c-cp-05",
+    "pe-c-cp-06",
+    "pe-c-cp-07",
+    "pe-c-cp-08"
+   ],
+   "prepares": [
+    "pe-p-civil-01"
+   ],
+   "reading": [
+    {
+     "bookId": "janab-civil-procedure",
+     "where": "the chapters on pleadings, discovery, summary judgment and enforcement"
+    }
+   ],
+   "source": "Rules of Court 2012, including Order 14 and Order 18 rule 19; ordinary practice on enforcement and appeals.",
+   "lastVerified": "2026-09-07",
+   "verify": "Check the current Rules of Court 2012 at lom.agc.gov.my. Order 14 and Order 18 rule 19 are named; the discovery, case management and enforcement provisions are described generally and should be read in the Rules themselves. Appeal periods come from the Courts of Judicature Act 1964 and the appellate rules.",
+   "quiz": [
+    {
+     "id": "pe-q-cvj-1",
+     "q": "What belongs in a pleading?",
+     "options": [
+      "The evidence that proves each fact",
+      "The legal argument in full",
+      "The witness statements",
+      "The material facts relied on"
+     ],
+     "answer": 3,
+     "why": "Pleadings fix what the case is about, in facts. Loading them with evidence or argument is a standard drafting error and invites an application to strike out.",
+     "source": "Rules of Court 2012, Order 18"
+    },
+    {
+     "id": "pe-q-cvj-2",
+     "q": "During discovery, must a party disclose a document that damages its own case?",
+     "options": [
+      "No, a party never has to help its opponent",
+      "Yes, if it is relevant and not privileged",
+      "Only if the other side already knows it exists",
+      "Only if the court orders it specifically"
+     ],
+     "answer": 1,
+     "why": "Relevance, not helpfulness, decides disclosure. The exception is privilege, and privileged documents are listed rather than handed over.",
+     "source": "Rules of Court 2012, Order 24"
+    },
+    {
+     "id": "pe-q-cvj-3",
+     "q": "Which application assumes the pleaded facts are true and asks whether they disclose a case?",
+     "options": [
+      "Summary judgment",
+      "Striking out",
+      "Judgment in default",
+      "An interim injunction"
+     ],
+     "answer": 1,
+     "why": "Striking out attacks the pleading as a document. Summary judgment looks at the evidence and asks whether there is a triable issue, which is a different test.",
+     "source": "Rules of Court 2012, Order 18 rule 19"
+    },
+    {
+     "id": "pe-q-cvj-4",
+     "q": "You win RM20,000 in court. Why might you still receive nothing?",
+     "options": [
+      "A judgment must be enforced, and enforcement needs assets to reach",
+      "The judgment expires after one year",
+      "The court keeps the money until an appeal is over",
+      "Costs always cancel out the award"
+     ],
+     "answer": 0,
+     "why": "A judgment is a declaration of debt, not a payment. If the defendant has no goods, land or bank balance, there is nothing for enforcement to bite on.",
+     "source": "Rules of Court 2012; enforcement is a separate exercise from obtaining judgment"
+    },
+    {
+     "id": "pe-q-cvj-5",
+     "q": "Your client lost, and strongly wants to appeal. What is the first thing to check?",
+     "options": [
+      "Whether a different judge would have decided differently",
+      "How much the appeal will cost",
+      "The time limit for filing the notice of appeal",
+      "Whether new evidence has emerged"
+     ],
+     "answer": 2,
+     "why": "Appeal periods are short and strictly applied, so the deadline governs everything else. Merits are worth nothing once the time has gone.",
+     "source": "Standard appellate practice; the time for a notice of appeal is fixed by the rules and strictly applied"
+    }
+   ],
+   "plate": "road-to-judgment",
+   "plateCaption": "Papers to judgment, and the further road from judgment to being paid — the stretch an advice that stops at “you will win” leaves out.",
+   "readMinutes": 8
+  }
+ ]
+}

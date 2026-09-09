@@ -1,0 +1,302 @@
+/* Warta — the liquid field.
+ *
+ * The stylesheet for src/components/Liquid.jsx. Read that file first: it
+ * carries the argument for why a moving coloured background is allowed in a
+ * design system that spends most of its length arguing colour down.
+ *
+ * The short version. This layer is painted in module colour and says which
+ * part of the curriculum the reader is in — the same claim the module chip
+ * makes, in a form that needs no reading. It carries no quantity. It is never
+ * an identifier: the module name is on screen every time the colour is.
+ *
+ * Every value here comes from tokens.css or a semantic role in palette.css.
+ * No colour is named in this file; --module-ink and --module-tint resolve from
+ * the data-module attribute the components set.
+ *
+ * Performance is a real constraint, not advice — this readership is phone-
+ * first in Malaysia, often on prepaid data and low-end Android:
+ *
+ *   - only `transform` is animated, so every orb stays on the compositor and
+ *     nothing in this file causes layout or paint after the first frame;
+ *   - there is no filter: blur() on the ambient layer. A blurred fixed element
+ *     is re-rasterised every frame; a radial-gradient with a soft stop is
+ *     already soft and costs one paint. The gradients are three-stop rather
+ *     than two because a two-stop ramp this large bands visibly on an 8-bit
+ *     panel, and a band would read as an edge, which would read as a shape
+ *     that means something;
+ *   - the one real blur — the goo — is gated to >=1024px;
+ *   - the two smallest orbs are dropped below 640px.
+ *
+ * Reduced motion needs nothing here. base.css disables every CSS animation
+ * under prefers-reduced-motion, which is exactly why this layer animates in
+ * CSS and not in framer-motion or JS: the preference cannot be forgotten.
+ */
+
+/* No `@import './tokens.css'` here — same reason as game.css and
+   interactive.css: a second copy of tokens.css re-declares
+   `:root { --rail-width: 15rem }` unconditionally, and this file is imported
+   after base.css, so that copy silently undid base.css's responsive ladder.
+   main.jsx imports tokens.css first; every token below still resolves. */
+
+/* ----------------------------------------------------- the ambient field --
+ *
+ * z-index: -1 puts it behind all content while staying above the page
+ * background, which the body propagates to the canvas. It therefore needs a
+ * host with no opaque background between it and the reader — mount it as a
+ * sibling of the app shell, not inside a route that paints --surface-page.
+ */
+
+.liquid-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  /* Nothing inside can affect layout or paint outside, so the browser may skip
+     the whole subtree when only content above it changed. */
+  contain: layout paint style;
+}
+
+.liquid-orb {
+  position: absolute;
+  width: var(--liquid-orb-md);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-circle);
+  /* closest-side sizes the gradient to the box, so the falloff is the same at
+     every orb size instead of drifting with the box diagonal. */
+  background: radial-gradient(
+    circle closest-side,
+    color-mix(in srgb, var(--module-ink) var(--liquid-alpha-deep), transparent) 0%,
+    color-mix(in srgb, var(--module-ink) var(--liquid-alpha-mid), transparent) 34%,
+    color-mix(in srgb, var(--module-ink) var(--liquid-alpha-soft), transparent) 58%,
+    transparent 80%
+  );
+  animation-timing-function: var(--ease-in-out);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+/* Placed to overhang the viewport on every side: an orb whose edge is on
+   screen reads as a bubble, and a bubble is decoration. One that runs off the
+   edge reads as a region of the page, which is the object. */
+.liquid-orb-1 { width: var(--liquid-orb-lg); top: -30%; left: -24%; animation-name: liquid-drift-a; animation-duration: var(--dur-drift-1); }
+.liquid-orb-2 { width: var(--liquid-orb-md); top: -12%; left:  44%; animation-name: liquid-drift-b; animation-duration: var(--dur-drift-2); }
+.liquid-orb-3 { width: var(--liquid-orb-lg); top:  34%; left:  -6%; animation-name: liquid-drift-c; animation-duration: var(--dur-drift-3); }
+.liquid-orb-4 { width: var(--liquid-orb-sm); top:   6%; left:  74%; animation-name: liquid-drift-d; animation-duration: var(--dur-drift-2); }
+.liquid-orb-5 { width: var(--liquid-orb-md); top:  52%; left:  54%; animation-name: liquid-drift-a; animation-duration: var(--dur-drift-4); }
+.liquid-orb-6 { width: var(--liquid-orb-sm); top:  40%; left:  26%; animation-name: liquid-drift-b; animation-duration: var(--dur-drift-3); }
+
+/* Translation is a percentage of the orb's own box, so the travel scales with
+   the orb and with the viewport and never needs a breakpoint. The durations
+   are near-co-prime, so six orbs on four keyframe sets take hours to return to
+   the arrangement they started in — long enough that the field never reads as
+   a loop. */
+@keyframes liquid-drift-a {
+  from { transform: translate3d(-6%, -4%, 0) scale(0.94); }
+  to   { transform: translate3d(10%, 7%, 0) scale(1.12); }
+}
+@keyframes liquid-drift-b {
+  from { transform: translate3d(8%, -6%, 0) scale(1.08); }
+  to   { transform: translate3d(-9%, 6%, 0) scale(0.92); }
+}
+@keyframes liquid-drift-c {
+  from { transform: translate3d(-4%, 8%, 0) scale(1.06); }
+  to   { transform: translate3d(9%, -7%, 0) scale(0.90); }
+}
+@keyframes liquid-drift-d {
+  from { transform: translate3d(7%, 5%, 0) scale(0.90); }
+  to   { transform: translate3d(-8%, -8%, 0) scale(1.16); }
+}
+
+/* A phone composites four of these comfortably and six less so, and the two
+   dropped are the ones a 360px viewport has least room to show. */
+@media (max-width: 640px) {
+  .liquid-orb-5,
+  .liquid-orb-6 { display: none; }
+}
+
+/* ------------------------------------------------------------- the goo ----
+ *
+ * The metaball layer. Its blur sits inside an animated subtree, so it is
+ * recomputed every frame — the one genuinely expensive thing in this file, and
+ * the reason it is desktop-only. It is an enhancement for people on a large
+ * screen, never something the design depends on.
+ *
+ * Used standalone inside a section, it needs a positioned, overflow-hidden
+ * host; inside .liquid-field it has one.
+ */
+
+.liquid-goo {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* The alpha goes here, not on the fill. The filter's colour matrix snaps
+     alpha to 0 or 1 to make the goo's edge, so a translucent fill would be
+     thresholded away before it ever reached the screen. Knocking the whole
+     filtered result back afterwards is the only place the alpha survives. */
+  opacity: var(--liquid-alpha-mid);
+}
+
+@media (min-width: 1024px) {
+  .liquid-goo { display: block; }
+}
+
+.liquid-goo-blob {
+  /* view-box makes the reference box the 600-unit viewBox rather than the
+     path's own bounds, so a translate of 60px is a tenth of the field for
+     every blob and transform-origin: center is the field's centre for all of
+     them. Without it each blob would rotate and scale about itself. */
+  transform-box: view-box;
+  transform-origin: center;
+  animation-timing-function: var(--ease-in-out);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+.liquid-goo-blob circle { fill: var(--module-ink); }
+
+.liquid-goo-blob-1 { animation-name: liquid-goo-a; animation-duration: var(--dur-drift-1); }
+.liquid-goo-blob-2 { animation-name: liquid-goo-b; animation-duration: var(--dur-drift-3); }
+.liquid-goo-blob-3 { animation-name: liquid-goo-c; animation-duration: var(--dur-drift-2); }
+.liquid-goo-blob-4 { animation-name: liquid-goo-d; animation-duration: var(--dur-drift-4); }
+.liquid-goo-blob-5 { animation-name: liquid-goo-e; animation-duration: var(--dur-drift-2); }
+
+@keyframes liquid-goo-a {
+  from { transform: translate(-46px, 26px) scale(1.00); }
+  to   { transform: translate(38px, -22px) scale(1.10); }
+}
+@keyframes liquid-goo-b {
+  from { transform: translate(52px, -34px) scale(1.06); }
+  to   { transform: translate(-40px, 30px) scale(0.92); }
+}
+@keyframes liquid-goo-c {
+  from { transform: translate(-30px, -28px) scale(0.90); }
+  to   { transform: translate(44px, 34px) scale(1.08); }
+}
+@keyframes liquid-goo-d {
+  from { transform: translate(36px, 30px) scale(1.12); }
+  to   { transform: translate(-48px, -26px) scale(0.94); }
+}
+@keyframes liquid-goo-e {
+  from { transform: translate(-40px, 18px) scale(1.04); }
+  to   { transform: translate(30px, -36px) scale(0.90); }
+}
+
+/* ------------------------------------------------------ the brand block ---
+ *
+ * A large module-tinted panel with a liquid edge, for a page or section head.
+ *
+ * Three layers. The tint is the panel. The pour is opaque module ink bleeding
+ * off the left; it lives entirely inside the block's left padding, which is
+ * wider than the band can ever grow, so no text can reach it at any viewport.
+ * The swell is a large blob at --liquid-alpha-soft that text DOES cross, and
+ * 12% is not a taste decision: measured across all sixteen modules in both
+ * themes, --text-primary over tint + 12% ink bottoms out at 9.4:1, past the
+ * AAA 7:1 floor. The same measurement puts --text-secondary at 4.6:1, under
+ * its 5:1 floor — so secondary text does not go in a brand block, and
+ * .brandblock-kicker exists so the eyebrow line has somewhere safe to go.
+ */
+
+.brandblock {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-7) var(--space-6) var(--space-7) var(--space-9);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--module-tint);
+  /* The floor for everything inside, so a caller who sets no colour is safe
+     over the swell by default. */
+  color: var(--text-primary);
+}
+
+.brandblock-edge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--space-8);
+  height: 100%;
+}
+
+.brandblock-wash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: var(--liquid-alpha-soft);
+}
+
+/* Positioned, and last in the DOM, so it paints above both shapes. */
+.brandblock-body { position: relative; }
+
+/* Origin at the left edge: scaleX grows the band rightwards into the padding
+   and can never pull it off the panel's edge and open a gap. */
+.brandblock-pour {
+  fill: var(--module-ink);
+  transform-box: view-box;
+  transform-origin: left center;
+  animation: liquid-pour var(--dur-drift-2) var(--ease-in-out) infinite alternate both;
+}
+
+.brandblock-swell {
+  fill: var(--module-ink);
+  transform-box: view-box;
+  transform-origin: center;
+  animation: liquid-swell var(--dur-drift-3) var(--ease-in-out) infinite alternate both;
+}
+
+@keyframes liquid-pour {
+  from { transform: translateY(-16px) scaleX(0.96); }
+  to   { transform: translateY(14px) scaleX(1.06); }
+}
+@keyframes liquid-swell {
+  from { transform: translate(18px, -10px) scale(1.04) rotate(-2deg); }
+  to   { transform: translate(-14px, 12px) scale(1.12) rotate(3deg); }
+}
+
+/* The apparatus line. Sans, label size, uppercase — and --text-primary rather
+   than the --text-secondary a kicker would normally take, because the swell
+   costs secondary ink its 5:1 floor. */
+.brandblock-kicker {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  font-weight: var(--weight-semi);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.brandblock-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--type-2xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--text-strong);
+}
+
+.brandblock-lede {
+  margin: var(--space-3) 0 0;
+  max-width: var(--measure);
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  line-height: var(--leading-prose);
+  color: var(--text-primary);
+}
+
+/* Narrow: a 4rem ink band eats a phone screen, so the band and the padding
+   that guarantees clearance from it shrink together. The clearance is what
+   matters and it holds — a 2rem band whose curve peaks near 28px inside a
+   3rem left padding. */
+@media (max-width: 780px) {
+  .brandblock {
+    padding: var(--space-6) var(--space-5) var(--space-6) var(--space-7);
+  }
+  .brandblock-edge { width: var(--space-6); }
+  .brandblock-title { font-size: var(--type-xl); }
+}

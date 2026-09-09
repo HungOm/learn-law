@@ -16,20 +16,20 @@ export default function QuizIndex() {
     quizLib.arenaBest().then(setArena);
   }, []);
 
-  const withQuiz = cat.lessons.filter(l => (l.quiz || []).length);
+  const withQuiz = cat.lessons.filter(l => l.quizCount > 0);
   const byModule = cat.modules
     .map(m => ({ m, list: withQuiz.filter(l => l.moduleId === m.id) }))
     .filter(g => g.list.length);
 
-  const cleanSheets = withQuiz.filter(l => best[l.id]?.correct === (l.quiz || []).length).length;
-  const nextOpen = withQuiz.find(l => read[l.id] && best[l.id]?.correct !== l.quiz.length)
-    || withQuiz.find(l => best[l.id]?.correct !== l.quiz.length);
+  const cleanSheets = withQuiz.filter(l => best[l.id]?.correct === l.quizCount).length;
+  const nextOpen = withQuiz.find(l => read[l.id] && best[l.id]?.correct !== l.quizCount)
+    || withQuiz.find(l => best[l.id]?.correct !== l.quizCount);
 
   return (
-    <div className="wrap">
-      <h2>Quizzes</h2>
+    <div className="wrap wrap--dash">
+      <h1>Quizzes</h1>
       <p className="lede">
-        {cat.quizPool.length} questions across {plural(withQuiz.length, 'lesson')}. Four options,
+        {cat.quizCount} questions across {plural(withQuiz.length, 'lesson')}. Four options,
         one right, a clock running. You have a clean sheet on {cleanSheets} of them.
       </p>
 
@@ -41,7 +41,7 @@ export default function QuizIndex() {
       >
         <div className="arena-card-body">
           <span className="arena-kicker">Blitz</span>
-          <h3 className="arena-title">The Arena</h3>
+          <h2 className="arena-title">The Arena</h2>
           <p>
             Ninety seconds, three lives, every question in the catalogue. Answer fast, keep the
             run alive, and the multiplier does the rest.
@@ -56,7 +56,7 @@ export default function QuizIndex() {
 
       {nextOpen && (
         <TodayCard delay={0.08}>
-          <p><strong>Still open:</strong> {nextOpen.title} — {plural(nextOpen.quiz.length, 'question')}.</p>
+          <p><strong>Still open:</strong> {nextOpen.title} — {plural(nextOpen.quizCount, 'question')}.</p>
           <div className="btn-row"><Link className="btn btn-primary" to={`/quiz/${nextOpen.id}`}>Take it</Link></div>
         </TodayCard>
       )}
@@ -69,24 +69,25 @@ export default function QuizIndex() {
       </div>
 
       {byModule.map(({ m, list }) => (
-        <div key={m.id}>
-          <h3>{m.title}</h3>
+        <div className="arr-group" data-module={m.id} key={m.id}>
+          <h2>{m.title}</h2>
           <div className="arrangement">
             {list.map((l, i) => {
               const b = best[l.id];
-              const perfect = b && b.correct === l.quiz.length;
+              const perfect = b && b.correct === l.quizCount;
               return (
                 <ArrRow
                   key={l.id}
+                  moduleId={l.moduleId}
                   index={i}
                   to={`/quiz/${l.id}`}
-                  num={`${l.quiz.length}Q`}
+                  num={`${l.quizCount}Q`}
                   title={l.title}
                   meta={read[l.id] ? 'lesson read' : 'lesson not yet read — expect to lose some'}
                   state={
                     b
                       ? <span className={`arr-state ${perfect ? 'is-gold' : b.correct / b.total >= 0.6 ? 'is-clear' : 'is-due'}`}>
-                          best {b.correct}/{l.quiz.length}
+                          best {b.correct}/{l.quizCount}
                         </span>
                       : <span className="arr-state">not taken</span>
                   }

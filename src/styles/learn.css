@@ -1,0 +1,956 @@
+/* The learning surface: glossary terms, the lesson page, navigation.
+   Owned by the lessons work. Semantic roles only. */
+
+/* ============================================================ terms ======= */
+/* A term in running prose. Marked with a dotted underline rather than a colour,
+   so the mark survives both themes and colour-blindness — and so a paragraph
+   with six terms in it still reads as a paragraph. */
+
+.term {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: help;
+  border-bottom: 1px dotted var(--border-strong);
+  border-radius: 0;
+  text-align: inherit;
+  transition: border-color var(--dur-quick) var(--ease-out),
+              background-color var(--dur-quick) var(--ease-out);
+}
+.term:hover,
+.term.is-open {
+  border-bottom-color: var(--border-active);
+  border-bottom-style: solid;
+  background: var(--surface-sunk);
+}
+.term:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.termcard {
+  position: fixed;
+  z-index: 60;
+  background: var(--surface-raised);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pop);
+  padding: var(--space-4);
+  font-family: var(--font-sans);
+  /* Held at --type-sm on purpose. This is where a popover would normally shrink
+     its way out of a layout problem, and the audience includes readers for whom
+     that is the difference between usable and not. */
+  font-size: var(--type-sm);
+  line-height: var(--leading-snug);
+  color: var(--text-primary);
+}
+.termcard-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+.termcard-term {
+  font-family: var(--font-serif);
+  font-size: var(--type-base);
+  font-weight: var(--weight-semi);
+}
+.termcard-kind {
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-pill);
+  padding: 0 var(--space-2);
+  white-space: nowrap;
+}
+.termcard-gloss {
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-3);
+  font-style: italic;
+}
+.termcard-level { margin-bottom: var(--space-2); overflow: hidden; }
+.termcard-level p { margin: 0 0 var(--space-2); }
+.termcard-level.is-deep { border-top: var(--line-hairline) solid var(--border-hairline); padding-top: var(--space-3); }
+.termcard-tag {
+  display: block;
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+.termcard-src { color: var(--text-secondary); font-size: var(--type-xs); }
+.termcard-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  padding-top: var(--space-3);
+}
+.termcard-more {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  padding: var(--space-1) var(--space-3);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface-page);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: border-color var(--dur-quick) var(--ease-out);
+}
+.termcard-more:hover { border-color: var(--border-active); }
+/* The popover's cross-references are the same row of controls as the glossary's,
+   so they get the same chip. `.taplink` supplies the size and the affordance. */
+.termcard-see { font-size: var(--type-xs); }
+
+/* Breadcrumbs are navigation, not prose, so the inline-link exemption does not
+   reach them and they take the tap floor. Given their own class rather than
+   styled through `.review-progress a`, which belongs to the design system. */
+.crumb-row { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.crumb {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: var(--space-1) var(--space-2);
+  margin-left: calc(-1 * var(--space-2));
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: background-color var(--dur-quick) var(--ease-out);
+}
+.crumb:hover { background: var(--surface-sunk); }
+
+/* Glossary terms in running prose take the inline exemption (`.tap-exempt` on
+   the element), deliberately. A term IS a word inside a sentence: padding it to
+   44px wide would break the line it sits in, which is the case 2.5.5's
+   exemption exists for.
+   
+   The tap floor must NOT be applied here, and the reason is measured rather
+   than argued. `.term` is a button, so the global `button { min-height }` rule
+   catches it; an inline-block contributes its box height to the line box, so a
+   44px floor inflates every prose line that contains a term. At 390px on
+   l-courts: a paragraph containing a term was 16.8px taller than the same text
+   with the terms unwrapped, against a 28.05px line-height — more than half a
+   line of extra leading, on every line with a defined term in it. With the
+   floor removed the difference falls to 1.0px, which is the noise floor for
+   paragraphs with no term at all. And it could never have helped: width was the
+   dimension under the floor, and min-height cannot touch width. */
+
+/* ============================================================ glossary ==== */
+
+.gloss-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin-bottom: var(--space-5);
+}
+.gloss-search {
+  flex: 1 1 14rem;
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  padding: var(--space-3) var(--space-4);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+}
+.gloss-search:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+.gloss-chip {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  padding: var(--space-2) var(--space-3);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color var(--dur-quick) var(--ease-out),
+              border-color var(--dur-quick) var(--ease-out),
+              color var(--dur-quick) var(--ease-out);
+}
+.gloss-chip.is-on {
+  background: var(--action-primary);
+  color: var(--action-on-primary);
+  border-color: var(--action-primary);
+}
+
+.gloss-list { border-top: var(--line-hairline) solid var(--border-hairline); }
+.gloss-entry {
+  padding: var(--space-5) 0;
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+  scroll-margin-top: var(--space-8);
+}
+.gloss-entry:target { background: var(--surface-sunk); }
+.gloss-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2);
+}
+.gloss-term { font-size: var(--type-lg); font-weight: var(--weight-semi); }
+.gloss-gloss { color: var(--text-secondary); font-style: italic; margin-bottom: var(--space-3); }
+.gloss-body { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+.gloss-col p { margin: 0; }
+.gloss-col.is-deep { border-left: 2px solid var(--border-hairline); padding-left: var(--space-4); }
+/* `center`, not `baseline`: once the cross-references are 44px chips a baseline
+   alignment drops the source line to the bottom of the row. */
+.gloss-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  margin-top: var(--space-3);
+}
+.gloss-see { font-family: var(--font-sans); font-size: var(--type-xs); color: var(--text-secondary); }
+.gloss-see a { color: var(--text-primary); }
+.gloss-src { font-family: var(--font-sans); font-size: var(--type-xs); color: var(--text-secondary); }
+.gloss-empty { padding: var(--space-8) 0; color: var(--text-secondary); }
+
+@media (max-width: 780px) {
+  .gloss-body { grid-template-columns: 1fr; gap: var(--space-3); }
+  .gloss-col.is-deep { border-left: none; padding-left: 0; border-top: var(--line-hairline) solid var(--border-hairline); padding-top: var(--space-3); }
+}
+
+/* ============================================================ lesson ====== */
+/* A reading column with a contents rail beside it. The rail is what turns a
+   two-thousand-word lesson from a scroll into a structure you can see. */
+
+/* Three things that want three different widths: a column of prose that must
+   stay at --measure, a margin for the apparatus that hangs off it, and a
+   contents rail. Four component-local custom properties carry the differences
+   between the six widths, so the ladder at the foot of this section changes
+   numbers rather than rules:
+
+     --toc-w       the contents rail
+     --sheet-marg  the sheet's LEFT padding — the reprint margin that the
+                   marginal section numbers and the section marks hang into
+     --sheet-pad   the sheet's other three paddings
+     --fig-bleed   how far a figure may break out of the prose column on each
+                   side. A diagram is not prose and does not want a 68ch cap;
+                   the bleed is always smaller than both paddings, so a figure
+                   leaves the column without ever leaving the sheet.
+
+   They are declared here and nowhere else, so the arithmetic is in one place:
+
+     sheet width = --measure + --sheet-marg + --sheet-pad
+
+   and that same expression is the grid track. That is what holds the prose at
+   exactly 68ch the moment the pane is wide enough to give it 68ch, and lets it
+   shrink — never grow — when the pane is not. 0px rather than 0 because a
+   unitless zero cannot be added to a length inside calc(). */
+.lesson-layout {
+  --toc-w:      13rem;
+  --sheet-marg: 0px;
+  --sheet-pad:  0px;
+  --fig-bleed:  0px;
+
+  display: grid;
+  /* The TRACK is what carries --measure, and the track is centred. The prose
+     column is not centred with an auto margin, and the difference is not
+     cosmetic: an auto inline margin makes a grid item shrink-to-fit, so its
+     width comes from its MAX-CONTENT — and the widest thing in a lesson is a
+     figure with a min-width on it. Measured at 360px before this was written:
+     .lesson-main took the plate's 592px min-width, the sheet stood 578px wide
+     inside a 328px pane, and the whole page scrolled sideways. Sizing the
+     track and stretching the item into it is what makes the figure's own
+     overflow-x box do the scrolling instead of the document. */
+  grid-template-columns:
+    minmax(0, calc(var(--measure) + var(--sheet-marg) + var(--sheet-pad)));
+  gap: var(--space-6);
+  align-items: start;
+  justify-content: center;
+}
+
+/* Centred, not pinned to the left edge. --measure caps a LINE OF TYPE and was
+   never the rule about the page; using it for both is what left a 1920px
+   screen showing a 660px strip against one edge with everything else empty.
+   max-width repeats the track's cap deliberately: it is what holds the column
+   if this element is ever rendered outside .lesson-layout. */
+.lesson-main {
+  min-width: 0;
+  max-width: calc(var(--measure) + var(--sheet-marg) + var(--sheet-pad));
+}
+
+/* The sheet is the opaque ground the prose sits on over the liquid field (see
+   base.css). `.wrap.sheet` there does not match this element, because the
+   lesson is a grid rather than a wrap, so the same treatment is stated here
+   and the two are kept in step by hand. The left padding is larger than the
+   other three from 1440 up: that is the margin, and it is what the section
+   numbers move into. */
+.lesson-main.sheet {
+  padding: var(--sheet-pad) var(--sheet-pad) var(--sheet-pad) var(--sheet-marg);
+}
+
+.lesson-hero { margin-bottom: var(--space-6); }
+.lesson-kicker {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+.lesson-title { font-size: var(--type-2xl); line-height: var(--leading-tight); margin: 0 0 var(--space-3); }
+.lesson-standfirst {
+  font-size: var(--type-lg);
+  line-height: var(--leading-snug);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-5);
+}
+.lesson-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  padding-bottom: var(--space-4);
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+}
+.lesson-fact { display: inline-flex; align-items: center; gap: var(--space-2); }
+
+.lsec { scroll-margin-top: var(--space-8); }
+/* `relative` at every width even though only the desktop states use it: the
+   number moves out into the margin from 1440 up, and a containing block that
+   appears at one breakpoint and not another is how an absolute child ends up
+   positioned against the viewport by accident. */
+.lsec-head {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin: var(--space-8) 0 var(--space-4);
+}
+.lsec-num {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-circle);
+  width: 1.7rem;
+  height: 1.7rem;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+.lsec-h { font-size: var(--type-lg); margin: 0; }
+
+.ruleblock { position: relative; }
+.ruleblock-mark {
+  position: absolute;
+  top: var(--space-3);
+  left: calc(-1 * var(--space-5));
+  font-family: var(--font-serif);
+  font-size: var(--type-lg);
+  color: var(--border-strong);
+}
+
+/* --- the contents rail --- */
+
+/* --type-sm, not --type-xs. These are section titles, read as sentences, by
+   readers who are often tired and often not reading in a first language; 12px
+   is the floor for a sentence, not the size to set navigation at. It steps up
+   again at 1800, where the screen has the room and the reader is further from
+   it. */
+.toc {
+  position: sticky;
+  top: var(--space-5);
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  max-height: calc(100vh - var(--space-8));
+  overflow-y: auto;
+}
+.toc-head {
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+.toc-list { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--border-hairline); }
+
+/* A contents list is a row of controls, not prose: DESIGN.md's inline-link
+   exemption reaches a term inside a sentence and stops there, so these take
+   the 44px floor in both dimensions. `display: flex` rather than `block` so
+   the floor centres a one-line title instead of stranding it at the top of a
+   44px box, and still lets a long title wrap. */
+.toc-list a {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: var(--space-2) var(--space-3);
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+  line-height: var(--leading-snug);
+  transition: color var(--dur-quick) var(--ease-out),
+              background-color var(--dur-quick) var(--ease-out),
+              border-color var(--dur-quick) var(--ease-out);
+}
+.toc-list a:hover { color: var(--text-primary); background: var(--surface-sunk); }
+.toc-list a.is-here {
+  color: var(--text-primary);
+  border-left-color: var(--border-active);
+  font-weight: var(--weight-medium);
+}
+.toc-progress {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  color: var(--text-secondary);
+}
+/* A meter track carries information — an empty bar and a full one differ only
+   by this line — so it takes --border-strong and its 3:1 non-text floor, not a
+   surface. It was --surface-sunk, which is about 1.1:1 against the page: at
+   nought sections read there was nothing on screen to read as a bar at all.
+   Same rule as .band-bar in base.css, and now the same treatment. */
+.toc-bar {
+  display: block;
+  height: 4px;
+  background: var(--border-strong);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+.toc-bar i {
+  display: block;
+  height: 100%;
+  background: var(--signal-correct);
+  border-radius: var(--radius-pill);
+}
+
+/* --- the end-of-lesson hand-off --- */
+
+.handoff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+.handoff-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  text-decoration: none;
+  color: inherit;
+  /* transform and colour only — never width, height or top, which would put
+     layout on the compositor's critical path. base.css disables every CSS
+     transition under prefers-reduced-motion, which is why this is written in
+     CSS rather than in framer-motion. */
+  transition: border-color var(--dur-quick) var(--ease-out),
+              transform var(--dur-quick) var(--ease-out);
+}
+.handoff-card:hover { border-color: var(--border-active); transform: translateY(-2px); }
+.handoff-kicker {
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.handoff-title { font-family: var(--font-sans); font-size: var(--type-sm); font-weight: var(--weight-semi); }
+.handoff-note { font-size: var(--type-sm); color: var(--text-secondary); line-height: var(--leading-snug); }
+
+.lesson-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: var(--line-hairline) solid var(--border-hairline);
+}
+.lesson-nav a {
+  padding: var(--space-4);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  background: var(--surface-raised);
+  transition: border-color var(--dur-quick) var(--ease-out),
+              transform var(--dur-quick) var(--ease-out);
+}
+.lesson-nav a:hover { border-color: var(--border-active); transform: translateY(-2px); }
+.lesson-nav .is-next { text-align: right; }
+.lesson-nav-dir {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+.lesson-nav-title { font-size: var(--type-sm); line-height: var(--leading-snug); }
+
+/* ================================================== the reading ladder ====
+   The reading surface had two breakpoints: 1100, where the contents rail was
+   deleted and nothing took its place, and 780. So a tablet, a 1024 laptop, a
+   1440 desktop and a 34-inch monitor were all given the 781px design, and the
+   wider the screen the worse it read — a column pinned to one edge with the
+   rest of the screen empty is a phone layout that has been stretched.
+
+   Six states, matching the ladder base.css sets for the shell:
+
+     <=600      phone
+     601-780    large phone, small tablet in portrait
+     781-1023   tablet — the rail returns to the side and takes 12rem with it,
+                so this is the NARROWEST reading pane in the app (about 480px
+                at 781). Single column, and the contents becomes a strip.
+     1024-1439  laptop — the sheet lifts off the field and the rail returns
+     1440-1799  desktop — the sheet grows a margin and the numbers move into it
+     >=1800     wide — everything gets its full size; the app stops growing and
+                the field takes the rest
+
+   The contents is the thing that changes most, because it is the thing that
+   used to vanish. It is never deleted at any width:
+
+     <=600      a card at the foot of the lesson, one column of 44px rows
+     601-780    the same card, two columns
+     781-1023   a strip along the bottom of the pane: the meter and the count,
+                then the sections as chips that scroll sideways
+     >=1024     the rail beside the prose, sticky, growing with the screen
+
+   Why the card is at the FOOT below 781 and not the head: everything above the
+   first section — breadcrumb, kicker, title, standfirst, plate — is inside
+   .lesson-main, so a contents placed in the first grid row would sit above the
+   lesson's own title. A contents list that arrives before you know what you
+   are reading is not orientation. */
+
+/* ---- phone: <= 600 ---- */
+@media (max-width: 600px) {
+  .lesson-layout { gap: var(--space-5); }
+  .lesson-hero { margin-bottom: var(--space-5); }
+  .lsec-head { margin-top: var(--space-7); }
+}
+
+/* ---- phone and large phone: <= 780 ----
+   The contents as a card at the foot of the lesson. Not sticky and not fixed:
+   a phone is short, a bar across the bottom of it is the fifth of the screen
+   the reader is trying to read in, and Rail.jsx already has a fixed navigation
+   bar down there. */
+@media (max-width: 780px) {
+  /* base.css full-bleeds .sheet below 781: it cancels .main's 16px gutter with
+     a negative inline margin and re-applies it as the sheet's own padding,
+     because a 16px ribbon of liquid field down each edge reads as a rendering
+     fault rather than as a margin. That argument is right and this keeps it —
+     but a negative inline margin cannot CENTRE a grid item, and measured at
+     700px it did not: the sheet came out 32px left of centre, bled off the
+     left edge and left 61px of field on the right.
+
+     So the bleed moves onto the container and the track does the centring. The
+     sheet's gutter becomes its --sheet-pad, which is the same 16px in the same
+     place, and which the track already knows how to add to --measure. Below
+     610px the track is the whole screen and the sheet is edge to edge, exactly
+     as base.css intends; above it the sheet is 610px and centred, and the
+     field around it is wide enough to read as a margin. */
+  .lesson-layout {
+    --sheet-marg: var(--space-4);
+    --sheet-pad:  var(--space-4);
+    margin-inline: calc(-1 * var(--space-4));
+  }
+  .lesson-main.sheet { margin-inline: 0; }
+
+  .lesson-nav { grid-template-columns: 1fr; }
+  .lesson-nav .is-next { text-align: left; }
+  .ruleblock-mark { display: none; }
+
+  .toc {
+    /* The contents is a card on the field, not part of the sheet, so it keeps
+       the gutter the sheet gave up. */
+    margin-inline: var(--space-4);
+    position: static;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+    margin-top: var(--space-6);
+    padding: var(--space-4);
+    border: var(--line-hairline) solid var(--border-hairline);
+    border-radius: var(--radius-md);
+    /* Opaque: the card is outside .lesson-main, so without this it is the one
+       piece of the lesson standing on the liquid field. */
+    background: var(--surface-page);
+  }
+  /* The rail's left rule belongs to a vertical list against a column of prose.
+     In a card — and in two columns of one — it is a line down the middle of
+     nothing, so the current section is marked by an inset rule on its own row
+     instead. Inset rather than a border so the row does not move 2px when it
+     becomes current. */
+  .toc-list { border-left: 0; }
+  .toc-list a { border-left-width: 0; margin-left: 0; border-radius: var(--radius-sm); }
+  .toc-list a.is-here {
+    background: var(--surface-sunk);
+    box-shadow: inset var(--line-marker) 0 0 0 var(--border-active);
+  }
+}
+
+/* ---- large phone: 601-780 ----
+   Nine sections at 44px each is 400px of card. There is room for two columns
+   here and there is not at 360, so it gets two. */
+@media (min-width: 601px) and (max-width: 780px) {
+  .toc-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-4);
+  }
+}
+
+/* ---- tablet: 781-1023 ----
+   The band where the rail goes back to the side and takes 12rem of a 800px
+   screen, so the reading pane here is narrower than it is on a large phone.
+   One column, and the contents becomes a strip along the bottom of the pane.
+
+   Fixed rather than sticky, and this is the one place in these three files
+   that uses it. A sticky bottom edge only holds inside its own containing
+   block, and the contents' grid area is the last row of the lesson — it would
+   stick to the bottom of the viewport for the length of the row and nowhere
+   else, which is the foot card again with extra steps.
+
+   Rail.jsx's own bottom bar is display:none above 780, so the two never share
+   the edge. z-index 30 is that bar's layer, below the popover, toast and modal
+   band at 40-70 and below the skip link at 100. */
+@media (min-width: 781px) and (max-width: 1023px) {
+  .lesson-layout { padding-bottom: var(--space-7); }
+
+  .toc {
+    position: fixed;
+    left: var(--rail-width);
+    right: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 30;
+    max-height: none;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-1) var(--pane-pad);
+    /* Prose scrolls under it, so it is opaque and it is the one thing in the
+       lesson that genuinely floats above the page. */
+    background: var(--surface-page);
+    border-top: var(--line-hairline) solid var(--border-hairline);
+    box-shadow: var(--shadow-overlay);
+  }
+  /* The <aside> carries aria-label="Contents"; the visible kicker is a second
+     copy of that, and the strip has no room for it. */
+  .toc-head { display: none; }
+
+  .toc-progress {
+    order: -1;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+    white-space: nowrap;
+  }
+  .toc-bar { width: 5rem; flex: 0 0 auto; margin-bottom: 0; }
+
+  .toc-list {
+    flex: 1 1 auto;
+    display: flex;
+    gap: var(--space-1);
+    border-left: 0;
+    overflow-x: auto;
+    /* A sideways flick on the chips must not drag the page with it. */
+    overscroll-behavior-x: contain;
+  }
+  .toc-list li { flex: 0 0 auto; }
+  /* One line, ellipsised, 44px tall. line-height rather than padding does the
+     vertical centring, because a flex box cannot ellipsise its own text. */
+  .toc-list a {
+    display: block;
+    min-height: var(--tap-min);
+    line-height: var(--tap-min);
+    max-width: 12rem;
+    padding: 0 var(--space-3);
+    margin-left: 0;
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .toc-list a.is-here {
+    border-bottom-color: var(--border-active);
+    background: var(--surface-sunk);
+  }
+}
+
+/* ---- laptop: >= 1024 ----
+   The contents comes back as a rail and the sheet lifts off the field, both in
+   step with base.css's .wrap.sheet at the same width.
+
+   The rail is 11rem here rather than the 14 it used to be at 1100. At 1024 the
+   pane is about 700px and the old pair squeezed the prose to 500px while
+   calling it a 68ch column; a narrower rail buys the prose back about 50px.
+   68ch is a MAXIMUM — a column below it is comfortable, a column above it is
+   not — so the track shrinks and never grows. */
+@media (min-width: 1024px) {
+  .lesson-layout {
+    --toc-w:      11rem;
+    --sheet-marg: var(--space-6);
+    --sheet-pad:  var(--space-6);
+    --fig-bleed:  var(--space-4);
+
+    grid-template-columns:
+      minmax(0, calc(var(--measure) + var(--sheet-marg) + var(--sheet-pad)))
+      var(--toc-w);
+    column-gap: var(--space-6);
+  }
+
+  .lesson-main.sheet {
+    border: var(--line-hairline) solid var(--border-hairline);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-pop);
+  }
+  .toc { grid-column: 2; }
+
+  /* Figures leave the prose column. They never leave the sheet: --fig-bleed is
+     smaller than both of the sheet's paddings at every width that sets it, so
+     the widest figure still has margin on both sides. Nothing here makes the
+     PAGE scroll sideways — each figure carries its own overflow-x box in
+     plates.css, and this only decides how wide that box is. */
+  .lesson-main .plate-full,
+  .lesson-main .dia,
+  .lesson-main .dtable-fig,
+  .lesson-main .chart,
+  .lesson-main .compareblock,
+  .lesson-main .stepsblock {
+    margin-inline: calc(-1 * var(--fig-bleed));
+  }
+
+  /* Block fills mark the lesson's structure (DESIGN.md 2.10) and on a long
+     desktop column the structure is what a reader is scanning for. So the
+     blocks get air — NOT deeper fills, which is the change to resist: every
+     one of these is verified to leave body text at 10-13:1, and a saturated
+     block is worse than the monochrome it replaced.
+
+     The horizontal padding is deliberately untouched. .ruleblock's text edge
+     and the indent of the gloss paragraph that follows it are set to the same
+     value in base.css, and moving one without the other breaks the one piece
+     of alignment in this layout that carries a meaning. */
+  .ruleblock,
+  .exblock,
+  .cautionblock,
+  .predictblock,
+  .checkpointblock,
+  .rehearsal {
+    margin-block: var(--space-6);
+  }
+  /* The kicker on its own line. Inline, "Example" reads as the first word of
+     the sentence; on its own line it is a label on a block, which is what it
+     is, and what makes the block's type legible without reading it. */
+  .exblock .xlabel,
+  .cautionblock .xlabel {
+    display: block;
+    margin: 0 0 var(--space-2);
+  }
+}
+
+/* ---- desktop: >= 1440 ----
+   The sheet grows a real left margin and the section numbers move into it —
+   the marginal numbering of a statute reprint, which is what this app has been
+   describing since the first line of DESIGN.md and has never had the room to
+   draw. The margin is inside the sheet, not beside it: a number set out on the
+   liquid field would be small text on a moving coloured ground. */
+@media (min-width: 1440px) {
+  .lesson-layout {
+    --toc-w:      14rem;
+    --sheet-marg: var(--margin-num);
+    --sheet-pad:  var(--space-7);
+    --fig-bleed:  var(--space-6);
+  }
+
+  .lsec-num {
+    position: absolute;
+    right: calc(100% + var(--space-4));
+    top: var(--space-1);
+    width: 2rem;
+    height: 2rem;
+    font-size: var(--type-sm);
+  }
+  .lsec-h { font-size: var(--type-xl); line-height: var(--leading-snug); }
+  /* The section mark moves out with them. */
+  .ruleblock-mark { left: calc(-1 * var(--space-6)); }
+}
+
+/* ---- wide: >= 1800 ----
+   Everything at its full size. Past --shell-max the app stops growing and the
+   field takes the rest, which the centring here already does: the assembly is
+   about 1080px wide and it sits in the middle of whatever it is given. */
+@media (min-width: 1800px) {
+  .lesson-layout {
+    --toc-w:      15rem;
+    --sheet-marg: calc(var(--margin-num) + var(--space-5));
+    --sheet-pad:  var(--space-8);
+    --fig-bleed:  var(--space-7);
+    column-gap: var(--space-7);
+  }
+  .toc { font-size: var(--type-base); }
+}
+
+/* ============================================================ palette ===== */
+/* Cmd-K. One search across lessons, modules, problems and the glossary. */
+
+.pal-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  background: var(--scrim);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--space-8) var(--space-4);
+}
+.pal {
+  width: min(38rem, 100%);
+  background: var(--surface-raised);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  overflow: hidden;
+}
+.pal-input {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: var(--type-lg);
+  padding: var(--space-4) var(--space-5);
+  border: 0;
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+  background: transparent;
+  color: var(--text-primary);
+}
+.pal-input:focus { outline: none; }
+.pal-results { max-height: 24rem; overflow-y: auto; margin: 0; padding: var(--space-2); list-style: none; }
+.pal-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  width: 100%;
+  text-align: left;
+  padding: var(--space-3);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.pal-item.is-active { background: var(--surface-sunk); }
+.pal-kind {
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  flex: 0 0 4.5rem;
+}
+.pal-label { flex: 1 1 auto; font-size: var(--type-sm); line-height: var(--leading-snug); }
+.pal-sub { display: block; font-size: var(--type-xs); color: var(--text-secondary); }
+.pal-foot {
+  padding: var(--space-3) var(--space-5);
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+}
+.pal-key {
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: 0 var(--space-2);
+  font-family: var(--font-sans);
+}
+
+/* ============================================================ locking ===== */
+/* A locked lesson keeps its title and loses its text. The lock is drawn rather
+   than coloured, so it survives greyscale and forced-colours; the muting is the
+   second cue, never the only one. */
+
+.arr-row.is-locked { opacity: 0.62; }
+.arr-row.is-locked .arr-title { font-weight: var(--weight-regular); }
+.row-lock { font-size: var(--type-sm); }
+
+.locked-panel {
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface-sunk);
+  padding: var(--space-7) var(--space-6);
+  text-align: center;
+  max-width: var(--measure);
+}
+.locked-mark { display: inline-block; color: var(--text-secondary); margin-bottom: var(--space-3); }
+.lk-body { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.lk-shackle { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.locked-title { font-size: var(--type-xl); margin: 0 0 var(--space-2); }
+.locked-kicker {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-5);
+}
+.locked-why {
+  font-size: var(--type-lg);
+  line-height: var(--leading-snug);
+  margin: 0 auto var(--space-5);
+  max-width: 32rem;
+}
+.locked-note { margin-top: var(--space-5); }
+
+.lesson-nav-locked {
+  padding: var(--space-4);
+  border: var(--line-hairline) dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface-sunk);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-end;
+}
+.lesson-nav-need {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+}
+
+.unlock-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  border: var(--line-hairline) solid var(--signal-correct);
+  border-left-width: 3px;
+  border-radius: var(--radius-md);
+  background: var(--fill-correct);
+  padding: var(--space-4) var(--space-5);
+  margin: var(--space-5) 0;
+}
+.unlock-banner > span:nth-child(2) { flex: 1 1 auto; }
+.unlock-mark { color: var(--signal-correct-text); display: inline-flex; }
+.unlock-kicker {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--signal-correct-text);
+}
+.unlock-title { display: block; font-size: var(--type-base); font-weight: var(--weight-semi); }

@@ -1,0 +1,213 @@
+/* Warta — the scales.
+ *
+ * Named for the Warta Kerajaan, the gazette in which Malaysian statutes are
+ * published. The app is set like a statute reprint, so it is named for the
+ * thing that does the reprinting.
+ *
+ * Colour lives in palette.css, which is generated and verified. Everything
+ * else — space, type, line, radius, shadow, motion, measure — lives here and
+ * is written by hand. Between the two files there are no other values: if a
+ * component needs a number, it comes from a token, and if no token fits, the
+ * token is what is missing.
+ *
+ * Rules that the lint enforces (tools/design-lint.py):
+ *   - no raw hex outside palette.css;
+ *   - no --w-* primitive referenced outside palette.css;
+ *   - no font-size below --type-2xs;
+ *   - no border-radius outside the radius scale.
+ */
+
+@import './palette.css';
+@import './fonts.css';
+
+:root {
+  /* ---- type families ---------------------------------------------------
+     Serif carries the law: prose, rules, card faces, anything read for
+     meaning. Sans carries the apparatus: labels, counts, navigation, state.
+     A reader should be able to tell, without reading, whether a line is the
+     material or the machinery around it. */
+  --font-serif: 'Spectral', Georgia, 'Times New Roman', serif;
+  --font-sans:  'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ---- type scale ------------------------------------------------------
+     Ratio 1.2 from a 1rem root. --type-body is 18px rather than the more
+     usual 16: the readership includes children and adults coming back to
+     study after a long time away, and the prose they are here for is dense
+     statutory material. The bottom of the scale is a floor, not a
+     suggestion — nothing in this app may be smaller than --type-2xs, and
+     --type-2xs is for short uppercase labels only. */
+  --type-2xs:  0.6875rem;  /* 11px — uppercase kickers and band labels ONLY */
+  --type-xs:   0.75rem;    /* 12px — the smallest text allowed to be a sentence */
+  --type-sm:   0.8125rem;  /* 13px — captions, hints, metadata */
+  --type-base: 0.9375rem;  /* 15px — sans UI text, buttons, navigation */
+  --type-body: 1.125rem;   /* 18px — serif prose, the reading size */
+  --type-lg:   1.3125rem;  /* 21px — card faces, quiz questions */
+  --type-xl:   1.625rem;   /* 26px — section headings */
+  --type-2xl:  2rem;       /* 32px — page headings */
+  --type-3xl:  2.5rem;     /* 40px — the level-up title, and nothing else */
+
+  /* ---- line height -----------------------------------------------------
+     Prose gets 1.65, which is loose for a screen and deliberate: long
+     statutory sentences need the extra leading to keep a reader on the line
+     they are on. */
+  --leading-tight: 1.15;
+  --leading-snug:  1.35;
+  --leading-base:  1.5;
+  --leading-prose: 1.65;
+
+  --tracking-caps: 0.08em;   /* uppercase labels only; lowercase never tracks */
+
+  /* ---- weight ---------------------------------------------------------- */
+  /* All four are real weights and all four are served — see fonts.css. Sans
+     weights are free (one variable file covers 400-700); a new Spectral weight
+     costs ~15 KB and has to be argued for. */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semi:    600;
+  --weight-bold:    700;
+
+  /* ---- space -----------------------------------------------------------
+     A 4px grid, in rem so it scales with the user's browser setting. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* ---- radius ----------------------------------------------------------
+     Small, because paper does not have rounded corners and this is meant to
+     read as a printed page. Four values, no others. */
+  --radius-sm:     2px;   /* chips, key caps, inputs, buttons */
+  --radius-md:     4px;   /* cards, panels, callouts */
+  --radius-lg:     8px;   /* modals, the level-up card */
+  --radius-pill:   999px; /* pills and meters */
+  --radius-circle: 50%;   /* seals, rank discs, rungs */
+
+  /* ---- line weight -----------------------------------------------------
+     --line-hairline separates two things. --line-marker says the thing it is
+     attached to has a state worth noticing: a due module, a caution, a rule. */
+  --line-hairline: 1px;
+  --line-marker:   3px;
+
+  /* Not a line — the surface showing through between two adjoining fills, so
+     they never touch and read as one shape. 2px because 1px reads as a drawn
+     hairline rather than as a gap. Used between stacked chart segments. */
+  --gap-hairline: 2px;
+
+  /* ---- elevation -------------------------------------------------------
+     A reprint is flat. Shadow is reserved for things that genuinely sit above
+     the page and must be dismissed: toasts, popovers, modals. Cards use a
+     border, never a shadow. */
+  --shadow-pop:     0 6px 20px rgb(0 0 0 / 0.18);
+  --shadow-overlay: 0 10px 30px rgb(0 0 0 / 0.18);
+  --shadow-modal:   0 24px 70px rgb(0 0 0 / 0.35);
+
+  /* ---- motion ----------------------------------------------------------
+     --ease-out is the house curve: fast to start, long to settle, which is
+     what makes a thing feel like it arrived rather than slid. Durations are
+     short — this is a study app, and every animation is time not spent
+     reading. All of it is disabled under prefers-reduced-motion. */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-instant: 120ms;
+  --dur-quick:   200ms;
+  --dur-base:    320ms;
+  --dur-slow:    600ms;
+
+  /* ---- measure and layout ---------------------------------------------
+     68ch is about 75 characters of Spectral, which is the top of the range
+     that stays comfortable for continuous reading. */
+  --measure:        68ch;
+  --measure-narrow: 46rem;
+  --measure-wide:   54rem;
+  --rail-width:     15rem;
+  --margin-num:     5.5rem;  /* the marginal section-number column */
+
+  /* ---- the pane, and what happens on a wide screen ---------------------
+     --measure caps a COLUMN OF PROSE and must not be widened; 68ch is a
+     reading rule, not a layout one. But a page is not only its prose, and
+     capping the column was the whole layout: on a 1920px screen the app was
+     a 660px strip pinned to the left edge with a thousand pixels of nothing
+     beside it, which is a phone layout that has been stretched rather than a
+     desktop one.
+
+     So the column and the pane are now two different things. The pane is how
+     much of the screen the app occupies; the column is how wide a line of
+     type may be inside it. Prose keeps --measure and is CENTRED in the pane.
+     Index and dashboard pages — which are rows, grids and cards, none of
+     which have a reading measure — take --pane-dash and use the width.
+
+     --shell-max stops the whole app at 1792px so that past that point the
+     screen grows and the app does not, which is the only honest thing to do
+     with a 34-inch monitor. */
+  --pane-dash: 78rem;   /* index and dashboard pages: rows, grids, cards */
+  --shell-max: 112rem;  /* the app itself stops here; the field fills past it */
+
+  /* Page gutters grow with the screen instead of stepping at a breakpoint,
+     so there is no width at which the layout looks like it was designed for
+     the width either side of it. */
+  --pane-pad: clamp(var(--space-4), 4vw, var(--space-8));
+
+  /* ---- the liquid field -----------------------------------------------
+     See DESIGN.md 2.12. The field is painted in module colour and says which
+     part of the curriculum you are in; it carries no quantity and must never
+     be read as data.
+
+     Alphas are the ceiling, not a starting point. Every one of them is
+     applied to --module-ink over --surface-page, behind a reading column
+     that is itself opaque — the field never sits under body text, so these
+     values do not enter any contrast calculation. They are set by eye for
+     presence, and the sheet is what keeps that safe. */
+  --liquid-alpha-deep: 30%;
+  --liquid-alpha-mid:  20%;
+  --liquid-alpha-soft: 12%;
+
+  /* Orbs are enormous on purpose — a 70vmax shape reads as a coloured
+     region of the page, which is the object; a 200px one reads as a bubble,
+     which is decoration. */
+  --liquid-orb-lg: 78vmax;
+  --liquid-orb-md: 56vmax;
+  --liquid-orb-sm: 38vmax;
+
+  /* Slow enough that nothing ever moves in a reader's peripheral vision fast
+     enough to pull their eye off a line. Co-prime-ish durations so the field
+     does not visibly loop. */
+  --dur-drift-1: 41s;
+  --dur-drift-2: 53s;
+  --dur-drift-3: 67s;
+  --dur-drift-4: 79s;
+
+  /* ---- focus -----------------------------------------------------------
+     One focus treatment everywhere. It is offset so it never sits on top of
+     the thing it is marking. */
+  --focus-width:  2px;
+  --focus-offset: 3px;
+
+  /* ---- tap target ------------------------------------------------------
+     WCAG 2.5.5 (AAA). Not an aspiration here: this is a phone-first audience,
+     and it includes children, whose finger-to-target accuracy is worse than an
+     adult's, and tired readers on a train. Anything a person taps clears this
+     in both dimensions. A control that only LOOKS small is fine — pad it out
+     with min-height rather than growing the ink. */
+  --tap-min: 2.75rem;
+
+  /* ---- the phone navigation bar ---------------------------------------
+     Height of the thumb-reachable bar on phone, and therefore the amount of
+     room the page below it has to leave. It is a token rather than a number
+     in two files because the bar and the space reserved for it are declared
+     by different people: the bar is markup in Rail.jsx, the reservation is a
+     padding in base.css, and if those two ever disagree the last paragraph
+     of every lesson sits under the bar. --tap-min plus its padding. */
+  --railnav-h: 3.5rem;
+}
+
+@media (max-width: 780px) {
+  :root {
+    --margin-num: 2.5rem;
+    --type-body:  1.0625rem;
+  }
+}

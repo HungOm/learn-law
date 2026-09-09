@@ -1,32 +1,104 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useStudy } from '../state/StudyContext.jsx';
 import * as prob from '../lib/problems.js';
-import { ArrRow } from '../components/Bits.jsx';
-import Inline from '../components/Inline.jsx';
+import * as sections_ from '../lib/sections.js';
+import { loadLesson, plateFor } from '../lib/content.js';
+import * as prog from '../lib/progression.js';
+import Block from '../components/Blocks.jsx';
+import Plate from '../components/plates/Plate.jsx';
+import { Prose, TermLayer } from '../components/Term.jsx';
 import { burstFrom } from '../lib/fx.js';
 import { daysAgo, plural } from '../lib/format.js';
 import NotFound from './NotFound.jsx';
 
+const slug = (s, i) => `s${i}-${String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}`;
+
 export default function LessonView() {
   const { id } = useParams();
-  const { cat, read, markLesson } = useStudy();
-  const l = cat.byId.lesson[id];
+  const { cat, read, best, unlock, markLesson } = useStudy();
+  const meta = cat.byId.lesson[id];
   const btnRef = useRef(null);
   const [busy, setBusy] = useState(false);
+  const [here, setHere] = useState(0);
+
+  // The catalogue knows this lesson's title, summary and headings already; what
+  // has to be fetched is the prose, which lives in the module's chunk.
+  const [l, setL] = useState(null);
+  const [secRead, setSecRead] = useState({});
 
   const { scrollYProgress } = useScroll();
   const bar = useSpring(scrollYProgress, { stiffness: 120, damping: 28, mass: 0.4 });
 
-  useEffect(() => { window.scrollTo(0, 0); }, [id]);
+  useEffect(() => { window.scrollTo(0, 0); setHere(0); }, [id]);
 
-  if (!l) return <NotFound />;
+  useEffect(() => {
+    let live = true;
+    setL(null);
+    loadLesson(id).then(full => { if (live) setL(full); });
+
+    sections_.readMap().then(m => { if (live) setSecRead(m); });
+    return () => { live = false; };
+  }, [id]);
+
+  const sections = l?.sections || [];
+  const ids = useMemo(() => sections.map((s, i) => slug(s.h, i)), [sections]);
+
+  // Scroll-spy. An observer rather than a scroll handler, because the handler
+  // version recomputes offsets on every frame of a long lesson.
+  useEffect(() => {
+    if (!ids.length) return undefined;
+    const seen = new Map();
+    const obs = new IntersectionObserver((entries) => {
+      for (const e of entries) seen.set(e.target.id, e.intersectionRatio);
+      let best = 0, bestRatio = -1;
+      ids.forEach((sid, i) => {
+        const r = seen.get(sid) ?? -1;
+        if (r > bestRatio) { bestRatio = r; best = i; }
+      });
+      setHere(best);
+    }, { rootMargin: '-15% 0px -60% 0px', threshold: [0, 0.25, 0.5, 1] });
+    ids.forEach(sid => { const el = document.getElementById(sid); if (el) obs.observe(el); });
+    return () => obs.disconnect();
+  }, [ids]);
+
+  // One set per lesson: a term is linked the first time it appears and left
+  // alone after that. Rebuilt when the lesson changes.
+  const seen = useMemo(() => new Map(), [id]);
+
+  if (!meta) return <NotFound />;
+
+  // Checked before the loading branch: a locked lesson must not fetch, and must
+  // not flash its summary on the way to being refused.
+  {
+    const g = unlock[meta.id];
+    if (g && !g.open) return <Locked meta={meta} cat={cat} entry={g} />;
+  }
+
+  // The prose is still coming. Show what the catalogue already knows rather
+  // than a spinner over an empty page — it is the same heading the loaded page
+  // opens with, so nothing jumps when it arrives. Plain text in a live region:
+  // there is nothing here to focus, so there is nothing to trap.
+  if (!l) {
+    return (
+      <div className="wrap sheet" data-module={meta.moduleId}>
+        <p className="small taplink-row"><Link className="taplink" to="/lessons">← Lessons</Link></p>
+        <h1>{meta.title}</h1>
+        <p className="lede">{meta.summary}</p>
+        <p className="small" role="status">Fetching the text of this lesson…</p>
+      </div>
+    );
+  }
+
+  const gate = unlock[meta.id] || { open: true };
+  if (!gate.open) return <Locked meta={meta} cat={cat} entry={gate} />;
 
   const mod = cat.byId.module[l.moduleId] || {};
-  const siblings = mod.lessons || [];
-  const i = siblings.findIndex(x => x.id === l.id);
-  const nextInModule = siblings[i + 1] || null;
+  const order = cat.lessons;
+  const at = order.findIndex(x => x.id === l.id);
+  const prev = order[at - 1] || null;
+  const next = order[at + 1] || null;
   const cards = (l.plants || []).map(cid => cat.byId.card[cid]).filter(Boolean);
   const prepares = (l.prepares || []).map(pid => cat.byId.problem[pid]).filter(Boolean);
   const readAt = read[l.id];
@@ -39,155 +111,292 @@ export default function LessonView() {
   };
 
   return (
-    <div className="wrap lesson">
+    <TermLayer>
       <motion.div className="readbar" style={{ scaleX: bar }} aria-hidden="true" />
 
-      <div className="review-progress">
-        <span><Link to="/lessons">← Lessons</Link> · <Link to={`/module/${l.moduleId}`}>{mod.title || ''}</Link></span>
-        <span>{plural(l.minutes, 'minute')}{siblings.length > 1 ? ` · ${i + 1} of ${siblings.length}` : ''}</span>
-      </div>
-
-      <h2>{l.title}</h2>
-      <p className="lede">{l.summary}</p>
-
-      {(l.sections || []).map((sec, n) => (
-        <motion.section
-          className="lsec"
-          key={n}
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <h3>{sec.h}</h3>
-          {(sec.body || []).map((b, k) => <Block key={k} b={b} />)}
-        </motion.section>
-      ))}
-
-      {(l.quiz || []).length > 0 && (
-        <motion.div
-          className="quiz-invite"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-        >
-          <div>
-            <h3 style={{ marginTop: 0 }}>Check it before you leave</h3>
-            <p className="small">
-              {plural(l.quiz.length, 'question')} on what you have just read. Recognition, not
-              recall — but a question you cannot even recognise the answer to is a section to
-              read again now rather than in three weeks when the card comes round.
-            </p>
+      {/* No pane class here on purpose. learn.css owns this grid and now
+          centres it itself (justify-content: center, and .lesson-main takes
+          margin-inline: auto), so a .wrap--dash cap would duplicate that — and
+          .wrap--dash also carries an opaque ground, which would paint over the
+          field across the whole layout and undo the .lesson-main.sheet
+          treatment written for this element by hand. */}
+      <div className="lesson-layout" data-module={l.moduleId}>
+        {/* The prose column, and the only part of this layout that is a
+            column of prose — .lesson-main is already capped at --measure, and
+            .sheet is what stops the field being composited behind body text
+            held to AAA. The table of contents beside it is apparatus, not the
+            reading surface, so it is left on the field. */}
+        <div className="lesson-main sheet">
+          <div className="review-progress">
+            <span className="crumb-row">
+              <Link className="crumb" to="/lessons">← Lessons</Link>
+              <Link className="crumb" to={`/module/${l.moduleId}`}>{mod.title || ''}</Link>
+            </span>
+            <span>{at + 1} of {order.length} in the curriculum</span>
           </div>
-          <Link className="btn btn-primary btn-big" to={`/quiz/${l.id}`}>Take the quiz</Link>
-        </motion.div>
-      )}
 
-      {(cards.length > 0 || prepares.length > 0) && (
-        <div className="handoff">
-          <h3>What this lesson hands off to</h3>
-          {cards.length > 0 && (
-            <>
-              <p className="small">
-                It plants {plural(cards.length, 'card')}, which the scheduler will start showing
-                you. They are already in the deck — reading this is what makes them answerable
-                rather than guessable.
+          <header className="lesson-hero">
+            <p className="lesson-kicker">
+              <span className="module-chip">{mod.title}</span>
+              {' '}{mod.level === null || mod.level === undefined ? 'Method' : `Level ${mod.level}`} · {plural(l.minutes, 'minute')}
+            </p>
+            <h1 className="lesson-title">{l.title}</h1>
+            <div className="module-rule" aria-hidden="true" />
+            <p className="lesson-standfirst">{l.summary}</p>
+            <Plate scene={plateFor(l)} caption={l.plateCaption} />
+            <div className="lesson-facts">
+              <span className="lesson-fact">{sections.length} sections</span>
+              {cards.length > 0 && <span className="lesson-fact">{plural(cards.length, 'card')} planted</span>}
+              {l.quizCount > 0 && <span className="lesson-fact">{l.quizCount}-question quiz</span>}
+              {prepares.length > 0 && <span className="lesson-fact">{plural(prepares.length, 'problem')} prepared</span>}
+              {readAt && <span className="lesson-fact">read {daysAgo(readAt)}</span>}
+            </div>
+          </header>
+
+          {(() => {
+            const p = sections_.progressOf(l, secRead);
+            if (!p.done || p.done === p.total) return null;
+            return (
+              <p className="lsec-resume">
+                <strong>{p.done} of {p.total} sections done.</strong>{' '}
+                {plural(p.minutesLeft, 'minute')} left — next up,{' '}
+                <a href={`#${ids[sections.indexOf(p.next)]}`}>{p.next.h}</a>.
               </p>
-              <ul className="plantlist">{cards.map(c => <li key={c.id}>{c.front}</li>)}</ul>
-            </>
+            );
+          })()}
+
+          {sections.map((sec, n) => (
+            <motion.section
+              className="lsec"
+              id={ids[n]}
+              key={ids[n]}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="lsec-head">
+                <span className="lsec-num" aria-hidden="true">{n + 1}</span>
+                <h2 className="lsec-h">{sec.h}</h2>
+              </div>
+              {(sec.body || []).map((b, k) => <Block key={k} b={b} seen={seen} />)}
+              {/* Marking is explicit, never inferred from scrolling. `lessons.js`
+                  refuses to guess at a reader's attention and this is the same
+                  refusal one level down: a section is done because the reader
+                  said so. */}
+              <p className="lsec-done">
+                <button
+                  type="button"
+                  className="lsec-done-btn"
+                  aria-pressed={!!secRead[sec.id]}
+                  onClick={async () => setSecRead(secRead[sec.id]
+                    ? await sections_.markUnread(sec.id)
+                    : await sections_.markRead(sec.id))}
+                >
+                  {secRead[sec.id] ? 'Done' : `Mark done · ${sec.readMinutes || 1} min`}
+                </button>
+              </p>
+            </motion.section>
+          ))}
+
+          {l.quizCount > 0 && (
+            <motion.div
+              className="quiz-invite"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45 }}
+            >
+              <div>
+                <h2 style={{ marginTop: 0 }}>
+                  {prog.quizPassed(l, best) ? 'Check it before you leave' : 'Pass this to carry on'}
+                </h2>
+                <p className="small">
+                  {plural(l.quizCount, 'question')} on what you have just read.{' '}
+                  {prog.quizPassed(l, best)
+                    ? 'You have passed it. Take it again whenever you like — it reshuffles.'
+                    : `Get ${Math.ceil(l.quizCount * prog.PASS)} of ${l.quizCount} right and the next lesson opens.`}
+                  {' '}Recognition, not recall — but a question you cannot even recognise the
+                  answer to is a section to read again now rather than in three weeks.
+                </p>
+              </div>
+              <Link className="btn btn-primary btn-big" to={`/quiz/${l.id}`}>Take the quiz</Link>
+            </motion.div>
           )}
-          {prepares.length > 0 && (
-            <>
-              <p className="small" style={{ marginTop: '1.25rem' }}>It prepares you for:</p>
-              <div className="arrangement">
-                {prepares.map((pr, n) => (
-                  <ArrRow
-                    key={pr.id}
-                    index={n}
-                    to={`/problem/${pr.id}`}
-                    num={`${pr.minutes}′`}
-                    title={pr.title}
-                    meta={`${prob.totalMarks(pr)} marks · written to follow this lesson`}
-                    state={<span className="arr-state">problem</span>}
-                  />
+
+          {(cards.length > 0 || prepares.length > 0) && (
+            <div className="handoff">
+              <h2>What this lesson hands off to</h2>
+              <div className="handoff-grid">
+                {cards.length > 0 && (
+                  <div className="handoff-card">
+                    <span className="handoff-kicker">Cards</span>
+                    <span className="handoff-title">{plural(cards.length, 'card')} planted</span>
+                    <span className="handoff-note">
+                      Already in the deck. Reading this is what makes them answerable rather than
+                      guessable.
+                    </span>
+                  </div>
+                )}
+                {prepares.map(pr => (
+                  <Link className="handoff-card" key={pr.id} to={`/problem/${pr.id}`}>
+                    <span className="handoff-kicker">Problem · {pr.minutes}′</span>
+                    <span className="handoff-title">{pr.title}</span>
+                    <span className="handoff-note">{prob.totalMarks(pr)} marks, written to follow this lesson.</span>
+                  </Link>
                 ))}
               </div>
+              {cards.length > 0 && (
+                <ul className="plantlist">{cards.map(c => <li key={c.id}>{c.front}</li>)}</ul>
+              )}
+            </div>
+          )}
+
+          {(l.reading || []).length > 0 && (
+            <>
+              <h2>Read alongside</h2>
+              {l.reading.map((r, n) => {
+                const b = cat.byId.book[r.bookId];
+                if (!b) return null;
+                return (
+                  <div className="book" key={n}>
+                    <div className="book-title">{b.title}</div>
+                    <p className="book-byline">
+                      {[b.author, b.edition ? `${b.edition} ed.` : null].filter(Boolean).join(' · ')}
+                    </p>
+                    <p className="book-note">{r.where}</p>
+                  </div>
+                );
+              })}
             </>
           )}
+
+          {/* Guarded on `source` because the generated chunks do not currently
+              carry it — see the note in tools/split-content.py's docstring,
+              which says they should. Half a source note is worse than none. */}
+          {l.source && (
+            <div className="source-note">
+              <p className="small"><strong>Sources.</strong> {l.source}</p>
+              <p className="small">
+                <strong>Verify before relying on this.</strong> <Prose text={l.verify} />{' '}
+                Last checked by the author of this lesson on {l.lastVerified}.
+              </p>
+            </div>
+          )}
+
+          <div className="btn-row" style={{ marginTop: 'var(--space-6)' }} ref={btnRef}>
+            <motion.button
+              className={readAt ? '' : 'btn-primary'}
+              onClick={toggle}
+              disabled={busy}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.96 }}
+            >
+              {readAt ? 'Mark unread' : 'Mark as read · +60 XP'}
+            </motion.button>
+            {prepares.length > 0 && <Link className="btn" to={`/problem/${prepares[0].id}`}>Attempt the problem</Link>}
+          </div>
+          {readAt && (
+            <p className="small">
+              Marked read {daysAgo(readAt)}. Re-reading costs nothing and is not tracked — only
+              whether you have been through it once.
+            </p>
+          )}
+
+          <nav className="lesson-nav" aria-label="Curriculum">
+            {prev
+              ? <Link to={`/lesson/${prev.id}`}>
+                  <span className="lesson-nav-dir">Previous</span>
+                  <span className="lesson-nav-title">{prev.title}</span>
+                </Link>
+              : <span />}
+            {next && (unlock[next.id]?.open
+              ? (
+                <Link className="is-next" to={`/lesson/${next.id}`}>
+                  <span className="lesson-nav-dir">Next</span>
+                  <span className="lesson-nav-title">{next.title}</span>
+                </Link>
+              ) : (
+                <div className="is-next lesson-nav-locked">
+                  <span className="lesson-nav-dir">Next · locked</span>
+                  <span className="lesson-nav-title">{next.title}</span>
+                  <span className="lesson-nav-need">{needLine(l, read, best)}</span>
+                  {!prog.quizPassed(l, best) && (
+                    <Link className="btn btn-primary" to={`/quiz/${l.id}`}>Take the quiz</Link>
+                  )}
+                </div>
+              ))}
+          </nav>
         </div>
-      )}
 
-      {(l.reading || []).length > 0 && (
-        <>
-          <h3>Read alongside</h3>
-          {l.reading.map((r, n) => {
-            const b = cat.byId.book[r.bookId];
-            if (!b) return null;
-            return (
-              <div className="book" key={n}>
-                <div className="book-title">{b.title}</div>
-                <p className="book-byline">{[b.author, b.edition ? `${b.edition} ed.` : null].filter(Boolean).join(' · ')}</p>
-                <p className="book-note">{r.where}</p>
-              </div>
-            );
-          })}
-        </>
-      )}
-
-      <div className="source-note">
-        <p className="small"><strong>Sources.</strong> {l.source}</p>
-        <p className="small">
-          <strong>Verify before relying on this.</strong> {l.verify}{' '}
-          Last checked by the author of this lesson on {l.lastVerified}.
-        </p>
+        <aside className="toc" aria-label="Contents">
+          <p className="toc-head">In this lesson</p>
+          <ol className="toc-list">
+            {sections.map((s, i) => (
+              <li key={ids[i]}>
+                <a href={`#${ids[i]}`} className={i === here ? 'is-here' : ''}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById(ids[i])?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}>
+                  {s.h}
+                </a>
+              </li>
+            ))}
+          </ol>
+          <div className="toc-progress">
+            <span className="toc-bar"><i style={{ width: `${((here + 1) / Math.max(1, sections.length)) * 100}%` }} /></span>
+            Section {here + 1} of {sections.length}
+          </div>
+        </aside>
       </div>
-
-      <div className="btn-row" style={{ marginTop: '2rem' }} ref={btnRef}>
-        <motion.button
-          className={readAt ? '' : 'btn-primary'}
-          onClick={toggle}
-          disabled={busy}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.96 }}
-        >
-          {readAt ? 'Mark unread' : 'Mark as read · +60 XP'}
-        </motion.button>
-        {nextInModule && <Link className="btn" to={`/lesson/${nextInModule.id}`}>Next: {nextInModule.title}</Link>}
-        {prepares.length > 0 && <Link className="btn" to={`/problem/${prepares[0].id}`}>Attempt the problem</Link>}
-      </div>
-      {readAt && (
-        <p className="small">
-          Marked read {daysAgo(readAt)}. Re-reading costs nothing and is not tracked — only
-          whether you have been through it once.
-        </p>
-      )}
-    </div>
+    </TermLayer>
   );
 }
 
-export function Block({ b }) {
-  switch (b.t) {
-    case 'rule':
-      return (
-        <motion.div
-          className="ruleblock"
-          initial={{ opacity: 0, x: -14 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.4 }}
-        >
-          <p><Inline text={b.text} /></p>
-          {b.source && <p className="rb-src">{b.source}</p>}
-        </motion.div>
-      );
-    case 'example':
-      return <div className="exblock"><p><span className="xlabel">Example</span><Inline text={b.text} /></p></div>;
-    case 'caution':
-      return <div className="cautionblock"><p><span className="xlabel">Careful</span><Inline text={b.text} /></p></div>;
-    case 'list':
-      return <ul className="lsec-list">{(b.items || []).map((t, i) => <li key={i}><Inline text={t} /></li>)}</ul>;
-    default:
-      return <p><Inline text={b.text} /></p>;
-  }
+/** What this lesson still needs, said in the reader's terms rather than the code's. */
+function needLine(lesson, read, best) {
+  const gaps = prog.missing({ ...lesson, quizCount: (lesson.quiz || []).length }, read, best);
+  if (!gaps.length) return 'Ready.';
+  if (gaps.length === 2) return 'Mark this lesson read, and pass its quiz.';
+  return gaps[0] === 'read' ? 'Mark this lesson read.' : 'Pass this lesson’s quiz.';
+}
+
+/**
+ * A locked lesson. It says what it is and exactly what opens it; only the body
+ * is withheld. A lock that hid the lesson's existence would leave a reader
+ * unable to tell whether the thing they need is even in this app.
+ */
+function Locked({ meta, cat, entry }) {
+  const mod = cat.byId.module[meta.moduleId] || {};
+  const blocker = entry.blockedBy;
+  return (
+    <div className="wrap sheet" data-module={meta.moduleId}>
+      <p className="small taplink-row"><Link className="taplink" to="/lessons">← Lessons</Link> · {mod.title || ''}</p>
+      <div className="locked-panel">
+        <span className="locked-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26">
+            <rect x="5" y="10.5" width="14" height="10" rx="2" className="lk-body" />
+            <path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" className="lk-shackle" />
+          </svg>
+        </span>
+        <h1 className="locked-title">{meta.title}</h1>
+        <p className="locked-kicker">
+          {mod.title} · {plural(meta.minutes, 'minute')}
+          {meta.quizCount ? ` · ${meta.quizCount}-question quiz` : ''}
+        </p>
+        <p className="locked-why">{prog.lockReason(entry)}</p>
+        {blocker && (
+          <Link className="btn btn-primary btn-big" to={`/lesson/${blocker.id}`}>
+            Go to “{blocker.title}”
+          </Link>
+        )}
+        <p className="small locked-note">
+          The lesson is here and it is not going anywhere. What is hidden is the text, not the
+          fact that it exists — and the <Link to="/glossary">glossary</Link> is never locked, so
+          any term used in it can be looked up now.
+        </p>
+      </div>
+    </div>
+  );
 }

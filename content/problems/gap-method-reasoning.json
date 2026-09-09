@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "note": "Practice for the four skill modules, sitting between a five-minute card and a full unassisted problem. Three of the four are guided: the task walks you through the steps in order and does part of the reasoning for you, and they carry fewer marks because less of the work is yours. Do the guided one first, then the open one in the same module. All facts are invented unless a real source is named.",
+  "problems": [
+    {
+      "id": "pf-prob-study",
+      "moduleId": "m-study-method",
+      "title": "A week you can actually keep",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "Suraya is twenty-nine. She works six days a week at a pharmacy in Seremban and is home by seven. Sunday belongs to her mother. She has decided to work through the first modules of this site on her own, with nobody to answer to.",
+        "Her honest guess at free time: about forty minutes on most weeknights, and two hours on a Saturday afternoon. Some weeks she will get none of it, and she knows it.",
+        "Her plan so far is one line long. Read one lesson every night until the module is finished.",
+        "This exercise walks you through fixing that plan. The first two steps are largely done for you. Write your answers down rather than doing them in your head."
+      ],
+      "task": "Work through five steps in order, writing a short answer to each. Step 1: name the single biggest weakness in Suraya's plan. The hint is that her plan is all input — ask yourself which part of her evening would ever tell her whether anything stayed. Step 2: rewrite one weeknight as a timed session in three parts, ten minutes, twenty minutes and ten minutes. Say which part is which, and say why the order matters. Step 3: decide what goes in the Saturday session that cannot go in a weeknight, and say why it needs the longer block. Step 4: write three questions Suraya could ask herself from memory next week about a lesson she reads tonight. They must be questions rather than topics, and each must have a short answer she can check. Step 5: write the one rule she will follow on the first night back after a week when she did nothing. One sentence, and it must be small enough to do while tired.",
+      "rubric": [
+        {
+          "id": "pf-r-study-1",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Names the weakness as retrieval, not time: the plan is reading only, so it produces fluency rather than memory and gives Suraya no way of knowing what she has lost.",
+          "authority": "Retrieval practice; Make It Stick"
+        },
+        {
+          "id": "pf-r-study-2",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Builds a session that opens with recall of old material from memory, reads new material in the middle, and closes with writing from a shut book. Explains that testing before reviewing is what makes the reading stick.",
+          "authority": "Retrieval practice; Make It Stick"
+        },
+        {
+          "id": "pf-r-study-3",
+          "band": "method",
+          "marks": 1,
+          "criterion": "Gives the Saturday block a job a weeknight cannot do — a full problem question written under time, or a long judgment read properly — rather than simply more of the same reading.",
+          "authority": "Standard study practice"
+        },
+        {
+          "id": "pf-r-study-4",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Writes three real questions with short checkable answers. A question begins with what, why, which or how; a topic is a noun phrase and earns nothing here.",
+          "authority": "Retrieval practice"
+        },
+        {
+          "id": "pf-r-study-5",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "The restart rule is small, concrete, and starts with old material. Any answer that involves catching up or a bigger week loses this mark.",
+          "authority": "Standard study practice"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Step 1 — the weakness",
+          "p": [
+            "The plan is all input. Reading a lesson is the only thing in it, so there is no moment at which Suraya finds out whether anything stayed. She will finish the module feeling informed and will not be able to produce much of it a fortnight later.",
+            "It is also brittle. A plan built on doing something every night breaks the first time a night is lost, and she has told us that nights will be lost."
+          ]
+        },
+        {
+          "h": "Step 2 — one weeknight",
+          "p": [
+            "Ten minutes of cards and self-questions on last week's material, from memory, before anything is opened. Twenty minutes reading one section of a lesson slowly, stopping to write. Ten minutes with the screen shut, writing down what she can recall and three questions she could not answer.",
+            "The order matters because the recall has to happen while the material is still partly forgotten. If she reads first, the answers are fresh and she will only be recognising them. Recognition is easy and it is not the skill she needs."
+          ]
+        },
+        {
+          "h": "Step 3 — Saturday",
+          "p": [
+            "The Saturday block gets a full problem question, written out under time, without notes. That cannot be done in forty tired minutes on a weeknight, because it needs an unbroken stretch and a fresh head.",
+            "Marking it herself against the rubric comes in the same block, while she can still remember what she meant."
+          ]
+        },
+        {
+          "h": "Step 4 — three questions",
+          "p": [
+            "Which court is at the top of the civil hierarchy? What makes a fact material? What is the difference between binding and persuasive authority?",
+            "Each is a question, each has a one-line answer, and each can be checked against the lesson. Chapter three or Precedent would be topics, and a topic cannot be got right or wrong."
+          ]
+        },
+        {
+          "h": "Step 5 — the restart rule",
+          "p": [
+            "On the first night back, do fifteen cards she already knows and nothing else.",
+            "It is small enough to do while tired, it needs no decision, and it puts her back in the habit before it asks her to learn anything."
+          ]
+        }
+      ],
+      "traps": [
+        "Fixing the plan by adding hours. She does not have them, and a plan she cannot keep fails twice over.",
+        "Writing topics instead of questions in step 4. A topic cannot be answered, so it cannot be checked.",
+        "Making the restart rule ambitious. The whole value of it is that it is too small to argue with."
+      ],
+      "source": "Retrieval practice, spacing and interleaving research as summarised in Make It Stick. The facts are invented.",
+      "lastVerified": "2026-09-07",
+      "verify": "Nothing here is a rule of law and no citator applies. The learning claims are empirical rather than legal; the underlying studies are cited in Make It Stick.",
+      "selfMarkNote": "Mark step 4 hardest. Most people write topics, believe they wrote questions, and lose both marks without noticing."
+    },
+    {
+      "id": "pf-prob-research",
+      "moduleId": "m02-legal-research",
+      "title": "Tracing a forwarded message",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 9,
+      "scenario": [
+        "A message reaches you after being forwarded three times. It reads: NEW LAW — from this month a landlord in Malaysia may keep your whole deposit if you move out before the end of your tenancy. Share this with everyone.",
+        "It names no Act, no section and no court. It carries no date. It ends with the name of a page that sells tenancy agreement templates.",
+        "Your cousin is moving out of a rented room in Cheras three weeks early. He wants to know whether to expect his eight hundred ringgit back.",
+        "You have a phone, no subscription to any legal database, and about an hour. This exercise walks you through the steps. The first two are partly done for you."
+      ],
+      "task": "Write a short answer to each step, in order. Step 1: sort the message into one of the three piles from the lesson — the law itself, a record of what a court decided, or somebody talking about the law. It is the third. Say what that means for the weight it can carry, and say what it is still useful for. Step 2: list the four questions you ask of any source before trusting it, and apply each one to this message in a single line. Step 3: say where you would go for the primary text and name the body that publishes it free. You do not have an Act name yet, so also say how you would get one. Step 4: write out the note you would keep of whatever you find. List the fields and say why each one is there. Step 5: write the two sentences you would send your cousin at the end of the hour. One says what you have checked. One says plainly what you could not check, and why.",
+      "rubric": [
+        {
+          "id": "pf-r-research-1",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Classifies the message as comment rather than a source, and gives the reason that decides it: naming no Act and no section, it cannot be checked, so it can only be a lead to the primary text.",
+          "authority": "Standard research practice"
+        },
+        {
+          "id": "pf-r-research-2",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Applies all four tests — who published it, whether a provision is named, whether it is dated and versioned, and whether the writer is selling something — and notices the template seller at the end.",
+          "authority": "Standard research practice"
+        },
+        {
+          "id": "pf-r-research-3",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Goes to the official free text published by the Attorney General's Chambers, and describes a workable route to an Act name: the words of the tenancy agreement, the subject matter of the dispute, or a provision named in any secondary article.",
+          "authority": "Attorney General's Chambers, Malaysia"
+        },
+        {
+          "id": "pf-r-research-4",
+          "band": "method",
+          "marks": 1,
+          "criterion": "Keeps a retraceable note — the source, the exact provision, the words relied on, and the date read — and says that the point of it is being able to find it again and show how it was found.",
+          "authority": "Standard research practice"
+        },
+        {
+          "id": "pf-r-research-5",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Gives a bounded answer rather than a bare yes or a refusal: what is verified, what is not, and the fact that free sources carry no citator, so no case found on one can be confirmed as still good law.",
+          "authority": "CLJ; LexisNexis CaseBase; Westlaw Asia"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Step 1 — which pile",
+          "p": [
+            "It is somebody talking about the law, and not a very careful somebody. It is not the law itself and it is not the record of a decision.",
+            "That matters because a claim naming no Act and no section cannot be traced. Nobody can confirm or refute it without doing the work again from scratch. Its only proper use is as a lead: it tells me the subject is deposits and early departure, and that is where I start looking."
+          ]
+        },
+        {
+          "h": "Step 2 — the four tests",
+          "p": [
+            "Who published it: unknown, forwarded three times, no author.",
+            "Does it name a provision: no, and that is the fatal one.",
+            "Is it dated and versioned: no date at all, and from this month means nothing without one.",
+            "Is anything being sold: yes, tenancy agreement templates, which is a reason to be sceptical rather than proof of anything."
+          ]
+        },
+        {
+          "h": "Step 3 — the primary text",
+          "p": [
+            "The Attorney General's Chambers publishes the official text of federal Acts free, and that is where I go for statute.",
+            "To get an Act name I work from the subject rather than the rumour. A deposit under a room tenancy is a term of an agreement, so the general law of contract is the first place to look, and I would read the agreement itself for the clause about the deposit. If any article names a specific provision, I use the name and then read the provision rather than the article."
+          ]
+        },
+        {
+          "h": "Step 4 — the note",
+          "p": [
+            "Four fields. The name and year of the Act, so I can find it again. The exact provision and the words I relied on, because a paraphrase drifts. Where I found it, so somebody else can check me. The date I read it, because the law changes and my note must say how old it is."
+          ]
+        },
+        {
+          "h": "Step 5 — what I send",
+          "p": [
+            "I have read the official text of the Act on the government portal and the clause in your tenancy agreement, and nothing in either says a landlord simply keeps the whole deposit for early departure; what a landlord may keep depends on the agreement and on what loss he can actually show.",
+            "What I have not been able to do is check whether any court decision changes that, because the free sources do not tell you what happened to a case afterwards, so treat this as a starting point rather than settled advice."
+          ]
+        }
+      ],
+      "traps": [
+        "Answering the question from the message, or from a second article that repeats it. Two unsourced claims are not one sourced claim.",
+        "Treating an absence of contrary information as confirmation. Nothing came up is not the same as nothing exists.",
+        "Refusing to answer because the check is incomplete. Your cousin moves out in three weeks; a bounded answer with its limits on the face of it is the professional response."
+      ],
+      "source": "General research practice. The Attorney General's Chambers portal is the official free publication of federal statute. Facts are invented.",
+      "lastVerified": "2026-09-07",
+      "verify": "Confirm the current address of the Attorney General's Chambers portal. Do not carry the substantive point about deposits out of this exercise — it is here to be researched, not to be relied on, and the answer on any real facts depends on the agreement and on the governing Act.",
+      "selfMarkNote": "Step 5 is where marks are lost. Check that your second sentence names the limit, not just the fact that you were rushed."
+    },
+    {
+      "id": "pf-prob-section",
+      "moduleId": "m14-statutory-interpretation",
+      "title": "Taking a clause apart",
+      "kind": "guided",
+      "minutes": 25,
+      "marks": 10,
+      "scenario": [
+        "The text below is a fictional by-law written for this exercise. It is not the law of any State, and you should not go looking for it.",
+        "Clause 4. (1) No person shall keep a live animal on any premises within the market area unless he holds a permit issued by the Council: Provided that a person who holds a permit for the same animal under any written law relating to livestock need not hold a permit under this subclause.",
+        "(2) A person who contravenes subclause (1) commits an offence and shall be liable to a fine not exceeding five hundred ringgit.",
+        "(3) Subclause (1) does not apply to a guide dog while it is accompanying a person who needs it.",
+        "(4) In this clause, animal includes a bird, and premises means a building or a stall, whether or not enclosed.",
+        "Three people are in the market. Encik Ganesan keeps two hens in a wire cage behind his stall and holds no Council permit; he does hold a licence for those hens under a livestock scheme run by another body. Puan Lily brings her guide dog in every morning and holds no permit. A third trader keeps a goldfish in a bowl on the counter of his stall and holds no permit."
+      ],
+      "task": "Work through five steps in order. Step 1: copy subclause (1) out with one clause per line, breaking at every unless and at the colon. You should finish with the main prohibition on one line and the proviso on another. Step 2: for subclause (1) alone, name four things — who it applies to, what it forbids, the condition that lifts the prohibition, and where the consequence of breaking it is found. Step 3: read subclause (4). Say what it does to the word animal and what it does to the word premises, and say why the two are treated differently; one uses includes and one uses means, and that difference is the whole of the answer. Step 4: apply the clause to each of the three people, one or two lines each. Are they within subclause (1), and does anything take them out of it? Step 5: say which of the three is the hardest and why, in two sentences.",
+      "rubric": [
+        {
+          "id": "pf-r-section-1",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Separates the main prohibition from the proviso on the page, with one clause per line, and treats the proviso as an exception carved out of that subclause rather than as a free-standing rule.",
+          "authority": "Standard statutory reading practice"
+        },
+        {
+          "id": "pf-r-section-2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Identifies the subject as no person, the prohibited conduct as keeping a live animal on premises within the market area, the lifting condition as holding a Council permit, and notices that the penalty sits in subclause (2) rather than in (1).",
+          "authority": "Clause 4(1) and 4(2)"
+        },
+        {
+          "id": "pf-r-section-3",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Reads includes as extending the ordinary meaning of animal without closing it, and means as a closed definition of premises which admits only a building or a stall.",
+          "authority": "Clause 4(4)"
+        },
+        {
+          "id": "pf-r-section-4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies the clause to all three. Puan Lily is taken out by subclause (3). Encik Ganesan is within (1) and is saved only if his livestock scheme is under a written law, which the facts do not establish. The goldfish turns on whether a fish falls within the ordinary meaning of animal, which the open definition does not settle.",
+          "authority": "Clause 4(1), 4(3), 4(4)"
+        },
+        {
+          "id": "pf-r-section-5",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Picks a hardest case and gives a reason tied to the wording — the open definition, or the words under any written law — rather than to sympathy or to what seems fair.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Step 1 — cut at the joints",
+          "p": [
+            "No person shall keep a live animal.",
+            "On any premises within the market area.",
+            "Unless he holds a permit issued by the Council.",
+            "Provided that a person holding a permit for the same animal under any written law relating to livestock need not hold a permit under this subclause."
+          ]
+        },
+        {
+          "h": "Step 2 — the four things",
+          "p": [
+            "Who: no person, which means everybody. What it forbids: keeping a live animal on premises inside the market area. The condition that lifts it: holding a permit issued by the Council, with a second route out in the proviso.",
+            "The consequence is not in subclause (1) at all. It is in subclause (2), which turns a contravention into an offence and fixes a maximum fine. Reading (1) alone would tell you the rule and not the sanction."
+          ]
+        },
+        {
+          "h": "Step 3 — the two definitions",
+          "p": [
+            "Animal includes a bird. That is an extending definition. It adds birds to whatever animal ordinarily means, and it leaves the ordinary meaning intact and arguable.",
+            "Premises means a building or a stall. That is a closed definition. Anything that is neither a building nor a stall is outside the clause, however much it looks like premises in ordinary speech.",
+            "The difference is deliberate. The drafter wanted certainty about the place and wanted room to move about the creature."
+          ]
+        },
+        {
+          "h": "Step 4 — the three people",
+          "p": [
+            "Puan Lily is out. Her guide dog is a live animal on premises in the market area, so she is inside subclause (1) on its face, but subclause (3) disapplies (1) to a guide dog accompanying a person who needs it. The exception does the work, not the permit.",
+            "Encik Ganesan is inside subclause (1). Hens are live animals, a stall is premises under the closed definition, and he holds no Council permit. His only escape is the proviso, and the proviso is narrow: it requires a permit under any written law relating to livestock. A scheme run by another body may or may not be under a written law, and on these facts we are not told. That is the point on which his liability turns.",
+            "The goldfish is the open question. A stall is premises, the fish is alive, and there is no permit. Whether it is an animal depends on the ordinary meaning of that word, because subclause (4) only tells us that birds are included. Includes does not shut the door, so the ordinary sense still governs, and there is a real argument on each side."
+          ]
+        },
+        {
+          "h": "Step 5 — the hardest",
+          "p": [
+            "The goldfish is the hardest, because the drafter told us birds count and said nothing about fish, and an open definition leaves that silence unresolved.",
+            "Encik Ganesan runs it close, but his difficulty is a missing fact rather than a doubtful word: find out whether the livestock scheme rests on a written law and the answer follows."
+          ]
+        }
+      ],
+      "traps": [
+        "Reading the proviso as a separate rule. It cuts a piece out of subclause (1) and reaches nothing else.",
+        "Treating includes and means as the same word. One extends the ordinary meaning and one replaces it.",
+        "Looking for the penalty in subclause (1). The prohibition and the sanction are in different places, which is normal drafting."
+      ],
+      "source": "Fictional by-law written for this exercise. The reading method and the treatment of provisos and definitions are standard statutory construction; the Interpretation Acts 1948 and 1967 supply general meanings where an Act is silent.",
+      "lastVerified": "2026-09-07",
+      "verify": "The by-law is invented and must never be cited. If you want to test the method on real text, take any short section from a current reprint on the Attorney General's Chambers portal and run the same five steps.",
+      "selfMarkNote": "If you reached step 4 without having written out step 1, mark yourself down. The habit is the thing being practised."
+    },
+    {
+      "id": "pf-prob-reason",
+      "moduleId": "m13-legal-reasoning",
+      "title": "The bike outside the kedai",
+      "kind": "analysis",
+      "minutes": 30,
+      "marks": 14,
+      "scenario": [
+        "Rosli parks his motorbike on the five-foot way outside a kedai runcit in Klang, close to the door. He has done this most mornings for a year and the owner, Encik Chandran, has never objected.",
+        "On Tuesday a delivery lorry arrives and Chandran needs the doorway clear. He wheels the bike about four metres along the walkway on his own. The walkway is wet. The bike tips over. The mirror and one indicator break, and the repair comes to two hundred and forty ringgit.",
+        "Chandran says he was only helping, that Rosli should not have left the bike against the door, and that a shopkeeper cannot be expected to become the keeper of every bike outside his shop.",
+        "Rosli says that a person who takes hold of somebody else's property has to take care with it, and that Chandran could have waited thirty seconds and asked either of the two men standing beside him.",
+        "Assume no statute is in play, and that you are reasoning from ordinary principle. Nothing turns on knowing a case."
+      ],
+      "task": "Set out the argument in visible steps. State the issue or issues as legal questions. State the rule you are applying and break it into its elements. Apply each element to a specific fact. Then put the strongest version of Chandran's case, and say who you think should win and why. Keep it to one page.",
+      "rubric": [
+        {
+          "id": "pf-r-reason-1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "States at least two issues, each as a legal question with two arguable answers — whether Chandran took charge of the bike at all, and whether what he did fell below the care required. Was Chandran in the wrong is not an issue.",
+          "authority": "Standard problem-question technique"
+        },
+        {
+          "id": "pf-r-reason-2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the rule at a workable level of generality and splits it into elements: taking charge of another's property, a standard of care attaching to that, a falling short of it, and loss caused by the falling short.",
+          "authority": "Standard problem-question technique"
+        },
+        {
+          "id": "pf-r-reason-3",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Puts one specific fact against each element — taking hold and wheeling it four metres, the wet walkway, doing it alone with two men beside him, the broken mirror and indicator — rather than retelling the story or restating the rule.",
+          "authority": "The facts"
+        },
+        {
+          "id": "pf-r-reason-4",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Puts the strongest version of Chandran's case, not a weak one: nobody asked him to take charge, Rosli created the obstruction, the act was short and ordinary and done to let a delivery through, and a year of silent acquiescence cuts both ways.",
+          "authority": "The facts"
+        },
+        {
+          "id": "pf-r-reason-5",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Keeps the steps separate and visible on the page, so a reader can check each one, and does not fold the rule into the application or the application into the conclusion.",
+          "authority": "Standard problem-question technique"
+        },
+        {
+          "id": "pf-r-reason-6",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Reaches a decided answer, tentative if necessary, with the reason attached and tied to the element that carried it. An answer that sets out both sides and stops earns nothing here.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issues",
+          "p": [
+            "Did Chandran take charge of the bike, so that any duty to take care of it arose at all?",
+            "If he did, did wheeling a loaded bike alone across a wet walkway fall below the care such a person must take?",
+            "A third question sits behind both. Does it change anything that Rosli had left the bike where it blocked the door?"
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "The principle relied on is that a person who takes charge of another's property must take reasonable care of it, and answers for loss caused by failing to do so.",
+            "That is four elements, and each has to be met. First, taking charge of the thing. Second, that it belonged to somebody else. Third, conduct falling below the care a reasonable person would take in those circumstances. Fourth, loss caused by that shortfall rather than by something else."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Taking charge. Chandran did not merely stand near the bike. He took hold of it and moved it four metres. Once he had control of it and Rosli did not, he was the person in a position to protect it, which is what taking charge means on any view.",
+            "Another's property. Not in dispute. The bike is Rosli's.",
+            "Falling short. This is where the case is won. He moved a loaded motorbike on his own, on a walkway he could see was wet, when two men were standing beside him and the delay in asking would have been seconds. A reasonable person in his position would have asked, or would have waited, or would have moved it more slowly. Each of those was open to him and cost him almost nothing.",
+            "Causation. The bike tipped while he was moving it, and the mirror and indicator broke in that fall. The loss is the direct result of the way he moved it, not of any earlier event."
+          ]
+        },
+        {
+          "h": "The other side",
+          "p": [
+            "Chandran's best case is that he never took charge in the sense the rule means. He was clearing an obstruction that Rosli had created, doing something short and ordinary, and a shopkeeper who moves a bike out of his own doorway is not thereby made its keeper.",
+            "He can add that Rosli's own conduct set the whole thing up. The bike was against the door, the lorry was waiting, and the choice Chandran faced was one Rosli had given him.",
+            "The year of silent acquiescence is genuinely double-edged. Rosli will say it shows he was permitted to park there. Chandran will say it shows he had been tolerant for a year and was not volunteering to be responsible for the machine."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "On balance Rosli should recover the two hundred and forty ringgit.",
+            "The reason is the third element rather than the first. Even accepting that Chandran was clearing his own doorway, once he had his hands on the bike he had a choice about how to move it, and the safer choice was free. Rosli's own conduct in blocking the door is a real point and might reduce what he recovers, but it does not answer what happened after Chandran took hold."
+          ]
+        }
+      ],
+      "traps": [
+        "Starting with the rule and never returning to the facts. The marks here are in the application, and application means one fact against one element.",
+        "Writing Chandran's case in a weak form so that it is easy to knock down. A straw man is visible from across the room and it costs you.",
+        "Ending with it depends. It may depend, and you must still say which way you would go and why."
+      ],
+      "source": "Invented facts. The principle used is stated as a shape for reasoning, not as an authority of Malaysian law.",
+      "lastVerified": "2026-09-07",
+      "verify": "This exercise is about structure, not doctrine. Do not carry the rule used here into real advice: on real facts you would have to find the governing statute and the actual case law, and check that the case law is still good.",
+      "selfMarkNote": "Mark the application band first and hardest. If a sentence in it would survive a change in the facts, it is not application."
+    }
+  ]
+}

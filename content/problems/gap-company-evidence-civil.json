@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "note": "Practice problems for the company, evidence and civil procedure on-ramp lessons. Facts are hypothetical; the people are invented and ordinary. The first problem is `guided` — a scaffolded worked exercise that walks the steps in order and hands you part of the reasoning, so that the jump from a five-minute card to an unassisted problem is not made in one leap. Every problem carries the authorities its rubric relies on and a `verify` line naming what must be checked against a current source. The rubric is for self-marking; nothing here is an authority.",
+  "problems": [
+    {
+      "id": "pe-p-company-01",
+      "moduleId": "m09-company",
+      "title": "The bakery, the oven and the two friends",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "This is a guided exercise. Part of the reasoning is done for you and the steps are set out in order. Write two or three sentences for each step, in the order given. Do not write an essay.",
+        "Siti and Farid have run a small bakery in Ipoh for two years. Eighteen months ago they registered Roti Siti Sdn Bhd with SSM. They are the only two shareholders, holding 50 shares each at RM1 a share, fully paid. Both are directors.",
+        "Everything since then has been done in the company's name. The shop lease, the supplier accounts and the bank account are all in the name of Roti Siti Sdn Bhd.",
+        "In January the company bought a commercial oven from Mesin Baik Enterprise for RM24,000, payable by instalments. The purchase order was signed 'Farid, Director, for and on behalf of Roti Siti Sdn Bhd'. Nobody signed a guarantee for it.",
+        "Separately, when the company took a RM30,000 overdraft from the bank, Siti signed a personal guarantee. Farid signed nothing.",
+        "Sales have collapsed. The company has RM900 in its account. It owes Mesin Baik RM19,000 and owes the bank RM28,000. The owner of Mesin Baik has come to the shop and told them both that he will take their houses. Siti owns a small flat. Farid owns nothing.",
+        "There is no suggestion anywhere in these facts of fraud, of a sham, or of the company being set up to escape a debt that already existed."
+      ],
+      "task": "Work through the five steps below in order. Step 1 — name the parties. There are more persons in this story than Siti, Farid, the bank and Mesin Baik. Say who else the law treats as a person here, and give the reason in one sentence. Step 2 — the oven debt. We give you the first half: the buyer of the oven was the company, because Farid signed for and on behalf of it. Your job is the second half. Say what follows for Siti's flat, and name the rule you are relying on. Step 3 — the bank debt. Siti and Farid hold identical shares and identical offices. Explain why the bank can reach one of them and not the other, and be precise about what makes the difference. Step 4 — the threat. Say whether the owner of Mesin Baik can take their houses, and state in one sentence what he would have to establish to get past the company. Step 5 — answer what they actually asked. In two sentences, tell Siti and Farid what each of them personally stands to lose.",
+      "rubric": [
+        {
+          "id": "pe-r1",
+          "band": "issue",
+          "marks": 1,
+          "criterion": "Names the company as a third legal person in the story, distinct from Siti and from Farid, rather than treating the bakery as a partnership between two friends.",
+          "authority": "Companies Act 2016; Salomon v A Salomon and Co Ltd"
+        },
+        {
+          "id": "pe-r2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States both halves of the rule: a registered company has legal personality separate from its members, and a member is not liable for the company's debts merely by being a member, beyond any amount unpaid on the shares.",
+          "authority": "Companies Act 2016; Salomon v A Salomon and Co Ltd"
+        },
+        {
+          "id": "pe-r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Applies that to the oven: the contract is between Mesin Baik and the company, so the company's RM900 is available and Siti's flat is not. Says so about these facts rather than restating the rule.",
+          "authority": "Companies Act 2016; the purchase order signed for and on behalf of the company"
+        },
+        {
+          "id": "pe-r4",
+          "band": "application",
+          "marks": 1,
+          "criterion": "Explains the difference between Siti and Farid on the bank debt by the guarantee, and treats the guarantee as a separate contract Siti made rather than as a consequence of her shareholding or her office.",
+          "authority": "The personal guarantee Siti signed"
+        },
+        {
+          "id": "pe-r5",
+          "band": "method",
+          "marks": 1,
+          "criterion": "Answers the five steps in the order given, one short answer each, instead of writing a general account of company law and hoping the steps are covered somewhere inside it.",
+          "authority": "The instruction in the task"
+        },
+        {
+          "id": "pe-r6",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Concludes for each person separately: Farid risks nothing personally, Siti risks up to her guarantee to the bank, and both lose the RM50 they paid for their shares. Rejects the threat to the houses on the Mesin Baik debt.",
+          "authority": "Companies Act 2016"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Step 1 — the parties",
+          "p": [
+            "There are five persons here, not four. Siti, Farid, the bank, Mesin Baik Enterprise, and Roti Siti Sdn Bhd.",
+            "The company is a person because it was registered under the Companies Act 2016. Registration gives it a legal personality of its own, separate from the people who own and run it."
+          ]
+        },
+        {
+          "h": "Step 2 — the oven debt",
+          "p": [
+            "The buyer was the company, so the debt is the company's debt. Mesin Baik's remedy is against the company and against what the company owns, which is RM900 and whatever equipment is left.",
+            "Siti's flat is not available to Mesin Baik. A member is not liable for the company's debts merely because she is a member, and her shares are fully paid, so nothing further is owed on them."
+          ]
+        },
+        {
+          "h": "Step 3 — the bank debt",
+          "p": [
+            "Siti and Farid are in identical positions as shareholders and as directors. Neither position makes either of them liable for the overdraft.",
+            "What separates them is a document. Siti signed a personal guarantee, which is a separate contract in which she promised to pay if the company did not. The bank sues her on that contract, not on her shares. Farid signed nothing, so the bank has nothing to sue him on."
+          ]
+        },
+        {
+          "h": "Step 4 — the threat",
+          "p": [
+            "He cannot take their houses on these facts. To reach Siti or Farid personally he would have to get past the company's separate personality.",
+            "That would require a ground for lifting the corporate veil — a statute imposing personal liability, fraud, or the use of the company as a device to escape an obligation that already existed. The facts state that none of those is present. Control of the company is not a ground, and nor is the company being short of money."
+          ]
+        },
+        {
+          "h": "Step 5 — what each of them stands to lose",
+          "p": [
+            "Farid loses the RM50 he paid for his shares and, in practice, the business. He owes the bank and Mesin Baik nothing personally.",
+            "Siti loses her RM50 as well, and is personally exposed to the bank up to her guarantee. Her flat is at risk from the bank on that guarantee, and from nobody else on these facts."
+          ]
+        }
+      ],
+      "traps": [
+        "Treating the bakery as a partnership because two friends run it. The moment it was registered it stopped being one.",
+        "Saying the veil should be lifted because Siti and Farid control the company completely. Control is never a ground; that is what Salomon decided.",
+        "Explaining Siti's exposure by her directorship or her shareholding. It is the guarantee, and only the guarantee.",
+        "Forgetting the shares. Both of them do lose their RM50, and an answer that says they lose nothing is wrong.",
+        "Answering Step 2 by repeating the rule instead of saying what happens to the flat."
+      ],
+      "source": "Companies Act 2016 (Act 777); Salomon v A Salomon and Co Ltd.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read the incorporation provisions of the Companies Act 2016 in the current text at lom.agc.gov.my. The grounds on which a Malaysian court will lift the corporate veil are judge-made and move; check current authority before advancing or rejecting any of them in a real matter."
+    },
+    {
+      "id": "pe-p-evidence-01",
+      "moduleId": "m10-evidence",
+      "title": "The deposit, the message and the cousin",
+      "kind": "problem",
+      "minutes": 30,
+      "marks": 13,
+      "scenario": [
+        "Nurul rented a room from Encik Ghani for a year and paid a deposit of RM800. She moved out in good order, as she says. He refuses to return the deposit, saying she broke a cupboard door. She sues him for the RM800 in the Magistrates' Court.",
+        "Five things arise before the hearing.",
+        "(1) Encik Ghani sent Nurul a message three weeks after she moved out: 'I will return your deposit after Raya.' He now says he wrote it to keep the peace.",
+        "(2) Nurul wants to call her cousin Adam. Adam never lived there. He will say that a former tenant told him Encik Ghani never returns anybody's deposit.",
+        "(3) Nurul also wants to tell the court that she once heard Encik Ghani shouting at another tenant about a water bill.",
+        "(4) Encik Ghani has photographs of a broken cupboard door. He says he paid RM650 to repair it. He has the repair invoice but will not produce it, and gives no reason.",
+        "(5) Encik Ghani says it is for Nurul to prove that she left the room undamaged."
+      ],
+      "task": "Advise Nurul. Take the five items in turn. For each, say what it is worth and why, naming the rule or the section that governs it. Then state separately who has to prove what in this case, and to what standard. Do not simply list rules — say what happens to each item.",
+      "rubric": [
+        {
+          "id": "pe-r7",
+          "band": "issue",
+          "marks": 1,
+          "criterion": "Separates the two questions the facts raise, and says so: first, what may the court receive at all; second, who must prove what and how convincingly. Does not run them together.",
+          "authority": "Evidence Act 1950, s 5 and Part II"
+        },
+        {
+          "id": "pe-r8",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States the relevancy gate accurately — evidence may be given of facts in issue and of facts the Act declares relevant, and of no others — and states the burden rule, that whoever asserts a fact must prove it and that the burden lies on the party who would fail on an empty record.",
+          "authority": "Evidence Act 1950, ss 5, 101 and 102"
+        },
+        {
+          "id": "pe-r9",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Item (1): identifies the message as an admission by a party, provable against him, and does not overclaim — it is evidence he may seek to explain, not a concession that ends the case.",
+          "authority": "Evidence Act 1950, on admissions"
+        },
+        {
+          "id": "pe-r10",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Item (2): identifies two problems, not one. Adam repeats what an absent person said in order to prove it true, which is hearsay; and what the former tenant said goes to Encik Ghani's general habits rather than to a fact in issue in this case.",
+          "authority": "Evidence Act 1950, ss 5 and the provisions on oral evidence"
+        },
+        {
+          "id": "pe-r11",
+          "band": "application",
+          "marks": 1,
+          "criterion": "Item (3): rejects it, and gives the reason in terms of the facts in issue — whether the room was damaged and whether the deposit is repayable. A quarrel with another tenant about a water bill answers neither.",
+          "authority": "Evidence Act 1950, s 5"
+        },
+        {
+          "id": "pe-r12",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Item (4): invites the court to presume that the withheld invoice would be unfavourable to Encik Ghani, and states the limits — the presumption is permissive, and Nurul must show the document was available and material. Notes that without it his RM650 figure is unsupported.",
+          "authority": "Evidence Act 1950, s 114 illustration (g)"
+        },
+        {
+          "id": "pe-r13",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Item (5): corrects the burden rather than accepting it. Nurul proves the tenancy, the deposit and the terms on which it is repayable. Encik Ghani asserts the damage and the deduction, so he must prove them.",
+          "authority": "Evidence Act 1950, ss 101 to 103"
+        },
+        {
+          "id": "pe-r14",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "States the standard — balance of probabilities, this being a civil claim — and reaches an answer on whether Nurul is likely to recover, rather than stopping at a list of rulings on the five items.",
+          "authority": "Standard of proof in civil proceedings"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Two questions, and they must be kept apart. Which of these five items may the court receive at all, and who has to prove what once it has them."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Evidence may be given of facts in issue and of such other facts as the Evidence Act 1950 declares relevant, and of no others. The question about any item is which section lets it in.",
+            "Whoever wants judgment on a right depending on facts he asserts must prove those facts. The burden lies on the party who would fail if no evidence at all were given. In a civil claim the standard is the balance of probabilities."
+          ]
+        },
+        {
+          "h": "Item (1) — the message",
+          "p": [
+            "This is an admission. Encik Ghani is a party, and his own words point against his interest by acknowledging that the deposit is to be returned.",
+            "It may be proved against him. It does not end the case: he may give evidence about why he wrote it, and the court will weigh that. But it is the strongest single item Nurul has."
+          ]
+        },
+        {
+          "h": "Item (2) — the cousin",
+          "p": [
+            "Adam did not live there and saw nothing. He wants to repeat what a former tenant told him, in order to prove that it is true. That is hearsay, and it does not come in unless a provision of the Act lets it in.",
+            "There is a second objection, independent of the first. What the former tenant said is about Encik Ghani's general habits with other people's deposits. That is not a fact in issue in Nurul's case."
+          ]
+        },
+        {
+          "h": "Item (3) — the shouting",
+          "p": [
+            "Rejected. The facts in issue are whether the room was left damaged and whether the deposit is repayable.",
+            "An argument with a different tenant about a water bill does not make either of those more or less likely. It may be true, and it is still not relevant within the meaning of the Act."
+          ]
+        },
+        {
+          "h": "Item (4) — the withheld invoice",
+          "p": [
+            "Nurul should invite the court to presume that the invoice, which Encik Ghani has and will not produce, would be unfavourable to him.",
+            "The presumption is permissive. She must show that the document was available and that it mattered, and here both are plain: it is the only document that would prove the RM650 he claims to have spent. He offers no explanation for withholding it.",
+            "Even without the presumption, his figure is asserted and unsupported."
+          ]
+        },
+        {
+          "h": "Item (5) — who proves what",
+          "p": [
+            "Encik Ghani has the rule backwards. Nurul must prove the tenancy, the payment of RM800, and the terms on which the deposit was to be returned.",
+            "The damage and the deduction are his assertions. He wants the court to hold that he may keep RM650, so he must prove the damage and the cost. If he proves neither, he keeps neither."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "On the balance of probabilities Nurul is likely to recover. She has an admission from the defendant, and his only positive case rests on a document he is withholding.",
+            "Items (2) and (3) should be abandoned. They are inadmissible, and pressing them wastes the court's patience on a small claim she can win without them."
+          ]
+        }
+      ],
+      "traps": [
+        "Arguing that item (2) is 'relevant because it shows a pattern'. Relevancy under the Act is not a feeling; a section has to let it in.",
+        "Treating the admission as conclusive. It is evidence, and the maker may explain it.",
+        "Saying the s 114 illustration (g) presumption 'must' be drawn. It may be drawn, and only where the evidence was available and material.",
+        "Accepting Encik Ghani's version of the burden because he sounds confident. He asserts the damage, so he proves it.",
+        "Applying the criminal standard. This is a civil claim for RM800 and the standard is the balance of probabilities."
+      ],
+      "source": "Evidence Act 1950 (Act 56), ss 5, 101, 102, 103 and 114 illustration (g); the provisions on oral evidence and on admissions.",
+      "lastVerified": "2026-09-07",
+      "verify": "Read ss 5, 17 to 21, 60, 101 to 106 and 114 in the current text at lom.agc.gov.my. This answer describes the admission and hearsay rules generally rather than pinning them to a section; identify the exact provisions before relying on the analysis in a real matter."
+    },
+    {
+      "id": "pe-p-civil-01",
+      "moduleId": "m11-civil-procedure",
+      "title": "Seven months, and a tiler who waited",
+      "kind": "problem",
+      "minutes": 35,
+      "marks": 14,
+      "scenario": [
+        "Ravi is a tiler. He laid the floor of a café for its owner, Puan Zaiton, and finished the work on 3 April 2021. The agreed price was RM18,000, payable within 30 days of completion.",
+        "Puan Zaiton paid RM6,000 in April 2021 and nothing since. Ravi chased her by telephone a few times and then let it go.",
+        "He comes to you in September 2026 and wants his RM12,000.",
+        "He has a message thread. In August 2022 Puan Zaiton wrote to him: 'I know I still owe you for the tiles, give me time.'",
+        "He also tells you that the café is now run by a company, Kafe Zaiton Sdn Bhd, incorporated in 2023. The tiling contract was made with Puan Zaiton personally, before that company existed. The café premises are rented, not owned. Puan Zaiton owns a car and has a bank account at a local branch.",
+        "Puan Zaiton has stopped replying to messages. Ravi expects her to ignore anything he sends. He wants to know how long all this takes and what he gets at the end."
+      ],
+      "task": "Advise Ravi on the steps from here to payment. Deal with these in order: (a) whether he is in time, showing how you worked the date out and identifying anything in the facts that might affect it; (b) whom he should sue; (c) which court and which originating document, and why; (d) what has to happen after filing before the case can move; (e) what he can do if she files nothing; (f) what he will have to do after judgment to actually be paid. Name the rule or the source you are relying on at each step.",
+      "rubric": [
+        {
+          "id": "pe-r15",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Works in the sequence the question sets and the procedure requires: time, party, court and document, service, default, enforcement. Does not begin with the merits of the tiling work.",
+          "authority": "Rules of Court 2012; ordinary practice"
+        },
+        {
+          "id": "pe-r16",
+          "band": "issue",
+          "marks": 1,
+          "criterion": "Puts limitation first, and gives the reason: a time-barred claim makes every other step pointless, so it is checked before anything is filed.",
+          "authority": "Limitation Act 1953"
+        },
+        {
+          "id": "pe-r17",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States the six-year period for an action founded on contract, running from accrual, and does the arithmetic: payment fell due about 3 May 2021, so the period runs to about May 2027 and the claim is in time but not by much. Flags the August 2022 written acknowledgment as something that may bear on the period and needs checking in the Act.",
+          "authority": "Limitation Act 1953"
+        },
+        {
+          "id": "pe-r18",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Sues Puan Zaiton personally, not Kafe Zaiton Sdn Bhd, and gives the reason: the contract was made with her before the company existed, and a company is a separate legal person that did not take over her debts by being incorporated later.",
+          "authority": "Companies Act 2016; Salomon v A Salomon and Co Ltd"
+        },
+        {
+          "id": "pe-r19",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Chooses a writ, with the reason: the price, the completion and the quality of the work are disputes of fact needing witnesses. Identifies the court by reference to the current monetary limits in the Subordinate Courts Act 1948, and says the figure must be looked up rather than guessing one.",
+          "authority": "Rules of Court 2012; Subordinate Courts Act 1948"
+        },
+        {
+          "id": "pe-r20",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Identifies service as the necessary next step, treats it as a formal requirement rather than a courtesy, and notes that the periods for entering appearance and filing a defence run from service.",
+          "authority": "Rules of Court 2012"
+        },
+        {
+          "id": "pe-r21",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Advises judgment in default if she enters no appearance or files no defence, and warns that a default judgment may be set aside, most easily where service was defective. Draws the practical conclusion that service must be done properly the first time.",
+          "authority": "Rules of Court 2012"
+        },
+        {
+          "id": "pe-r22",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Ends on enforcement rather than on judgment. States that a judgment is not money, and picks at least one route matched to what Puan Zaiton actually has — a garnishee over the bank account, or seizure and sale of the car.",
+          "authority": "Rules of Court 2012"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "(a) Time",
+          "p": [
+            "This comes first, because a claim out of time is worth nothing however good it is.",
+            "The claim is founded on contract, so the period is six years from accrual. The cause of action accrued when payment fell due, which is 30 days after completion on 3 April 2021, so about 3 May 2021. Six years takes that to about May 2027. Ravi is in time, with roughly eight months left.",
+            "The August 2022 message may matter. The Limitation Act 1953 contains provisions under which a written acknowledgment of a debt affects the running of the period. Read them before relying on them either way. Either way, Ravi should not wait: the safe course is to file now."
+          ]
+        },
+        {
+          "h": "(b) Whom to sue",
+          "p": [
+            "Puan Zaiton personally. The contract was made with her in 2021.",
+            "Kafe Zaiton Sdn Bhd is not liable. It is a separate legal person and it did not exist when the contract was made. Incorporating a company in 2023 does not move a 2021 debt onto it. Suing the company would waste the filing fee and the time Ravi does not have."
+          ]
+        },
+        {
+          "h": "(c) Court and document",
+          "p": [
+            "A writ. There is a dispute about facts — what was agreed, whether the work was completed, and whether the tiling was up to standard. Facts of that kind need witnesses who can be cross-examined, and that is what a writ action provides.",
+            "The court depends on the amount claimed, RM12,000 plus interest and costs, measured against the current monetary limits of the Magistrates' and Sessions Courts under the Subordinate Courts Act 1948. Those limits have been raised over the years, so look up the current figure rather than repeating one from a textbook."
+          ]
+        },
+        {
+          "h": "(d) After filing",
+          "p": [
+            "Filing gets a case number. It does not put Puan Zaiton under any obligation.",
+            "The writ must be served on her in the manner the Rules of Court 2012 prescribe, and service must be capable of being proved. Her time to enter an appearance, and then to file a defence, runs from service, not from filing."
+          ]
+        },
+        {
+          "h": "(e) If she files nothing",
+          "p": [
+            "If she enters no appearance, or enters one and files no defence within time, Ravi may apply for judgment in default. That is judgment without a trial.",
+            "It is not the end. A default judgment can be set aside, and the easiest ground is that service was bad. This is why the service must be done carefully now rather than quickly."
+          ]
+        },
+        {
+          "h": "(f) Getting paid",
+          "p": [
+            "A judgment is a piece of paper saying she owes him RM12,000. It is not the money.",
+            "Ravi will have to enforce it. On these facts there are two obvious routes: garnishee proceedings against her bank account, and seizure and sale of the car. The café premises are rented, so there is no land to charge.",
+            "Advise him now, before he spends anything, that enforcement can fail. If she has emptied the account and the car is on hire purchase, he may win and still collect nothing."
+          ]
+        }
+      ],
+      "traps": [
+        "Starting with whether the tiling was any good. Limitation comes first, and on these facts it is close.",
+        "Suing Kafe Zaiton Sdn Bhd because it is the business that operates the café today. It is a separate person and it was not a party to the 2021 contract.",
+        "Running limitation from the date the work finished rather than the date payment fell due.",
+        "Asserting that the 2022 message restarted the clock without checking the Limitation Act 1953. It may; go and read it.",
+        "Choosing an originating summons because the claim is a simple debt. The facts are disputed, and that makes it a writ.",
+        "Stopping at judgment. The question asked how Ravi gets paid, and that is a separate exercise."
+      ],
+      "source": "Rules of Court 2012; Limitation Act 1953; Subordinate Courts Act 1948; Companies Act 2016 (Act 777); Salomon v A Salomon and Co Ltd.",
+      "lastVerified": "2026-09-07",
+      "verify": "Check the current Rules of Court 2012 at lom.agc.gov.my for the modes of commencement, service, the time to enter appearance and to file a defence, and the enforcement procedures. Read the acknowledgment provisions of the Limitation Act 1953 before relying on the point about the 2022 message. Look up the current monetary limits of the subordinate courts; no figure is given here on purpose."
+    }
+  ]
+}

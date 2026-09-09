@@ -80,6 +80,18 @@ export function medal(correct, total) {
 
 const BEST_KEY = 'quizBest';
 
+// The best run is a high score, which is the wrong shape for asking "is this
+// learner actually getting better". That needs every run, so accuracy can be
+// read over time rather than at its peak. Capped because this is browser
+// storage and an unbounded log in it is a slow leak, and because the question
+// it answers — the recent trend — is not served by runs from six months ago.
+const RUNS_KEY = 'quizRuns';
+const RUNS_KEPT = 200;
+
+export async function runLog() {
+  return (await meta.get(RUNS_KEY, null)) || [];
+}
+
 export async function bestMap() {
   return (await meta.get(BEST_KEY, null)) || {};
 }
@@ -96,6 +108,11 @@ export async function recordRun(lessonId, { correct, total }) {
     lastCorrect: correct,
   };
   await meta.set(BEST_KEY, map);
+
+  const log = await runLog();
+  log.push({ lessonId, correct, total, at: new Date().toISOString() });
+  await meta.set(RUNS_KEY, log.slice(-RUNS_KEPT));
+
   return { map, improved };
 }
 

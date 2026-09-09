@@ -1,0 +1,313 @@
+[
+  {
+    "id": "x-tan-ying-hong",
+    "moduleId": "m08-property",
+    "lessonId": "l-torrens",
+    "case": "Tan Ying Hong v Tan Sian San",
+    "citation": "[2010] 2 MLJ 1 (FC)",
+    "court": "Federal Court",
+    "year": 2010,
+    "find": "Malaysian Federal Court decisions from 2003 onwards are on CommonLII (commonlii.org, Malaysia > Federal Court). The government Court Case Judgment Search at malaysia.gov.my also carries written grounds. If neither has it, the MLJ citation below will find it in any law library, and many public university libraries admit visitors.",
+    "why": "This is the case the property lessons rest on, and it is also a court correcting itself in public. Read it once for the land law and once for what a court does when it decides an earlier decision of its own was wrong.",
+    "read": [
+      {
+        "passage": "The court's account of what Adorna Properties had decided, and why it was being revisited.",
+        "look_for": "Notice that the court states the earlier holding before disagreeing with it. You cannot attack a decision you have not first stated fairly."
+      },
+      {
+        "passage": "The passage dealing with the proviso to section 340(3) of the National Land Code.",
+        "look_for": "Follow the words of the section as the court reads them. Ask which word carries the result."
+      },
+      {
+        "passage": "Anything the court says about immediate and deferred indefeasibility.",
+        "look_for": "The distinction is the whole case. Write it in one sentence of your own before reading on."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the ratio in one sentence, at the level of generality the result actually required.",
+        "model": "A good answer names the proposition the outcome depended on and no more. Too wide ('registration never protects a forger's transferee') and it decides cases this court did not have; too narrow ('this charge was void') and it decides nothing beyond the parties. Check your sentence against the order the court made: if the sentence would not produce that order, it is not the ratio."
+      },
+      {
+        "q": "Find one passage that is obiter and say how you know.",
+        "model": "Obiter is anything the result did not need. The usual test: remove the passage and ask whether the order still follows. If it does, the passage is obiter — however emphatic the language and however senior the judge."
+      },
+      {
+        "q": "What did the court say about its own earlier decision, and what does that tell you about how far 'binding' goes?",
+        "model": "The lesson already tells you this decision superseded the earlier one. What to take from the judgment is the mechanism: which court, sitting how, may depart from what — and the fact that a wrong decision stays law until a court with power to correct it says otherwise."
+      }
+    ],
+    "trap": "Do not write the land law essay. The question asks for the ratio, not for everything you know about indefeasibility.",
+    "source": "Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC), as cited in the lessons l-torrens, l-caveats, pd-l-land-paperwork and l-citation.",
+    "verify": "Confirm the citation and read the court's own words on the proviso to s 340(3). Check whether any later Federal Court decision or amendment to the National Land Code has moved this ground since 2010.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-adorna",
+    "moduleId": "m08-property",
+    "lessonId": "l-caveats",
+    "case": "Adorna Properties Sdn Bhd v Boonsom Boonyanit",
+    "citation": "[2001] 1 MLJ 241 (FC)",
+    "court": "Federal Court",
+    "year": 2001,
+    "find": "Older than CommonLII's Malaysian coverage, which starts at 2003. Use the MLJ citation in a law library, or the Malaysian Bar's document library. Do not rely on a student summary for the words of the judgment — a summary is someone else's ratio.",
+    "why": "Read the decision that was later held to be wrong, and read it before you read the criticism. Being able to see how a court reached a conclusion that did not survive is worth more than being told it was wrong.",
+    "read": [
+      {
+        "passage": "The court's reading of section 340 and the route it took to its conclusion.",
+        "look_for": "Identify the step you think does not hold. Mark it before you look at any commentary."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Where exactly does the reasoning turn? Name the sentence, not the paragraph.",
+        "model": "A good answer points at a specific move in the reasoning — a reading of a word, a step taken as obvious — and says why that move carries the result. 'The whole approach was wrong' is not an answer."
+      },
+      {
+        "q": "If you were arguing against this decision the day after it was handed down, what would you have said?",
+        "model": "Argue from the words of the section and from the structure of the Act, because those were available on day one. Later criticism is not an argument you could have made then."
+      }
+    ],
+    "trap": "A decision that was later departed from is not a decision that was stupid. If your answer makes the court look foolish, you have probably misread it.",
+    "source": "Adorna Properties Sdn Bhd v Boonsom Boonyanit [2001] 1 MLJ 241 (FC), as cited in l-caveats. Its later treatment is covered in l-torrens.",
+    "verify": "Check the citation, and confirm from a current text how this decision now stands after Tan Ying Hong.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-cubic-electronics",
+    "moduleId": "m06-contract",
+    "lessonId": "l-remedies",
+    "case": "Cubic Electronics Sdn Bhd v Mars Telecommunications Sdn Bhd",
+    "citation": "[2019] 6 MLJ 15 (FC)",
+    "court": "Federal Court",
+    "year": 2019,
+    "find": "Malaysian Federal Court decisions from 2003 onwards are on CommonLII (commonlii.org, Malaysia > Federal Court). The government Court Case Judgment Search at malaysia.gov.my also carries written grounds. If neither has it, the MLJ citation below will find it in any law library, and many public university libraries admit visitors.",
+    "why": "A recent Federal Court decision on section 75 of the Contracts Act, and a good place to watch a court handle English authority: adopting some of it, and saying why it is free to do so under a Malaysian statute.",
+    "read": [
+      {
+        "passage": "The treatment of section 75 of the Contracts Act 1950 and what a claimant must show.",
+        "look_for": "Statute first. The section is the law; the cases explain it."
+      },
+      {
+        "passage": "Any discussion of English authority on penalties.",
+        "look_for": "Ask what work the English case is doing: is it binding, persuasive, or being used to explain a phrase already in the Malaysian section?"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Does a claimant have to prove actual loss under section 75? State the position and the authority for it.",
+        "model": "State the rule as the court states it, then cite the paragraph you took it from. An answer with no paragraph reference is an answer you cannot check."
+      },
+      {
+        "q": "How does the court use English authority here, and what does that tell you about when English cases help in a Malaysian contract question?",
+        "model": "The answer must start from the statute. English authority can illuminate a concept the section uses; it cannot displace the section. Say which of those is happening here."
+      }
+    ],
+    "trap": "Do not import the English penalty rule wholesale. Malaysia has a section, and the section governs.",
+    "source": "Cubic Electronics Sdn Bhd v Mars Telecommunications Sdn Bhd [2019] 6 MLJ 15 (FC), also reported at [2019] 2 CLJ 723, as cited in l-remedies.",
+    "verify": "Confirm the citation and check for any later Federal Court decision on s 75, and any amendment to the Contracts Act 1950.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-hadley",
+    "moduleId": "m06-contract",
+    "lessonId": "l-remedies",
+    "case": "Hadley v Baxendale",
+    "citation": "(1854) 9 Exch 341",
+    "court": "Court of Exchequer (England)",
+    "year": 1854,
+    "find": "An English decision, free in full on BAILII (bailii.org). Search the case name. Read the judgment itself rather than a headnote: the headnote is the publisher's summary and is not what binds anyone.",
+    "why": "One of the shortest foundational judgments you will read, and still the starting point for remoteness. Read it to see how much law a court can settle in a few pages.",
+    "read": [
+      {
+        "passage": "The famous two-limb passage on what damages are recoverable.",
+        "look_for": "Write out the two limbs in your own words. Most misuse of this case is a failure to keep them apart."
+      },
+      {
+        "passage": "The facts about the mill shaft and what the carrier was told.",
+        "look_for": "The facts are the second limb. Notice what was not communicated."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the two limbs, and say which one the case was actually decided on.",
+        "model": "Both limbs must be stated accurately, and then the answer must commit to which one carried the result on these facts. Being able to name the limb that did the work is the difference between citing this case and using it."
+      },
+      {
+        "q": "Malaysia has section 74 of the Contracts Act 1950. What is the relationship between the section and this case?",
+        "model": "The section governs. The case is where the idea in the section comes from and is used to explain it. An answer that applies Hadley without opening s 74 has skipped the law."
+      }
+    ],
+    "trap": "Reciting 'Hadley v Baxendale' is not analysis. Name the limb, apply it to the facts you were given.",
+    "source": "Hadley v Baxendale (1854) 9 Exch 341, as cited in l-remedies; s 74 Contracts Act 1950.",
+    "verify": "Read the judgment itself on BAILII and check s 74 in a current copy of the Contracts Act 1950.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-sivarasa",
+    "moduleId": "m03-constitutional",
+    "lessonId": "l-liberties",
+    "case": "Sivarasa Rasiah v Badan Peguam Malaysia",
+    "citation": "[2010] 2 MLJ 333 (FC)",
+    "court": "Federal Court",
+    "year": 2010,
+    "find": "Malaysian Federal Court decisions from 2003 onwards are on CommonLII (commonlii.org, Malaysia > Federal Court). The government Court Case Judgment Search at malaysia.gov.my also carries written grounds. If neither has it, the MLJ citation below will find it in any law library, and many public university libraries admit visitors.",
+    "why": "Read it alongside PP v Pung Chen Choon. Two Federal Court decisions, two different temperatures on how closely a court examines a law that limits a liberty.",
+    "read": [
+      {
+        "passage": "Anything on how Part II rights are to be read.",
+        "look_for": "Note the language the court uses about the generosity or narrowness of the reading."
+      },
+      {
+        "passage": "Anything on whether a restriction must be reasonable, and who decides.",
+        "look_for": "This is where the two cases pull apart. Mark the sentences you would quote."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Set the two decisions side by side. Where precisely do they differ?",
+        "model": "The lesson tells you there is a tension. Your job in the judgments is to locate it in words: find the sentence in each that a lawyer on the other side would have to deal with."
+      },
+      {
+        "q": "If you were advising a client today, which do you lead with, and how do you deal with the other?",
+        "model": "Lead with the one that helps you, state the other fairly, and give a reason a court could accept for preferring yours — later, more considered, different question. Pretending the unhelpful case does not exist is how you lose."
+      }
+    ],
+    "trap": "Do not say 'the law is unclear' and stop. Advising means committing to a position and dealing with the objection.",
+    "source": "Sivarasa Rasiah v Badan Peguam Malaysia [2010] 2 MLJ 333 (FC) and PP v Pung Chen Choon [1994] 1 MLJ 566 (FC), both cited in l-liberties.",
+    "verify": "This is a live area. Check both citations and whether any later Federal Court decision has resolved the tension. If one has, this exercise changes shape.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-pung-chen-choon",
+    "moduleId": "m03-constitutional",
+    "lessonId": "l-liberties",
+    "case": "PP v Pung Chen Choon",
+    "citation": "[1994] 1 MLJ 566 (FC)",
+    "court": "Federal Court",
+    "year": 1994,
+    "find": "Older than CommonLII's Malaysian coverage, which starts at 2003. Use the MLJ citation in a law library, or the Malaysian Bar's document library. Do not rely on a student summary for the words of the judgment — a summary is someone else's ratio.",
+    "why": "The other half of the pair. Read this one first if you want to feel the shift; read it second if you want to test whether the shift is as large as commentary says.",
+    "read": [
+      {
+        "passage": "The court's approach to a law that restricts a liberty in Part II.",
+        "look_for": "Ask what the court treats as Parliament's business and what it treats as its own."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does this decision treat as the court's role when a statute limits a right?",
+        "model": "State it from the judgment, in the court's own terms, before you compare it with anything else."
+      },
+      {
+        "q": "Is the difference from the later case a difference of principle, or of the question asked?",
+        "model": "A strong answer considers that two decisions may sit together because they answer different questions. That is often how a court later reconciles them, and it is the argument you may need."
+      }
+    ],
+    "trap": "Older is not automatically overruled. A decision stands until something displaces it.",
+    "source": "PP v Pung Chen Choon [1994] 1 MLJ 566 (FC), cited in l-liberties.",
+    "verify": "Confirm the citation and check the current standing of this decision in a text published this year.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-foo-fio-na",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "case": "Foo Fio Na v Dr Soo Fook Mun",
+    "citation": "[2007] 1 MLJ 593 (FC)",
+    "court": "Federal Court",
+    "year": 2007,
+    "find": "Malaysian Federal Court decisions from 2003 onwards are on CommonLII (commonlii.org, Malaysia > Federal Court). The government Court Case Judgment Search at malaysia.gov.my also carries written grounds. If neither has it, the MLJ citation below will find it in any law library, and many public university libraries admit visitors.",
+    "why": "A Malaysian court choosing between two foreign standards and explaining the choice. Read it with Bolam and Rogers v Whitaker beside you — all three are short enough.",
+    "read": [
+      {
+        "passage": "The court's treatment of the Bolam test.",
+        "look_for": "Note exactly what is being rejected: the test everywhere, or the test for one kind of question?"
+      },
+      {
+        "passage": "The court's treatment of Rogers v Whitaker.",
+        "look_for": "An Australian decision is not binding here. Watch the court explain why it is following it anyway."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What is the standard in Malaysia after this decision, and for which question?",
+        "model": "Be precise about scope. A standard for advice and a standard for diagnosis or treatment may not be the same, and an answer that blurs them is answering a different question."
+      },
+      {
+        "q": "Why was an Australian decision persuasive here? Give the court's reason, not yours.",
+        "model": "Quote or paraphrase the court's stated reason. 'Because it is better law' is your view; the question asks for theirs."
+      }
+    ],
+    "trap": "Bolam is not gone from the law generally. Say what it was displaced for.",
+    "source": "Foo Fio Na v Dr Soo Fook Mun [2007] 1 MLJ 593 (FC); Rogers v Whitaker (1992) 175 CLR 479 (High Court of Australia); Bolam v Friern Hospital Management Committee [1957] 1 WLR 582. All three cited in l-negligence.",
+    "verify": "Check all three citations and confirm from a current text how the standard stands today, including any later Federal Court treatment.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-rama-chandran",
+    "moduleId": "m12-administrative",
+    "lessonId": "l-judicial-review",
+    "case": "R Rama Chandran v The Industrial Court of Malaysia",
+    "citation": "[1997] 1 MLJ 145 (FC)",
+    "court": "Federal Court",
+    "year": 1997,
+    "find": "Older than CommonLII's Malaysian coverage, which starts at 2003. Use the MLJ citation in a law library, or the Malaysian Bar's document library. Do not rely on a student summary for the words of the judgment — a summary is someone else's ratio.",
+    "why": "The case the administrative law lesson is built around, and a long judgment. Read it for scope: how far a court reviewing a decision may go into its merits.",
+    "read": [
+      {
+        "passage": "Anything on the difference between reviewing how a decision was made and reviewing the decision itself.",
+        "look_for": "This distinction is the subject. Everything else in the case hangs off it."
+      }
+    ],
+    "questions": [
+      {
+        "q": "How far does this decision let a court go into the merits? State it as a rule you could apply.",
+        "model": "A usable rule names what the court may examine and what it must leave alone. If your rule cannot decide the next case, it is a summary, not a rule."
+      },
+      {
+        "q": "A long judgment contains a great deal that is not the ratio. Pick one passage often quoted and say whether the result needed it.",
+        "model": "Apply the removal test. Being able to say 'this is quoted constantly and is obiter' is a real skill and is worth marks in an exam."
+      }
+    ],
+    "trap": "The lesson also cites Semenyih Jaya. Do not treat this area as frozen in 1997.",
+    "source": "R Rama Chandran v The Industrial Court of Malaysia [1997] 1 MLJ 145 (FC) and Semenyih Jaya Sdn Bhd v Pentadbir Tanah Daerah Hulu Langat [2017] 3 MLJ 561 (FC), both cited in l-judicial-review.",
+    "verify": "Check both citations and read how a current administrative law text describes the relationship between them.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-pepper-v-hart",
+    "moduleId": "m14-statutory-interpretation",
+    "lessonId": "l-aids",
+    "case": "Pepper v Hart",
+    "citation": "[1993] AC 593 (HL)",
+    "court": "House of Lords (England)",
+    "year": 1993,
+    "find": "An English decision, free in full on BAILII (bailii.org). Search the case name. Read the judgment itself rather than a headnote: the headnote is the publisher's summary and is not what binds anyone.",
+    "why": "When may a court look at what a minister said in Parliament? Read the conditions, because they are the point, and almost everyone remembers the permission and forgets them.",
+    "read": [
+      {
+        "passage": "The conditions under which parliamentary material may be used.",
+        "look_for": "Write them as a list. There is more than one, and they are cumulative."
+      },
+      {
+        "passage": "Any dissent or expression of caution.",
+        "look_for": "The objections tell you what the rule is for."
+      }
+    ],
+    "questions": [
+      {
+        "q": "List the conditions. All of them.",
+        "model": "A complete list, in your own words. An answer that says 'you can look at Hansard now' has learned the headline and none of the law."
+      },
+      {
+        "q": "This is an English decision. What is its status in a Malaysian statutory interpretation question?",
+        "model": "Persuasive, not binding, and to be considered alongside the Interpretation Acts and Malaysian authority on the same question. Say where you would check that before relying on it."
+      }
+    ],
+    "trap": "The permission is narrow and conditional. Treating it as an open door to Hansard is the standard error.",
+    "source": "Pepper v Hart [1993] AC 593 (HL), cited in l-aids.",
+    "verify": "Read the conditions in the judgment itself on BAILII, and check how Malaysian courts have treated this decision.",
+    "lastVerified": "2026-09-09"
+  }
+]

@@ -1,0 +1,75 @@
+/* Warta — the faces, self-hosted.
+ *
+ * These were loaded from Google Fonts until a byte audit (site-39's) showed the
+ * request was 230 KB of woff2 on the latin subset — roughly half of a cold
+ * first visit. That matters more here than it would elsewhere: this audience is
+ * mostly on a phone in Malaysia, often on prepaid data, and increasingly
+ * offline.
+ *
+ * Self-hosting also fixes something a service worker cannot. On a first visit
+ * with no network the Google faces do not exist, so the page falls back to
+ * system stacks — and the Spectral/Plex split that DESIGN.md calls load-bearing
+ * ("a reader should be able to tell without reading whether a line is the law
+ * or the machinery around it") disappears exactly when the reader has least
+ * signal to spare. A cache cannot rescue what was never fetched.
+ *
+ * 230 KB -> 112 KB, WITH THE FULL WEIGHT SCALE INTACT. The first attempt at
+ * this cut the scale from four weights to two to save bytes. That trade turned
+ * out to be unnecessary: IBM Plex Sans is a VARIABLE font, so a single 39 KB
+ * file carries the whole 400-700 range, and Spectral's static weights are
+ * ~14.7 KB each. Six files, every weight the design system had, and 51% less
+ * than the nine static faces we were serving.
+ *
+ * If you add a Spectral weight it costs ~15 KB and should be argued for. Adding
+ * a sans weight costs nothing — it is already in the variable file.
+ *
+ * font-display: swap — text is readable in a fallback immediately and reflows
+ * when the face lands. On a slow connection a reader would rather read the
+ * lesson in Georgia than wait to read it in Spectral.
+ */
+
+/* One file, the whole range. Do not split this into static weights. */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('../assets/fonts/ibm-plex-sans-var.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/spectral-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/spectral-400-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/spectral-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/spectral-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/spectral-700.woff2') format('woff2');
+}

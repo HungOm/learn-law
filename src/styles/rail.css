@@ -1,0 +1,91 @@
+/* ---------- the phone navigation bar ----------
+   The rail is the whole navigation on desktop. On a phone it collapses to a
+   wrapped row of links at the TOP of a scrolling page, which is the least
+   reachable place on a handset — the reader has to scroll back up past a
+   lesson to move anywhere. This bar puts the five things a returning reader
+   actually opens under the thumb that is already holding the phone.
+
+   It is a shortcut, not a replacement: the full nine-item nav stays in the
+   rail above, so nothing here is the only way to reach anything.
+
+   Scope: everything in this file is new and prefixed `railnav-`. The rail's
+   own selectors (.rail, .rail nav, .rail-foot, .rankbox, .meter, .badge and
+   the rest) live in base.css and game.css and are not touched here — three
+   files declaring .rail across two sessions is how a layout ends up in a
+   state nobody can explain. */
+
+/* Desktop has the rail itself; the bar would be a second copy of it. */
+.railnav { display: none; }
+
+@media (max-width: 780px) {
+  .railnav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Above the page and the liquid field, below the popover, toast and modal
+       layers (40-70) and below the skip link (100), which must always win. */
+    z-index: 30;
+    height: calc(var(--railnav-h) + env(safe-area-inset-bottom, 0px));
+    /* The inset is the bar's own padding, so the tap targets sit above the
+       home indicator rather than under it. index.html carries
+       viewport-fit=cover; without it env() reads 0 and this looks right in a
+       desktop browser while being wrong on the hardware. */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    /* Opaque: prose scrolls underneath it. */
+    background: var(--surface-page);
+    border-top: var(--line-hairline) solid var(--border-hairline);
+    font-family: var(--font-sans);
+  }
+
+  .railnav-link {
+    flex: 1 1 0;
+    min-width: 0;
+    /* WCAG 2.5.5 in both dimensions. The bar is --railnav-h so the target
+       clears --tap-min with room; a fifth of a 360px phone is 72px wide. */
+    min-height: var(--tap-min);
+    display: flex;
+    /* The count sits UNDER the label rather than beside it. Measured at 320,
+       360 and 390px with the real numbers a new reader sees — 186 due and 55
+       unread — and beside the label every count-bearing item was ellipsised:
+       "Modules" clipped to 38px of its 46px at 360. A truncated word is a
+       worse loss than a second line the bar has the height for. */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    padding: 0 var(--space-1);
+    font-size: var(--type-xs);
+    line-height: var(--leading-tight);
+    color: var(--text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* The current place is marked twice — a rule along the top edge and the
+     heaviest ink — because colour alone is not a state a reader can rely on.
+     Inset rather than a border so the row does not shift by 2px when it
+     becomes current. */
+  .railnav-link[aria-current='page'] {
+    color: var(--text-strong);
+    font-weight: var(--weight-semi);
+    box-shadow: inset 0 var(--line-marker) 0 0 var(--border-active);
+  }
+
+  /* Outstanding work is set in the heaviest ink, not in red: a queue of things
+     to do today is an invitation, not a page of mistakes. Same argument as
+     .rail .badge in base.css, and deliberately the same treatment. */
+  .railnav-count {
+    font-variant-numeric: tabular-nums;
+    font-weight: var(--weight-semi);
+    color: var(--text-strong);
+  }
+
+  /* The ellipsis is the last resort below 320px, not the working state. */
+  .railnav-label {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

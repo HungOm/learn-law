@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "1.0",
+  "note": "Beginner cards for company law, evidence and civil procedure, planted by the on-ramp lessons in content/lessons/gap-company-evidence-civil.json. One fact each. Every card carries a `source` so you can re-verify it.",
+  "cardTypes": {
+    "term": "Defined term or Latin maxim. Irreducible pair.",
+    "rule": "A black-letter rule or a single element of one.",
+    "ratio": "The principle a case stands for.",
+    "structure": "Institutional or hierarchical fact.",
+    "source": "Where a rule comes from — statute, section, or authority.",
+    "trigger": "A fact cue that should make you think of a doctrine."
+  },
+  "cards": [
+    {
+      "id": "pe-c-co-01",
+      "moduleId": "m09-company",
+      "type": "term",
+      "front": "What does it mean to say a company is a separate legal person?",
+      "back": "The company is treated as a person in its own right. It owns its property and owes its debts, not the people who set it up.",
+      "tags": ["company", "separate-personality", "threshold-concept"],
+      "source": "Companies Act 2016"
+    },
+    {
+      "id": "pe-c-co-02",
+      "moduleId": "m09-company",
+      "type": "rule",
+      "front": "A Sdn Bhd cannot pay its supplier. Who does the supplier sue?",
+      "back": "The company. A member is not liable for the company's debts merely because they are a member.",
+      "tags": ["company", "limited-liability"],
+      "source": "Companies Act 2016"
+    },
+    {
+      "id": "pe-c-co-03",
+      "moduleId": "m09-company",
+      "type": "ratio",
+      "front": "What does Salomon v A Salomon and Co Ltd stand for?",
+      "back": "A properly registered company is a person separate from its owner, even where one man holds almost every share and runs everything.",
+      "tags": ["company", "separate-personality"],
+      "source": "Salomon v A Salomon and Co Ltd"
+    },
+    {
+      "id": "pe-c-co-04",
+      "moduleId": "m09-company",
+      "type": "trigger",
+      "front": "A bank asks a company's owner to sign a personal guarantee. Why does that matter?",
+      "back": "The guarantee is a separate contract of her own. It makes her personally liable, so limited liability no longer protects her.",
+      "tags": ["company", "guarantee", "limited-liability"],
+      "source": "Ordinary contract law; Companies Act 2016 on the position of members"
+    },
+    {
+      "id": "pe-c-co-05",
+      "moduleId": "m09-company",
+      "type": "rule",
+      "front": "What two core duties does s 213 of the Companies Act 2016 place on a director?",
+      "back": "To act for a proper purpose and in good faith in the best interest of the company, and to exercise reasonable care, skill and diligence.",
+      "tags": ["company", "directors-duties"],
+      "source": "Companies Act 2016, s 213"
+    },
+    {
+      "id": "pe-c-co-06",
+      "moduleId": "m09-company",
+      "type": "structure",
+      "front": "The company made a profit. Can a shareholder simply take a share of it?",
+      "back": "No. Profit reaches shareholders only as a dividend the company declares and is permitted to pay. Until then it is the company's money.",
+      "tags": ["company", "shareholders", "dividend"],
+      "source": "Companies Act 2016"
+    },
+    {
+      "id": "pe-c-co-07",
+      "moduleId": "m09-company",
+      "type": "rule",
+      "front": "Is owning every share and making every decision a reason to lift the corporate veil?",
+      "back": "No. Control alone is never a ground. That is the situation Salomon held to be perfectly lawful.",
+      "tags": ["company", "corporate-veil"],
+      "source": "Salomon v A Salomon and Co Ltd; standard doctrine"
+    },
+    {
+      "id": "pe-c-co-08",
+      "moduleId": "m09-company",
+      "type": "trigger",
+      "front": "A director diverts to himself a contract that was offered to the company. Who is the proper claimant?",
+      "back": "The company, because the duty is owed to it. A member's route is a derivative action or, for a wrong to himself, an oppression claim.",
+      "tags": ["company", "directors-duties", "remedies"],
+      "source": "Companies Act 2016, ss 213 and 346"
+    },
+    {
+      "id": "pe-c-ev-01",
+      "moduleId": "m10-evidence",
+      "type": "term",
+      "front": "What is a fact in issue?",
+      "back": "A fact the case actually turns on, asserted by one side and denied by the other.",
+      "tags": ["evidence", "relevancy"],
+      "source": "Evidence Act 1950"
+    },
+    {
+      "id": "pe-c-ev-02",
+      "moduleId": "m10-evidence",
+      "type": "rule",
+      "front": "Under the Evidence Act 1950, when may a fact be proved?",
+      "back": "Only when it is a fact in issue, or a fact the Act itself declares relevant. There is no general residual category.",
+      "tags": ["evidence", "relevancy"],
+      "source": "Evidence Act 1950, s 5"
+    },
+    {
+      "id": "pe-c-ev-03",
+      "moduleId": "m10-evidence",
+      "type": "term",
+      "front": "What is hearsay?",
+      "back": "A second-hand account of what an absent person said, offered to prove that what they said was true.",
+      "tags": ["evidence", "hearsay"],
+      "source": "Evidence Act 1950; standard doctrine"
+    },
+    {
+      "id": "pe-c-ev-04",
+      "moduleId": "m10-evidence",
+      "type": "rule",
+      "front": "What is an admission, and who may it be used against?",
+      "back": "A statement by a party suggesting a fact against their own interest. It may be proved against the person who made it.",
+      "tags": ["evidence", "admissions"],
+      "source": "Evidence Act 1950"
+    },
+    {
+      "id": "pe-c-ev-05",
+      "moduleId": "m10-evidence",
+      "type": "rule",
+      "front": "In a civil claim, who carries the burden of proving a fact?",
+      "back": "Whoever asserts it. Section 102 places it on the party who would fail if no evidence at all were given on either side.",
+      "tags": ["evidence", "burden-of-proof"],
+      "source": "Evidence Act 1950, ss 101 and 102"
+    },
+    {
+      "id": "pe-c-ev-06",
+      "moduleId": "m10-evidence",
+      "type": "term",
+      "front": "What is the difference between the legal burden and the evidential burden?",
+      "back": "The legal burden is the risk of not persuading the court, and it does not shift. The evidential burden is the need to put up some evidence, and it moves during the trial.",
+      "tags": ["evidence", "burden-of-proof"],
+      "source": "Evidence Act 1950, Part II; standard doctrine"
+    },
+    {
+      "id": "pe-c-ev-07",
+      "moduleId": "m10-evidence",
+      "type": "rule",
+      "front": "What are the two standards of proof?",
+      "back": "Balance of probabilities in a civil case. Beyond reasonable doubt for the prosecution in a criminal case.",
+      "tags": ["evidence", "standard-of-proof"],
+      "source": "Standard doctrine under the Evidence Act 1950, Part II"
+    },
+    {
+      "id": "pe-c-ev-08",
+      "moduleId": "m10-evidence",
+      "type": "rule",
+      "front": "What does illustration (g) to s 114 of the Evidence Act 1950 allow?",
+      "back": "A court may presume that evidence a party could have produced, and did not, would have been unfavourable to that party. It is permissive, not automatic.",
+      "tags": ["evidence", "presumptions"],
+      "source": "Evidence Act 1950, s 114 illustration (g)"
+    },
+    {
+      "id": "pe-c-cp-01",
+      "moduleId": "m11-civil-procedure",
+      "type": "term",
+      "front": "Who are the plaintiff and the defendant?",
+      "back": "The plaintiff is the person who starts the claim. The defendant is the person it is brought against.",
+      "tags": ["civil-procedure", "parties"],
+      "source": "Rules of Court 2012"
+    },
+    {
+      "id": "pe-c-cp-02",
+      "moduleId": "m11-civil-procedure",
+      "type": "rule",
+      "front": "What is the general limitation period for a claim in contract or tort in Malaysia?",
+      "back": "Six years from the date the cause of action accrued, under the Limitation Act 1953. Accrual is not the date of discovery.",
+      "tags": ["civil-procedure", "limitation"],
+      "source": "Limitation Act 1953"
+    },
+    {
+      "id": "pe-c-cp-03",
+      "moduleId": "m11-civil-procedure",
+      "type": "structure",
+      "front": "When do you start a case by writ rather than by originating summons?",
+      "back": "By writ where the facts are disputed and witnesses are needed. By originating summons where the facts are agreed and the question is what a document means.",
+      "tags": ["civil-procedure", "commencement"],
+      "source": "Rules of Court 2012"
+    },
+    {
+      "id": "pe-c-cp-04",
+      "moduleId": "m11-civil-procedure",
+      "type": "trigger",
+      "front": "A defendant says he never received the court papers. Why is that serious?",
+      "back": "Service is a formal requirement. A judgment obtained without proper service can be set aside on that ground alone.",
+      "tags": ["civil-procedure", "service"],
+      "source": "Rules of Court 2012"
+    },
+    {
+      "id": "pe-c-cp-05",
+      "moduleId": "m11-civil-procedure",
+      "type": "rule",
+      "front": "What must a pleading contain?",
+      "back": "The material facts relied on. Not the evidence that proves them, and not the legal argument.",
+      "tags": ["civil-procedure", "pleadings"],
+      "source": "Rules of Court 2012"
+    },
+    {
+      "id": "pe-c-cp-06",
+      "moduleId": "m11-civil-procedure",
+      "type": "term",
+      "front": "What is discovery in a civil case?",
+      "back": "The stage where each side discloses the relevant documents it holds, including those that damage its own case. Privileged documents are listed but not produced.",
+      "tags": ["civil-procedure", "discovery"],
+      "source": "Rules of Court 2012"
+    },
+    {
+      "id": "pe-c-cp-07",
+      "moduleId": "m11-civil-procedure",
+      "type": "rule",
+      "front": "How does striking out differ from summary judgment?",
+      "back": "Striking out attacks the pleading on its face and assumes the pleaded facts are true. Summary judgment looks at the evidence and asks whether there is a triable issue.",
+      "tags": ["civil-procedure", "summary-disposal"],
+      "source": "Rules of Court 2012, Order 14 and Order 18 rule 19"
+    },
+    {
+      "id": "pe-c-cp-08",
+      "moduleId": "m11-civil-procedure",
+      "type": "trigger",
+      "front": "You have won judgment for RM20,000. Why might you still receive nothing?",
+      "back": "A judgment is not money. It has to be enforced, and enforcement fails where the defendant has no goods, land or bank balance to reach.",
+      "tags": ["civil-procedure", "enforcement"],
+      "source": "Rules of Court 2012"
+    }
+  ]
+}

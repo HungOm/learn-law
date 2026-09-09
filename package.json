@@ -8,7 +8,20 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "python3 tools/check-content.py"
+    "check": "npm run check:content && npm run check:extracts && npm run check:design && npm run check:prose && npm run check:density && npm run check:quiz && npm run check:icons && npm run check:smoke && npm run check:responsive && npm run check:diagram-cases",
+    "check:content": "python3 tools/check-content.py",
+    "check:extracts": "python3 tools/check-extracts.py",
+    "check:design": "python3 tools/palette.py && python3 tools/design-lint.py",
+    "check:prose": "python3 tools/readability.py --gate",
+    "check:density": "python3 tools/density.py --gate",
+    "check:quiz": "python3 tools/balance-quiz.py --check",
+    "content:split": "python3 tools/split-content.py",
+    "predev": "npm run content:split",
+    "prebuild": "npm run content:split",
+    "check:icons": "python3 tools/icons.py --check",
+    "check:smoke": "node tools/smoke.mjs",
+    "check:responsive": "node tools/responsive.mjs",
+    "check:diagram-cases": "node tools/diagram-cases.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.3",
@@ -19,6 +32,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "playwright-core": "^1.63.0",
     "vite": "^5.4.11"
   }
 }

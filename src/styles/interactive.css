@@ -1,0 +1,192 @@
+/* Option buttons for the two interactive blocks.
+ *
+ * The blocks themselves — fills, markers, labels, the reveal — belong to the
+ * design system and live in base.css. This file is only the thing you press.
+ *
+ * Written against the Warta scales: no raw values and no colours of its own.
+ * There is deliberately no verdict colour here. A prediction must not turn red,
+ * because being wrong before the rule is given is the mechanism working; and a
+ * checkpoint answers in words and in the rehearsal register rather than in
+ * green and red, because it is practice inside the reading, not an assessment
+ * of it. State is carried by a marker and a label, never by hue alone.
+ */
+
+/* No `@import './tokens.css'` here, and that is a fix rather than an omission.
+ *
+ * Measured in the browser: tokens.css is inlined FIVE times, once per
+ * stylesheet that imports it, and each copy carries an unconditional
+ * `:root { --rail-width: 15rem }`. base.css sets that token responsively in
+ * its ladder — 12rem on a tablet, 16rem at 1440, 17rem at 1800 — and every one
+ * of those overrides was being overwritten by a later copy of tokens.css. At
+ * 900px the rail is meant to be 12rem and computes to 15rem.
+ *
+ * An @import that only re-states what is already loaded cannot help: main.jsx
+ * imports tokens.css first and this file last, so every var() below resolves
+ * either way. It can only do harm, and it was doing it. game.css and
+ * liquid.css still carry theirs, so the token is still clobbered — the whole
+ * fix belongs to whoever owns those two files, and it is in the report.
+ */
+
+.opt-list {
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.predict-prompt {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  line-height: var(--leading-prose);
+  color: var(--text-strong);
+}
+
+.opt {
+  display: block;
+  width: 100%;
+  /* 44px floor. This is read on phones, often one-handed, often tired.
+     var(--tap-min) rather than the number it happens to equal: a copy of a
+     token's value is a copy that stops tracking it. */
+  min-height: var(--tap-min);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  line-height: var(--leading-base);
+  text-align: left;
+  color: var(--text-primary);
+  background: var(--surface-raised);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-left: var(--line-marker) solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  /* transform and colour only. Never width or height: an option that resized
+     on hover would reflow every option under it. */
+  transition: border-color var(--dur-quick) var(--ease-out),
+              background-color var(--dur-quick) var(--ease-out),
+              transform var(--dur-instant) var(--ease-out);
+}
+
+.opt:hover:not(:disabled) {
+  border-color: var(--border-active);
+  transform: translateY(-1px);
+}
+.opt:active:not(:disabled) { transform: translateY(0); }
+.opt:disabled { cursor: default; }
+
+.opt:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+/* What the reader chose. Not a judgement — the reveal does the comparing. */
+.opt[data-state='yours'] {
+  border-left-color: var(--border-strong);
+  color: var(--text-strong);
+}
+
+/* Which one the rule takes. A checkpoint names it in words as well, so the
+   marker is reinforcement and never the only signal. */
+.opt[data-state='answer'] {
+  border-left-color: var(--block-checkpoint-ink);
+  color: var(--text-strong);
+}
+
+.opt-wide { width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .opt { transition: none; }
+}
+
+/* ---------------------------------------------------------------- sections --
+ * Section-level progress. The unit a reader can actually finish in one sitting:
+ * 317 of the 320 sections are three minutes or under, and until now none of
+ * them could be entered, finished or credited on its own.
+ *
+ * Deliberately quiet. This is a place-marker, not an achievement — it says a
+ * reader got to the end of a section, which is a count of work done and not a
+ * claim about what they now know. It carries no signal colour for that reason.
+ */
+
+.lsec-done {
+  margin: var(--space-5) 0 0;
+}
+
+.lsec-done-btn {
+  min-height: var(--tap-min);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  background: transparent;
+  border: var(--line-hairline) dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--dur-quick) var(--ease-out),
+              color var(--dur-quick) var(--ease-out),
+              transform var(--dur-instant) var(--ease-out);
+}
+
+.lsec-done-btn:hover { border-color: var(--border-active); transform: translateY(-1px); }
+.lsec-done-btn:active { transform: translateY(0); }
+
+.lsec-done-btn:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+/* Done: solid rather than dashed, and the marker colour of the module it
+   belongs to. Still no verdict colour — nothing here was right or wrong. */
+.lsec-done-btn[aria-pressed='true'] {
+  color: var(--text-strong);
+  border-style: solid;
+  border-color: var(--module-ink);
+}
+
+.lsec-resume {
+  margin: 0 0 var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  color: var(--text-primary);
+  background: var(--surface-sunk);
+  border-left: var(--line-marker) solid var(--module-ink);
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lsec-done-btn { transition: none; }
+}
+
+/* ------------------------------------------------------------- the ladder --
+ * The same six states the reading surface uses. Only two things change here,
+ * and neither of them is a size: an option is read for meaning, so it keeps
+ * --type-base at every width, and the 44px floor is a floor everywhere.
+ *
+ * What does change is the room around the words. A predict block on a 1920px
+ * screen with phone padding reads as a phone screenshot that has been pasted
+ * into a page; a tired reader picking one answer out of four wants the four to
+ * be separate objects, and space is what separates them.
+ */
+
+/* ---- laptop and up: >= 1024 ---- */
+@media (min-width: 1024px) {
+  .opt-list { gap: var(--space-3); }
+  .opt { padding: var(--space-4) var(--space-5); }
+  .predict-prompt { margin-bottom: var(--space-4); }
+  .lsec-resume { padding: var(--space-4) var(--space-5); }
+}
+
+/* ---- desktop and up: >= 1440 ----
+ * The section's "mark done" control is apparatus at the foot of a section, and
+ * on a wide sheet it wants the same air the section heads got.
+ */
+@media (min-width: 1440px) {
+  .lsec-done { margin-top: var(--space-6); }
+  /* Sans and --type-base stay. This is apparatus — a count of sections and a
+     link to the next one — and the split between the two faces is load-bearing
+     enough that it does not get to change at a breakpoint. */
+  .lsec-resume { padding: var(--space-4) var(--space-6); }
+}

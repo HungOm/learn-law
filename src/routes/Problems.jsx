@@ -16,6 +16,7 @@ export function ProblemRow({ p, last, index }) {
   return (
     <ArrRow
       index={index}
+      moduleId={p.moduleId}
       to={`/problem/${p.id}`}
       num={`${p.minutes}′`}
       title={p.title}
@@ -39,8 +40,8 @@ export default function Problems() {
   const attempted = Object.keys(latest).length;
 
   return (
-    <div className="wrap">
-      <h2>Problem questions</h2>
+    <div className="wrap wrap--dash">
+      <h1>Problem questions</h1>
       <p className="lede">
         {cat.problems.length} questions. You have attempted {attempted}. Write the answer first,
         in full, before you look at anything.
@@ -63,8 +64,8 @@ export default function Problems() {
       </Notice>
 
       {byModule.map(({ m, list }) => (
-        <div key={m.id}>
-          <h3>{m.title}</h3>
+        <div className="arr-group" data-module={m.id} key={m.id}>
+          <h2>{m.title}</h2>
           <div className="arrangement">
             {list.map((p, i) => <ProblemRow key={p.id} p={p} last={latest[p.id]} index={i} />)}
           </div>

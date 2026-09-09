@@ -57,6 +57,10 @@ export const REVIEW_XP = { again: 4, hard: 8, good: 12, easy: 10 };
 export const LESSON_XP = 60;
 export const QUIZ_BASE_XP = 20;
 export const PROBLEM_XP = 150;
+// A guided problem is a rehearsal, not an attempt: the steps come pre-ordered
+// and half the reasoning is handed over. It is worth less because it is less
+// work, not because it matters less.
+export const GUIDED_XP = 60;
 
 /** Combo pays, but not enough to make a wrong Good worth faking. */
 export function comboBonus(combo) {
@@ -78,7 +82,7 @@ export function emptyState() {
     totals: {
       reviews: 0, forgot: 0, lessons: 0,
       quizAnswered: 0, quizCorrect: 0, quizRuns: 0, quizPerfect: 0,
-      problems: 0, calibrated: 0,
+      problems: 0, calibrated: 0, rehearsals: 0,
     },
     best: { combo: 0, quizStreak: 0, arenaScore: 0, dayXp: 0, problemPct: 0 },
     streak: { current: 0, longest: 0, last: null },
@@ -131,43 +135,75 @@ export function streakOf(days, now = new Date()) {
 }
 
 // --- achievements ---------------------------------------------------------
+// An entry may also carry `progress: s => [current, target]`, which reports how
+// far off a seal is without restating its threshold anywhere else — one
+// definition, so the two can never drift apart. It is a count of work done, and
+// anything showing it must say so: none of these is a claim about what the
+// learner knows.
+//
 // Each is a seal: a short sigil struck into a circle, the way a court stamps a
 // filed document. No emoji — the rest of the app is set like a statute reprint
 // and a smiley face in the middle of it would read as a different application.
 
 export const ACHIEVEMENTS = [
-  { id: 'first-blood',  sigil: 'I',    name: 'First recall',        hint: 'Grade one card.',                          tone: 'sage',  test: s => s.totals.reviews >= 1 },
-  { id: 'reviews-100',  sigil: 'C',    name: 'A hundred cards',     hint: 'Grade 100 cards.',                         tone: 'sage',  test: s => s.totals.reviews >= 100 },
-  { id: 'reviews-500',  sigil: 'D',    name: 'Five hundred',        hint: 'Grade 500 cards.',                         tone: 'sage',  test: s => s.totals.reviews >= 500 },
-  { id: 'reviews-2000', sigil: 'MM',   name: 'Two thousand',        hint: 'Grade 2,000 cards.',                       tone: 'gold',  test: s => s.totals.reviews >= 2000 },
-  { id: 'honest-25',    sigil: '✗',    name: 'Honest witness',      hint: 'Press Forgot 25 times. The scheduler is only as good as your candour.', tone: 'oxide', test: s => s.totals.forgot >= 25 },
+  { id: 'first-blood',  sigil: 'I',    name: 'First recall',        hint: 'Grade one card.',                          tone: 'sage',  test: s => s.totals.reviews >= 1,
+    progress: s => [s.totals.reviews, 1] },
+  { id: 'reviews-100',  sigil: 'C',    name: 'A hundred cards',     hint: 'Grade 100 cards.',                         tone: 'sage',  test: s => s.totals.reviews >= 100,
+    progress: s => [s.totals.reviews, 100] },
+  { id: 'reviews-500',  sigil: 'D',    name: 'Five hundred',        hint: 'Grade 500 cards.',                         tone: 'sage',  test: s => s.totals.reviews >= 500,
+    progress: s => [s.totals.reviews, 500] },
+  { id: 'reviews-2000', sigil: 'MM',   name: 'Two thousand',        hint: 'Grade 2,000 cards.',                       tone: 'gold',  test: s => s.totals.reviews >= 2000,
+    progress: s => [s.totals.reviews, 2000] },
+  { id: 'honest-25',    sigil: '✗',    name: 'Honest witness',      hint: 'Press Forgot 25 times. The scheduler is only as good as your candour.', tone: 'oxide', test: s => s.totals.forgot >= 25,
+    progress: s => [s.totals.forgot, 25] },
 
-  { id: 'streak-3',     sigil: '3',    name: 'Three days',          hint: 'Study three days running.',                tone: 'sage',  test: s => s.streak.longest >= 3 },
-  { id: 'streak-7',     sigil: '7',    name: 'A full week',         hint: 'Study seven days running.',                tone: 'sage',  test: s => s.streak.longest >= 7 },
-  { id: 'streak-30',    sigil: '30',   name: 'A term',              hint: 'Study thirty days running.',               tone: 'gold',  test: s => s.streak.longest >= 30 },
-  { id: 'streak-100',   sigil: '100',  name: 'A hundred days',      hint: 'Study a hundred days running.',            tone: 'gold',  test: s => s.streak.longest >= 100 },
+  { id: 'streak-3',     sigil: '3',    name: 'Three days',          hint: 'Study three days running.',                tone: 'sage',  test: s => s.streak.longest >= 3,
+    progress: s => [s.streak.longest, 3] },
+  { id: 'streak-7',     sigil: '7',    name: 'A full week',         hint: 'Study seven days running.',                tone: 'sage',  test: s => s.streak.longest >= 7,
+    progress: s => [s.streak.longest, 7] },
+  { id: 'streak-30',    sigil: '30',   name: 'A term',              hint: 'Study thirty days running.',               tone: 'gold',  test: s => s.streak.longest >= 30,
+    progress: s => [s.streak.longest, 30] },
+  { id: 'streak-100',   sigil: '100',  name: 'A hundred days',      hint: 'Study a hundred days running.',            tone: 'gold',  test: s => s.streak.longest >= 100,
+    progress: s => [s.streak.longest, 100] },
 
-  { id: 'lesson-1',     sigil: '§',    name: 'Opened the book',     hint: 'Mark one lesson read.',                    tone: 'sage',  test: s => s.totals.lessons >= 1 },
-  { id: 'lesson-10',    sigil: '§X',   name: 'Ten lessons',         hint: 'Mark ten lessons read.',                   tone: 'sage',  test: s => s.totals.lessons >= 10 },
-  { id: 'lesson-all',   sigil: '§§',   name: 'The whole exposition',hint: 'Mark every lesson read.',                  tone: 'gold',  test: (s, ctx) => ctx.lessonCount > 0 && s.totals.lessons >= ctx.lessonCount },
+  { id: 'lesson-1',     sigil: '§',    name: 'Opened the book',     hint: 'Mark one lesson read.',                    tone: 'sage',  test: s => s.totals.lessons >= 1,
+    progress: s => [s.totals.lessons, 1] },
+  { id: 'lesson-10',    sigil: '§X',   name: 'Ten lessons',         hint: 'Mark ten lessons read.',                   tone: 'sage',  test: s => s.totals.lessons >= 10,
+    progress: s => [s.totals.lessons, 10] },
+  { id: 'lesson-all',   sigil: '§§',   name: 'The whole exposition',hint: 'Mark every lesson read.',                  tone: 'gold',  test: (s, ctx) => ctx.lessonCount > 0 && s.totals.lessons >= ctx.lessonCount,
+    progress: (s, ctx) => [s.totals.lessons, ctx.lessonCount || 0] },
 
-  { id: 'quiz-first',   sigil: '?',    name: 'First quiz',          hint: 'Finish one lesson quiz.',                  tone: 'sage',  test: s => s.totals.quizRuns >= 1 },
-  { id: 'quiz-perfect', sigil: '✓',    name: 'Clean sheet',         hint: 'Finish a quiz with every answer right.',   tone: 'gold',  test: s => s.totals.quizPerfect >= 1 },
-  { id: 'quiz-streak-10', sigil: 'X',  name: 'Ten in a row',        hint: 'Answer ten quiz questions correctly, consecutively.', tone: 'sage', test: s => s.best.quizStreak >= 10 },
-  { id: 'quiz-streak-25', sigil: 'XXV',name: 'Twenty-five in a row',hint: 'Answer twenty-five quiz questions correctly, consecutively.', tone: 'gold', test: s => s.best.quizStreak >= 25 },
-  { id: 'quiz-correct-250', sigil: 'CCL', name: 'Well briefed',     hint: 'Answer 250 quiz questions correctly.',     tone: 'gold',  test: s => s.totals.quizCorrect >= 250 },
-  { id: 'arena-1500',   sigil: '⚖',    name: 'The arena',           hint: 'Score 1,500 in a single Arena run.',       tone: 'gold',  test: s => s.best.arenaScore >= 1500 },
+  { id: 'quiz-first',   sigil: '?',    name: 'First quiz',          hint: 'Finish one lesson quiz.',                  tone: 'sage',  test: s => s.totals.quizRuns >= 1,
+    progress: s => [s.totals.quizRuns, 1] },
+  { id: 'quiz-perfect', sigil: '✓',    name: 'Clean sheet',         hint: 'Finish a quiz with every answer right.',   tone: 'gold',  test: s => s.totals.quizPerfect >= 1,
+    progress: s => [s.totals.quizPerfect, 1] },
+  { id: 'quiz-streak-10', sigil: 'X',  name: 'Ten in a row',        hint: 'Answer ten quiz questions correctly, consecutively.', tone: 'sage', test: s => s.best.quizStreak >= 10,
+    progress: s => [s.best.quizStreak, 10] },
+  { id: 'quiz-streak-25', sigil: 'XXV',name: 'Twenty-five in a row',hint: 'Answer twenty-five quiz questions correctly, consecutively.', tone: 'gold', test: s => s.best.quizStreak >= 25,
+    progress: s => [s.best.quizStreak, 25] },
+  { id: 'quiz-correct-250', sigil: 'CCL', name: 'Well briefed',     hint: 'Answer 250 quiz questions correctly.',     tone: 'gold',  test: s => s.totals.quizCorrect >= 250,
+    progress: s => [s.totals.quizCorrect, 250] },
+  { id: 'arena-1500',   sigil: '⚖',    name: 'The arena',           hint: 'Score 1,500 in a single Arena run.',       tone: 'gold',  test: s => s.best.arenaScore >= 1500,
+    progress: s => [s.best.arenaScore, 1500] },
 
-  { id: 'problem-1',    sigil: 'A',    name: 'First answer',        hint: 'Write and mark one problem question.',     tone: 'sage',  test: s => s.totals.problems >= 1 },
-  { id: 'problem-5',    sigil: 'V',    name: 'Five answers',        hint: 'Write and mark five problem questions.',   tone: 'sage',  test: s => s.totals.problems >= 5 },
-  { id: 'problem-20',   sigil: 'XX',   name: 'Twenty answers',      hint: 'Write and mark twenty problem questions.', tone: 'gold',  test: s => s.totals.problems >= 20 },
-  { id: 'problem-80',   sigil: '80',   name: 'A first',             hint: 'Mark yourself 80% or more on a problem question.', tone: 'gold', test: s => s.best.problemPct >= 80 },
-  { id: 'calibrated-3', sigil: '=',    name: 'Calibrated',          hint: 'Predict within one mark, three times. The hardest seal here.', tone: 'gold', test: s => s.totals.calibrated >= 3 },
+  { id: 'problem-1',    sigil: 'A',    name: 'First answer',        hint: 'Write and mark one problem question.',     tone: 'sage',  test: s => s.totals.problems >= 1,
+    progress: s => [s.totals.problems, 1] },
+  { id: 'problem-5',    sigil: 'V',    name: 'Five answers',        hint: 'Write and mark five problem questions.',   tone: 'sage',  test: s => s.totals.problems >= 5,
+    progress: s => [s.totals.problems, 5] },
+  { id: 'problem-20',   sigil: 'XX',   name: 'Twenty answers',      hint: 'Write and mark twenty problem questions.', tone: 'gold',  test: s => s.totals.problems >= 20,
+    progress: s => [s.totals.problems, 20] },
+  { id: 'problem-80',   sigil: '80',   name: 'A first',             hint: 'Mark yourself 80% or more on a problem question.', tone: 'gold', test: s => s.best.problemPct >= 80,
+    progress: s => [s.best.problemPct, 80] },
+  { id: 'calibrated-3', sigil: '=',    name: 'Calibrated',          hint: 'Predict within one mark, three times. The hardest seal here.', tone: 'gold', test: s => s.totals.calibrated >= 3,
+    progress: s => [s.totals.calibrated, 3] },
 
-  { id: 'combo-10',     sigil: 'X!',   name: 'Ten-card run',        hint: 'Ten cards in a row without a lapse.',      tone: 'sage',  test: s => s.best.combo >= 10 },
-  { id: 'combo-25',     sigil: 'XXV!', name: 'Twenty-five-card run',hint: 'Twenty-five cards in a row without a lapse.', tone: 'gold', test: s => s.best.combo >= 25 },
+  { id: 'combo-10',     sigil: 'X!',   name: 'Ten-card run',        hint: 'Ten cards in a row without a lapse.',      tone: 'sage',  test: s => s.best.combo >= 10,
+    progress: s => [s.best.combo, 10] },
+  { id: 'combo-25',     sigil: 'XXV!', name: 'Twenty-five-card run',hint: 'Twenty-five cards in a row without a lapse.', tone: 'gold', test: s => s.best.combo >= 25,
+    progress: s => [s.best.combo, 25] },
 
-  { id: 'xp-5000',      sigil: 'V M',  name: 'Five thousand',       hint: 'Earn 5,000 XP.',                           tone: 'gold',  test: s => s.xp >= 5000 },
+  { id: 'xp-5000',      sigil: 'V M',  name: 'Five thousand',       hint: 'Earn 5,000 XP.',                           tone: 'gold',  test: s => s.xp >= 5000,
+    progress: s => [s.xp, 5000] },
 ];
 
 export const ACHIEVEMENTS_BY_ID = Object.fromEntries(ACHIEVEMENTS.map(a => [a.id, a]));
@@ -232,6 +268,21 @@ export function apply(state, event, ctx = {}, now = new Date()) {
     }
     case 'problem': {
       const pct = event.total ? Math.round((event.score / event.total) * 100) : 0;
+
+      // A rehearsal pays XP, because XP counts work turned up to and the work is
+      // real. It deliberately touches none of `problems`, `problemPct` or
+      // `calibrated`: those feed seals that are claims about constructing an
+      // argument unaided, which is the one thing a guided problem does not ask
+      // for. Letting one strike `problem-80` would award "A first" for the
+      // easiest task on the site, and a learner studying alone has nothing to
+      // correct that impression against.
+      if (event.guided) {
+        xp = GUIDED_XP + Math.round(pct / 2);
+        s.totals.rehearsals = (s.totals.rehearsals || 0) + 1;
+        notes.push('Rehearsal');
+        break;
+      }
+
       xp = PROBLEM_XP + pct;
       s.totals.problems += 1;
       s.best.problemPct = Math.max(s.best.problemPct, pct);

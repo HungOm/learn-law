@@ -3,17 +3,20 @@ import { useStudy } from '../state/StudyContext.jsx';
 import { ACHIEVEMENTS, RANKS } from '../lib/game.js';
 import { Seal } from '../components/Seal.jsx';
 import { ProgressRing } from '../components/Bits.jsx';
+import { NearestSeals } from '../components/Insight.jsx';
+import { nearestSeals } from '../lib/insight.js';
 import { daysAgo } from '../lib/format.js';
 
 export default function Seals() {
-  const { game, rank } = useStudy();
+  const { cat, game, rank } = useStudy();
   const earned = ACHIEVEMENTS.filter(a => game.achievements[a.id]);
   const locked = ACHIEVEMENTS.filter(a => !game.achievements[a.id]);
   const pct = Math.round((earned.length / ACHIEVEMENTS.length) * 100);
+  const nearest = nearestSeals(ACHIEVEMENTS, game, { lessonCount: cat.lessons.length });
 
   return (
-    <div className="wrap">
-      <h2>Seals</h2>
+    <div className="wrap wrap--dash">
+      <h1>Seals</h1>
       <p className="lede">
         {earned.length} of {ACHIEVEMENTS.length} struck. A seal marks something you did, not
         something you know — the hardest one here is <strong>Calibrated</strong>, and it is the
@@ -21,9 +24,9 @@ export default function Seals() {
       </p>
 
       <div className="rank-panel">
-        <ProgressRing value={pct} size={116} stroke={9} tone="gold" label={`${pct}%`} sub="struck" />
+        <ProgressRing value={pct} size={116} stroke={9} tone="mastery" label={`${pct}%`} sub="struck" />
         <div>
-          <h3 style={{ marginTop: 0 }}>Rank {rank.level} · {rank.title}</h3>
+          <h2 style={{ marginTop: 0 }}>Rank {rank.level} · {rank.title}</h2>
           <p className="small">{rank.note}</p>
           <div className="ladder">
             {RANKS.map(r => (
@@ -41,7 +44,18 @@ export default function Seals() {
         </div>
       </div>
 
-      <h3>Struck</h3>
+      {nearest.length > 0 && (
+        <>
+          <h2>Nearest</h2>
+          <p className="small">
+            How far each open seal is from striking. These are counts of work done, cards graded
+            and answers written, and say nothing about what you know.
+          </p>
+          <NearestSeals items={nearest} />
+        </>
+      )}
+
+      <h2>Struck</h2>
       {earned.length ? (
         <div className="sealgrid">
           {earned.map((a, i) => (
@@ -60,7 +74,7 @@ export default function Seals() {
         <p className="small">None yet. Grade one card and the first is struck.</p>
       )}
 
-      <h3>Still open</h3>
+      <h2>Still open</h2>
       <div className="sealgrid">
         {locked.map((a, i) => (
           <motion.div className="sealcard is-locked" key={a.id}

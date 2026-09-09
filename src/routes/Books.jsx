@@ -38,8 +38,11 @@ export default function Books() {
   const unconfirmed = cat.books.filter(b => b.verified !== 'confirmed');
 
   return (
-    <div className="wrap">
-      <h2>Reading</h2>
+    // A bibliography is read, not scanned: each entry is a title, a byline and
+    // a sentence about the edition. It keeps the reading measure and takes the
+    // sheet, so none of it is set over the field.
+    <div className="wrap sheet">
+      <h1>Reading</h1>
       <p className="lede">
         Editions matter more in law than in any other subject. Everything below carries its
         verification status.
@@ -50,16 +53,16 @@ export default function Books() {
         that a case is still good law — that needs CLJ, LexisNexis CaseBase, or Westlaw Citator.
       </Notice>
 
-      <h3>Edition confirmed</h3>
+      <h2>Edition confirmed</h2>
       {confirmed.map(b => <BookRow key={b.id} b={b} />)}
 
-      <h3>Edition not verified — check before buying</h3>
+      <h2>Edition not verified — check before buying</h2>
       {unconfirmed.map(b => <BookRow key={b.id} b={b} />)}
 
-      <h3>Statutes — free</h3>
+      <h2>Statutes — free</h2>
       {cat.statutes.map(s => <StatuteRow key={s.id} s={s} />)}
 
-      <h3>Where to buy</h3>
+      <h2>Where to buy</h2>
       {cat.vendors.map(v => (
         <div className="book" key={v.name}>
           <div className="book-title">

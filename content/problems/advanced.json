@@ -1,572 +1,572 @@
 {
- "schemaVersion": 1,
- "note": "Problem questions written in the second pass, covering legal reasoning, statutory interpretation, contract remedies, negligence and judicial review. Every scenario is invented; no judgment quoted here is a real decision.",
- "problems": [
-  {
-   "id": "pa-distinguish-01",
-   "moduleId": "m13-legal-reasoning",
-   "title": "The case that is nearly yours",
-   "kind": "analysis",
-   "minutes": 35,
-   "marks": 14,
-   "scenario": [
-    "The following are two hypothetical judgments written for this exercise. Neither is a real decision and neither should be cited.",
-    "In *Chandra v Perbadanan Kemajuan* (Federal Court, hypothetical), a statutory corporation ran a night market. It had for six years employed a marshal to control vehicle access to the loading bay. It stopped doing so without notice. A trader was struck by a reversing lorry in the bay and injured. The Federal Court held the corporation liable. The leading judgment said: 'Where a body has in fact assumed the task of controlling a known danger, and those who use the place have arranged their conduct on the footing that it continues to do so, it owes a duty to take reasonable care in the manner of its withdrawal. It was not obliged to employ a marshal. Having employed one for six years without qualification, it was obliged to say that it would stop.' The judgment added, in a separate paragraph: 'Whether a duty would arise where the body had never assumed the task at all is a different question, on which we have heard no argument.'",
-    "Your client is a stallholder at a different market run by the same corporation. The corporation has never employed a marshal there. Last month a delivery van reversed into her stall and destroyed her stock. She has no personal injury: her loss is the stock, and the four days of trade she lost while replacing it. She asks whether Chandra decides her case.",
-    "You are a pupil in chambers. Your master wants a note, not an opinion, and has asked specifically for the reasoning rather than the conclusion."
-   ],
-   "task": "State the ratio of Chandra. Identify what in it is obiter and why. Then say whether the decision binds a court hearing your client's claim, distinguishing it if it does not, and identify what further argument would be needed to succeed. Do not write a general essay on the duty of care.",
-   "rubric": [
+  "schemaVersion": 1,
+  "note": "Problem questions written in the second pass, covering legal reasoning, statutory interpretation, contract remedies, negligence and judicial review. Every scenario is invented; no judgment quoted here is a real decision.",
+  "problems": [
     {
-     "id": "d1",
-     "band": "issue",
-     "marks": 2,
-     "criterion": "Frames the question as whether the reasoning in Chandra extends to these facts — not as whether the client will win, and not as a general duty-of-care question.",
-     "authority": "Ratio decidendi / scope of precedent"
+      "id": "pa-distinguish-01",
+      "moduleId": "m13-legal-reasoning",
+      "title": "The case that is nearly yours",
+      "kind": "analysis",
+      "minutes": 35,
+      "marks": 14,
+      "scenario": [
+        "The following are two hypothetical judgments written for this exercise. Neither is a real decision and neither should be cited.",
+        "In *Chandra v Perbadanan Kemajuan* (Federal Court, hypothetical), a statutory corporation ran a night market. It had for six years employed a marshal to control vehicle access to the loading bay. It stopped doing so without notice. A trader was struck by a reversing lorry in the bay and injured. The Federal Court held the corporation liable. The leading judgment said: 'Where a body has in fact assumed the task of controlling a known danger, and those who use the place have arranged their conduct on the footing that it continues to do so, it owes a duty to take reasonable care in the manner of its withdrawal. It was not obliged to employ a marshal. Having employed one for six years without qualification, it was obliged to say that it would stop.' The judgment added, in a separate paragraph: 'Whether a duty would arise where the body had never assumed the task at all is a different question, on which we have heard no argument.'",
+        "Your client is a stallholder at a different market run by the same corporation. The corporation has never employed a marshal there. Last month a delivery van reversed into her stall and destroyed her stock. She has no personal injury: her loss is the stock, and the four days of trade she lost while replacing it. She asks whether Chandra decides her case.",
+        "You are a pupil in chambers. Your master wants a note, not an opinion, and has asked specifically for the reasoning rather than the conclusion."
+      ],
+      "task": "State the ratio of Chandra. Identify what in it is obiter and why. Then say whether the decision binds a court hearing your client's claim, distinguishing it if it does not, and identify what further argument would be needed to succeed. Do not write a general essay on the duty of care.",
+      "rubric": [
+        {
+          "id": "d1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Frames the question as whether the reasoning in Chandra extends to these facts — not as whether the client will win, and not as a general duty-of-care question.",
+          "authority": "Ratio decidendi / scope of precedent"
+        },
+        {
+          "id": "d2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States the test for ratio and obiter: the proposition the result required, with a statement being obiter if the outcome would stand without it.",
+          "authority": "Standard common law doctrine"
+        },
+        {
+          "id": "d3",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States the test for distinguishing: a difference is material only if the earlier reasoning depends on it.",
+          "authority": "Standard common law method"
+        },
+        {
+          "id": "d4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Formulates the ratio of Chandra at a workable level of generality — a duty arising from an assumed task of controlling a known danger, coupled with reliance, and going to the manner of withdrawal — rather than reciting the passage.",
+          "authority": "The leading judgment in Chandra"
+        },
+        {
+          "id": "d5",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Identifies the reservation on a body that never assumed the task as obiter, and gives the reason: the court expressly heard no argument on it.",
+          "authority": "The separate paragraph in Chandra"
+        },
+        {
+          "id": "d6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Applies the distinction to the client's facts: the corporation never assumed the task at this market, so the fact the reasoning depends on is absent, and Chandra does not decide her case.",
+          "authority": "Application to the facts"
+        },
+        {
+          "id": "d7",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Answers the question asked — Chandra does not bind on these facts — and identifies what would have to be argued instead rather than stopping at the negative.",
+          "authority": "Conclusion"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether the reasoning in Chandra reaches facts in which the corporation never assumed the task at all, and if not, what is left of the client's claim."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "The ratio decidendi is the proposition of law the court applied to the material facts in order to reach its result. A statement is obiter if the result would have stood without it; necessity is the test, not emphasis or length.",
+            "To distinguish a binding decision, the difference identified between its facts and yours must be one the earlier reasoning depended on. Pointing to a difference the reasoning did not turn on is not distinguishing."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The ratio of Chandra is that a body which has in fact assumed the task of controlling a known danger, in circumstances where users of the place have arranged their conduct on the footing that it continues, owes a duty to take reasonable care in the manner of its withdrawal. Two elements do the work: the assumption of the task, and the reliance built on it over six years. The court was explicit that the corporation was under no obligation to employ a marshal in the first place — the duty was about withdrawing, not about providing.",
+            "The final paragraph is obiter and the court says so in terms. It raises the case of a body that never assumed the task and states that it heard no argument on it. A court that expressly declines to decide a point has not decided it.",
+            "The client's facts fall squarely within that reservation. The corporation never employed a marshal at her market. There is therefore no assumed task and no reliance on its continuation, and the two facts the Chandra reasoning depends on are both absent. The difference is material in the strict sense: remove the assumption of the task and the reasoning has nothing to operate on.",
+            "It is worth noting what does not distinguish the case. That the client's loss is property and lost trade rather than personal injury is a difference, but Chandra did not turn on the type of damage, so standing alone it would not be a distinction — it may matter to remoteness or to recoverability of the trading loss, which is a separate question."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Chandra does not bind a court hearing this claim. It is distinguishable on the ground the Federal Court itself identified and reserved.",
+            "That is not the end of the client's claim. It means she cannot argue from an assumed task, and must instead establish a duty on ordinary principles — the relationship between an occupier or operator of premises and those invited to trade on them, and the foreseeability of vehicles reversing in a space shared with stalls. That is a different argument, and the note should say so rather than leaving the client with the impression that a favourable Federal Court decision covers her."
+          ]
+        }
+      ],
+      "traps": [
+        "Treating the difference in the kind of damage as the distinction. It is a difference, but the Chandra reasoning did not depend on it, so on its own it distinguishes nothing.",
+        "Concluding that because Chandra does not bind, the claim fails. Distinguishing removes an authority; it does not decide the case.",
+        "Writing a general essay on the duty of care. The task asked for the reasoning about precedent, and marks follow the task."
+      ],
+      "source": "Standard common law doctrine on ratio decidendi, obiter dictum and distinguishing. Both judgments in the scenario are invented for this exercise.",
+      "lastVerified": "2026-09-07",
+      "verify": "The exercise is about method, so nothing here needs a citation check. What does need checking is any real authority you bring to the final paragraph: if you argue a duty on ordinary principles, cite a current Malaysian decision on the duty of care and confirm it in a report you can hold."
     },
     {
-     "id": "d2",
-     "band": "rule",
-     "marks": 2,
-     "criterion": "States the test for ratio and obiter: the proposition the result required, with a statement being obiter if the outcome would stand without it.",
-     "authority": "Standard common law doctrine"
+      "id": "pa-interpretation-01",
+      "moduleId": "m14-statutory-interpretation",
+      "title": "Vehicles in the park",
+      "kind": "problem",
+      "minutes": 40,
+      "marks": 16,
+      "scenario": [
+        "The Recreational Grounds (Control) Enactment (a hypothetical State enactment, written for this exercise) provides:",
+        "Section 4(1): 'No person shall bring or permit to be brought into a public recreational ground any motor car, motor cycle, lorry, van or other vehicle.'",
+        "Section 4(2): 'Subsection (1) shall not apply to a vehicle used by an officer of the local authority in the performance of his duties.'",
+        "Section 9: 'Any person who contravenes section 4 commits an offence and shall on conviction be liable to a fine not exceeding two thousand ringgit.'",
+        "The long title of the Enactment is 'An Enactment to provide for the control of public recreational grounds and for the safety and quiet enjoyment of persons using them'.",
+        "Three prosecutions are brought. Encik Rahim wheeled a child's pram across the grounds. Puan Lim rode an electric mobility scooter, on which she depends to move at all, along the perimeter path. A group of volunteers carried in a decommissioned army jeep on a trailer and set it on a concrete plinth as a war memorial; the jeep has no engine and cannot move under its own power."
+      ],
+      "task": "Advise the prosecutor whether each of the three is caught by section 4(1). Set out the approach to construction you apply and the material you rely on, and reach a conclusion in each case.",
+      "rubric": [
+        {
+          "id": "i1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies the question as the scope of 'other vehicle' in s 4(1), and recognises that all three cases turn on that phrase rather than on three separate questions.",
+          "authority": "Section 4(1)"
+        },
+        {
+          "id": "i2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the statutory direction to prefer a construction promoting the purpose or object of the Act, and correctly locates it in s 17A of the Interpretation Acts 1948 and 1967.",
+          "authority": "Interpretation Acts 1948 and 1967, s 17A"
+        },
+        {
+          "id": "i3",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States ejusdem generis: general words following a list of specifics are read as confined to the same class as the specifics.",
+          "authority": "Standard canon of construction"
+        },
+        {
+          "id": "i4",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Establishes that the words are capable of more than one reading before turning to purpose, rather than beginning with purpose.",
+          "authority": "Order of construction"
+        },
+        {
+          "id": "i5",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Uses the long title, and the exemption in s 4(2) for vehicles used by officers on duty, as internal indications that the class contemplated is motorised vehicles capable of being driven — the exemption would be unnecessary otherwise.",
+          "authority": "Long title; s 4(2)"
+        },
+        {
+          "id": "i6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Reaches a defensible answer on the pram, reasoning from the class established rather than asserting: not within the class of motorised vehicles, and outside the mischief of safety and quiet enjoyment.",
+          "authority": "Application"
+        },
+        {
+          "id": "i7",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Treats the mobility scooter as the genuinely arguable case and argues it both ways — motorised and rideable, and so arguably within the class; but excluding it would defeat the purpose of enjoyment of the grounds by those who depend on it, and a penal provision is construed strictly.",
+          "authority": "Application; strict construction of penal provisions"
+        },
+        {
+          "id": "i8",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Answers on all three, including the memorial jeep, and takes a position rather than listing considerations.",
+          "authority": "Conclusion"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether a pram, an electric mobility scooter and an immobilised jeep on a plinth each fall within 'other vehicle' in s 4(1). All three turn on the same phrase, and the answer to each depends on the class the specific words establish."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Section 17A of the Interpretation Acts 1948 and 1967 requires that a construction which would promote the purpose or object underlying the Act be preferred to one which would not. That direction operates to choose between constructions the words can bear; where the language admits of only one meaning it does not displace it.",
+            "Where general words follow an enumeration of specific ones, the ejusdem generis principle reads the general words as confined to the same class as the specifics — provided a genus can be identified.",
+            "Section 4 is a penal provision, s 9 attaching a fine to its contravention. A penal provision is construed strictly, and an ambiguity that survives the ordinary process of construction is resolved in favour of the subject."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The words are capable of more than one reading. 'Other vehicle' read at large would cover anything that carries a person or goods, including a pram and a wheelbarrow; read as limited by the preceding list it covers motorised vehicles only. Both readings are available, which is what makes s 17A relevant at all.",
+            "Two internal indications point to the narrower class. The specifics — motor car, motor cycle, lorry, van — are all motorised road vehicles, which supplies a genus. And s 4(2) exempts vehicles used by officers of the local authority in the performance of their duties: an exemption that makes sense for a works van and no sense at all for a pram, and which would be unnecessary if the class were as wide as the literal reading suggests. The long title confirms the purpose: safety and the quiet enjoyment of users, which is a mischief motorised vehicles create and prams do not.",
+            "The pram is therefore outside s 4(1). It is not of the same class as the specifics, and prohibiting it would not advance the purpose of the Enactment.",
+            "The mobility scooter is the difficult case, and an answer that disposes of it in a line has not seen the question. It is motorised and it is ridden, so it is closer to the genus than a pram is. Against that: the purpose of the Enactment is the enjoyment of the grounds by those using them, and a construction that excludes from a public recreational ground the only means by which a person can be present at all works against that purpose rather than for it. The provision is penal and is construed strictly. The better view is that it falls outside s 4(1), but the argument is genuinely two-sided and the prosecutor should be told that a court could go the other way.",
+            "The jeep on the plinth has no engine and cannot move. It is not brought into the grounds as a vehicle but installed as a monument, and it creates none of the risk the Enactment addresses. On a purposive construction it is not within the prohibition. A prosecutor advised otherwise should be reminded what the court would be asked to find: that a war memorial is a lorry, van or other vehicle."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Encik Rahim is not caught. The memorial jeep is not caught. Puan Lim is, on the better view, not caught, but that is the one of the three on which the prosecutor should expect argument, and it should not be brought on the assumption that it is clear."
+          ]
+        }
+      ],
+      "traps": [
+        "Beginning with purpose. Section 17A chooses between available constructions; an answer that never shows the words are ambiguous has skipped the step that makes it apply.",
+        "Using ejusdem generis without identifying the genus. The principle needs a class, and saying so is part of the marks.",
+        "Disposing of the mobility scooter in a sentence. It is the one genuinely arguable case in the question and it carries the application marks.",
+        "Forgetting that s 4 is penal. Strict construction is a live point where an ambiguity survives."
+      ],
+      "source": "Interpretation Acts 1948 and 1967, s 17A; standard canons of construction (ejusdem generis, noscitur a sociis) and the presumption of strict construction of penal provisions. The Enactment is invented for this exercise.",
+      "lastVerified": "2026-09-07",
+      "verify": "Check the current text of s 17A of the Interpretation Acts 1948 and 1967 before quoting it, and check current Malaysian authority on the strict construction of penal provisions — the strength with which it is stated varies between judgments."
     },
     {
-     "id": "d3",
-     "band": "rule",
-     "marks": 2,
-     "criterion": "States the test for distinguishing: a difference is material only if the earlier reasoning depends on it.",
-     "authority": "Standard common law method"
+      "id": "pa-remedies-01",
+      "moduleId": "m06-contract",
+      "title": "The sum in clause 11",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "Seri Bina Sdn Bhd contracted with Datuk Farid to build a boutique hotel on his land. The contract price was RM6,000,000, and completion was fixed for 1 March. Clause 11 provided: 'In the event of delay in completion the Contractor shall pay to the Employer the sum of RM8,000 for each day of delay, which sum the parties agree is a genuine pre-estimate of the loss the Employer will suffer.'",
+        "Seri Bina completed on 30 April, sixty days late. Datuk Farid had intended to open the hotel on 15 March. He had taken no bookings, because his marketing manager had resigned in January and had not been replaced; the hotel in fact opened for business on 1 June, a month after the building was handed over, because of that.",
+        "Datuk Farid has withheld RM480,000 from the final payment, being sixty days at RM8,000. Seri Bina says it is entitled to the full balance. Datuk Farid's evidence of loss is a one-page projection of room revenue prepared by himself after the dispute arose.",
+        "In separate correspondence, Seri Bina says that the delay was caused by Datuk Farid's own late instructions on the facade, and that it wrote on 20 February asking for an extension of time, to which Datuk Farid never replied."
+      ],
+      "task": "Advise Seri Bina on its liability for the sum withheld. Deal with the effect of clause 11 and with what Datuk Farid must show to retain the money. You are not asked to advise on the extension of time claim, but say what you would need in order to advise on it.",
+      "rubric": [
+        {
+          "id": "m1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies the issue as the operation of s 75 on a sum named in the contract, and not as whether clause 11 is a 'penalty' at common law.",
+          "authority": "Contracts Act 1950, s 75"
+        },
+        {
+          "id": "m2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "Sets out s 75: reasonable compensation not exceeding the sum named, whether or not actual damage is proved to have been caused.",
+          "authority": "Contracts Act 1950, s 75"
+        },
+        {
+          "id": "m3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "Identifies that the Malaysian approach to s 75 changed: the strict requirement of proof of actual loss in Selva Kumar, and the reformulation in Cubic Electronics directing attention to legitimate interest and proportionality. Names both.",
+          "authority": "Selva Kumar v Thiagarajah; Cubic Electronics v Mars Telecommunications"
+        },
+        {
+          "id": "m4",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Treats the parties' own label — 'a genuine pre-estimate' — as evidence and not as conclusive, and says why.",
+          "authority": "Construction of clause 11"
+        },
+        {
+          "id": "m5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies the reformulated approach: identifies the employer's legitimate interest in timely completion of a hotel, and asks whether RM8,000 a day is out of all proportion to it, using the contract price and the nature of the project as the measure.",
+          "authority": "Application"
+        },
+        {
+          "id": "m6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Deals with the causation problem in the employer's own evidence: the hotel did not open because of the marketing manager's resignation, so a substantial part of the claimed loss was not caused by the delay.",
+          "authority": "Application; s 74 on remoteness and causation"
+        },
+        {
+          "id": "m7",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Assesses the quality of the evidence — a self-prepared post-dispute projection — and says what Datuk Farid would need instead.",
+          "authority": "Evidence of loss"
+        },
+        {
+          "id": "m8",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Advises Seri Bina on the likely outcome and states what is needed to advise on the extension of time: the contract's EOT machinery, the notice provisions, and whether the 20 February letter complied with them.",
+          "authority": "Conclusion"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether Datuk Farid may retain RM480,000 under clause 11, and what he must establish to do so. The starting point is s 75 of the Contracts Act 1950, not the English distinction between liquidated damages and penalties."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Section 75 provides that where a sum is named in the contract as the amount to be paid in case of breach, the party complaining of the breach is entitled to receive reasonable compensation not exceeding the amount so named, whether or not actual damage or loss is proved to have been caused thereby.",
+            "The Malaysian gloss on that section has moved. In Selva Kumar the Federal Court required a plaintiff to prove actual loss and confined recovery to what was proved, subject to the named sum as a ceiling; the clause operated as a cap and little more. In Cubic Electronics the Federal Court revisited the approach, drawing on Cavendish Square Holding BV v Makdessi, and directed attention to whether the clause protects a legitimate interest of the innocent party and whether the sum stipulated is out of all proportion to that interest.",
+            "Section 74 remains the measure for loss otherwise, with its two limbs and its exclusion of remote and indirect loss."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The clause describes itself as a genuine pre-estimate. That is evidence of the parties' intention and it is not conclusive: a label cannot convert a sum that is out of all proportion into one that is not, and the court looks at substance.",
+            "Datuk Farid has a legitimate interest in timely completion. A hotel is a revenue-producing asset and delay in handover is a real loss, which is precisely why parties to construction contracts stipulate daily rates. RM8,000 a day on a RM6,000,000 contract is roughly 0.13% of the contract price per day. That is not obviously extravagant for a hotel project, and on the Cubic Electronics approach Seri Bina would have difficulty showing the sum is out of all proportion to the interest protected.",
+            "The employer's difficulty is elsewhere, and it is causation. The hotel did not open on 15 March, but neither would it have opened then had the building been handed over on time: it opened on 1 June because there was no marketing manager from January, and the building was available from 30 April. On the employer's own account a month of the claimed loss flows from his own staffing and not from the delay. Even on the more generous reading of s 75, compensation must be reasonable, and compensating an employer for a loss the breach did not cause is not.",
+            "The evidence is also weak. A one-page projection prepared by the claimant after the dispute arose is the least persuasive form of evidence of loss available. What Datuk Farid would need is contemporaneous material: bookings actually cancelled, a rate card, occupancy at comparable properties in the period, and accounts showing the hotel's performance once open."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Seri Bina should expect Datuk Farid to be entitled to something under clause 11 — the interest protected is legitimate and the daily rate is not obviously disproportionate — but not to the full RM480,000 on the material as it stands. The causation point and the quality of the evidence are the two lines of attack, and they are stronger than an argument that the clause is unenforceable.",
+            "To advise on the extension of time I would need the contract's EOT provisions: what events entitle the contractor to an extension, what notice the contractor must give and within what period, whether the 20 February letter complied with those requirements, and what the consequences of the employer's silence are under the machinery. Without the contract, the letter proves only that a request was made."
+          ]
+        }
+      ],
+      "traps": [
+        "Answering out of the English penalty cases and never citing s 75. The section is the source of the rule and the marks follow it.",
+        "Giving only Selva Kumar, or only Cubic Electronics. The sequence is the point: an answer with one and not the other has not shown it knows the position changed.",
+        "Treating the parties' description of the sum as a genuine pre-estimate as conclusive.",
+        "Missing that a month of the claimed loss was caused by the employer's own staffing, not by the delay."
+      ],
+      "source": "Contracts Act 1950 ss 74 and 75; Selva Kumar a/l Murugiah v Thiagarajah a/l Retnasamy [1995] 1 MLJ 817 (FC); Cubic Electronics Sdn Bhd (in liquidation) v Mars Telecommunications Sdn Bhd [2019] 6 MLJ 15 (FC); Cavendish Square Holding BV v Talal El Makdessi [2015] UKSC 67. The facts are invented for this exercise.",
+      "lastVerified": "2026-09-07",
+      "verify": "Both case citations must be confirmed in a report you can hold, and you must check whether any Federal Court decision since Cubic Electronics has qualified the approach. This is the single most movable point in the contract module and an answer relying on a stale statement of it is worse than one that says it does not know."
     },
     {
-     "id": "d4",
-     "band": "application",
-     "marks": 3,
-     "criterion": "Formulates the ratio of Chandra at a workable level of generality — a duty arising from an assumed task of controlling a known danger, coupled with reliance, and going to the manner of withdrawal — rather than reciting the passage.",
-     "authority": "The leading judgment in Chandra"
+      "id": "pa-negligence-01",
+      "moduleId": "m07-tort",
+      "title": "The scaffolding and the second fall",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "Bina Kukuh Sdn Bhd erected scaffolding at a shoplot renovation. It omitted the toe boards required by its own method statement. A tin of paint was kicked off the platform by one of its workers and struck Mr Suresh, a passer-by, on the shoulder. He suffered a fracture.",
+        "At the hospital, a junior doctor read the wrong X-ray and discharged him without immobilising the arm. The fracture displaced and Mr Suresh now has permanent restricted movement. A consultant's report says that with correct treatment he would have made a full recovery in eight weeks; the misreading was, in her words, 'a serious departure from any acceptable standard'.",
+        "Mr Suresh had been walking in the roadway rather than on the five-foot way, which was clear and unobstructed, because he was looking at his telephone. Had he been on the five-foot way he would have been under the covered walkway and out of the line of the falling tin.",
+        "Mr Suresh is a freelance illustrator. He claims for the injury, for eleven months of lost commissions, and for the cost of retraining in a field that does not require fine motor control."
+      ],
+      "task": "Advise Mr Suresh on his claim against Bina Kukuh: whether the elements of negligence are made out, what damage the company is answerable for, and what reduction if any he should expect. Deal expressly with the hospital's treatment.",
+      "rubric": [
+        {
+          "id": "n1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies the issues as duty and breach against Bina Kukuh, the effect of the negligent medical treatment on causation, and apportionment for the claimant's own conduct — rather than treating it as a single question of liability.",
+          "authority": "Elements of negligence"
+        },
+        {
+          "id": "n2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the elements in order — duty, breach, factual causation, legal causation, remoteness, damage — and states the but-for test accurately.",
+          "authority": "Standard common law"
+        },
+        {
+          "id": "n3",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States the remoteness rule correctly: the kind of damage must be foreseeable, the extent need not be.",
+          "authority": "The Wagon Mound (No 1)"
+        },
+        {
+          "id": "n4",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Identifies s 12 of the Civil Law Act 1956 as the source of apportionment for contributory negligence, and that it reduces rather than defeats the claim.",
+          "authority": "Civil Law Act 1956, s 12"
+        },
+        {
+          "id": "n5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies duty and breach: a contractor erecting scaffolding over a public way owes a duty to passers-by, and departure from its own method statement is strong evidence of breach though not conclusive of it.",
+          "authority": "Application"
+        },
+        {
+          "id": "n6",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Addresses the medical treatment as a possible novus actus: negligent medical treatment does not ordinarily break the chain, but grossly negligent treatment may, and the consultant's characterisation is the material fact to argue from — both ways.",
+          "authority": "Novus actus interveniens"
+        },
+        {
+          "id": "n7",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Applies contributory negligence to walking in the roadway while looking at a telephone, and proposes a reasoned proportion rather than asserting that damages will be reduced.",
+          "authority": "Civil Law Act 1956, s 12"
+        },
+        {
+          "id": "n8",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Advises on the heads of loss, distinguishing the eight weeks Bina Kukuh is answerable for from the permanent restriction if the chain is broken, and takes a position on the retraining claim.",
+          "authority": "Conclusion"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Three questions. Whether Bina Kukuh is liable in negligence at all. Whether it is answerable for the permanent restriction, or only for the injury as it would have resolved with proper treatment. And by what proportion any award should be reduced for Mr Suresh's own conduct."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "The elements are duty, breach, factual causation, legal causation, remoteness and damage, and they are taken in that order because each assumes the one before.",
+            "Factual causation is the but-for test: would the damage have occurred but for the breach? Legal causation asks whether a later event broke the chain. Negligent conduct by a third party does not ordinarily do so where it was foreseeable; grossly negligent conduct may.",
+            "Remoteness: the defendant is liable for damage of a kind reasonably foreseeable, and it is no answer that the extent was greater than could have been foreseen.",
+            "Section 12(1) of the Civil Law Act 1956 provides that where a person suffers damage partly through his own fault and partly through the fault of another, the claim is not defeated but the damages are reduced to such extent as the court thinks just and equitable having regard to his share in the responsibility."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Duty and breach are straightforward. A contractor erecting scaffolding over a public thoroughfare owes a duty to those passing beneath it; the risk of objects falling is the paradigm case. The omission of toe boards required by the company's own method statement is strong evidence of breach — a defendant that has identified the precaution itself and then not taken it is poorly placed to argue that a reasonable contractor would not have taken it. It is evidence and not conclusive: the standard is that of the reasonable contractor, and a method statement can set a standard above it.",
+            "Factual causation of the initial fracture is clear on the but-for test. The difficulty is the second injury. The junior doctor's misreading is negligent, and on the consultant's evidence it is 'a serious departure from any acceptable standard'. Ordinary negligent medical treatment following an injury is treated as foreseeable and does not break the chain; the tortfeasor takes the risk that treatment will be imperfect. Grossly negligent treatment is capable of breaking it, and the consultant's characterisation is the fact from which that argument is built. The argument runs both ways and should be presented both ways: for Mr Suresh, that the treatment was a misreading rather than an act of a different character, and that the defendant should not escape the consequences of an injury it caused; for Bina Kukuh, that the permanent restriction is attributable entirely to the hospital's failure and that a full recovery in eight weeks was the natural course of the injury it caused.",
+            "Remoteness does not assist Bina Kukuh on the injury itself. Physical injury from a falling object is the very kind of damage the missing toe boards would have prevented, and the extent of it is irrelevant to foreseeability.",
+            "Contributory negligence is made out. Mr Suresh was in the roadway, on his telephone, when a clear covered walkway was available, and had he used it he would not have been struck. That is a failure to take reasonable care for his own safety which contributed to the damage. On facts of this kind a reduction in the region of twenty to twenty-five per cent would be defensible; the figure should be reasoned from his share in the responsibility, not asserted."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Bina Kukuh is liable in negligence for the fracture. Whether it is answerable for the permanent restriction turns on the medical evidence about the character of the hospital's failure, and Mr Suresh should be advised that this is genuinely uncertain and that the hospital or its employer is a proper additional defendant.",
+            "On damages: the eight weeks of lost commissions are recoverable in any event. The remaining lost commissions and the retraining costs depend on whether the chain was broken. The retraining claim is in principle recoverable as the cost of mitigating a permanent loss of earning capacity, but it must be shown to be reasonable, and it stands or falls with the permanence of the restriction."
+          ]
+        }
+      ],
+      "traps": [
+        "Treating the hospital's negligence as automatically breaking the chain. The ordinary rule is the opposite, and the argument is about whether this was gross enough to be an exception.",
+        "Using novus actus and contributory negligence as if they were the same idea. One defeats, the other reduces.",
+        "Asserting that damages 'will be reduced' without proposing a proportion and reasoning to it.",
+        "Forgetting to advise that the hospital or its employer should be joined."
+      ],
+      "source": "Standard common law elements of negligence; The Wagon Mound (No 1) [1961] AC 388 on remoteness; Civil Law Act 1956 s 12 on apportionment. The facts are invented for this exercise.",
+      "lastVerified": "2026-09-07",
+      "verify": "Check s 12 of the Civil Law Act 1956 against the current text, and find current Malaysian authority on the duty of care test and on whether grossly negligent medical treatment breaks the chain of causation — the English cases are persuasive only and should not be cited as if they settled the Malaysian position."
     },
     {
-     "id": "d5",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Identifies the reservation on a body that never assumed the task as obiter, and gives the reason: the court expressly heard no argument on it.",
-     "authority": "The separate paragraph in Chandra"
-    },
-    {
-     "id": "d6",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Applies the distinction to the client's facts: the corporation never assumed the task at this market, so the fact the reasoning depends on is absent, and Chandra does not decide her case.",
-     "authority": "Application to the facts"
-    },
-    {
-     "id": "d7",
-     "band": "conclusion",
-     "marks": 1,
-     "criterion": "Answers the question asked — Chandra does not bind on these facts — and identifies what would have to be argued instead rather than stopping at the negative.",
-     "authority": "Conclusion"
+      "id": "pa-jr-01",
+      "moduleId": "m12-administrative",
+      "title": "The licence revoked on a Friday",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "The Hawkers and Petty Traders Board of a local authority has for eleven years renewed Puan Kamala's licence to trade from a fixed stall. Each renewal has followed a written application and, where any complaint has been made, a meeting at which the trader has been heard. That practice is not in any regulation; it is what the Board has always done, and it is described in a leaflet the Board publishes for applicants.",
+        "On a Friday afternoon Puan Kamala received a letter revoking her licence with immediate effect. The letter said only: 'Following consideration of complaints received, the Board has resolved to revoke the licence.' She has not been told what the complaints were or who made them, and she was not invited to any meeting.",
+        "She has since learned two things. The first is that the complaints came from the proprietor of a restaurant beside her stall. The second is that the chairman of the Board is that proprietor's brother-in-law, and that he chaired the meeting at which the revocation was resolved and voted on it.",
+        "The revocation was on 4 April. She consulted you on 20 September, having spent the intervening months writing to the Board and to her assemblyman."
+      ],
+      "task": "Advise Puan Kamala on an application for judicial review: the grounds available, the relief to seek, and the procedural obstacles. Advise on the prospects honestly, including anything that may defeat the application regardless of its merits.",
+      "rubric": [
+        {
+          "id": "j1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies both substantive grounds — breach of the right to be heard and apparent bias — and recognises that the delay is a threshold problem to be dealt with first, not an afterthought.",
+          "authority": "Order 53; natural justice"
+        },
+        {
+          "id": "j2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the two rules of natural justice accurately: notice of the case and an opportunity to answer; and no person a judge in his own cause, tested objectively.",
+          "authority": "Audi alteram partem; nemo judex in causa sua"
+        },
+        {
+          "id": "j3",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States the requirements for a legitimate expectation: a clear representation or settled practice, and that a procedural expectation is the more secure form.",
+          "authority": "Legitimate expectation"
+        },
+        {
+          "id": "j4",
+          "band": "method",
+          "marks": 3,
+          "criterion": "Identifies Order 53 as the route, the requirement of leave, the requirement that the applicant be adversely affected, and the time limit running from when the grounds arose — and applies the time limit to the six-month delay.",
+          "authority": "Rules of Court 2012, O 53"
+        },
+        {
+          "id": "j5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Applies audi alteram partem: a revocation affecting livelihood, given without notice of the substance of the complaints or any opportunity to answer, and against a settled practice of hearing the trader, is a clear breach.",
+          "authority": "Application"
+        },
+        {
+          "id": "j6",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Applies the bias rule: the chairman's relationship to the complainant and his participation in and vote on the decision would lead a fair-minded and informed observer to see a real danger of bias; actual bias need not be shown.",
+          "authority": "Application"
+        },
+        {
+          "id": "j7",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Identifies the relief — certiorari to quash, and remitter for reconsideration by a differently constituted Board — and explains why the court will not ordinarily substitute its own decision on the licence.",
+          "authority": "Relief"
+        },
+        {
+          "id": "j8",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Gives an honest overall assessment, including that the merits may not be reached if leave is refused for delay, and advises what must be filed and how quickly.",
+          "authority": "Conclusion"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Whether the revocation is amenable to judicial review on the grounds of breach of natural justice and apparent bias, and whether an application made more than five months after the decision can get past the threshold requirements of Order 53."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Audi alteram partem requires that a person liable to be affected by a decision be given notice of the case against him and a fair opportunity to answer it. What fairness requires varies with the decision; a decision removing a livelihood attracts a high level of protection.",
+            "Nemo judex in causa sua: no person may be a judge in his own cause. Actual bias need not be shown. The test is objective — whether a fair-minded and informed observer would conclude that there was a real danger, or real possibility, of bias.",
+            "A legitimate expectation may arise from a clear and unambiguous representation or from a settled practice. A procedural expectation — that a person will be heard, or consulted, before a decision is taken — is the more secure form and does not require the substantive benefit to be conferred.",
+            "Judicial review is brought under Order 53 of the Rules of Court 2012. Leave is required; the applicant must be adversely affected by the decision; and the application must be made within the period the rule prescribes, running from the date when the grounds for the application first arose. Relief includes certiorari, prohibition, mandamus, declaration and injunction."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The substantive grounds are strong. Puan Kamala was told only that complaints had been considered. She was not told what was alleged, by whom, or when, and she was given no opportunity to answer. A decision terminating an eleven-year livelihood on that basis is a breach of the right to be heard on any view of what fairness required here.",
+            "The Board's settled practice reinforces it. For eleven years the Board has held a meeting where a complaint was made, and it publishes that practice in a leaflet. That is a settled practice and a representation, and it founds a procedural legitimate expectation that she would be heard before her licence was revoked. Departing from it without notice is itself reviewable.",
+            "The bias ground is at least as strong. The chairman is the complainant's brother-in-law; he chaired the meeting and voted. A fair-minded and informed observer, knowing those facts, would conclude there was a real danger that the decision was affected. Nothing turns on whether the chairman was in fact influenced, and it would be a mistake to plead the case as one of actual bias.",
+            "The relief to seek is certiorari to quash the revocation, together with a declaration if useful, and remitter to a differently constituted Board for reconsideration according to law. The court reviews the process; it will not ordinarily decide for itself whether Puan Kamala should hold a licence, because that is the decision Parliament has entrusted to the Board.",
+            "The obstacle is delay. The revocation was on 4 April and she consulted you on 20 September. Under Order 53 the application for leave must be made within the prescribed period from the date the grounds arose, and correspondence with the Board and with an assemblyman does not stop time running. Whether an extension is available, and on what basis, must be checked against the current text of the rule and current authority; the explanation for the delay, the absence of prejudice to third parties, and the strength of the merits are the material an application to extend would be built on."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "On the merits the application is strong on both grounds, and either alone would justify quashing the decision. The realistic risk is that the merits are never reached: leave may be refused because the application is out of time, and that must be put to her plainly rather than mentioned at the end.",
+            "The immediate step is to file the leave application without any further delay, supported by an affidavit exhibiting the leaflet describing the Board's practice, the revocation letter, and the evidence of the relationship between the chairman and the complainant, together with a full and candid explanation of the five months. Every further week weakens the application to extend time."
+          ]
+        }
+      ],
+      "traps": [
+        "Leaving the time limit to the end, or omitting it. It is capable of ending the case regardless of the merits, and an advice that buries it has not advised the client.",
+        "Pleading actual bias. The objective test is easier to satisfy and does not require an allegation of dishonesty against the chairman.",
+        "Asking the court to restore the licence. Review goes to the process; the remedy is to quash and remit.",
+        "Treating the leaflet and the eleven-year practice as irrelevant because they are not in any regulation. That is precisely what founds the legitimate expectation."
+      ],
+      "source": "Rules of Court 2012, Order 53; the rules of natural justice and the doctrine of legitimate expectation as received in Malaysia. The facts are invented for this exercise.",
+      "lastVerified": "2026-09-07",
+      "verify": "Check the current Order 53 for the leave requirement, the standing formula and the time limit, including any power to extend. Check current Malaysian authority for the formulation of the bias test and for the reception of legitimate expectation, and cite Malaysian decisions rather than English ones."
     }
-   ],
-   "modelAnswer": [
-    {
-     "h": "Issue",
-     "p": [
-      "Whether the reasoning in Chandra reaches facts in which the corporation never assumed the task at all, and if not, what is left of the client's claim."
-     ]
-    },
-    {
-     "h": "Rule",
-     "p": [
-      "The ratio decidendi is the proposition of law the court applied to the material facts in order to reach its result. A statement is obiter if the result would have stood without it; necessity is the test, not emphasis or length.",
-      "To distinguish a binding decision, the difference identified between its facts and yours must be one the earlier reasoning depended on. Pointing to a difference the reasoning did not turn on is not distinguishing."
-     ]
-    },
-    {
-     "h": "Application",
-     "p": [
-      "The ratio of Chandra is that a body which has in fact assumed the task of controlling a known danger, in circumstances where users of the place have arranged their conduct on the footing that it continues, owes a duty to take reasonable care in the manner of its withdrawal. Two elements do the work: the assumption of the task, and the reliance built on it over six years. The court was explicit that the corporation was under no obligation to employ a marshal in the first place — the duty was about withdrawing, not about providing.",
-      "The final paragraph is obiter and the court says so in terms. It raises the case of a body that never assumed the task and states that it heard no argument on it. A court that expressly declines to decide a point has not decided it.",
-      "The client's facts fall squarely within that reservation. The corporation never employed a marshal at her market. There is therefore no assumed task and no reliance on its continuation, and the two facts the Chandra reasoning depends on are both absent. The difference is material in the strict sense: remove the assumption of the task and the reasoning has nothing to operate on.",
-      "It is worth noting what does not distinguish the case. That the client's loss is property and lost trade rather than personal injury is a difference, but Chandra did not turn on the type of damage, so standing alone it would not be a distinction — it may matter to remoteness or to recoverability of the trading loss, which is a separate question."
-     ]
-    },
-    {
-     "h": "Conclusion",
-     "p": [
-      "Chandra does not bind a court hearing this claim. It is distinguishable on the ground the Federal Court itself identified and reserved.",
-      "That is not the end of the client's claim. It means she cannot argue from an assumed task, and must instead establish a duty on ordinary principles — the relationship between an occupier or operator of premises and those invited to trade on them, and the foreseeability of vehicles reversing in a space shared with stalls. That is a different argument, and the note should say so rather than leaving the client with the impression that a favourable Federal Court decision covers her."
-     ]
-    }
-   ],
-   "traps": [
-    "Treating the difference in the kind of damage as the distinction. It is a difference, but the Chandra reasoning did not depend on it, so on its own it distinguishes nothing.",
-    "Concluding that because Chandra does not bind, the claim fails. Distinguishing removes an authority; it does not decide the case.",
-    "Writing a general essay on the duty of care. The task asked for the reasoning about precedent, and marks follow the task."
-   ],
-   "source": "Standard common law doctrine on ratio decidendi, obiter dictum and distinguishing. Both judgments in the scenario are invented for this exercise.",
-   "lastVerified": "2026-09-07",
-   "verify": "The exercise is about method, so nothing here needs a citation check. What does need checking is any real authority you bring to the final paragraph: if you argue a duty on ordinary principles, cite a current Malaysian decision on the duty of care and confirm it in a report you can hold."
-  },
-  {
-   "id": "pa-interpretation-01",
-   "moduleId": "m14-statutory-interpretation",
-   "title": "Vehicles in the park",
-   "kind": "problem",
-   "minutes": 40,
-   "marks": 16,
-   "scenario": [
-    "The Recreational Grounds (Control) Enactment (a hypothetical State enactment, written for this exercise) provides:",
-    "Section 4(1): 'No person shall bring or permit to be brought into a public recreational ground any motor car, motor cycle, lorry, van or other vehicle.'",
-    "Section 4(2): 'Subsection (1) shall not apply to a vehicle used by an officer of the local authority in the performance of his duties.'",
-    "Section 9: 'Any person who contravenes section 4 commits an offence and shall on conviction be liable to a fine not exceeding two thousand ringgit.'",
-    "The long title of the Enactment is 'An Enactment to provide for the control of public recreational grounds and for the safety and quiet enjoyment of persons using them'.",
-    "Three prosecutions are brought. Encik Rahim wheeled a child's pram across the grounds. Puan Lim rode an electric mobility scooter, on which she depends to move at all, along the perimeter path. A group of volunteers carried in a decommissioned army jeep on a trailer and set it on a concrete plinth as a war memorial; the jeep has no engine and cannot move under its own power."
-   ],
-   "task": "Advise the prosecutor whether each of the three is caught by section 4(1). Set out the approach to construction you apply and the material you rely on, and reach a conclusion in each case.",
-   "rubric": [
-    {
-     "id": "i1",
-     "band": "issue",
-     "marks": 2,
-     "criterion": "Identifies the question as the scope of 'other vehicle' in s 4(1), and recognises that all three cases turn on that phrase rather than on three separate questions.",
-     "authority": "Section 4(1)"
-    },
-    {
-     "id": "i2",
-     "band": "rule",
-     "marks": 3,
-     "criterion": "States the statutory direction to prefer a construction promoting the purpose or object of the Act, and correctly locates it in s 17A of the Interpretation Acts 1948 and 1967.",
-     "authority": "Interpretation Acts 1948 and 1967, s 17A"
-    },
-    {
-     "id": "i3",
-     "band": "rule",
-     "marks": 2,
-     "criterion": "States ejusdem generis: general words following a list of specifics are read as confined to the same class as the specifics.",
-     "authority": "Standard canon of construction"
-    },
-    {
-     "id": "i4",
-     "band": "method",
-     "marks": 2,
-     "criterion": "Establishes that the words are capable of more than one reading before turning to purpose, rather than beginning with purpose.",
-     "authority": "Order of construction"
-    },
-    {
-     "id": "i5",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Uses the long title, and the exemption in s 4(2) for vehicles used by officers on duty, as internal indications that the class contemplated is motorised vehicles capable of being driven — the exemption would be unnecessary otherwise.",
-     "authority": "Long title; s 4(2)"
-    },
-    {
-     "id": "i6",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Reaches a defensible answer on the pram, reasoning from the class established rather than asserting: not within the class of motorised vehicles, and outside the mischief of safety and quiet enjoyment.",
-     "authority": "Application"
-    },
-    {
-     "id": "i7",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Treats the mobility scooter as the genuinely arguable case and argues it both ways — motorised and rideable, and so arguably within the class; but excluding it would defeat the purpose of enjoyment of the grounds by those who depend on it, and a penal provision is construed strictly.",
-     "authority": "Application; strict construction of penal provisions"
-    },
-    {
-     "id": "i8",
-     "band": "conclusion",
-     "marks": 1,
-     "criterion": "Answers on all three, including the memorial jeep, and takes a position rather than listing considerations.",
-     "authority": "Conclusion"
-    }
-   ],
-   "modelAnswer": [
-    {
-     "h": "Issue",
-     "p": [
-      "Whether a pram, an electric mobility scooter and an immobilised jeep on a plinth each fall within 'other vehicle' in s 4(1). All three turn on the same phrase, and the answer to each depends on the class the specific words establish."
-     ]
-    },
-    {
-     "h": "Rule",
-     "p": [
-      "Section 17A of the Interpretation Acts 1948 and 1967 requires that a construction which would promote the purpose or object underlying the Act be preferred to one which would not. That direction operates to choose between constructions the words can bear; where the language admits of only one meaning it does not displace it.",
-      "Where general words follow an enumeration of specific ones, the ejusdem generis principle reads the general words as confined to the same class as the specifics — provided a genus can be identified.",
-      "Section 4 is a penal provision, s 9 attaching a fine to its contravention. A penal provision is construed strictly, and an ambiguity that survives the ordinary process of construction is resolved in favour of the subject."
-     ]
-    },
-    {
-     "h": "Application",
-     "p": [
-      "The words are capable of more than one reading. 'Other vehicle' read at large would cover anything that carries a person or goods, including a pram and a wheelbarrow; read as limited by the preceding list it covers motorised vehicles only. Both readings are available, which is what makes s 17A relevant at all.",
-      "Two internal indications point to the narrower class. The specifics — motor car, motor cycle, lorry, van — are all motorised road vehicles, which supplies a genus. And s 4(2) exempts vehicles used by officers of the local authority in the performance of their duties: an exemption that makes sense for a works van and no sense at all for a pram, and which would be unnecessary if the class were as wide as the literal reading suggests. The long title confirms the purpose: safety and the quiet enjoyment of users, which is a mischief motorised vehicles create and prams do not.",
-      "The pram is therefore outside s 4(1). It is not of the same class as the specifics, and prohibiting it would not advance the purpose of the Enactment.",
-      "The mobility scooter is the difficult case, and an answer that disposes of it in a line has not seen the question. It is motorised and it is ridden, so it is closer to the genus than a pram is. Against that: the purpose of the Enactment is the enjoyment of the grounds by those using them, and a construction that excludes from a public recreational ground the only means by which a person can be present at all works against that purpose rather than for it. The provision is penal and is construed strictly. The better view is that it falls outside s 4(1), but the argument is genuinely two-sided and the prosecutor should be told that a court could go the other way.",
-      "The jeep on the plinth has no engine and cannot move. It is not brought into the grounds as a vehicle but installed as a monument, and it creates none of the risk the Enactment addresses. On a purposive construction it is not within the prohibition. A prosecutor advised otherwise should be reminded what the court would be asked to find: that a war memorial is a lorry, van or other vehicle."
-     ]
-    },
-    {
-     "h": "Conclusion",
-     "p": [
-      "Encik Rahim is not caught. The memorial jeep is not caught. Puan Lim is, on the better view, not caught, but that is the one of the three on which the prosecutor should expect argument, and it should not be brought on the assumption that it is clear."
-     ]
-    }
-   ],
-   "traps": [
-    "Beginning with purpose. Section 17A chooses between available constructions; an answer that never shows the words are ambiguous has skipped the step that makes it apply.",
-    "Using ejusdem generis without identifying the genus. The principle needs a class, and saying so is part of the marks.",
-    "Disposing of the mobility scooter in a sentence. It is the one genuinely arguable case in the question and it carries the application marks.",
-    "Forgetting that s 4 is penal. Strict construction is a live point where an ambiguity survives."
-   ],
-   "source": "Interpretation Acts 1948 and 1967, s 17A; standard canons of construction (ejusdem generis, noscitur a sociis) and the presumption of strict construction of penal provisions. The Enactment is invented for this exercise.",
-   "lastVerified": "2026-09-07",
-   "verify": "Check the current text of s 17A of the Interpretation Acts 1948 and 1967 before quoting it, and check current Malaysian authority on the strict construction of penal provisions — the strength with which it is stated varies between judgments."
-  },
-  {
-   "id": "pa-remedies-01",
-   "moduleId": "m06-contract",
-   "title": "The sum in clause 11",
-   "kind": "problem",
-   "minutes": 45,
-   "marks": 18,
-   "scenario": [
-    "Seri Bina Sdn Bhd contracted with Datuk Farid to build a boutique hotel on his land. The contract price was RM6,000,000, and completion was fixed for 1 March. Clause 11 provided: 'In the event of delay in completion the Contractor shall pay to the Employer the sum of RM8,000 for each day of delay, which sum the parties agree is a genuine pre-estimate of the loss the Employer will suffer.'",
-    "Seri Bina completed on 30 April, sixty days late. Datuk Farid had intended to open the hotel on 15 March. He had taken no bookings, because his marketing manager had resigned in January and had not been replaced; the hotel in fact opened for business on 1 June, a month after the building was handed over, because of that.",
-    "Datuk Farid has withheld RM480,000 from the final payment, being sixty days at RM8,000. Seri Bina says it is entitled to the full balance. Datuk Farid's evidence of loss is a one-page projection of room revenue prepared by himself after the dispute arose.",
-    "In separate correspondence, Seri Bina says that the delay was caused by Datuk Farid's own late instructions on the facade, and that it wrote on 20 February asking for an extension of time, to which Datuk Farid never replied."
-   ],
-   "task": "Advise Seri Bina on its liability for the sum withheld. Deal with the effect of clause 11 and with what Datuk Farid must show to retain the money. You are not asked to advise on the extension of time claim, but say what you would need in order to advise on it.",
-   "rubric": [
-    {
-     "id": "m1",
-     "band": "issue",
-     "marks": 2,
-     "criterion": "Identifies the issue as the operation of s 75 on a sum named in the contract, and not as whether clause 11 is a 'penalty' at common law.",
-     "authority": "Contracts Act 1950, s 75"
-    },
-    {
-     "id": "m2",
-     "band": "rule",
-     "marks": 3,
-     "criterion": "Sets out s 75: reasonable compensation not exceeding the sum named, whether or not actual damage is proved to have been caused.",
-     "authority": "Contracts Act 1950, s 75"
-    },
-    {
-     "id": "m3",
-     "band": "rule",
-     "marks": 3,
-     "criterion": "Identifies that the Malaysian approach to s 75 changed: the strict requirement of proof of actual loss in Selva Kumar, and the reformulation in Cubic Electronics directing attention to legitimate interest and proportionality. Names both.",
-     "authority": "Selva Kumar v Thiagarajah; Cubic Electronics v Mars Telecommunications"
-    },
-    {
-     "id": "m4",
-     "band": "method",
-     "marks": 2,
-     "criterion": "Treats the parties' own label — 'a genuine pre-estimate' — as evidence and not as conclusive, and says why.",
-     "authority": "Construction of clause 11"
-    },
-    {
-     "id": "m5",
-     "band": "application",
-     "marks": 3,
-     "criterion": "Applies the reformulated approach: identifies the employer's legitimate interest in timely completion of a hotel, and asks whether RM8,000 a day is out of all proportion to it, using the contract price and the nature of the project as the measure.",
-     "authority": "Application"
-    },
-    {
-     "id": "m6",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Deals with the causation problem in the employer's own evidence: the hotel did not open because of the marketing manager's resignation, so a substantial part of the claimed loss was not caused by the delay.",
-     "authority": "Application; s 74 on remoteness and causation"
-    },
-    {
-     "id": "m7",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Assesses the quality of the evidence — a self-prepared post-dispute projection — and says what Datuk Farid would need instead.",
-     "authority": "Evidence of loss"
-    },
-    {
-     "id": "m8",
-     "band": "conclusion",
-     "marks": 1,
-     "criterion": "Advises Seri Bina on the likely outcome and states what is needed to advise on the extension of time: the contract's EOT machinery, the notice provisions, and whether the 20 February letter complied with them.",
-     "authority": "Conclusion"
-    }
-   ],
-   "modelAnswer": [
-    {
-     "h": "Issue",
-     "p": [
-      "Whether Datuk Farid may retain RM480,000 under clause 11, and what he must establish to do so. The starting point is s 75 of the Contracts Act 1950, not the English distinction between liquidated damages and penalties."
-     ]
-    },
-    {
-     "h": "Rule",
-     "p": [
-      "Section 75 provides that where a sum is named in the contract as the amount to be paid in case of breach, the party complaining of the breach is entitled to receive reasonable compensation not exceeding the amount so named, whether or not actual damage or loss is proved to have been caused thereby.",
-      "The Malaysian gloss on that section has moved. In Selva Kumar the Federal Court required a plaintiff to prove actual loss and confined recovery to what was proved, subject to the named sum as a ceiling; the clause operated as a cap and little more. In Cubic Electronics the Federal Court revisited the approach, drawing on Cavendish Square Holding BV v Makdessi, and directed attention to whether the clause protects a legitimate interest of the innocent party and whether the sum stipulated is out of all proportion to that interest.",
-      "Section 74 remains the measure for loss otherwise, with its two limbs and its exclusion of remote and indirect loss."
-     ]
-    },
-    {
-     "h": "Application",
-     "p": [
-      "The clause describes itself as a genuine pre-estimate. That is evidence of the parties' intention and it is not conclusive: a label cannot convert a sum that is out of all proportion into one that is not, and the court looks at substance.",
-      "Datuk Farid has a legitimate interest in timely completion. A hotel is a revenue-producing asset and delay in handover is a real loss, which is precisely why parties to construction contracts stipulate daily rates. RM8,000 a day on a RM6,000,000 contract is roughly 0.13% of the contract price per day. That is not obviously extravagant for a hotel project, and on the Cubic Electronics approach Seri Bina would have difficulty showing the sum is out of all proportion to the interest protected.",
-      "The employer's difficulty is elsewhere, and it is causation. The hotel did not open on 15 March, but neither would it have opened then had the building been handed over on time: it opened on 1 June because there was no marketing manager from January, and the building was available from 30 April. On the employer's own account a month of the claimed loss flows from his own staffing and not from the delay. Even on the more generous reading of s 75, compensation must be reasonable, and compensating an employer for a loss the breach did not cause is not.",
-      "The evidence is also weak. A one-page projection prepared by the claimant after the dispute arose is the least persuasive form of evidence of loss available. What Datuk Farid would need is contemporaneous material: bookings actually cancelled, a rate card, occupancy at comparable properties in the period, and accounts showing the hotel's performance once open."
-     ]
-    },
-    {
-     "h": "Conclusion",
-     "p": [
-      "Seri Bina should expect Datuk Farid to be entitled to something under clause 11 — the interest protected is legitimate and the daily rate is not obviously disproportionate — but not to the full RM480,000 on the material as it stands. The causation point and the quality of the evidence are the two lines of attack, and they are stronger than an argument that the clause is unenforceable.",
-      "To advise on the extension of time I would need the contract's EOT provisions: what events entitle the contractor to an extension, what notice the contractor must give and within what period, whether the 20 February letter complied with those requirements, and what the consequences of the employer's silence are under the machinery. Without the contract, the letter proves only that a request was made."
-     ]
-    }
-   ],
-   "traps": [
-    "Answering out of the English penalty cases and never citing s 75. The section is the source of the rule and the marks follow it.",
-    "Giving only Selva Kumar, or only Cubic Electronics. The sequence is the point: an answer with one and not the other has not shown it knows the position changed.",
-    "Treating the parties' description of the sum as a genuine pre-estimate as conclusive.",
-    "Missing that a month of the claimed loss was caused by the employer's own staffing, not by the delay."
-   ],
-   "source": "Contracts Act 1950 ss 74 and 75; Selva Kumar a/l Murugiah v Thiagarajah a/l Retnasamy [1995] 1 MLJ 817 (FC); Cubic Electronics Sdn Bhd (in liquidation) v Mars Telecommunications Sdn Bhd [2019] 2 MLJ 806 (FC). The facts are invented for this exercise.",
-   "lastVerified": "2026-09-07",
-   "verify": "Both case citations must be confirmed in a report you can hold, and you must check whether any Federal Court decision since Cubic Electronics has qualified the approach. This is the single most movable point in the contract module and an answer relying on a stale statement of it is worse than one that says it does not know."
-  },
-  {
-   "id": "pa-negligence-01",
-   "moduleId": "m07-tort",
-   "title": "The scaffolding and the second fall",
-   "kind": "problem",
-   "minutes": 45,
-   "marks": 18,
-   "scenario": [
-    "Bina Kukuh Sdn Bhd erected scaffolding at a shoplot renovation. It omitted the toe boards required by its own method statement. A tin of paint was kicked off the platform by one of its workers and struck Mr Suresh, a passer-by, on the shoulder. He suffered a fracture.",
-    "At the hospital, a junior doctor read the wrong X-ray and discharged him without immobilising the arm. The fracture displaced and Mr Suresh now has permanent restricted movement. A consultant's report says that with correct treatment he would have made a full recovery in eight weeks; the misreading was, in her words, 'a serious departure from any acceptable standard'.",
-    "Mr Suresh had been walking in the roadway rather than on the five-foot way, which was clear and unobstructed, because he was looking at his telephone. Had he been on the five-foot way he would have been under the covered walkway and out of the line of the falling tin.",
-    "Mr Suresh is a freelance illustrator. He claims for the injury, for eleven months of lost commissions, and for the cost of retraining in a field that does not require fine motor control."
-   ],
-   "task": "Advise Mr Suresh on his claim against Bina Kukuh: whether the elements of negligence are made out, what damage the company is answerable for, and what reduction if any he should expect. Deal expressly with the hospital's treatment.",
-   "rubric": [
-    {
-     "id": "n1",
-     "band": "issue",
-     "marks": 2,
-     "criterion": "Identifies the issues as duty and breach against Bina Kukuh, the effect of the negligent medical treatment on causation, and apportionment for the claimant's own conduct — rather than treating it as a single question of liability.",
-     "authority": "Elements of negligence"
-    },
-    {
-     "id": "n2",
-     "band": "rule",
-     "marks": 3,
-     "criterion": "States the elements in order — duty, breach, factual causation, legal causation, remoteness, damage — and states the but-for test accurately.",
-     "authority": "Standard common law"
-    },
-    {
-     "id": "n3",
-     "band": "rule",
-     "marks": 2,
-     "criterion": "States the remoteness rule correctly: the kind of damage must be foreseeable, the extent need not be.",
-     "authority": "The Wagon Mound (No 1)"
-    },
-    {
-     "id": "n4",
-     "band": "rule",
-     "marks": 2,
-     "criterion": "Identifies s 12 of the Civil Law Act 1956 as the source of apportionment for contributory negligence, and that it reduces rather than defeats the claim.",
-     "authority": "Civil Law Act 1956, s 12"
-    },
-    {
-     "id": "n5",
-     "band": "application",
-     "marks": 3,
-     "criterion": "Applies duty and breach: a contractor erecting scaffolding over a public way owes a duty to passers-by, and departure from its own method statement is strong evidence of breach though not conclusive of it.",
-     "authority": "Application"
-    },
-    {
-     "id": "n6",
-     "band": "application",
-     "marks": 3,
-     "criterion": "Addresses the medical treatment as a possible novus actus: negligent medical treatment does not ordinarily break the chain, but grossly negligent treatment may, and the consultant's characterisation is the material fact to argue from — both ways.",
-     "authority": "Novus actus interveniens"
-    },
-    {
-     "id": "n7",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Applies contributory negligence to walking in the roadway while looking at a telephone, and proposes a reasoned proportion rather than asserting that damages will be reduced.",
-     "authority": "Civil Law Act 1956, s 12"
-    },
-    {
-     "id": "n8",
-     "band": "conclusion",
-     "marks": 1,
-     "criterion": "Advises on the heads of loss, distinguishing the eight weeks Bina Kukuh is answerable for from the permanent restriction if the chain is broken, and takes a position on the retraining claim.",
-     "authority": "Conclusion"
-    }
-   ],
-   "modelAnswer": [
-    {
-     "h": "Issue",
-     "p": [
-      "Three questions. Whether Bina Kukuh is liable in negligence at all. Whether it is answerable for the permanent restriction, or only for the injury as it would have resolved with proper treatment. And by what proportion any award should be reduced for Mr Suresh's own conduct."
-     ]
-    },
-    {
-     "h": "Rule",
-     "p": [
-      "The elements are duty, breach, factual causation, legal causation, remoteness and damage, and they are taken in that order because each assumes the one before.",
-      "Factual causation is the but-for test: would the damage have occurred but for the breach? Legal causation asks whether a later event broke the chain. Negligent conduct by a third party does not ordinarily do so where it was foreseeable; grossly negligent conduct may.",
-      "Remoteness: the defendant is liable for damage of a kind reasonably foreseeable, and it is no answer that the extent was greater than could have been foreseen.",
-      "Section 12(1) of the Civil Law Act 1956 provides that where a person suffers damage partly through his own fault and partly through the fault of another, the claim is not defeated but the damages are reduced to such extent as the court thinks just and equitable having regard to his share in the responsibility."
-     ]
-    },
-    {
-     "h": "Application",
-     "p": [
-      "Duty and breach are straightforward. A contractor erecting scaffolding over a public thoroughfare owes a duty to those passing beneath it; the risk of objects falling is the paradigm case. The omission of toe boards required by the company's own method statement is strong evidence of breach — a defendant that has identified the precaution itself and then not taken it is poorly placed to argue that a reasonable contractor would not have taken it. It is evidence and not conclusive: the standard is that of the reasonable contractor, and a method statement can set a standard above it.",
-      "Factual causation of the initial fracture is clear on the but-for test. The difficulty is the second injury. The junior doctor's misreading is negligent, and on the consultant's evidence it is 'a serious departure from any acceptable standard'. Ordinary negligent medical treatment following an injury is treated as foreseeable and does not break the chain; the tortfeasor takes the risk that treatment will be imperfect. Grossly negligent treatment is capable of breaking it, and the consultant's characterisation is the fact from which that argument is built. The argument runs both ways and should be presented both ways: for Mr Suresh, that the treatment was a misreading rather than an act of a different character, and that the defendant should not escape the consequences of an injury it caused; for Bina Kukuh, that the permanent restriction is attributable entirely to the hospital's failure and that a full recovery in eight weeks was the natural course of the injury it caused.",
-      "Remoteness does not assist Bina Kukuh on the injury itself. Physical injury from a falling object is the very kind of damage the missing toe boards would have prevented, and the extent of it is irrelevant to foreseeability.",
-      "Contributory negligence is made out. Mr Suresh was in the roadway, on his telephone, when a clear covered walkway was available, and had he used it he would not have been struck. That is a failure to take reasonable care for his own safety which contributed to the damage. On facts of this kind a reduction in the region of twenty to twenty-five per cent would be defensible; the figure should be reasoned from his share in the responsibility, not asserted."
-     ]
-    },
-    {
-     "h": "Conclusion",
-     "p": [
-      "Bina Kukuh is liable in negligence for the fracture. Whether it is answerable for the permanent restriction turns on the medical evidence about the character of the hospital's failure, and Mr Suresh should be advised that this is genuinely uncertain and that the hospital or its employer is a proper additional defendant.",
-      "On damages: the eight weeks of lost commissions are recoverable in any event. The remaining lost commissions and the retraining costs depend on whether the chain was broken. The retraining claim is in principle recoverable as the cost of mitigating a permanent loss of earning capacity, but it must be shown to be reasonable, and it stands or falls with the permanence of the restriction."
-     ]
-    }
-   ],
-   "traps": [
-    "Treating the hospital's negligence as automatically breaking the chain. The ordinary rule is the opposite, and the argument is about whether this was gross enough to be an exception.",
-    "Using novus actus and contributory negligence as if they were the same idea. One defeats, the other reduces.",
-    "Asserting that damages 'will be reduced' without proposing a proportion and reasoning to it.",
-    "Forgetting to advise that the hospital or its employer should be joined."
-   ],
-   "source": "Standard common law elements of negligence; The Wagon Mound (No 1) [1961] AC 388 on remoteness; Civil Law Act 1956 s 12 on apportionment. The facts are invented for this exercise.",
-   "lastVerified": "2026-09-07",
-   "verify": "Check s 12 of the Civil Law Act 1956 against the current text, and find current Malaysian authority on the duty of care test and on whether grossly negligent medical treatment breaks the chain of causation — the English cases are persuasive only and should not be cited as if they settled the Malaysian position."
-  },
-  {
-   "id": "pa-jr-01",
-   "moduleId": "m12-administrative",
-   "title": "The licence revoked on a Friday",
-   "kind": "problem",
-   "minutes": 45,
-   "marks": 18,
-   "scenario": [
-    "The Hawkers and Petty Traders Board of a local authority has for eleven years renewed Puan Kamala's licence to trade from a fixed stall. Each renewal has followed a written application and, where any complaint has been made, a meeting at which the trader has been heard. That practice is not in any regulation; it is what the Board has always done, and it is described in a leaflet the Board publishes for applicants.",
-    "On a Friday afternoon Puan Kamala received a letter revoking her licence with immediate effect. The letter said only: 'Following consideration of complaints received, the Board has resolved to revoke the licence.' She has not been told what the complaints were or who made them, and she was not invited to any meeting.",
-    "She has since learned two things. The first is that the complaints came from the proprietor of a restaurant beside her stall. The second is that the chairman of the Board is that proprietor's brother-in-law, and that he chaired the meeting at which the revocation was resolved and voted on it.",
-    "The revocation was on 4 April. She consulted you on 20 September, having spent the intervening months writing to the Board and to her assemblyman."
-   ],
-   "task": "Advise Puan Kamala on an application for judicial review: the grounds available, the relief to seek, and the procedural obstacles. Advise on the prospects honestly, including anything that may defeat the application regardless of its merits.",
-   "rubric": [
-    {
-     "id": "j1",
-     "band": "issue",
-     "marks": 2,
-     "criterion": "Identifies both substantive grounds — breach of the right to be heard and apparent bias — and recognises that the delay is a threshold problem to be dealt with first, not an afterthought.",
-     "authority": "Order 53; natural justice"
-    },
-    {
-     "id": "j2",
-     "band": "rule",
-     "marks": 3,
-     "criterion": "States the two rules of natural justice accurately: notice of the case and an opportunity to answer; and no person a judge in his own cause, tested objectively.",
-     "authority": "Audi alteram partem; nemo judex in causa sua"
-    },
-    {
-     "id": "j3",
-     "band": "rule",
-     "marks": 2,
-     "criterion": "States the requirements for a legitimate expectation: a clear representation or settled practice, and that a procedural expectation is the more secure form.",
-     "authority": "Legitimate expectation"
-    },
-    {
-     "id": "j4",
-     "band": "method",
-     "marks": 3,
-     "criterion": "Identifies Order 53 as the route, the requirement of leave, the requirement that the applicant be adversely affected, and the time limit running from when the grounds arose — and applies the time limit to the six-month delay.",
-     "authority": "Rules of Court 2012, O 53"
-    },
-    {
-     "id": "j5",
-     "band": "application",
-     "marks": 3,
-     "criterion": "Applies audi alteram partem: a revocation affecting livelihood, given without notice of the substance of the complaints or any opportunity to answer, and against a settled practice of hearing the trader, is a clear breach.",
-     "authority": "Application"
-    },
-    {
-     "id": "j6",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Applies the bias rule: the chairman's relationship to the complainant and his participation in and vote on the decision would lead a fair-minded and informed observer to see a real danger of bias; actual bias need not be shown.",
-     "authority": "Application"
-    },
-    {
-     "id": "j7",
-     "band": "application",
-     "marks": 2,
-     "criterion": "Identifies the relief — certiorari to quash, and remitter for reconsideration by a differently constituted Board — and explains why the court will not ordinarily substitute its own decision on the licence.",
-     "authority": "Relief"
-    },
-    {
-     "id": "j8",
-     "band": "conclusion",
-     "marks": 1,
-     "criterion": "Gives an honest overall assessment, including that the merits may not be reached if leave is refused for delay, and advises what must be filed and how quickly.",
-     "authority": "Conclusion"
-    }
-   ],
-   "modelAnswer": [
-    {
-     "h": "Issue",
-     "p": [
-      "Whether the revocation is amenable to judicial review on the grounds of breach of natural justice and apparent bias, and whether an application made more than five months after the decision can get past the threshold requirements of Order 53."
-     ]
-    },
-    {
-     "h": "Rule",
-     "p": [
-      "Audi alteram partem requires that a person liable to be affected by a decision be given notice of the case against him and a fair opportunity to answer it. What fairness requires varies with the decision; a decision removing a livelihood attracts a high level of protection.",
-      "Nemo judex in causa sua: no person may be a judge in his own cause. Actual bias need not be shown. The test is objective — whether a fair-minded and informed observer would conclude that there was a real danger, or real possibility, of bias.",
-      "A legitimate expectation may arise from a clear and unambiguous representation or from a settled practice. A procedural expectation — that a person will be heard, or consulted, before a decision is taken — is the more secure form and does not require the substantive benefit to be conferred.",
-      "Judicial review is brought under Order 53 of the Rules of Court 2012. Leave is required; the applicant must be adversely affected by the decision; and the application must be made within the period the rule prescribes, running from the date when the grounds for the application first arose. Relief includes certiorari, prohibition, mandamus, declaration and injunction."
-     ]
-    },
-    {
-     "h": "Application",
-     "p": [
-      "The substantive grounds are strong. Puan Kamala was told only that complaints had been considered. She was not told what was alleged, by whom, or when, and she was given no opportunity to answer. A decision terminating an eleven-year livelihood on that basis is a breach of the right to be heard on any view of what fairness required here.",
-      "The Board's settled practice reinforces it. For eleven years the Board has held a meeting where a complaint was made, and it publishes that practice in a leaflet. That is a settled practice and a representation, and it founds a procedural legitimate expectation that she would be heard before her licence was revoked. Departing from it without notice is itself reviewable.",
-      "The bias ground is at least as strong. The chairman is the complainant's brother-in-law; he chaired the meeting and voted. A fair-minded and informed observer, knowing those facts, would conclude there was a real danger that the decision was affected. Nothing turns on whether the chairman was in fact influenced, and it would be a mistake to plead the case as one of actual bias.",
-      "The relief to seek is certiorari to quash the revocation, together with a declaration if useful, and remitter to a differently constituted Board for reconsideration according to law. The court reviews the process; it will not ordinarily decide for itself whether Puan Kamala should hold a licence, because that is the decision Parliament has entrusted to the Board.",
-      "The obstacle is delay. The revocation was on 4 April and she consulted you on 20 September. Under Order 53 the application for leave must be made within the prescribed period from the date the grounds arose, and correspondence with the Board and with an assemblyman does not stop time running. Whether an extension is available, and on what basis, must be checked against the current text of the rule and current authority; the explanation for the delay, the absence of prejudice to third parties, and the strength of the merits are the material an application to extend would be built on."
-     ]
-    },
-    {
-     "h": "Conclusion",
-     "p": [
-      "On the merits the application is strong on both grounds, and either alone would justify quashing the decision. The realistic risk is that the merits are never reached: leave may be refused because the application is out of time, and that must be put to her plainly rather than mentioned at the end.",
-      "The immediate step is to file the leave application without any further delay, supported by an affidavit exhibiting the leaflet describing the Board's practice, the revocation letter, and the evidence of the relationship between the chairman and the complainant, together with a full and candid explanation of the five months. Every further week weakens the application to extend time."
-     ]
-    }
-   ],
-   "traps": [
-    "Leaving the time limit to the end, or omitting it. It is capable of ending the case regardless of the merits, and an advice that buries it has not advised the client.",
-    "Pleading actual bias. The objective test is easier to satisfy and does not require an allegation of dishonesty against the chairman.",
-    "Asking the court to restore the licence. Review goes to the process; the remedy is to quash and remit.",
-    "Treating the leaflet and the eleven-year practice as irrelevant because they are not in any regulation. That is precisely what founds the legitimate expectation."
-   ],
-   "source": "Rules of Court 2012, Order 53; the rules of natural justice and the doctrine of legitimate expectation as received in Malaysia. The facts are invented for this exercise.",
-   "lastVerified": "2026-09-07",
-   "verify": "Check the current Order 53 for the leave requirement, the standing formula and the time limit, including any power to extend. Check current Malaysian authority for the formulation of the bias test and for the reception of legitimate expectation, and cite Malaysian decisions rather than English ones."
-  }
- ]
+  ]
 }

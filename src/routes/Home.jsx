@@ -5,6 +5,8 @@ import { useStudy } from '../state/StudyContext.jsx';
 import * as sched from '../lib/scheduler.js';
 import * as lessonsLib from '../lib/lessons.js';
 import { ArrRow, CountUp, ProgressRing, TodayCard } from '../components/Bits.jsx';
+import CurriculumMap from '../components/CurriculumMap.jsx';
+import { TERMS } from '../lib/glossary.js';
 import { plural } from '../lib/format.js';
 
 export default function Home() {
@@ -18,70 +20,82 @@ export default function Home() {
   const readCount = cat.lessons.filter(l => read[l.id]).length;
 
   return (
-    <div className="wrap">
-      <h2>Malaysian law, from zero</h2>
+    <div className="wrap wrap--dash">
+      <h1>Malaysian law, from zero</h1>
       <p className="lede">
         A sixteen-module curriculum. Progress is gated on whether you can write a
         competent answer, not on how much you have read.
       </p>
 
-      <motion.div
-        className="hero"
-        initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <ProgressRing
-          value={goal.pct}
-          size={116}
-          tone={goal.met ? 'gold' : 'sage'}
-          label={<CountUp value={goal.earned} />}
-          sub={`of ${goal.goal} XP`}
-        />
-        <div className="hero-body">
-          <p className="hero-rank">
-            Rank {rank.level} · <strong>{rank.title}</strong>
-          </p>
-          <p className="hero-line">
-            {goal.met
-              ? 'Today\'s goal is met. Anything past this is interest.'
-              : `${goal.goal - goal.earned} XP to today's goal.`}
-            {' '}
-            {game.streak.current > 0
-              ? `${plural(game.streak.current, 'day')} running, best ${game.streak.longest}.`
-              : 'No streak running — one card starts one.'}
-          </p>
-          <div className="btn-row">
-            <Link className={`btn ${total ? 'btn-primary' : ''}`} to="/review">
-              {total ? `Review ${total}` : 'Review'}
-            </Link>
-            <Link className="btn" to="/arena">Arena</Link>
-            {nextLesson && <Link className="btn" to={`/lesson/${nextLesson.id}`}>Next lesson</Link>}
+      {/* The hero and the day's card are one unit: what you have done, and what
+          to do next. Stacked in source order so a phone is unaffected; a wide
+          screen can set them side by side off this wrapper alone. */}
+      <div className="home-top">
+        <motion.div
+          className="hero"
+          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <ProgressRing
+            value={goal.pct}
+            size={116}
+            tone={goal.met ? 'mastery' : 'correct'}
+            label={<CountUp value={goal.earned} />}
+            sub={`of ${goal.goal} XP`}
+          />
+          <div className="hero-body">
+            <p className="hero-rank">
+              Rank {rank.level} · <strong>{rank.title}</strong>
+            </p>
+            <p className="hero-line">
+              {goal.met
+                ? 'Today\'s goal is met. Anything past this is interest.'
+                : `${goal.goal - goal.earned} XP to today's goal.`}
+              {' '}
+              {game.streak.current > 0
+                ? `${plural(game.streak.current, 'day')} running, best ${game.streak.longest}.`
+                : 'No streak running — one card starts one.'}
+            </p>
+            <div className="btn-row">
+              <Link className={`btn ${total ? 'btn-primary' : ''}`} to="/review">
+                {total ? `Review ${total}` : 'Review'}
+              </Link>
+              <Link className="btn" to="/arena">Arena</Link>
+              {nextLesson && <Link className="btn" to={`/lesson/${nextLesson.id}`}>Next lesson</Link>}
+            </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
 
-      <TodayCard tone={total ? 'oxide' : 'sage'} delay={0.08}>
-        {total === 0 ? (
-          <p>
-            Nothing due.{' '}
-            {counts.total ? 'The schedule is clear until tomorrow.' : 'Add cards under content/cards/ to begin.'}
-          </p>
-        ) : (
-          <>
+        <TodayCard tone={total ? 'oxide' : 'sage'} delay={0.08}>
+          {total === 0 ? (
             <p>
-              {plural(counts.due, 'card')} due for review
-              {counts.fresh ? `, ${counts.fresh} not yet seen` : ''}.
+              Nothing due.{' '}
+              {counts.total ? 'The schedule is clear until tomorrow.' : 'Add cards under content/cards/ to begin.'}
             </p>
-            <p className="small">
-              Reviews should take about a fifth of your study time. The rest goes to reading,
-              briefing and problem questions.
-            </p>
-            <div className="btn-row"><Link className="btn btn-primary" to="/review">Start review</Link></div>
-          </>
-        )}
-      </TodayCard>
+          ) : (
+            <>
+              <p>
+                {plural(counts.due, 'card')} due for review
+                {counts.fresh ? `, ${counts.fresh} not yet seen` : ''}.
+              </p>
+              <p className="small">
+                Reviews should take about a fifth of your study time. The rest goes to reading,
+                briefing and problem questions.
+              </p>
+              <div className="btn-row"><Link className="btn btn-primary" to="/review">Start review</Link></div>
+            </>
+          )}
+        </TodayCard>
+      </div>
 
-      <h3>Arrangement of modules</h3>
+      <h2>Where you are</h2>
+      <p className="small">
+        One ring per module, filled by the lessons you have marked read. A dot underneath means
+        cards are due in it.
+      </p>
+      <CurriculumMap modules={cat.modules} read={read} byModule={byModule} />
+
+      <h2>Arrangement of modules</h2>
       <div className="arrangement">
         {cat.modules.map((m, i) => {
           const mc = byModule[m.id] || sched.EMPTY_COUNTS;
@@ -90,8 +104,14 @@ export default function Home() {
           const due = mc.due + mc.fresh;
           const num = m.level === null || m.level === undefined ? '—' : String(m.level).padStart(2, '0');
           return (
+            // The row carries its own module identity: ArrRow puts data-module
+            // on the row element, so --module-tint / --module-ink resolve there
+            // and the row itself can be painted. The module's name is on the
+            // row beside the colour, so the colour stays reinforcement and is
+            // never what tells two modules apart (DESIGN.md 2.9).
             <ArrRow
               key={m.id}
+              moduleId={m.id}
               index={i}
               to={`/module/${m.id}`}
               locked={!mc.total && !m.lessons.length}
@@ -126,10 +146,17 @@ export default function Home() {
         />
         <LayerCard
           to="/quiz"
-          n={cat.quizPool.length}
+          n={cat.quizCount}
           title="Quiz questions"
           body="Recognition, under a clock. Sits between a card and a problem question, and pays XP without touching the schedule."
           delay={0.06}
+        />
+        <LayerCard
+          to="/glossary"
+          n={TERMS.length}
+          title="Glossary"
+          body="Every term at two depths — a short reading on hover, the contested edge behind a toggle. Linked automatically the first time a term appears in a lesson."
+          delay={0.09}
         />
         <LayerCard
           to="/review"

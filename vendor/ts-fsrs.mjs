@@ -1885,4 +1885,3 @@ const fsrs = (params) => {
 };
 
 export { AbstractScheduler, BasicLearningStepsStrategy, CLAMP_PARAMETERS, ConvertStepUnitToMinutes, DefaultInitSeedStrategy, FSRS, FSRS5_DEFAULT_DECAY, FSRS6_DEFAULT_DECAY, FSRSAlgorithm, FSRSVersion, GenSeedStrategyWithCardId, Grades, INIT_S_MAX, Rating, S_MAX, S_MIN, State, StrategyMode, TypeConvert, W17_W18_Ceiling, checkParameters, clamp, clipParameters, computeDecayFactor, createEmptyCard, dateDiffInDays, date_diff, date_scheduler, default_enable_fuzz, default_enable_short_term, default_learning_steps, default_maximum_interval, default_relearning_steps, default_request_retention, default_w, fixDate, fixRating, fixState, forgetting_curve, formatDate, fsrs, generatorParameters, get_fuzz_range, migrateParameters, roundTo, show_diff_message };
-//# sourceMappingURL=index.mjs.map

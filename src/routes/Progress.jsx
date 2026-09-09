@@ -5,7 +5,11 @@ import { useStudy } from '../state/StudyContext.jsx';
 import * as prob from '../lib/problems.js';
 import * as lessonsLib from '../lib/lessons.js';
 import * as game from '../lib/game.js';
-import { reviewLog, attempts } from '../lib/db.js';
+import * as sched from '../lib/scheduler.js';
+import * as quizLib from '../lib/quiz.js';
+import * as insight from '../lib/insight.js';
+import { reviewLog, attempts, cardState } from '../lib/db.js';
+import { WeakSpots, ModuleTable, calibrationTrendCopy } from '../components/Insight.jsx';
 import { ArrRow, CountUp, ProgressRing, Stat, StatGrid } from '../components/Bits.jsx';
 import { daysAgo, plural, round1 } from '../lib/format.js';
 
@@ -13,13 +17,19 @@ export default function Progress() {
   const { cat, counts, read, game: g, rank } = useStudy();
   const [logs, setLogs] = useState(null);
   const [tries, setTries] = useState([]);
+  const [cards, setCards] = useState([]);
+  const [runs, setRuns] = useState([]);
+  const [byModule, setByModule] = useState({});
 
   useEffect(() => {
     reviewLog.all().then(setLogs);
     attempts.all().then(setTries);
+    cardState.all().then(setCards);
+    quizLib.runLog().then(setRuns);
+    sched.countsByModule().then(setByModule);
   }, []);
 
-  if (!logs) return <div className="wrap"><p className="lede">Reading the log…</p></div>;
+  if (!logs) return <div className="wrap wrap--dash"><h1>Progress</h1><p className="lede" role="status">Reading the log…</p></div>;
 
   const now = Date.now();
   const day = 86400000;
@@ -29,9 +39,16 @@ export default function Progress() {
   const days = game.recentDays(g, 28);
   const peak = Math.max(1, ...days.map(d => d.xp));
 
+  // The diagnosis layer. Every figure here is one measurement with a floor
+  // under it; nothing is composite and XP is not an input to any of it.
+  const bands = prob.bandBreakdown(cat.byId.problem, tries);
+  const findings = insight.weakestAreas({ logs, cardStates: cards, attempts: tries, runs, cat, bands });
+  const table = insight.moduleTable({ cat, logs, attempts: tries, runs, byModule });
+  const trend = calibrationTrendCopy(insight.calibrationTrend(tries, { problemsById: cat.byId.problem }));
+
   return (
-    <div className="wrap">
-      <h2>Progress</h2>
+    <div className="wrap wrap--dash">
+      <h1>Progress</h1>
       <p className="lede">
         Three layers, measured separately. Review counts say whether the rules are still
         available to you; quiz scores say whether you can pick them out of a line-up; problem
@@ -39,10 +56,10 @@ export default function Progress() {
       </p>
 
       <div className="rank-panel">
-        <ProgressRing value={rank.pct} size={128} stroke={9} tone="gold"
+        <ProgressRing value={rank.pct} size={128} stroke={9} tone="mastery"
           label={rank.level} sub={`Rank ${rank.level}`} />
         <div>
-          <h3 style={{ marginTop: 0 }}>{rank.title}</h3>
+          <h2 style={{ marginTop: 0 }}>{rank.title}</h2>
           <p className="small">{rank.note}</p>
           <p><strong><CountUp value={g.xp} /></strong> XP total
             {rank.next ? <> · {rank.toNext.toLocaleString()} to {rank.next.title}</> : ' · top rank'}</p>
@@ -53,7 +70,7 @@ export default function Progress() {
         </div>
       </div>
 
-      <h3>The last four weeks</h3>
+      <h2>The last four weeks</h2>
       <div className="strip" role="img" aria-label="XP earned each day over the last 28 days">
         {days.map((d, i) => (
           <motion.span
@@ -73,7 +90,26 @@ export default function Progress() {
         {' '}Best day: {g.best.dayXp} XP.
       </p>
 
-      <h3>The memory layer</h3>
+      <h2>Where to look first</h2>
+      {findings.length ? (
+        <>
+          <p className="small">
+            Everything from here down is measurement, not XP. Each line is one figure with the
+            count it rests on, and a place to go and do something about it. Nothing appears until
+            there is enough behind it to mean something.
+          </p>
+          <WeakSpots findings={findings} />
+        </>
+      ) : (
+        <p>
+          Nothing to point at yet. A finding appears once a module has {insight.RECALL_FLOOR} grades
+          in thirty days, or {insight.CAL_FLOOR} unaided problem attempts carry a prediction, or a
+          card has been forgotten {insight.LAPSE_FLOOR} times. Before that a percentage would be a guess
+          dressed as a measurement.
+        </p>
+      )}
+
+      <h2>The memory layer</h2>
       <StatGrid>
         <Stat n={logs.length} k="reviews all time" />
         <Stat n={last30.length} k="last 30 days" delay={0.05} />
@@ -91,7 +127,7 @@ export default function Progress() {
         </div>
       )}
 
-      <h3>The recognition layer</h3>
+      <h2>The recognition layer</h2>
       {g.totals.quizAnswered ? (
         <>
           <StatGrid>
@@ -108,24 +144,40 @@ export default function Progress() {
         </>
       ) : (
         <p>
-          No quiz questions answered yet. {cat.quizPool.length} are written —
-          {' '}<Link to="/quiz">take one</Link>, or <Link to="/arena">try the Arena</Link>.
+          No quiz questions answered yet. {cat.quizCount} are written —
+          {' '}<Link className="tap-exempt" to="/quiz">take one</Link>, or <Link className="tap-exempt" to="/arena">try the Arena</Link>.
         </p>
       )}
 
-      <h3>The reading layer</h3>
+      <h2>The reading layer</h2>
       <ReadingSection cat={cat} read={read} />
 
-      <h3>The reasoning layer</h3>
-      <ReasoningSection cat={cat} tries={tries} />
+      <h2>The reasoning layer</h2>
+      <ReasoningSection cat={cat} tries={tries} bands={bands} trend={trend} />
 
-      <h3>What this page still cannot tell you</h3>
+      <h2>By module</h2>
+      <p className="small">
+        One row per module, every figure with the count it rests on. "Too few" means the count is
+        under the floor and a percentage would mislead: {insight.RECALL_FLOOR} grades for recall,
+        {' '}{insight.QUIZ_FLOOR} answers for quiz, {insight.CAL_FLOOR} predicted attempts for the
+        gap. Quiz counts lesson quizzes only; the Arena is not in it. The gap counts unaided
+        problems only; rehearsals are not in it.
+      </p>
+      <ModuleTable rows={table} />
+
+      <h2>What this page still cannot tell you</h2>
       <p>
         Every half above is self-reported. The reviews record whether you pressed Forgot
         honestly and the problem marks record whether you marked yourself honestly, and nothing
         in the app can check either. The calibration figure is the closest it gets: it compares
         one judgment you made against another you made a few minutes later, which at least
         catches drift.
+      </p>
+      <p>
+        The findings and the module table inherit every one of those limits and add one. A floor
+        is the point at which a number stops being noise, not the point at which it becomes a
+        grade. Ten grades in a module is enough to show a percentage. It is not enough to trust one
+        to the nearest five points.
       </p>
       <p className="small">
         Nothing here measures a timed answer written under supervision, or an answer read by
@@ -145,7 +197,7 @@ function ReadingSection({ cat, read }) {
       <p>
         No lessons marked read. {cat.lessons.length} are written, about
         {' '}{lessonsLib.totalMinutes(cat.lessons)} minutes in all —
-        {' '}<Link to="/lessons">start with the first</Link>.
+        {' '}<Link className="tap-exempt" to="/lessons">start with the first</Link>.
       </p>
     );
   }
@@ -154,7 +206,7 @@ function ReadingSection({ cat, read }) {
       <p>
         {done.length} of {cat.lessons.length} lessons marked read.{' '}
         {next
-          ? <>Next: <Link to={`/lesson/${next.id}`}>{next.title}</Link>, {plural(next.minutes, 'minute')}.</>
+          ? <>Next: <Link className="tap-exempt" to={`/lesson/${next.id}`}>{next.title}</Link>, {plural(next.minutes, 'minute')}.</>
           : 'All of them.'}
       </p>
       <p className="small">
@@ -166,12 +218,12 @@ function ReadingSection({ cat, read }) {
   );
 }
 
-function ReasoningSection({ cat, tries }) {
+function ReasoningSection({ cat, tries, bands, trend }) {
   if (!tries.length) {
     return (
       <p>
         No problem questions attempted yet. {cat.problems.length} are written and waiting —
-        {' '}<Link to="/problems">start with one</Link>. This is the half of the curriculum the
+        {' '}<Link className="tap-exempt" to="/problems">start with one</Link>. This is the half of the curriculum the
         review counts say nothing about.
       </p>
     );
@@ -179,15 +231,19 @@ function ReasoningSection({ cat, tries }) {
 
   const byProblem = new Set(tries.map(a => a.problemId));
   const marks = tries.reduce((n, a) => n + prob.percent(a.score, a.total), 0) / tries.length;
-  const cal = prob.calibration(tries);
-  const bands = prob.bandBreakdown(cat.byId.problem, tries);
+  // Calibration is over unaided problems only. A rehearsal hands over half the
+  // reasoning, so predicting its mark is easy, and counting it would make the
+  // learner look better calibrated than they are.
+  const unaided = insight.unaidedAttempts(tries, cat.byId.problem);
+  const rehearsals = tries.length - unaided.length;
+  const cal = prob.calibration(unaided);
   const recent = [...tries].sort((a, b) => new Date(b.markedAt) - new Date(a.markedAt)).slice(0, 5);
 
   const calCopy = !cal ? null : cal.direction === 'level'
-    ? `Your predictions are level with your own marking, out by ${plural(cal.spread, 'mark')} on average across ${plural(cal.n, 'attempt')}. That is the useful state: it means a mark you are unhappy with is information rather than a surprise.`
+    ? `Your predictions are level with your own marking, out by ${plural(cal.spread, 'mark')} on average across ${plural(cal.n, 'unaided attempt')}. That is the useful state: it means a mark you are unhappy with is information rather than a surprise.`
     : cal.direction === 'over'
-      ? `You predict ${plural(round1(Math.abs(cal.mean)), 'mark')} above what you then award yourself, across ${plural(cal.n, 'attempt')}. Over-estimating is the ordinary direction and the expensive one — it hides the gap it creates.`
-      : `You predict ${plural(round1(Math.abs(cal.mean)), 'mark')} below what you then award yourself, across ${plural(cal.n, 'attempt')}. Under-estimating is cheaper, but it makes a good answer hard to tell from a lucky one.`;
+      ? `You predict ${plural(round1(Math.abs(cal.mean)), 'mark')} above what you then award yourself, across ${plural(cal.n, 'unaided attempt')}. Over-estimating is the ordinary direction and the expensive one — it hides the gap it creates.`
+      : `You predict ${plural(round1(Math.abs(cal.mean)), 'mark')} below what you then award yourself, across ${plural(cal.n, 'unaided attempt')}. Under-estimating is cheaper, but it makes a good answer hard to tell from a lucky one.`;
 
   return (
     <>
@@ -195,13 +251,27 @@ function ReasoningSection({ cat, tries }) {
         <Stat n={tries.length} k="attempts" />
         <Stat n={`${byProblem.size}/${cat.problems.length}`} k="questions attempted" delay={0.05} />
         <Stat n={`${Math.round(marks)}%`} k="mean mark" delay={0.1} />
-        <Stat n={cal ? `${cal.mean > 0 ? '+' : ''}${cal.mean}` : '—'} k="calibration gap"
+        <Stat n={cal ? `${cal.mean > 0 ? '+' : ''}${cal.mean}` : '—'} k="calibration gap, unaided"
           tone={cal && cal.direction === 'level' ? 'sage' : 'oxide'} delay={0.15} />
       </StatGrid>
 
       {calCopy && <p>{calCopy}</p>}
+      {calCopy && cal.n < insight.CAL_FLOOR && (
+        <p className="small">
+          Under {insight.CAL_FLOOR} unaided attempts this is one or two subtractions, not a pattern.
+          Read it as a first reading rather than a finding.
+        </p>
+      )}
+      {!cal && rehearsals > 0 && (
+        <p>
+          No calibration figure yet. {plural(rehearsals, 'rehearsal')} so far and no unaided attempt
+          with a prediction. Rehearsals do not count: predicting a mark is easy when the steps are
+          handed to you, and counting them would make you look better calibrated than you are.
+        </p>
+      )}
+      {trend && <p className="small">{trend}</p>}
 
-      <h4>Where the marks go</h4>
+      <h3>Where the marks go</h3>
       <p className="small">
         Marks earned against marks available, by rubric band, across every attempt. A low band is
         a different problem from a low total, and it is fixed by different work — issue-spotting
@@ -215,12 +285,12 @@ function ReasoningSection({ cat, tries }) {
               <motion.i initial={{ width: 0 }} animate={{ width: `${b.pct}%` }}
                 transition={{ delay: 0.1 + i * 0.08, type: 'spring', stiffness: 70, damping: 18 }} />
             </span>
-            <span className="band-num">{b.earned}/{b.available} · {b.pct}%</span>
+            <span className="band-num">{b.earned}/{b.available} · {b.pct}% · {plural(b.attempts, 'attempt')}</span>
           </div>
         ))}
       </div>
 
-      <h4>Recent attempts</h4>
+      <h3>Recent attempts</h3>
       <div className="arrangement">
         {recent.map((a, i) => {
           const q = cat.byId.problem[a.problemId];
@@ -228,6 +298,7 @@ function ReasoningSection({ cat, tries }) {
           return (
             <ArrRow
               key={a.attemptId ?? i}
+              moduleId={q ? q.moduleId : undefined}
               index={i}
               to={`/problem/${a.problemId}`}
               num={`${a.score}/${a.total}`}

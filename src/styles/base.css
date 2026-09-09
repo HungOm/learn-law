@@ -1,36 +1,15 @@
-/* Visual language: a Malaysian statute reprint. Marginal section numbers on a
-   left rail, a narrow reading measure, hairline rules that carry structure
-   rather than decorate. */
+/* Warta — the reading surface.
+ *
+ * Visual language: a Malaysian statute reprint. Marginal section numbers on a
+ * left rail, a narrow reading measure, hairline rules that carry structure
+ * rather than decorate.
+ *
+ * Every value in this file comes from tokens.css or palette.css. If you need a
+ * number that is not a token, the token is what is missing — add it there.
+ * See DESIGN.md for the rules; tools/design-lint.py enforces them.
+ */
 
-:root {
-  --paper:  #FBFBF9;
-  --ink:    #1B2A3A;
-  --rule:   #D8D5CC;
-  --sage:   #2F6F62;
-  --oxide:  #9B3B32;
-  --muted:  #6E7278;
-  --raise:  #FFFFFF;
-  --gold:   #A97F2A;
-
-  --serif: 'Spectral', Georgia, serif;
-  --sans:  'IBM Plex Sans', system-ui, sans-serif;
-
-  --rail: 5.5rem;
-  --measure: 68ch;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #14181D;
-    --ink:   #E6E4DE;
-    --rule:  #333A42;
-    --sage:  #6FB3A2;
-    --oxide: #D48279;
-    --muted: #969CA4;
-    --raise: #1B2026;
-    --gold:  #C8A24A;
-  }
-}
+@import './tokens.css';
 
 * { box-sizing: border-box; }
 
@@ -38,222 +17,507 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 17px;
-  line-height: 1.6;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  line-height: var(--leading-prose);
 }
 
-a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+a { color: inherit; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
 a:hover { text-decoration-color: currentColor; }
 
+/* One focus treatment, everywhere, offset so it never covers what it marks. */
 :focus-visible {
-  outline: 2px solid var(--sage);
-  outline-offset: 3px;
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
 }
 
 /* ---------- shell ---------- */
 
-.shell { display: flex; min-height: 100vh; }
+/* The app stops at --shell-max and centres past it. Without this, a 34-inch
+   monitor gets a rail welded to the left bezel and a reading column somewhere
+   near it, which is not a layout so much as the absence of one.
+
+   isolation: isolate gives the shell its own stacking context so the fixed
+   liquid field behind it can never paint over a popover, a toast or a modal
+   inside it, whatever z-index those use. */
+.shell {
+  display: flex;
+  min-height: 100vh;
+  max-width: var(--shell-max);
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+/* Off-screen until focused, never hidden from the accessibility tree — a skip
+   link that `display: none` removes is a skip link that cannot be reached by
+   the keyboard it exists for. */
+.skiplink {
+  position: absolute;
+  left: var(--space-2);
+  top: var(--space-2);
+  z-index: 100;
+  transform: translateY(-200%);
+  transition: transform var(--dur-quick) var(--ease-out);
+  background: var(--surface-raised);
+  color: var(--text-strong);
+  border: var(--line-hairline) solid var(--border-active);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-pop);
+  min-height: var(--tap-min);
+  padding: var(--space-2) var(--space-4);
+}
+.skiplink:focus-visible { transform: translateY(0); }
+
+/* Off-screen for the eye, present for assistive technology.
+   Not `display: none` and not `visibility: hidden` — both of those remove the
+   element from the accessibility tree, which is the one thing this must not do.
+   Its first use is the Arena's countdown announcements: the clock is announced
+   at thresholds from a live region, while the numeral itself stays visible and
+   readable so a reader can check the time on demand rather than only being told
+   when it matters. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The skip target must not draw a ring around the entire page when focused. */
+.main:focus { outline: none; }
+.main:focus-visible { outline: none; }
 
 .rail {
-  width: 15rem;
-  flex: 0 0 15rem;
-  border-right: 1px solid var(--rule);
-  padding: 2.5rem 1.25rem;
-  font-family: var(--sans);
-  font-size: 0.85rem;
+  width: var(--rail-width);
+  flex: 0 0 var(--rail-width);
+  border-right: var(--line-hairline) solid var(--border-hairline);
+  padding: var(--space-6) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
   position: sticky;
   top: 0;
   height: 100vh;
   overflow-y: auto;
 }
 
-.rail h1 {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.3;
-  margin: 0 0 0.35rem;
+/* ---------- the wordmark ----------
+   The mark is the seal and the name set together, and they are always set
+   together — the scales never appear without the name outside a favicon or an
+   app icon, where there is no room for words. */
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-2);
+  text-decoration: none;
+}
+.wordmark-seal { flex: 0 0 auto; width: 2rem; height: 2rem; }
+.wordmark-seal .wm-ring { fill: none; stroke: var(--signal-mastery); stroke-width: 4; }
+.wordmark-seal .wm-mark {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.wordmark-text { display: block; min-width: 0; }
+.wordmark-name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--type-lg);
+  font-weight: var(--weight-semi);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+.wordmark-sub {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  line-height: var(--leading-base);
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
 }
 
-.rail .sub { color: var(--muted); margin: 0 0 2rem; font-size: 0.78rem; line-height: 1.45; }
+.rail .sub {
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-6);
+  font-size: var(--type-sm);
+  line-height: var(--leading-base);
+}
 
-.rail nav { display: flex; flex-direction: column; gap: 0.1rem; }
+.rail nav { display: flex; flex-direction: column; gap: 1px; }
 
 .rail nav a {
-  padding: 0.4rem 0.5rem;
-  border-radius: 2px;
+  min-height: var(--tap-min);
+  align-items: center;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
   text-decoration: none;
-  color: var(--muted);
+  color: var(--text-secondary);
   display: flex;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
-.rail nav a:hover { background: var(--raise); color: var(--ink); }
-.rail nav a.active, .rail nav a[aria-current='page'] { color: var(--ink); font-weight: 500; background: var(--raise); }
+.rail nav a:hover { background: var(--surface-raised); color: var(--text-primary); }
+.rail nav a.active,
+.rail nav a[aria-current='page'] {
+  color: var(--text-strong);
+  font-weight: var(--weight-medium);
+  background: var(--surface-raised);
+}
 
+/* Outstanding work is set in the heaviest ink on the page, not in red. A queue
+   of things to do today is an invitation, and colouring it the same as a wrong
+   answer makes an ordinary morning look like a page of mistakes. Weight is how
+   a printed page shouts. */
 .rail nav .badge {
   font-variant-numeric: tabular-nums;
-  color: var(--oxide);
-  font-weight: 500;
+  color: var(--text-strong);
+  font-weight: var(--weight-semi);
 }
 
-.main { flex: 1 1 auto; padding: 3rem 2.5rem 6rem; min-width: 0; }
-.wrap { max-width: var(--measure); }
-.wrap--wide { max-width: 54rem; }
+/* ---------- the pane, and the column inside it ----------
+   These were one thing and are now two, because conflating them is what made
+   the desktop layout wrong. `.wrap` capped the content at --measure (68ch) and
+   left it at flex-start, so at 1920px the entire app was a 660px strip against
+   the left edge with a thousand pixels of nothing beside it — a phone layout
+   that had been stretched rather than a desktop one that had been designed.
+
+   68ch is a rule about a LINE OF TYPE and it stays exactly as it was. What was
+   wrong is that it was also the rule about the PAGE. So:
+
+     .wrap        a column of prose. 68ch, centred.
+     .wrap--dash  an index or dashboard pane. Rows, grids and cards have no
+                  reading measure, so they take --pane-dash and use the width.
+     .sheet       the opaque ground a prose column sits on, over the field.
+
+   Centred rather than left-aligned: the reader's eye returns to the same place
+   on every line and every page, and a column pinned to one edge of a wide
+   screen makes the whole app read as though it is falling over. */
+
+.main {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--pane-pad);
+  padding-bottom: var(--space-9);
+}
+
+.wrap        { max-width: var(--measure);       margin-inline: auto; }
+.wrap--wide  { max-width: var(--measure-wide);  margin-inline: auto; }
+.wrap--dash  { max-width: var(--pane-dash);     margin-inline: auto; }
+
+/* The reading sheet.
+   The liquid field (see liquid.css) is a moving, coloured surface, and body
+   text is held to WCAG AAA 7:1. Those two facts are only compatible if the
+   text never sits on the field — so a pane gets an opaque ground and the field
+   stays in the margins around it. This is what makes the colour safe: not a
+   low alpha that someone can talk themselves into raising, but the fact that
+   no text is ever composited against it at all.
+
+   It also happens to be the right picture. A statute reprint on a coloured
+   desk is what this app has always been describing.
+
+   `.wrap--dash` is in this list, and the first version of this rule was wrong
+   to leave it out. The reasoning was that a dashboard is cards, and cards
+   carry their own --surface-raised ground — but a dashboard is also its
+   headings, its ledes, its captions and its list rows, and every one of those
+   sat directly on the moving field. Verified in a browser, which is the only
+   way this class of mistake is ever found: it is invisible in the CSS, where
+   both declarations are correct on their own. */
+.sheet,
+.wrap--dash { background: var(--surface-page); }
+
+/* Same argument, for the same reason. The rail is nine links, a rank and a
+   footnote in --text-secondary, and it had no ground of its own — it was
+   transparent over the page colour, which was fine until the page colour
+   started moving. */
+.rail { background: var(--surface-page); }
 
 /* ---------- typography ---------- */
 
-h2 { font-size: 1.6rem; font-weight: 600; line-height: 1.25; margin: 0 0 0.4rem; }
-h3 { font-family: var(--sans); font-size: 0.95rem; font-weight: 600; margin: 2.5rem 0 0.75rem; }
-p  { margin: 0 0 1rem; }
-.lede { color: var(--muted); margin: 0 0 2.5rem; }
-.small { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+/* h1 is the page title, h2 a section, h3 a level below that. Serif for the
+   title because it is material; sans for the levels under it because they are
+   apparatus — the same split the rest of the app uses.
+
+   Every route used to start at h2 with no h1 anywhere, so a screen reader user
+   had no page title to land on. That was fixed by demoting all 16 routes in one
+   pass; tools/smoke.mjs now reads the rendered outline of every route and fails
+   on a missing h1, more than one h1, or a skipped level, so the structure
+   cannot drift back. A state branch that renders its own screen — a loading
+   view, an empty state — needs its own h1: that is where the review screen
+   lost its heading and no static check saw it. */
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: var(--type-2xl);
+  font-weight: var(--weight-semi);
+  line-height: var(--leading-tight);
+  margin: 0 0 var(--space-2);
+  color: var(--text-strong);
+}
+
+h2 {
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  font-weight: var(--weight-semi);
+  margin: var(--space-6) 0 var(--space-3);
+  color: var(--text-strong);
+}
+
+h3 {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-weight: var(--weight-semi);
+  margin: var(--space-5) 0 var(--space-2);
+  color: var(--text-strong);
+}
+p  { margin: 0 0 var(--space-4); }
+.lede { color: var(--text-secondary); margin: 0 0 var(--space-6); }
+.small {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-base);
+}
 
 /* ---------- arrangement of sections (home) ---------- */
 
-.arrangement { border-top: 1px solid var(--rule); margin-top: 1.5rem; }
+.arrangement { border-top: var(--line-hairline) solid var(--border-hairline); margin-top: var(--space-5); }
 
 .arr-row {
   display: grid;
-  grid-template-columns: var(--rail) 1fr auto;
-  gap: 1rem;
+  grid-template-columns: var(--margin-num) 1fr auto;
+  gap: var(--space-4);
   align-items: baseline;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid var(--rule);
+  padding: var(--space-3) 0;
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
   text-decoration: none;
 }
-.arr-row:hover { background: var(--raise); }
+.arr-row:hover { background: var(--surface-raised); }
 
 .arr-num {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
   font-variant-numeric: tabular-nums;
   text-align: right;
 }
 
-.arr-title { display: block; font-weight: 500; }
-.arr-meta { display: block; font-family: var(--sans); font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+/* These two are siblings inside one grid cell; without display:block they run
+   together on the same line. */
+.arr-title { display: block; font-weight: var(--weight-medium); }
+.arr-meta {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
 
 .arr-state {
-  font-family: var(--sans);
-  font-size: 0.78rem;
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
   font-variant-numeric: tabular-nums;
-  color: var(--muted);
+  color: var(--text-secondary);
   white-space: nowrap;
 }
-.arr-state.is-due { color: var(--oxide); font-weight: 500; }
-.arr-state.is-clear { color: var(--sage); }
+.arr-state.is-due { color: var(--text-strong); font-weight: var(--weight-semi); }
+.arr-state.is-clear { color: var(--signal-correct-text); }
 
 .arr-row.is-locked { opacity: 0.55; }
 
 /* ---------- today ---------- */
 
 .today {
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--sage);
-  background: var(--raise);
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 2.5rem;
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-left: var(--line-marker) solid var(--signal-correct);
+  background: var(--surface-raised);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+  border-radius: var(--radius-md);
 }
-.today.has-due { border-left-color: var(--oxide); }
-.today p { margin: 0 0 0.75rem; }
+.today.has-due { border-left-color: var(--border-active); }
+.today p { margin: 0 0 var(--space-3); }
 .today p:last-child { margin-bottom: 0; }
 
 /* ---------- buttons ---------- */
 
+/* Every control clears the 44px tap floor. A button centres its own content
+   vertically, so min-height alone does the work — no layout change, and the
+   controls that were already tall enough do not move. */
 button, .btn {
-  font-family: var(--sans);
-  font-size: 0.88rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--rule);
-  background: var(--raise);
-  color: var(--ink);
-  border-radius: 2px;
+  min-height: var(--tap-min);
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  padding: var(--space-2) var(--space-4);
+  border: var(--line-hairline) solid var(--border-strong);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
-button:hover, .btn:hover { border-color: var(--ink); }
+button:hover, .btn:hover { border-color: var(--border-active); }
 button:disabled { opacity: 0.45; cursor: default; }
 
-.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-primary {
+  background: var(--action-primary);
+  color: var(--action-on-primary);
+  border-color: var(--action-primary);
+}
 .btn-primary:hover { opacity: 0.88; }
 
-.btn-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.btn-row { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* The tap floor has one exemption, and it must be taken explicitly.
+   A control that is a word inside a sentence — a glossary term in running
+   prose — is exempt under WCAG 2.5.5, because padding it to 44px would break
+   the line it sits in. That is the case the exemption was written for.
+
+   But `min-height` is actively harmful there, not merely useless. An
+   inline-block's box height contributes to the LINE BOX, so a 44px min-height
+   inside body prose at --leading-prose (29.7px) makes every line containing a
+   term about half again as tall as the lines around it. With hundreds of terms
+   across the lessons that is ragged leading through the whole reading surface —
+   a typographic defect introduced by an accessibility fix that was not helping
+   anyone, since the width is what was under the floor and min-height cannot
+   touch width.
+
+   So an inline control opts out, and buys its hit area from the line box it
+   already has: */
+.tap-exempt,
+button.tap-exempt,
+.btn.tap-exempt { min-height: 0; }
 
 /* ---------- review ---------- */
 
 .review { max-width: 40rem; margin: 0 auto; }
 
 .review-progress {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
   font-variant-numeric: tabular-nums;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 0.6rem;
-  margin-bottom: 3rem;
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-7);
 }
 
 .card-face { min-height: 8rem; }
 .card-kind {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  color: var(--muted);
-  margin-bottom: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
 }
-.card-front { font-size: 1.35rem; line-height: 1.45; margin: 0 0 2rem; }
+/* The card question. It is an <h2> because it is the subject of the review
+   screen and a screen reader needs something to orient by — but it is set at
+   regular weight, and that is deliberate rather than an oversight.
+
+   A heading's semantic LEVEL and its visual WEIGHT are independent. This is a
+   sentence, often a long one, read for comprehension rather than scanned; the
+   reprint idiom reserves weight for short labels and titles, and a full
+   semibold serif sentence reads as shouting. Its prominence comes from size
+   (21px against 18px body) and from being alone on the card face. It also
+   keeps question and answer as the same kind of text — .card-back-text is
+   regular, and they should read as a pair.
+
+   Weight AND colour are declared rather than inherited. This class previously
+   set size, leading and margin only, so when its tag changed from <p> to a
+   heading it silently picked up the heading's weight (600) and colour
+   (--text-strong). The weight was caught immediately; the colour was not, and
+   was found later by measuring the rendered pixels rather than reading the
+   diff. A component class that half-specifies its type is a trap for whoever
+   next touches the markup, and it fails quietly in exactly the properties
+   nobody thought to check. */
+.card-front {
+  font-size: var(--type-lg);
+  line-height: var(--leading-snug);
+  font-weight: var(--weight-regular);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-6);
+}
 
 .card-back {
-  border-top: 1px solid var(--rule);
-  padding-top: 1.5rem;
-  font-size: 1.1rem;
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  padding-top: var(--space-5);
+  font-size: var(--type-body);
 }
 .card-note {
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  color: var(--muted);
-  border-left: 2px solid var(--rule);
-  padding-left: 0.85rem;
-  margin-top: 1.25rem;
-  line-height: 1.5;
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  border-left: 2px solid var(--border-hairline);
+  padding-left: var(--space-3);
+  margin-top: var(--space-4);
+  line-height: var(--leading-base);
 }
-.card-source { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); margin-top: 1.5rem; }
+.card-source {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  margin-top: var(--space-5);
+}
 
-.grades { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 2.5rem; }
-.grade { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.7rem 0.5rem; text-align: center; }
-.grade .g-label { font-weight: 500; }
-.grade .g-int { font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-.grade[data-key='again'] { border-color: var(--oxide); }
-.grade[data-key='again'] .g-label { color: var(--oxide); }
+.grades { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-2); margin-top: var(--space-6); }
+.grade {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-2);
+  text-align: center;
+}
+.grade .g-label { font-weight: var(--weight-medium); }
+.grade .g-int { font-size: var(--type-xs); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.grade[data-key='again'] { border-color: var(--signal-wrong); }
+.grade[data-key='again'] .g-label { color: var(--signal-wrong-text); }
 
-.keyhint { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 1.5rem; }
+.keyhint {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: var(--space-5);
+}
 
 /* ---------- books ---------- */
 
-.book { padding: 1.25rem 0; border-bottom: 1px solid var(--rule); }
-.book-title { font-weight: 600; }
-.book-byline { font-family: var(--sans); font-size: 0.82rem; color: var(--muted); margin: 0.2rem 0 0.5rem; }
-.book-note { font-size: 0.95rem; margin: 0; }
+.book { padding: var(--space-4) 0; border-bottom: var(--line-hairline) solid var(--border-hairline); }
+.book-title { font-weight: var(--weight-semi); }
+.book-byline {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  margin: var(--space-1) 0 var(--space-2);
+}
+.book-note { font-size: var(--type-base); margin: 0; }
 
 .flag {
   display: inline-block;
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  padding: 0.1rem 0.45rem;
-  border: 1px solid currentColor;
-  border-radius: 2px;
-  margin-left: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  padding: 0 var(--space-1);
+  border: var(--line-hairline) solid currentColor;
+  border-radius: var(--radius-sm);
+  margin-left: var(--space-1);
   vertical-align: 0.15em;
 }
-.flag-unverified { color: var(--oxide); }
-.flag-stale { color: var(--oxide); }
-.flag-student { color: var(--sage); }
-.flag-free { color: var(--sage); }
+/* A source flag is the one place red is about a text rather than an answer:
+   it is the law-report convention, where a red flag means do not rely on this. */
+.flag-unverified { color: var(--signal-wrong-text); }
+.flag-stale { color: var(--signal-wrong-text); }
+.flag-student { color: var(--signal-correct-text); }
+.flag-free { color: var(--signal-correct-text); }
 
 /* ---------- stats ---------- */
 
@@ -264,45 +528,52 @@ button:disabled { opacity: 0.45; cursor: default; }
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  background: var(--paper);
-  border-top: 1px solid var(--rule);
-  border-left: 1px solid var(--rule);
-  margin: 1.5rem 0 2.5rem;
+  background: var(--surface-page);
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  border-left: var(--line-hairline) solid var(--border-hairline);
+  margin: var(--space-5) 0 var(--space-6);
 }
 .stat {
-  background: var(--paper);
-  padding: 1rem 1.15rem;
-  border-right: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
+  background: var(--surface-page);
+  padding: var(--space-4);
+  border-right: var(--line-hairline) solid var(--border-hairline);
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
 }
-.stat .n { font-family: var(--sans); font-size: 1.5rem; font-weight: 500; font-variant-numeric: tabular-nums; display: block; }
-.stat .k { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); }
+.stat .n {
+  font-family: var(--font-sans);
+  font-size: var(--type-xl);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  display: block;
+}
+.stat .k { font-family: var(--font-sans); font-size: var(--type-xs); color: var(--text-secondary); }
 
 /* ---------- misc ---------- */
 
 .notice {
-  border: 1px solid var(--oxide);
-  border-left-width: 3px;
-  padding: 0.9rem 1.1rem;
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  line-height: 1.5;
-  margin: 1.5rem 0;
+  border: var(--line-hairline) solid var(--signal-wrong);
+  border-left-width: var(--line-marker);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  line-height: var(--leading-base);
+  margin: var(--space-5) 0;
 }
 
-.empty { color: var(--muted); padding: 3rem 0; }
+.empty { color: var(--text-secondary); padding: var(--space-7) 0; }
 
 .toast {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: var(--space-5);
   left: 50%;
   transform: translateX(-50%);
-  background: var(--ink);
-  color: var(--paper);
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  padding: 0.6rem 1.1rem;
-  border-radius: 2px;
+  background: var(--action-primary);
+  color: var(--action-on-primary);
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
 }
 
 /* ---------- lessons ---------- */
@@ -310,117 +581,278 @@ button:disabled { opacity: 0.45; cursor: default; }
    ruled block with its source under it, the way a statute reprint sets the
    provision apart from the annotation. */
 
-.lesson { max-width: 44rem; }
-.lesson h3 { margin-top: 2.75rem; }
-.lsec p { margin: 0 0 1.1rem; }
-.lsec-list { padding-left: 1.15rem; margin: 0 0 1.2rem; }
-.lsec-list li { margin-bottom: 0.55rem; }
+.lesson { max-width: var(--measure-narrow); }
+.lesson h3 { margin-top: var(--space-7); }
+.lsec p { margin: 0 0 var(--space-4); }
+.lsec-list { padding-left: var(--space-4); margin: 0 0 var(--space-5); }
+.lsec-list li { margin-bottom: var(--space-2); }
 
+/* A rule is the law: green, the law-report flag for a proposition still good.
+   A caution is the trap next to it: red, and additionally labelled, because a
+   learner who cannot separate the two colours must still be able to separate
+   the two ideas. */
 .ruleblock {
-  border-left: 3px solid var(--sage);
-  background: var(--raise);
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
+  border-left: var(--line-marker) solid var(--signal-correct);
+  background: var(--surface-raised);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin: var(--space-5) 0;
 }
-.ruleblock p { margin: 0; font-size: 1.02rem; }
+.ruleblock p { margin: 0; font-size: var(--type-body); }
 .ruleblock .rb-src {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  color: var(--muted);
-  margin-top: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
 }
+
+/* A paragraph set immediately after a rule is a gloss on that rule — 74 of the
+   168 rules in the lessons are followed by a "Put simply:" restatement — and at
+   a full paragraph's remove it reads as the next point instead of as the same
+   point in plainer words. So it is pulled tight to the block above and indented
+   to the rule's own text edge, the way a reprint sets an annotation under the
+   provision it annotates. It keeps body ink: for a reader who needs it, the
+   plain version is the more important of the two, not the lesser. */
+.ruleblock:has(+ p) { margin-bottom: var(--space-2); }
+.ruleblock + p { padding-left: var(--space-5); }
+
+/* A lesson is a long column, and until now every paragraph, example and list in
+   it looked identical — a reader could not see the shape of what they were
+   about to read before reading it. Block type IS the lesson's structure, so
+   marking it is signalling, not decoration: it is the one kind of colour that
+   the evidence says helps rather than costs.
+
+   The fills are deliberately faint. Every one of them is verified to leave body
+   text above AAA (10-13:1), because these sit behind dense material read for
+   long stretches by people who are often tired and often on a phone at night. A
+   saturated block would be worse than the monochrome it replaces. */
 
 .exblock, .cautionblock {
-  border-left: 2px solid var(--rule);
-  padding: 0.15rem 0 0.15rem 1.15rem;
-  margin: 1.4rem 0;
+  border-left: var(--line-marker) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin: var(--space-5) 0;
 }
-.cautionblock { border-left-color: var(--oxide); }
-.exblock p, .cautionblock p { margin: 0; font-size: 0.97rem; }
+.exblock { background: var(--block-example-fill); border-left-color: var(--figure-accent); }
+.cautionblock { background: var(--block-caution-fill); border-left-color: var(--signal-wrong); }
+.exblock p, .cautionblock p { margin: 0; font-size: var(--type-base); }
+
+/* ---------- predict, and checkpoint ----------
+   A predict block asks for an answer before the rule is shown. It must read as
+   an invitation, not as a test: no verdict colour anywhere in it, and the
+   reveal is a comparison rather than a mark. Being wrong here is the mechanism
+   working, not the reader failing.
+
+   A checkpoint is retrieval placed mid-lesson. It is a question, so it is
+   allowed to be answered — but its result uses the rehearsal treatment, not the
+   verdict colours, because a checkpoint is practice inside the reading, not an
+   assessment of it. */
+
+.predictblock, .checkpointblock {
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-left: var(--line-marker) solid var(--block-predict-ink);
+  border-radius: var(--radius-md);
+  background: var(--block-predict-fill);
+  padding: var(--space-4) var(--space-5);
+  margin: var(--space-5) 0;
+}
+.checkpointblock {
+  background: var(--block-checkpoint-fill);
+  border-left-color: var(--block-checkpoint-ink);
+}
+.predictblock > :last-child, .checkpointblock > :last-child { margin-bottom: 0; }
+
+.predictblock .xlabel { color: var(--block-predict-ink); }
+.checkpointblock .xlabel { color: var(--block-checkpoint-ink); }
+
+/* The reveal. Not a verdict: the reader's attempt and the rule are set side by
+   side and left to be compared, which is the whole point of asking first. */
+.predict-reveal {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: var(--line-hairline) dashed var(--border-strong);
+}
+.predict-yours {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- module identity ----------
+   Sixteen modules, one colour each. It is orientation and a retrieval cue, not
+   an identifier: colour cannot carry sixteen categories for a colour-blind
+   reader — a naive sixteen-hue wheel collapses to dE 0.002 under deuteranopia —
+   so the module's NAME is present every time its colour is. Never build
+   anything where the colour is the only thing telling two modules apart. */
+
+/* ---------- taplink ----------
+   A small navigational link in a LIST of links, rather than inside a sentence.
+   WCAG 2.5.8 exempts links inline in prose, on the reasoning that a target in a
+   sentence cannot be padded without wrecking the line. A comma-separated run of
+   cross-references is not prose — it is a row of controls wearing prose
+   clothing, and it gets no exemption. It is also the case where the exemption
+   is least defensible: a reader reaches for a cross-reference precisely when
+   they are stuck, often on a phone, and a 62x17px target is a mis-tap onto the
+   wrong term.
+
+   So it becomes a chip: a real target, and honestly affordanced as something
+   you can press, which a comma-separated underline never was. Kept visually
+   quiet — sunk ground, hairline border — because three of these sit in a meta
+   row and they are not the point of the entry. */
+
+.taplink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: var(--space-1) var(--space-3);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-pill);
+  background: var(--surface-sunk);
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.taplink:hover { border-color: var(--border-active); background: var(--surface-raised); }
+
+/* The row they sit in has to breathe, or three 44px chips read as one bar. */
+.taplink-row { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+
+/* A chip is only a tap target when it is one; a static label does not need to
+   be 44px tall and would only add noise to the page if it were. */
+a.module-chip, button.module-chip { min-height: var(--tap-min); }
+
+.module-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  font-weight: var(--weight-semi);
+  color: var(--module-ink);
+  background: var(--module-tint);
+  border: var(--line-hairline) solid currentColor;
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
+}
+
+/* The rule under a lesson title, in the module's colour: the strongest
+   orientation cue on the page, and it costs no contrast because it is a line. */
+.module-rule {
+  height: var(--line-marker);
+  border-radius: var(--radius-pill);
+  background: var(--module-ink);
+  margin: 0 0 var(--space-4);
+  max-width: 6rem;
+}
+
+.module-card { border-left: var(--line-marker) solid var(--module-ink); }
+.module-wash { background: var(--module-tint); }
+
+/* A brand block is a full-width coloured panel, and the .lede that follows it
+   has no top margin — so without this they touch. The space belongs here
+   rather than as an inline style on the one page that noticed, because the
+   next head to use a block will have the same problem and no reason to
+   suspect it. */
+.module-head .brandblock { margin-bottom: var(--space-5); }
 
 .xlabel {
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
-  color: var(--muted);
-  margin-right: 0.6rem;
+  color: var(--text-secondary);
+  margin-right: var(--space-2);
+  font-weight: var(--weight-semi);
 }
-.cautionblock .xlabel { color: var(--oxide); }
+.cautionblock .xlabel { color: var(--signal-wrong-text); }
 
 .handoff {
-  border-top: 1px solid var(--rule);
-  margin-top: 3rem;
-  padding-top: 0.5rem;
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  margin-top: var(--space-7);
+  padding-top: var(--space-2);
 }
 .plantlist {
-  padding-left: 1.15rem;
-  margin: 0.75rem 0 0;
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  color: var(--muted);
+  padding-left: var(--space-4);
+  margin: var(--space-3) 0 0;
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
 }
-.plantlist li { margin-bottom: 0.35rem; }
+.plantlist li { margin-bottom: var(--space-1); }
 
 /* ---------- problem questions ---------- */
 /* The facts are set as a statute's recitals: indented, ruled at the left, so
    that what you are given is visually distinct from what you are asked. */
 
-.problem { max-width: 46rem; }
-.problem h4 { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; margin: 1.75rem 0 0.5rem; }
+.problem { max-width: var(--measure-narrow); }
+.problem h4 {
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  font-weight: var(--weight-semi);
+  margin: var(--space-5) 0 var(--space-2);
+}
 
 .facts {
-  border-left: 2px solid var(--rule);
-  padding: 0.25rem 0 0.25rem 1.5rem;
-  margin: 1.5rem 0 2rem;
+  border-left: 2px solid var(--border-strong);
+  padding: 0 0 0 var(--space-5);
+  margin: var(--space-5) 0 var(--space-6);
 }
-.facts p { margin: 0 0 0.9rem; }
-.facts .card-kind { margin-bottom: 1rem; }
+.facts p { margin: 0 0 var(--space-3); }
+.facts .card-kind { margin-bottom: var(--space-4); }
 .facts .task {
-  margin: 1.5rem 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
+  margin: var(--space-5) 0 0;
+  padding-top: var(--space-4);
+  border-top: var(--line-hairline) solid var(--border-hairline);
 }
 
 .clock { font-variant-numeric: tabular-nums; }
-.clock.is-over { color: var(--oxide); font-weight: 500; }
+.clock.is-over { color: var(--signal-wrong-text); font-weight: var(--weight-medium); }
 
 .answer {
   width: 100%;
   min-height: 24rem;
-  padding: 1.25rem 1.4rem;
-  border: 1px solid var(--rule);
-  background: var(--raise);
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1rem;
-  line-height: 1.75;
-  border-radius: 2px;
+  padding: var(--space-4) var(--space-5);
+  border: var(--line-hairline) solid var(--border-strong);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-size: var(--type-body);
+  line-height: var(--leading-prose);
+  border-radius: var(--radius-sm);
   resize: vertical;
 }
-.answer:focus-visible { outline: 2px solid var(--sage); outline-offset: 2px; }
+.answer:focus-visible { outline: var(--focus-width) solid var(--focus-ring); outline-offset: 2px; }
 
 .write-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-4);
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: var(--space-4);
 }
 
-.predict { margin: 2rem 0; }
-.predict label { display: block; font-family: var(--sans); font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; }
+.predict { margin: var(--space-6) 0; }
+.predict label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
 .predict input {
-  font-family: var(--sans);
-  font-size: 1.6rem;
+  min-height: var(--tap-min);
+  font-family: var(--font-sans);
+  font-size: var(--type-xl);
   font-variant-numeric: tabular-nums;
   width: 6rem;
-  padding: 0.5rem 0.7rem;
-  border: 1px solid var(--rule);
-  background: var(--raise);
-  color: var(--ink);
-  border-radius: 2px;
+  padding: var(--space-2) var(--space-3);
+  border: var(--line-hairline) solid var(--border-strong);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
 }
 
 /* --- the rubric --- */
@@ -429,107 +861,350 @@ button:disabled { opacity: 0.45; cursor: default; }
   position: sticky;
   top: 0;
   z-index: 1;
-  background: var(--paper);
-  border-bottom: 1px solid var(--rule);
-  padding: 0.7rem 0;
-  margin: 2rem 0 0;
-  font-family: var(--sans);
-  font-size: 0.85rem;
+  background: var(--surface-page);
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+  padding: var(--space-3) 0;
+  margin: var(--space-6) 0 0;
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
   font-variant-numeric: tabular-nums;
-  color: var(--muted);
+  color: var(--text-secondary);
 }
-.running #running { font-size: 1.25rem; font-weight: 500; color: var(--ink); }
+.running #running { font-size: var(--type-lg); font-weight: var(--weight-medium); color: var(--text-primary); }
 
-.crit { padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
-.crit-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-.crit-marks { font-family: var(--sans); font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-.crit-text { margin: 0.6rem 0 0; }
+.crit { padding: var(--space-5) 0; border-bottom: var(--line-hairline) solid var(--border-hairline); }
+.crit-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); }
+.crit-marks {
+  font-family: var(--font-sans);
+  font-size: var(--type-xs);
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.crit-text { margin: var(--space-2) 0 0; }
 .crit-auth {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin: 0.45rem 0 0;
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  margin: var(--space-2) 0 0;
 }
 
+/* A band is a label, not a verdict. Application and conclusion are where the
+   marks actually are, so they carry more weight — but not a signal colour;
+   green and red in this app answer a learner, and a heading answers nobody. */
 .band {
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
-  color: var(--sage);
-  font-weight: 600;
+  color: var(--text-secondary);
+  font-weight: var(--weight-semi);
 }
-.band-application, .band-conclusion { color: var(--oxide); }
+.band-application, .band-conclusion { color: var(--text-strong); font-weight: var(--weight-bold); }
 
-.credit { display: flex; gap: 0.4rem; margin-top: 0.9rem; }
-.credit button { font-size: 0.8rem; padding: 0.35rem 0.8rem; }
-.credit button.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.credit { display: flex; gap: var(--space-1); margin-top: var(--space-3); }
+.credit button { font-size: var(--type-sm); padding: var(--space-1) var(--space-3); }
+.credit button.is-on {
+  background: var(--action-primary);
+  color: var(--action-on-primary);
+  border-color: var(--action-primary);
+}
 
 .fold {
-  border-top: 1px solid var(--rule);
-  padding: 1rem 0;
-  margin-top: 2rem;
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  padding: var(--space-4) 0;
+  margin-top: var(--space-6);
 }
 .fold > summary {
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: var(--type-base);
+  font-weight: var(--weight-semi);
   cursor: pointer;
   list-style-position: outside;
 }
-.fold[open] > summary { margin-bottom: 1rem; color: var(--muted); }
-.fold ul { padding-left: 1.1rem; }
-.fold li { margin-bottom: 0.5rem; }
+.fold[open] > summary { margin-bottom: var(--space-4); color: var(--text-secondary); }
+.fold ul { padding-left: var(--space-4); }
+.fold li { margin-bottom: var(--space-2); }
 
 .answer-read {
   white-space: pre-wrap;
-  border-left: 2px solid var(--rule);
-  padding-left: 1.25rem;
-  color: var(--muted);
+  border-left: 2px solid var(--border-strong);
+  padding-left: var(--space-4);
+  color: var(--text-secondary);
 }
 
-.source-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.25rem; }
-.source-note p { margin-bottom: 0.6rem; }
+.source-note {
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+}
+.source-note p { margin-bottom: var(--space-2); }
+
+/* ---------- rehearsal: guided problems ----------
+   A guided problem is a demonstration the learner takes part in, not an attempt
+   they are judged on. The design has exactly one job, and it is not decoration:
+   a learner who scores 8/8 on a rehearsal has shown they can follow a correct
+   argument, which is a different thing from constructing one. Someone studying
+   alone has nobody to correct that impression, so the page has to.
+
+   Four moves, none of them a colour:
+
+     1. It is SUNK, not raised. Everything in this app that counts is lifted off
+        the page — cards, panels, callouts, every real problem. A rehearsal is
+        recessed below it. That is the whole argument in one property.
+     2. Its rules are DASHED. A dashed line already means "not the real thing"
+        here: it is how the unearned inner ring of a seal is drawn. A rehearsal
+        borrows the signal rather than inventing one.
+     3. Its score is NEVER a signal colour. An open problem answers you in green
+        or red. A rehearsal answers you in secondary text — it does not light up,
+        because there is nothing here to have got right in the sense those
+        colours mean.
+     4. It says so. "Rehearsal", set as a label, because a learner who cannot
+        read any of the above must still be told in words.
+
+   The visual treatment cannot do this alone. If a rehearsal awards the same XP
+   and the same seals as a real problem, the mechanics say "achievement" louder
+   than the styling says "practice", and the mechanics win. Scoring must be
+   quieter too. */
+
+.rehearsal {
+  background: var(--surface-sunk);
+  border: var(--line-hairline) dashed var(--border-strong);
+  border-left-width: var(--line-marker);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin: var(--space-5) 0;
+}
+.rehearsal > :last-child { margin-bottom: 0; }
+
+.rehearsal-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--type-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  font-weight: var(--weight-semi);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+/* The steps of a rehearsal come pre-ordered — no issue-spotting is asked for —
+   so they are numbered in the margin like sections, not bulleted like a list of
+   things you thought of yourself. */
+.rehearsal-steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+.rehearsal-steps li {
+  display: grid;
+  grid-template-columns: var(--space-6) 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-top: var(--line-hairline) dashed var(--border-hairline);
+  counter-increment: step;
+}
+.rehearsal-steps li::before {
+  content: counter(step);
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+  text-align: right;
+}
+/* The last step is the one the learner actually does, so it is the only part
+   set as body text rather than annotation. */
+.rehearsal-steps li.is-yours { color: var(--text-primary); }
+.rehearsal-steps li:not(.is-yours) { color: var(--text-secondary); }
+
+/* A rehearsal result is deliberately unremarkable. No signal colour, no
+   emphasis, no tabular triumph — it reports, it does not congratulate. */
+.rehearsal-score {
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+  font-weight: var(--weight-regular);
+}
+
+/* In a list of problems, a rehearsal is subordinate to the open problem it sits
+   under: dimmer, and never carrying the "due" weight that real work carries. */
+.arr-state.is-rehearsal {
+  color: var(--text-secondary);
+  font-weight: var(--weight-regular);
+}
+.arr-row.is-rehearsal .arr-title { font-weight: var(--weight-regular); }
 
 /* --- band breakdown on the progress page --- */
 
-.bands { margin: 1rem 0 0; }
+.bands { margin: var(--space-4) 0 0; }
 .band-row {
   display: grid;
   grid-template-columns: 6.5rem 1fr auto;
-  gap: 0.9rem;
+  gap: var(--space-3);
   align-items: center;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--rule);
+  padding: var(--space-2) 0;
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
 }
-.band-name { font-family: var(--sans); font-size: 0.82rem; }
-.band-bar { height: 6px; background: var(--rule); display: block; }
-.band-bar i { display: block; height: 100%; background: var(--sage); }
+.band-name { font-family: var(--font-sans); font-size: var(--type-sm); }
+/* A meter track is not decoration: an empty bar and a full one differ only by
+   this line, so it is held to the 3:1 non-text contrast floor. */
+.band-bar { height: 6px; background: var(--border-strong); display: block; border-radius: var(--radius-pill); }
+.band-bar i { display: block; height: 100%; background: var(--signal-correct); border-radius: var(--radius-pill); }
 .band-num {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
 @media (max-width: 780px) {
   .shell { flex-direction: column; }
-  .rail { width: auto; flex: none; height: auto; position: static; border-right: none; border-bottom: 1px solid var(--rule); padding: 1.5rem 1.25rem; }
+  .rail {
+    width: auto;
+    flex: none;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: var(--line-hairline) solid var(--border-hairline);
+    padding: var(--space-5) var(--space-4);
+  }
   .rail nav { flex-direction: row; flex-wrap: wrap; }
-  .main { padding: 2rem 1.25rem 4rem; }
-  .arr-row { grid-template-columns: 2.5rem 1fr; }
+  /* The bottom padding reserves room for the thumb-reachable navigation bar
+     and clears the home indicator under it. Reserved here, on the scrolling
+     pane, rather than with a spacer element inside the bar's own markup: a
+     spacer is a second thing that has to be remembered, and it is inside the
+     component that would be hidden if the bar were ever conditionally
+     rendered — which is precisely when the padding still needs to be right.
+     env() falls back to 0px on hardware with no inset and on any browser that
+     does not support it. */
+  .main {
+    padding: var(--space-6) var(--space-4);
+    padding-bottom: calc(var(--railnav-h) + env(safe-area-inset-bottom, 0px) + var(--space-6));
+  }
+  /* Full-bleed the sheet on a phone. At this width .main's gutter is 16px, so
+     an inset sheet leaves a 16px ribbon of field down each edge — too narrow
+     to read as a margin and it looks like a rendering fault rather than a
+     decision. The sheet cancels the gutter and re-applies it as its own
+     padding, so the text sits exactly where it did before and the ribbon is
+     gone. On a tablet the gutter is ~33px and reads as a margin, so it keeps
+     the inset. */
+  .sheet,
+  .wrap--dash {
+    max-width: none;
+    margin-inline: calc(var(--space-4) * -1);
+    padding-inline: var(--space-4);
+  }
+
+  .arr-row { grid-template-columns: var(--margin-num) 1fr; }
   .arr-state { grid-column: 2; }
   .grades { grid-template-columns: repeat(2, 1fr); }
-  .facts { padding-left: 1rem; }
-  .ruleblock { padding: 0.85rem 1rem; }
-  .exblock, .cautionblock { padding-left: 0.9rem; }
-  .answer { min-height: 18rem; padding: 1rem; }
+  .facts { padding-left: var(--space-4); }
+  .ruleblock { padding: var(--space-3) var(--space-4); }
+  /* A paragraph set immediately after a rule is a gloss on that rule — 74 of the
+   168 rules in the lessons are followed by a "Put simply:" restatement — and at
+   a full paragraph's remove it reads as the next point instead of as the same
+   point in plainer words. So it is pulled tight to the block above and indented
+   to the rule's own text edge, the way a reprint sets an annotation under the
+   provision it annotates. It keeps body ink: for a reader who needs it, the
+   plain version is the more important of the two, not the lesser. */
+.ruleblock:has(+ p) { margin-bottom: var(--space-2); }
+.ruleblock + p { padding-left: var(--space-5); }
+
+.exblock, .cautionblock { padding-left: var(--space-3); }
+  .answer { min-height: 18rem; padding: var(--space-4); }
   .band-row { grid-template-columns: 5rem 1fr; }
   .band-num { grid-column: 2; }
-  :root { --rail: 2.5rem; }
 }
 
+/* ---------- the ladder ----------
+   Before this there was one breakpoint in the entire app, at 780px, which
+   meant the app had exactly two designs — phone, and everything else. A
+   laptop, a 1440 desktop and a 34-inch monitor all got the 781px layout, and
+   the wider the screen the worse it looked, because the design was never
+   asked what to do with the space.
+
+   Six states, each one earning its keep:
+     <=600    phone
+     601-780  large phone, small tablet in portrait
+     781-1023 tablet: the rail returns to the side, narrowed
+     1024+    laptop: the sheet lifts off the field
+     1440+    desktop: the apparatus gets its margins back
+     1800+    wide: the app stops growing and the field takes the rest
+
+   Only the states that need a declaration have one; a breakpoint that changes
+   nothing is a breakpoint that will confuse the next person to read this. */
+
+@media (min-width: 781px) and (max-width: 1279px) {
+  /* A 15rem rail is a fifth of a 768px tablet. Narrow it and give the reading
+     column the difference.
+     Held all the way to 1279 rather than stopping at 1023, because 1024 is
+     where the lesson surface adds its own 176px table-of-contents rail: at a
+     15rem app rail the prose column there measured 428px, about 48ch, the
+     narrowest reading measure anywhere in the app. Two rails and a reading
+     column do not fit in 1024px at full width, and the app rail is the one
+     that can give. */
+  :root { --rail-width: 12rem; }
+  .rail { padding: var(--space-5) var(--space-3); }
+}
+
+@media (min-width: 1024px) {
+  /* The sheet lifts off the liquid field. This is the one shadow in the app
+     that is not a dismissible overlay, and it is here because the thing it is
+     attached to genuinely floats: a page of statute lying on a coloured desk.
+     Below this width there is no room for the field to show around it, so
+     there is nothing to lift off and the sheet stays flat. */
+  .wrap.sheet,
+  .wrap--dash {
+    padding: var(--space-7);
+    border: var(--line-hairline) solid var(--border-hairline);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-pop);
+  }
+
+  /* The padding is added to the cap rather than taken out of it, so the column
+     inside a sheet is still exactly --measure. A sheet that padded inwards
+     would quietly narrow every line of prose in the app by 96px, which is the
+     kind of change that never gets attributed to the thing that caused it. */
+  .wrap.sheet       { max-width: calc(var(--measure) + var(--space-7) * 2); }
+  .wrap--wide.sheet { max-width: calc(var(--measure-wide) + var(--space-7) * 2); }
+  .wrap--dash       { max-width: calc(var(--pane-dash) + var(--space-7) * 2); }
+
+  .rail { padding: var(--space-6) var(--space-5); }
+}
+
+@media (min-width: 1440px) {
+  :root { --rail-width: 16rem; }
+  .main { padding-top: var(--space-7); }
+}
+
+@media (min-width: 1800px) {
+  :root { --rail-width: 17rem; }
+}
+
+/* This reaches CSS animations and transitions only. It cannot reach
+   framer-motion, which writes inline styles every frame — that is handled by
+   <MotionConfig reducedMotion="user"> in main.jsx, and the two together are
+   what actually honour the preference. Neither is sufficient alone.
+
+   `*::before, *::after` are not decoration here — they are the whole reason
+   this rule was incomplete. **The universal selector does not match pseudo-
+   elements**, so for as long as this said `*` alone, every animation on a
+   ::before or ::after ran at full strength for a reader who had asked for no
+   motion. Proved with a control independent of the app: a plain element and a
+   ::after given the same keyframes under the shipped rule resolved to
+   `animation-name: none` and `animation-name: probe-spin` respectively.
+
+   Two rules were escaping, both in game.css: `.arena.is-urgent::after`, a
+   full-panel inset glow pulsing once a second through the last fifteen seconds
+   of a run — measured at opacity 0.002 -> 0.998 across 500ms with the
+   preference set — and `.review.flash-miss::after`, a one-shot flash on a
+   missed card, which is the kind of motion the preference is most often set
+   for in the first place.
+
+   Both were invisible to every check. The preference had been verified on a
+   page whose animations all sit on elements, which is the same measurement
+   trap as the rest: the result was true about the page tested and not about
+   the rule. If you add a third mechanism, it needs its own switch and its own
+   control. */
 @media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
+  *,
+  *::before,
+  *::after { animation: none !important; transition: none !important; }
 }

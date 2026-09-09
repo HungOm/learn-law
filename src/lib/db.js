@@ -6,6 +6,27 @@ const DB_VERSION = 1;
 
 let _db = null;
 
+/**
+ * Ask the browser to stop treating this data as disposable.
+ *
+ * Without this, IndexedDB is "best-effort": Chrome and Safari may evict the
+ * whole origin under storage pressure, and the reader loses every section they
+ * marked, every card's schedule and every point of XP with no warning and no
+ * action of their own to explain it. Granted, the data survives until the
+ * reader deletes it themselves. Chrome usually grants it silently to a site
+ * with any engagement; Safari asks. Either way it is best-effort and never a
+ * substitute for the export in Settings, which is the only real backup.
+ *
+ * Fire-and-forget: a refusal is not an error and must never stop the app
+ * opening. Called once, from `open()`, because that is the one path every
+ * store goes through.
+ */
+function askToPersist() {
+  try {
+    navigator.storage?.persist?.().catch(() => {});
+  } catch { /* no navigator.storage: nothing to ask, nothing to report */ }
+}
+
 export function open() {
   if (_db) return Promise.resolve(_db);
   return new Promise((resolve, reject) => {
@@ -32,7 +53,7 @@ export function open() {
         db.createObjectStore('meta', { keyPath: 'key' });
       }
     };
-    req.onsuccess = () => { _db = req.result; resolve(_db); };
+    req.onsuccess = () => { _db = req.result; askToPersist(); resolve(_db); };
     req.onerror = () => reject(req.error);
   });
 }

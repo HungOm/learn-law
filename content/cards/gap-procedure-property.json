@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "1.0",
+  "note": "Beginner cards for criminal procedure and property, planted by the on-ramp lessons in gap-procedure-property.json. One fact each. Every card carries a `source` so you can re-verify it. Cards marked type 'trigger' are issue-spotting cues.",
+  "cardTypes": {
+    "term": "Defined term or Latin maxim. Irreducible pair.",
+    "rule": "A black-letter rule or a single element of one.",
+    "ratio": "The principle a case stands for.",
+    "structure": "Institutional or hierarchical fact.",
+    "source": "Where a rule comes from — statute, section, or authority.",
+    "trigger": "A fact cue that should make you think of a doctrine."
+  },
+  "cards": [
+    {
+      "id": "pd-c-cp-01",
+      "moduleId": "m05-criminal-procedure",
+      "type": "term",
+      "front": "What turns a police stop into an arrest?",
+      "back": "You are taken into custody and are no longer free to leave. No particular words are needed.",
+      "tags": ["arrest", "everyday"],
+      "source": "Criminal Procedure Code (Act 593); standard practice"
+    },
+    {
+      "id": "pd-c-cp-02",
+      "moduleId": "m05-criminal-procedure",
+      "type": "rule",
+      "front": "What must the police tell you when they arrest you?",
+      "back": "The grounds of the arrest, as soon as may be.",
+      "tags": ["arrest", "rights"],
+      "source": "Federal Constitution, Art 5(3)"
+    },
+    {
+      "id": "pd-c-cp-03",
+      "moduleId": "m05-criminal-procedure",
+      "type": "rule",
+      "front": "After an arrest, who may you ask to contact?",
+      "back": "A lawyer of your choice, and a relative or friend to be told where you are.",
+      "tags": ["arrest", "rights"],
+      "source": "Federal Constitution, Art 5(3); Criminal Procedure Code (Act 593), s 28A",
+      "note": "When access to a lawyer must be allowed in practice is contested in the case law. Ask, ask again, and record the time."
+    },
+    {
+      "id": "pd-c-cp-04",
+      "moduleId": "m05-criminal-procedure",
+      "type": "rule",
+      "front": "Must you answer every question the police ask?",
+      "back": "You must answer truthfully, but you need not answer a question whose answer would expose you to a criminal charge.",
+      "tags": ["arrest", "statements"],
+      "source": "Criminal Procedure Code (Act 593), provisions on police statements"
+    },
+    {
+      "id": "pd-c-cp-05",
+      "moduleId": "m05-criminal-procedure",
+      "type": "trigger",
+      "front": "Fact cue: a relative is still in the lock-up on the second night. What do you check first?",
+      "back": "Whether a Magistrate has made a remand order. Twenty-four hours is the limit without one.",
+      "tags": ["issue-spotting", "detention"],
+      "source": "Federal Constitution, Art 5(4); Criminal Procedure Code (Act 593), s 117"
+    },
+    {
+      "id": "pd-c-cp-06",
+      "moduleId": "m05-criminal-procedure",
+      "type": "term",
+      "front": "What is a remand order?",
+      "back": "A Magistrate's order allowing the police to hold a person longer, for the purposes of the investigation.",
+      "tags": ["detention", "remand"],
+      "source": "Criminal Procedure Code (Act 593), s 117"
+    },
+    {
+      "id": "pd-c-cp-07",
+      "moduleId": "m05-criminal-procedure",
+      "type": "rule",
+      "front": "What must a charge tell the accused?",
+      "back": "The offence, with enough detail of time, place and person for him to know what he is answering.",
+      "tags": ["charge"],
+      "source": "Criminal Procedure Code (Act 593), provisions on the form of charges"
+    },
+    {
+      "id": "pd-c-cp-08",
+      "moduleId": "m05-criminal-procedure",
+      "type": "term",
+      "front": "What does 'claiming trial' mean?",
+      "back": "Pleading not guilty, so that the prosecution must prove the charge.",
+      "tags": ["plea", "everyday"],
+      "source": "Criminal Procedure Code (Act 593); standard court usage"
+    },
+    {
+      "id": "pd-c-cp-09",
+      "moduleId": "m05-criminal-procedure",
+      "type": "term",
+      "front": "What is a surety (penjamin) promising?",
+      "back": "That the accused will attend court. If he does not, the surety's money is at risk.",
+      "tags": ["bail", "everyday"],
+      "source": "Criminal Procedure Code (Act 593), bail provisions"
+    },
+    {
+      "id": "pd-c-cp-10",
+      "moduleId": "m05-criminal-procedure",
+      "type": "structure",
+      "front": "In what order does a criminal trial run?",
+      "back": "Prosecution witnesses, then a ruling on whether there is a case to answer, then the defence, then the decision and any sentence.",
+      "tags": ["trial", "structure"],
+      "source": "Criminal Procedure Code (Act 593)"
+    },
+
+    {
+      "id": "pd-c-ld-01",
+      "moduleId": "m08-property",
+      "type": "rule",
+      "front": "Who is the owner of a piece of registered land in Malaysia?",
+      "back": "The person registered as proprietor. The register is the title, not merely evidence of it.",
+      "tags": ["torrens", "registration"],
+      "source": "National Land Code (Act 828)"
+    },
+    {
+      "id": "pd-c-ld-02",
+      "moduleId": "m08-property",
+      "type": "term",
+      "front": "What is an official land search?",
+      "back": "An extract of the register for one lot, applied for at the district land office by anyone who has the lot number.",
+      "tags": ["practice", "everyday"],
+      "source": "National Land Code (Act 828); State land rules"
+    },
+    {
+      "id": "pd-c-ld-03",
+      "moduleId": "m08-property",
+      "type": "structure",
+      "front": "Name four things a land search will show you.",
+      "back": "The registered proprietor, the category of land use, any restriction in interest, and anything registered against the land such as a charge, lease or caveat.",
+      "tags": ["practice"],
+      "source": "National Land Code (Act 828)"
+    },
+    {
+      "id": "pd-c-ld-04",
+      "moduleId": "m08-property",
+      "type": "term",
+      "front": "What is a temporary occupation licence (TOL)?",
+      "back": "Yearly permission to occupy State land. It is permission, not ownership, and it can end.",
+      "tags": ["occupation", "kampung"],
+      "source": "National Land Code (Act 828)"
+    },
+    {
+      "id": "pd-c-ld-05",
+      "moduleId": "m08-property",
+      "type": "trigger",
+      "front": "Fact cue: a family has lived on land for forty years with no title in their name. What do you check first?",
+      "back": "Whose name is on the register, and on what footing the family occupies. Long use alone gives no title under the Code.",
+      "tags": ["issue-spotting", "kampung"],
+      "source": "National Land Code (Act 828)"
+    },
+    {
+      "id": "pd-c-ld-06",
+      "moduleId": "m08-property",
+      "type": "term",
+      "front": "What is a charge in Malaysian land law?",
+      "back": "A registered security over land, given for a debt. Malaysian law says charge, not mortgage.",
+      "tags": ["dealings", "security"],
+      "source": "National Land Code (Act 828)"
+    },
+    {
+      "id": "pd-c-ld-07",
+      "moduleId": "m08-property",
+      "type": "rule",
+      "front": "Does a charge make the bank the owner of the house?",
+      "back": "No. The borrower stays the registered proprietor, and the bank must apply for an order for sale to enforce.",
+      "tags": ["dealings", "security"],
+      "source": "National Land Code (Act 828)"
+    },
+    {
+      "id": "pd-c-ld-08",
+      "moduleId": "m08-property",
+      "type": "term",
+      "front": "What does a private caveat actually do?",
+      "back": "It blocks further dealings from being registered while it stands. It creates no interest in the land.",
+      "tags": ["caveat"],
+      "source": "National Land Code (Act 828)"
+    },
+    {
+      "id": "pd-c-ld-09",
+      "moduleId": "m08-property",
+      "type": "rule",
+      "front": "What is the risk of lodging a caveat with no proper claim?",
+      "back": "A person who suffers loss because of it can claim compensation from the caveator.",
+      "tags": ["caveat"],
+      "source": "National Land Code (Act 828)"
+    },
+    {
+      "id": "pd-c-ld-10",
+      "moduleId": "m08-property",
+      "type": "structure",
+      "front": "A grandfather has died and his name is still on the title. How does the land move to the family?",
+      "back": "Through a distribution of his estate — at the Land Office for a small estate, otherwise in court — which is then registered against the title.",
+      "tags": ["succession", "kampung"],
+      "source": "National Land Code (Act 828); Small Estates (Distribution) Act 1955"
+    }
+  ]
+}

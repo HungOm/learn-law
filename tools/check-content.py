@@ -16,6 +16,9 @@ the page. These are the errors that would otherwise be silent:
     content reachable only by someone who already knew it was there;
   * a quiz question whose `answer` index does not point at an option, which
     would mark a right answer wrong every time it was asked;
+  * quiz answers bunched on one option position — every one of the first 286
+    questions written had its answer first, which lets a learner score full
+    marks without reading the question and costs them the retrieval practice;
   * raw HTML in lesson prose, which the renderer escapes and prints literally.
 
 Run it after editing anything under content/:
@@ -23,6 +26,7 @@ Run it after editing anything under content/:
     python3 tools/check-content.py
 """
 
+import collections
 import json
 import pathlib
 import re
@@ -34,14 +38,139 @@ PROBLEM_FIELDS = ["id", "moduleId", "title", "kind", "minutes", "marks", "scenar
                   "task", "rubric", "modelAnswer", "source", "lastVerified", "verify"]
 LESSON_FIELDS = ["id", "moduleId", "title", "minutes", "summary", "sections",
                  "source", "lastVerified", "verify"]
-BLOCKS = {"p", "rule", "example", "caution", "list"}
+PROSE_BLOCKS = {"p", "rule", "example", "caution", "list",
+          # Visual blocks. Prose blocks carry `text`; these carry structure, so
+          # each is checked for the fields its renderer actually reads.
+          "chart", "table", "diagram", "steps", "compare",
+          # Interactive blocks: the reader answers before reading on.
+          "predict", "checkpoint"}
+FIGURE_BLOCKS = {"table", "chart", "diagram", "figure", "steps", "compare"}
+BLOCKS = PROSE_BLOCKS | FIGURE_BLOCKS
+DIAGRAM_KINDS = {"hierarchy", "flow", "branch", "timeline", "matrix", "stack", "spectrum"}
+CHART_KINDS = {"bar", "stack"}
 QUIZ_FIELDS = ["id", "q", "options", "answer", "why"]
 HTML = re.compile(r"<[a-zA-Z/][^>]{0,20}>")
 CARD_FIELDS = ["id", "moduleId", "type", "front", "back", "source"]
 
 
+def check_visual(where, b):
+    """Field checks for the visual block types.
+
+    These carry structure rather than a `text` string, so the prose checks above
+    cannot see inside them. The two that matter most are a table row with the
+    wrong number of cells — which silently shifts every value into the wrong
+    column — and a diagram with no `alt`, which is simply invisible to a reader
+    using a screen reader.
+    """
+    t = b.get("t")
+    out = []
+    if t == "table":
+        cols = b.get("columns") or []
+        if not cols:
+            out.append(f"{where}: a table has no columns")
+        for i, row in enumerate(b.get("rows") or []):
+            if not isinstance(row, list):
+                out.append(f"{where}: table row {i} is not a list")
+            elif cols and len(row) != len(cols):
+                out.append(f"{where}: table row {i} has {len(row)} cells but "
+                           f"there are {len(cols)} columns")
+    elif t == "chart":
+        if not b.get("kind"):
+            out.append(f"{where}: a chart has no kind")
+        data = b.get("data") or []
+        if not data:
+            out.append(f"{where}: a chart has no data")
+        for d in data:
+            if not isinstance(d, dict) or d.get("label") is None or d.get("value") is None:
+                out.append(f"{where}: a chart datum is missing label or value")
+        if not b.get("caption"):
+            out.append(f"{where}: a chart has no caption saying what it shows")
+        # The one rule this app cannot bend: a chart is the most authoritative-
+        # looking thing on a page, and one drawn over unsourced numbers is a
+        # claim it has not earned.
+        if not b.get("source"):
+            out.append(f"{where}: a chart plots figures and must name where they come from")
+    elif t == "diagram":
+        # Each kind carries its own payload key; what they share is that a
+        # diagram with no alt text does not exist for a screen reader, and this
+        # audience includes people who will use one.
+        payloads = {"stack": "layers", "branch": "branches", "hierarchy": "rows",
+                    "flow": "steps", "timeline": "events", "matrix": "cells",
+                    "spectrum": "marks"}
+        if not b.get("alt"):
+            out.append(f"{where}: a diagram has no alt text")
+        kind = b.get("kind")
+        if kind not in payloads:
+            out.append(f"{where}: diagram kind {kind!r} is not one of "
+                       f"{sorted(payloads)}")
+        elif not b.get(payloads[kind]):
+            out.append(f"{where}: a {kind} diagram has no `{payloads[kind]}`")
+    elif t == "figure":
+        # A lesson naming a plate nobody drew falls back to a generic one
+        # silently, which is the quiet kind of wrong this file exists to catch.
+        if SCENES and b.get("scene") not in SCENES:
+            out.append(f"{where}: figure names plate {b.get('scene')!r}, which does not exist")
+    elif t == "steps":
+        for it in b.get("items") or []:
+            if not isinstance(it, dict) or not it.get("h") or not it.get("text"):
+                out.append(f"{where}: a steps item is missing h or text")
+    elif t == "predict":
+        # A prediction with no reveal teaches nothing: the whole mechanism is
+        # attempt-then-explanation, and without the second half it is a quiz
+        # question with no feedback.
+        if not b.get("prompt"):
+            out.append(f"{where}: a predict block has no prompt")
+        if not b.get("reveal"):
+            out.append(f"{where}: a predict block has no reveal — the answer to "
+                       f"a prediction is the point of making it")
+        opts = b.get("options")
+        if opts is not None:
+            if len(opts) < 2:
+                out.append(f"{where}: a predict block with options needs at least two")
+            elif len(set(opts)) != len(opts):
+                out.append(f"{where}: a predict block has duplicate options")
+            a = b.get("answer")
+            if not isinstance(a, int) or not 0 <= a < len(opts):
+                out.append(f"{where}: predict answer {a!r} does not point at an option")
+    elif t == "checkpoint":
+        for f in ("q", "why"):
+            if not b.get(f):
+                out.append(f"{where}: a checkpoint block has no {f}")
+        opts = b.get("options") or []
+        if len(opts) < 2:
+            out.append(f"{where}: a checkpoint needs at least two options")
+        elif len(set(opts)) != len(opts):
+            out.append(f"{where}: a checkpoint has duplicate options")
+        a = b.get("answer")
+        if not isinstance(a, int) or not 0 <= a < len(opts):
+            out.append(f"{where}: checkpoint answer {a!r} does not point at an option")
+    elif t == "compare":
+        for side in ("left", "right"):
+            col = b.get(side)
+            if not isinstance(col, dict) or not col.get("h") or not col.get("items"):
+                out.append(f"{where}: compare/{side} is missing h or items")
+    return out
+
+
 def load(rel):
     return json.loads((ROOT / rel).read_text(encoding="utf-8"))
+
+
+def scene_keys():
+    """The plate scenes the app can actually draw, read from the source.
+
+    A lesson naming a plate nobody drew falls back to a generic one silently,
+    which is exactly the kind of quiet wrong-looking-right this file is for.
+    """
+    keys = set()
+    for name in ("scenes.jsx", "scenes2.jsx"):
+        path = ROOT / "src/components/plates" / name
+        if path.exists():
+            keys |= set(re.findall(r"scene\('([a-z0-9-]+)'", path.read_text(encoding="utf-8")))
+    return keys
+
+
+SCENES = scene_keys()
 
 
 def main():
@@ -103,12 +232,16 @@ def main():
                     errors.append(f"{where}: a model answer block is missing `h` or `p`")
 
     lessons = 0
-    planted, prepared = {}, {}
+    planted, prepared, quiz_seen, section_seen = {}, {}, {}, {}
     for path in sorted((ROOT / "content/lessons").glob("*.json")):
         doc = json.loads(path.read_text(encoding="utf-8"))
         for l in doc.get("lessons", []):
             lessons += 1
             where = f"{path.name}:{l.get('id', '?')}"
+            if l.get("plate") and SCENES and l["plate"] not in SCENES:
+                errors.append(f"{where}: plate {l['plate']!r} is not a scene that exists")
+            if l.get("plate") and not l.get("plateCaption"):
+                errors.append(f"{where}: has a plate with no caption saying what it shows")
             for f in LESSON_FIELDS:
                 if not l.get(f):
                     errors.append(f"{where}: missing {f}")
@@ -120,16 +253,55 @@ def main():
             for sec in l.get("sections") or []:
                 if not sec.get("h") or not sec.get("body"):
                     errors.append(f"{where}: a section is missing `h` or `body`")
+                # Section progress is keyed to this id. A missing one loses a
+                # reader's place; a reused one credits them with a section they
+                # never read. The trailing number is a mint-time ordinal, not a
+                # position, so a section inserted later takes a fresh number and
+                # nothing renumbers.
+                sid = sec.get("id")
+                if not sid:
+                    errors.append(f"{where}: a section has no id")
+                elif sid in section_seen:
+                    errors.append(f"{where}/{sid}: section id already used in "
+                                  f"{section_seen[sid]}")
+                else:
+                    section_seen[sid] = l["id"]
+                if sid and not sid.startswith(f"sec-{l['id']}-"):
+                    errors.append(f"{where}/{sid}: section id does not belong to this lesson")
+                rm = sec.get("readMinutes")
+                if not isinstance(rm, int) or not 1 <= rm <= 8:
+                    errors.append(f"{where}: `readMinutes` {rm!r} is not a whole number of "
+                                  f"minutes between 1 and 8")
+                kp = (sec.get("keypoint") or "").strip()
+                if not kp:
+                    errors.append(f"{where}: a section has no `keypoint` — the resume card "
+                                  f"has nothing to say")
+                elif kp.lower() == (sec.get("h") or "").strip().lower():
+                    errors.append(f"{where}: a `keypoint` merely repeats its heading")
+                elif not 20 <= len(kp) <= 160:
+                    errors.append(f"{where}: a `keypoint` is {len(kp)} characters; it should be "
+                                  f"one line, roughly 20-160")
                 for b in sec.get("body") or []:
                     if b.get("t") not in BLOCKS:
                         errors.append(f"{where}: block type {b.get('t')!r} "
                                       f"is not one of {sorted(BLOCKS)}")
                     if b.get("t") == "rule" and not b.get("source"):
                         errors.append(f"{where}: a rule block states a rule with no source")
+                    errors.extend(check_visual(where, b))
             quiz = l.get("quiz") or []
             qids = [x.get("id") for x in quiz]
             if len(set(qids)) != len(qids):
                 errors.append(f"{where}: duplicate quiz question ids")
+            # Across the whole site, not just within the lesson. Two authors
+            # both reached for `qcv` -- one for caveats, one for civil procedure
+            # -- and nothing caught it. Harmless in today's lesson-scoped
+            # screens, but it silently merges two different questions the moment
+            # anything keys per-question state on the id.
+            for qid in qids:
+                if qid in quiz_seen:
+                    errors.append(f"{where}/{qid}: quiz id already used in "
+                                  f"{quiz_seen[qid]}")
+                quiz_seen[qid] = l["id"]
             for x in quiz:
                 qwhere = f"{where}/{x.get('id', '?')}"
                 for f in QUIZ_FIELDS:
@@ -150,6 +322,83 @@ def main():
             for r in l.get("reading") or []:
                 if r.get("bookId") not in {b["id"] for b in books["books"]}:
                     errors.append(f"{where}: unknown book {r.get('bookId')}")
+
+    # --- curriculum order -------------------------------------------------
+    # The teaching order is declared in split-content.py, not derived from
+    # filenames. It regressed once to alphabetical, which put company law first
+    # and `method-advanced` before `method`; every gate stayed green because
+    # none of them asserted on order. This is that assertion.
+    gen = ROOT / "tools/split-content.py"
+    if gen.exists():
+        src = gen.read_text(encoding="utf-8")
+        m = re.search(r"LESSON_FILE_ORDER = \[(.*?)\]", src, re.S)
+        if not m:
+            errors.append("split-content.py: LESSON_FILE_ORDER is gone — lesson order would "
+                          "fall back to whatever glob returns, which is alphabetical")
+        else:
+            declared = re.findall(r'"([^"]+\.json)"', m.group(1))
+            on_disk = sorted(p.name for p in (ROOT / "content/lessons").glob("*.json"))
+            for name in on_disk:
+                if name not in declared:
+                    errors.append(f"content/lessons/{name}: not placed in LESSON_FILE_ORDER in "
+                                  f"split-content.py — a lesson file's position in the "
+                                  f"curriculum has to be chosen, not sorted")
+            for name in declared:
+                if name not in on_disk:
+                    errors.append(f"split-content.py: LESSON_FILE_ORDER names {name}, "
+                                  f"which does not exist")
+
+    # The first lesson a new reader is given must teach them how to study. That
+    # is the whole reason the method module has no level number.
+    cat_path = ROOT / "src/generated/catalogue.json"
+    if cat_path.exists():
+        gencat = json.loads(cat_path.read_text(encoding="utf-8"))
+        if gencat and gencat[0].get("moduleId") != "m-study-method":
+            errors.append(f"generated catalogue starts at {gencat[0].get('id')!r} in module "
+                          f"{gencat[0].get('moduleId')!r} — the curriculum must open on the "
+                          f"study-method module")
+
+    # --- the glossary ---------------------------------------------------
+    # Aliases are matched against lesson prose by the auto-linker, so a duplicate
+    # alias means one of the two terms silently never links.
+    gpath = ROOT / "content/glossary.json"
+    if gpath.exists():
+        gdoc = json.loads(gpath.read_text(encoding="utf-8"))
+        kinds = set(gdoc.get("kinds", {}))
+        term_ids, owner = set(), {}
+        for t in gdoc.get("terms", []):
+            tid = t.get("id", "?")
+            where = f"glossary.json:{tid}"
+            for f in ("id", "term", "kind", "gloss", "intermediate", "advanced", "source"):
+                if not t.get(f):
+                    errors.append(f"{where}: missing {f}")
+            # `see` must EXIST, even when empty. Glossary.jsx reads `t.see.length`
+            # with no guard, so a term without the key crashes the glossary route
+            # — and, because the crash unmounts the app, every route walked after
+            # it. This rule was written after exactly that: two terms were added
+            # without `see`, the checker read it as `t.get("see") or []` and
+            # passed, and the page was blank. A validator more forgiving than its
+            # renderer is not a validator of the renderer.
+            if "see" not in t:
+                errors.append(f"{where}: no `see` key — Glossary.jsx reads it "
+                              f"unguarded, so the page crashes. Use [] for none.")
+            if tid in term_ids:
+                errors.append(f"{where}: duplicate term id")
+            term_ids.add(tid)
+            if kinds and t.get("kind") not in kinds:
+                errors.append(f"{where}: kind {t.get('kind')!r} is not one of {sorted(kinds)}")
+            if t.get("term") and t["term"] not in (t.get("aliases") or []):
+                errors.append(f"{where}: the term itself is not among its aliases, so it will not link")
+            for a in t.get("aliases") or []:
+                k = a.lower()
+                if k in owner and owner[k] != tid:
+                    errors.append(f"{where}: alias {a!r} is also claimed by {owner[k]} — "
+                                  f"one of the two will never link")
+                owner[k] = tid
+        for t in gdoc.get("terms", []):
+            for ref in t.get("see") or []:
+                if ref not in term_ids:
+                    errors.append(f"glossary.json:{t.get('id')}: sees {ref!r}, which is not a term")
 
     # Lesson prose is rendered as text with a two-token inline markup (**strong**
     # and *emphasis*). HTML in it is escaped and printed literally, so a pasted
@@ -187,13 +436,33 @@ def main():
             if ref not in {s["id"] for s in books["statutes"]}:
                 errors.append(f"books.json:{m['id']}: unknown statute {ref}")
 
+    # Answer position. Not a schema error, but a defect that silently destroys
+    # what the quiz is for. `python3 tools/balance-quiz.py` fixes it.
+    positions = collections.Counter()
+    for path in sorted((ROOT / "content/lessons").glob("*.json")):
+        for l in json.loads(path.read_text(encoding="utf-8")).get("lessons", []):
+            for x in l.get("quiz") or []:
+                if isinstance(x.get("answer"), int):
+                    positions[x["answer"]] += 1
+    placed = sum(positions.values())
+    if placed >= 20:
+        worst, count = positions.most_common(1)[0]
+        if count / placed > 0.45:
+            errors.append(
+                f"quiz answers: {100 * count / placed:.0f}% sit at option "
+                f"[{worst}] ({count} of {placed}) — a learner can score without "
+                f"reading. Run: python3 tools/balance-quiz.py")
+
     quiz_total = sum(
         len(l.get("quiz") or [])
         for path in sorted((ROOT / "content/lessons").glob("*.json"))
         for l in json.loads(path.read_text(encoding="utf-8")).get("lessons", [])
     )
-    print(f"{lessons} lessons, {cards} cards, {problems} problems, "
-          f"{quiz_total} quiz questions, {len(modules)} modules")
+    gterms = len(json.loads((ROOT / "content/glossary.json").read_text(encoding="utf-8"))["terms"]) \
+        if (ROOT / "content/glossary.json").exists() else 0
+    print(f"{len(section_seen)} sections, "
+          f"{lessons} lessons, {cards} cards, {problems} problems, "
+          f"{quiz_total} quiz questions, {gterms} glossary terms, {len(modules)} modules")
     if errors:
         print(f"\n{len(errors)} problem{'' if len(errors) == 1 else 's'}:")
         for e in errors:
