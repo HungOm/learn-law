@@ -5,7 +5,11 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    # Both names deliberately: this repo's default branch was renamed from
+    # main to master, and a workflow watching only the old name is a deploy
+    # that silently never runs — the push succeeds, Actions shows nothing,
+    # and the published site quietly stays several commits behind.
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -30,8 +34,16 @@ jobs:
       # The content check runs before the build: a rubric that does not sum, or
       # a card no lesson plants, should fail here rather than ship.
       - run: python3 tools/check-content.py
+      # Same argument one tier up: an extract with a citation that has no year,
+      # or a quoted run long enough to be a reproduction, should fail here.
+      - run: python3 tools/check-extracts.py
       - run: npm run build
       - uses: actions/configure-pages@v5
+        with:
+          # Turns Pages on and sets its source to Actions if it is not already,
+          # so a fresh clone of this repo deploys without anyone visiting the
+          # settings page.
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
