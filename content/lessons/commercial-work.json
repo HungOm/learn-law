@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 2,
+  "note": "Commercial Law and Employment Law. Stage 1 of docs/LLB-ROADMAP.md. Statutes are named where the name is certain; section numbers are deliberately omitted where they were not verifiable at authoring time, and the verify field says so. No case is cited.",
+  "lessons": [
+    {
+      "id": "l-agency-basics",
+      "moduleId": "m19-commercial",
+      "title": "When someone can bind you without asking",
+      "minutes": 28,
+      "readMinutes": 6,
+      "summary": "An agent acts for a principal and can make contracts that bind them. The dangerous part is that authority can look real to an outsider even when it was never given.",
+      "plants": [
+        "com-01",
+        "com-02",
+        "com-03",
+        "com-04",
+        "com-05",
+        "com-06",
+        "com-07"
+      ],
+      "prepares": [],
+      "sections": [
+        {
+          "id": "sec-l-agency-basics-0",
+          "readMinutes": 2,
+          "keypoint": "A contract can be made for you by someone else, and it binds you as if you signed.",
+          "h": "A shop manager orders forty crates",
+          "body": [
+            {
+              "t": "p",
+              "text": "Encik Zainal owns a hardware shop in Seremban. He employs a manager, Lim, to run it while he is away."
+            },
+            {
+              "t": "p",
+              "text": "Lim orders forty crates of tile adhesive from a supplier. He signs nothing in his own name. The invoice comes to Zainal."
+            },
+            {
+              "t": "p",
+              "text": "Zainal never saw the order. He is still bound by it. That is agency."
+            },
+            {
+              "t": "p",
+              "text": "The law lets one person make contracts for another. The person acting is the agent. The person bound is the principal."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-agency-basics-1",
+          "readMinutes": 2,
+          "keypoint": "Authority can be given in words, implied from a role, or created by appearances.",
+          "h": "Three ways authority arises",
+          "body": [
+            {
+              "t": "p",
+              "text": "The question in almost every agency dispute is whether the agent had authority. There is more than one way to have it."
+            },
+            {
+              "t": "table",
+              "caption": "How an agent comes to have authority",
+              "columns": [
+                "Kind",
+                "Where it comes from",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "Express",
+                  "Said or written by the principal",
+                  "\"Order the adhesive.\""
+                ],
+                [
+                  "Implied",
+                  "Comes with the job the agent was given",
+                  "A shop manager may order ordinary stock."
+                ],
+                [
+                  "Apparent",
+                  "Created by how the principal made things look",
+                  "The principal let Lim order for a year and never objected."
+                ]
+              ],
+              "alt": "Three kinds of authority. Express authority comes from what the principal said or wrote, such as an instruction to order the adhesive. Implied authority comes with the job given, so a shop manager may order ordinary stock. Apparent authority is created by how the principal made things look to outsiders, such as allowing an agent to order for a year without objecting."
+            },
+            {
+              "t": "p",
+              "text": "The third one causes the trouble. It can exist when the principal never agreed to anything."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-agency-basics-2",
+          "readMinutes": 2,
+          "keypoint": "A private instruction the supplier never saw does not shrink what the supplier may rely on.",
+          "h": "The secret limit that does not work",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suppose Zainal told Lim privately never to order more than ten crates."
+            },
+            {
+              "t": "p",
+              "text": "The supplier does not know that. It has dealt with Lim for a year. From outside, Lim looks like a manager who may order stock."
+            },
+            {
+              "t": "rule",
+              "text": "Where a principal holds a person out as having authority, a third party who deals with them in good faith may rely on that appearance. A private limit the third party did not know about does not bind them.",
+              "source": "Doctrine of apparent authority; the general law of agency in Malaysia is in the Contracts Act 1950."
+            },
+            {
+              "t": "p",
+              "text": "So Zainal is bound to the supplier. His remedy is against Lim, for exceeding what he was told."
+            },
+            {
+              "t": "caution",
+              "text": "Notice the two relationships. The principal and agent have one contract. The principal and third party have another. Breaking the first does not undo the second."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-agency-basics-3",
+          "readMinutes": 2,
+          "keypoint": "An agent owes loyalty, not just competence, and may not profit secretly.",
+          "h": "What the agent owes back",
+          "body": [
+            {
+              "t": "p",
+              "text": "Authority runs one way. Duty runs the other."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**Obey instructions.** Act within what was actually authorised.",
+                "**Act with care.** Use the skill the role calls for.",
+                "**No secret profit.** An agent who takes a commission from the supplier without telling the principal must account for it.",
+                "**No conflict.** Do not act for both sides without disclosure and consent."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "The last two are the ones examiners test. They are duties of loyalty, and they are strict."
+            },
+            {
+              "t": "predict",
+              "prompt": "Lim takes RM500 from the supplier for choosing them. The price to Zainal was still fair. Has Lim breached anything?",
+              "reveal": "Yes. The duty is not to avoid loss but to avoid undisclosed profit. That the price was fair is an answer to a claim for damages, not to the claim for the RM500."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "qcom1",
+          "q": "A shop manager orders ordinary stock without being told to. What kind of authority is that?",
+          "options": [
+            "Express authority",
+            "Implied authority, because it comes with the job",
+            "No authority at all",
+            "Authority only if the principal later agrees"
+          ],
+          "answer": 1,
+          "why": "Implied authority is what comes with the role. A manager engaged to run a shop may do the ordinary things running a shop requires."
+        },
+        {
+          "id": "qcom2",
+          "q": "A principal privately caps an agent at ten crates. The agent orders forty from a supplier who does not know of the cap. Who is bound?",
+          "options": [
+            "Nobody, because the agent exceeded authority",
+            "The principal, because the supplier could rely on the appearance of authority",
+            "The agent personally, and not the principal",
+            "The supplier, who should have checked"
+          ],
+          "answer": 1,
+          "why": "A private limit the third party never knew about does not shrink what they may rely on. The principal's remedy is against the agent."
+        },
+        {
+          "id": "qcom3",
+          "q": "An agent takes an undisclosed commission but gets the principal a fair price. What follows?",
+          "options": [
+            "The agent must account for the commission, because the duty is against undisclosed profit",
+            "Nothing, because the principal suffered no loss",
+            "The contract with the third party is automatically void",
+            "The principal must first prove bad faith"
+          ],
+          "answer": 0,
+          "why": "Loyalty duties are strict. Absence of loss answers a damages claim; it does not answer the claim to the secret profit itself."
+        }
+      ],
+      "source": "The general law of agency in Malaysia is contained in the Contracts Act 1950. The categories of authority and the agent's duties as described here are standard agency doctrine.",
+      "lastVerified": "2026-09-09",
+      "verify": "This lesson deliberately gives no section numbers. Read the agency provisions of the Contracts Act 1950 directly and check each proposition against the section text before relying on it."
+    },
+    {
+      "id": "l-employment-protection",
+      "moduleId": "m20-employment",
+      "title": "Being sacked, and what the law does about it",
+      "minutes": 28,
+      "readMinutes": 6,
+      "summary": "Malaysian employment law runs on two tracks: a statute setting minimum terms for certain employees, and a separate system for challenging a dismissal without just cause.",
+      "plants": [
+        "emp-01",
+        "emp-02",
+        "emp-03",
+        "emp-04",
+        "emp-05",
+        "emp-06",
+        "emp-07"
+      ],
+      "prepares": [],
+      "sections": [
+        {
+          "id": "sec-l-employment-protection-0",
+          "readMinutes": 2,
+          "keypoint": "Losing a job raises two different questions, answered by two different systems.",
+          "h": "Two questions, not one",
+          "body": [
+            {
+              "t": "p",
+              "text": "Puan Faridah has worked at a factory in Klang for six years. On Monday she is told not to come back."
+            },
+            {
+              "t": "p",
+              "text": "She has two separate questions, and people mix them up constantly."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**Was I paid what I was owed?** Notice, overtime, leave, termination benefits.",
+                "**Should I have been dismissed at all?** Whether there was a good reason, and whether it was done fairly."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "The first is about minimum terms. The second is about the dismissal itself. Different law, different forum."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-employment-protection-1",
+          "readMinutes": 2,
+          "keypoint": "The Employment Act sets a floor, and who stands on that floor is defined.",
+          "h": "The statutory floor",
+          "body": [
+            {
+              "t": "p",
+              "text": "The first question is answered mostly by statute."
+            },
+            {
+              "t": "rule",
+              "text": "The Employment Act 1955 sets minimum terms of employment — matters such as hours, rest days, leave and notice. Its protections apply to employees who fall within its scope, which the Act itself defines.",
+              "source": "Employment Act 1955."
+            },
+            {
+              "t": "p",
+              "text": "Two things matter here. A contract cannot give less than the statutory minimum. And who is covered is a question you must actually check."
+            },
+            {
+              "t": "caution",
+              "text": "Do not assume everyone in Malaysia is covered by every provision. Scope has changed over time, and Sabah and Sarawak have had their own ordinances."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-employment-protection-2",
+          "readMinutes": 2,
+          "keypoint": "Unfair dismissal runs through the industrial relations system, not the ordinary courts.",
+          "h": "The second track",
+          "body": [
+            {
+              "t": "p",
+              "text": "The second question does not go to the High Court in the first instance."
+            },
+            {
+              "t": "rule",
+              "text": "The Industrial Relations Act 1967 provides a route for a workman dismissed without just cause or excuse to seek reinstatement. A representation is made, conciliation is attempted, and the matter may be referred to the Industrial Court.",
+              "source": "Industrial Relations Act 1967."
+            },
+            {
+              "t": "p",
+              "text": "The remedy the system is built around is reinstatement — getting the job back. Compensation is what is usually awarded instead."
+            },
+            {
+              "t": "p",
+              "text": "There is a time limit for making the representation, and it is short. Missing it is the commonest way a good claim dies."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-employment-protection-3",
+          "readMinutes": 2,
+          "keypoint": "The employer must show a real reason and a fair procedure. Both, not either.",
+          "h": "What an employer has to show",
+          "body": [
+            {
+              "t": "p",
+              "text": "\"Just cause or excuse\" has two halves, and an employer must satisfy both."
+            },
+            {
+              "t": "table",
+              "caption": "The two halves of a lawful dismissal",
+              "columns": [
+                "Half",
+                "The question",
+                "Failing it"
+              ],
+              "rows": [
+                [
+                  "Substantive",
+                  "Was there a real reason — misconduct, poor performance, redundancy?",
+                  "Dismissal without cause."
+                ],
+                [
+                  "Procedural",
+                  "Was the employee told the case and given a chance to answer?",
+                  "Dismissal unfair even if the reason was true."
+                ]
+              ],
+              "alt": "A lawful dismissal has two halves. The substantive half asks whether there was a real reason such as misconduct, poor performance or redundancy; failing it means dismissal without cause. The procedural half asks whether the employee was told the case against them and given a chance to answer. Failing it makes the dismissal unfair even where the reason was true."
+            },
+            {
+              "t": "predict",
+              "prompt": "An employee really did steal, but was dismissed with no hearing at all. Is the dismissal safe?",
+              "reveal": "Not automatically. A true reason does not cure an absent procedure. The theft goes to the substantive half; the missing hearing goes to the procedural one, and the employer must satisfy both."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "qemp1",
+          "q": "Which statute sets minimum terms such as leave, rest days and notice?",
+          "options": [
+            "The Industrial Relations Act 1967",
+            "The Contracts Act 1950",
+            "The Employment Act 1955",
+            "The Civil Law Act 1956"
+          ],
+          "answer": 2,
+          "why": "The Employment Act 1955 sets the statutory floor. The Industrial Relations Act 1967 deals with dismissal without just cause, which is a different question."
+        },
+        {
+          "id": "qemp2",
+          "q": "Where does a claim for dismissal without just cause or excuse begin?",
+          "options": [
+            "Through a representation under the industrial relations system",
+            "In the High Court by writ",
+            "In the Sessions Court",
+            "In the Syariah court if the employee is Muslim"
+          ],
+          "answer": 0,
+          "why": "The Industrial Relations Act 1967 route starts with a representation and conciliation, and may be referred on to the Industrial Court."
+        },
+        {
+          "id": "qemp3",
+          "q": "An employer proves the misconduct but held no hearing. What is the likely position?",
+          "options": [
+            "The dismissal is safe, because the reason was true",
+            "The employee must sue for breach of contract instead",
+            "The Employment Act 1955 decides it",
+            "The dismissal may still be unfair, because procedure is a separate requirement"
+          ],
+          "answer": 3,
+          "why": "Just cause has a substantive and a procedural half, and an employer must satisfy both. A true reason does not cure an absent procedure."
+        },
+        {
+          "id": "qemp4",
+          "q": "What remedy is the unfair dismissal system built around?",
+          "options": [
+            "Reinstatement, with compensation commonly awarded instead",
+            "Damages for distress",
+            "A criminal penalty on the employer",
+            "An injunction against the employer"
+          ],
+          "answer": 0,
+          "why": "The statutory aim is to put the workman back in the job. In practice compensation is usually awarded in place of reinstatement."
+        }
+      ],
+      "source": "Employment Act 1955 for minimum terms; Industrial Relations Act 1967 for dismissal without just cause or excuse. The substantive and procedural limbs are standard industrial relations doctrine.",
+      "lastVerified": "2026-09-09",
+      "verify": "No section numbers or time limits are stated here on purpose. Check the current scope of the Employment Act 1955, the representation time limit under the Industrial Relations Act 1967, and the position in Sabah and Sarawak, against the statutes themselves."
+    }
+  ]
+}

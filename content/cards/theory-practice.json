@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 2,
+  "note": "Jurisprudence, Public International Law and Professional Ethics. Principles only; no case is cited and no rule text is quoted. See docs/STYLE.md, 'Never invent a citation'.",
+  "cards": [
+    {
+      "id": "jur-01",
+      "moduleId": "m18-jurisprudence",
+      "type": "term",
+      "front": "What does legal positivism separate?",
+      "back": "What law is from what law ought to be. Validity depends on source; justice is a different question and does not decide validity.",
+      "tags": ["jurisprudence"],
+      "source": "Standard statement of legal positivism."
+    },
+    {
+      "id": "jur-02",
+      "moduleId": "m18-jurisprudence",
+      "type": "term",
+      "front": "What does the natural law tradition deny?",
+      "back": "The separation. On this view law has a moral point, and a rule that betrays it badly enough forfeits its claim to be law.",
+      "tags": ["jurisprudence"],
+      "source": "Standard statement of the natural law tradition."
+    },
+    {
+      "id": "jur-03",
+      "moduleId": "m18-jurisprudence",
+      "type": "rule",
+      "front": "Why is positivism said to make criticism of law easier?",
+      "back": "Because you can say a rule is law and unjust at once. Denying it is law would be needed on the rival view, which muddles the criticism.",
+      "tags": ["jurisprudence"],
+      "source": "Standard argument for positivism."
+    },
+    {
+      "id": "jur-04",
+      "moduleId": "m18-jurisprudence",
+      "type": "rule",
+      "front": "What is the standard objection to letting injustice defeat validity?",
+      "back": "Someone must decide when a rule is unjust enough. That hands judges a large power and costs certainty about what the law is.",
+      "tags": ["jurisprudence"],
+      "source": "Standard objection to natural law positions."
+    },
+    {
+      "id": "jur-05",
+      "moduleId": "m18-jurisprudence",
+      "type": "trigger",
+      "front": "A judge strains a clear statute to avoid an unjust result. Which way does that lean?",
+      "back": "Towards natural law in effect, whatever it is called — the moral quality of the outcome is shaping what the law is taken to say.",
+      "tags": ["jurisprudence"],
+      "source": "Standard application of the debate."
+    },
+    {
+      "id": "jur-06",
+      "moduleId": "m18-jurisprudence",
+      "type": "structure",
+      "front": "Name three practical questions where the positivism debate surfaces.",
+      "back": "How far a court may strain harsh words; whether a correctly passed amendment can be struck down; what an official should do when a rule is clear and wrong.",
+      "tags": ["jurisprudence"],
+      "source": "Standard applications of the debate."
+    },
+    {
+      "id": "int-01",
+      "moduleId": "m21-international",
+      "type": "rule",
+      "front": "Malaysia ratifies a treaty. What changes in domestic law?",
+      "back": "Nothing by itself. Malaysia is dualist: the treaty binds the state internationally, but domestic effect needs legislation.",
+      "tags": ["international"],
+      "source": "Dualist approach to treaty implementation."
+    },
+    {
+      "id": "int-02",
+      "moduleId": "m21-international",
+      "type": "term",
+      "front": "What is the difference between monism and dualism?",
+      "back": "Monism treats a ratified treaty as part of national law. Dualism treats the systems as separate, so legislation is the bridge.",
+      "tags": ["international"],
+      "source": "Standard classification."
+    },
+    {
+      "id": "int-03",
+      "moduleId": "m21-international",
+      "type": "rule",
+      "front": "Can an unincorporated treaty affect how a statute is read?",
+      "back": "Yes, where the statute is ambiguous a court may prefer the reading that fits the state's obligations. It cannot displace clear words.",
+      "tags": ["international"],
+      "source": "Standard interpretive principle."
+    },
+    {
+      "id": "int-04",
+      "moduleId": "m21-international",
+      "type": "structure",
+      "front": "What are the two elements of customary international law?",
+      "back": "State practice, and a sense of legal obligation. Habit alone is not law and belief alone is not practice.",
+      "tags": ["international"],
+      "source": "Standard statement of custom."
+    },
+    {
+      "id": "int-05",
+      "moduleId": "m21-international",
+      "type": "trigger",
+      "front": "A client's treaty right has not been legislated. What do you check first?",
+      "back": "Whether an existing statute is ambiguous in a way the treaty could resolve. It is the one route needing no new legislation.",
+      "tags": ["international"],
+      "source": "Standard interpretive principle."
+    },
+    {
+      "id": "int-06",
+      "moduleId": "m21-international",
+      "type": "rule",
+      "front": "Is an unincorporated treaty legally meaningless?",
+      "back": "No. It binds the state internationally, guides interpretation of ambiguous statutes, and usually shapes the Act that follows.",
+      "tags": ["international"],
+      "source": "Dualist approach to treaty implementation."
+    },
+    {
+      "id": "eth-01",
+      "moduleId": "m22-ethics",
+      "type": "rule",
+      "front": "When the client's instructions conflict with the duty to the court, which wins?",
+      "back": "The duty to the court. It is paramount. The advocate may have to withdraw, but may never deceive.",
+      "tags": ["ethics"],
+      "source": "Standard statement of the paramount duty."
+    },
+    {
+      "id": "eth-02",
+      "moduleId": "m22-ethics",
+      "type": "rule",
+      "front": "You find binding authority against your own argument. What must you do?",
+      "back": "Draw it to the court's attention, then argue why it should not decide this case. Concealing it misleads the court.",
+      "tags": ["ethics"],
+      "source": "Standard duty of candour to the court."
+    },
+    {
+      "id": "eth-03",
+      "moduleId": "m22-ethics",
+      "type": "trigger",
+      "front": "A client instructs you to run a story you know is false. What is the resolution?",
+      "back": "Refusal and silence. Refuse to assert it, withdraw if you must, and do not tell the court why — confidence still binds.",
+      "tags": ["ethics"],
+      "source": "Interaction of the paramount duty and confidentiality."
+    },
+    {
+      "id": "eth-04",
+      "moduleId": "m22-ethics",
+      "type": "rule",
+      "front": "When does a duty of confidence to a client end?",
+      "back": "It does not end with the retainer. It survives the case and ordinarily survives the client.",
+      "tags": ["ethics"],
+      "source": "Standard statement of the duty of confidence."
+    },
+    {
+      "id": "eth-05",
+      "moduleId": "m22-ethics",
+      "type": "structure",
+      "front": "Name the three kinds of conflict an advocate must check for.",
+      "back": "Between two clients in the same matter; between client and the advocate's own interest; and from information held from a former client.",
+      "tags": ["ethics"],
+      "source": "Standard conflicts rules."
+    },
+    {
+      "id": "eth-06",
+      "moduleId": "m22-ethics",
+      "type": "source",
+      "front": "Under which statute is the legal profession regulated in Malaysia?",
+      "back": "The Legal Profession Act 1976. Read the professional conduct rules made under it for the binding formulation of these duties.",
+      "tags": ["ethics"],
+      "source": "Legal Profession Act 1976"
+    }
+  ]
+}

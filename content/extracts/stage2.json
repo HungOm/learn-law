@@ -1,0 +1,244 @@
+[
+  {
+    "id": "x-caparo-dickman",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "case": "Caparo Industries plc v Dickman",
+    "citation": "[1990] 2 AC 605 (HL)",
+    "court": "House of Lords",
+    "year": 1990,
+    "find": "English House of Lords decisions of this period are on BAILII (bailii.org) without charge, under United Kingdom House of Lords Decisions. The Appeal Cases citation will also find it in any law library that carries the English reports, and most Malaysian university libraries do.",
+    "why": "This is the case the duty question in your negligence lesson rests on, and it is also a court explaining why it distrusts a single grand test. Read it once for the elements and once for the argument against tidiness — the second reading is the one that changes how you write about duty.",
+    "read": [
+      {
+        "passage": "The passages dealing with how a duty of care is established, and what the court says about incremental development.",
+        "look_for": "Notice how much work the word incremental is doing. Ask what the court thinks goes wrong if a court reasons from a single principle instead."
+      },
+      {
+        "passage": "The treatment of the relationship between the parties, and what the maker of a statement knew about who would rely on it.",
+        "look_for": "Follow which facts the court treats as making the relationship close enough. Write down the two or three that carry the weight."
+      },
+      {
+        "passage": "Anything said about the purpose for which information was produced.",
+        "look_for": "Purpose does a great deal of work here. Ask whether the result would change if the same words had been produced for a different reason."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the elements the court uses for establishing a duty, in your own words, without looking at the lesson.",
+        "model": "A good answer names each element and, crucially, says what each one is doing that the others are not. If your three elements collapse into one another when you try to explain them, you have restated a formula rather than understood a test — and that is the exact complaint the court makes about single grand principles."
+      },
+      {
+        "q": "The court warns against a single general test. What is the practical cost of ignoring that warning?",
+        "model": "A good answer connects the warning to consequences rather than repeating it. Reasoning from one broad principle lets a court reach a duty in a situation nobody has considered, with no comparison case to discipline it. The incremental method forces you to name the decided case you are arguing from, which is checkable in a way an appeal to principle is not."
+      },
+      {
+        "q": "How would you use this case in a Malaysian negligence answer, given it is an English decision?",
+        "model": "A good answer does not assume it applies. It asks whether a Malaysian court has adopted the reasoning, and says so. English decisions after the reception date under the Civil Law Act 1956 are persuasive rather than automatically part of Malaysian law, and treating one as binding is a mistake an examiner will see immediately."
+      }
+    ],
+    "trap": "Reciting three elements as a checklist and applying none of them. The elements are not a spell; each is a question about these facts, and an answer that names them without asking them has done nothing.",
+    "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
+    "verify": "Check the citation against the report itself before relying on it, and check whether the Malaysian courts have adopted this reasoning rather than assuming they have.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-ampang-jaya-phoa",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "case": "Majlis Perbandaran Ampang Jaya v Steven Phoa Cheng Loon",
+    "citation": "[2006] 2 MLJ 389 (FC)",
+    "court": "Federal Court",
+    "year": 2006,
+    "find": "Malaysian Federal Court decisions from 2003 onwards are on CommonLII (commonlii.org, under Malaysia, Federal Court). The government Court Case Judgment Search at malaysia.gov.my also carries written grounds. The MLJ citation will find it in a law library.",
+    "why": "A Malaysian apex court working out how far a public authority's duty runs. This is the case to read when you want to know how a Malaysian court actually reasons about duty, rather than how an English one does — and the difference is the point.",
+    "read": [
+      {
+        "passage": "The court's treatment of whether a duty of care was owed by the authority.",
+        "look_for": "Watch which English authorities the court engages with and which it sets aside. That choosing is itself the reasoning, not a preliminary to it."
+      },
+      {
+        "passage": "Anything said about policy, resources, or the consequences of imposing a duty on a public body.",
+        "look_for": "Ask whether these are being used as reasons against a duty, or as reasons for confining it. They are different moves and courts do not always separate them."
+      },
+      {
+        "passage": "The passages dealing with the scope of the loss recoverable.",
+        "look_for": "Duty and damage are separate questions. Notice where the court moves from one to the other, and whether it says so."
+      }
+    ],
+    "questions": [
+      {
+        "q": "How does this court's approach to duty differ from a mechanical application of an English test?",
+        "model": "A good answer identifies at least one place where the court adapts rather than adopts, and says what local consideration drove it. The general claim that Malaysian courts follow English law with modifications is worth nothing without an instance; the instance is what an examiner is looking for."
+      },
+      {
+        "q": "What role does the defendant being a public authority play in the reasoning?",
+        "model": "A good answer distinguishes two uses. Public status can be a reason to deny a duty altogether, or a reason to shape its content — what the authority had to do rather than whether it owed anything. Say which the court is doing here, and quote nothing; describe it."
+      }
+    ],
+    "trap": "Treating this as merely the Malaysian version of an English case. It is a court deciding for itself which imported reasoning fits local circumstances, and the deciding is what you are reading it for.",
+    "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
+    "verify": "Check the citation and the court against the report. Read the whole judgment rather than a headnote — the headnote will give you the holding and not the method.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-bolam-friern",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "case": "Bolam v Friern Hospital Management Committee",
+    "citation": "[1957] 1 WLR 582",
+    "court": "Queen's Bench Division",
+    "year": 1957,
+    "find": "On BAILII (bailii.org) under England and Wales High Court decisions. The Weekly Law Reports citation will also find it in a library. It is short — this is a first-instance direction to a jury, not an appellate judgment, and it reads quickly.",
+    "why": "The origin of the professional standard test, and a good lesson in how a passage in a jury direction can become a rule cited for decades. Read it noticing how little text the whole doctrine rests on.",
+    "read": [
+      {
+        "passage": "The direction on the standard expected of a person professing a special skill.",
+        "look_for": "Write out the standard in your own words. Then ask who decides whether it is met — the court, or the profession."
+      },
+      {
+        "passage": "Anything said about a body of responsible opinion.",
+        "look_for": "The word body is doing real work. Ask whether it means a majority, and what follows if two responsible bodies disagree."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Who, on this direction, decides whether a professional acted reasonably?",
+        "model": "A good answer notices that the effect of the test is to hand much of that judgement to the profession itself, and says why that is both sensible and uncomfortable. Sensible, because a court has no independent expertise; uncomfortable, because a profession setting its own standard is marking its own work."
+      },
+      {
+        "q": "Why does it matter that this passage comes from a direction to a jury rather than an appellate judgment?",
+        "model": "A good answer takes the point about weight and provenance. A first-instance direction is not binding in the way an apex court's ratio is, so a doctrine resting on it is more open to being confined or departed from than its long citation history suggests. Where a rule comes from affects how firmly it holds."
+      },
+      {
+        "q": "Is this test the law in Malaysia today for medical negligence?",
+        "model": "A good answer does not assert. It says the position has been considered by the Malaysian courts and that the reader must check the current authority, naming where they would look. Confidently stating an English test as current Malaysian law is exactly the error this tier exists to train out."
+      }
+    ],
+    "trap": "Citing this as though it settled the Malaysian position. It is the starting point of a long argument, and other cases in this module carry that argument forward.",
+    "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
+    "verify": "Check the citation against the report, and check the current Malaysian position on the professional standard before relying on this in an answer.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-rogers-whitaker",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "case": "Rogers v Whitaker",
+    "citation": "(1992) 175 CLR 479",
+    "court": "High Court of Australia",
+    "year": 1992,
+    "find": "On AustLII (austlii.edu.au) under High Court of Australia decisions, free and complete. The Commonwealth Law Reports citation will find it in a library.",
+    "why": "An apex court declining to follow the professional standard where the duty is to warn. This is the clearest example in the module of a court separating two things that had been treated as one, and it is why your negligence lesson does not stop at the earlier test.",
+    "read": [
+      {
+        "passage": "The passages distinguishing diagnosis and treatment from the duty to warn of risk.",
+        "look_for": "Ask why the distinction is drawn. What is different about warning that makes professional opinion less decisive?"
+      },
+      {
+        "passage": "Anything about what a particular patient would want to know.",
+        "look_for": "Notice the shift from what a profession thinks proper to what this patient needed. That shift is the case."
+      },
+      {
+        "passage": "The court's treatment of the earlier English approach.",
+        "look_for": "Watch how it declines to follow without saying the earlier reasoning was foolish. That is a technique worth copying."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why does the court treat the duty to warn differently from diagnosis and treatment?",
+        "model": "A good answer gives the reason rather than the result. Deciding what treatment is appropriate is a matter of clinical skill, where a court has no independent standard; deciding what a patient needs to know in order to choose is not purely clinical, and the patient's own position bears on it. If your answer does not explain why the two are unalike, it has restated the holding."
+      },
+      {
+        "q": "This is an Australian decision. What weight does it carry in Malaysia, and how would you use it?",
+        "model": "A good answer is precise about status. It is not binding, and it was not received under the Civil Law Act 1956. It is persuasive, and it is useful precisely because a Malaysian court may have considered it — so the honest use is to check whether it has been adopted here and cite that, rather than citing the Australian case as if it were local law."
+      }
+    ],
+    "trap": "Using this to say the professional standard is dead. The case draws a line between kinds of duty; it does not abolish the earlier test for the areas the line leaves on the other side.",
+    "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
+    "verify": "Check the citation on AustLII, and check whether and how the Malaysian courts have taken up this reasoning before using it in an answer.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-zulhasnimar-kuppu",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "case": "Zulhasnimar bt Hasan Basri v Dr Kuppu Velumani P",
+    "citation": "[2017] 5 MLJ 438 (FC)",
+    "court": "Federal Court",
+    "year": 2017,
+    "find": "On CommonLII (commonlii.org, Malaysia, Federal Court) and through the government Court Case Judgment Search at malaysia.gov.my. The MLJ citation will find it in a law library.",
+    "why": "The Federal Court settling which standard applies to which limb of medical negligence in Malaysia. If you read only one case in this module for the current local position, read this one — and read it after the two it is answering.",
+    "read": [
+      {
+        "passage": "The court's statement of which standard governs diagnosis and treatment, and which governs the duty to advise.",
+        "look_for": "Write the two-part answer in one sentence before reading further. Then check your sentence against the order the court made."
+      },
+      {
+        "passage": "The court's discussion of the earlier Malaysian authority on the same question.",
+        "look_for": "Notice whether the court is following, confining, or departing. The three are different and the words used matter."
+      },
+      {
+        "passage": "Anything said about why a different standard suits a different limb.",
+        "look_for": "This is the reasoning you can transfer. The result tells you the law; the reason tells you how to argue the next case."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State, in one sentence, which standard applies to which limb after this decision.",
+        "model": "A good answer is one sentence with two halves and no case names in it. Test it the way you test any ratio: run the conditions and see whether they produce the order the court actually made. If your sentence would decide a case about diagnosis the same way as one about advice, it has lost the distinction the case exists to draw."
+      },
+      {
+        "q": "How does this decision relate to the earlier cases in this module?",
+        "model": "A good answer places it. It should say which reasoning the court accepted, which it did not, and — the part most answers omit — what remains open. A case that settles one question usually leaves an adjacent one unsettled, and naming that is what distinguishes a reader from a summariser."
+      },
+      {
+        "q": "Why is it safer to cite this than the English or Australian cases in a Malaysian answer?",
+        "model": "A good answer names the reason rather than asserting the preference: this is a decision of the apex court of this jurisdiction, so it binds the courts below in a way persuasive foreign authority does not. The foreign cases remain useful for the reasoning, which is a different job from supplying authority."
+      }
+    ],
+    "trap": "Reading this as simply choosing between two foreign tests. It is a Malaysian court deciding what Malaysian law is, using foreign reasoning as material rather than as instruction.",
+    "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
+    "verify": "Check the citation and the court against the report, and check whether anything has since qualified it before relying on it.",
+    "lastVerified": "2026-09-09"
+  },
+  {
+    "id": "x-lok-kok-beng",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "case": "Lok Kok Beng v Loh Chiak Eong",
+    "citation": "[2015] 4 MLJ 734 (FC)",
+    "court": "Federal Court",
+    "year": 2015,
+    "find": "On CommonLII (commonlii.org, Malaysia, Federal Court) and through the government Court Case Judgment Search at malaysia.gov.my. The MLJ citation will find it in a law library.",
+    "why": "A Federal Court decision on when a duty of care arises alongside a contract, and on pure economic loss. Read it for the question every commercial negligence problem eventually reaches: what tort adds when the parties already have an agreement.",
+    "read": [
+      {
+        "passage": "The court's treatment of whether a duty in tort can co-exist with contractual obligations.",
+        "look_for": "Ask what work the tort duty would do that the contract does not. If the answer is none, notice what the court says follows."
+      },
+      {
+        "passage": "Anything about pure economic loss and why it is treated differently from physical damage.",
+        "look_for": "The distinction is not arbitrary. Find the reason the court gives and write it in one sentence."
+      },
+      {
+        "passage": "The court's approach to establishing duty generally.",
+        "look_for": "Compare this with the approach in the other Malaysian case in this module. Where they differ, ask whether it is a real difference or a difference of emphasis."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does a duty in tort add where the parties are already in a contract?",
+        "model": "A good answer resists the easy reply that it adds nothing. Sometimes it adds a different limitation period, a different measure of damages, or a claim available to someone who is not a party to the contract. The useful answer names what it would add on these facts, which is a question about the facts and not about doctrine."
+      },
+      {
+        "q": "Why are courts more cautious about pure economic loss than about physical damage?",
+        "model": "A good answer gives the reason rather than the label. Economic loss ripples: one negligent act can cause loss to an indefinite number of people to an indefinite extent, and the usual limits that physical damage supplies are absent. The caution is about determinacy, not about economic loss being less real."
+      }
+    ],
+    "trap": "Treating pure economic loss as never recoverable. The category is treated with caution and confined, which is a different thing, and an answer that states a flat prohibition will be wrong on the facts where it is recoverable.",
+    "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
+    "verify": "Check the citation and the court against the report, and check the current position on pure economic loss in Malaysia rather than relying on this summary.",
+    "lastVerified": "2026-09-09"
+  }
+]

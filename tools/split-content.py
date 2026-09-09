@@ -62,6 +62,14 @@ LESSON_FILE_ORDER = [
     "gap-company-evidence-civil.json",
     "substantive.json",
     "substantive-advanced.json",
+    # Stage 1 of docs/LLB-ROADMAP.md: the core subjects the curriculum was
+    # missing. They sit after the advanced substantive layer because they
+    # assume it — trusts leans on property, and the reception lesson assumes a
+    # reader already knows what a common law system is.
+    "equity.json",
+    "personal-law.json",
+    "commercial-work.json",
+    "theory-practice.json",
 ]
 
 

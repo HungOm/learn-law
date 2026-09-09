@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "note": "Family and Syariah. Anchored on the Constitution and named statutes only. Where a proposition is doctrine rather than text it says so, and no case is cited — see docs/STYLE.md, 'Never invent a citation'.",
+  "cards": [
+    {
+      "id": "fam-01",
+      "moduleId": "m16-family",
+      "type": "source",
+      "front": "Which statute governs marriage and divorce for non-Muslims in Malaysia?",
+      "back": "The Law Reform (Marriage and Divorce) Act 1976. It is federal, so the rules are the same in every State.",
+      "tags": ["family"],
+      "source": "Law Reform (Marriage and Divorce) Act 1976"
+    },
+    {
+      "id": "fam-02",
+      "moduleId": "m16-family",
+      "type": "structure",
+      "front": "Which court dissolves a non-Muslim marriage?",
+      "back": "The civil High Court, under the 1976 Act. A Syariah court has no power over it.",
+      "tags": ["family"],
+      "source": "Law Reform (Marriage and Divorce) Act 1976"
+    },
+    {
+      "id": "fam-03",
+      "moduleId": "m16-family",
+      "type": "rule",
+      "front": "Does a couple choose whether the civil or the Syariah system applies to their marriage?",
+      "back": "No. The applicable system is fixed by religion, not by election, and the courts cannot take each other's work.",
+      "tags": ["family"],
+      "source": "Structure of the dual system under the Federal Constitution."
+    },
+    {
+      "id": "fam-04",
+      "moduleId": "m16-family",
+      "type": "trigger",
+      "front": "A question begins \"a Muslim couple in Kelantan want a divorce\". What must you establish before anything else?",
+      "back": "Which State's enactment applies. Islamic family law is State law, so there is no single Malaysian text to reason from.",
+      "tags": ["family", "syariah"],
+      "source": "Federal Constitution, Ninth Schedule, State List."
+    },
+    {
+      "id": "fam-05",
+      "moduleId": "m16-family",
+      "type": "structure",
+      "front": "Do the Federal Territories have their own Islamic family law?",
+      "back": "Yes, but it is made by Parliament rather than by a State legislature, because the Federal Territories have no State legislature of their own.",
+      "tags": ["family", "syariah"],
+      "source": "Federal Constitution, division of legislative power."
+    },
+    {
+      "id": "fam-06",
+      "moduleId": "m16-family",
+      "type": "trigger",
+      "front": "One spouse in a civil marriage converts to Islam. What is the first issue?",
+      "back": "Jurisdiction — which court may dissolve the marriage and decide about the children. The merits come second.",
+      "tags": ["family"],
+      "source": "Structure of the dual system."
+    },
+    {
+      "id": "fam-07",
+      "moduleId": "m16-family",
+      "type": "rule",
+      "front": "Can a court take jurisdiction because no other court will hear an urgent family matter?",
+      "back": "No. Jurisdiction is conferred by law, not assumed from need. That is what makes conversion cases hard rather than merely unfortunate.",
+      "tags": ["family"],
+      "source": "General principle of jurisdiction."
+    },
+    {
+      "id": "sy-01",
+      "moduleId": "m17-syariah",
+      "type": "source",
+      "front": "Which part of the Constitution allocates power over Islamic law?",
+      "back": "The Ninth Schedule. Islamic law and the constitution and organisation of Syariah courts sit on the State List.",
+      "tags": ["syariah"],
+      "source": "Federal Constitution, Ninth Schedule, State List."
+    },
+    {
+      "id": "sy-02",
+      "moduleId": "m17-syariah",
+      "type": "rule",
+      "front": "What are the two limits on Syariah court jurisdiction?",
+      "back": "Person and subject. It reaches only persons professing Islam, and only matters on the State List. Both must be satisfied.",
+      "tags": ["syariah"],
+      "source": "Federal Constitution, Ninth Schedule, State List."
+    },
+    {
+      "id": "sy-03",
+      "moduleId": "m17-syariah",
+      "type": "source",
+      "front": "What does Article 121(1A) of the Federal Constitution provide?",
+      "back": "That the civil High Courts have no jurisdiction in respect of any matter within the jurisdiction of the Syariah courts.",
+      "tags": ["syariah"],
+      "source": "Federal Constitution, Art 121(1A)"
+    },
+    {
+      "id": "sy-04",
+      "moduleId": "m17-syariah",
+      "type": "rule",
+      "front": "Does Article 121(1A) make the Syariah courts superior to the civil courts?",
+      "back": "No. It removes civil jurisdiction where a matter is within Syariah jurisdiction. It creates no hierarchy and extends no Syariah power.",
+      "tags": ["syariah"],
+      "source": "Federal Constitution, Art 121(1A)"
+    },
+    {
+      "id": "sy-05",
+      "moduleId": "m17-syariah",
+      "type": "trigger",
+      "front": "Two Muslims dispute a commercial debt. Which court, and why?",
+      "back": "The civil courts. The persons are within Syariah reach but the subject is contract, a federal matter, so the second limit fails.",
+      "tags": ["syariah"],
+      "source": "Federal Constitution, Ninth Schedule."
+    },
+    {
+      "id": "sy-06",
+      "moduleId": "m17-syariah",
+      "type": "structure",
+      "front": "Why does the answer to a Syariah jurisdiction question always begin by naming a State?",
+      "back": "Because each State legislates its own Islamic law and its own courts. There is no single national Syariah statute to reason from.",
+      "tags": ["syariah"],
+      "source": "Federal Constitution, Ninth Schedule, State List."
+    },
+    {
+      "id": "sy-07",
+      "moduleId": "m17-syariah",
+      "type": "rule",
+      "front": "Are the punishments a Syariah court may impose unlimited?",
+      "back": "No. Parliament has legislated a ceiling. A State enactment going beyond it exceeds the power the Constitution gives the State.",
+      "tags": ["syariah"],
+      "source": "Federal legislation limiting Syariah court punishments."
+    },
+    {
+      "id": "sy-08",
+      "moduleId": "m17-syariah",
+      "type": "trigger",
+      "front": "A State enactment exceeds the federal ceiling on Syariah punishments. What kind of argument attacks it?",
+      "back": "Legislative competence — the same shape used against any State law exceeding the State List. It is about who may legislate, not about religion.",
+      "tags": ["syariah"],
+      "source": "Federal Constitution, division of legislative power."
+    }
+  ]
+}

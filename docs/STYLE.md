@@ -353,3 +353,60 @@ python3 tools/check-content.py
 - Every `rule` block has a `source`; every lesson and problem has `verify`.
 - Quiz `answer` points at a real option; options are unique; ≥ 2 options.
 - `reading[].bookId` exists in `books.json`.
+
+## Writing exercises supply a form, never a model answer
+
+`content/writing/*.json` teaches legal writing. It gives the reader a brief,
+staged scaffolding, the *shape* a good answer has, the faults it usually has,
+and a rubric they mark their own draft against. It does not give them a
+specimen answer, and `tools/check-writing.py` fails the build on one.
+
+**The reasoning, which is the part that has to survive:** a worked example would
+help, and it would also be copied. A reader who meets a model before drafting
+produces a version of it, learns the shape of someone else's thinking, and finds
+out nothing about their own — which is the only thing the exercise can teach
+them. So the shape, the rubric and the description of what a good answer does
+are all behind a commitment: forty words of the reader's own draft. The
+threshold is low on purpose. It is not a test of effort; it is a lock against
+reading an answer and believing you would have written it.
+
+If you are about to add a specimen because the exercise feels thin without one,
+the thing to strengthen is `structure` — the parts, what each does, how long
+each runs. That teaches the form without handing over a text.
+
+The checker's `ANSWER_SHAPED` rule exists to catch a `model` field that has
+drifted into being an answer. It matches openings like *Dear Sir*, *The issue is
+whether*, *This essay will*. If you trip it, you have written the thing this
+section is about.
+
+## Never invent a citation
+
+Every case citation in this corpus was pulled from a lesson's `source` field
+programmatically, not recalled. That is the rule, and it holds for new content
+as much as old.
+
+**On a law site a wrong citation looks exactly like a right one.** A reader has
+no way to tell an invented `[2019] 6 MLJ 15` from a real one, and the whole
+apparatus of `source`, `verify` and `lastVerified` exists because a study aid
+that cannot be audited is a rumour with a citation attached.
+
+So: if you cannot source a citation from something already verified in this
+repository, or from the report itself, **write the sentence without a specific
+citation** and flag it for a verification pass. A proposition stated without
+authority is honest and improvable. A proposition with an invented authority is
+neither, and it is worse than saying nothing.
+
+The same applies to section numbers, years, and courts.
+
+## Prose needs a ground: `.wrap` alone is not one
+
+`.wrap` has no background. On its own it puts text directly on the animated
+liquid field, and body text is held to AAA 7:1 on the assumption that it is
+never composited against moving colour.
+
+Use `.wrap sheet` for a prose page and `.wrap wrap--dash` for a dashboard or
+index. This has now been got wrong twice by two sessions on the same day,
+because the name reads as though `.wrap` were the safe default. It is not.
+
+If you find text sitting on the field, that is the bug. Do not fix it by fading
+the field.

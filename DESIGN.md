@@ -562,6 +562,23 @@ python3 tools/palette.py --report    # the full contrast and CVD table
 python3 tools/palette.py --emit
 ```
 
+**A browser gate that fails on a *transport* error should be re-run before it is
+believed.** Three distinct faces of the same hazard, all seen in one day, none
+of them a defect in the app:
+
+| symptom | cause |
+|---|---|
+| `ERR_FAILED` / "Failed to fetch dynamically imported module" | a rebuild landed mid-run; `index.html` names chunk hashes that no longer exist |
+| a fix that "did not take" | `smoke` and `responsive` serve `dist`, so a source or content fix untested until you rebuild |
+| `ERR_CONNECTION_REFUSED` on the harness's own port | another session's run holds 4178/4179; the preview never came up |
+
+All three read exactly like real failures, and the first two read like *your*
+failure specifically. Re-run once before investigating. If it passes unchanged
+with no edit in between, it was contention.
+
+**The underlying fact: `dist/` and the harness ports are shared mutable state**,
+and this repo is routinely worked by several sessions at once.
+
 **A red `check:smoke` naming `ERR_FAILED` on a dynamic import should be re-run
 before it is believed.** `dist/` is shared mutable state, and this repo is
 routinely worked by several sessions at once. When one rebuilds while another's

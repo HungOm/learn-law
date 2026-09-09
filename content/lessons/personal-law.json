@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "note": "Family Law and Syariah Law. Stage 1 of docs/LLB-ROADMAP.md. Both are written at the level of structure and jurisdiction — which court, which people, which source of authority — rather than at the level of contested doctrine, and neither states a case citation. Reading lists in books.json are empty pending a verification pass.",
+  "lessons": [
+    {
+      "id": "l-family-two-systems",
+      "moduleId": "m16-family",
+      "title": "Which court can end a marriage",
+      "minutes": 28,
+      "readMinutes": 6,
+      "summary": "Malaysia runs two family law systems side by side. Which one applies to you is decided by religion, not by choice, and the courts cannot swap.",
+      "plants": [
+        "fam-01",
+        "fam-02",
+        "fam-03",
+        "fam-04",
+        "fam-05",
+        "fam-06",
+        "fam-07"
+      ],
+      "prepares": [],
+      "sections": [
+        {
+          "id": "sec-l-family-two-systems-0",
+          "readMinutes": 2,
+          "keypoint": "The first family law question is never the merits. It is which court may hear you at all.",
+          "h": "Two couples, two different courts",
+          "body": [
+            {
+              "t": "p",
+              "text": "Two couples in the same street in Melaka both want to divorce. They go to different buildings."
+            },
+            {
+              "t": "p",
+              "text": "One couple is Muslim. Their marriage was registered under State Islamic law, and only a Syariah court can end it."
+            },
+            {
+              "t": "p",
+              "text": "The other couple is not. Their marriage sits under federal law, and only the High Court can end it."
+            },
+            {
+              "t": "p",
+              "text": "Neither couple gets to choose. The system that applies is fixed by religion, and the courts cannot take each other's work."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-family-two-systems-1",
+          "readMinutes": 2,
+          "keypoint": "One federal Act governs non-Muslim marriage and divorce across the country.",
+          "h": "The civil side",
+          "body": [
+            {
+              "t": "p",
+              "text": "Non-Muslim marriage and divorce in Malaysia sit under one federal statute."
+            },
+            {
+              "t": "rule",
+              "text": "The Law Reform (Marriage and Divorce) Act 1976 governs marriage and divorce for people who are not Muslims. It requires monogamous marriage, sets out how a marriage is registered, and states the grounds on which a court may dissolve one.",
+              "source": "Law Reform (Marriage and Divorce) Act 1976."
+            },
+            {
+              "t": "p",
+              "text": "Because it is federal, the rules are the same in every State. That is unusual in Malaysian family law, and it is worth noticing."
+            },
+            {
+              "t": "example",
+              "text": "A Hindu couple married in Johor and a Buddhist couple married in Penang are under the same Act, with the same grounds and the same court."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-family-two-systems-2",
+          "readMinutes": 2,
+          "keypoint": "Islamic family law is State law, so it differs from State to State.",
+          "h": "The Syariah side",
+          "body": [
+            {
+              "t": "p",
+              "text": "Islamic family law is not federal. Each State makes its own."
+            },
+            {
+              "t": "p",
+              "text": "That means the statute governing a Muslim divorce in Kelantan is a different statute from the one in Selangor. The principles are close. The text is not identical."
+            },
+            {
+              "t": "caution",
+              "text": "A student who learns \"the\" Islamic family law of Malaysia has learned something that does not exist. Always ask which State."
+            },
+            {
+              "t": "p",
+              "text": "The Federal Territories have their own enactment too, made by Parliament rather than by a State legislature."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-family-two-systems-3",
+          "readMinutes": 2,
+          "keypoint": "The hard cases are the ones where a family stops being on one side of the line.",
+          "h": "Where the line causes trouble",
+          "body": [
+            {
+              "t": "p",
+              "text": "A split system works while everyone in a family is on the same side of the line. The difficulty comes when that changes."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**A spouse converts.** The marriage was civil. One party becomes Muslim. Which court now decides the divorce, and the children?",
+                "**A child is converted.** One parent converts a child. The other parent is not Muslim and wants to object.",
+                "**Property and maintenance.** Orders may be needed from a court that cannot reach the other spouse."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "These are live and difficult questions, and this lesson does not answer them. It tells you where the difficulty comes from."
+            },
+            {
+              "t": "predict",
+              "prompt": "Why can a court not simply decide it has jurisdiction because the case is urgent and nobody else will hear it?",
+              "reveal": "Because jurisdiction is given by law, not assumed by need. A court with no power over a matter cannot acquire it by being the only one available — which is exactly what makes these cases hard rather than merely sad."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "qfam1",
+          "q": "Which statute governs divorce for non-Muslims in Malaysia?",
+          "options": [
+            "Each State's Islamic family law enactment",
+            "The Civil Law Act 1956",
+            "The Federal Constitution alone",
+            "The Law Reform (Marriage and Divorce) Act 1976"
+          ],
+          "answer": 3,
+          "why": "The 1976 Act is federal and applies to people who are not Muslims, so the rules are the same in every State."
+        },
+        {
+          "id": "qfam2",
+          "q": "Why is there no single Islamic family law statute for the whole of Malaysia?",
+          "options": [
+            "Because it was never codified anywhere",
+            "Because it applies only in the Federal Territories",
+            "Because Islamic family law is State law, so each State makes its own",
+            "Because it is left entirely to the courts"
+          ],
+          "answer": 2,
+          "why": "Islamic law for Muslims is a State matter, so each State legislates its own enactment. Asking which State is the first step, not a detail."
+        },
+        {
+          "id": "qfam3",
+          "q": "A couple married under the 1976 Act. One spouse converts to Islam. What is the first question?",
+          "options": [
+            "Whether the marriage was ever valid",
+            "Which court has jurisdiction over the dissolution and the children",
+            "Whether the converting spouse loses all property rights",
+            "Whether the Federal Court must hear it first"
+          ],
+          "answer": 1,
+          "why": "In a split system the jurisdiction question comes before the merits. A court that lacks power over a matter cannot acquire it because the case is urgent."
+        }
+      ],
+      "source": "Law Reform (Marriage and Divorce) Act 1976 for the civil regime. The division of legislative power over Islamic law is in the Federal Constitution, Ninth Schedule.",
+      "lastVerified": "2026-09-09",
+      "verify": "Check the 1976 Act itself for the grounds of divorce, and check your own State's Islamic family law enactment rather than assuming another State's text applies."
+    },
+    {
+      "id": "l-syariah-jurisdiction",
+      "moduleId": "m17-syariah",
+      "title": "What a Syariah court may decide, and over whom",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "Syariah courts get their power from State law under the Constitution. That power is limited by subject, by person, and by the penalties Parliament allows.",
+      "plants": [
+        "sy-01",
+        "sy-02",
+        "sy-03",
+        "sy-04",
+        "sy-05",
+        "sy-06",
+        "sy-07",
+        "sy-08"
+      ],
+      "prepares": [],
+      "sections": [
+        {
+          "id": "sec-l-syariah-jurisdiction-0",
+          "readMinutes": 2,
+          "keypoint": "A Syariah court is a State court, created by a State legislature under the Constitution.",
+          "h": "Where the authority comes from",
+          "body": [
+            {
+              "t": "p",
+              "text": "A Syariah court in Kedah was not created by Parliament. It was created by Kedah."
+            },
+            {
+              "t": "rule",
+              "text": "The Federal Constitution divides legislative power between Parliament and the States in the Ninth Schedule. Islamic law and the constitution and organisation of Syariah courts are on the State List, so each State legislates for its own.",
+              "source": "Federal Constitution, Ninth Schedule, State List."
+            },
+            {
+              "t": "p",
+              "text": "This is why the courts differ between States, and why an answer about Syariah jurisdiction always begins by naming a State."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-syariah-jurisdiction-1",
+          "readMinutes": 2,
+          "keypoint": "Syariah jurisdiction reaches Muslims only, and only on listed matters.",
+          "h": "Two limits at once",
+          "body": [
+            {
+              "t": "p",
+              "text": "The power is bounded twice over."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**By person.** Syariah courts have jurisdiction over persons professing the religion of Islam. They do not reach anyone else.",
+                "**By subject.** Only matters on the State List — such as Islamic marriage, divorce, inheritance and religious offences against precepts of Islam."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Both limits must be satisfied. A Muslim in a contract dispute is in the civil courts, because the subject is not on the list."
+            },
+            {
+              "t": "example",
+              "text": "Two Muslims argue over a business debt. That is contract, a federal matter. The Syariah court has no more power over it than over a road accident."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-syariah-jurisdiction-2",
+          "readMinutes": 2,
+          "keypoint": "Where a Syariah court has jurisdiction, the civil High Court has none.",
+          "h": "The clause that separates them",
+          "body": [
+            {
+              "t": "p",
+              "text": "Before 1988 the civil courts could review what the Syariah courts did. A constitutional amendment changed that."
+            },
+            {
+              "t": "rule",
+              "text": "Article 121(1A) of the Federal Constitution provides that the civil High Courts have no jurisdiction in respect of any matter within the jurisdiction of the Syariah courts.",
+              "source": "Federal Constitution, Art 121(1A)."
+            },
+            {
+              "t": "p",
+              "text": "Read the words carefully. The clause removes civil jurisdiction over matters within Syariah jurisdiction. It does not make the Syariah courts superior."
+            },
+            {
+              "t": "caution",
+              "text": "So the working question is never \"which court is higher\". It is whether the matter falls within Syariah jurisdiction at all — and that is decided by the State List and by the person's religion."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-syariah-jurisdiction-3",
+          "readMinutes": 2,
+          "keypoint": "Parliament caps what punishments a Syariah court may impose.",
+          "h": "The ceiling on punishment",
+          "body": [
+            {
+              "t": "p",
+              "text": "State power to create religious offences is real, but the penalties are capped federally."
+            },
+            {
+              "t": "p",
+              "text": "Parliament has legislated to limit the punishments a Syariah court may impose. A State enactment that goes past that limit is beyond what the State may do."
+            },
+            {
+              "t": "p",
+              "text": "That is an ordinary federal structure point wearing unfamiliar clothes. A State legislature may only act within the power the Constitution gives it."
+            },
+            {
+              "t": "predict",
+              "prompt": "A State passes an enactment imposing a penalty above the federal ceiling. What kind of argument attacks it?",
+              "reveal": "A legislative competence argument — the same shape you would use against any State law that exceeds the State List. It is not an argument about religion; it is an argument about who may legislate what."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "qsy1",
+          "q": "Where do Syariah courts get their authority?",
+          "options": [
+            "From federal statute passed by Parliament",
+            "From State law, under the division of powers in the Ninth Schedule",
+            "From the Rulers directly, without legislation",
+            "From the Federal Court"
+          ],
+          "answer": 1,
+          "why": "Islamic law and the organisation of Syariah courts are State matters, so each State legislates its own. That is why an answer must name a State."
+        },
+        {
+          "id": "qsy2",
+          "q": "Two Muslims dispute a commercial debt. Which court?",
+          "options": [
+            "The Syariah court, because both are Muslims",
+            "Either, at the parties' choice",
+            "The Syariah court, because debt is a religious matter",
+            "The civil courts, because contract is not on the State List"
+          ],
+          "answer": 3,
+          "why": "Both limits must be met. The parties are Muslims, but the subject is contract — a federal matter — so Syariah jurisdiction does not arise."
+        },
+        {
+          "id": "qsy3",
+          "q": "What does Article 121(1A) do?",
+          "options": [
+            "It makes Syariah courts superior to the civil High Courts",
+            "It removes civil High Court jurisdiction over matters within Syariah jurisdiction",
+            "It allows appeals from Syariah courts to the Federal Court",
+            "It gives Syariah courts jurisdiction over all Muslims"
+          ],
+          "answer": 1,
+          "why": "It withdraws civil jurisdiction where the matter is within Syariah jurisdiction. It does not create a hierarchy or extend Syariah power."
+        },
+        {
+          "id": "qsy4",
+          "q": "A State enactment sets a punishment above the federal ceiling. What is the argument against it?",
+          "options": [
+            "That it offends religious principle",
+            "That only the Federal Court may set penalties",
+            "That Article 121(1A) forbids punishment",
+            "That the State exceeded the legislative power the Constitution gives it"
+          ],
+          "answer": 3,
+          "why": "It is an ordinary legislative competence argument. A State may act only within the power the Constitution allocates to it."
+        }
+      ],
+      "source": "Federal Constitution, Art 121(1A) and the Ninth Schedule State List. Federal legislation caps the punishments Syariah courts may impose.",
+      "lastVerified": "2026-09-09",
+      "verify": "Read Art 121(1A) and the State List entry on Islamic law in the Constitution itself. For any specific court, read that State's own enactment; the position is not uniform."
+    }
+  ]
+}

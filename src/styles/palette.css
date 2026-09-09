@@ -33,36 +33,52 @@
   /* ---- module identity: light ---- */
   --w-mod-00-tint: #FEECF0;
   --w-mod-00-ink: #843D56;
-  --w-mod-01-tint: #F1F3E4;
-  --w-mod-01-ink: #595D05;
-  --w-mod-02-tint: #E4F4FB;
-  --w-mod-02-ink: #00627C;
-  --w-mod-03-tint: #FBECF6;
-  --w-mod-03-ink: #7B406C;
-  --w-mod-04-tint: #F6F1E2;
-  --w-mod-04-ink: #6C5500;
-  --w-mod-05-tint: #E3F5F7;
-  --w-mod-05-ink: #00656B;
-  --w-mod-06-tint: #F6EDFB;
-  --w-mod-06-ink: #6D457E;
-  --w-mod-07-tint: #FBEFE3;
-  --w-mod-07-ink: #7C4B03;
-  --w-mod-08-tint: #E4F6F1;
-  --w-mod-08-ink: #00675A;
-  --w-mod-09-tint: #F1EFFE;
-  --w-mod-09-ink: #5A4C8B;
-  --w-mod-10-tint: #FEEDE6;
-  --w-mod-10-ink: #854324;
-  --w-mod-11-tint: #E7F5EC;
-  --w-mod-11-ink: #156841;
-  --w-mod-12-tint: #ECF1FF;
-  --w-mod-12-ink: #425490;
-  --w-mod-13-tint: #FFECEB;
-  --w-mod-13-ink: #873E3E;
-  --w-mod-14-tint: #EBF4E7;
-  --w-mod-14-ink: #3E6427;
-  --w-mod-15-tint: #E7F3FE;
-  --w-mod-15-ink: #215C8D;
+  --w-mod-01-tint: #F3F2E3;
+  --w-mod-01-ink: #615A00;
+  --w-mod-02-tint: #E3F5F9;
+  --w-mod-02-ink: #006470;
+  --w-mod-03-tint: #F6EDFB;
+  --w-mod-03-ink: #6D457E;
+  --w-mod-04-tint: #FCEEE4;
+  --w-mod-04-ink: #804810;
+  --w-mod-05-tint: #E6F6EE;
+  --w-mod-05-ink: #00694A;
+  --w-mod-06-tint: #ECF1FF;
+  --w-mod-06-ink: #425490;
+  --w-mod-07-tint: #FEECED;
+  --w-mod-07-ink: #873E46;
+  --w-mod-08-tint: #EFF3E5;
+  --w-mod-08-ink: #516012;
+  --w-mod-09-tint: #E4F4FB;
+  --w-mod-09-ink: #00627C;
+  --w-mod-10-tint: #F9EDF8;
+  --w-mod-10-ink: #774272;
+  --w-mod-11-tint: #F9F0E3;
+  --w-mod-11-ink: #774F00;
+  --w-mod-12-tint: #E4F6F1;
+  --w-mod-12-ink: #00675A;
+  --w-mod-13-tint: #EFF0FF;
+  --w-mod-13-ink: #534F8D;
+  --w-mod-14-tint: #FEEDE9;
+  --w-mod-14-ink: #874035;
+  --w-mod-15-tint: #EBF4E7;
+  --w-mod-15-ink: #3E6427;
+  --w-mod-16-tint: #E6F3FE;
+  --w-mod-16-ink: #0E5E8A;
+  --w-mod-17-tint: #FCECF4;
+  --w-mod-17-ink: #7E3F65;
+  --w-mod-18-tint: #F6F1E2;
+  --w-mod-18-ink: #6C5500;
+  --w-mod-19-tint: #E3F6F5;
+  --w-mod-19-ink: #006566;
+  --w-mod-20-tint: #F3EEFD;
+  --w-mod-20-ink: #614A87;
+  --w-mod-21-tint: #FEEDE6;
+  --w-mod-21-ink: #854324;
+  --w-mod-22-tint: #E8F5EA;
+  --w-mod-22-ink: #266739;
+  --w-mod-23-tint: #E8F2FF;
+  --w-mod-23-ink: #2E598F;
 
   /* ---- semantic roles: the only colour names components may use ---- */
 
@@ -123,9 +139,9 @@
   --figure-accent: var(--w-viz-1);
   --figure-wash:   color-mix(in srgb, var(--w-viz-1) 10%, var(--w-raise));
 
-  /* Module identity. Sixteen, one per module, constant lightness so none
+  /* Module identity. One per module, constant lightness so none
      outranks another. REINFORCEMENT ONLY — see the note in tools/palette.py:
-     colour cannot identify sixteen categories, so the module name is always
+     colour cannot identify this many categories, so the module name is always
      present and the colour never carries identity alone. --tint is a wash to
      sit behind text; --ink is for chips, rules and badges. */
   --module-tint: var(--w-mod-00-tint);
@@ -172,36 +188,52 @@
     /* ---- module identity: dark ---- */
     --w-mod-00-tint: #2C1C21;
     --w-mod-00-ink: #E696AE;
-    --w-mod-01-tint: #222314;
-    --w-mod-01-ink: #B2B86B;
-    --w-mod-02-tint: #13242B;
-    --w-mod-02-ink: #63BFE1;
-    --w-mod-03-tint: #2A1D26;
-    --w-mod-03-ink: #DB98C8;
-    --w-mod-04-tint: #262113;
-    --w-mod-04-ink: #CAAE63;
-    --w-mod-05-tint: #112527;
-    --w-mod-05-ink: #56C4CD;
-    --w-mod-06-tint: #261E2A;
-    --w-mod-06-ink: #C99EDD;
-    --w-mod-07-tint: #2A1F14;
-    --w-mod-07-ink: #DCA56A;
-    --w-mod-08-tint: #132622;
-    --w-mod-08-ink: #5FC6B3;
-    --w-mod-09-tint: #221F2D;
-    --w-mod-09-ink: #B3A5EB;
-    --w-mod-10-tint: #2C1E17;
-    --w-mod-10-ink: #E79D7B;
-    --w-mod-11-tint: #17251D;
-    --w-mod-11-ink: #78C598;
-    --w-mod-12-tint: #1D212E;
-    --w-mod-12-ink: #98AEF1;
-    --w-mod-13-tint: #2D1D1C;
-    --w-mod-13-ink: #EA9894;
-    --w-mod-14-tint: #1C2518;
-    --w-mod-14-ink: #96C07F;
-    --w-mod-15-tint: #17232E;
-    --w-mod-15-ink: #7CB7EE;
+    --w-mod-01-tint: #232214;
+    --w-mod-01-ink: #BAB567;
+    --w-mod-02-tint: #122528;
+    --w-mod-02-ink: #59C2D4;
+    --w-mod-03-tint: #261E2A;
+    --w-mod-03-ink: #C99EDD;
+    --w-mod-04-tint: #2B1F15;
+    --w-mod-04-ink: #E0A26F;
+    --w-mod-05-tint: #15261E;
+    --w-mod-05-ink: #6FC5A1;
+    --w-mod-06-tint: #1D212E;
+    --w-mod-06-ink: #98AEF1;
+    --w-mod-07-tint: #2D1D1E;
+    --w-mod-07-ink: #E9979D;
+    --w-mod-08-tint: #202415;
+    --w-mod-08-ink: #A9BB71;
+    --w-mod-09-tint: #13242B;
+    --w-mod-09-ink: #63BFE1;
+    --w-mod-10-tint: #291D28;
+    --w-mod-10-ink: #D59ACF;
+    --w-mod-11-tint: #292013;
+    --w-mod-11-ink: #D6A866;
+    --w-mod-12-tint: #132622;
+    --w-mod-12-ink: #5FC6B3;
+    --w-mod-13-tint: #20202E;
+    --w-mod-13-ink: #AAA8EE;
+    --w-mod-14-tint: #2D1D1A;
+    --w-mod-14-ink: #EA998B;
+    --w-mod-15-tint: #1C2518;
+    --w-mod-15-ink: #96C07F;
+    --w-mod-16-tint: #16232D;
+    --w-mod-16-ink: #73BAEA;
+    --w-mod-17-tint: #2B1D24;
+    --w-mod-17-ink: #DF97C0;
+    --w-mod-18-tint: #262113;
+    --w-mod-18-ink: #CAAE63;
+    --w-mod-19-tint: #122625;
+    --w-mod-19-ink: #57C5C5;
+    --w-mod-20-tint: #231F2C;
+    --w-mod-20-ink: #BBA3E8;
+    --w-mod-21-tint: #2C1E17;
+    --w-mod-21-ink: #E79D7B;
+    --w-mod-22-tint: #19251B;
+    --w-mod-22-ink: #82C38F;
+    --w-mod-23-tint: #19222E;
+    --w-mod-23-ink: #85B4F0;
   }
 }
 
@@ -224,6 +256,14 @@
 [data-module="m12-administrative"] { --module-tint: var(--w-mod-13-tint); --module-ink: var(--w-mod-13-ink); }
 [data-module="m13-legal-reasoning"] { --module-tint: var(--w-mod-14-tint); --module-ink: var(--w-mod-14-ink); }
 [data-module="m14-statutory-interpretation"] { --module-tint: var(--w-mod-15-tint); --module-ink: var(--w-mod-15-ink); }
+[data-module="m15-equity-trusts"] { --module-tint: var(--w-mod-16-tint); --module-ink: var(--w-mod-16-ink); }
+[data-module="m16-family"] { --module-tint: var(--w-mod-17-tint); --module-ink: var(--w-mod-17-ink); }
+[data-module="m17-syariah"] { --module-tint: var(--w-mod-18-tint); --module-ink: var(--w-mod-18-ink); }
+[data-module="m18-jurisprudence"] { --module-tint: var(--w-mod-19-tint); --module-ink: var(--w-mod-19-ink); }
+[data-module="m19-commercial"] { --module-tint: var(--w-mod-20-tint); --module-ink: var(--w-mod-20-ink); }
+[data-module="m20-employment"] { --module-tint: var(--w-mod-21-tint); --module-ink: var(--w-mod-21-ink); }
+[data-module="m21-international"] { --module-tint: var(--w-mod-22-tint); --module-ink: var(--w-mod-22-ink); }
+[data-module="m22-ethics"] { --module-tint: var(--w-mod-23-tint); --module-ink: var(--w-mod-23-ink); }
 
 /* An explicit choice always wins over the system preference. */
 :root[data-theme="light"] {
@@ -246,36 +286,52 @@
   --w-viz-3: #3D997B;
   --w-mod-00-tint: #FEECF0;
   --w-mod-00-ink: #843D56;
-  --w-mod-01-tint: #F1F3E4;
-  --w-mod-01-ink: #595D05;
-  --w-mod-02-tint: #E4F4FB;
-  --w-mod-02-ink: #00627C;
-  --w-mod-03-tint: #FBECF6;
-  --w-mod-03-ink: #7B406C;
-  --w-mod-04-tint: #F6F1E2;
-  --w-mod-04-ink: #6C5500;
-  --w-mod-05-tint: #E3F5F7;
-  --w-mod-05-ink: #00656B;
-  --w-mod-06-tint: #F6EDFB;
-  --w-mod-06-ink: #6D457E;
-  --w-mod-07-tint: #FBEFE3;
-  --w-mod-07-ink: #7C4B03;
-  --w-mod-08-tint: #E4F6F1;
-  --w-mod-08-ink: #00675A;
-  --w-mod-09-tint: #F1EFFE;
-  --w-mod-09-ink: #5A4C8B;
-  --w-mod-10-tint: #FEEDE6;
-  --w-mod-10-ink: #854324;
-  --w-mod-11-tint: #E7F5EC;
-  --w-mod-11-ink: #156841;
-  --w-mod-12-tint: #ECF1FF;
-  --w-mod-12-ink: #425490;
-  --w-mod-13-tint: #FFECEB;
-  --w-mod-13-ink: #873E3E;
-  --w-mod-14-tint: #EBF4E7;
-  --w-mod-14-ink: #3E6427;
-  --w-mod-15-tint: #E7F3FE;
-  --w-mod-15-ink: #215C8D;
+  --w-mod-01-tint: #F3F2E3;
+  --w-mod-01-ink: #615A00;
+  --w-mod-02-tint: #E3F5F9;
+  --w-mod-02-ink: #006470;
+  --w-mod-03-tint: #F6EDFB;
+  --w-mod-03-ink: #6D457E;
+  --w-mod-04-tint: #FCEEE4;
+  --w-mod-04-ink: #804810;
+  --w-mod-05-tint: #E6F6EE;
+  --w-mod-05-ink: #00694A;
+  --w-mod-06-tint: #ECF1FF;
+  --w-mod-06-ink: #425490;
+  --w-mod-07-tint: #FEECED;
+  --w-mod-07-ink: #873E46;
+  --w-mod-08-tint: #EFF3E5;
+  --w-mod-08-ink: #516012;
+  --w-mod-09-tint: #E4F4FB;
+  --w-mod-09-ink: #00627C;
+  --w-mod-10-tint: #F9EDF8;
+  --w-mod-10-ink: #774272;
+  --w-mod-11-tint: #F9F0E3;
+  --w-mod-11-ink: #774F00;
+  --w-mod-12-tint: #E4F6F1;
+  --w-mod-12-ink: #00675A;
+  --w-mod-13-tint: #EFF0FF;
+  --w-mod-13-ink: #534F8D;
+  --w-mod-14-tint: #FEEDE9;
+  --w-mod-14-ink: #874035;
+  --w-mod-15-tint: #EBF4E7;
+  --w-mod-15-ink: #3E6427;
+  --w-mod-16-tint: #E6F3FE;
+  --w-mod-16-ink: #0E5E8A;
+  --w-mod-17-tint: #FCECF4;
+  --w-mod-17-ink: #7E3F65;
+  --w-mod-18-tint: #F6F1E2;
+  --w-mod-18-ink: #6C5500;
+  --w-mod-19-tint: #E3F6F5;
+  --w-mod-19-ink: #006566;
+  --w-mod-20-tint: #F3EEFD;
+  --w-mod-20-ink: #614A87;
+  --w-mod-21-tint: #FEEDE6;
+  --w-mod-21-ink: #854324;
+  --w-mod-22-tint: #E8F5EA;
+  --w-mod-22-ink: #266739;
+  --w-mod-23-tint: #E8F2FF;
+  --w-mod-23-ink: #2E598F;
 }
 :root[data-theme="dark"] {
   --w-paper: #14181D;
@@ -297,34 +353,50 @@
   --w-viz-3: #77CBAC;
   --w-mod-00-tint: #2C1C21;
   --w-mod-00-ink: #E696AE;
-  --w-mod-01-tint: #222314;
-  --w-mod-01-ink: #B2B86B;
-  --w-mod-02-tint: #13242B;
-  --w-mod-02-ink: #63BFE1;
-  --w-mod-03-tint: #2A1D26;
-  --w-mod-03-ink: #DB98C8;
-  --w-mod-04-tint: #262113;
-  --w-mod-04-ink: #CAAE63;
-  --w-mod-05-tint: #112527;
-  --w-mod-05-ink: #56C4CD;
-  --w-mod-06-tint: #261E2A;
-  --w-mod-06-ink: #C99EDD;
-  --w-mod-07-tint: #2A1F14;
-  --w-mod-07-ink: #DCA56A;
-  --w-mod-08-tint: #132622;
-  --w-mod-08-ink: #5FC6B3;
-  --w-mod-09-tint: #221F2D;
-  --w-mod-09-ink: #B3A5EB;
-  --w-mod-10-tint: #2C1E17;
-  --w-mod-10-ink: #E79D7B;
-  --w-mod-11-tint: #17251D;
-  --w-mod-11-ink: #78C598;
-  --w-mod-12-tint: #1D212E;
-  --w-mod-12-ink: #98AEF1;
-  --w-mod-13-tint: #2D1D1C;
-  --w-mod-13-ink: #EA9894;
-  --w-mod-14-tint: #1C2518;
-  --w-mod-14-ink: #96C07F;
-  --w-mod-15-tint: #17232E;
-  --w-mod-15-ink: #7CB7EE;
+  --w-mod-01-tint: #232214;
+  --w-mod-01-ink: #BAB567;
+  --w-mod-02-tint: #122528;
+  --w-mod-02-ink: #59C2D4;
+  --w-mod-03-tint: #261E2A;
+  --w-mod-03-ink: #C99EDD;
+  --w-mod-04-tint: #2B1F15;
+  --w-mod-04-ink: #E0A26F;
+  --w-mod-05-tint: #15261E;
+  --w-mod-05-ink: #6FC5A1;
+  --w-mod-06-tint: #1D212E;
+  --w-mod-06-ink: #98AEF1;
+  --w-mod-07-tint: #2D1D1E;
+  --w-mod-07-ink: #E9979D;
+  --w-mod-08-tint: #202415;
+  --w-mod-08-ink: #A9BB71;
+  --w-mod-09-tint: #13242B;
+  --w-mod-09-ink: #63BFE1;
+  --w-mod-10-tint: #291D28;
+  --w-mod-10-ink: #D59ACF;
+  --w-mod-11-tint: #292013;
+  --w-mod-11-ink: #D6A866;
+  --w-mod-12-tint: #132622;
+  --w-mod-12-ink: #5FC6B3;
+  --w-mod-13-tint: #20202E;
+  --w-mod-13-ink: #AAA8EE;
+  --w-mod-14-tint: #2D1D1A;
+  --w-mod-14-ink: #EA998B;
+  --w-mod-15-tint: #1C2518;
+  --w-mod-15-ink: #96C07F;
+  --w-mod-16-tint: #16232D;
+  --w-mod-16-ink: #73BAEA;
+  --w-mod-17-tint: #2B1D24;
+  --w-mod-17-ink: #DF97C0;
+  --w-mod-18-tint: #262113;
+  --w-mod-18-ink: #CAAE63;
+  --w-mod-19-tint: #122625;
+  --w-mod-19-ink: #57C5C5;
+  --w-mod-20-tint: #231F2C;
+  --w-mod-20-ink: #BBA3E8;
+  --w-mod-21-tint: #2C1E17;
+  --w-mod-21-ink: #E79D7B;
+  --w-mod-22-tint: #19251B;
+  --w-mod-22-ink: #82C38F;
+  --w-mod-23-tint: #19222E;
+  --w-mod-23-ink: #85B4F0;
 }

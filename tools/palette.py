@@ -261,8 +261,8 @@ DARK = [
 #
 # What IS guaranteed: every tint keeps body text at AAA, every ink clears 4.5:1,
 # and CONSECUTIVE modules differ sharply, so a listing reads as varied rather
-# than as a gradient. Hue advances by a stride co-prime with 16, which uses all
-# sixteen hues while putting neighbours ~112 degrees apart.
+# than as a gradient. Hue advances by a stride co-prime with the module count,
+# which uses every hue while putting neighbours ~105 degrees apart.
 
 MODULES = [
     "m-study-method", "m00-foundations", "m01-malaysian-legal-system",
@@ -270,10 +270,21 @@ MODULES = [
     "m05-criminal-procedure", "m06-contract", "m07-tort", "m08-property",
     "m09-company", "m10-evidence", "m11-civil-procedure", "m12-administrative",
     "m13-legal-reasoning", "m14-statutory-interpretation",
+    # The eight core subjects the curriculum was missing. Added as one block
+    # rather than one at a time, deliberately: the hue of every module is
+    # derived from its index and the count, so each addition re-colours the
+    # whole app. Sized to 24 once so this happens once. Leave room here rather
+    # than growing this list again — see docs/LLB-ROADMAP.md.
+    "m15-equity-trusts", "m16-family", "m17-syariah", "m18-jurisprudence",
+    "m19-commercial", "m20-employment", "m21-international", "m22-ethics",
 ]
-STRIDE = 5  # co-prime with 16
+# Co-prime with 24, and chosen over the other co-primes because 7 * (360/24)
+# puts neighbours 105 degrees apart — the closest available to the 112 the
+# sixteen-module palette had, so the "reads as varied, not as a gradient"
+# property survives the resize.
+STRIDE = 7
 
-# Constant lightness across all sixteen: no module outranks another.
+# Constant lightness across every module: no module outranks another.
 MODULE_TINT = {"light": (0.958, 0.020), "dark": (0.250, 0.026)}
 MODULE_INK = {"light": (0.460, 0.100), "dark": (0.760, 0.100)}
 
@@ -402,7 +413,7 @@ def check(theme, pal, failures, report):
             failures.append(f"{theme}: {token} is {c:.2f}:1 on {worst}, needs {floor}:1 ({why})")
 
     mods = build_modules(theme)
-    report.append("\n  module identity (16) — reinforcement, not identifier:")
+    report.append(f"\n  module identity ({len(MODULES)}) — reinforcement, not identifier:")
     worst_tint = min(contrast(pal["ink"], mods[f"mod-{i:02d}-tint"]) for i in range(len(MODULES)))
     ok = worst_tint >= 7.0
     report.append(f"    {'PASS' if ok else 'FAIL'}  body text on the softest tint "
@@ -542,9 +553,9 @@ ROLES = """
   --figure-accent: var(--w-viz-1);
   --figure-wash:   color-mix(in srgb, var(--w-viz-1) 10%, var(--w-raise));
 
-  /* Module identity. Sixteen, one per module, constant lightness so none
+  /* Module identity. One per module, constant lightness so none
      outranks another. REINFORCEMENT ONLY — see the note in tools/palette.py:
-     colour cannot identify sixteen categories, so the module name is always
+     colour cannot identify this many categories, so the module name is always
      present and the colour never carries identity alone. --tint is a wash to
      sit behind text; --ink is for chips, rules and badges. */
   --module-tint: var(--w-mod-00-tint);

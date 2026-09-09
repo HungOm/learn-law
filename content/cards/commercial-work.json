@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 2,
+  "note": "Commercial and Employment. Statutes are named; section numbers are omitted where they were not verifiable at authoring time. No case is cited — see docs/STYLE.md, 'Never invent a citation'.",
+  "cards": [
+    {
+      "id": "com-01",
+      "moduleId": "m19-commercial",
+      "type": "term",
+      "front": "In agency, who is the principal and who is the agent?",
+      "back": "The agent acts; the principal is bound. The agent makes the contract, and it takes effect as the principal's.",
+      "tags": ["agency"],
+      "source": "Contracts Act 1950, agency provisions."
+    },
+    {
+      "id": "com-02",
+      "moduleId": "m19-commercial",
+      "type": "structure",
+      "front": "Name the three ways an agent's authority can arise.",
+      "back": "Express, from what the principal said or wrote. Implied, from the job given. Apparent, from how the principal made things look to outsiders.",
+      "tags": ["agency"],
+      "source": "Standard agency doctrine."
+    },
+    {
+      "id": "com-03",
+      "moduleId": "m19-commercial",
+      "type": "rule",
+      "front": "Does a private instruction limiting an agent bind a third party who never knew of it?",
+      "back": "No. A third party dealing in good faith may rely on the appearance the principal created. The principal's remedy is against the agent.",
+      "tags": ["agency"],
+      "source": "Doctrine of apparent authority."
+    },
+    {
+      "id": "com-04",
+      "moduleId": "m19-commercial",
+      "type": "structure",
+      "front": "Which two relationships exist in every agency problem?",
+      "back": "Principal to agent, and principal to third party. Breach of the first does not undo the second.",
+      "tags": ["agency"],
+      "source": "Standard agency doctrine."
+    },
+    {
+      "id": "com-05",
+      "moduleId": "m19-commercial",
+      "type": "rule",
+      "front": "An agent takes an undisclosed commission but secures a fair price. Any breach?",
+      "back": "Yes. The duty is against undisclosed profit, not against loss. Absence of loss answers a damages claim, not the claim to the profit.",
+      "tags": ["agency"],
+      "source": "Fiduciary duties of an agent."
+    },
+    {
+      "id": "com-06",
+      "moduleId": "m19-commercial",
+      "type": "rule",
+      "front": "May an agent act for both sides of a transaction?",
+      "back": "Not without disclosure and consent. Acting for both parties without telling them is a conflict and a breach of loyalty.",
+      "tags": ["agency"],
+      "source": "Fiduciary duties of an agent."
+    },
+    {
+      "id": "com-07",
+      "moduleId": "m19-commercial",
+      "type": "source",
+      "front": "Where is the general law of agency found in Malaysia?",
+      "back": "In the Contracts Act 1950. Read the agency provisions themselves — this course states the doctrine without section numbers.",
+      "tags": ["agency"],
+      "source": "Contracts Act 1950"
+    },
+    {
+      "id": "emp-01",
+      "moduleId": "m20-employment",
+      "type": "structure",
+      "front": "What two separate questions arise when someone is dismissed?",
+      "back": "Whether they were paid what they were owed, and whether they should have been dismissed at all. Different law, different forum.",
+      "tags": ["employment"],
+      "source": "Structure of Malaysian employment law."
+    },
+    {
+      "id": "emp-02",
+      "moduleId": "m20-employment",
+      "type": "source",
+      "front": "Which statute sets minimum terms of employment?",
+      "back": "The Employment Act 1955 — hours, rest days, leave, notice. Its scope is defined by the Act and must be checked, not assumed.",
+      "tags": ["employment"],
+      "source": "Employment Act 1955"
+    },
+    {
+      "id": "emp-03",
+      "moduleId": "m20-employment",
+      "type": "rule",
+      "front": "Can a contract give an employee less than the Employment Act minimum?",
+      "back": "No. The statute sets a floor. A term below it does not take effect merely because both sides signed.",
+      "tags": ["employment"],
+      "source": "Employment Act 1955"
+    },
+    {
+      "id": "emp-04",
+      "moduleId": "m20-employment",
+      "type": "source",
+      "front": "Which statute provides the route for dismissal without just cause or excuse?",
+      "back": "The Industrial Relations Act 1967. A representation is made, conciliation is attempted, and the matter may reach the Industrial Court.",
+      "tags": ["employment"],
+      "source": "Industrial Relations Act 1967"
+    },
+    {
+      "id": "emp-05",
+      "moduleId": "m20-employment",
+      "type": "rule",
+      "front": "What are the two halves of \"just cause or excuse\"?",
+      "back": "Substantive — was there a real reason. Procedural — was the employee told the case and heard. An employer must satisfy both.",
+      "tags": ["employment"],
+      "source": "Standard industrial relations doctrine."
+    },
+    {
+      "id": "emp-06",
+      "moduleId": "m20-employment",
+      "type": "trigger",
+      "front": "The misconduct is proved but there was no hearing. What do you say?",
+      "back": "That a true reason does not cure an absent procedure. The dismissal may still be without just cause because the procedural half fails.",
+      "tags": ["employment"],
+      "source": "Standard industrial relations doctrine."
+    },
+    {
+      "id": "emp-07",
+      "moduleId": "m20-employment",
+      "type": "structure",
+      "front": "What remedy is the unfair dismissal system built around?",
+      "back": "Reinstatement — putting the workman back in the job. Compensation is what is commonly awarded instead.",
+      "tags": ["employment"],
+      "source": "Industrial Relations Act 1967"
+    }
+  ]
+}

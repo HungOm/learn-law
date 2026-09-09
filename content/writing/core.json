@@ -1,0 +1,852 @@
+[
+  {
+    "id": "w-ratio-sentence",
+    "moduleId": "m00-foundations",
+    "lessonId": "l-precedent",
+    "level": "foundation",
+    "kind": "case-note",
+    "title": "State a ratio in one sentence",
+    "minutes": 20,
+    "brief": "Take a decision you have already met in a lesson and write the ratio as a single sentence. One sentence. Not a summary of the facts, not what the court said along the way — the proposition the result actually turned on.",
+    "audience": "Yourself, six months from now, revising at speed.",
+    "before": [
+      "Read the precedent lesson first: you need the difference between ratio and obiter before this makes sense.",
+      "Have the case in front of you, or the lesson's account of it."
+    ],
+    "scaffold": [
+      {
+        "step": "Write the order first",
+        "prompt": "In one line, what did the court actually do? Who won, and what were they given or refused?",
+        "why": "The ratio is the reason that produced this order. If you cannot state the order you cannot check your sentence against it, and checking is the whole method."
+      },
+      {
+        "step": "Write the proposition",
+        "prompt": "Now one sentence beginning 'Where...' — the circumstances — followed by what legally follows.",
+        "why": "The 'where' clause forces you to name the conditions. A ratio without conditions is a slogan."
+      },
+      {
+        "step": "Test it against the order",
+        "prompt": "Read your sentence, then the order. Would your sentence produce that order? If not, it is the wrong sentence.",
+        "why": "This is the only test that works without a textbook to check against."
+      },
+      {
+        "step": "Test it for width",
+        "prompt": "Ask: does my sentence decide cases this court did not have in front of it? Narrow it until it does not.",
+        "why": "Too wide and you have invented law. Too narrow and you have described one dispute."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The conditions",
+        "does": "Names the circumstances the rule applies to",
+        "length": "a clause"
+      },
+      {
+        "part": "The consequence",
+        "does": "States what legally follows in those circumstances",
+        "length": "a clause"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "The sentence recites facts, or names the parties, or says who won."
+      },
+      {
+        "band": "Close",
+        "test": "It states a rule, but wide enough to decide disputes this court never considered."
+      },
+      {
+        "band": "There",
+        "test": "It states conditions and a consequence, and running the conditions produces the order the court actually made."
+      }
+    ],
+    "faults": [
+      "Writing the headnote instead of the ratio. A headnote is an editor's summary; the ratio is the reason the order followed.",
+      "Including the emphatic passage the judge clearly enjoyed writing. Emphasis is not authority.",
+      "Naming the parties. A ratio that names the parties decides one case and no other."
+    ],
+    "model": "A good answer is one sentence with two moving parts: a 'where' clause naming the circumstances, and a consequence. It does not mention the parties by name. Tested against the order, it produces it; widened by one word, it would decide a case the court did not have. If your sentence needs a second sentence to be true, the second sentence is doing the work and you have not found the ratio yet.",
+    "source": "Method, not doctrine. The technique is the standard one taught for reading judgments.",
+    "lastVerified": "2026-09-09",
+    "verify": "Compare your sentence with how the lesson states the same case's ratio. If they differ, work out which of you is wider and why."
+  },
+  {
+    "id": "w-plain-explanation",
+    "moduleId": "m00-foundations",
+    "lessonId": "l-vocabulary",
+    "level": "foundation",
+    "kind": "advice",
+    "title": "Explain one rule to someone at home",
+    "minutes": 20,
+    "brief": "Pick one rule you have learned this week. Write an explanation of it for a person you actually know who has never studied law — a parent, a neighbour, a friend after their shift. Two hundred words at most. No legal words unless you define them in the same sentence.",
+    "audience": "One real person, named in your own head before you start.",
+    "before": [
+      "Pick the rule before you start writing. Not a topic — a rule.",
+      "Decide who you are writing to and keep them in mind. A general reader is nobody, and writing for nobody is why most legal writing is bad."
+    ],
+    "scaffold": [
+      {
+        "step": "Name the situation",
+        "prompt": "Start with a concrete situation your reader could actually be in. Not 'where a party breaches' — a person, a place, a thing that went wrong.",
+        "why": "The lessons put the scene before the doctrine for the same reason: an abstract term with nothing under it is a weight your reader has to carry until you finally explain it."
+      },
+      {
+        "step": "State what the law does about it",
+        "prompt": "One or two sentences. What does the law say happens?",
+        "why": "If you cannot say it in two sentences you do not yet know it well enough to teach it."
+      },
+      {
+        "step": "Say what it does not do",
+        "prompt": "Add the limit. What does this rule not cover, that your reader might assume it does?",
+        "why": "Most harm from half-understood law comes from people assuming a rule reaches further than it does."
+      },
+      {
+        "step": "Read it aloud",
+        "prompt": "Read the whole thing out loud. Anything you stumble over, rewrite.",
+        "why": "Your mouth finds tangled sentences faster than your eye does."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The situation",
+        "does": "A concrete scene the reader recognises",
+        "length": "two or three sentences"
+      },
+      {
+        "part": "The rule",
+        "does": "What the law does about that situation",
+        "length": "two sentences"
+      },
+      {
+        "part": "The limit",
+        "does": "What it does not reach",
+        "length": "one or two sentences"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Legal words appear undefined, or it opens with a definition rather than a situation."
+      },
+      {
+        "band": "Close",
+        "test": "Clear, but no limit is stated, so a reader could walk away thinking the rule covers more than it does."
+      },
+      {
+        "band": "There",
+        "test": "A real person could read it once, tell you what the rule does and where it stops, and not need a dictionary."
+      }
+    ],
+    "faults": [
+      "Opening with 'In law, ...'. Your reader is not in law.",
+      "Using a term and defining it two sentences later. Define in the same breath or not at all.",
+      "Writing two hundred words of hedging. A limit is not a hedge — say the limit plainly and stop."
+    ],
+    "model": "A good answer opens on something that happened, not something that is defined. It uses ordinary words throughout, and where a legal term is unavoidable it is glossed in the same sentence rather than the next. It ends by naming what the rule does not cover, which is the part most explanations leave out and the part that actually protects the reader. Test it by giving it to the person you wrote it for. If they can tell it back to you, it works.",
+    "source": "Method. The rule about the concrete before the abstract is stated in docs/STYLE.md.",
+    "lastVerified": "2026-09-09",
+    "verify": "Give it to the person. That is the test, and there is no substitute for it."
+  },
+  {
+    "id": "w-irac-first",
+    "moduleId": "m06-contract",
+    "lessonId": "l-formation",
+    "level": "foundation",
+    "kind": "problem-answer",
+    "title": "Your first problem answer, in four parts",
+    "minutes": 30,
+    "brief": "A short problem is set below. Write an answer in four labelled parts: Issue, Rule, Application, Conclusion. Label them for now — you will stop labelling them once the shape is automatic.",
+    "audience": "An examiner who has read forty of these today.",
+    "before": [
+      "Read the formation lesson. You cannot apply a rule you cannot state.",
+      "Read the problem twice before writing anything."
+    ],
+    "scaffold": [
+      {
+        "step": "Find the issue",
+        "prompt": "Write the question the dispute turns on, as a question. Usually it starts 'Whether...'.",
+        "why": "An answer without a stated issue wanders, because nothing tells it when to stop."
+      },
+      {
+        "step": "State the rule",
+        "prompt": "State the rule you will apply, and where it comes from — a section, or a case. State it in the abstract, with no names from the problem in it.",
+        "why": "Mixing the rule and the facts is the commonest fault in a first answer. Keep them apart and each becomes checkable."
+      },
+      {
+        "step": "Apply it",
+        "prompt": "Now take the facts one at a time and run them against the rule you just stated. Say which fact satisfies which part of the rule, and which does not.",
+        "why": "This is the only part that earns real marks, and the part beginners write least of."
+      },
+      {
+        "step": "Conclude",
+        "prompt": "Answer the question you asked in the issue. One sentence. Commit.",
+        "why": "An answer that will not commit has not applied anything."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Issue",
+        "does": "The question, as a question",
+        "length": "one sentence"
+      },
+      {
+        "part": "Rule",
+        "does": "The rule and its source, with no facts in it",
+        "length": "two to four sentences"
+      },
+      {
+        "part": "Application",
+        "does": "Facts run against the rule, one at a time",
+        "length": "the bulk of the answer"
+      },
+      {
+        "part": "Conclusion",
+        "does": "Answers the issue",
+        "length": "one sentence"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "The rule section restates the facts, or the application section restates the rule."
+      },
+      {
+        "band": "Close",
+        "test": "All four parts present, but the application is shorter than the rule."
+      },
+      {
+        "band": "There",
+        "test": "Application is the longest part, each fact is tied to a part of the rule, and the conclusion answers the issue asked."
+      }
+    ],
+    "faults": [
+      "Writing everything you know about the topic. The issue tells you what to leave out; that is what it is for.",
+      "An application section that says 'here, the rule is satisfied' without saying which fact satisfies it.",
+      "Refusing to conclude because the facts are unclear. Say what follows on the better view, then say what would change it."
+    ],
+    "model": "A good answer is mostly application. The rule section is short and clean, stated without the problem's names in it, so a reader can check it independently. The application takes each fact that matters and says what it does to the rule — and says so about the facts that cut against the conclusion too, because an answer that only marshals helpful facts is not an analysis. The conclusion commits, in one sentence, to an answer to the question the issue asked.",
+    "source": "Method. The four-part shape is the standard one; the emphasis on application is what the marks follow.",
+    "lastVerified": "2026-09-09",
+    "verify": "Count your words. If Rule is longer than Application, rewrite before checking anything else."
+  },
+  {
+    "id": "w-case-note-full",
+    "moduleId": "m13-legal-reasoning",
+    "lessonId": "l-legal-reasoning",
+    "level": "advanced",
+    "kind": "case-note",
+    "title": "A full case note",
+    "minutes": 45,
+    "brief": "Write a case note on a judgment you have read in the case-reading tier. Six hundred words. It must be usable by someone who has not read the case and does not intend to.",
+    "audience": "A colleague who needs to know whether this case helps them, in two minutes.",
+    "before": [
+      "You need to have actually read the judgment, not the lesson's account of it. Use the case-reading tier.",
+      "Have the citation exact, including the court. A note with a loose citation is not usable."
+    ],
+    "scaffold": [
+      {
+        "step": "Facts, but only the ones that mattered",
+        "prompt": "Write the facts in under a hundred words. Include only facts the reasoning actually used.",
+        "why": "Which facts you leave out shows whether you understood the reasoning. This is the hardest part of the note, not the easiest."
+      },
+      {
+        "step": "The issue as the court framed it",
+        "prompt": "State the question the court set itself — not the question you would have asked.",
+        "why": "Courts often reframe. Where they reframe, that move is frequently the most important thing in the judgment."
+      },
+      {
+        "step": "The holding and the reasoning",
+        "prompt": "What was decided, and by what route. Distinguish the steps that were necessary from the steps that were commentary.",
+        "why": "This is the ratio work from the foundation exercise, now at length."
+      },
+      {
+        "step": "What it changes",
+        "prompt": "Say what a lawyer can now do that they could not before, or vice versa. If nothing changed, say that.",
+        "why": "A note that does not say what changed has not explained why the case is worth knowing."
+      },
+      {
+        "step": "Cut to six hundred",
+        "prompt": "You will be over. Cut the facts first, then any sentence that praises or criticises without evidence.",
+        "why": "The discipline of the limit is the exercise."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Citation line",
+        "does": "Case, citation, court, year",
+        "length": "one line"
+      },
+      {
+        "part": "Facts",
+        "does": "Only the operative ones",
+        "length": "under 100 words"
+      },
+      {
+        "part": "Issue",
+        "does": "As the court framed it",
+        "length": "one or two sentences"
+      },
+      {
+        "part": "Held and why",
+        "does": "Outcome and the necessary steps",
+        "length": "200 to 250 words"
+      },
+      {
+        "part": "Significance",
+        "does": "What is now different",
+        "length": "100 words"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Facts run over two hundred words, or the note reproduces the court's phrasing rather than restating it."
+      },
+      {
+        "band": "Close",
+        "test": "Accurate but inert — it says what happened without saying what changed."
+      },
+      {
+        "band": "There",
+        "test": "A reader who has not opened the case could decide from your note whether it helps them, and would be right."
+      }
+    ],
+    "faults": [
+      "Copying the headnote. The headnote is someone else's work and often frames the case for a different purpose than yours.",
+      "Quoting at length. If you find yourself quoting three sentences, you have not understood them well enough to restate them.",
+      "Grading the judgment ('the court rightly held'). Say what it held and what follows; leave the applause out."
+    ],
+    "model": "A good note is short on facts and long on reasoning, because facts are cheap and reasoning is what the reader came for. It restates the court's reasoning in the writer's own words — which is both the honest thing and the only way to prove you followed it. It separates what the result needed from what the judge added. And it ends by saying what is now possible or foreclosed, in terms a working lawyer could act on.",
+    "source": "Method. The structure is the conventional one for a case note.",
+    "lastVerified": "2026-09-09",
+    "verify": "Give the note to someone who has not read the case and ask them what the case decided. If they get it wrong, the note is wrong."
+  },
+  {
+    "id": "w-negligence-problem",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "level": "advanced",
+    "kind": "problem-answer",
+    "title": "A negligence problem, unlabelled",
+    "minutes": 45,
+    "brief": "Answer the negligence problem in continuous prose. No headings, no labels. The four-part shape should still be there — a reader should be able to point at where each part starts — but you should not have to announce it.",
+    "audience": "An examiner who will notice structure without being told about it.",
+    "before": [
+      "The negligence lesson, and its diagram of the four questions in order.",
+      "Have the elements in your head, not on the page in front of you."
+    ],
+    "scaffold": [
+      {
+        "step": "Take the elements in order",
+        "prompt": "Duty, breach, causation, remoteness. Deal with them in that order and do not skip one because it is obvious.",
+        "why": "An element you skip is an element the examiner cannot give you marks for, and 'obvious' is where the trap usually sits."
+      },
+      {
+        "step": "Spend your words where the fight is",
+        "prompt": "One of the four is genuinely arguable on these facts. Find it. Give it half your answer.",
+        "why": "Equal treatment of four elements signals that you have not identified which one the problem is about."
+      },
+      {
+        "step": "Argue the other side",
+        "prompt": "On the contested element, write the best case against your own conclusion, then say why it does not win.",
+        "why": "This is the difference between an answer and an assertion, and it is the largest single source of marks at this level."
+      },
+      {
+        "step": "Remove the labels",
+        "prompt": "If you wrote headings, delete them. The prose must carry the structure by itself.",
+        "why": "Signposting words — 'the first question is', 'that leaves' — do the work headings were doing, and read like a lawyer rather than a form."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Opening",
+        "does": "Names the claim and the question that decides it",
+        "length": "two sentences"
+      },
+      {
+        "part": "The uncontested elements",
+        "does": "Dealt with quickly but not skipped",
+        "length": "short"
+      },
+      {
+        "part": "The contested element",
+        "does": "Argued both ways, then resolved",
+        "length": "half the answer"
+      },
+      {
+        "part": "Close",
+        "does": "States the outcome and what would change it",
+        "length": "two sentences"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "All four elements get equal space, or one is skipped as obvious."
+      },
+      {
+        "band": "Close",
+        "test": "The right element is identified but argued only one way."
+      },
+      {
+        "band": "There",
+        "test": "The contested element dominates, both sides are put, and the resolution says which argument is stronger and why."
+      }
+    ],
+    "faults": [
+      "Reciting the test for duty at length when duty is not in issue on the facts.",
+      "'It is submitted that' as a substitute for a reason. Delete the phrase and see whether a reason remains.",
+      "Concluding without saying what fact would change the answer. Examiners are testing whether you know what the answer depends on."
+    ],
+    "model": "A good answer is visibly unbalanced, and correctly so: the element the facts put in issue takes half the space and the other three are disposed of properly but briefly. On the contested element it states the opposing argument at its strongest — not a straw version — and then explains what defeats it. It closes by naming the fact on which the result turns, so a reader knows exactly how fragile the conclusion is.",
+    "source": "Method. The elements are those set out in the negligence lesson.",
+    "lastVerified": "2026-09-09",
+    "verify": "Highlight the contested element in your answer. If it is under a third of the words, you have written a summary rather than an argument."
+  },
+  {
+    "id": "w-statutory-argument",
+    "moduleId": "m14-statutory-interpretation",
+    "lessonId": "l-interpretation",
+    "level": "advanced",
+    "kind": "argument",
+    "title": "Argue a section two ways",
+    "minutes": 40,
+    "brief": "Take one section of a statute the course has already used. Write the strongest argument that it means X, and then the strongest argument that it means not-X. Equal length. Then say which you think is right and why.",
+    "audience": "A judge who has both parties in front of them.",
+    "before": [
+      "The interpretation lesson, and the lesson on aids to construction.",
+      "The actual words of the section, in front of you, from the statute itself."
+    ],
+    "scaffold": [
+      {
+        "step": "Copy out the words",
+        "prompt": "Write out the operative words of the section by hand. Underline every word that could carry the result.",
+        "why": "Arguments about statutes are won on particular words. You cannot argue about words you have not looked at closely."
+      },
+      {
+        "step": "Build side X",
+        "prompt": "Ordinary meaning first, then structure — what the surrounding sections imply — then purpose. Use aids in that order.",
+        "why": "The order is the discipline. An argument that reaches for purpose before it has dealt with the words is skipping the strongest ground."
+      },
+      {
+        "step": "Build side not-X",
+        "prompt": "Same order, same length. Make it genuinely strong. If you cannot, you have misunderstood one side.",
+        "why": "You do not know what a provision means until you know the best case against your reading."
+      },
+      {
+        "step": "Decide",
+        "prompt": "Say which is right, and name the specific thing that tips it — a word, a structural point, a consequence.",
+        "why": "'On balance' with no named tipping point is a refusal to decide dressed as judgement."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The words",
+        "does": "The operative text and the words in dispute",
+        "length": "short"
+      },
+      {
+        "part": "Case for X",
+        "does": "Ordinary meaning, then structure, then purpose",
+        "length": "a third"
+      },
+      {
+        "part": "Case for not-X",
+        "does": "Same, equally strong",
+        "length": "a third"
+      },
+      {
+        "part": "Resolution",
+        "does": "Which wins, and the one thing that decides it",
+        "length": "a third"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "One side is a straw argument, or the two sides are different lengths by more than half."
+      },
+      {
+        "band": "Close",
+        "test": "Both sides are fair, but the resolution appeals to 'balance' without naming what tips it."
+      },
+      {
+        "band": "There",
+        "test": "Both sides are genuinely arguable, and the resolution identifies a specific word, structural feature or consequence that decides it."
+      }
+    ],
+    "faults": [
+      "Starting with what the section is 'obviously for'. Purpose is an aid, not a shortcut past the words.",
+      "Treating a dictionary as decisive. It tells you the range of ordinary meanings, not which one a statute uses.",
+      "Arguing from what the law should be. That is a different exercise and it belongs in the essay."
+    ],
+    "model": "A good answer treats both readings as if it were paid to advance each. It works words, then structure, then purpose, in that order on both sides, so the two arguments are comparable. The resolution does not average the two — it identifies the specific feature that one reading explains and the other does not, and rests on that. Naming the tipping point is the whole skill; everything before it is preparation.",
+    "source": "Method. The order of aids follows the statutory interpretation lessons.",
+    "lastVerified": "2026-09-09",
+    "verify": "Cover your resolution and give both arguments to someone else. If they cannot tell which side you actually hold, the two sides are properly balanced."
+  },
+  {
+    "id": "w-llb-essay",
+    "moduleId": "m08-property",
+    "lessonId": "l-torrens",
+    "level": "llb",
+    "kind": "essay",
+    "title": "An essay that takes a position",
+    "minutes": 90,
+    "brief": "Fifteen hundred words. Take a contested question from land law that the course has raised and argue a position on it. Not a survey of views — a position, defended, with the strongest objection answered.",
+    "audience": "A marker who has read the same survey essay thirty times and will reward an argument.",
+    "before": [
+      "The Torrens lesson and its case reading. You need to have read at least one judgment in full.",
+      "Decide your position before you start writing. An essay that discovers its position in the last paragraph reads exactly like one."
+    ],
+    "scaffold": [
+      {
+        "step": "Write the thesis as one sentence",
+        "prompt": "One sentence, arguable, that someone competent could disagree with. Put it at the top of your page and keep it visible.",
+        "why": "If nobody could disagree, it is a description and not a thesis. The visible sentence is what stops the essay drifting."
+      },
+      {
+        "step": "Map the ground you must cover",
+        "prompt": "List the three or four things a reader must accept for your thesis to hold. Those are your sections.",
+        "why": "This builds a structure out of the argument rather than out of the topic — which is why survey essays feel shapeless."
+      },
+      {
+        "step": "Write the objection first",
+        "prompt": "Before drafting your own case, write the strongest argument against your thesis in full.",
+        "why": "Written last, the objection is always weak. Written first, it shapes the essay honestly and often changes the thesis."
+      },
+      {
+        "step": "Draft the case",
+        "prompt": "Now make your argument, section by section, answering the objection where it bites rather than in a separate paragraph at the end.",
+        "why": "An objection quarantined in one paragraph has been acknowledged, not answered."
+      },
+      {
+        "step": "Cut a fifth",
+        "prompt": "Remove three hundred words. Take them from description of what the law is, not from argument about what follows.",
+        "why": "At this level, description is what a marker assumes you know. Argument is what is being assessed."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Thesis",
+        "does": "States the position in one arguable sentence",
+        "length": "opening paragraph"
+      },
+      {
+        "part": "Ground",
+        "does": "The minimum law the argument needs, no more",
+        "length": "a fifth"
+      },
+      {
+        "part": "Argument",
+        "does": "Each claim the thesis rests on, in turn",
+        "length": "half"
+      },
+      {
+        "part": "Objection answered",
+        "does": "The best case against, met on its merits",
+        "length": "a fifth"
+      },
+      {
+        "part": "Close",
+        "does": "What follows if the thesis holds",
+        "length": "a paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "The essay surveys positions without adopting one, or the thesis appears only in the conclusion."
+      },
+      {
+        "band": "Close",
+        "test": "A clear thesis, but the objection is answered in a single closing paragraph rather than where it bites."
+      },
+      {
+        "band": "There",
+        "test": "A stated thesis, argued in sections that follow from it, with the strongest objection met on its merits and the essay changed by having met it."
+      }
+    ],
+    "faults": [
+      "Describing the law for a thousand words and arguing for five hundred. At this level the balance is the assessment.",
+      "An objection chosen because it is easy to answer. The marker knows what the strong objection is.",
+      "Citing more authority to make an argument look stronger. One case that does the work beats five that gesture."
+    ],
+    "model": "A good essay is an argument with law in it, not a description with an opinion at the end. Its sections come from the claims the thesis needs rather than from the topic's conventional divisions. It states the strongest counter-argument in a form its proponent would accept, and answers it at the point where it bites. Crucially, it shows signs of having been changed by that counter-argument — a qualification, a narrower claim, a concession — because an essay that meets a real objection and emerges untouched has not really met it.",
+    "source": "Method. The doctrinal ground is the Torrens lesson and its case reading.",
+    "lastVerified": "2026-09-09",
+    "verify": "Show your thesis sentence to someone and ask them to argue against it. If they cannot, it is not a thesis."
+  },
+  {
+    "id": "w-llb-advice",
+    "moduleId": "m09-company",
+    "lessonId": "l-members-remedies",
+    "level": "llb",
+    "kind": "advice",
+    "title": "A letter of advice, with the bad news in it",
+    "minutes": 75,
+    "brief": "A client has come to you about their position in a company. Write them a letter of advice: what their position is, what they can do, what each option costs and risks, and what you recommend. Eight hundred words. They are not a lawyer.",
+    "audience": "A real client who will make a decision based on this and cannot afford a wrong one.",
+    "before": [
+      "The members' remedies lesson.",
+      "Decide what you would actually advise before you start. A letter that is still deciding is a letter that hedges."
+    ],
+    "scaffold": [
+      {
+        "step": "Answer the question first",
+        "prompt": "First paragraph: what you advise. Not the background, not the law. The answer.",
+        "why": "A client who must read nine hundred words before finding out where they stand is being served by the writer's convenience, not their own."
+      },
+      {
+        "step": "Set out the position",
+        "prompt": "What their legal position is, in plain words. Where a legal term is unavoidable, define it in the same sentence.",
+        "why": "This is the plain-explanation exercise again, under pressure and at length."
+      },
+      {
+        "step": "Lay out the options",
+        "prompt": "Each realistic option, with what it costs, how long it takes, and what can go wrong. Include doing nothing.",
+        "why": "Doing nothing is always an option and is sometimes the right one. An advice letter that omits it has narrowed the client's choice without telling them."
+      },
+      {
+        "step": "State the risks plainly",
+        "prompt": "Say what could go wrong, in the same plain words as the rest. Do not soften it and do not bury it in the middle.",
+        "why": "Bad news moved to the middle and written in longer words is bad news the client will miss, and they will not thank you later."
+      },
+      {
+        "step": "Recommend, and say what would change it",
+        "prompt": "Recommend one course. Then name the fact that, if different, would change your recommendation.",
+        "why": "It tells the client what to come back to you about, which is the most useful sentence in the letter."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The answer",
+        "does": "What you advise, up front",
+        "length": "one paragraph"
+      },
+      {
+        "part": "Your position",
+        "does": "The legal position in plain words",
+        "length": "a quarter"
+      },
+      {
+        "part": "Options",
+        "does": "Each one, with cost, time and risk — including doing nothing",
+        "length": "a third"
+      },
+      {
+        "part": "Risks",
+        "does": "What can go wrong, stated plainly",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Recommendation",
+        "does": "One course, and what would change it",
+        "length": "a paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "The advice appears at the end, or legal terms are used without definition, or no option is recommended."
+      },
+      {
+        "band": "Close",
+        "test": "Clear and well organised, but the risks are softened or the 'do nothing' option is missing."
+      },
+      {
+        "band": "There",
+        "test": "The client learns where they stand in the first paragraph, understands every word, sees every real option with its cost, and knows what would change the advice."
+      }
+    ],
+    "faults": [
+      "Hedging so heavily that no advice is given. A client who wanted a list of possibilities did not need a lawyer.",
+      "Writing to protect yourself rather than to inform them. It is visible, and it is the thing clients most resent.",
+      "Assuming the client will ask if they do not understand. Most will not."
+    ],
+    "model": "A good letter answers in its first paragraph and spends the rest earning that answer. Every legal term is glossed where it appears. The options are real ones, costed and timed, and include doing nothing. The bad news is in plain words and in a prominent place. The recommendation is singular and the letter names the fact that would change it — which is both honest and the sentence that tells the client when to come back.",
+    "source": "Method. The doctrinal ground is the members' remedies lesson.",
+    "lastVerified": "2026-09-09",
+    "verify": "Read only your first paragraph. Does the client now know what you advise? If not, rewrite it before touching anything else."
+  },
+  {
+    "id": "w-llb-submission",
+    "moduleId": "m12-administrative",
+    "lessonId": "l-judicial-review",
+    "level": "llb",
+    "kind": "argument",
+    "title": "Written submissions on a review ground",
+    "minutes": 90,
+    "brief": "Write submissions for an applicant seeking judicial review, on one ground. Twelve hundred words. You are writing for a judge who will read this before hearing anyone speak.",
+    "audience": "A judge with a full list, reading this cold, who will decide whether you have an arguable case.",
+    "before": [
+      "The judicial review lesson, and the natural justice lesson.",
+      "Pick one ground and commit to it. Submissions that run three grounds badly lose to submissions that run one well."
+    ],
+    "scaffold": [
+      {
+        "step": "State the relief sought",
+        "prompt": "Open with exactly what you want the court to do. Not what you say — what order you seek.",
+        "why": "A judge reads to find out what is being asked for. Making them hunt for it is the first thing that costs you."
+      },
+      {
+        "step": "State the ground in one sentence",
+        "prompt": "Name the ground and the decision it attacks, in a sentence.",
+        "why": "If it takes a paragraph, you have not decided what your case is."
+      },
+      {
+        "step": "Set out the law, minimally",
+        "prompt": "The smallest statement of law your argument needs. Resist the survey.",
+        "why": "The judge knows the law better than you do. What they do not know is your case."
+      },
+      {
+        "step": "Apply it to the decision under challenge",
+        "prompt": "Point to the specific thing the decision-maker did or failed to do, and tie it to the ground.",
+        "why": "Judicial review is about the decision-making, not the decision's merits. Vague submissions slide into arguing the merits and lose."
+      },
+      {
+        "step": "Meet the answer",
+        "prompt": "State the respondent's best answer and deal with it.",
+        "why": "The judge will think of it. Better that they read your answer to it than form their own."
+      },
+      {
+        "step": "Close on relief",
+        "prompt": "Return to the order sought and say why it is the appropriate remedy.",
+        "why": "Remedy is discretionary. An applicant who never addresses it invites a court to find the ground made out and refuse relief anyway."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Relief sought",
+        "does": "The order asked for, exactly",
+        "length": "opening"
+      },
+      {
+        "part": "The ground",
+        "does": "Named, in a sentence",
+        "length": "one sentence"
+      },
+      {
+        "part": "Law",
+        "does": "The minimum needed",
+        "length": "a fifth"
+      },
+      {
+        "part": "Application",
+        "does": "What the decision-maker did, tied to the ground",
+        "length": "half"
+      },
+      {
+        "part": "The answer met",
+        "does": "Respondent's best point, dealt with",
+        "length": "a fifth"
+      },
+      {
+        "part": "Relief",
+        "does": "Why this remedy",
+        "length": "a paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "The submissions argue that the decision was wrong on its merits rather than that the decision-making was flawed."
+      },
+      {
+        "band": "Close",
+        "test": "The ground is properly run, but relief is never addressed as a separate question."
+      },
+      {
+        "band": "There",
+        "test": "One ground, tied to identified conduct of the decision-maker, the respondent's best answer met, and relief argued as its own question."
+      }
+    ],
+    "faults": [
+      "Running every ground you can think of. It reads as having no confidence in any of them.",
+      "Reciting the law of judicial review at length. The judge applies it weekly.",
+      "Forgetting that relief is discretionary, and so writing as though establishing the ground ends the matter."
+    ],
+    "model": "Good submissions tell the judge in the first lines what order is sought and on what ground, then spend their length on the only thing the judge does not already know: what this decision-maker actually did, and why that engages the ground. They state the law thinly and the facts thickly. They put the respondent's best answer in the applicant's own document and deal with it there. And they treat relief as a separate question requiring its own argument, because a court that finds a ground made out may still refuse the remedy.",
+    "source": "Method. The doctrinal ground is the judicial review and natural justice lessons.",
+    "lastVerified": "2026-09-09",
+    "verify": "Read the first three lines. Do they say what order is sought and on what ground? If not, nothing after them will rescue it."
+  },
+  {
+    "id": "w-llb-exam-problem",
+    "moduleId": "m10-evidence",
+    "lessonId": "l-burden",
+    "level": "llb",
+    "kind": "problem-answer",
+    "title": "An exam-length problem, under a clock",
+    "minutes": 60,
+    "brief": "One problem, forty-five minutes of writing, no notes. Then fifteen minutes marking your own answer against the rubric before you look at anything else.",
+    "audience": "An examiner, and then yourself as a harsher one.",
+    "before": [
+      "Everything in the evidence module. This is a closed-book exercise and the preparation is the point.",
+      "Set an actual timer. An exam answer written in ninety comfortable minutes teaches you nothing about writing one in forty-five."
+    ],
+    "scaffold": [
+      {
+        "step": "Five minutes: plan",
+        "prompt": "Do not write prose yet. List the issues in the order you will take them and mark which one is the real fight.",
+        "why": "Five minutes of planning buys more marks than five minutes of extra writing, and it is the first thing abandoned under pressure."
+      },
+      {
+        "step": "Thirty-five minutes: write",
+        "prompt": "Write continuously. If you get stuck on an issue, write your best view and move on.",
+        "why": "An unfinished answer loses more than a weak paragraph does. Finishing is a skill and it is trained here."
+      },
+      {
+        "step": "Five minutes: close",
+        "prompt": "Make sure every issue you listed has a conclusion, even a short one.",
+        "why": "The commonest way to lose marks under time is to run out before concluding on issues you had already analysed."
+      },
+      {
+        "step": "Fifteen minutes: mark yourself",
+        "prompt": "Against the rubric, honestly. Write one line on what you would do differently before you look at any answer or note.",
+        "why": "Self-marking before comparison is what makes the comparison useful. Marking after reading a model measures your memory, not your judgement."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Plan",
+        "does": "Issues in order, the real fight marked",
+        "length": "not submitted"
+      },
+      {
+        "part": "Answer",
+        "does": "Each issue analysed and concluded",
+        "length": "45 minutes of writing"
+      },
+      {
+        "part": "Self-mark",
+        "does": "Rubric applied to your own work, before comparison",
+        "length": "15 minutes"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "The answer stops before the last issue, or issues are raised and never concluded."
+      },
+      {
+        "band": "Close",
+        "test": "Complete, but time was spread evenly rather than concentrated on the issue in dispute."
+      },
+      {
+        "band": "There",
+        "test": "Every issue concluded, the contested one given the most space, and the self-mark identifies a specific fault rather than a general one."
+      }
+    ],
+    "faults": [
+      "Writing an introduction. In a timed problem it earns nothing and costs three minutes.",
+      "Perfecting the first issue and abandoning the last. Marks are spread across issues, not concentrated in the first.",
+      "A self-mark that says 'could be better'. Name the fault or the exercise did nothing."
+    ],
+    "model": "A good answer under time looks different from a good answer without it, and knowing the difference is the skill. It has no introduction. It reaches the contested issue early and spends its length there. Every issue raised is concluded, some in a single sentence. The self-mark afterwards names one specific, repeatable fault — not a mood — because the point of the fifteen minutes is to produce something you can act on next time.",
+    "source": "Method. The doctrinal ground is the evidence module; the timing follows the exam technique lesson.",
+    "lastVerified": "2026-09-09",
+    "verify": "Compare your self-mark with how you feel about the answer a day later. If they disagree, trust the rubric."
+  }
+]

@@ -3,19 +3,16 @@
   "generated": "2026-09-07",
   "jurisdiction": "MY",
   "note": "Reading list for the self-study law curriculum. Each book carries a `verified` field: 'confirmed' means edition/publisher details were checked against a publisher or bookseller listing; 'unconfirmed' means the title is right but the current edition was NOT checked — verify before purchase. Malaysian legal textbooks go stale fast; always pair a textbook with the current statute text from AGC.",
-
   "verificationLevels": {
     "confirmed": "Edition, publisher and/or ISBN checked against a publisher or specialist bookseller listing.",
     "unconfirmed": "Title and author believed correct; current edition NOT verified. Check before buying."
   },
-
   "roles": {
     "primary": "Main text for the module. Read cover to cover.",
     "reference": "Consult for specific points. Do not read linearly.",
     "method": "Teaches how to study/read/reason, not doctrine.",
     "context": "Background or general-reader material."
   },
-
   "books": [
     {
       "id": "williams-learning-the-law",
@@ -26,7 +23,11 @@
       "publisher": "Sweet & Maxwell",
       "role": "method",
       "tier": 0,
-      "modules": ["m00-foundations", "m02-legal-research", "m13-legal-reasoning"],
+      "modules": [
+        "m00-foundations",
+        "m02-legal-research",
+        "m13-legal-reasoning"
+      ],
       "jurisdictionFocus": "England & Wales",
       "verified": "confirmed",
       "studentEdition": false,
@@ -41,7 +42,9 @@
       "publisher": "Pearson",
       "role": "method",
       "tier": 0,
-      "modules": ["m00-foundations"],
+      "modules": [
+        "m00-foundations"
+      ],
       "jurisdictionFocus": "England & Wales",
       "verified": "unconfirmed",
       "notes": "Informal guide to reading, arguing and structuring legal answers. Good motivational entry point.",
@@ -55,7 +58,10 @@
       "publisher": "Carolina Academic Press",
       "role": "method",
       "tier": 0,
-      "modules": ["m00-foundations", "m02-legal-research"],
+      "modules": [
+        "m00-foundations",
+        "m02-legal-research"
+      ],
       "jurisdictionFocus": "US (skill-transferable)",
       "verified": "unconfirmed",
       "notes": "Directly addresses the novice/expert legal reading gap identified in the research (Deegan; Christensen). Read early and re-read.",
@@ -69,7 +75,10 @@
       "publisher": "Harvard University Press",
       "role": "method",
       "tier": 0,
-      "modules": ["m13-legal-reasoning", "m14-statutory-interpretation"],
+      "modules": [
+        "m13-legal-reasoning",
+        "m14-statutory-interpretation"
+      ],
       "jurisdictionFocus": "General common law",
       "verified": "unconfirmed",
       "notes": "Precedent, analogy, authority, rules. Read AFTER briefing several cases, not before.",
@@ -83,7 +92,10 @@
       "publisher": "Penguin",
       "role": "context",
       "tier": 0,
-      "modules": ["m00-foundations", "m03-constitutional"],
+      "modules": [
+        "m00-foundations",
+        "m03-constitutional"
+      ],
       "jurisdictionFocus": "England & Wales",
       "verified": "unconfirmed",
       "notes": "Short, plain-language entry into public law thinking. Cheap.",
@@ -97,13 +109,14 @@
       "publisher": "Harvard University Press",
       "role": "method",
       "tier": 0,
-      "modules": ["m-study-method"],
+      "modules": [
+        "m-study-method"
+      ],
       "jurisdictionFocus": null,
       "verified": "unconfirmed",
       "notes": "Retrieval practice and spacing evidence in readable form. Read before building any flashcards.",
       "priority": 4
     },
-
     {
       "id": "ashgar-malaysian-legal-system",
       "title": "Malaysian Legal System",
@@ -113,7 +126,9 @@
       "publisher": "CLJ Publication",
       "role": "primary",
       "tier": 1,
-      "modules": ["m01-malaysian-legal-system"],
+      "modules": [
+        "m01-malaysian-legal-system"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "notes": "36 chapters, multi-author, incorporating recent updates on the Malaysian legal system. More current than Wu Min Aun.",
@@ -129,7 +144,9 @@
       "isbn": "9789837436565",
       "role": "reference",
       "tier": 1,
-      "modules": ["m01-malaysian-legal-system"],
+      "modules": [
+        "m01-malaysian-legal-system"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "staleness": "high",
@@ -144,13 +161,14 @@
       "publisher": "Oxford Fajar",
       "role": "primary",
       "tier": 1,
-      "modules": ["m01-malaysian-legal-system"],
+      "modules": [
+        "m01-malaysian-legal-system"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "unconfirmed",
       "notes": "Gentler entry point than Wu or Ashgar. Verify current edition.",
       "priority": 13
     },
-
     {
       "id": "faruqi-our-constitution",
       "title": "Our Constitution",
@@ -163,7 +181,9 @@
       "priceMYR": 50,
       "role": "primary",
       "tier": 3,
-      "modules": ["m03-constitutional"],
+      "modules": [
+        "m03-constitutional"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "notes": "9 parts, 36 chapters: characteristics of the Federal Constitution, separation of powers, fundamental liberties, citizenship, Conference of Rulers, Yang di-Pertuan Agong, ministerial responsibility, making of laws, judiciary, electoral process, powers to combat subversion. Written for the general reader — ideal starting point.",
@@ -177,13 +197,14 @@
       "publisher": "Star Publications / Thomson Reuters",
       "role": "reference",
       "tier": 3,
-      "modules": ["m03-constitutional"],
+      "modules": [
+        "m03-constitutional"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "unconfirmed",
       "notes": "The deep treatment. Buy after Our Constitution. Author was reported to be updating this — check for a newer edition.",
       "priority": 20
     },
-
     {
       "id": "yeo-morgan-chan-criminal-law",
       "title": "Criminal Law in Malaysia and Singapore",
@@ -192,13 +213,14 @@
       "publisher": "LexisNexis",
       "role": "primary",
       "tier": 4,
-      "modules": ["m04-criminal-law"],
+      "modules": [
+        "m04-criminal-law"
+      ],
       "jurisdictionFocus": "MY/SG",
       "verified": "unconfirmed",
       "notes": "Leading academic treatment of the Penal Code. VERIFY CURRENT EDITION — must post-date the Abolition of Mandatory Death Penalty Act 2023.",
       "priority": 14
     },
-
     {
       "id": "janab-criminal-procedure",
       "title": "Janab's Key to Criminal Procedure",
@@ -212,14 +234,15 @@
       "pages": 832,
       "role": "primary",
       "tier": 5,
-      "modules": ["m05-criminal-procedure"],
+      "modules": [
+        "m05-criminal-procedure"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "staleness": "medium",
       "notes": "Two parts: criminal procedure in 70 sub-chapters, plus commentary on all 445 CPC sections. Includes MY/SG/India comparison chart. Updated only to Q3 2018 — does NOT include the 2023 death-penalty reforms. Verify all sentencing separately.",
       "priority": 15
     },
-
     {
       "id": "cheong-contract-law-malaysia",
       "title": "Contract Law in Malaysia",
@@ -231,7 +254,9 @@
       "isbn": "9786297700892",
       "role": "primary",
       "tier": 6,
-      "modules": ["m06-contract"],
+      "modules": [
+        "m06-contract"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "studentEdition": true,
@@ -246,13 +271,14 @@
       "publisher": "LexisNexis",
       "role": "reference",
       "tier": 6,
-      "modules": ["m06-contract"],
+      "modules": [
+        "m06-contract"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "notes": "The leading Malaysian contract treatise; first port of call for students, practitioners and judges. Reference work, not a first read. Companion: Contracts Act: A Commentary (2015).",
       "priority": 21
     },
-
     {
       "id": "norchaya-torts",
       "title": "Norchaya Talib on Torts in Malaysia",
@@ -266,14 +292,15 @@
       "format": "Softcover",
       "role": "primary",
       "tier": 7,
-      "modules": ["m07-tort"],
+      "modules": [
+        "m07-tort"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "studentEdition": true,
       "notes": "Negligence, nuisance, trespass, strict liability, defamation. New material: tort of harassment, defence of illegality, exclusion clauses, damages, developments in defamation, extension of vicarious liability. Student Edition available.",
       "priority": 10
     },
-
     {
       "id": "teo-khaw-land-law",
       "title": "Land Law in Malaysia: Cases and Commentary",
@@ -282,7 +309,9 @@
       "publisher": "LexisNexis",
       "role": "primary",
       "tier": 8,
-      "modules": ["m08-property"],
+      "modules": [
+        "m08-property"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "unconfirmed",
       "notes": "VERIFY CURRENT EDITION before buying.",
@@ -296,13 +325,14 @@
       "publisher": "Dewan Bahasa dan Pustaka",
       "role": "reference",
       "tier": 8,
-      "modules": ["m08-property"],
+      "modules": [
+        "m08-property"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "unconfirmed",
       "notes": "VERIFY CURRENT EDITION.",
       "priority": 23
     },
-
     {
       "id": "companies-act-annotation",
       "title": "Companies Act of Malaysia: An Annotation (Desk Edition)",
@@ -312,13 +342,14 @@
       "year": 2024,
       "role": "reference",
       "tier": 9,
-      "modules": ["m09-company"],
+      "modules": [
+        "m09-company"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "unconfirmed",
       "notes": "Seen listed as a current annotation by Malaysian law booksellers; publisher and author details need checking. NOTE: Walter Woon on Company Law is SINGAPORE law — do not substitute it.",
       "priority": 24
     },
-
     {
       "id": "malaysian-law-of-evidence-student",
       "title": "Malaysian Law of Evidence (Student Edition)",
@@ -327,7 +358,9 @@
       "publisher": "Sweet & Maxwell",
       "role": "primary",
       "tier": 10,
-      "modules": ["m10-evidence"],
+      "modules": [
+        "m10-evidence"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "studentEdition": true,
@@ -343,7 +376,9 @@
       "isbn": "9789672187370",
       "role": "primary",
       "tier": 10,
-      "modules": ["m10-evidence"],
+      "modules": [
+        "m10-evidence"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "notes": "Explicitly aimed at undergraduates and CLP candidates. Explains differences between common law and the Malaysian position under the Evidence Act 1950.",
@@ -358,13 +393,14 @@
       "volumes": 3,
       "role": "reference",
       "tier": 10,
-      "modules": ["m10-evidence"],
+      "modules": [
+        "m10-evidence"
+      ],
       "jurisdictionFocus": "MY/India",
       "verified": "confirmed",
       "notes": "Places the Evidence Act 1950 within Sarkar's scheme; Malaysian provisions and commentary follow the corresponding Indian sections. Updated to August 2019. Expensive 3-volume reference — skip unless going deep.",
       "priority": 30
     },
-
     {
       "id": "janab-civil-procedure",
       "title": "Janab's Key to Civil Procedure",
@@ -374,7 +410,9 @@
       "publisher": "Janab (M) Sdn Bhd",
       "role": "primary",
       "tier": 11,
-      "modules": ["m11-civil-procedure"],
+      "modules": [
+        "m11-civil-procedure"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "staleness": "medium",
@@ -389,13 +427,14 @@
       "publisher": "Sweet & Maxwell",
       "role": "reference",
       "tier": 11,
-      "modules": ["m11-civil-procedure"],
+      "modules": [
+        "m11-civil-procedure"
+      ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
       "notes": "The practitioner's authoritative annotation of the Rules of Court 2012. Published annually. Expensive — buy the current year only if budget allows.",
       "priority": 31
     },
-
     {
       "id": "wade-forsyth-admin-law",
       "title": "Administrative Law",
@@ -404,20 +443,24 @@
       "publisher": "Oxford University Press",
       "role": "primary",
       "tier": 12,
-      "modules": ["m12-administrative"],
+      "modules": [
+        "m12-administrative"
+      ],
       "jurisdictionFocus": "England & Wales",
       "verified": "unconfirmed",
       "notes": "INTERIM SUBSTITUTE. No dominant current Malaysian student text on administrative law was found. Use an English text for principles (legality, procedural fairness, natural justice, legitimate expectation, reasonableness, ultra vires) and read Malaysian judicial review judgments directly for the local position. Flagged gap — revisit.",
       "priority": 25
     }
   ],
-
   "statutes": [
     {
       "id": "federal-constitution",
       "title": "Federal Constitution of Malaysia",
       "citation": null,
-      "modules": ["m01-malaysian-legal-system", "m03-constitutional"],
+      "modules": [
+        "m01-malaysian-legal-system",
+        "m03-constitutional"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "Also available as a printed reprint from PNMB/ILBS — worth buying for annotation."
@@ -426,7 +469,9 @@
       "id": "contracts-act-1950",
       "title": "Contracts Act 1950",
       "citation": "Act 136",
-      "modules": ["m06-contract"],
+      "modules": [
+        "m06-contract"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "In pari materia with the Indian Contract Act 1872. Read section by section alongside Cheong."
@@ -435,7 +480,9 @@
       "id": "penal-code",
       "title": "Penal Code",
       "citation": "Act 574",
-      "modules": ["m04-criminal-law"],
+      "modules": [
+        "m04-criminal-law"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "Amended by the Abolition of Mandatory Death Penalty Act 2023 (Act 846), effective 4 July 2023."
@@ -444,7 +491,9 @@
       "id": "criminal-procedure-code",
       "title": "Criminal Procedure Code",
       "citation": "Act 593",
-      "modules": ["m05-criminal-procedure"],
+      "modules": [
+        "m05-criminal-procedure"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "Also amended by Act 846 (2023)."
@@ -453,7 +502,9 @@
       "id": "evidence-act-1950",
       "title": "Evidence Act 1950",
       "citation": "Act 56",
-      "modules": ["m10-evidence"],
+      "modules": [
+        "m10-evidence"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "3 Parts, 11 chapters, 167 sections. Part I Relevancy, Part II Proof, Part III Production and Effect of Evidence."
@@ -462,7 +513,9 @@
       "id": "rules-of-court-2012",
       "title": "Rules of Court 2012",
       "citation": null,
-      "modules": ["m11-civil-procedure"],
+      "modules": [
+        "m11-civil-procedure"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free"
     },
@@ -470,7 +523,9 @@
       "id": "companies-act-2016",
       "title": "Companies Act 2016",
       "citation": "Act 777",
-      "modules": ["m09-company"],
+      "modules": [
+        "m09-company"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free"
     },
@@ -478,7 +533,9 @@
       "id": "national-land-code",
       "title": "National Land Code",
       "citation": "Act 828",
-      "modules": ["m08-property"],
+      "modules": [
+        "m08-property"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "Confirm current Act number after revision."
@@ -487,7 +544,9 @@
       "id": "interpretation-acts",
       "title": "Interpretation Acts 1948 and 1967",
       "citation": "Act 388",
-      "modules": ["m14-statutory-interpretation"],
+      "modules": [
+        "m14-statutory-interpretation"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "Essential for the statutory interpretation module."
@@ -496,7 +555,9 @@
       "id": "civil-law-act-1956",
       "title": "Civil Law Act 1956",
       "citation": "Act 67",
-      "modules": ["m01-malaysian-legal-system"],
+      "modules": [
+        "m01-malaysian-legal-system"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "Governs the reception of English common law and equity into Malaysia."
@@ -505,7 +566,9 @@
       "id": "courts-of-judicature-act-1964",
       "title": "Courts of Judicature Act 1964",
       "citation": "Act 91",
-      "modules": ["m01-malaysian-legal-system"],
+      "modules": [
+        "m01-malaysian-legal-system"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
       "notes": "Superior court jurisdiction. Pair with the Subordinate Courts Act 1948."
@@ -514,39 +577,333 @@
       "id": "subordinate-courts-act-1948",
       "title": "Subordinate Courts Act 1948",
       "citation": "Act 92",
-      "modules": ["m01-malaysian-legal-system"],
+      "modules": [
+        "m01-malaysian-legal-system"
+      ],
       "source": "https://lom.agc.gov.my",
       "cost": "free"
     }
   ],
-
   "modules": [
-    { "id": "m-study-method", "level": null, "title": "How to Study Law", "primary": ["williams-learning-the-law", "make-it-stick"], "reference": ["mckinney-reading-like-a-lawyer"], "statutes": [] },
-    { "id": "m00-foundations", "level": 0, "title": "Legal Foundations", "primary": ["williams-learning-the-law", "mcbride-letters"], "reference": ["bingham-rule-of-law", "mckinney-reading-like-a-lawyer"], "statutes": [] },
-    { "id": "m01-malaysian-legal-system", "level": 1, "title": "The Malaysian Legal System", "primary": ["ashgar-malaysian-legal-system", "wan-arfah-first-look"], "reference": ["wu-malaysian-legal-system"], "statutes": ["federal-constitution", "civil-law-act-1956", "courts-of-judicature-act-1964", "subordinate-courts-act-1948"] },
-    { "id": "m02-legal-research", "level": 2, "title": "Legal Research", "primary": ["williams-learning-the-law"], "reference": ["mckinney-reading-like-a-lawyer"], "statutes": [] },
-    { "id": "m03-constitutional", "level": 3, "title": "Constitutional Law", "primary": ["faruqi-our-constitution"], "reference": ["faruqi-document-of-destiny", "bingham-rule-of-law"], "statutes": ["federal-constitution"] },
-    { "id": "m04-criminal-law", "level": 4, "title": "Criminal Law", "primary": ["yeo-morgan-chan-criminal-law"], "reference": [], "statutes": ["penal-code"] },
-    { "id": "m05-criminal-procedure", "level": 5, "title": "Criminal Procedure", "primary": ["janab-criminal-procedure"], "reference": [], "statutes": ["criminal-procedure-code"] },
-    { "id": "m06-contract", "level": 6, "title": "Contract Law", "primary": ["cheong-contract-law-malaysia"], "reference": ["sinnadurai-law-of-contract"], "statutes": ["contracts-act-1950"] },
-    { "id": "m07-tort", "level": 7, "title": "Tort Law", "primary": ["norchaya-torts"], "reference": [], "statutes": [] },
-    { "id": "m08-property", "level": 8, "title": "Property Law", "primary": ["teo-khaw-land-law"], "reference": ["salleh-buang-torrens"], "statutes": ["national-land-code"] },
-    { "id": "m09-company", "level": 9, "title": "Company & Commercial Law", "primary": [], "reference": ["companies-act-annotation"], "statutes": ["companies-act-2016"] },
-    { "id": "m10-evidence", "level": 10, "title": "Evidence", "primary": ["malaysian-law-of-evidence-student", "mazlina-law-of-evidence"], "reference": ["sarkar-evidence-malaysia"], "statutes": ["evidence-act-1950"] },
-    { "id": "m11-civil-procedure", "level": 11, "title": "Civil Procedure", "primary": ["janab-civil-procedure"], "reference": ["malaysian-civil-procedure-white-book"], "statutes": ["rules-of-court-2012"] },
-    { "id": "m12-administrative", "level": 12, "title": "Administrative Law", "primary": ["wade-forsyth-admin-law"], "reference": [], "statutes": [], "gap": "No current Malaysian student text identified. Read Malaysian judicial review judgments directly." },
-    { "id": "m13-legal-reasoning", "level": 13, "title": "Advanced Legal Reasoning", "primary": ["schauer-thinking-like-a-lawyer"], "reference": ["williams-learning-the-law"], "statutes": [] },
-    { "id": "m14-statutory-interpretation", "level": 14, "title": "Statutory Interpretation", "primary": ["schauer-thinking-like-a-lawyer"], "reference": [], "statutes": ["interpretation-acts"] }
+    {
+      "id": "m-study-method",
+      "level": null,
+      "title": "How to Study Law",
+      "primary": [
+        "williams-learning-the-law",
+        "make-it-stick"
+      ],
+      "reference": [
+        "mckinney-reading-like-a-lawyer"
+      ],
+      "statutes": []
+    },
+    {
+      "id": "m00-foundations",
+      "level": 0,
+      "title": "Legal Foundations",
+      "primary": [
+        "williams-learning-the-law",
+        "mcbride-letters"
+      ],
+      "reference": [
+        "bingham-rule-of-law",
+        "mckinney-reading-like-a-lawyer"
+      ],
+      "statutes": []
+    },
+    {
+      "id": "m01-malaysian-legal-system",
+      "level": 1,
+      "title": "The Malaysian Legal System",
+      "primary": [
+        "ashgar-malaysian-legal-system",
+        "wan-arfah-first-look"
+      ],
+      "reference": [
+        "wu-malaysian-legal-system"
+      ],
+      "statutes": [
+        "federal-constitution",
+        "civil-law-act-1956",
+        "courts-of-judicature-act-1964",
+        "subordinate-courts-act-1948"
+      ]
+    },
+    {
+      "id": "m02-legal-research",
+      "level": 2,
+      "title": "Legal Research",
+      "primary": [
+        "williams-learning-the-law"
+      ],
+      "reference": [
+        "mckinney-reading-like-a-lawyer"
+      ],
+      "statutes": []
+    },
+    {
+      "id": "m03-constitutional",
+      "level": 3,
+      "title": "Constitutional Law",
+      "primary": [
+        "faruqi-our-constitution"
+      ],
+      "reference": [
+        "faruqi-document-of-destiny",
+        "bingham-rule-of-law"
+      ],
+      "statutes": [
+        "federal-constitution"
+      ]
+    },
+    {
+      "id": "m04-criminal-law",
+      "level": 4,
+      "title": "Criminal Law",
+      "primary": [
+        "yeo-morgan-chan-criminal-law"
+      ],
+      "reference": [],
+      "statutes": [
+        "penal-code"
+      ]
+    },
+    {
+      "id": "m05-criminal-procedure",
+      "level": 5,
+      "title": "Criminal Procedure",
+      "primary": [
+        "janab-criminal-procedure"
+      ],
+      "reference": [],
+      "statutes": [
+        "criminal-procedure-code"
+      ]
+    },
+    {
+      "id": "m06-contract",
+      "level": 6,
+      "title": "Contract Law",
+      "primary": [
+        "cheong-contract-law-malaysia"
+      ],
+      "reference": [
+        "sinnadurai-law-of-contract"
+      ],
+      "statutes": [
+        "contracts-act-1950"
+      ]
+    },
+    {
+      "id": "m07-tort",
+      "level": 7,
+      "title": "Tort Law",
+      "primary": [
+        "norchaya-torts"
+      ],
+      "reference": [],
+      "statutes": []
+    },
+    {
+      "id": "m08-property",
+      "level": 8,
+      "title": "Property Law",
+      "primary": [
+        "teo-khaw-land-law"
+      ],
+      "reference": [
+        "salleh-buang-torrens"
+      ],
+      "statutes": [
+        "national-land-code"
+      ]
+    },
+    {
+      "id": "m09-company",
+      "level": 9,
+      "title": "Company & Commercial Law",
+      "primary": [],
+      "reference": [
+        "companies-act-annotation"
+      ],
+      "statutes": [
+        "companies-act-2016"
+      ]
+    },
+    {
+      "id": "m10-evidence",
+      "level": 10,
+      "title": "Evidence",
+      "primary": [
+        "malaysian-law-of-evidence-student",
+        "mazlina-law-of-evidence"
+      ],
+      "reference": [
+        "sarkar-evidence-malaysia"
+      ],
+      "statutes": [
+        "evidence-act-1950"
+      ]
+    },
+    {
+      "id": "m11-civil-procedure",
+      "level": 11,
+      "title": "Civil Procedure",
+      "primary": [
+        "janab-civil-procedure"
+      ],
+      "reference": [
+        "malaysian-civil-procedure-white-book"
+      ],
+      "statutes": [
+        "rules-of-court-2012"
+      ]
+    },
+    {
+      "id": "m12-administrative",
+      "level": 12,
+      "title": "Administrative Law",
+      "primary": [
+        "wade-forsyth-admin-law"
+      ],
+      "reference": [],
+      "statutes": [],
+      "gap": "No current Malaysian student text identified. Read Malaysian judicial review judgments directly."
+    },
+    {
+      "id": "m13-legal-reasoning",
+      "level": 13,
+      "title": "Advanced Legal Reasoning",
+      "primary": [
+        "schauer-thinking-like-a-lawyer"
+      ],
+      "reference": [
+        "williams-learning-the-law"
+      ],
+      "statutes": []
+    },
+    {
+      "id": "m14-statutory-interpretation",
+      "level": 14,
+      "title": "Statutory Interpretation",
+      "primary": [
+        "schauer-thinking-like-a-lawyer"
+      ],
+      "reference": [],
+      "statutes": [
+        "interpretation-acts"
+      ]
+    },
+    {
+      "id": "m15-equity-trusts",
+      "level": 15,
+      "title": "Equity and Trusts",
+      "primary": [],
+      "reference": [],
+      "statutes": [
+        "civil-law-act-1956"
+      ]
+    },
+    {
+      "id": "m16-family",
+      "level": 16,
+      "title": "Family Law",
+      "primary": [],
+      "reference": [],
+      "statutes": []
+    },
+    {
+      "id": "m17-syariah",
+      "level": 17,
+      "title": "Syariah Law",
+      "primary": [],
+      "reference": [],
+      "statutes": [
+        "federal-constitution"
+      ]
+    },
+    {
+      "id": "m18-jurisprudence",
+      "level": 18,
+      "title": "Jurisprudence",
+      "primary": [],
+      "reference": [],
+      "statutes": []
+    },
+    {
+      "id": "m19-commercial",
+      "level": 19,
+      "title": "Commercial Law",
+      "primary": [],
+      "reference": [],
+      "statutes": [
+        "contracts-act-1950"
+      ]
+    },
+    {
+      "id": "m20-employment",
+      "level": 20,
+      "title": "Employment Law",
+      "primary": [],
+      "reference": [],
+      "statutes": []
+    },
+    {
+      "id": "m21-international",
+      "level": 21,
+      "title": "Public International Law",
+      "primary": [],
+      "reference": [],
+      "statutes": []
+    },
+    {
+      "id": "m22-ethics",
+      "level": 22,
+      "title": "Professional Practice and Ethics",
+      "primary": [],
+      "reference": [],
+      "statutes": []
+    }
   ],
-
   "vendors": [
-    { "id": "joshua", "name": "Joshua Legal Art Gallery", "url": "https://www.joshualegalartgallery.com", "location": "Kuala Lumpur & Kota Kinabalu", "notes": "Specialist law bookseller. Free shipping in Malaysia and Singapore. Stocks student editions." },
-    { "id": "marsden", "name": "Marsden Law Book", "url": "https://marsdenlawbook.com", "location": "Malaysia", "notes": "Specialist law bookseller. Good for current editions and student editions." },
-    { "id": "kinokuniya-my", "name": "Kinokuniya Malaysia", "url": "https://malaysia.kinokuniya.com", "location": "KLCC", "notes": "General bookstore with a law section." },
-    { "id": "mph", "name": "MPH Online", "url": "https://mphonline.com", "location": "Malaysia", "notes": "Stocks Our Constitution and similar general-reader titles." },
-    { "id": "agc-lom", "name": "AGC — Laws of Malaysia portal", "url": "https://lom.agc.gov.my", "location": "Online", "cost": "free", "notes": "All federal statutes as PDF. The only official publication of the laws of Malaysia, but a print-out is NOT a copy of the Gazette and does not constitute prima facie evidence." }
+    {
+      "id": "joshua",
+      "name": "Joshua Legal Art Gallery",
+      "url": "https://www.joshualegalartgallery.com",
+      "location": "Kuala Lumpur & Kota Kinabalu",
+      "notes": "Specialist law bookseller. Free shipping in Malaysia and Singapore. Stocks student editions."
+    },
+    {
+      "id": "marsden",
+      "name": "Marsden Law Book",
+      "url": "https://marsdenlawbook.com",
+      "location": "Malaysia",
+      "notes": "Specialist law bookseller. Good for current editions and student editions."
+    },
+    {
+      "id": "kinokuniya-my",
+      "name": "Kinokuniya Malaysia",
+      "url": "https://malaysia.kinokuniya.com",
+      "location": "KLCC",
+      "notes": "General bookstore with a law section."
+    },
+    {
+      "id": "mph",
+      "name": "MPH Online",
+      "url": "https://mphonline.com",
+      "location": "Malaysia",
+      "notes": "Stocks Our Constitution and similar general-reader titles."
+    },
+    {
+      "id": "agc-lom",
+      "name": "AGC — Laws of Malaysia portal",
+      "url": "https://lom.agc.gov.my",
+      "location": "Online",
+      "cost": "free",
+      "notes": "All federal statutes as PDF. The only official publication of the laws of Malaysia, but a print-out is NOT a copy of the Gazette and does not constitute prima facie evidence."
+    }
   ],
-
   "purchasingNotes": [
     "Always ask for the STUDENT EDITION — same content, typically far cheaper than the practitioner edition.",
     "Download every statute free from lom.agc.gov.my before buying any textbook.",

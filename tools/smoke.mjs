@@ -46,6 +46,11 @@ const ROUTES = [
   // locked panel, which is the same blind spot the `unlockAll` seed exists for.
   // The bad id is deliberate: a Not-found fallback is a screen too.
   '#/cases', '#/case/x-tan-ying-hong', '#/case/does-not-exist',
+  // The writing tier. `#/writing/:id` has four states and a seeded profile
+  // reaches only one of them; the seed below carries it to the DRAFTED state,
+  // where the rubric, its self-mark buttons and the second textarea exist. The
+  // assertion further down is what stops that silently regressing.
+  '#/writing', '#/writing/w-ratio-sentence',
 ];
 const CHROME_CANDIDATES = [
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -131,7 +136,15 @@ try {
       // seeding one without the other walks the locked branch and reports it as
       // the page. Measured: the geometry gate called that screen "no prose
       // column to measure", which is what a locked panel looks like.
-      store.put({ key: 'lessonsRead', value: { 'l-torrens': new Date().toISOString() } });
+      // Opens the gated tiers. Each exercise names the lesson that unlocks it, so
+      // the map has to contain THAT lesson: `w-ratio-sentence` wants
+      // `l-precedent`, and seeding `l-torrens` alone left the route showing its
+      // locked panel while the walk reported a clean pass over it.
+      const now = new Date().toISOString();
+      store.put({ key: 'lessonsRead', value: { 'l-torrens': now, 'l-precedent': now } });
+      // Past the forty-word gate, so the drafted state is what gets walked.
+      store.put({ key: 'writingDrafts',
+        value: { 'w-ratio-sentence': { text: 'The ratio is the proposition the decision actually needed, and the test is whether the result would change without it. Length and eloquence are not evidence of ratio; necessity is. A long passage may be commentary while one sentence carries the whole decision, so ask what the case could not have decided without.', band: null, note: '' } } });
       t.oncomplete = () => { db.close(); res(); }; t.onerror = () => rej(t.error); };
   }));
   await page.reload({ waitUntil: 'load' });
@@ -197,6 +210,7 @@ try {
             const cls = (el.className || '').toString().trim().split(/\s+/)[0];
             return el.tagName.toLowerCase() + (cls ? `.${cls}` : '');
           }),
+        textareas: document.querySelectorAll('textarea').length,
         h1: (document.querySelector('main h1')?.textContent || '').trim(),
         // A page of computed statistics, rendered against an empty database,
         // is where a missing denominator reaches the reader as "NaN%" or
@@ -229,6 +243,14 @@ try {
     }
     for (const g of state.unnamedGroups || []) {
       failures.push(`${route}  role="group" with no accessible name: ${g}`);
+    }
+    // Prove the walk reached the state the seed was for. A gate that seeds a
+    // staged screen and does not check it arrived will keep passing after the
+    // gating changes, over a screen it is no longer reaching — which is how the
+    // lesson routes went a whole day being "checked" against a locked panel.
+    if (route === '#/writing/w-ratio-sentence' && (state.textareas || 0) < 2) {
+      failures.push(`${route}  reached with ${state.textareas} textarea(s), expected 2 — `
+        + `the draft seed no longer opens the drafted state, so this walk proves nothing`);
     }
 
     const L = state.levels || [];

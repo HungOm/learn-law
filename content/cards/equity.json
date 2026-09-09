@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "note": "Equity and Trusts. Deliberately statute-anchored: where a proposition here has no statutory source it is stated as doctrine, without a case citation, pending a verification pass. See docs/STYLE.md, 'Never invent a citation'.",
+  "cards": [
+    {
+      "id": "eq-recept-01",
+      "moduleId": "m15-equity-trusts",
+      "type": "source",
+      "front": "Which provision brings English equity into Malaysian law?",
+      "back": "Section 3 of the Civil Law Act 1956 — the rules of equity as administered in England at a fixed date, so far as local circumstances permit and subject to local written law.",
+      "tags": ["reception"],
+      "source": "Civil Law Act 1956, s 3"
+    },
+    {
+      "id": "eq-recept-02",
+      "moduleId": "m15-equity-trusts",
+      "type": "structure",
+      "front": "Does English equity decided after the reception date automatically apply in Malaysia?",
+      "back": "No. Section 3 fixes reception at a date. A later English decision may persuade a Malaysian court, but adopting it is that court's choice.",
+      "tags": ["reception"],
+      "source": "Civil Law Act 1956, s 3"
+    },
+    {
+      "id": "eq-recept-03",
+      "moduleId": "m15-equity-trusts",
+      "type": "rule",
+      "front": "What are the two limits written into the reception of equity?",
+      "back": "It applies only so far as local circumstances permit, and it yields to local written law.",
+      "tags": ["reception"],
+      "source": "Civil Law Act 1956, s 3"
+    },
+    {
+      "id": "eq-equity-01",
+      "moduleId": "m15-equity-trusts",
+      "type": "term",
+      "front": "Equity acts *in personam*. What does that mean in practice?",
+      "back": "It works on the conscience of a named person and orders them to act. It does not by itself alter a register or bind the world.",
+      "tags": ["equity"],
+      "source": "Standard statement of equity's character."
+    },
+    {
+      "id": "eq-equity-02",
+      "moduleId": "m15-equity-trusts",
+      "type": "rule",
+      "front": "Where a rule of equity and a rule of common law conflict, which prevails?",
+      "back": "Equity. That is the point of having a second system — it exists to correct hard answers the first one gives.",
+      "tags": ["equity"],
+      "source": "Standard statement of the relationship between the two systems."
+    },
+    {
+      "id": "eq-maxim-01",
+      "moduleId": "m15-equity-trusts",
+      "type": "trigger",
+      "front": "A claimant seeking an equitable remedy behaved badly in the same matter. What should you reach for?",
+      "back": "Clean hands. Equity may refuse a claimant whose own conduct in the transaction was improper, however strong the claim looks.",
+      "tags": ["maxims"],
+      "source": "Equitable maxim."
+    },
+    {
+      "id": "eq-maxim-02",
+      "moduleId": "m15-equity-trusts",
+      "type": "trigger",
+      "front": "A claimant sat on an equitable right for many years. What should you reach for?",
+      "back": "Delay. Equity may treat a long-unasserted right as abandoned, and this is an argument about the claimant's conduct rather than the merits.",
+      "tags": ["maxims"],
+      "source": "Equitable maxim."
+    },
+    {
+      "id": "eq-trust-01",
+      "moduleId": "m15-equity-trusts",
+      "type": "term",
+      "front": "What does a trust split in two?",
+      "back": "Ownership. The trustee holds the legal title; the beneficiary is entitled to the benefit. The trustee's duties are owed to, and enforceable by, the beneficiary.",
+      "tags": ["trusts"],
+      "source": "General principle of trusts law."
+    },
+    {
+      "id": "eq-trust-02",
+      "moduleId": "m15-equity-trusts",
+      "type": "structure",
+      "front": "Name the three roles in an express trust.",
+      "back": "The settlor creates it, the trustee holds the property, the beneficiary takes the benefit. One person can occupy more than one role.",
+      "tags": ["trusts"],
+      "source": "General principle of trusts law."
+    },
+    {
+      "id": "eq-cert-01",
+      "moduleId": "m15-equity-trusts",
+      "type": "rule",
+      "front": "What three things must be certain before a court will find an express trust?",
+      "back": "Intention, subject matter, and objects. All three, and each failure has its own consequence.",
+      "tags": ["certainties"],
+      "source": "Standard trusts doctrine."
+    },
+    {
+      "id": "eq-cert-02",
+      "moduleId": "m15-equity-trusts",
+      "type": "rule",
+      "front": "What does certainty of intention actually test?",
+      "back": "Whether a duty was imposed on the holder. If they could honestly keep the property and breach nothing, there is no trust — whatever words were used.",
+      "tags": ["certainties"],
+      "source": "Standard trusts doctrine."
+    },
+    {
+      "id": "eq-cert-03",
+      "moduleId": "m15-equity-trusts",
+      "type": "trigger",
+      "front": "A settlement covers \"some of my shares\". Which certainty is in trouble, and why?",
+      "back": "Subject matter. A court cannot administer property it cannot identify, so no trust arises over an unidentified part of a holding.",
+      "tags": ["certainties"],
+      "source": "Standard trusts doctrine."
+    },
+    {
+      "id": "eq-cert-04",
+      "moduleId": "m15-equity-trusts",
+      "type": "rule",
+      "front": "Why is certainty of objects necessary?",
+      "back": "A trustee's duties are owed to the beneficiaries. Without an identifiable beneficiary there is nobody with standing to enforce them and nothing for a court to supervise.",
+      "tags": ["certainties"],
+      "source": "Standard trusts doctrine."
+    },
+    {
+      "id": "eq-result-01",
+      "moduleId": "m15-equity-trusts",
+      "type": "term",
+      "front": "What is a resulting trust?",
+      "back": "A trust that sends the benefit back to the person who provided the property, where no gift was intended. It arises by operation of law, not by arrangement.",
+      "tags": ["trusts"],
+      "source": "Standard trusts doctrine."
+    },
+    {
+      "id": "eq-constr-01",
+      "moduleId": "m15-equity-trusts",
+      "type": "term",
+      "front": "What is a constructive trust?",
+      "back": "A trust imposed by law on a person whose conscience is affected — for instance someone who takes property knowing it was meant for another. Nobody agrees to it.",
+      "tags": ["trusts"],
+      "source": "Standard trusts doctrine."
+    }
+  ]
+}

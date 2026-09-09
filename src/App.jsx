@@ -20,6 +20,8 @@ import ProblemView from './routes/ProblemView.jsx';
 import Books from './routes/Books.jsx';
 import Cases from './routes/Cases.jsx';
 import CaseView from './routes/CaseView.jsx';
+import Writing from './routes/Writing.jsx';
+import WritingView from './routes/WritingView.jsx';
 import Progress from './routes/Progress.jsx';
 import Seals from './routes/Seals.jsx';
 import Glossary from './routes/Glossary.jsx';
@@ -120,6 +122,8 @@ export default function App() {
                 <Route path="/books"           element={<Page><Books /></Page>} />
                 <Route path="/cases"           element={<Page><Cases /></Page>} />
                 <Route path="/case/:id"        element={<Page><CaseView /></Page>} />
+                <Route path="/writing"         element={<Page><Writing /></Page>} />
+                <Route path="/writing/:id"     element={<Page><WritingView /></Page>} />
                 <Route path="/progress"        element={<Page><Progress /></Page>} />
                 <Route path="/seals"           element={<Page><Seals /></Page>} />
                 <Route path="/glossary"        element={<Page><Glossary /></Page>} />

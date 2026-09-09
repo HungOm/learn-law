@@ -19,7 +19,14 @@
 // false and the thing most likely to stop them coming back. The lock says what
 // opens it, always, and it is one lesson away.
 
-import extracts from '../../content/extracts/core.json';
+// Every file in content/extracts/, not just core.json: the tier is written in
+// batches by more than one session, and check-extracts.py already globs the
+// directory, so a new file gates itself the moment it lands. Eager, because the
+// index needs all of them to paint. Sorted by path so the order a batch was
+// written in survives — a batch is often a sequence to be read in order.
+const modules = import.meta.glob('../../content/extracts/*.json', { eager: true });
+const extracts = Object.keys(modules).sort()
+  .flatMap((path) => modules[path].default ?? modules[path]);
 
 export function all() {
   return extracts;
