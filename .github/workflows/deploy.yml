@@ -38,6 +38,24 @@ jobs:
       # or a quoted run long enough to be a reproduction, should fail here.
       - run: python3 tools/check-extracts.py
       - run: npm run build
+      # Pages has two modes and the wrong one wins in silence. While the repo
+      # is on "deploy from a branch", GitHub's own legacy builder publishes the
+      # SOURCE tree — an index.html pointing at /src/main.jsx, which no browser
+      # can execute — and every page of the published site is blank while the
+      # URL still answers 200. This switches the source to Actions with the
+      # token this job already holds, rather than depending on someone visiting
+      # a settings page. Non-fatal: if the token is refused, say so plainly and
+      # let the deploy step report the rest.
+      - name: Put Pages on the Actions source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api -X PUT "repos/${{ github.repository }}/pages" -f build_type=workflow; then
+            echo "Pages source is now GitHub Actions."
+          else
+            echo "::warning::Could not switch the Pages source. Set Settings -> Pages -> Source to 'GitHub Actions' by hand."
+          fi
+
       - uses: actions/configure-pages@v5
         with:
           # Turns Pages on and sets its source to Actions if it is not already,
