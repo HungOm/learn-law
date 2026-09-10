@@ -14,10 +14,10 @@
  * PRECACHE and the per-module chunks stay on runtime caching. That is a change to
  * the plugin's asset filter in vite.config.js, not a change to this file.
  *
- * Placeholders 94fa269534e5 and [
+ * Placeholders 708f6abfa36d and [
   "./",
   "./assets/ibm-plex-sans-var-BD64o3ke.woff2",
-  "./assets/index-CsiUt9Y4.js",
+  "./assets/index-BlbCNNm3.js",
   "./assets/index-DlTqXlIC.css",
   "./assets/spectral-400-Com8ZUEe.woff2",
   "./assets/vendor-zGgu8AmV.js",
@@ -31,11 +31,11 @@
 ] are filled at build time.
  */
 
-const VERSION = '94fa269534e5';
+const VERSION = '708f6abfa36d';
 const PRECACHE = [
   "./",
   "./assets/ibm-plex-sans-var-BD64o3ke.woff2",
-  "./assets/index-CsiUt9Y4.js",
+  "./assets/index-BlbCNNm3.js",
   "./assets/index-DlTqXlIC.css",
   "./assets/spectral-400-Com8ZUEe.woff2",
   "./assets/vendor-zGgu8AmV.js",
