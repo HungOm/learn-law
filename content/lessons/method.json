@@ -254,10 +254,10 @@
           "options": [
             "Re-reading the passage carefully",
             "Highlighting the key sentences",
-            "Copying the notes out",
-            "Trying to recall and failing, then checking"
+            "Trying to recall and failing, then checking",
+            "Copying the notes out"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Trying to recall beats reading again. The failed attempt is doing the work, as long as you then check the answer.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -266,11 +266,11 @@
           "q": "Your revision feels smooth and pleasant. What should you conclude?",
           "options": [
             "It is working well",
-            "You have found your learning style",
             "Be suspicious — smoothness is not memory",
+            "You have found your learning style",
             "You should move on to the next topic"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The second pass is easier than the first, and your brain reads that ease as knowing.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -280,10 +280,10 @@
           "options": [
             "It covers more ground per hour",
             "It is less tiring",
-            "It suits a short attention span",
-            "Mixing them teaches you to tell them apart"
+            "Mixing them teaches you to tell them apart",
+            "It suits a short attention span"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Doing one topic at a time feels better and teaches you less about telling two bodies of rules apart.",
           "source": "Interleaving research, as summarised in Make It Stick"
         },
@@ -291,12 +291,12 @@
           "id": "qhs4",
           "q": "A fact in a case is 'material'. What does that mean?",
           "options": [
-            "The judge repeated it",
             "Changing it might change the outcome",
+            "The judge repeated it",
             "Both sides agreed on it",
             "It is in the headnote"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Ask what would happen if the fact were different. Picking the material facts out is most of the work of a brief.",
           "source": "Standard case-briefing method"
         },
@@ -564,12 +564,12 @@
           "id": "qsl1",
           "q": "What makes something public law rather than private law?",
           "options": [
-            "In public law the State is a party in its capacity as the State",
             "Public law is statutory and private law is common law",
             "Public law is criminal and private law is civil",
-            "Public law is decided in superior courts only"
+            "Public law is decided in superior courts only",
+            "In public law the State is a party in its capacity as the State"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "In private law the two sides meet as equals, and the State supplies only the court.",
           "source": "Standard classification"
         },
@@ -578,11 +578,11 @@
           "q": "What are the two standards of proof?",
           "options": [
             "Prima facie; conclusive",
-            "Beyond reasonable doubt; balance of probabilities",
             "Clear and convincing; preponderance",
-            "Certainty; likelihood"
+            "Certainty; likelihood",
+            "Beyond reasonable doubt; balance of probabilities"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Criminal and civil, in that order. The gap between them is what lets one set of facts produce two different outcomes.",
           "source": "Standard classification; Evidence Act 1950 for the civil standard"
         },
@@ -591,11 +591,11 @@
           "q": "Why does being cleared in a criminal case not defeat a civil claim on the same facts?",
           "options": [
             "The parties are different",
+            "The standards of proof are different",
             "The time limits are different",
-            "Civil courts are not bound by criminal findings",
-            "The standards of proof are different"
+            "Civil courts are not bound by criminal findings"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Failing to prove something beyond reasonable doubt is not a finding that it did not happen.",
           "source": "Standard classification; the criminal and civil standards of proof differ"
         },
@@ -604,11 +604,11 @@
           "q": "What is the fact-law split for?",
           "options": [
             "It decides which court can hear the case",
-            "It decides the standard of proof",
             "It decides appeals, precedent, and who does what at a trial",
+            "It decides the standard of proof",
             "It decides who pays the costs"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Fact is what happened. Law is what follows from it. Almost every procedural rule turns on which is which.",
           "source": "Standard classification"
         }
@@ -875,12 +875,12 @@
           "id": "qpr1",
           "q": "State the doctrine of stare decisis.",
           "options": [
-            "A court must follow its own earlier decisions absolutely",
             "A court is bound by decisions of courts above it in the same hierarchy on the same point",
+            "A court must follow its own earlier decisions absolutely",
             "All decisions of all courts bind all others",
             "Precedent binds only where a statute is silent"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Three limits: the same hierarchy, a court above, and the same point of law.",
           "source": "Standard common law doctrine of stare decisis"
         },
@@ -890,10 +890,10 @@
           "options": [
             "It is obiter",
             "It was not argued",
-            "It is too general",
-            "No later case has those facts, so it governs nothing"
+            "No later case has those facts, so it governs nothing",
+            "It is too general"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "A ratio has to be stated broadly enough to settle a different case.",
           "source": "Standard common law method on ratio decidendi"
         },
@@ -902,11 +902,11 @@
           "q": "What is per incuriam?",
           "options": [
             "Decided without reasons",
-            "Decided by a single judge",
             "Decided in ignorance of a statute or binding authority that would have altered the result",
+            "Decided by a single judge",
             "Decided on a concession"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "It is narrow. It is not a licence to ignore a decision you think is badly reasoned.",
           "source": "Standard common law doctrine; the per incuriam exception"
         },
@@ -928,11 +928,11 @@
           "q": "Which of the four ways out will you use most often?",
           "options": [
             "Overruling",
-            "Reversing",
             "Distinguishing",
+            "Reversing",
             "Per incuriam"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "It is the only one open to a court that is bound by the earlier decision.",
           "source": "Standard common law method on precedent"
         }
@@ -1157,12 +1157,12 @@
           "id": "qvc1",
           "q": "Ultra vires means what?",
           "options": [
+            "Beyond the powers conferred, and therefore invalid",
             "Against public policy",
             "Without notice",
-            "Beyond the powers conferred, and therefore invalid",
             "Beyond the time limit for bringing a claim"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "An act outside the authority given by the statute or instrument that grants it.",
           "source": "Standard common law vocabulary; the ultra vires principle"
         },
@@ -1170,12 +1170,12 @@
           "id": "qvc2",
           "q": "Nemo judex in causa sua requires what?",
           "options": [
-            "That a decision-maker have no interest in the outcome",
             "That the other side be heard",
             "That reasons be given",
+            "That a decision-maker have no interest in the outcome",
             "That the decision be published"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "No one a judge in his own cause. Hearing the other side is the other rule, audi alteram partem.",
           "source": "Standard common law vocabulary; the rule against bias"
         },
@@ -1183,12 +1183,12 @@
           "id": "qvc3",
           "q": "Why are actus reus and mens rea less useful in Malaysia than a common law training suggests?",
           "options": [
-            "The Penal Code defines each offence with its own mental element",
             "They are Latin",
             "They apply only to common law offences",
+            "The Penal Code defines each offence with its own mental element",
             "They have been abolished"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "You reason from the section, not from a general theory of the guilty mind.",
           "source": "Penal Code (Act 574); each offence carries its own mental element"
         },
@@ -1196,12 +1196,12 @@
           "id": "qvc4",
           "q": "A public body makes a decision that hits someone, and something was wrong in how it was made. What should that bring to mind?",
           "options": [
-            "Administrative law and judicial review",
             "Contract",
             "Tort",
-            "Criminal law"
+            "Criminal law",
+            "Administrative law and judicial review"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Wiring a shape of facts to a body of law is what makes issue-spotting fast enough to be useful.",
           "source": "Standard issue-spotting method"
         }
@@ -1485,12 +1485,12 @@
           "id": "qct1",
           "q": "What is the civil hierarchy, lowest to highest?",
           "options": [
+            "Magistrates → Sessions → High Court → Court of Appeal → Federal Court",
             "Sessions → Magistrates → High Court → Federal Court → Court of Appeal",
             "Magistrates → High Court → Sessions → Court of Appeal → Federal Court",
-            "Magistrates → Sessions → High Court → Court of Appeal → Federal Court",
             "Magistrates → Sessions → Court of Appeal → High Court → Federal Court"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "The Federal Court is the apex.",
           "source": "Courts of Judicature Act 1964; Subordinate Courts Act 1948"
         },
@@ -1500,10 +1500,10 @@
           "options": [
             "One, with two registries",
             "Two, one superior to the other",
-            "Three, one for each region",
-            "Two, of coordinate jurisdiction — Malaya, and Sabah and Sarawak"
+            "Two, of coordinate jurisdiction — Malaya, and Sabah and Sarawak",
+            "Three, one for each region"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Coordinate means level with each other. Neither binds the other, though decisions are highly persuasive.",
           "source": "Federal Constitution Art 121(1)"
         },
@@ -1511,12 +1511,12 @@
           "id": "qct3",
           "q": "Which statute creates the superior courts?",
           "options": [
-            "The Courts of Judicature Act 1964",
             "The Subordinate Courts Act 1948",
+            "The Courts of Judicature Act 1964",
             "The Federal Constitution alone",
             "The Rules of Court 2012"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "The Subordinate Courts Act 1948 creates the Sessions and Magistrates' Courts.",
           "source": "Courts of Judicature Act 1964"
         },
@@ -1525,11 +1525,11 @@
           "q": "Why should you not memorise the money limits of the Magistrates' and Sessions Courts?",
           "options": [
             "They vary from State to State",
-            "They are not published",
             "They are statutory figures, raised from time to time",
+            "They are not published",
             "They apply only to contract claims"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Cite them only from a current source. A remembered figure is the fastest way to be confidently out of date.",
           "source": "Subordinate Courts Act 1948; the limits are statutory figures, raised from time to time"
         },
@@ -1819,11 +1819,11 @@
           "q": "How does Article 160(2) define 'law'?",
           "options": [
             "Acts of Parliament only",
-            "Written law and subsidiary legislation",
             "Written law, the common law so far as in operation here, and custom having the force of law",
+            "Written law and subsidiary legislation",
             "Statute and judicial decisions"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "That definition is the map of the sources, and custom is the limb people forget.",
           "source": "Federal Constitution Art 160(2)"
         },
@@ -1831,12 +1831,12 @@
           "id": "qso2",
           "q": "Which statement about Parliament in Malaysia is wrong?",
           "options": [
-            "Parliament is sovereign",
             "Parliament has two houses",
             "Parliament may legislate on Federal and Concurrent List matters",
-            "Parliament's legislation is subject to the Constitution"
+            "Parliament's legislation is subject to the Constitution",
+            "Parliament is sovereign"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Supremacy belongs to the Constitution under Article 4(1). The slip is carried over from English texts.",
           "source": "Federal Constitution Art 4(1)"
         },
@@ -1859,10 +1859,10 @@
           "options": [
             "Law made by a State legislature",
             "Law made by the courts",
-            "A draft Bill",
-            "Law made under authority delegated by an Act, valid only within the powers conferred"
+            "Law made under authority delegated by an Act, valid only within the powers conferred",
+            "A draft Bill"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Its validity is always a question about what power the parent Act actually gave.",
           "source": "Interpretation Acts 1948 and 1967; the ultra vires principle for delegated legislation"
         },
@@ -1870,12 +1870,12 @@
           "id": "qso5",
           "q": "What are the two houses of Parliament?",
           "options": [
+            "Dewan Rakyat and Dewan Negara",
             "Dewan Rakyat and Dewan Undangan Negeri",
             "Dewan Negara and Majlis Raja-Raja",
-            "Dewan Rakyat and Dewan Negara",
             "Dewan Rakyat and the Cabinet"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "The elected lower house, and the appointed and State-elected upper house.",
           "source": "Federal Constitution Art 44"
         }
@@ -2114,11 +2114,11 @@
           "q": "Over whom do the Syariah courts have jurisdiction?",
           "options": [
             "Anyone in a dispute involving Islam",
+            "Persons professing the religion of Islam, on List II Item 1 matters",
             "All Malaysians in family matters",
-            "Anyone who consents",
-            "Persons professing the religion of Islam, on List II Item 1 matters"
+            "Anyone who consents"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Both limbs are needed: the right person, and the right subject matter.",
           "source": "Federal Constitution, Ninth Schedule List II Item 1"
         },
@@ -2127,11 +2127,11 @@
           "q": "What is the common misstatement of Art 121(1A)?",
           "options": [
             "'The Syariah courts are subordinate to the High Court'",
-            "'If Islam is involved, the civil court has no jurisdiction'",
             "'Article 121(1A) was repealed'",
-            "'Only the Federal Court may interpret it'"
+            "'Only the Federal Court may interpret it'",
+            "'If Islam is involved, the civil court has no jurisdiction'"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "The clause removes jurisdiction only where the matter was within Syariah jurisdiction in the first place.",
           "source": "Federal Constitution Art 121(1A)"
         },
@@ -2139,12 +2139,12 @@
           "id": "qts3",
           "q": "What did Indira Gandhi decide about Art 121(1A)?",
           "options": [
-            "It does not oust the civil courts' inherent power of judicial review",
             "It gave Syariah courts exclusive family jurisdiction",
             "It repealed Art 12(4)",
-            "It made Syariah decisions appealable to the Federal Court"
+            "It made Syariah decisions appealable to the Federal Court",
+            "It does not oust the civil courts' inherent power of judicial review"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "And that Syariah jurisdiction cannot reach a person who does not profess the religion of Islam.",
           "source": "Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC)"
         },
@@ -2376,12 +2376,12 @@
           "id": "qrs1",
           "q": "What is the correct order of research?",
           "options": [
-            "Statute, then check it is current, then subsidiary legislation, then cases, then note up",
             "Cases first, then statute",
             "Textbook, then statute, then cases",
+            "Statute, then check it is current, then subsidiary legislation, then cases, then note up",
             "Subsidiary legislation, then statute"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Read the section, not a summary of it, and confirm it is in force before you build on it.",
           "source": "Standard research practice"
         },
@@ -2389,12 +2389,12 @@
           "id": "qrs2",
           "q": "Where is the official free text of Malaysian Acts published?",
           "options": [
-            "The Attorney General's Chambers portal",
             "CommonLII",
             "The Malayan Law Journal",
+            "The Attorney General's Chambers portal",
             "The courts' own portal"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "That is the source to use for statute.",
           "source": "Attorney General's Chambers portal, the official free publication of federal statute"
         },
@@ -2403,11 +2403,11 @@
           "q": "What is 'noting up'?",
           "options": [
             "Adding your own notes to a report",
+            "Checking what later courts did with a case, to see if it is still good law",
             "Recording the citation in full",
-            "Summarising the ratio",
-            "Checking what later courts did with a case, to see if it is still good law"
+            "Summarising the ratio"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "It is also the step free Malaysian sources cannot complete for you.",
           "source": "Standard research practice"
         },
@@ -2416,11 +2416,11 @@
           "q": "A free portal shows no overruling of a case. What does that establish?",
           "options": [
             "That the case is good law",
+            "Nothing — the portal does not track what later courts did",
             "That no appeal was brought",
-            "That the case was not appealed in time",
-            "Nothing — the portal does not track what later courts did"
+            "That the case was not appealed in time"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "The dangerous inference is the silent one. No warning is not a clean bill of health.",
           "source": "Standard research practice; free Malaysian sources include no citator"
         }
@@ -2428,6 +2428,169 @@
       "plate": "library",
       "plateCaption": "The reading room, and the one shelf free sources do not have. A portal that shows no overruling is not evidence that there was none.",
       "readMinutes": 7
+    },
+    {
+      "id": "l-access-to-justice",
+      "moduleId": "m01-malaysian-legal-system",
+      "title": "What a case actually costs",
+      "summary": "A right you cannot afford to enforce is a right in principle only. Cost, representation and delay decide who reaches a court at all.",
+      "minutes": 26,
+      "readMinutes": 8,
+      "sections": [
+        {
+          "id": "sec-l-access-to-justice-0",
+          "h": "The gap between having a right and using one",
+          "readMinutes": 2,
+          "keypoint": "Substantive rights matter only to those who can reach a forum to invoke them.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Every other lesson in this module is about what the law says. This one is about who can use it."
+            },
+            {
+              "t": "p",
+              "text": "A person with a good claim and no money to bring it has, practically speaking, no claim."
+            },
+            {
+              "t": "p",
+              "text": "That is not a criticism of any particular system. It is a structural feature of adjudication, and every legal system manages it more or less well."
+            },
+            {
+              "t": "caution",
+              "text": "It is also why an advice letter that establishes a strong claim without addressing cost has answered only half of what the client asked."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-access-to-justice-1",
+          "h": "What actually costs money",
+          "readMinutes": 3,
+          "keypoint": "Filing fees, representation, expert evidence, time off work, and exposure to the other side's costs.",
+          "body": [
+            {
+              "t": "p",
+              "text": "It helps to be specific about where the money goes, because the barriers are different in kind."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Court fees to file and to take steps",
+                "Legal representation, if any",
+                "Expert evidence, which in some claims is unavoidable",
+                "Time — days not worked, for a claimant paid by the day",
+                "Exposure to the other side's costs if the claim fails"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "The last is the one non-lawyers understand least and fear most once it is explained. In civil litigation an unsuccessful party is commonly ordered to pay costs."
+            },
+            {
+              "t": "predict",
+              "prompt": "Which barrier most often stops a modest but genuine claim?",
+              "options": [
+                "Court filing fees",
+                "The risk of paying the other side's costs if the claim fails"
+              ],
+              "answer": 1,
+              "reveal": "Filing fees are usually small relative to the claim. The costs risk is open-ended and falls exactly on the person least able to absorb it, which is why it deters claims that would probably have succeeded."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-access-to-justice-2",
+          "h": "Responses, and their limits",
+          "readMinutes": 2,
+          "keypoint": "Simplified procedures, assistance schemes and self-representation each help, and each has a cost.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Legal systems respond in recognisable ways."
+            },
+            {
+              "t": "p",
+              "text": "Simplified procedures for small claims reduce cost by reducing process, which also reduces the protections process provides."
+            },
+            {
+              "t": "p",
+              "text": "Assistance schemes help those who qualify, and the qualifying threshold leaves a group above it who still cannot afford to litigate."
+            },
+            {
+              "t": "p",
+              "text": "Self-representation is always available and shifts the burden onto a person least equipped to carry it, in a system built assuming representation."
+            },
+            {
+              "t": "p",
+              "text": "This corpus does not state what schemes exist in Malaysia or who qualifies, because that has not been verified here. Check it before advising anyone."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-access-to-justice-3",
+          "h": "Advising honestly about it",
+          "readMinutes": 1,
+          "keypoint": "Cost belongs early in advice, alongside the merits, not appended to the end.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The practical discipline is where cost appears in a letter."
+            },
+            {
+              "t": "p",
+              "text": "Put late, it reads as a disclaimer. Put alongside the merits, it lets the client make the decision that is actually theirs — whether this is worth doing."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Your client has a strong claim worth a modest sum. What must the advice include?",
+              "options": [
+                "The merits, and a recommendation to proceed",
+                "The merits, the likely cost, the costs risk if it fails, and an honest view of whether the sum justifies the exposure"
+              ],
+              "answer": 1,
+              "why": "A strong claim can still be a bad investment. Only the client can weigh that, and they cannot weigh it without the numbers."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-mls-atj-1",
+          "q": "Which cost barrier is most likely to deter a genuine modest claim?",
+          "options": [
+            "Filing fees",
+            "The cost of photocopying",
+            "Court opening hours",
+            "Exposure to the other side's costs if the claim fails"
+          ],
+          "answer": 3,
+          "why": "It is open-ended and it falls on the party least able to absorb it, so it deters claims that would probably have succeeded."
+        },
+        {
+          "id": "q-mls-atj-2",
+          "q": "What is the trade-off in simplified small-claims procedures?",
+          "options": [
+            "Reducing process reduces cost and also reduces the protections process provides",
+            "They are slower",
+            "They apply only to companies",
+            "They require legal representation"
+          ],
+          "answer": 0,
+          "why": "Process costs money and does something. Removing it makes claims affordable and removes some of what the fuller procedure was protecting."
+        }
+      ],
+      "reading": [
+        {
+          "bookId": "bingham-rule-of-law",
+          "where": "on access to justice as a component of the rule of law rather than an administrative add-on"
+        },
+        {
+          "bookId": "janab-civil-procedure",
+          "where": "on costs — who pays, when, and how exposure is assessed"
+        }
+      ],
+      "source": "General analysis of cost as a barrier to adjudication, and the costs rule in civil litigation as described in the civil procedure lessons of this corpus. No Malaysian legal aid scheme, threshold or fee is stated, because none has been verified here.",
+      "verify": "Check what assistance schemes operate in Malaysia, who qualifies, and the current court fees and small-claims thresholds, before relying on anything in this lesson to advise a client.",
+      "lastVerified": "2026-09-11"
     }
   ]
 }

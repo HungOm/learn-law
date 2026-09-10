@@ -253,11 +253,11 @@
           "q": "Federal law beats State law where the two clash. Which Article says so?",
           "options": [
             "Art 4(1)",
-            "Art 75",
             "Art 74",
-            "Art 76"
+            "Art 76",
+            "Art 75"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Art 75. The State law is void only so far as it clashes, and the rest of it survives.",
           "source": "Federal Constitution Art 75"
         },
@@ -266,11 +266,11 @@
           "q": "Land is a State subject, yet the National Land Code is a federal Act. What makes that possible?",
           "options": [
             "Art 75, because federal law prevails",
-            "Art 76, which lets Parliament legislate on State subjects for uniformity",
             "Art 4(1) supremacy",
-            "Land is in fact on the Federal List"
+            "Land is in fact on the Federal List",
+            "Art 76, which lets Parliament legislate on State subjects for uniformity"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Art 76 is the uniformity route, and such a law takes effect in a State only when that State adopts it.",
           "source": "Federal Constitution Art 76"
         },
@@ -278,12 +278,12 @@
           "id": "qfd3",
           "q": "Parliament passes an Act on a subject that is on the State List. What is the position?",
           "options": [
-            "It is invalid; Art 75 never arises",
             "It prevails under Art 75",
             "It is valid but unenforceable",
-            "It is valid if the State consents afterwards"
+            "It is valid if the State consents afterwards",
+            "It is invalid; Art 75 never arises"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Art 75 assumes a valid federal law. Power is the earlier question, and Art 4(1) answers it.",
           "source": "Federal Constitution Art 4(1); Ninth Schedule List II"
         },
@@ -292,11 +292,11 @@
           "q": "Which of these is a State subject?",
           "options": [
             "Criminal law and procedure",
-            "Citizenship",
             "Islamic law and Malay custom",
+            "Citizenship",
             "External affairs"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "List II holds Islamic law, the personal and family law of Muslims, Malay custom, land and local government.",
           "source": "Federal Constitution, Ninth Schedule List II"
         },
@@ -305,11 +305,11 @@
           "q": "What does Art 4(1) say?",
           "options": [
             "Parliament is sovereign",
+            "The Constitution is supreme, and inconsistent law is void to that extent",
             "Federal law prevails over State law",
-            "The courts may not review legislation",
-            "The Constitution is supreme, and inconsistent law is void to that extent"
+            "The courts may not review legislation"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Supremacy is what makes an argument about legislative power available at all.",
           "source": "Federal Constitution Art 4(1)"
         },
@@ -317,12 +317,12 @@
           "id": "qfd6",
           "q": "In a fundamental liberties problem, what should you check before asking whether a limit is proportionate?",
           "options": [
-            "Whether the law-maker had power to pass the law at all",
             "Whether the plaintiff has standing",
             "Whether the case is reported",
-            "Whether the restriction is popular"
+            "Whether the restriction is popular",
+            "Whether the law-maker had power to pass the law at all"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "A limit imposed by a law nobody had power to pass fails before Art 10 is ever reached.",
           "source": "Federal Constitution Arts 4(1), 74 and 10"
         }
@@ -554,10 +554,10 @@
           "options": [
             "Vested judicial power in Parliament",
             "Abolished appeals to the Privy Council",
-            "Created the Court of Appeal",
-            "Replaced the vesting of judicial power with jurisdiction conferred by federal law"
+            "Replaced the vesting of judicial power with jurisdiction conferred by federal law",
+            "Created the Court of Appeal"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The vesting words went out and a conferral formula came in. What that did is still argued about.",
           "source": "Constitution (Amendment) Act 1988; Federal Constitution Art 121(1)"
         },
@@ -565,12 +565,12 @@
           "id": "qbs2",
           "q": "What does Art 121(1A) do?",
           "options": [
+            "Removes civil court jurisdiction over matters within Syariah jurisdiction",
             "Grants jurisdiction to the Syariah courts",
             "Makes Syariah courts superior courts",
-            "Removes civil court jurisdiction over matters within Syariah jurisdiction",
             "Creates a right of appeal to the Federal Court"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "It subtracts jurisdiction from the civil courts. It grants the Syariah courts nothing; their power comes from State enactments.",
           "source": "Federal Constitution Art 121(1A)"
         },
@@ -578,12 +578,12 @@
           "id": "qbs3",
           "q": "A matter falls outside Syariah jurisdiction. What follows for Art 121(1A)?",
           "options": [
+            "It does not apply and the civil court retains jurisdiction",
             "The civil court still has no jurisdiction",
             "The matter must be transferred",
-            "It does not apply and the civil court retains jurisdiction",
             "The Federal Court decides"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Clause (1A) only bites where the matter is within Syariah jurisdiction in the first place.",
           "source": "Federal Constitution Art 121(1A)"
         },
@@ -592,11 +592,11 @@
           "q": "What is the basic structure doctrine, at its narrowest?",
           "options": [
             "That all legislation must be proportionate",
-            "That some fundamental features cannot be removed even by a constitutional amendment",
             "That the Federal Court may overrule itself",
-            "That State law yields to federal law"
+            "That State law yields to federal law",
+            "That some fundamental features cannot be removed even by a constitutional amendment"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "It is a limit on the power to amend, not a general power of review over ordinary laws.",
           "source": "The Malaysian case law on judicial power and basic structure"
         },
@@ -604,12 +604,12 @@
           "id": "qbs5",
           "q": "Which court decides whether a law is invalid for want of legislative competence?",
           "options": [
+            "The Federal Court, exclusively",
             "The High Court",
             "The Court of Appeal",
-            "Any court seised of the matter",
-            "The Federal Court, exclusively"
+            "Any court seised of the matter"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Article 128 gives the Federal Court exclusive jurisdiction over that question.",
           "source": "Federal Constitution Art 128"
         }
@@ -832,10 +832,10 @@
           "options": [
             "On the prosecution, beyond reasonable doubt",
             "On the accused, beyond reasonable doubt",
-            "It is a purely evidential burden",
-            "On the accused, on the balance of probabilities"
+            "On the accused, on the balance of probabilities",
+            "It is a purely evidential burden"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Section 105 puts a legal burden on the accused and directs the court to presume the circumstances are absent.",
           "source": "Evidence Act 1950, s 105"
         },
@@ -844,11 +844,11 @@
           "q": "Section 79 of the Penal Code excuses an act done under a mistake of what?",
           "options": [
             "Law",
-            "Fact",
             "Identity only",
-            "Either fact or law"
+            "Either fact or law",
+            "Fact"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "A mistake of fact, made in good faith, believing oneself justified by law. A mistake about the law does not excuse.",
           "source": "Penal Code s 79"
         },
@@ -857,11 +857,11 @@
           "q": "Under s 82, a child under what age cannot commit an offence at all?",
           "options": [
             "Seven",
+            "Ten",
             "Twelve",
-            "Fourteen",
-            "Ten"
+            "Fourteen"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Nothing done by a child under ten is an offence. Between ten and twelve the question is sufficient maturity of understanding.",
           "source": "Penal Code ss 82 and 83"
         },
@@ -869,12 +869,12 @@
           "id": "qge4",
           "q": "An accused goes further than the right of private defence allowed, and kills. What is the likely effect?",
           "options": [
-            "The right is simply lost and murder stands",
             "Murder may be reduced to culpable homicide not amounting to murder",
+            "The right is simply lost and murder stands",
             "It is a complete defence anyway",
             "It goes only to sentence"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Exception 2 to s 300 covers exceeding the right in good faith and without premeditation.",
           "source": "Penal Code, Exception 2 to s 300"
         },
@@ -882,12 +882,12 @@
           "id": "qge5",
           "q": "Under s 99(3), when is there no right of private defence?",
           "options": [
+            "Where there is time to go to the public authorities and no fear of death or grievous hurt",
             "Whenever the attacker is unarmed",
             "Whenever the police could be called",
-            "Where there is time to go to the public authorities and no fear of death or grievous hurt",
             "Whenever the accused struck first"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Both halves matter. Time to seek protection is not enough on its own if death or grievous hurt is reasonably feared.",
           "source": "Penal Code s 99(3)"
         },
@@ -896,11 +896,11 @@
           "q": "Why does Chapter IV matter to a case about a killing?",
           "options": [
             "They apply only to offences against property",
+            "The exceptions apply to every offence in the Code, s 300 included",
             "They replace the exceptions to s 300",
-            "They apply only in the Sessions Court",
-            "The exceptions apply to every offence in the Code, s 300 included"
+            "They apply only in the Sessions Court"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Section 6 makes every definition of an offence subject to the general exceptions.",
           "source": "Penal Code s 6"
         }
@@ -1183,11 +1183,11 @@
           "q": "What does 'non-bailable offence' mean?",
           "options": [
             "Bail cannot be granted",
-            "Bail is in the court's discretion",
             "Bail requires the Public Prosecutor's consent",
+            "Bail is in the court's discretion",
             "Bail is granted only on appeal"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "The label misleads. Section 388 makes bail discretionary for these offences, subject to the restrictions in it.",
           "source": "Criminal Procedure Code s 388"
         },
@@ -1222,11 +1222,11 @@
           "q": "What is the question at the close of the prosecution case?",
           "options": [
             "Whether guilt is proved beyond reasonable doubt",
+            "Whether a prima facie case has been made out",
             "Whether the accused has a defence",
-            "Whether the charge is properly framed",
-            "Whether a prima facie case has been made out"
+            "Whether the charge is properly framed"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Section 180 asks whether a prima facie case is made out. If it is, the accused is called to enter his defence.",
           "source": "Criminal Procedure Code s 180"
         },
@@ -1522,12 +1522,12 @@
           "id": "qvt1",
           "q": "Both parties are mistaken about a fact essential to their agreement. What is the effect?",
           "options": [
+            "The agreement is void",
             "The agreement is voidable",
             "The agreement is valid",
-            "The agreement is void",
             "The agreement is unenforceable but not void"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Section 21 makes it void, so there is nothing to affirm. Voidability under s 19 belongs to coercion, fraud and misrepresentation.",
           "source": "Contracts Act 1950 ss 21 and 19"
         },
@@ -1535,12 +1535,12 @@
           "id": "qvt2",
           "q": "Which section defines coercion, and what does it require?",
           "options": [
-            "Section 15 — an act forbidden by the Penal Code, or unlawful detention of property",
             "Section 17 — a false suggestion of fact",
             "Section 16 — domination of the will",
+            "Section 15 — an act forbidden by the Penal Code, or unlawful detention of property",
             "Section 14 — any improper pressure"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The statutory definition is far narrower than 'pressure', and that is where English duress reasoning goes wrong here.",
           "source": "Contracts Act 1950 s 15"
         },
@@ -1561,12 +1561,12 @@
           "id": "qvt4",
           "q": "What separates misrepresentation under s 18 from fraud under s 17?",
           "options": [
-            "The statement is about the future",
             "The maker believes what he says is true",
+            "The statement is about the future",
             "It concerns a third party",
             "It is made in writing"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Section 18 covers an assertion not warranted by the information the maker has, though he believes it true.",
           "source": "Contracts Act 1950 ss 17 and 18"
         },
@@ -1576,10 +1576,10 @@
           "options": [
             "Section 24",
             "Section 19",
-            "Section 74",
-            "Section 66"
+            "Section 66",
+            "Section 74"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Section 66 does the work that restitution does in other systems.",
           "source": "Contracts Act 1950 s 66"
         },
@@ -1588,11 +1588,11 @@
           "q": "What is the age of majority for capacity to contract?",
           "options": [
             "Twenty-one",
-            "Sixteen",
             "Eighteen",
+            "Sixteen",
             "Depends on the State"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Eighteen, under the Age of Majority Act 1971, read with s 11 of the Contracts Act 1950.",
           "source": "Age of Majority Act 1971; Contracts Act 1950 s 11"
         }
@@ -1842,11 +1842,11 @@
           "q": "Section 74 of the Contracts Act 1950 puts which familiar rule into statute?",
           "options": [
             "The rule in Hong Kong Fir",
-            "The rule in Hadley v Baxendale",
             "The rule in Pinnel's Case",
-            "The rule in Carlill"
+            "The rule in Carlill",
+            "The rule in Hadley v Baxendale"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "The two limbs — loss arising naturally, and loss within the parties' contemplation — are the statutory form of it.",
           "source": "Contracts Act 1950 s 74"
         },
@@ -1854,12 +1854,12 @@
           "id": "qrm2",
           "q": "Which case reformulated the Malaysian approach to a sum named in the contract under s 75?",
           "options": [
-            "Cubic Electronics v Mars Telecommunications",
             "Selva Kumar v Thiagarajah",
+            "Cubic Electronics v Mars Telecommunications",
             "Kepong Prospecting v Schmidt",
             "Tan Ying Hong v Tan Sian San"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "The Federal Court there moved away from the strict requirement of proving actual loss, drawing on Cavendish v Makdessi.",
           "source": "Cubic Electronics Sdn Bhd (in liquidation) v Mars Telecommunications Sdn Bhd [2019] 2 CLJ 723 (FC); Cavendish Square Holding BV v Talal El Makdessi [2015] UKSC 67"
         },
@@ -1868,11 +1868,11 @@
           "q": "Under s 40, what may a promisee do when the other side refuses to perform at all?",
           "options": [
             "Claim the named sum automatically",
-            "Put an end to the contract, unless he has acquiesced in its continuance",
             "Seek specific performance only",
-            "Nothing until the time for performance passes"
+            "Nothing until the time for performance passes",
+            "Put an end to the contract, unless he has acquiesced in its continuance"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Ending the contract is an election, and it can be lost by affirming the contract instead.",
           "source": "Contracts Act 1950 s 40"
         },
@@ -1880,12 +1880,12 @@
           "id": "qrm4",
           "q": "Which statute governs specific performance in Malaysia?",
           "options": [
-            "The Specific Relief Act 1950",
             "The Contracts Act 1950",
             "The Civil Law Act 1956",
-            "The Rules of Court 2012"
+            "The Rules of Court 2012",
+            "The Specific Relief Act 1950"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The Specific Relief Act 1950 has its own scheme, in ss 11 and 20 among others. Do not answer out of the Contracts Act.",
           "source": "Specific Relief Act 1950"
         },
@@ -1893,12 +1893,12 @@
           "id": "qrm5",
           "q": "Why is specific performance a live remedy in a sale of land?",
           "options": [
-            "Damages are treated as inadequate for land",
             "Land contracts are always in writing",
             "The National Land Code requires it",
-            "Injunctions are unavailable"
+            "Injunctions are unavailable",
+            "Damages are treated as inadequate for land"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Whether damages are adequate is the gateway question under the Act, and for land they are treated as inadequate.",
           "source": "Specific Relief Act 1950 ss 11 and 20"
         },
@@ -2137,11 +2137,11 @@
           "q": "A doctor negligently sends away a patient who would have died anyway. What defeats the claim?",
           "options": [
             "Remoteness",
+            "Factual causation — the but-for test",
             "Absence of duty",
-            "Contributory negligence",
-            "Factual causation — the but-for test"
+            "Contributory negligence"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "The breach caused no loss, so the claim fails at causation however clear the breach was.",
           "source": "Standard common law on factual causation; the but-for test"
         },
@@ -2151,10 +2151,10 @@
           "options": [
             "The claim is defeated entirely",
             "It goes only to costs",
-            "It breaks the chain of causation",
-            "Damages are apportioned under s 12 of the Civil Law Act 1956"
+            "Damages are apportioned under s 12 of the Civil Law Act 1956",
+            "It breaks the chain of causation"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Section 12 replaced the old complete defence with an apportionment of the damages.",
           "source": "Civil Law Act 1956 s 12(1)"
         },
@@ -2162,12 +2162,12 @@
           "id": "qtd3",
           "q": "Which is the correct statement of the remoteness rule?",
           "options": [
-            "Both the kind and the extent must be foreseeable",
             "The kind of damage must be foreseeable; the extent need not be",
+            "Both the kind and the extent must be foreseeable",
             "Neither need be foreseeable once breach is proved",
             "Only economic loss must be foreseeable"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "That is the Wagon Mound test, with the eggshell skull principle sitting inside it.",
           "source": "The Wagon Mound (No 1) [1961] AC 388"
         },
@@ -2176,11 +2176,11 @@
           "q": "What is the difference between a novus actus interveniens and contributory negligence?",
           "options": [
             "They are the same thing",
+            "The first defeats the claim; the second reduces it",
             "The first applies only to third parties, the second only to defendants",
-            "The first is statutory, the second is common law",
-            "The first defeats the claim; the second reduces it"
+            "The first is statutory, the second is common law"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "The first defeats the claim and the second reduces it. Using them interchangeably is a substantive error.",
           "source": "Civil Law Act 1956 s 12; standard common law on intervening acts"
         },
@@ -2188,12 +2188,12 @@
           "id": "qtd5",
           "q": "In what order should a negligence answer proceed?",
           "options": [
-            "Duty, breach, causation, remoteness, damage, defences",
             "Damage, duty, breach, causation",
             "Breach, duty, defences, causation",
+            "Duty, breach, causation, remoteness, damage, defences",
             "Causation, duty, breach, remoteness"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Each step assumes the one before it. Arguing remoteness before breach is arguing about nothing.",
           "source": "Standard classification; the elements of the tort of negligence"
         }
@@ -2405,10 +2405,10 @@
           "options": [
             "Falsity, malice, damage",
             "Publication, malice, special damage",
-            "Defamatory meaning, reference to the plaintiff, publication",
-            "Defamatory meaning, malice, damage"
+            "Defamatory meaning, malice, damage",
+            "Defamatory meaning, reference to the plaintiff, publication"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Defamatory meaning, reference, publication. Only after all three does any defence arise.",
           "source": "Defamation Act 1957; standard common law elements of the tort"
         },
@@ -2455,12 +2455,12 @@
           "id": "qdf5",
           "q": "Why does the line between libel and slander still matter?",
           "options": [
-            "Slander generally requires proof of special damage",
             "Libel carries a criminal penalty",
             "Slander has a longer limitation period",
-            "Libel cannot be justified"
+            "Libel cannot be justified",
+            "Slander generally requires proof of special damage"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Slander generally needs proof of special damage, subject to the statutory exceptions such as words disparaging a trade.",
           "source": "Defamation Act 1957; slander generally requires proof of special damage"
         }
@@ -2714,12 +2714,12 @@
           "id": "qcv2",
           "q": "What does a private caveat actually do?",
           "options": [
-            "Prevents registration of dealings while it is in force",
             "Creates an interest in the land",
             "Transfers beneficial ownership",
-            "Operates as a charge"
+            "Operates as a charge",
+            "Prevents registration of dealings while it is in force"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "It is a freeze, not an interest. It buys time for the underlying claim to be determined.",
           "source": "National Land Code s 323"
         },
@@ -2727,12 +2727,12 @@
           "id": "qcv3",
           "q": "On an application to remove a private caveat, what must the caveator show?",
           "options": [
-            "A serious question to be tried, and that the balance of convenience favours the caveat",
             "That he will succeed at trial",
             "That he has registered title",
-            "That the registered proprietor consents"
+            "That the registered proprietor consents",
+            "A serious question to be tried, and that the balance of convenience favours the caveat"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The same shape as an interlocutory injunction test, because the court is holding the position, not deciding it.",
           "source": "National Land Code, the caveat provisions (ss 320-330)"
         },
@@ -2741,11 +2741,11 @@
           "q": "A chargee wants an order for sale of land held under Registry title. Where does the application go?",
           "options": [
             "The Land Administrator",
-            "The Sessions Court",
             "The High Court",
+            "The Sessions Court",
             "The Registrar of Titles"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Registry title goes to the High Court. Land Office title goes to the Land Administrator.",
           "source": "National Land Code, the charge and order-for-sale provisions"
         },
@@ -3053,12 +3053,12 @@
           "id": "qmr1",
           "q": "Which provision states the duty to act in good faith in the best interest of the company?",
           "options": [
-            "Section 214",
             "Section 213(1)",
+            "Section 214",
             "Section 218",
             "Section 346"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Section 213(1) is the fiduciary duty in statutory form. Section 213(2) is the separate duty of care.",
           "source": "Companies Act 2016 s 213"
         },
@@ -3067,11 +3067,11 @@
           "q": "Directors have harmed the company, and every member's shares are worth less. What is the difficulty with a member suing personally?",
           "options": [
             "Members may never sue directors",
+            "The loss is reflective; the claim belongs to the company",
             "The claim is time-barred",
-            "Only the Registrar may sue",
-            "The loss is reflective; the claim belongs to the company"
+            "Only the Registrar may sue"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "A wrong to the company is the company's to complain of. That is why the derivative action machinery exists.",
           "source": "Companies Act 2016 ss 347-350; a wrong to the company is the company's to complain of"
         },
@@ -3079,12 +3079,12 @@
           "id": "qmr3",
           "q": "What does a statutory derivative action require?",
           "options": [
-            "Leave of the court, good faith, and that it is prima facie in the company's best interest",
             "A special resolution",
             "The consent of the board",
+            "Leave of the court, good faith, and that it is prima facie in the company's best interest",
             "A prior oppression petition"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Sections 347 to 350 set out the leave requirement and the criteria for granting it.",
           "source": "Companies Act 2016 ss 347-350"
         },
@@ -3093,11 +3093,11 @@
           "q": "Which remedy answers a complaint about how a member has been treated?",
           "options": [
             "A derivative action",
+            "Oppression under s 346",
             "Fraudulent trading under s 540",
-            "Rectification of the register",
-            "Oppression under s 346"
+            "Rectification of the register"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Section 346 is about the conduct of the company's affairs in a manner oppressive to a member.",
           "source": "Companies Act 2016 s 346"
         },
@@ -3106,11 +3106,11 @@
           "q": "What does the business judgement rule in s 214 do?",
           "options": [
             "Excuses breaches of fiduciary duty",
-            "Deems the duty of care met where its conditions are satisfied",
             "Applies only to executive directors",
+            "Deems the duty of care met where its conditions are satisfied",
             "Removes the duty of care for private companies"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "It is a safe harbour for s 213(2) only. It does not shelter the fiduciary duty in s 213(1).",
           "source": "Companies Act 2016 s 214"
         },
@@ -3118,12 +3118,12 @@
           "id": "qmr6",
           "q": "Why should a company law book published in 2015 be treated with care?",
           "options": [
-            "The Companies Act 2016 substantially changed the law",
             "The 1965 Act is still in force alongside the 2016 Act",
             "Company law is a State matter",
-            "Older reports are unreliable"
+            "Older reports are unreliable",
+            "The Companies Act 2016 substantially changed the law"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The 1965 Act was repealed. A pre-2017 text is describing a repealed statute until you have checked it.",
           "source": "Companies Act 2016 (Act 777), which repealed the Companies Act 1965"
         }
@@ -3387,12 +3387,12 @@
           "id": "qbn1",
           "q": "Which section says the burden lies on the person who would fail if no evidence were given?",
           "options": [
-            "Section 102",
             "Section 101",
             "Section 103",
+            "Section 102",
             "Section 106"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Section 102 identifies who carries the legal burden by asking who loses on a blank record.",
           "source": "Evidence Act 1950 s 102"
         },
@@ -3402,10 +3402,10 @@
           "options": [
             "He carries an evidential burden only",
             "The prosecution must disprove it beyond reasonable doubt",
-            "He carries a legal burden, on the balance of probabilities",
-            "The exception is presumed in his favour"
+            "The exception is presumed in his favour",
+            "He carries a legal burden, on the balance of probabilities"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "The court presumes the circumstances are absent, and the accused must prove them.",
           "source": "Evidence Act 1950 s 105"
         },
@@ -3427,11 +3427,11 @@
           "q": "What does 'shall presume' mean under s 4?",
           "options": [
             "The court may treat the fact as proved",
+            "The court must treat the fact as proved unless it is disproved",
             "No evidence in rebuttal is allowed",
-            "The fact is admitted",
-            "The court must treat the fact as proved unless it is disproved"
+            "The fact is admitted"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "'May presume' is a discretion, and 'conclusive proof' admits no rebuttal at all.",
           "source": "Evidence Act 1950 s 4"
         },
@@ -3439,12 +3439,12 @@
           "id": "qbn5",
           "q": "When may an adverse inference be drawn under illustration (g) to s 114?",
           "options": [
-            "From any gap in the evidence",
             "Where material evidence was available, withheld, and unexplained",
+            "From any gap in the evidence",
             "Whenever a witness is not called",
             "Automatically against the defence"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It is permissive and conditional, not a default the court applies to every gap.",
           "source": "Evidence Act 1950 s 114 illustration (g)"
         },
@@ -3731,11 +3731,11 @@
           "q": "What must a defendant show to resist summary judgment under Order 14?",
           "options": [
             "That the defence will succeed",
-            "That the plaintiff acted in bad faith",
             "A triable issue, or some other reason for a trial",
+            "That the plaintiff acted in bad faith",
             "That the claim is time-barred"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "A triable issue, or some other reason for a trial. Not that the defence will actually succeed.",
           "source": "Rules of Court 2012 O 14"
         },
@@ -3757,11 +3757,11 @@
           "q": "Which of these is *not* part of the interlocutory injunction test?",
           "options": [
             "Adequacy of damages",
-            "Whether the applicant will probably win at trial",
             "A serious question to be tried",
-            "Balance of convenience"
+            "Balance of convenience",
+            "Whether the applicant will probably win at trial"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "The court does not try the merits at the interlocutory stage. It holds the position until trial.",
           "source": "Keet Gerald Francis Noel John v Mohd Noor bin Abdullah [1995] 1 MLJ 193 (CA); American Cyanamid Co v Ethicon Ltd [1975] AC 396"
         },
@@ -3782,12 +3782,12 @@
           "id": "qil5",
           "q": "What is the general limitation period for an action founded on contract or tort?",
           "options": [
-            "Three years",
             "Six years from accrual",
+            "Three years",
             "Twelve years",
             "Six years from discovery"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Six years from accrual, subject to the special periods and to any statute that displaces the Act.",
           "source": "Limitation Act 1953 s 6"
         },
@@ -4044,12 +4044,12 @@
           "id": "qnj1",
           "q": "What does audi alteram partem require?",
           "options": [
+            "Notice of the case and a fair opportunity to answer it",
             "An oral hearing in every case",
             "Legal representation in every case",
-            "Notice of the case and a fair opportunity to answer it",
             "Written reasons in every case"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Notice of the case and a fair opportunity to answer it. The content varies with the decision.",
           "source": "Standard common law rule of natural justice; audi alteram partem"
         },
@@ -4070,12 +4070,12 @@
           "id": "qnj3",
           "q": "Which form of legitimate expectation is the more secure?",
           "options": [
-            "Procedural — that the person will be heard before a change",
             "Whichever one the applicant relied on to his detriment",
             "Substantive — that the benefit will be conferred",
+            "Procedural — that the person will be heard before a change",
             "One created by the empowering statute itself"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The substantive form is more contested, and its reception in Malaysia should be checked rather than assumed.",
           "source": "The Malaysian authorities on legitimate expectation; the substantive form is contested"
         },
@@ -4084,11 +4084,11 @@
           "q": "A public body promises to act in a way the statute does not permit. Can a legitimate expectation arise?",
           "options": [
             "Yes, if the representation was clear",
-            "No — a body cannot bind itself to act unlawfully",
             "Yes, if the applicant relied on it",
-            "Only if the representation was in writing"
+            "Only if the representation was in writing",
+            "No — a body cannot bind itself to act unlawfully"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "An expectation founded on something outside the decision-maker's power cannot be legitimate.",
           "source": "Standard common law; an expectation founded on something outside the decision-maker's power cannot be legitimate"
         },
@@ -4098,10 +4098,10 @@
           "options": [
             "A declaration",
             "An undertaking in damages",
-            "The consent of the decision-maker",
-            "Leave of the court"
+            "Leave of the court",
+            "The consent of the decision-maker"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Leave — the court's permission. The application must also be made within the prescribed time.",
           "source": "Rules of Court 2012, O 53"
         },
@@ -4109,12 +4109,12 @@
           "id": "qnj6",
           "q": "What is the Malaysian standing requirement for judicial review?",
           "options": [
+            "That the applicant is adversely affected by the decision",
             "Sufficient interest, as in England",
             "Any member of the public may apply",
-            "That the applicant is adversely affected by the decision",
             "Only a party to the original proceedings"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "That the applicant is adversely affected. It has been stated in the Federal Court and is narrower than the English test.",
           "source": "Rules of Court 2012, Order 53; the applicant must be adversely affected"
         }

@@ -157,10 +157,10 @@
           "options": [
             "Express authority",
             "No authority at all",
-            "Authority only if the principal later agrees",
-            "Implied authority, because it comes with the job"
+            "Implied authority, because it comes with the job",
+            "Authority only if the principal later agrees"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Implied authority is what comes with the role. A manager engaged to run a shop may do the ordinary things running a shop requires."
         },
         {
@@ -179,12 +179,12 @@
           "id": "qcom3",
           "q": "An agent takes an undisclosed commission but gets the principal a fair price. What follows?",
           "options": [
+            "The agent must account for the commission, because the duty is against undisclosed profit",
             "Nothing, because the principal suffered no loss",
             "The contract with the third party is automatically void",
-            "The principal must first prove bad faith",
-            "The agent must account for the commission, because the duty is against undisclosed profit"
+            "The principal must first prove bad faith"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Loyalty duties are strict. Absence of loss answers a damages claim; it does not answer the claim to the secret profit itself."
         }
       ],
@@ -359,10 +359,10 @@
           "options": [
             "In the High Court by writ",
             "In the Sessions Court",
-            "In the Syariah court if the employee is Muslim",
-            "Through a representation under the industrial relations system"
+            "Through a representation under the industrial relations system",
+            "In the Syariah court if the employee is Muslim"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The Industrial Relations Act 1967 route starts with a representation and conciliation, and may be referred on to the Industrial Court."
         },
         {
@@ -382,11 +382,11 @@
           "q": "What remedy is the unfair dismissal system built around?",
           "options": [
             "Damages for distress",
-            "Reinstatement, with compensation commonly awarded instead",
             "A criminal penalty on the employer",
+            "Reinstatement, with compensation commonly awarded instead",
             "An injunction against the employer"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "The statutory aim is to put the workman back in the job. In practice compensation is usually awarded in place of reinstatement."
         }
       ],
@@ -547,22 +547,22 @@
           "options": [
             "Because it is shorter that way",
             "Because definitions are not binding",
-            "Because it only applies to commercial contracts",
-            "Because each requirement can fail independently, and identifying which is in issue is the analysis"
+            "Because each requirement can fail independently, and identifying which is in issue is the analysis",
+            "Because it only applies to commercial contracts"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Free consent, competence, lawful consideration, lawful object and not being declared void are separate conditions. A dispute is almost always about one of them, and naming which one is what makes an answer specific."
         },
         {
           "id": "q-comm-terms-2",
           "q": "Two commercial parties with equal bargaining power agree a term the Act expressly declares void. What follows?",
           "options": [
-            "It is void — the quality of consent does not save an agreement the Act declares void",
             "It binds them, because both consented freely",
             "It binds only the party who drafted it",
+            "It is void — the quality of consent does not save an agreement the Act declares void",
             "It is enforceable if the contract says so"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Consent and express voidness are different limbs of section 10(1). Satisfying one does not answer the other."
         }
       ],
@@ -713,11 +713,11 @@
           "q": "Under the second limb of section 74(1), when must the parties have known of the likely loss?",
           "options": [
             "At any time before the breach",
-            "When they made the contract",
             "When the loss was suffered",
+            "When they made the contract",
             "When proceedings were commenced"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "The limb is fixed to the time of contracting, which is when a party could have priced or declined the risk. Knowledge acquired later does not bring the loss within it."
         },
         {
@@ -883,11 +883,11 @@
           "q": "Why is a contractual statement that someone is an independent contractor not decisive?",
           "options": [
             "Because such clauses are unlawful",
+            "Because a protection that drafting could switch off would not be a protection",
             "Because employees cannot read contracts",
-            "Because only the Industrial Court may decide status",
-            "Because a protection that drafting could switch off would not be a protection"
+            "Because only the Industrial Court may decide status"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "The reason is structural. If the label decided the category, the whole statutory regime would be optional at the employer's election, so the substance of the relationship governs."
         },
         {
@@ -896,10 +896,10 @@
           "options": [
             "The job title",
             "Whether the contract is in writing",
-            "How long the relationship lasted",
-            "Who bears the financial risk of the work"
+            "Who bears the financial risk of the work",
+            "How long the relationship lasted"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Financial risk sits alongside control and integration as a recurring indicator. Duration and formality may be evidence, but they are not the tests themselves."
         }
       ],

@@ -295,12 +295,12 @@
           "id": "pf-q-study-1",
           "q": "What should the first ten minutes of a study session be?",
           "options": [
+            "Answering questions on old material from memory",
             "Reading the new chapter",
             "Copying out yesterday's notes",
-            "Answering questions on old material from memory",
             "Planning the rest of the week"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Testing comes before reviewing. Reading first feels better and teaches less.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -309,11 +309,11 @@
           "q": "Why does re-reading feel like it is working?",
           "options": [
             "Repetition always builds memory",
+            "The second pass is easier, and ease feels like knowing",
             "It takes longer, so more goes in",
-            "It suits people who learn by reading",
-            "The second pass is easier, and ease feels like knowing"
+            "It suits people who learn by reading"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "That feeling is fluency. It fades in about a week and it is not the same as memory.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -323,10 +323,10 @@
           "options": [
             "One two-hour session",
             "It makes no difference",
-            "Four half-hours",
-            "Whichever is less tiring"
+            "Whichever is less tiring",
+            "Four half-hours"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "The gaps let you forget a little. Pulling it back is what makes it last.",
           "source": "Spacing research, as summarised in Make It Stick"
         },
@@ -334,12 +334,12 @@
           "id": "pf-q-study-4",
           "q": "Why mix topics inside one sitting?",
           "options": [
-            "Real facts do not say which rule they belong to",
             "It covers more pages in an hour",
             "It is less tiring",
-            "It keeps your notes tidy"
+            "It keeps your notes tidy",
+            "Real facts do not say which rule they belong to"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Mixing feels worse and trains the choice you will actually have to make.",
           "source": "Interleaving research, as summarised in Make It Stick"
         },
@@ -595,12 +595,12 @@
           "id": "pf-q-res-1",
           "q": "An article about an Act, and the Act itself. Which can you rely on?",
           "options": [
-            "The article, because it is easier to follow",
             "The Act, because you can read the words yourself",
+            "The article, because it is easier to follow",
             "Either, since they say the same thing",
             "Neither, without a lawyer"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Comment is a lead to the primary text. It is never a substitute for it.",
           "source": "Standard research practice; the primary text governs, not the comment on it"
         },
@@ -608,12 +608,12 @@
           "id": "pf-q-res-2",
           "q": "A post says that the law says something, and names no Act or section. What follows?",
           "options": [
+            "You cannot check it, so you cannot rely on it",
             "It is probably wrong",
             "It is fine if the site looks professional",
-            "You cannot check it, so you cannot rely on it",
             "It counts if several posts agree"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Treat it as a lead. Use it to find the provision, then read the provision.",
           "source": "Standard research practice"
         },
@@ -621,12 +621,12 @@
           "id": "pf-q-res-3",
           "q": "Is a page printed from the government statute portal the same as the Gazette?",
           "options": [
-            "No — it is the official text, but a print-out is not a copy of the Gazette",
             "Yes, in every respect",
             "Yes, if you print the whole Act",
-            "No, and it may not be used at all"
+            "No, and it may not be used at all",
+            "No — it is the official text, but a print-out is not a copy of the Gazette"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "It is right for study and research. A formal setting may need the gazetted version.",
           "source": "Attorney General's Chambers portal, the official free publication of federal statute"
         },
@@ -634,12 +634,12 @@
           "id": "pf-q-res-4",
           "q": "What is a citation for?",
           "options": [
-            "It is an address, so any reader can find the same words",
             "It proves the case was correctly decided",
             "It shows the case is still good law",
+            "It is an address, so any reader can find the same words",
             "It ranks the case against others"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "It tells you where to look and usually which court. It settles nothing by itself.",
           "source": "Standard Malaysian citation practice"
         },
@@ -648,11 +648,11 @@
           "q": "What must a research note contain to be worth keeping?",
           "options": [
             "The conclusion you reached",
-            "A link on its own",
             "The provision, the words you relied on, where you found it, and the date",
+            "A link on its own",
             "The name of the person who told you"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Research you cannot retrace is not research.",
           "source": "Standard research practice"
         },
@@ -660,12 +660,12 @@
           "id": "pf-q-res-6",
           "q": "A free portal shows nothing to suggest a case was overturned. What have you established?",
           "options": [
-            "Nothing — free portals do not track what happened later",
             "That the case is still good law",
             "That no appeal was filed",
+            "Nothing — free portals do not track what happened later",
             "That later courts followed it"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Silence is not a clean bill of health. That check needs a paid service.",
           "source": "Standard research practice; free Malaysian sources include no citator"
         }
@@ -919,10 +919,10 @@
           "options": [
             "It is the first question you thought of",
             "It is about a rule you know well",
-            "The parties disagree about what happened",
-            "The facts leave it open and both answers are arguable"
+            "The facts leave it open and both answers are arguable",
+            "The parties disagree about what happened"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "If only one answer is possible, it is not the issue. Find the ones that are actually open.",
           "source": "Standard problem-question technique"
         },
@@ -931,11 +931,11 @@
           "q": "What is the first thing to do with a rule before you apply it?",
           "options": [
             "Find a case about it",
-            "Write it out in full",
             "Split it into elements and list them",
+            "Write it out in full",
             "Decide who ought to win"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "An element you never mention is an element you never proved.",
           "source": "Standard problem-question technique; a rule is applied element by element"
         },
@@ -944,11 +944,11 @@
           "q": "Which of these is application?",
           "options": [
             "He was careless, so he must pay",
-            "He lifted a loaded bike alone on a wet walkway with help standing beside him",
             "The law requires reasonable care",
-            "The bike was damaged"
+            "The bike was damaged",
+            "He lifted a loaded bike alone on a wet walkway with help standing beside him"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Application ties one fact to one element. The others restate the rule or the story.",
           "source": "Standard problem-question technique; the application band of the rubric"
         },
@@ -956,12 +956,12 @@
           "id": "pf-q-reason-4",
           "q": "Why write out the other side's best argument?",
           "options": [
-            "A real issue has two arguable sides and you have to show you saw both",
             "It fills space",
             "It lets you avoid taking a position",
+            "A real issue has two arguable sides and you have to show you saw both",
             "Longer answers score better"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "You set out the difficulty and then decide. Setting it out is not the same as ducking it.",
           "source": "Standard problem-question technique"
         },
@@ -969,12 +969,12 @@
           "id": "pf-q-reason-5",
           "q": "Before using an earlier case, what must you identify?",
           "options": [
-            "The facts the earlier decision actually turned on",
             "The name of the judge",
             "How long the judgment is",
-            "Whether it is recent"
+            "Whether it is recent",
+            "The facts the earlier decision actually turned on"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Only those facts make it close to yours, and only a difference in them is worth arguing.",
           "source": "Standard common law method on ratio decidendi"
         }
@@ -1251,12 +1251,12 @@
           "id": "pf-q-sec-1",
           "q": "What is the first physical step with a hard section?",
           "options": [
-            "Copy it out with one clause per line",
             "Read it three times",
             "Look for a case about it",
+            "Copy it out with one clause per line",
             "Read a summary of it first"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "You cannot interpret a clause you have not isolated.",
           "source": "Standard practice for reading a provision"
         },
@@ -1264,12 +1264,12 @@
           "id": "pf-q-sec-2",
           "q": "A condition says over eighteen and resident in the State. Who qualifies?",
           "options": [
-            "Only a person who is both",
             "Anyone who is either",
             "Anyone over eighteen",
+            "Only a person who is both",
             "Anyone resident in the State"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "And needs every item. Swap it for or and the answer reverses.",
           "source": "Standard practice for reading a provision; a conjunctive condition needs every limb"
         },
@@ -1277,12 +1277,12 @@
           "id": "pf-q-sec-3",
           "q": "A definition says includes rather than means. What follows?",
           "options": [
+            "The ordinary meaning stays, and the definition adds to it",
             "The list is closed",
             "The definition applies to every Act",
-            "The word has no settled meaning",
-            "The ordinary meaning stays, and the definition adds to it"
+            "The word has no settled meaning"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Means gives a closed list. Includes extends the ordinary sense without shutting it down.",
           "source": "Standard drafting convention; 'includes' extends the ordinary meaning, 'means' defines exhaustively"
         },
@@ -1303,12 +1303,12 @@
           "id": "pf-q-sec-5",
           "q": "Where do you look for the meaning of a word used in an Act?",
           "options": [
-            "The section, then the Act's interpretation section, then the Interpretation Acts",
             "A dictionary",
             "A textbook on the subject",
+            "The section, then the Act's interpretation section, then the Interpretation Acts",
             "The heading printed beside the section"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "A statute means what it says it means, whatever ordinary usage suggests.",
           "source": "Interpretation Acts 1948 and 1967"
         },
@@ -1316,12 +1316,12 @@
           "id": "pf-q-sec-6",
           "q": "What is the purpose behind an Act allowed to do?",
           "options": [
+            "Choose between meanings the words can already carry",
             "Add words the Act does not contain",
             "Override a clear definition",
-            "Choose between meanings the words can already carry",
             "Decide the case on its own"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "If the words can bear only one meaning, purpose has nothing left to choose between.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         }

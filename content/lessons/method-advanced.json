@@ -213,11 +213,11 @@
           "q": "What makes a fact 'material' when you brief a case?",
           "options": [
             "It appears in the headnote",
+            "Changing it might change the result",
             "The judge mentioned it more than once",
-            "It was agreed between the parties",
-            "Changing it might change the result"
+            "It was agreed between the parties"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Materiality asks what would change the result, not what the judge stressed. If the outcome survives the change, the fact was background.",
           "source": "Standard case-briefing method"
         },
@@ -225,12 +225,12 @@
           "id": "qcb2",
           "q": "Why should you not cite from a headnote?",
           "options": [
+            "It is written by an editor and is not part of the judgment",
             "It is copyrighted separately",
             "It only appears in paid reports",
-            "It never states the ratio",
-            "It is written by an editor and is not part of the judgment"
+            "It never states the ratio"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "The headnote is the editor's summary. It is useful for orientation and unusable as authority, and it is wrong often enough to matter.",
           "source": "Standard case-briefing method; see Williams, Learning the Law"
         },
@@ -251,12 +251,12 @@
           "id": "qcb4",
           "q": "Which part of a brief is left out most often, and decides most later arguments?",
           "options": [
-            "What the court expressly did not decide",
             "The names of counsel",
             "The procedural history",
-            "The date of the judgment"
+            "The date of the judgment",
+            "What the court expressly did not decide"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Points reserved and arguments never made mark the edge of the authority, and that edge is exactly what the next case fights about.",
           "source": "Standard case-briefing method"
         },
@@ -264,12 +264,12 @@
           "id": "qcb5",
           "q": "Why write the brief before reading someone else's account of the case?",
           "options": [
-            "Because you cannot form an independent view after reading someone else's",
             "Because textbooks are usually wrong",
             "Because it is faster",
+            "Because you cannot form an independent view after reading someone else's",
             "Because textbooks omit the facts"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Produce first, check second. Reading the account first replaces your reading with theirs and leaves you nothing to compare.",
           "source": "Standard case-briefing method"
         }
@@ -473,12 +473,12 @@
           "id": "qet2",
           "q": "What is the characteristic failure of an IRAC answer?",
           "options": [
-            "Too many issues identified",
             "A long Rule section and a thin Application",
+            "Too many issues identified",
             "Concluding too firmly",
             "Citing the statute"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It shows recall rather than reasoning, and the marking bands are weighted to catch exactly that.",
           "source": "Standard examination technique; the rubric bands used by the problem questions in this app"
         },
@@ -487,11 +487,11 @@
           "q": "An oddly specific fact — an exact date, a precise sum — usually means what?",
           "options": [
             "It is realism, and can be ignored",
-            "It does legal work and you have not yet used it",
             "It is a distractor",
-            "It sets the jurisdiction"
+            "It sets the jurisdiction",
+            "It does legal work and you have not yet used it"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Specifics are not put in for atmosphere. A specific you have not used is usually an issue you have missed.",
           "source": "Standard examination technique"
         },
@@ -499,12 +499,12 @@
           "id": "qet4",
           "q": "If you are sitting a two-hour paper, how long should a forty-mark question out of a hundred take?",
           "options": [
+            "About forty-eight minutes",
             "About sixty minutes",
             "As long as it needs",
-            "About forty-eight minutes",
             "About thirty minutes"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Time divided in proportion to marks. Overrunning costs more elsewhere than it can earn here.",
           "source": "Standard examination technique; time allotted in proportion to marks"
         },
@@ -512,12 +512,12 @@
           "id": "qet5",
           "q": "Having argued both sides of a genuinely arguable point, what should the answer do?",
           "options": [
-            "Take a position and say why",
             "Leave it open, since it is arguable",
             "Set out a third view",
+            "Take a position and say why",
             "Restate the rule"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The conclusion band exists for this. An answer that refuses to decide throws away the marks it earned everywhere else.",
           "source": "Standard examination technique; the conclusion band of the rubric"
         }
@@ -731,12 +731,12 @@
           "id": "qcc1",
           "q": "The accused is acquitted of causing hurt. Can the victim still win a civil claim on the same facts?",
           "options": [
-            "Yes — the civil standard is lower",
             "No — the acquittal is conclusive",
             "Only if new evidence emerges",
+            "Yes — the civil standard is lower",
             "Only with the Public Prosecutor's consent"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "An acquittal means the case was not proved beyond reasonable doubt. More likely than not is a different question.",
           "source": "Standard classification; the criminal and civil standards of proof differ"
         },
@@ -746,10 +746,10 @@
           "options": [
             "The complainant",
             "The trial judge",
-            "The Inspector-General of Police",
-            "The Public Prosecutor, under Art 145(3)"
+            "The Public Prosecutor, under Art 145(3)",
+            "The Inspector-General of Police"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Article 145(3) puts the prosecution power in the hands of the Attorney General as Public Prosecutor.",
           "source": "Federal Constitution Art 145(3)"
         },
@@ -757,12 +757,12 @@
           "id": "qcc3",
           "q": "What is the civil standard of proof?",
           "options": [
+            "Balance of probabilities",
             "Beyond reasonable doubt",
             "Clear and convincing evidence",
-            "Balance of probabilities",
             "Prima facie case"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "More likely than not. The criminal standard is kept for criminal cases.",
           "source": "Standard classification; the civil standard is the balance of probabilities"
         },
@@ -783,12 +783,12 @@
           "id": "qcc5",
           "q": "A victim forgives the accused and asks for the matter to be dropped. What follows?",
           "options": [
-            "The civil claim can be withdrawn; the prosecution is not the victim's to withdraw",
             "Both automatically end",
             "Neither can be discontinued",
+            "The civil claim can be withdrawn; the prosecution is not the victim's to withdraw",
             "The court must discontinue both"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The suit belongs to the plaintiff. The prosecution is not the victim's to withdraw.",
           "source": "Federal Constitution Art 145(3)"
         }
@@ -999,12 +999,12 @@
           "id": "qci2",
           "q": "Which part of a citation is lost most often when it is copied, and matters most?",
           "options": [
-            "The court identifier",
             "The page number",
+            "The court identifier",
             "The volume number",
             "The party names"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Without knowing whether it is (FC), (CA) or (HC) you cannot weigh the authority at all.",
           "source": "Standard Malaysian citation practice"
         },
@@ -1025,12 +1025,12 @@
           "id": "qci4",
           "q": "A case appears both on the courts' portal and in the MLJ. Which should you cite?",
           "options": [
+            "The MLJ report",
             "The portal version",
             "Either, without comment",
-            "The MLJ report",
             "Both, always"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Cite the report where one exists. The unreported text has not been through editorial checking.",
           "source": "Standard Malaysian citation practice"
         },
@@ -1038,12 +1038,12 @@
           "id": "qci5",
           "q": "What makes a note of a statutory provision complete?",
           "options": [
+            "The section, plus which version you read and when",
             "The section number alone",
             "The Act number alone",
-            "The section, plus which version you read and when",
             "The section and the marginal note"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Consolidated texts change quietly. The version you read, and the date you read it, are part of the record.",
           "source": "Standard research practice; consolidated texts are amended between reprints"
         }
@@ -1231,11 +1231,11 @@
           "q": "A High Court judge thinks a Federal Court decision is wrong. What is the legitimate move?",
           "options": [
             "Decline to follow it",
+            "Distinguish it if the facts allow, and otherwise follow it",
             "Overrule it",
-            "Treat it as persuasive only",
-            "Distinguish it if the facts allow, and otherwise follow it"
+            "Treat it as persuasive only"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "The hierarchy binds. Departing from Federal Court authority is not a move open to the High Court.",
           "source": "Standard common law doctrine of stare decisis"
         },
@@ -1243,12 +1243,12 @@
           "id": "qan3",
           "q": "Why are English contract cases used with particular care in Malaysia?",
           "options": [
-            "Contract is codified in the Contracts Act 1950",
             "English cases are never persuasive",
+            "Contract is codified in the Contracts Act 1950",
             "The English courts use a different standard of proof",
             "Contract law is a state matter"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "The starting point is the words of the Act. An English authority helps only where the Act raises the same question.",
           "source": "Contracts Act 1950 (Act 136); contract is codified"
         },
@@ -1257,11 +1257,11 @@
           "q": "Which is the weakest of the three legitimate ways of handling an awkward precedent?",
           "options": [
             "Distinguishing it",
-            "Confining it to its facts",
             "Following it",
+            "Confining it to its facts",
             "Applying it by analogy"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "It is legitimate, but it usually signals discomfort rather than a reasoned limit.",
           "source": "Standard common law method on precedent"
         },
@@ -1521,12 +1521,12 @@
           "id": "qai1",
           "q": "What does s 17A of the Interpretation Acts 1948 and 1967 direct?",
           "options": [
+            "Prefer a construction that promotes the Act's purpose",
             "Prefer the literal meaning always",
             "Read penal provisions narrowly",
-            "Prefer a construction that promotes the Act's purpose",
             "Prefer the construction favouring the subject"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Section 17A is the statutory purposive direction, but it chooses only between readings the words can bear.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         },
@@ -1535,11 +1535,11 @@
           "q": "When does the purposive approach become relevant?",
           "options": [
             "Immediately, before reading the words",
-            "Once the words are capable of more than one reading",
             "Only in criminal cases",
-            "Only where there is a preamble"
+            "Only where there is a preamble",
+            "Once the words are capable of more than one reading"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Purpose chooses between available readings. Where the language admits only one meaning, there is nothing to choose.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         },
@@ -1548,11 +1548,11 @@
           "q": "'Rifles, shotguns, pistols and other weapons' — which canon limits 'other weapons'?",
           "options": [
             "Expressio unius",
+            "Ejusdem generis",
             "Noscitur a sociis",
-            "The golden rule",
-            "Ejusdem generis"
+            "The golden rule"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "General words following a list of specifics are read as confined to the same class.",
           "source": "Standard canon of construction; ejusdem generis"
         },
@@ -1573,12 +1573,12 @@
           "id": "qai5",
           "q": "What weight does a marginal note carry?",
           "options": [
-            "An indication of arrangement that cannot control a clear provision",
             "Enacted text of equal weight",
             "Inadmissible for any purpose",
-            "Conclusive of purpose"
+            "Conclusive of purpose",
+            "An indication of arrangement that cannot control a clear provision"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Marginal notes are not enacted words. They orient the reader; they do not decide the meaning.",
           "source": "Standard canon of construction; marginal notes are not enacted words"
         },

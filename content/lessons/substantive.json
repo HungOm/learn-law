@@ -283,12 +283,12 @@
           "id": "qlb1",
           "q": "Who holds the right in Article 10(1)(a)?",
           "options": [
+            "Citizens",
             "Every person in the Federation",
             "Every natural person",
-            "Citizens",
             "Citizens and permanent residents"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Article 10(1) says citizens. Article 5 says persons, which is wider. Check who you are dealing with first.",
           "source": "Federal Constitution Art 10(1)"
         },
@@ -310,11 +310,11 @@
           "q": "How do Pung Chen Choon and Sivarasa stand together?",
           "options": [
             "Sivarasa overruled Pung Chen Choon",
-            "Both still stand, and the tension between them is unresolved",
             "Pung Chen Choon overruled Sivarasa",
+            "Both still stand, and the tension between them is unresolved",
             "Both have been overruled"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Writing that one killed off the other is a mistake. Hold both and argue in the alternative.",
           "source": "PP v Pung Chen Choon [1994] 1 MLJ 566 (FC); Sivarasa Rasiah v Badan Peguam Malaysia [2010] 2 MLJ 333 (FC)"
         },
@@ -324,10 +324,10 @@
           "options": [
             "It falls outside Article 10 entirely",
             "It is presumed valid",
-            "The court looks at what the law does, not at how it is worded",
-            "Only the drafter's stated purpose counts"
+            "Only the drafter's stated purpose counts",
+            "The court looks at what the law does, not at how it is worded"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Effect matters more than form. That is what makes the whole analysis worth doing.",
           "source": "Federal Constitution Art 10; a restriction is judged by its effect on the right, not by its wording"
         },
@@ -605,10 +605,10 @@
           "options": [
             "They are two separate offences of equal weight",
             "Section 300 sets the sentence for section 299",
-            "Culpable homicide is the big category; murder is a smaller one inside it",
-            "Section 299 applies only where section 300 does not"
+            "Section 299 applies only where section 300 does not",
+            "Culpable homicide is the big category; murder is a smaller one inside it"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Every murder is culpable homicide. Not every culpable homicide is murder.",
           "source": "Penal Code ss 299 and 300"
         },
@@ -616,12 +616,12 @@
           "id": "qhm2",
           "q": "Section 300(c) asks two questions. What are they?",
           "options": [
-            "Did the accused intend the injury actually caused, and is that injury enough in the ordinary course of nature to cause death",
             "Did the accused intend death, and did death follow",
             "Was the act very dangerous, and did the accused know it",
-            "Was there provocation, and was it grave and sudden"
+            "Was there provocation, and was it grave and sudden",
+            "Did the accused intend the injury actually caused, and is that injury enough in the ordinary course of nature to cause death"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The second question is answered by the pathologist, not by the accused. That is why (c) is often easier to prove than (a).",
           "source": "Penal Code s 300(c)"
         },
@@ -642,12 +642,12 @@
           "id": "qhm4",
           "q": "What does Exception 1 to section 300 require?",
           "options": [
+            "Grave and sudden provocation that destroyed self-control, and the death of the person who gave it",
             "Any provocation at all",
             "Provocation together with planning",
-            "Grave and sudden provocation that destroyed self-control, and the death of the person who gave it",
             "Provocation given by someone else"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "And it does not set the accused free. It reduces murder to culpable homicide not amounting to murder.",
           "source": "Penal Code, Exception 1 to s 300"
         },
@@ -657,10 +657,10 @@
           "options": [
             "Which court tries it",
             "How the offence is classified",
-            "The elements of the offence",
-            "The range — the mandatory death penalty went in 2023 and sentencing is now discretionary"
+            "The range — the mandatory death penalty went in 2023 and sentencing is now discretionary",
+            "The elements of the offence"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Sentencing provisions move. Always read a current source.",
           "source": "Penal Code s 302; the sentencing provisions were amended in 2023 and must be read in a current reprint"
         }
@@ -922,12 +922,12 @@
           "id": "qpo1",
           "q": "What single question separates theft, criminal breach of trust and cheating?",
           "options": [
-            "What was taken",
             "How the accused came to have the property",
+            "What was taken",
             "How much it was worth",
             "Whether the accused gained anything"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Taken without consent. Received lawfully, then kept. Or handed over because of a lie.",
           "source": "Penal Code ss 378, 405 and 415"
         },
@@ -936,11 +936,11 @@
           "q": "Property is received lawfully and then treated as the receiver's own. Which offence?",
           "options": [
             "Theft",
-            "Cheating",
             "Criminal breach of trust",
+            "Cheating",
             "Extortion"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Section 405. Entrusted with the property, then dishonestly taking it for yourself.",
           "source": "Penal Code s 405"
         },
@@ -948,12 +948,12 @@
           "id": "qpo3",
           "q": "Which section defines theft?",
           "options": [
-            "Section 405",
             "Section 378",
+            "Section 405",
             "Section 415",
             "Section 300"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Dishonestly moving movable property out of another's possession, without their consent.",
           "source": "Penal Code s 378"
         },
@@ -961,12 +961,12 @@
           "id": "qpo4",
           "q": "Someone hands over property, but only because they were lied to. Which offence?",
           "options": [
-            "Cheating",
             "Theft",
+            "Cheating",
             "Criminal breach of trust",
             "Robbery"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Section 415. The victim consents, but the lie is what produced the consent.",
           "source": "Penal Code s 415"
         },
@@ -975,11 +975,11 @@
           "q": "Can one set of facts support more than one charge?",
           "options": [
             "No, the charges rule each other out",
-            "Yes, and charging in the alternative is ordinary practice",
             "Only with the court's leave",
-            "Only in the Sessions Court"
+            "Only in the Sessions Court",
+            "Yes, and charging in the alternative is ordinary practice"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Saying which charge is the better one, and why, is part of the answer.",
           "source": "Standard charging practice; charges may be laid in the alternative"
         }
@@ -1255,10 +1255,10 @@
           "options": [
             "When it is posted",
             "When it is signed",
-            "When it reaches the knowledge of the person it is made to",
-            "When it is written"
+            "When it is written",
+            "When it reaches the knowledge of the person it is made to"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Section 4(1). Each kind of message has its own moment, so read the right subsection.",
           "source": "Contracts Act 1950 s 4(1)"
         },
@@ -1267,11 +1267,11 @@
           "q": "When is an acceptance communicated, as against the proposer?",
           "options": [
             "When it reaches the proposer",
+            "When it is put in a course of transmission and is out of the acceptor's power",
             "When the proposer reads it",
-            "When the acceptor makes up her mind",
-            "When it is put in a course of transmission and is out of the acceptor's power"
+            "When the acceptor makes up her mind"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Section 4(2)(a). As against the acceptor it is complete only when it comes to the proposer's knowledge.",
           "source": "Contracts Act 1950 s 4(2)"
         },
@@ -1279,12 +1279,12 @@
           "id": "qfm3",
           "q": "Until when may a proposal be taken back?",
           "options": [
+            "Until communication of the acceptance is complete as against the proposer",
             "Until the acceptance is received",
             "At any time before the contract is performed",
-            "Until the date the offer says it expires",
-            "Until communication of the acceptance is complete as against the proposer"
+            "Until the date the offer says it expires"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Section 5(1), which is why the moment fixed by section 4(2)(a) decides the race.",
           "source": "Contracts Act 1950 s 5(1)"
         },
@@ -1293,11 +1293,11 @@
           "q": "A letter withdrawing an offer sits unopened on the offeree's desk. Has it been communicated to her?",
           "options": [
             "Yes, on delivery",
-            "No — section 4(3)(b) asks for knowledge",
             "Yes, on posting",
-            "Only if it was sent by registered post"
+            "Only if it was sent by registered post",
+            "No — section 4(3)(b) asks for knowledge"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Delivery is not knowledge, and this is the step most answers get wrong.",
           "source": "Contracts Act 1950 s 4(3)(b)"
         },
@@ -1306,11 +1306,11 @@
           "q": "A proposer promises to keep an offer open for fourteen days. Is that promise binding?",
           "options": [
             "Yes, always",
+            "Not unless something was given for it",
             "Yes, if it is in writing",
-            "Yes, if the other side relied on it",
-            "Not unless something was given for it"
+            "Yes, if the other side relied on it"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "It means he could have revoked in time, not that he did. Check the timing under sections 4 and 5 first.",
           "source": "Contracts Act 1950 ss 4, 5 and 26"
         }
@@ -1555,10 +1555,10 @@
           "options": [
             "Consideration must be adequate",
             "Consideration must be in writing",
-            "Consideration must come from the promisee alone",
-            "Past consideration is good, and consideration need not come from the promisee"
+            "Past consideration is good, and consideration need not come from the promisee",
+            "Consideration must come from the promisee alone"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Both differences decide cases, and both come straight from the words of the section.",
           "source": "Contracts Act 1950 s 2(d)"
         },
@@ -1566,12 +1566,12 @@
           "id": "qcs2",
           "q": "Does section 2(d) mean a stranger to a contract can sue on it?",
           "options": [
-            "No — a stranger to the contract still cannot sue on it",
             "Yes",
+            "No — a stranger to the contract still cannot sue on it",
             "Yes, for written contracts",
             "Only where the consideration came from the stranger"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Consideration may come from a stranger. Who may sue is a separate question, and the answer is privity.",
           "source": "Contracts Act 1950 s 2(d); Kepong Prospecting Ltd v Schmidt [1968] 1 MLJ 170 (PC)"
         },
@@ -1579,12 +1579,12 @@
           "id": "qcs3",
           "q": "What does section 26(a) require?",
           "options": [
+            "Writing and registration, natural love and affection, and parties in a near relation",
             "Writing alone",
             "Registration alone",
-            "Natural love and affection alone",
-            "Writing and registration, natural love and affection, and parties in a near relation"
+            "Natural love and affection alone"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Writing on its own is not enough. This is the limb most often stated only halfway.",
           "source": "Contracts Act 1950 s 26(a)"
         },
@@ -1593,11 +1593,11 @@
           "q": "What does Explanation 2 to section 26 say?",
           "options": [
             "Consideration must be adequate",
-            "Inadequate consideration does not make an agreement void, but it may bear on free consent",
             "Inadequate consideration is no consideration at all",
+            "Inadequate consideration does not make an agreement void, but it may bear on free consent",
             "Adequacy is entirely for the parties"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "It is the bridge between consideration and the provisions on free consent.",
           "source": "Contracts Act 1950 s 26, Explanation 2"
         },
@@ -1606,11 +1606,11 @@
           "q": "A promise is made in return for a past voluntary act done for the promisor. Which limb saves it?",
           "options": [
             "Section 26(a)",
-            "Section 26(b)",
             "Section 26(c)",
-            "None — it fails"
+            "None — it fails",
+            "Section 26(b)"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "The act must have been voluntary and done for the promisor. That is the safe route where nobody asked for it.",
           "source": "Contracts Act 1950 s 26(b)"
         }
@@ -1897,11 +1897,11 @@
           "q": "Where do you look to find whether an offence is seizable and bailable?",
           "options": [
             "The Penal Code section that creates it",
+            "The First Schedule to the Criminal Procedure Code",
             "The charge sheet",
-            "The Courts of Judicature Act 1964",
-            "The First Schedule to the Criminal Procedure Code"
+            "The Courts of Judicature Act 1964"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Classification decides almost everything about the procedure, so look it up before you reason about it.",
           "source": "Criminal Procedure Code, First Schedule"
         },
@@ -1910,11 +1910,11 @@
           "q": "Malaysia says 'seizable' where England says what?",
           "options": [
             "Indictable",
-            "Arrestable",
             "Summary",
-            "Triable either way"
+            "Triable either way",
+            "Arrestable"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "And the two classifications are not identical, so it is more than a difference of naming.",
           "source": "Criminal Procedure Code, First Schedule; standard classification"
         },
@@ -1923,11 +1923,11 @@
           "q": "What does Article 5(3) require on arrest?",
           "options": [
             "That he be produced before a magistrate within twenty-four hours",
-            "That the person be told the grounds, and be allowed a lawyer of his choice",
             "That the charge be put in writing",
-            "That a lawyer be present at all times"
+            "That a lawyer be present at all times",
+            "That the person be told the grounds, and be allowed a lawyer of his choice"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Article 5(4) is the twenty-four hour provision. Keep the two apart.",
           "source": "Federal Constitution Art 5(3)"
         },
@@ -1948,12 +1948,12 @@
           "id": "qcp5",
           "q": "What does 'maximum evaluation' mean at the close of the prosecution case?",
           "options": [
-            "The court must test how believable the prosecution evidence is, not merely note that it exists",
             "The court must take the evidence at its highest",
             "The prosecution must call every possible witness",
-            "The accused must be called to give evidence"
+            "The accused must be called to give evidence",
+            "The court must test how believable the prosecution evidence is, not merely note that it exists"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The question is whether that evidence, left unanswered, would warrant a conviction.",
           "source": "Balachandran v PP [2005] 2 MLJ 301 (FC)"
         }
@@ -2228,12 +2228,12 @@
           "id": "qng1",
           "q": "What are the four questions in a negligence claim?",
           "options": [
-            "Duty, breach, causation, remoteness",
             "Duty, damage, defence, how much money",
             "Foreseeability, proximity, policy, damage",
+            "Duty, breach, causation, remoteness",
             "Act, omission, causation, loss"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Take them in order, because each one assumes the one before it has been answered.",
           "source": "Standard classification; the elements of the tort of negligence"
         },
@@ -2242,11 +2242,11 @@
           "q": "On a doctor's duty to warn about risks, what has Malaysia adopted?",
           "options": [
             "The Bolam test",
-            "A duty to disclose absolutely everything",
             "The Rogers v Whitaker approach — what a reasonable patient would want to know",
+            "A duty to disclose absolutely everything",
             "No duty to advise of risks at all"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Foo Fio Na is a real Malaysian departure. Note that it is about advice, not diagnosis or treatment.",
           "source": "Foo Fio Na v Dr Soo Fook Mun [2007] 1 MLJ 593 (FC); Zulhasnimar bt Hasan Basri v Dr Kuppu Velumani P [2017] 5 MLJ 438 (FC)"
         },
@@ -2267,12 +2267,12 @@
           "id": "qng4",
           "q": "What does contributory negligence do to a claim?",
           "options": [
-            "The damages are cut by the share the court thinks just",
             "The claim fails altogether",
             "It affects only who pays the costs",
+            "The damages are cut by the share the court thinks just",
             "It moves the burden of proof"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "It shares out the responsibility, so it is a reduction rather than a defence.",
           "source": "Civil Law Act 1956 s 12"
         },
@@ -2281,11 +2281,11 @@
           "q": "When does the limitation clock generally start in negligence?",
           "options": [
             "When the careless act is done",
+            "When the damage occurs",
             "When the plaintiff finds out about the damage",
-            "When a lawyer is instructed",
-            "When the damage occurs"
+            "When a lawyer is instructed"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Which can be a good deal later than the careless act itself. The general period is six years.",
           "source": "Limitation Act 1953 s 6; in negligence time runs from the damage"
         }
@@ -2585,12 +2585,12 @@
           "id": "qtr2",
           "q": "Why does section 6 of the Civil Law Act 1956 shut English land law out?",
           "options": [
-            "English doctrines of equitable interests and notice would cut across the Torrens system",
             "English land law is obsolete",
             "Land is a State matter",
-            "The National Land Code says so"
+            "The National Land Code says so",
+            "English doctrines of equitable interests and notice would cut across the Torrens system"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The exclusion is what keeps the register conclusive, and conclusiveness is the whole mechanism.",
           "source": "Civil Law Act 1956 s 6"
         },
@@ -2599,11 +2599,11 @@
           "q": "What is deferred indefeasibility?",
           "options": [
             "Every registered title is indefeasible",
-            "The first owner registered through fraud or forgery can be undone; a later honest buyer who paid cannot",
             "No registered title is safe until a year has passed",
-            "Whether a title is safe depends on the price that was paid"
+            "Whether a title is safe depends on the price that was paid",
+            "The first owner registered through fraud or forgery can be undone; a later honest buyer who paid cannot"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "The protection is deferred to the next purchaser, who bought in good faith and for value.",
           "source": "National Land Code s 340; Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC)"
         },
@@ -2611,12 +2611,12 @@
           "id": "qtr4",
           "q": "What did Tan Ying Hong do?",
           "options": [
-            "Overruled Adorna Properties and restored deferred indefeasibility",
             "Introduced immediate indefeasibility",
             "Abolished caveats",
+            "Overruled Adorna Properties and restored deferred indefeasibility",
             "Amended section 340"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "So anything written before 2010 on indefeasibility has to be checked against it.",
           "source": "Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC), departing from Adorna Properties Sdn Bhd v Boonsom Boonyanit [2001] 1 MLJ 241 (FC)"
         },
@@ -2624,12 +2624,12 @@
           "id": "qtr5",
           "q": "What is the risk of entering a caveat with no caveatable interest?",
           "options": [
+            "Having to compensate the person you held up",
             "Nothing, beyond having it removed",
             "A fine under the Code",
-            "Having to compensate the person you held up",
             "Losing the right to sue at all"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "It is not a free way to block somebody else's transaction.",
           "source": "National Land Code, the caveat provisions (ss 320-330)"
         }
@@ -2922,11 +2922,11 @@
           "q": "What follows from a company having its own legal personality?",
           "options": [
             "The company cannot be sued",
-            "Members are not, by reason only of membership, liable for the company's debts",
             "Directors are always personally liable",
+            "Members are not, by reason only of membership, liable for the company's debts",
             "The company's property belongs to its members"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Everything else in the module follows from this one idea.",
           "source": "Salomon v A Salomon & Co Ltd [1897] AC 22; Companies Act 2016 (Act 777)"
         },
@@ -2935,11 +2935,11 @@
           "q": "What is the commonest route to making a director personally liable?",
           "options": [
             "Lifting the veil for fraud",
-            "Agency",
             "A statute that expressly imposes liability",
+            "Agency",
             "The fact that he controls the company"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Prefer the statutory route where one exists, because the common law grounds are narrow.",
           "source": "Companies Act 2016 (Act 777); the statutory provisions imposing personal liability on a director"
         },
@@ -2949,10 +2949,10 @@
           "options": [
             "Yes, where control is total",
             "Yes, in a one-member company",
-            "Yes, as between parent and subsidiary",
-            "No — control alone is never enough"
+            "No — control alone is never enough",
+            "Yes, as between parent and subsidiary"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "A wholly owned subsidiary is still a separate person from its parent. That is what Salomon decided.",
           "source": "Salomon v A Salomon & Co Ltd [1897] AC 22"
         },
@@ -2974,11 +2974,11 @@
           "q": "What is the difference between a derivative action and an oppression claim?",
           "options": [
             "They are two names for the same remedy",
-            "A derivative action vindicates the company's right; an oppression claim vindicates the member's own",
             "A derivative action needs no leave",
+            "A derivative action vindicates the company's right; an oppression claim vindicates the member's own",
             "An oppression claim is brought by the company"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Confusing them is a standard and very visible error.",
           "source": "Companies Act 2016 ss 347-350 (derivative action) and s 346 (oppression)"
         }
@@ -3286,10 +3286,10 @@
           "options": [
             "Is this relevant in the ordinary sense",
             "Would it be fair to admit this",
-            "Does this help prove anything",
-            "Which section makes this relevant"
+            "Which section makes this relevant",
+            "Does this help prove anything"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The Act is a closed list. If you cannot name a section, the evidence does not go in.",
           "source": "Evidence Act 1950, Part I; relevancy is a closed list"
         },
@@ -3297,12 +3297,12 @@
           "id": "qev2",
           "q": "Which of these is a relevancy provision under the Act?",
           "options": [
-            "The hearsay rule at common law",
             "Facts forming part of the same transaction",
+            "The hearsay rule at common law",
             "The best evidence rule",
             "A judge's discretion to exclude unfair evidence"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "That is the res gestae provision, and the relevancy sections are where an answer should start.",
           "source": "Evidence Act 1950 s 6"
         },
@@ -3312,10 +3312,10 @@
           "options": [
             "The evidential burden",
             "Both of them shift",
-            "The legal burden",
-            "Neither of them shifts"
+            "Neither of them shifts",
+            "The legal burden"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Saying 'the burden shifted' without saying which one is the standard imprecision here.",
           "source": "Evidence Act 1950 ss 101 and 102"
         },
@@ -3336,12 +3336,12 @@
           "id": "qev5",
           "q": "Who must prove a fact he asserts, where a right or liability depends on it?",
           "options": [
-            "Whichever party can get at the evidence more easily",
             "The person who wants the court to give judgment on it",
+            "Whichever party can get at the evidence more easily",
             "The plaintiff, always",
             "The defendant, once a prima facie case is shown"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Section 101, which is the legal burden.",
           "source": "Evidence Act 1950 s 101"
         }
@@ -3631,12 +3631,12 @@
           "id": "qcvp1",
           "q": "When does a contract cause of action accrue for limitation purposes?",
           "options": [
+            "On breach",
             "When the loss is suffered",
             "When the claimant finds out",
-            "On breach",
             "When payment is demanded"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "In tort it generally accrues when damage occurs, which can be much later than the act.",
           "source": "Limitation Act 1953 s 6; in contract the cause of action accrues on breach"
         },
@@ -3657,12 +3657,12 @@
           "id": "qcvp3",
           "q": "What must a pleading contain?",
           "options": [
+            "Material facts, not evidence and not law",
             "The evidence relied on",
             "The legal argument",
-            "Material facts, not evidence and not law",
             "The witness statements"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "And some matters — fraud, misrepresentation, breach of trust — must be pleaded specifically, with particulars.",
           "source": "Rules of Court 2012, Order 18"
         },
@@ -3670,12 +3670,12 @@
           "id": "qcvp4",
           "q": "What is the difference between striking out and summary judgment?",
           "options": [
-            "Striking out attacks the pleading as a document; summary judgment looks at the evidence",
             "They are two names for the same application",
             "Striking out is available to defendants only",
-            "Summary judgment is available only in the High Court"
+            "Summary judgment is available only in the High Court",
+            "Striking out attacks the pleading as a document; summary judgment looks at the evidence"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "On a strike-out for no reasonable cause of action you assume every pleaded fact is true.",
           "source": "Rules of Court 2012, Order 14 and Order 18 rule 19"
         },
@@ -3683,12 +3683,12 @@
           "id": "qcvp5",
           "q": "What is the general limitation period for an action to recover land?",
           "options": [
-            "Twelve years",
             "Six years",
             "Three years",
+            "Twelve years",
             "Twenty years"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Contract and tort are generally six. Land is twelve.",
           "source": "Limitation Act 1953; twelve years for an action to recover land"
         }
@@ -4004,12 +4004,12 @@
           "id": "qjr1",
           "q": "What are the three grounds of judicial review?",
           "options": [
+            "Illegality, irrationality, procedural impropriety",
             "Illegality, unfairness, disproportionality",
             "Ultra vires, bias, error of fact",
-            "Error of law, error of fact, bad faith",
-            "Illegality, irrationality, procedural impropriety"
+            "Error of law, error of fact, bad faith"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Proportionality is argued as a fourth ground, and its status should be checked rather than assumed.",
           "source": "GCHQ [1985] AC 374, as received in Malaysia"
         },
@@ -4031,11 +4031,11 @@
           "q": "What must an applicant for judicial review show at the threshold?",
           "options": [
             "A prima facie case on the merits",
+            "Leave, and that he is adversely affected by the decision",
             "An arguable error of law and nothing more",
-            "That he pays tax in the area",
-            "Leave, and that he is adversely affected by the decision"
+            "That he pays tax in the area"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Both are threshold requirements, reached before the merits are looked at.",
           "source": "Rules of Court 2012, Order 53"
         },
@@ -4315,12 +4315,12 @@
           "id": "qlr1",
           "q": "What is the trade-off between a rule and a standard?",
           "options": [
-            "Rules buy predictability at the cost of occasionally getting the case wrong; standards buy accuracy at the cost of predictability",
             "Rules are always better",
             "Standards are always fairer",
+            "Rules buy predictability at the cost of occasionally getting the case wrong; standards buy accuracy at the cost of predictability",
             "Rules come from statute and standards come from judges"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Which to prefer is a design question, and the answer depends on what the provision is for.",
           "source": "Schauer, Thinking Like a Lawyer"
         },
@@ -4341,12 +4341,12 @@
           "id": "qlr3",
           "q": "What is wrong with using legal realism to say a judge will decide as they please?",
           "options": [
-            "It is not a legal argument, and it is wrong about how most cases are decided",
             "Realism has been discredited",
             "It is true only of appellate courts",
+            "It is not a legal argument, and it is wrong about how most cases are decided",
             "Judges are not allowed to consider policy"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The range of defensible positions is real, but it is bounded.",
           "source": "Standard jurisprudential material"
         },
@@ -4354,12 +4354,12 @@
           "id": "qlr4",
           "q": "What makes reasoning by analogy legitimate rather than arbitrary?",
           "options": [
+            "The bounded range of defensible ways to state the earlier ratio",
             "The judge's discretion",
             "The agreement of the parties",
-            "The bounded range of defensible ways to state the earlier ratio",
             "The absence of a statute on the point"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "You can state a ratio at more than one level of generality, but not at any level you like.",
           "source": "Standard common law method on precedent and analogy"
         }
@@ -4644,12 +4644,12 @@
           "id": "qin1",
           "q": "Where should the interpretation of a Malaysian statute start?",
           "options": [
-            "Section 17A of the Interpretation Acts 1948 and 1967",
             "The literal rule",
             "The mischief rule",
+            "Section 17A of the Interpretation Acts 1948 and 1967",
             "The English cases on interpretation"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Starting from the English canons is the single most common error in this module.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         },
@@ -4670,12 +4670,12 @@
           "id": "qin3",
           "q": "Which traditional rule is the closest ancestor of section 17A?",
           "options": [
-            "The mischief rule",
             "The literal rule",
             "The golden rule",
-            "Ejusdem generis"
+            "Ejusdem generis",
+            "The mischief rule"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Asking what defect the Act was passed to cure is the same question in older clothes.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         },
@@ -4683,12 +4683,12 @@
           "id": "qin4",
           "q": "Which presumption applies to the mental element of a criminal offence?",
           "options": [
-            "Strict liability is not lightly inferred",
             "A mental element is never required",
             "The mental element is presumed absent",
+            "Strict liability is not lightly inferred",
             "Strict liability applies to every regulatory offence"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The presumption can be displaced, expressly or by necessary implication.",
           "source": "Standard common law presumption; strict liability is not lightly inferred"
         },
@@ -4697,11 +4697,11 @@
           "q": "Words in the singular in an Act — what do they include?",
           "options": [
             "Only the singular",
-            "The plural, unless a contrary intention appears",
             "The plural only where the Act says so",
-            "The plural in penal provisions only"
+            "The plural in penal provisions only",
+            "The plural, unless a contrary intention appears"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "It is the aid that decided the unilateral conversion question under Article 12(4).",
           "source": "Federal Constitution, Eleventh Schedule; Interpretation Acts 1948 and 1967"
         }
@@ -4709,6 +4709,1291 @@
       "plate": "statute-page",
       "plateCaption": "The words under the glass. Section 17A chooses between readings the words can bear; it does not licence one they cannot.",
       "readMinutes": 10
+    },
+    {
+      "id": "l-vicarious",
+      "moduleId": "m07-tort",
+      "title": "When someone else pays: vicarious liability",
+      "summary": "An employer can be liable for a wrong they did not commit, forbade, and knew nothing about. The doctrine is strict, and the argument is about its limits.",
+      "minutes": 28,
+      "readMinutes": 9,
+      "sections": [
+        {
+          "id": "sec-l-vicarious-0",
+          "h": "Liable without fault",
+          "readMinutes": 2,
+          "keypoint": "Vicarious liability makes one person answer for another's tort without any wrongdoing of their own.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Almost everything else in tort asks what the defendant did wrong. This does not."
+            },
+            {
+              "t": "p",
+              "text": "An employer may be liable for an employee's tort even though the employer was careful, gave clear instructions, and forbade the very thing that happened."
+            },
+            {
+              "t": "p",
+              "text": "That is not a loophole. It is the doctrine working as intended, and the first thing to be clear about is that no fault of the employer is required."
+            },
+            {
+              "t": "caution",
+              "text": "So an answer arguing that the employer took every precaution has argued the wrong point. Precautions matter to primary liability in negligence, not to this."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-vicarious-1",
+          "h": "Why the law does this",
+          "readMinutes": 2,
+          "keypoint": "The employer sets the enterprise in motion, profits from it, and can insure and spread the loss.",
+          "body": [
+            {
+              "t": "p",
+              "text": "It is worth being able to say why, because the reasons decide the hard cases at the edges."
+            },
+            {
+              "t": "p",
+              "text": "The enterprise creates the risk. The employer directs the activity and takes the profit from it."
+            },
+            {
+              "t": "p",
+              "text": "And there is a blunt practical reason: an injured claimant recovers nothing from an employee with no money, and the employer can insure and price the risk."
+            },
+            {
+              "t": "predict",
+              "prompt": "Is vicarious liability best justified by fault, by risk-creation, or by who can pay?",
+              "options": [
+                "Fault — the employer chose the employee",
+                "Risk-creation and loss-spreading, with the ability to pay as a practical reinforcement"
+              ],
+              "answer": 1,
+              "reveal": "Choosing the employee is a fault-based idea, and it cannot explain liability for a wrong the employer expressly prohibited. The enterprise account can: the employer created the situation in which the wrong became possible. Which justification you accept changes how widely you would extend the doctrine."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-vicarious-2",
+          "h": "Two questions, in order",
+          "readMinutes": 3,
+          "keypoint": "First, is the relationship one that attracts the doctrine; second, was the wrong closely enough connected to it.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The analysis has two stages and they must be taken in order."
+            },
+            {
+              "t": "p",
+              "text": "Stage one is the relationship. Employment is the paradigm, and the employee or independent contractor distinction does most of the work here."
+            },
+            {
+              "t": "p",
+              "text": "Stage two is connection. Not every wrong an employee commits is the employer's problem; the wrong has to be sufficiently connected to what they were employed to do."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Was the act a wrongful way of doing something authorised, or something wholly outside the job?",
+                "Did the employment create the opportunity, or merely the occasion?",
+                "Was the employee pursuing the employer's business at all?"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Stage two is where the modern arguments are. Doing an authorised task badly is the easy case; deliberate wrongdoing is not."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-vicarious-3",
+          "h": "The frolic, and the deliberate wrong",
+          "readMinutes": 2,
+          "keypoint": "An employee on a personal detour may take themselves outside the doctrine, but deliberate wrongdoing does not automatically do so.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Two edges are worth knowing because problems are built on them."
+            },
+            {
+              "t": "p",
+              "text": "The first is the personal detour. An employee who abandons the job for their own purposes may put themselves outside it, and the question is one of degree rather than a bright line."
+            },
+            {
+              "t": "p",
+              "text": "The second is deliberate wrongdoing. It is tempting to say an intentional wrong can never be part of the job. That is too quick: the doctrine can reach a deliberate act where the employment created more than a mere opportunity for it."
+            },
+            {
+              "t": "checkpoint",
+              "q": "An employee deliberately assaults a customer during a dispute about the employer's business. Is the employer automatically outside the doctrine?",
+              "options": [
+                "Yes — a deliberate crime cannot be in the course of employment",
+                "No — deliberateness does not end the question; the connection to the employment still has to be assessed"
+              ],
+              "answer": 1,
+              "why": "Treating intention as automatically decisive would make the doctrine easy to escape and would not match how the connection question is asked. The analysis is about the closeness of the tie to the employment, not about the employee's state of mind."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-tort-vic-1",
+          "q": "What must a claimant show at the first stage of a vicarious liability claim?",
+          "options": [
+            "That the employer was careless in supervising",
+            "That the relationship between wrongdoer and defendant is one the doctrine attaches to",
+            "That the employee cannot pay",
+            "That the employer authorised the wrong"
+          ],
+          "answer": 1,
+          "why": "Stage one is about the relationship. Carelessness in supervision is a primary negligence claim against the employer, which is a different action with a different test."
+        },
+        {
+          "id": "q-tort-vic-2",
+          "q": "Why does the enterprise justification explain the doctrine better than a fault-based one?",
+          "options": [
+            "Because employers are usually insured",
+            "Because employees are rarely careless",
+            "Because liability arises even where the employer expressly prohibited the act",
+            "Because it is easier to prove"
+          ],
+          "answer": 2,
+          "why": "A fault account cannot explain liability for something the employer forbade. The risk-creation account can, because the employer set up the activity in which the wrong became possible."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "civil-law-act-1956",
+          "where": "section 3 — the provision under which this doctrine applies in Malaysia at all, including the words limiting received law to local circumstances"
+        },
+        {
+          "bookId": "norchaya-torts",
+          "where": "the chapter on vicarious liability, for the Malaysian treatment of the connection question"
+        }
+      ],
+      "source": "Vicarious liability is received English tort doctrine applying in Malaysia under the Civil Law Act 1956, s 3. No case is cited and none is relied on.",
+      "verify": "Read section 3 of the Civil Law Act 1956 in the current published version, and check the currency date on the reprint. Then check how the Malaysian courts currently state the connection test before relying on any formulation here.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-nuisance",
+      "moduleId": "m07-tort",
+      "title": "Living next to someone: nuisance",
+      "summary": "Negligence asks whether the defendant took care. Nuisance asks whether what the claimant is putting up with is unreasonable. That is a different question with a different answer.",
+      "minutes": 28,
+      "readMinutes": 9,
+      "sections": [
+        {
+          "id": "sec-l-nuisance-0",
+          "h": "The interest being protected",
+          "readMinutes": 2,
+          "keypoint": "Nuisance protects the use and enjoyment of land, which is why the claimant's connection to the land matters.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Nuisance is not a tort about carelessness. It is a tort about land."
+            },
+            {
+              "t": "p",
+              "text": "What it protects is the use and enjoyment of land, which is why the first question is what interest the claimant has in the land affected."
+            },
+            {
+              "t": "p",
+              "text": "Someone with no interest in the land may be genuinely inconvenienced and still have no claim in private nuisance."
+            },
+            {
+              "t": "caution",
+              "text": "This catches people out constantly. The instinct is that anyone harmed should be able to sue, and this tort is not built that way."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-nuisance-1",
+          "h": "Unreasonable, not merely annoying",
+          "readMinutes": 3,
+          "keypoint": "The test is whether the interference is unreasonable, judged by locality, duration, intensity and any malice.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Every neighbour is occasionally irritating. The tort catches interference that goes beyond what one must put up with."
+            },
+            {
+              "t": "p",
+              "text": "Reasonableness here is assessed by the circumstances, and the factors recur."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Locality — what is normal for this kind of area",
+                "Duration and frequency — a one-off event is rarely enough",
+                "Intensity — how bad, at what times",
+                "Any malice — deliberate interference is harder to justify",
+                "Whether the claimant is unusually sensitive"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Note what is missing from that list. The defendant's care is not on it. A carefully run activity can still be a nuisance."
+            },
+            {
+              "t": "predict",
+              "prompt": "A factory operates to the highest standards and still makes its residential neighbours' lives difficult. Is that a defence?",
+              "options": [
+                "Yes — the defendant took all reasonable care",
+                "No — the question is the effect on the claimant, not the defendant's diligence"
+              ],
+              "answer": 1,
+              "reveal": "This is the sharpest difference between nuisance and negligence, and it is where a candidate who has only learned negligence goes wrong. Care answers a question nuisance does not ask."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-nuisance-2",
+          "h": "Public nuisance is a different thing",
+          "readMinutes": 2,
+          "keypoint": "Public nuisance affects a class of the public, and a private claimant must show damage over and above the rest.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The name suggests a bigger version of the same tort. It is not."
+            },
+            {
+              "t": "p",
+              "text": "Public nuisance concerns interference affecting a class of the public rather than one occupier's land."
+            },
+            {
+              "t": "p",
+              "text": "An individual suing on it must show they suffered damage beyond that suffered by the public generally. Without that, the complaint is a public matter rather than their action."
+            },
+            {
+              "t": "checkpoint",
+              "q": "A road is blocked, inconveniencing a whole neighbourhood including your client. Can your client sue in public nuisance?",
+              "options": [
+                "Yes — they were inconvenienced",
+                "Only if they can show damage over and above what the public generally suffered"
+              ],
+              "answer": 1,
+              "why": "Shared inconvenience is what makes it public. The special damage requirement is what separates an individual's action from a matter for public enforcement."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-nuisance-3",
+          "h": "Remedies, and what a claimant actually wants",
+          "readMinutes": 2,
+          "keypoint": "Damages compensate for what has happened; an injunction is usually what stops it, and it is discretionary.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Ask what the client wants. Usually it is not money."
+            },
+            {
+              "t": "p",
+              "text": "Damages address past interference. They do nothing about tomorrow."
+            },
+            {
+              "t": "p",
+              "text": "An injunction is the remedy that changes the position, and because it is equitable it is discretionary — conduct, delay and proportionality all bear on it."
+            },
+            {
+              "t": "p",
+              "text": "So a nuisance advice that establishes liability and stops has answered half the question."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-tort-nuis-1",
+          "q": "Why is the defendant's care not a defence to private nuisance?",
+          "options": [
+            "Because nuisance is a criminal offence",
+            "Because the tort asks whether the interference with the claimant's land is unreasonable, not whether the defendant was careful",
+            "Because care is presumed",
+            "Because only intentional acts are actionable"
+          ],
+          "answer": 1,
+          "why": "Nuisance and negligence protect different things and ask different questions. An impeccably run operation can still impose an unreasonable interference on a neighbour."
+        },
+        {
+          "id": "q-tort-nuis-2",
+          "q": "What must an individual show to sue in public nuisance?",
+          "options": [
+            "That they own affected land",
+            "That they suffered damage over and above the public generally",
+            "That the defendant acted maliciously",
+            "That an injunction is available"
+          ],
+          "answer": 1,
+          "why": "Special damage is what converts a public matter into an individual's cause of action. Sharing the general inconvenience is not enough."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "civil-law-act-1956",
+          "where": "section 3, as the basis on which this received doctrine applies here"
+        },
+        {
+          "bookId": "norchaya-torts",
+          "where": "the chapters on private and public nuisance, and on the remedies available"
+        }
+      ],
+      "source": "Private and public nuisance are received English tort doctrine applying in Malaysia under the Civil Law Act 1956, s 3. No case is cited.",
+      "verify": "Read section 3 of the Civil Law Act 1956 in its current published form. Check how the Malaysian courts state the reasonableness factors and the special damage requirement before relying on the account here.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-occupiers",
+      "moduleId": "m07-tort",
+      "title": "Dangerous premises, and who answers for them",
+      "summary": "Someone is hurt on land. The question is not who owns it but who controlled it, and what they owed to the person who came on.",
+      "minutes": 26,
+      "readMinutes": 8,
+      "sections": [
+        {
+          "id": "sec-l-occupiers-0",
+          "h": "Occupation is control, not ownership",
+          "readMinutes": 2,
+          "keypoint": "The duty attaches to whoever has sufficient control of the premises, which need not be the owner.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Start with the wrong question and the whole analysis goes wrong. It is not who owns the land."
+            },
+            {
+              "t": "p",
+              "text": "The duty attaches to the occupier, and occupation is a matter of control over the premises."
+            },
+            {
+              "t": "p",
+              "text": "A tenant may be the occupier. So may a contractor in possession of a site. There can be more than one occupier at once."
+            },
+            {
+              "t": "example",
+              "text": "A landlord who has let premises and retained no control may not be the occupier of them, while the tenant running a business there is."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-occupiers-1",
+          "h": "What is owed, and to whom",
+          "readMinutes": 3,
+          "keypoint": "The duty is to take reasonable care that a visitor is reasonably safe for the purpose they were invited for.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The duty is a duty of reasonable care, not a guarantee of safety."
+            },
+            {
+              "t": "p",
+              "text": "And it is tied to purpose. A visitor is owed safety for the purpose for which they were permitted to be there, not for whatever they choose to do."
+            },
+            {
+              "t": "p",
+              "text": "Someone who enters without permission is in a different category, and what is owed to them is less. That category still attracts some duty; it is not a licence to injure."
+            },
+            {
+              "t": "predict",
+              "prompt": "A shop customer wanders into a plainly marked staff-only area and is hurt. Does the shop owe them the visitor duty there?",
+              "options": [
+                "Yes — they were lawfully in the shop",
+                "Not for that area — permission defines where and for what purpose they were a visitor"
+              ],
+              "answer": 1,
+              "reveal": "Permission has boundaries in space and in purpose. Exceeding them can change a person's category, which changes what is owed. The marking matters because it is what fixes the boundary."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-occupiers-2",
+          "h": "Warnings, contractors and children",
+          "readMinutes": 2,
+          "keypoint": "A warning helps only if it actually enables safety; children and independent contractors are treated separately.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Three qualifications do most of the work in problems."
+            },
+            {
+              "t": "p",
+              "text": "A warning does not automatically discharge the duty. The question is whether it was enough to enable the visitor to be reasonably safe."
+            },
+            {
+              "t": "p",
+              "text": "Children are owed more, because what is obvious to an adult may not be to them, and an allurement may draw them in."
+            },
+            {
+              "t": "p",
+              "text": "Where the danger was created by an independent contractor's work, the occupier's position depends on whether it was reasonable to entrust the work and to check it."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-occupiers-3",
+          "h": "Where this sits in the corpus",
+          "readMinutes": 1,
+          "keypoint": "This topic has been taught inside a property lesson, which is the wrong module for a tort duty.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Until now this material appeared only inside a land ownership lesson."
+            },
+            {
+              "t": "p",
+              "text": "That is the wrong home. The question is a tort duty owed to an entrant, not an incident of title, and a reader looking for it in tort found nothing."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Your client was hurt on premises. What is the first thing to establish?",
+              "options": [
+                "Who owns the land",
+                "Who had sufficient control of the premises at the time"
+              ],
+              "answer": 1,
+              "why": "Ownership and occupation come apart routinely, and suing the owner of premises they had let and did not control is a claim against the wrong defendant."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-tort-occ-1",
+          "q": "Who owes the occupier's duty?",
+          "options": [
+            "The registered owner",
+            "The insurer",
+            "The person who built the premises",
+            "Whoever has sufficient control of the premises"
+          ],
+          "answer": 3,
+          "why": "Control is the test, and it can rest with a tenant or a contractor in possession. There may also be more than one occupier at the same time."
+        },
+        {
+          "id": "q-tort-occ-2",
+          "q": "Does a warning notice discharge the occupier's duty?",
+          "options": [
+            "Always, if it is visible",
+            "Never",
+            "Only for adults",
+            "Only if it was enough to enable the visitor to be reasonably safe"
+          ],
+          "answer": 3,
+          "why": "The duty is to make the visitor reasonably safe. A warning that does not achieve that has not discharged it, which is why the content and placement of the notice matter."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "civil-law-act-1956",
+          "where": "section 3, as the route by which this received doctrine applies here"
+        },
+        {
+          "bookId": "norchaya-torts",
+          "where": "the chapter on occupiers' liability, noting how far the Malaysian position follows the English statutory scheme"
+        }
+      ],
+      "source": "Occupiers' liability as received doctrine applying under the Civil Law Act 1956, s 3. Malaysia has no direct equivalent of the English Occupiers' Liability Acts, and none is asserted here.",
+      "verify": "Check whether any Malaysian statute governs this area before treating the position as purely common law, and check how the Malaysian courts state the duty to entrants who are not visitors.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-strict-liability-tort",
+      "moduleId": "m07-tort",
+      "title": "Dangerous things that escape",
+      "summary": "A rule that makes a defendant liable for damage caused by something they brought onto land, without proof of negligence. Its conditions are narrow and its survival is contested.",
+      "minutes": 26,
+      "readMinutes": 8,
+      "sections": [
+        {
+          "id": "sec-l-strict-liability-tort-0",
+          "h": "Liability without negligence",
+          "readMinutes": 2,
+          "keypoint": "The rule imposes liability for damage from an escape without requiring proof that the defendant was careless.",
+          "body": [
+            {
+              "t": "p",
+              "text": "This rule exists because negligence sometimes cannot reach an obvious injustice."
+            },
+            {
+              "t": "p",
+              "text": "Someone brings something dangerous onto their land. It escapes. It causes damage. Proving carelessness may be impossible, because the claimant has no idea what happened inside the defendant's operation."
+            },
+            {
+              "t": "p",
+              "text": "The rule answers that by making the defendant liable for the escape itself, on stated conditions."
+            },
+            {
+              "t": "caution",
+              "text": "Strict does not mean absolute. There are conditions to satisfy and defences available, and most claims fail on the conditions rather than on the defences."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-strict-liability-tort-1",
+          "h": "The conditions, each a place to fail",
+          "readMinutes": 3,
+          "keypoint": "Bringing and accumulating, a non-natural use, an escape, and damage of a foreseeable kind.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Take the conditions one at a time, because a claim can die at any of them."
+            },
+            {
+              "t": "list",
+              "items": [
+                "The defendant brought the thing onto the land and accumulated it there",
+                "The use of the land was non-natural, in the sense of special rather than ordinary",
+                "The thing escaped from the defendant's land",
+                "Damage of a foreseeable kind resulted"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "The first condition excludes things naturally present. The second is the one that swallows most claims, and its meaning has narrowed over time."
+            },
+            {
+              "t": "p",
+              "text": "The third requires an actual escape. Damage confined to the defendant's own land is not within the rule."
+            },
+            {
+              "t": "predict",
+              "prompt": "Water accumulates naturally on the defendant's land and flows onto the claimant's. Does the rule apply?",
+              "options": [
+                "Yes — water escaped and caused damage",
+                "No — nothing was brought and accumulated, so the first condition fails"
+              ],
+              "answer": 1,
+              "reveal": "The rule is about things a defendant chose to bring and keep. Naturally occurring accumulation is outside it, which is why the first condition is worth stating explicitly rather than assuming."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-strict-liability-tort-2",
+          "h": "How much of it is left",
+          "readMinutes": 2,
+          "keypoint": "As negligence and nuisance expanded, the rule's practical scope narrowed, and its independence is argued about.",
+          "body": [
+            {
+              "t": "p",
+              "text": "This is where the topic becomes interesting rather than merely technical."
+            },
+            {
+              "t": "p",
+              "text": "When the rule was formulated, negligence was undeveloped. It has since grown enormously, and so has nuisance."
+            },
+            {
+              "t": "p",
+              "text": "So one view treats the rule as a species of nuisance dealing with isolated escapes. Another treats it as a distinct principle that still has work to do."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Why does it matter whether the rule is independent or a branch of nuisance?",
+              "options": [
+                "It does not — the outcome is the same",
+                "Because the requirements differ, including whose interest in land is protected and what must be proved"
+              ],
+              "answer": 1,
+              "why": "If it is a branch of nuisance, nuisance's requirements come with it — including who may sue. Classification here decides what a claimant has to establish."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-strict-liability-tort-3",
+          "h": "Arguing it in Malaysia",
+          "readMinutes": 1,
+          "keypoint": "Received doctrine applies here subject to local circumstances, which is a live qualification for a rule about land use.",
+          "body": [
+            {
+              "t": "p",
+              "text": "This rule comes into Malaysian law as received doctrine, and the reception provision carries a qualification about local circumstances."
+            },
+            {
+              "t": "p",
+              "text": "That qualification is not decoration. A rule about what counts as a non-natural use of land is exactly the kind that might be applied differently in a different setting."
+            },
+            {
+              "t": "p",
+              "text": "So an answer should reach the reception point rather than assume the English position transplants whole."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-tort-strict-1",
+          "q": "Which condition most often defeats a claim under the rule?",
+          "options": [
+            "That the use of land was non-natural",
+            "That there was an escape",
+            "That damage occurred",
+            "That the defendant owned the land"
+          ],
+          "answer": 0,
+          "why": "The non-natural use requirement has narrowed over time and is where most claims fail. Ordinary use of land, however capable of causing harm, falls outside the rule."
+        },
+        {
+          "id": "q-tort-strict-2",
+          "q": "Why does 'strict' not mean 'absolute' here?",
+          "options": [
+            "Because damages are capped",
+            "Because it only applies to water",
+            "Because negligence must still be proved",
+            "Because conditions must still be satisfied and defences remain available"
+          ],
+          "answer": 3,
+          "why": "Strictness removes the need to prove carelessness. It does not remove the conditions of the rule, and those conditions are where the argument usually is."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "civil-law-act-1956",
+          "where": "section 3, and in particular the words limiting received law to local circumstances — they matter more here than in most tort topics"
+        },
+        {
+          "bookId": "norchaya-torts",
+          "where": "the chapter dealing with strict liability and the escape of dangerous things"
+        }
+      ],
+      "source": "Strict liability for the escape of dangerous things is received English doctrine applying under the Civil Law Act 1956, s 3. No case is cited and no English authority is named.",
+      "verify": "Read section 3 of the Civil Law Act 1956 as currently published. Check how Malaysian courts have treated the non-natural use requirement, and whether the rule is treated here as independent of nuisance.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-non-fatal",
+      "moduleId": "m04-criminal-law",
+      "title": "Offences against the person short of death",
+      "summary": "The Penal Code grades harm rather than treating all injury alike. The grading decides the offence, and the offence decides almost everything else.",
+      "minutes": 28,
+      "readMinutes": 9,
+      "sections": [
+        {
+          "id": "sec-l-non-fatal-0",
+          "h": "A ladder of harm",
+          "readMinutes": 2,
+          "keypoint": "The Code sorts injury by seriousness, so identifying the grade is the first analytical step.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The homicide lesson showed a structure: a wide category, a narrower one inside it, exceptions pushing a case back down."
+            },
+            {
+              "t": "p",
+              "text": "Offences short of death are organised on a similar principle. Harm is graded, and the grade you are on decides which offence is charged."
+            },
+            {
+              "t": "p",
+              "text": "So the first question is not whether the accused did something wrong. It is how serious the harm was, in the Code's own terms."
+            },
+            {
+              "t": "caution",
+              "text": "The Code's categories are defined terms, not ordinary English. A word like hurt has a definition in the statute, and reasoning from the everyday meaning will put you on the wrong rung."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-non-fatal-1",
+          "h": "Harm, and the aggravating features",
+          "readMinutes": 3,
+          "keypoint": "Offences are aggravated by the means used, the intention behind them, and the circumstances of the act.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Above the base grade the Code adds aggravating features, and they are worth knowing as categories."
+            },
+            {
+              "t": "list",
+              "items": [
+                "The seriousness of the injury itself",
+                "The means used — whether a weapon or dangerous instrument was involved",
+                "The intention or knowledge with which it was done",
+                "The circumstances, including who the victim was and why"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Each feature typically has its own provision, so an accurate answer names the offence that matches the features present rather than the most serious one available."
+            },
+            {
+              "t": "predict",
+              "prompt": "Two accused cause identical injuries; one used a weapon. Same offence?",
+              "options": [
+                "Yes — the harm is what matters",
+                "No — the means used is a separate aggravating feature with its own provision"
+              ],
+              "answer": 1,
+              "reveal": "Grading by outcome alone would make the Code much shorter and much blunter. The separate provisions exist precisely so that identical harm caused in different ways can be charged differently."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-non-fatal-2",
+          "h": "The mental element still has to be found",
+          "readMinutes": 2,
+          "keypoint": "Serious injury does not by itself establish the intention or knowledge the offence requires.",
+          "body": [
+            {
+              "t": "p",
+              "text": "It is tempting to reason backwards from a bad injury to a guilty mind. The Code does not permit it."
+            },
+            {
+              "t": "p",
+              "text": "Each offence states its own mental element, and it has to be established on the evidence like anything else."
+            },
+            {
+              "t": "p",
+              "text": "So an answer must identify the mental element for the specific provision it is relying on, and apply it to the facts rather than inferring it from the harm."
+            },
+            {
+              "t": "p",
+              "text": "The general exceptions in Chapter IV apply here as they do elsewhere, and the burden on them sits with the accused."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-non-fatal-3",
+          "h": "Reading the provisions for yourself",
+          "readMinutes": 2,
+          "keypoint": "This lesson names no section numbers, because this corpus has not verified them.",
+          "body": [
+            {
+              "t": "p",
+              "text": "You will have noticed that no section number appears above."
+            },
+            {
+              "t": "p",
+              "text": "That is deliberate. This project's rule is that a provision is cited only where someone has checked it against the published Act, and nobody here has checked the provisions on hurt."
+            },
+            {
+              "t": "p",
+              "text": "So the instruction is to open the Penal Code, find the chapter dealing with offences affecting the human body, and read the definitions and the grading provisions in order."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Why does this lesson give you a structure but no section numbers?",
+              "options": [
+                "Because the numbers change too often to be useful",
+                "Because nobody working on this corpus has verified them against the published Act, and an unchecked citation is worse than none"
+              ],
+              "answer": 1,
+              "why": "A wrong section number on a law site looks exactly like a right one and survives every automated check. Naming the chapter and sending you to read it is the honest version, and it also builds the habit the whole reading tier exists for."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-crim-nf-1",
+          "q": "What decides which offence against the person is charged?",
+          "options": [
+            "The victim's opinion",
+            "The length of the trial",
+            "The grade of harm, together with aggravating features such as means and intention",
+            "Whether the accused has previous convictions"
+          ],
+          "answer": 2,
+          "why": "The Code grades harm and then adds separate provisions for aggravating features. Matching the facts to the right combination is the analysis."
+        },
+        {
+          "id": "q-crim-nf-2",
+          "q": "Why can the mental element not be inferred from the seriousness of the injury?",
+          "options": [
+            "Because injuries are hard to assess",
+            "Because each offence states its own mental element, which must be established on the evidence",
+            "Because intention is presumed in all cases",
+            "Because the burden lies on the accused"
+          ],
+          "answer": 1,
+          "why": "Reasoning backwards from harm to state of mind skips the element the provision actually requires. Serious harm can be caused with a mental state the charged offence does not cover."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "penal-code",
+          "where": "the chapter dealing with offences affecting the human body — read the definitions first, then the grading provisions, and note the section numbers yourself with the date you checked"
+        }
+      ],
+      "source": "The structure of graded offences against the person is that of the Penal Code. No section number is stated, because this corpus has verified only Penal Code ss 6, 99(3) and (4), 299, 300, 378, 405 and 415, none of which are the provisions dealt with here.",
+      "verify": "Open the Penal Code as currently published by the Attorney General's Chambers, check the currency date on the front matter, and find the provisions yourself. This lesson deliberately names none.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-inchoate-participation",
+      "moduleId": "m04-criminal-law",
+      "title": "Reaching people who did not do it themselves",
+      "summary": "Criminal liability extends to those who tried, those who helped, and those who acted together. Each is a different route and they are not interchangeable.",
+      "minutes": 28,
+      "readMinutes": 9,
+      "sections": [
+        {
+          "id": "sec-l-inchoate-participation-0",
+          "h": "Three routes, not one",
+          "readMinutes": 2,
+          "keypoint": "Attempt, abetment and common intention extend liability in different directions and require different things.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Most offences describe someone doing something. The Code also reaches people who did not."
+            },
+            {
+              "t": "p",
+              "text": "There are three distinct routes and they are commonly muddled."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Attempt — the offence was not completed",
+                "Abetment — someone helped, instigated or conspired",
+                "Common intention — several acted together in furtherance of a shared intention"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "They are not degrees of the same thing. An answer that says the accused was involved without naming the route has not identified the offence."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-inchoate-participation-1",
+          "h": "Attempt: past preparation",
+          "readMinutes": 3,
+          "keypoint": "An attempt requires an act beyond mere preparation, together with the intention for the full offence.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Attempt asks how far along the accused had got."
+            },
+            {
+              "t": "p",
+              "text": "Thinking about an offence is not an attempt. Buying what you need is usually still preparation."
+            },
+            {
+              "t": "p",
+              "text": "Somewhere after that the conduct becomes an attempt, and the line is the hard part — it is a question of fact argued on the specifics."
+            },
+            {
+              "t": "p",
+              "text": "The mental element is demanding: an attempt generally requires the intention to commit the full offence, even where the full offence could be committed with something less."
+            },
+            {
+              "t": "predict",
+              "prompt": "Why might attempt require a higher mental element than the completed offence?",
+              "options": [
+                "It does not — the elements are always identical",
+                "Because without the result, intention is what identifies the conduct as criminal at all"
+              ],
+              "answer": 1,
+              "reveal": "When the harm has not happened, the act on its own may be entirely innocent. What makes buying an ordinary object into an attempt is the purpose behind it, so intention carries more weight than it does when a result has occurred."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-inchoate-participation-2",
+          "h": "Abetment and common intention are different",
+          "readMinutes": 3,
+          "keypoint": "Abetment is about helping or instigating another's offence; common intention is about acting together on a shared plan.",
+          "body": [
+            {
+              "t": "p",
+              "text": "These two are confused more than any other pair in this area."
+            },
+            {
+              "t": "p",
+              "text": "Abetment looks at what one person did in relation to another's offence — instigating it, helping it, agreeing to it."
+            },
+            {
+              "t": "p",
+              "text": "Common intention looks at a group acting in furtherance of an intention they shared, and can make each liable for what was done in furtherance of it."
+            },
+            {
+              "t": "p",
+              "text": "The practical difference is what you must prove. For abetment, the act of assistance or instigation. For common intention, the shared intention and participation in furtherance of it."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Your accused drove others to a location knowing what they planned. Which route do you analyse?",
+              "options": [
+                "Common intention only",
+                "Both — driving may be an act of assistance, and there may also be a shared intention; they require different proof"
+              ],
+              "answer": 1,
+              "why": "The same facts can support either or both, and they are established differently. Choosing one without considering the other risks running the route the evidence supports least."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-inchoate-participation-3",
+          "h": "Where the sections are",
+          "readMinutes": 1,
+          "keypoint": "The provisions are in the Penal Code; this lesson names none, for the same reason as the last.",
+          "body": [
+            {
+              "t": "p",
+              "text": "As with the previous lesson, no section numbers appear here."
+            },
+            {
+              "t": "p",
+              "text": "The Code deals with abetment and with common intention in their own places, and attempt both generally and within particular offences."
+            },
+            {
+              "t": "p",
+              "text": "Find them, read them, and write the numbers down with the date you checked."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-crim-inch-1",
+          "q": "What distinguishes an attempt from preparation?",
+          "options": [
+            "An act going beyond preparation towards commission, with the intention to commit the full offence",
+            "The time elapsed",
+            "Whether a weapon was bought",
+            "Whether anyone was harmed"
+          ],
+          "answer": 0,
+          "why": "Preparation is not criminal as an attempt. The question is whether conduct has moved beyond it, and that is argued on the specific facts rather than settled by a formula."
+        },
+        {
+          "id": "q-crim-inch-2",
+          "q": "How does abetment differ from common intention?",
+          "options": [
+            "They are the same offence",
+            "Abetment concerns helping or instigating another's offence; common intention concerns acting together in furtherance of a shared intention",
+            "Abetment applies only to property offences",
+            "Common intention requires a written agreement"
+          ],
+          "answer": 1,
+          "why": "They reach different conduct and require different proof. The same facts may support both, which is why each has to be analysed rather than assumed."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "penal-code",
+          "where": "the provisions on abetment, on common intention, and on attempt — find each, read it, and record the section numbers with the date you checked"
+        }
+      ],
+      "source": "Attempt, abetment and common intention as structured by the Penal Code. No section number is stated, because this corpus has not verified the relevant provisions.",
+      "verify": "Read the abetment, common intention and attempt provisions in the current published Penal Code and check the reprint's currency date. This lesson names no section on purpose.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-sentencing",
+      "moduleId": "m04-criminal-law",
+      "title": "After conviction: what a court may impose",
+      "summary": "Conviction settles liability, not consequence. Sentencing is a separate exercise with its own purposes, its own material and its own arguments.",
+      "minutes": 26,
+      "readMinutes": 8,
+      "sections": [
+        {
+          "id": "sec-l-sentencing-0",
+          "h": "A separate stage",
+          "readMinutes": 2,
+          "keypoint": "Sentencing follows conviction as a distinct exercise, argued on different material.",
+          "body": [
+            {
+              "t": "p",
+              "text": "A criminal case does not end at conviction. It moves to a stage with its own rules."
+            },
+            {
+              "t": "p",
+              "text": "The material differs. Evidence of the offence is settled; what matters now is the offender, the circumstances, and anything urged in mitigation."
+            },
+            {
+              "t": "p",
+              "text": "So the advocacy differs too. An argument that the accused did not do it has no place here, and running it wastes the one opportunity to affect the outcome."
+            },
+            {
+              "t": "caution",
+              "text": "Students routinely treat sentencing as an afterthought. For a convicted client it is the entire remaining question."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-sentencing-1",
+          "h": "Purposes that pull in different directions",
+          "readMinutes": 3,
+          "keypoint": "Punishment, deterrence, protection and rehabilitation can point to different sentences on the same facts.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Sentencing serves several purposes at once and they do not agree."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Retribution — a penalty proportionate to what was done",
+                "Deterrence — of this offender, and of others",
+                "Protection of the public",
+                "Rehabilitation of the offender"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "On the same facts, deterrence may argue for a heavier sentence than retribution would allow, and rehabilitation for a lighter one than protection would permit."
+            },
+            {
+              "t": "predict",
+              "prompt": "A first offender commits an offence that is becoming common in the area. Which purposes conflict?",
+              "options": [
+                "None — they all point the same way",
+                "Deterrence argues for severity to address prevalence; rehabilitation and proportionality argue against punishing this individual for a trend"
+              ],
+              "answer": 1,
+              "reveal": "This is the sharpest recurring conflict in sentencing, and it is where general deterrence is most criticised: it uses one offender to send a message to others. Naming the conflict is a better answer than pretending the purposes align."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-sentencing-2",
+          "h": "Aggravation and mitigation",
+          "readMinutes": 2,
+          "keypoint": "Factors are grouped around the offence and the offender, and the second is where mitigation usually lies.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Factors sort into two families and it helps to keep them apart."
+            },
+            {
+              "t": "p",
+              "text": "Those concerning the offence: planning, the harm caused, the victim's vulnerability, the use of a weapon, the offender's role."
+            },
+            {
+              "t": "p",
+              "text": "Those concerning the offender: previous record or its absence, age, a plea and when it was entered, cooperation, personal circumstances."
+            },
+            {
+              "t": "p",
+              "text": "A plea in mitigation that only asserts the offence was not serious is arguing against the conviction. The stronger material is usually in the second family."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-sentencing-3",
+          "h": "What limits the court",
+          "readMinutes": 1,
+          "keypoint": "A court sentences within limits set by statute, and this lesson states none of them.",
+          "body": [
+            {
+              "t": "p",
+              "text": "A court is not at large. Statute sets what may be imposed for an offence, and sometimes fixes a minimum."
+            },
+            {
+              "t": "p",
+              "text": "Those limits are in the Penal Code and the Criminal Procedure Code, and this lesson names no section and no penalty."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Before advising a convicted client on likely sentence, what must you establish first?",
+              "options": [
+                "The purposes of sentencing",
+                "What the statute permits for this offence, including any minimum"
+              ],
+              "answer": 1,
+              "why": "Purposes shape an argument within a range. The range itself comes from the statute, and advice given without checking it can promise something the court has no power to give."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-crim-sent-1",
+          "q": "Which sentencing purposes most often conflict?",
+          "options": [
+            "Retribution and protection",
+            "Rehabilitation and protection",
+            "None conflict",
+            "General deterrence and proportionality to this offender's conduct"
+          ],
+          "answer": 3,
+          "why": "General deterrence looks outward to other potential offenders, while proportionality looks at what this offender did. Prevalence of an offence is the situation where the tension is sharpest."
+        },
+        {
+          "id": "q-crim-sent-2",
+          "q": "What is the weakest form of plea in mitigation?",
+          "options": [
+            "One relying on the offender's personal circumstances",
+            "One mentioning an early plea",
+            "One that in substance disputes the conviction",
+            "One raising the offender's age"
+          ],
+          "answer": 2,
+          "why": "Liability is settled by then. Re-arguing it spends the one chance to influence sentence on a question the court has already decided."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "criminal-procedure-code",
+          "where": "the provisions governing sentence — find what a court may impose and any procedural requirements, and note the sections yourself"
+        },
+        {
+          "bookId": "janab-criminal-procedure",
+          "where": "the treatment of sentencing practice, for how the factors are actually argued"
+        }
+      ],
+      "source": "The purposes of sentencing and the standard aggravating and mitigating factors are general criminal law doctrine. Statutory limits are set by the Penal Code and the Criminal Procedure Code; no section, penalty or minimum is stated here, because this corpus has verified none of them.",
+      "verify": "Check what the statute permits for the specific offence in the current published Penal Code and Criminal Procedure Code, including any mandatory minimum, before relying on anything in this lesson to advise on outcome.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-finding-facts",
+      "moduleId": "m05-criminal-procedure",
+      "title": "Who decides what happened",
+      "summary": "A trial answers two different kinds of question. Knowing which one you are arguing, and who decides it, changes how you argue.",
+      "minutes": 26,
+      "readMinutes": 8,
+      "sections": [
+        {
+          "id": "sec-l-finding-facts-0",
+          "h": "Two questions in every trial",
+          "readMinutes": 2,
+          "keypoint": "What happened is a question of fact; what follows legally is a question of law, and they are decided differently.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Every contested trial contains two kinds of question and they behave differently."
+            },
+            {
+              "t": "p",
+              "text": "Questions of fact: what happened, who did it, what was said."
+            },
+            {
+              "t": "p",
+              "text": "Questions of law: what the provision means, whether the established facts satisfy it."
+            },
+            {
+              "t": "p",
+              "text": "The distinction matters most on appeal, where an appellate court will interfere far more readily with the second than with the first."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-finding-facts-1",
+          "h": "Why findings of fact are hard to disturb",
+          "readMinutes": 3,
+          "keypoint": "The trial court saw the witnesses, and an appellate court reading a transcript is not better placed to assess them.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The reason is practical rather than deferential."
+            },
+            {
+              "t": "p",
+              "text": "The trial court watched the witnesses give evidence and be cross-examined. An appellate court has a transcript."
+            },
+            {
+              "t": "p",
+              "text": "A transcript does not record hesitation, or the answer that arrived too quickly, so a court reading one is not better placed to decide who was telling the truth."
+            },
+            {
+              "t": "predict",
+              "prompt": "An appellant says the judge believed the wrong witness. How promising is that ground?",
+              "options": [
+                "Strong — appellate courts review the whole case afresh",
+                "Weak on its own — it asks the appellate court to redo an assessment it is worse placed to make"
+              ],
+              "answer": 1,
+              "reveal": "It is not impossible, but it needs more: an inconsistency with undisputed documents, or a reason the assessment could not stand on the evidence. Simply preferring the other witness is the ground least likely to succeed, and knowing that redirects effort towards questions of law."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-finding-facts-2",
+          "h": "Who does the finding",
+          "readMinutes": 2,
+          "keypoint": "In a Malaysian trial both questions are decided by the judge, which shapes how each is argued.",
+          "body": [
+            {
+              "t": "p",
+              "text": "In some systems fact and law are split between different decision-makers, with lay fact-finders deciding what happened and a judge ruling on law."
+            },
+            {
+              "t": "p",
+              "text": "In a Malaysian trial the judge decides both."
+            },
+            {
+              "t": "p",
+              "text": "That has a consequence for advocacy. Where the same person rules on admissibility and then decides the facts, they have necessarily seen material they may have excluded."
+            },
+            {
+              "t": "p",
+              "text": "It also means reasons are given. A fact-finder who must explain a finding in writing is subject to a check that an unexplained verdict is not."
+            },
+            {
+              "t": "caution",
+              "text": "This lesson does not describe the history of lay participation in Malaysian trials or when it changed, because that has not been verified in this corpus. Check it before asserting anything about it."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-finding-facts-3",
+          "h": "Arguing to the right question",
+          "readMinutes": 1,
+          "keypoint": "Identify whether your point is one of fact or law before choosing how to make it.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The practical payoff is in how you spend your time."
+            },
+            {
+              "t": "p",
+              "text": "A point of fact is argued from the evidence — inconsistencies, documents, what is inherently likely."
+            },
+            {
+              "t": "p",
+              "text": "A point of law is argued from the provision and the authorities, and it is the one that travels on appeal."
+            },
+            {
+              "t": "checkpoint",
+              "q": "You have a weak factual case and an arguable point of construction. Where should the effort go?",
+              "options": [
+                "The facts, because they decide the case",
+                "The point of construction, which is also the ground most likely to survive an appeal"
+              ],
+              "answer": 1,
+              "why": "Effort should follow where it can actually change an outcome. A construction point can be decided in your favour on the material as it stands, and it is reviewable if it goes the other way."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-crimpro-ff-1",
+          "q": "Why are findings of fact rarely disturbed on appeal?",
+          "options": [
+            "Appeals are discouraged",
+            "Facts are not appealable at all",
+            "Only the prosecution may appeal facts",
+            "The trial court saw the witnesses and an appellate court reading a transcript is not better placed to assess them"
+          ],
+          "answer": 3,
+          "why": "The reason is about who is better placed. A transcript loses everything about how evidence was given, which is much of what a credibility assessment rests on."
+        },
+        {
+          "id": "q-crimpro-ff-2",
+          "q": "What follows from the same judge deciding both admissibility and the facts?",
+          "options": [
+            "Nothing of significance",
+            "They will have seen material they may have ruled inadmissible, and they must give reasons for their findings",
+            "Admissibility is never argued",
+            "The trial must be split in two"
+          ],
+          "answer": 1,
+          "why": "Both consequences are real and they pull in opposite directions. Exposure to excluded material is a risk. The duty to give written reasons is a safeguard, and an unexplained verdict carries no such thing."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "criminal-procedure-code",
+          "where": "the provisions governing the conduct of a trial and the recording of findings — read them for who decides what, and note the sections yourself"
+        },
+        {
+          "bookId": "janab-criminal-procedure",
+          "where": "on the structure of a trial and on appeals against findings of fact"
+        }
+      ],
+      "source": "The distinction between questions of fact and law, and the standard on appeal against findings of fact, are general common law doctrine. No section of the Criminal Procedure Code is stated, and nothing is asserted about the history of lay participation in Malaysian trials, because neither has been verified here.",
+      "verify": "Check the Criminal Procedure Code provisions on trial and on appeal in the current published version. If you need the position on lay participation or its history, verify it from a source rather than from this lesson, which deliberately does not state it.",
+      "lastVerified": "2026-09-11"
     }
   ]
 }

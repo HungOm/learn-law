@@ -131,24 +131,24 @@
           "id": "qfam1",
           "q": "Which statute governs divorce for non-Muslims in Malaysia?",
           "options": [
-            "Each State's Islamic family law enactment",
             "The Law Reform (Marriage and Divorce) Act 1976",
+            "Each State's Islamic family law enactment",
             "The Civil Law Act 1956",
             "The Federal Constitution alone"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The 1976 Act is federal and applies to people who are not Muslims, so the rules are the same in every State."
         },
         {
           "id": "qfam2",
           "q": "Why is there no single Islamic family law statute for the whole of Malaysia?",
           "options": [
-            "Because Islamic family law is State law, so each State makes its own",
             "Because it was never codified anywhere",
             "Because it applies only in the Federal Territories",
-            "Because it is left entirely to the courts"
+            "Because it is left entirely to the courts",
+            "Because Islamic family law is State law, so each State makes its own"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Islamic law for Muslims is a State matter, so each State legislates its own enactment. Asking which State is the first step, not a detail."
         },
         {
@@ -156,11 +156,11 @@
           "q": "A couple married under the 1976 Act. One spouse converts to Islam. What is the first question?",
           "options": [
             "Whether the marriage was ever valid",
-            "Which court has jurisdiction over the dissolution and the children",
             "Whether the converting spouse loses all property rights",
-            "Whether the Federal Court must hear it first"
+            "Whether the Federal Court must hear it first",
+            "Which court has jurisdiction over the dissolution and the children"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "In a split system the jurisdiction question comes before the merits. A court that lacks power over a matter cannot acquire it because the case is urgent."
         }
       ],
@@ -308,12 +308,12 @@
           "id": "qsy1",
           "q": "Where do Syariah courts get their authority?",
           "options": [
+            "From State law, under the division of powers in the Ninth Schedule",
             "From federal statute passed by Parliament",
             "From the Rulers directly, without legislation",
-            "From State law, under the division of powers in the Ninth Schedule",
             "From the Federal Court"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Islamic law and the organisation of Syariah courts are State matters, so each State legislates its own. That is why an answer must name a State."
         },
         {
@@ -321,11 +321,11 @@
           "q": "Two Muslims dispute a commercial debt. Which court?",
           "options": [
             "The Syariah court, because both are Muslims",
-            "The civil courts, because contract is not on the State List",
             "Either, at the parties' choice",
-            "The Syariah court, because debt is a religious matter"
+            "The Syariah court, because debt is a religious matter",
+            "The civil courts, because contract is not on the State List"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Both limits must be met. The parties are Muslims, but the subject is contract — a federal matter — so Syariah jurisdiction does not arise."
         },
         {
@@ -345,11 +345,11 @@
           "q": "A State enactment sets a punishment above the federal ceiling. What is the argument against it?",
           "options": [
             "That it offends religious principle",
+            "That the State exceeded the legislative power the Constitution gives it",
             "That only the Federal Court may set penalties",
-            "That Article 121(1A) forbids punishment",
-            "That the State exceeded the legislative power the Constitution gives it"
+            "That Article 121(1A) forbids punishment"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "It is an ordinary legislative competence argument. A State may act only within the power the Constitution allocates to it."
         }
       ],
@@ -963,23 +963,23 @@
           "q": "Where are the Lists that Article 74 allocates power by reference to?",
           "options": [
             "In Article 74 itself",
-            "In each State enactment",
             "In the Ninth Schedule",
+            "In each State enactment",
             "In the Eleventh Schedule"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Article 74 is a pointer. The operative words are the entries in the Ninth Schedule, and a competence argument turns on those entries rather than on the Article."
         },
         {
           "id": "q-syar-lp-2",
           "q": "Why is 'the position in Malaysia' usually the wrong frame for a Syariah question?",
           "options": [
-            "Because the power is a State power, so the enactments differ between States",
             "Because the Federal Constitution does not apply",
             "Because Syariah law is not written down",
+            "Because the power is a State power, so the enactments differ between States",
             "Because only the Federal Court may decide"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "State legislative power produces State law. The applicable enactment is the one for the State in question, and they are not uniform."
         }
       ],
@@ -1133,11 +1133,11 @@
           "q": "What does Article 121(1A) do?",
           "options": [
             "Confers jurisdiction on the Syariah courts",
-            "Removes civil court jurisdiction over matters within Syariah court jurisdiction",
             "Makes Syariah courts superior to civil courts",
-            "Creates a concurrent jurisdiction"
+            "Creates a concurrent jurisdiction",
+            "Removes civil court jurisdiction over matters within Syariah court jurisdiction"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "It subtracts from the civil courts by reference to what is within Syariah jurisdiction. It confers nothing, which is why the extent of Syariah jurisdiction has to be established before the provision can be applied at all."
         },
         {
@@ -1146,10 +1146,10 @@
           "options": [
             "By how the claim is pleaded",
             "By the religion of the parties",
-            "By which court was approached first",
-            "By what the court must determine in order to grant the relief sought"
+            "By what the court must determine in order to grant the relief sought",
+            "By which court was approached first"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Pleading can be drafted around a limit; the determination required cannot. Asking what the court must decide to make the order keeps the analysis tied to something the other side cannot relabel."
         }
       ],
