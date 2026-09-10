@@ -195,6 +195,10 @@
         {
           "statuteId": "contracts-act-1950",
           "where": "the agency provisions — read them beside the lesson's categories of authority, and notice that the Act, not the case law, is the starting point"
+        },
+        {
+          "bookId": "cheong-contract-law-malaysia",
+          "where": "the agency chapters — the Act states the rule, the text shows how the courts have read it"
         }
       ]
     },
@@ -397,6 +401,10 @@
         {
           "statuteId": "industrial-relations-act-1967",
           "where": "dismissal without just cause or excuse — the substantive and procedural limbs the lesson separates"
+        },
+        {
+          "bookId": "maimunah-industrial-relations",
+          "where": "for the Industrial Court route, which is where a dismissal claim actually goes and which no Act describes end to end"
         }
       ]
     }

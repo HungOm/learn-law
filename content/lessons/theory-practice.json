@@ -170,6 +170,10 @@
         {
           "bookId": "schauer-thinking-like-a-lawyer",
           "where": "for the positivist account the lesson describes, argued at length by someone who holds it"
+        },
+        {
+          "bookId": "hart-concept-of-law",
+          "where": "for the positivist account this lesson describes, argued at length by the person who made it"
         }
       ]
     },
@@ -354,6 +358,10 @@
         {
           "statuteId": "federal-constitution",
           "where": "the treaty-making and legislative power provisions — the dualist position is a consequence of them, not a rule stated anywhere"
+        },
+        {
+          "bookId": "shaw-international-law",
+          "where": "for the sources of international law and the dualist position, before returning to the Constitution"
         }
       ]
     },

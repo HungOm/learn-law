@@ -175,6 +175,10 @@
         {
           "statuteId": "federal-constitution",
           "where": "the Ninth Schedule State List — where the division of legislative power over Islamic law actually sits"
+        },
+        {
+          "bookId": "mimi-family-law-malaysia",
+          "where": "for the civil regime in detail — old, so check what the Law Reform Act has done since"
         }
       ]
     },
@@ -356,6 +360,10 @@
         {
           "statuteId": "federal-constitution",
           "where": "Article 121(1A) and the Ninth Schedule State List. Read 121(1A) slowly: it is one sentence and it decides which court may hear what"
+        },
+        {
+          "bookId": "najibah-islamic-family-law",
+          "where": "for what the Syariah courts actually decide, which is the other half of the jurisdictional line"
         }
       ]
     }

@@ -169,6 +169,10 @@
         {
           "statuteId": "civil-law-act-1956",
           "where": "section 3 — the reception provision, including its cut-off date. One section carries the whole argument of this lesson"
+        },
+        {
+          "bookId": "ashgar-equity-trusts",
+          "where": "the opening chapters on reception — for what came in under s 3 and what did not"
         }
       ]
     },
@@ -376,6 +380,10 @@
         {
           "statuteId": "civil-law-act-1956",
           "where": "section 3 again, this time as the authority for trusts doctrine applying here at all"
+        },
+        {
+          "bookId": "ashgar-equity-trusts",
+          "where": "the chapters on the three certainties, and on resulting and constructive trusts"
         }
       ]
     }
