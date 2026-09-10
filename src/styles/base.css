@@ -730,8 +730,32 @@ button.tap-exempt,
 
 /* The reading surface itself. At phone widths it IS the backdrop; from 1024 it
    separates from it and picks up the edge and the lift. */
+/* The scrolling pane, and the two properties that make it one.
+
+   `min-height: 0` is not a tidy-up. A flex item defaults to `min-height: auto`,
+   which refuses to shrink below its content — so `overflow-y: auto` never
+   engages, the pane grows to its full content height, and everything past the
+   viewport is clipped by `.focusview` with no way to reach it. Measured on
+   `pf-lesson-study` section 6 at 360, 390 and 412: the pane rendered 1142px
+   tall inside an 800px reader, `scrollHeight === clientHeight`, and setting
+   `scrollTop` to its maximum left it at 0. Roughly 400px of the section — the
+   worked example — was simply gone, with the footer sitting on top of it.
+
+   And it needs a flex PARENT to shrink against, which is the other half of the
+   same bug: `.focusview-surface` below only becomes a column flex here, at
+   every width. It used to get that solely inside the >=1024 block, so the
+   reader scrolled correctly on a laptop and clipped on every phone. */
+.focusview-surface {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+}
+
 .focusview-body {
   flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
 }
@@ -804,13 +828,11 @@ button.tap-exempt,
   /* Inset and lifted. --shadow-modal because this is a dismissible surface over
      the page, which is exactly what DESIGN.md reserves shadow for. */
   .focusview { padding: var(--space-6); }
+  /* Structure (flex column, min-height: 0, full width) is unconditional now and
+     lives with `.focusview-body`. What is left here is the visual separation:
+     from 1024 the surface lifts off the field and takes an edge. */
   .focusview-surface {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
     max-width: var(--pane-dash);
-    width: 100%;
     margin-inline: auto;
     background: var(--surface-raised);
     border: var(--line-hairline) solid var(--border-hairline);
