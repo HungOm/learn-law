@@ -1,0 +1,127 @@
+[
+  {
+    "id": "x-kepong-schmidt",
+    "moduleId": "m06-contract",
+    "lessonId": "l-consideration",
+    "case": "Kepong Prospecting Ltd v Schmidt",
+    "citation": "[1968] 1 MLJ 170 (PC)",
+    "court": "Privy Council",
+    "year": 1968,
+    "find": "Privy Council decisions of this period are on BAILII (bailii.org) under Privy Council Decisions, without charge. The Malayan Law Journal citation will find it in any law library carrying the series, and most public university libraries admit visitors.",
+    "why": "The case behind the part of section 26 of the Contracts Act 1950 that departs from English law. Read it to see a court working from statutory words rather than from received doctrine — which is the habit this module exists to build.",
+    "read": [
+      {
+        "passage": "The court's treatment of the consideration point, and where it locates the answer.",
+        "look_for": "Watch whether the reasoning starts from English consideration doctrine or from the words of the Malaysian Act. The starting point is the lesson."
+      },
+      {
+        "passage": "Anything said about past consideration or about services already rendered.",
+        "look_for": "Set what the court says against what you were taught the English rule is. Where they differ, note that the difference is statutory rather than judicial."
+      },
+      {
+        "passage": "The passages dealing with who was party to what.",
+        "look_for": "Several agreements and several parties are in play. Draw the relationships before reading the reasoning; the case is much easier with a diagram than without."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State what this decision establishes about consideration in Malaysia, in one sentence.",
+        "model": "A good answer names the proposition and locates its source. The point is not merely that Malaysian law differs from English law but that it differs because a statute says so — so an answer that states the rule without pointing at the Act has described a difference and not explained it. Test the sentence the usual way: run the conditions and see whether they produce the order the court made."
+      },
+      {
+        "q": "Why is this a good case for practising the habit of reading the statute first?",
+        "model": "A good answer notices that a reader who arrives with English doctrine in mind will expect one answer and meet another, and that the only way to have predicted it was to read section 26 with its illustrations. That is the transferable lesson: where Malaysia has a code covering the ground, received law does not reach it, and reasoning from an English textbook produces confident errors."
+      },
+      {
+        "q": "How would you use this case alongside the statute in a problem answer?",
+        "model": "A good answer puts the statute first and the case second — the section states the rule, the decision shows how it was applied and what it was taken to mean. Reversing that order signals a reader who learned the case and then went looking for a provision to hang it on, which examiners notice."
+      }
+    ],
+    "trap": "Treating this as a case about an exception to a general rule you already know. In Malaysia the general rule is in section 26, and what looks like an exception to English doctrine may simply be the rule here.",
+    "source": "Citation taken from the source field of the consideration lesson in this corpus.",
+    "verify": "Check the citation against the report, and read section 26 of the Contracts Act 1950 with its illustrations before deciding what the case adds to it.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-macon-phang",
+    "moduleId": "m06-contract",
+    "lessonId": "l-formation",
+    "case": "Macon Works & Trading Sdn Bhd v Phang Hon Chin",
+    "citation": "[1976] 2 MLJ 177",
+    "court": "High Court",
+    "year": 1976,
+    "find": "A Malayan Law Journal citation from 1976; law libraries carrying the MLJ series will have it, and many Malaysian university libraries admit visitors. CommonLII's Malaysian coverage is thinner for this period, so the printed report may be the reliable route.",
+    "why": "Offer, acceptance and revocation worked through carefully at first instance. A High Court judgment is a good place to learn the mechanics precisely because it explains itself at length rather than assuming the reader already knows.",
+    "read": [
+      {
+        "passage": "The court's account of what was offered, by whom, and on what terms.",
+        "look_for": "Write the sequence of communications down as a timeline before reading the analysis. Formation cases are decided on sequence and most confusion comes from losing it."
+      },
+      {
+        "passage": "The treatment of revocation and of any period the offer was to remain open.",
+        "look_for": "Ask what makes a promise to keep an offer open binding, and whether anything supplied that here. This is where the Contracts Act 1950 and English doctrine may diverge."
+      },
+      {
+        "passage": "Anything said about when acceptance took effect.",
+        "look_for": "Note the moment the court fixes, and what turns on it. In formation the moment is usually the whole case."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Draw the sequence of communications, then state at which point a contract was or was not formed.",
+        "model": "A good answer produces the timeline before the conclusion, and identifies the single communication that decided it. If your answer could not be checked against a timeline — if it reasons from the parties' overall intentions rather than from a sequence of acts — it has left the ground formation is decided on."
+      },
+      {
+        "q": "What does this case tell you about the relationship between the Contracts Act 1950 and English formation doctrine?",
+        "model": "A good answer resists both extremes. The Act supplies the framework and the court works within it; English authority is used where it assists and does not displace the section. An answer asserting that Malaysian formation law simply is English law, or that it is wholly separate, will be wrong in different directions on different facts."
+      }
+    ],
+    "trap": "Reading a first-instance judgment as though its every observation were binding. It is a careful working-through, and its value here is the method rather than its place in the hierarchy.",
+    "source": "Citation taken from the source field of the formation lesson in this corpus.",
+    "verify": "Check the citation and the court against the report itself. Confirm whether any later decision has qualified it before relying on it in an answer.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-cavendish-makdessi",
+    "moduleId": "m06-contract",
+    "lessonId": "l-remedies",
+    "case": "Cavendish Square Holding BV v Talal El Makdessi",
+    "citation": "[2015] UKSC 67",
+    "court": "United Kingdom Supreme Court",
+    "year": 2015,
+    "find": "On BAILII (bailii.org) under United Kingdom Supreme Court, free and complete, and on the Supreme Court's own site with a press summary. Read the judgment rather than the summary — the reasoning is the reason to read this one.",
+    "why": "A supreme court dismantling a rule that had stood for a century and rebuilding it. Read it for the remedies point, and read it again for what a court does when it decides a long-settled test was asking the wrong question.",
+    "read": [
+      {
+        "passage": "The court's account of the old test and what it thought was wrong with it.",
+        "look_for": "Notice that the court states the existing rule fully and fairly before attacking it. That is the same discipline the ratio exercise teaches, done by a court on itself."
+      },
+      {
+        "passage": "The reformulated test, and the words describing what a clause must do to be penal.",
+        "look_for": "Write the new test in one sentence. Then ask which of the old cases would come out differently under it — that is how you find out whether you have understood the change."
+      },
+      {
+        "passage": "Anything about legitimate interest and proportionality.",
+        "look_for": "These carry the new test. Ask who bears the burden of showing a legitimate interest and how a court is meant to measure the response to it."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the reformulated test in one sentence, and say what it replaced.",
+        "model": "A good answer gives both halves, because the change is the point. It should name what the old test asked and what the new one asks instead, and the shift in the question is what an examiner is testing. A sentence that only states the current test describes the law without showing you understand what moved."
+      },
+      {
+        "q": "This is a UK Supreme Court decision from 2015. What is its status in Malaysia?",
+        "model": "A good answer is exact. It postdates the reception under section 3 of the Civil Law Act 1956, so it is not part of Malaysian law by force of that section; it is persuasive, and the question is whether a Malaysian court has adopted the reasoning. The honest use is to check the Malaysian authority and cite that, using this case for the reasoning rather than as the source of the rule."
+      },
+      {
+        "q": "What does the court's treatment of the earlier authority teach about how to argue for a change in the law?",
+        "model": "A good answer takes the technique rather than the outcome. The court states the existing rule at its strongest, identifies the question it was really answering, and shows why that question was the wrong one — then offers a replacement that explains the results the old rule got right. Attacking a rule without accounting for the cases it decided correctly is the weaker move, and this judgment shows the stronger one."
+      }
+    ],
+    "trap": "Citing this as though it stated Malaysian law on penalties. Whether and how far Malaysian courts have taken it up is a separate question and the one your answer actually turns on.",
+    "source": "Citation taken from the source field of the remedies lesson in this corpus.",
+    "verify": "Check the citation on BAILII, and check the current Malaysian position on penalty clauses — including whether an apex court here has adopted this reasoning — before relying on it.",
+    "lastVerified": "2026-09-10"
+  }
+]
