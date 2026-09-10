@@ -904,8 +904,35 @@ valid for stdin, so the real file and a deliberately broken one produced
 identical errors. Two identical errors read as "this tool is noisy", which is how
 a broken control gets ignored instead of fixed.
 
-There is a third way it goes wrong, and it is the hardest to catch because it
-looks like vigilance rather than silence: **a control that fires on everything.**
+**A browser gate under memory pressure produces a plausible finding, not a
+crash** — which is what makes it worse than a hang. A renderer killed mid-walk
+reports a real measurement of a page that never finished laying out, and the
+finding lands on whoever's code happened to be under the walk at that moment.
+Five sessions each driving Chrome through playwright is enough to cause it; on
+this machine it produced six orphaned dev servers, one of them more than a day
+old, before anyone noticed the gates had got slow.
+
+The rule is not "check the machine before believing a red" — nobody checks memory
+before reading a finding, and a rule that needs an unprompted extra step gets
+skipped. It is a property the harness must have:
+
+> **A run that ends without reaching its reporting path must be distinguishable
+> from a run that reached it and found nothing.**
+
+Which is the same sentence as the truncated-count trap and the INCONCLUSIVE
+guard, and that is the argument for it living here rather than with the
+flakiness notes. It is not a fourth kind of flakiness. It is an instrument that
+cannot tell "I did not finish" from "I finished and found this."
+
+The version an author can act on: **a gate should report how much it walked,
+always, not only when it fails.** `responsive` prints its route and width counts
+and `glossary-dom` prints how many lessons it compared, so a short walk is
+visible in a passing run. A gate that prints findings and nothing else cannot
+show you it was cut off.
+
+There is a third way a control goes wrong, and it is the hardest to catch because
+it looks like vigilance rather than silence: **a control that fires on
+everything.**
 A checker reporting findings on every input reads as thorough right up until
 someone asks what a clean run would look like.
 
