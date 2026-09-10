@@ -1,0 +1,378 @@
+[
+  {
+    "id": "st-cla-s3",
+    "moduleId": "m01-malaysian-legal-system",
+    "lessonId": "l-sources",
+    "act": "Civil Law Act 1956",
+    "actId": "civil-law-act-1956",
+    "provision": "Section 3",
+    "find": "The Attorney General's Chambers publishes the Laws of Malaysia online without charge; search for the Act by name and open the current reprint. A law library will have it in print. Read the section itself rather than a summary of it, including any provisos.",
+    "why": "This one section is why Malaysian law contains English common law and equity at all. Everything the course says about received law rests on it, and the qualifications inside it are the part most readers skip.",
+    "read": [
+      {
+        "passage": "The opening words that apply the common law and rules of equity, and the dates attached to them.",
+        "look_for": "There is more than one date. Note which territory each belongs to, and write down what that means for a case decided in England after the relevant date."
+      },
+      {
+        "passage": "The qualifying words about local circumstances.",
+        "look_for": "This is the phrase that lets Malaysian law diverge. Ask what work it does that the dates do not, and try to state the difference in one sentence."
+      },
+      {
+        "passage": "Anything subjecting the section to other written law.",
+        "look_for": "Follow the order of priority it creates. Where a Malaysian statute covers the ground, ask whether received law reaches it at all."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State in one sentence what this section did, and one thing it did not do.",
+        "model": "A good answer names both halves. It applied English common law and equity as administered at stated dates — and it did not make Malaysian law a moving copy of English law, because the reception is fixed at those dates and qualified twice over. An answer giving only the first half describes reception without its limits, which is the misunderstanding this section most often causes."
+      },
+      {
+        "q": "A litigant cites an English decision from 2019. What is the correct way to describe its status?",
+        "model": "A good answer avoids both errors: it is not binding, and it is not irrelevant. It postdates the reception, so it is not part of Malaysian law by force of this section; a Malaysian court may find its reasoning persuasive and adopt it, and that adoption is what a litigant must point to. The distinction between authority and persuasion is the whole point."
+      },
+      {
+        "q": "What is the difference between the date limit and the local circumstances limit?",
+        "model": "A good answer separates two kinds of limit. The date is a cut-off in time and is mechanical: anything after it is not received. Local circumstances is a limit in substance and requires judgement: a rule received in principle may still not apply here if conditions differ. The first can be checked from a calendar, the second cannot."
+      }
+    ],
+    "trap": "Treating reception as meaning English law simply is Malaysian law. The section makes it a source, at a date, subject to conditions — and each of those three words is doing work.",
+    "source": "Provision cited in the source fields of the legal system, tort, property and equity lessons in this corpus.",
+    "verify": "Read the current reprint from the Attorney General's Chambers. Confirm the reception dates for the States of Malaya, Sabah and Sarawak from the section itself rather than from this page.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-fc-art121-1a",
+    "moduleId": "m17-syariah",
+    "lessonId": "l-syariah-jurisdiction",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 121(1A)",
+    "find": "The Federal Constitution is published by the Attorney General's Chambers and is available online without charge; open Part IX and read Article 121 whole, not just the sub-article. Print copies are inexpensive and widely sold.",
+    "why": "One sentence that reorganised the relationship between two court systems. It is short, it is constantly paraphrased, and the paraphrases are usually wrong — which makes it the best possible exercise in reading words rather than summaries.",
+    "read": [
+      {
+        "passage": "Article 121(1) and (1A) together, in that order.",
+        "look_for": "Read (1) first so you know what (1A) is carving out of. The clause only makes sense against the jurisdiction it removes."
+      },
+      {
+        "passage": "The words identifying whose jurisdiction is removed and in respect of what.",
+        "look_for": "Two things are named — a set of courts, and a class of matters. Underline both. The class is defined by reference to another court's jurisdiction, which is where the difficulty starts."
+      },
+      {
+        "passage": "The absence of any words about hierarchy or appeal.",
+        "look_for": "Notice what the clause does not say. That absence is the answer to the commonest misstatement of it."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Write the clause's effect in one sentence, without using the words higher, superior or supreme.",
+        "model": "A good answer says the civil High Courts have no jurisdiction in respect of matters within the jurisdiction of the Syariah courts. It is a withdrawal of jurisdiction from one set of courts over a defined class, and nothing else. If your sentence needed a word about rank, you were describing an inference rather than the clause."
+      },
+      {
+        "q": "The clause defines the excluded matters by reference to Syariah court jurisdiction. What does that make the real question in any dispute?",
+        "model": "A good answer identifies the circularity that is actually a signpost: because the exclusion is defined by the other court's jurisdiction, the working question is never which court ranks higher but whether this matter falls within Syariah jurisdiction at all — which is answered by the State List and the person's religion, not by this clause."
+      },
+      {
+        "q": "Why is it wrong to say this clause gives Syariah courts power?",
+        "model": "A good answer keeps grant and removal apart. Their power comes from State law made under the Ninth Schedule; this clause removes a competing jurisdiction. Remove a rival's power and you have not enlarged your own, though the practical effect may resemble it — and the distinction decides cases where a matter is outside Syariah jurisdiction."
+      }
+    ],
+    "trap": "Reading it as a ranking of courts. It withdraws jurisdiction over a defined class of matters and says nothing about seniority, appeals, or which court may correct the other.",
+    "source": "Provision cited in the source fields of the Syariah and family lessons in this corpus.",
+    "verify": "Read Article 121 in the current reprint. Check the Ninth Schedule State List entry on Islamic law separately, since the class of excluded matters depends on it.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-fc-art5",
+    "moduleId": "m05-criminal-procedure",
+    "lessonId": "l-criminal-procedure",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 5, especially clauses (3) and (4)",
+    "find": "In the Federal Constitution, Part II, published free by the Attorney General's Chambers. Read the whole Article; the clauses are short and the sequence matters.",
+    "why": "The clock and the two rights that run from an arrest. This is the provision a person actually needs at the moment they are least able to look it up, and the one the criminal procedure lessons rest on.",
+    "read": [
+      {
+        "passage": "Clause (3), and the two distinct things it provides for.",
+        "look_for": "Separate them: being informed of the grounds, and access to a legal practitioner. They are different rights with different triggers, and answers that merge them lose marks."
+      },
+      {
+        "passage": "Clause (4) and the period it names.",
+        "look_for": "Note what starts the clock and what must happen before it expires. Ask what is excluded from the computation, if anything, and where you would look to find out."
+      },
+      {
+        "passage": "Any exceptions or qualifications elsewhere in the Article.",
+        "look_for": "Constitutional rights here come with their own carve-outs. Read to the end before concluding what the rule is."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What event starts the period in clause (4), and why does that matter more than the time of questioning?",
+        "model": "A good answer identifies arrest — the moment the person is no longer free to leave — rather than arrival at a station or the start of an interview. It matters because the police control when questioning begins and do not control when the arrest happened, so tying the clock to the arrest is what makes it a limit rather than a formality."
+      },
+      {
+        "q": "A detainee is told the grounds of arrest six hours later. Which clause is engaged and what is the argument?",
+        "model": "A good answer engages clause (3) and argues from the word the clause uses about timing rather than from general fairness. The strength of the argument depends on that word, so an answer that does not quote or paraphrase it precisely has not engaged the provision — which is why this exercise asks you to read it rather than recall it."
+      }
+    ],
+    "trap": "Working from the twenty-four hours alone and forgetting the rights in clause (3). Most real complaints involve both, and an answer that runs only the clock misses half the case.",
+    "source": "Provision cited in the source fields of the criminal procedure lessons in this corpus.",
+    "verify": "Read Article 5 in the current reprint, and check the Criminal Procedure Code for the machinery that gives effect to it. This page gives no time computation rules; find them in the text.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-ia-s17a",
+    "moduleId": "m14-statutory-interpretation",
+    "lessonId": "l-interpretation",
+    "act": "Interpretation Acts 1948 and 1967",
+    "actId": "interpretation-acts",
+    "provision": "Section 17A",
+    "find": "Published by the Attorney General's Chambers as Act 388. The section is one sentence; read it in the Act rather than in a textbook's paraphrase, because the paraphrases differ from each other.",
+    "why": "The statutory direction to prefer a purposive construction. Almost every interpretation argument in Malaysian practice runs through it, and it is short enough to read in a minute and argue about for a career.",
+    "read": [
+      {
+        "passage": "The whole section, twice.",
+        "look_for": "First for what it directs. Second for its conditions — what has to be true before the direction bites."
+      },
+      {
+        "passage": "The words describing what is preferred, and to what.",
+        "look_for": "It sets up a comparison. Name both sides of it precisely; an answer that says only \"purpose wins\" has not read the comparison."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Does this section let a court prefer purpose over clear words? Answer from the text.",
+        "model": "A good answer works the words rather than reaching for a slogan. The section directs a preference between constructions, which presupposes that more than one construction is available. What follows where only one construction is available is the argument, and the honest answer says the section's own terms are the place that argument starts — not a textbook's summary of it."
+      },
+      {
+        "q": "How does this section change the order in which you argue an interpretation point?",
+        "model": "A good answer connects the provision to method. With a statutory direction available, purpose is not a last resort reached after ordinary meaning fails; it is something a court is directed to prefer between constructions. But it still needs constructions to choose between, so the work of establishing an ambiguity comes first — which is why the ordering in the lessons puts words, then structure, then purpose."
+      }
+    ],
+    "trap": "Citing the section as though it settled every interpretation dispute. It directs a preference between constructions, and the fight is usually about whether there is more than one.",
+    "source": "Provision cited in the source fields of the statutory interpretation lessons in this corpus.",
+    "verify": "Read s 17A in the current reprint of Act 388, and check whether any later amendment has altered it before relying on this.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-ea-burden",
+    "moduleId": "m10-evidence",
+    "lessonId": "l-burden",
+    "act": "Evidence Act 1950",
+    "actId": "evidence-act-1950",
+    "provision": "Sections 101 to 106",
+    "find": "In the Evidence Act 1950, published free by the Attorney General's Chambers. Read the run of sections together rather than one at a time; they are a scheme and each is written against the others.",
+    "why": "The burden of proof is where most evidence answers go wrong, and the reason is almost always that the reader learned a slogan instead of a scheme. These sections are the scheme.",
+    "read": [
+      {
+        "passage": "Sections 101 and 102 together.",
+        "look_for": "They are not saying the same thing twice. Work out what each adds, and write down the difference before reading on."
+      },
+      {
+        "passage": "Section 103.",
+        "look_for": "Ask what shifts and what does not. The distinction between the burden of proof and the burden of adducing evidence lives here."
+      },
+      {
+        "passage": "Sections 105 and 106, and their illustrations.",
+        "look_for": "These are the exceptions people misremember. Read the illustrations — they were enacted with the sections and they are the clearest statement of scope you will find."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the difference between the two burdens in one sentence each, using the sections rather than a textbook phrase.",
+        "model": "A good answer distinguishes the burden that stays where the statute puts it from the burden that moves as evidence is led, and grounds each in a section rather than in the phrases legal burden and evidential burden — which are useful shorthand and are not what the Act says. Naming the section is what makes the answer checkable."
+      },
+      {
+        "q": "Why do the illustrations matter more here than in most Acts?",
+        "model": "A good answer notes that the illustrations were enacted with the sections and show the intended scope concretely, which is exactly what is contested about ss 105 and 106. A reader who skips them is choosing to argue about scope while ignoring the drafter's own examples of it."
+      }
+    ],
+    "trap": "Reciting \"he who asserts must prove\" and stopping. The Act sets out a scheme with exceptions, and the exceptions are where the marks and the real disputes are.",
+    "source": "Provisions cited in the source fields of the evidence lessons in this corpus.",
+    "verify": "Read ss 101 to 106 with their illustrations in the current reprint. Check whether the Act's numbering has changed before citing a section number in an exam.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-nlc-s340",
+    "moduleId": "m08-property",
+    "lessonId": "l-torrens",
+    "act": "National Land Code",
+    "actId": "national-land-code",
+    "provision": "Section 340",
+    "find": "In the National Land Code, published by the Attorney General's Chambers. Read the whole section including every subsection and the proviso; the proviso is the part the arguments are about.",
+    "why": "Indefeasibility of title, and the exceptions to it, in one section. The property lessons and the leading cases all turn on how its subsections fit together, so reading it whole is the difference between following those cases and taking someone's word for them.",
+    "read": [
+      {
+        "passage": "Subsection (1), stating the general position.",
+        "look_for": "Note precisely whose title is protected and against what. The generality here is what the later subsections cut into."
+      },
+      {
+        "passage": "Subsection (2) and its list.",
+        "look_for": "These are the circumstances in which title is not indefeasible. Take them one at a time and ask what each is aimed at."
+      },
+      {
+        "passage": "The proviso to subsection (3).",
+        "look_for": "Read it slowly and work out which words carry the result. This proviso is the whole of a well-known controversy, and the controversy is about its grammar as much as its policy."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Explain, from the section alone, how a purchaser can be protected where their predecessor's title was defective.",
+        "model": "A good answer traces the route through the subsections rather than naming a doctrine. It should identify where the protection comes from, what conditions attach to it, and which words in the proviso do that work. If your answer uses the phrase deferred indefeasibility without pointing at the words that produce it, you have named a conclusion and skipped the reasoning."
+      },
+      {
+        "q": "Why is it important that you read the proviso rather than a summary of it?",
+        "model": "A good answer connects to the case law: two Federal Court decisions read this proviso differently, and the disagreement is about what the words attach to. A summary reports whichever reading its author accepted, so a reader working from a summary cannot see what the argument was about — and cannot assess a later case that revisits it."
+      }
+    ],
+    "trap": "Learning the labels — immediate and deferred indefeasibility — without being able to point at the words producing either. The labels are a shorthand for a reading of this section, not a substitute for it.",
+    "source": "Provision cited in the source fields of the property lessons in this corpus.",
+    "verify": "Read s 340 in the current reprint. The National Land Code has been amended; confirm the current text and numbering before relying on this.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-ca-s213",
+    "moduleId": "m09-company",
+    "lessonId": "l-company",
+    "act": "Companies Act 2016",
+    "actId": "companies-act-2016",
+    "provision": "Section 213",
+    "find": "In the Companies Act 2016, published free by the Attorney General's Chambers. Read both subsections together and note the different language each uses.",
+    "why": "Directors' duties, stated by statute rather than left to case law. The two subsections are drafted differently on purpose, and noticing that is the exercise.",
+    "read": [
+      {
+        "passage": "Subsection (1).",
+        "look_for": "Identify whose interests are named and what mental element the words import. Ask whether the test it sets is one a court assesses from inside the director's head or from outside it."
+      },
+      {
+        "passage": "Subsection (2).",
+        "look_for": "Compare the language with (1). The standard is expressed differently, and the difference is the point."
+      }
+    ],
+    "questions": [
+      {
+        "q": "One subsection sets a largely subjective standard and the other a largely objective one. Which is which, and what words tell you?",
+        "model": "A good answer points at the words rather than asserting the labels. It should name the phrase in each subsection that carries the standard, and say what follows in practice: a director's honest belief matters more under one, and what a reasonable person in that position would have done matters more under the other. The practical consequence is what turns a label into an answer."
+      },
+      {
+        "q": "Why does it matter that these duties are in statute rather than only in case law?",
+        "model": "A good answer gives at least one consequence that follows from the form: the words are fixed and can be construed like any other provision, they apply regardless of what a company's constitution says, and breach engages whatever the Act attaches to breach. An answer that says only that codification makes things clearer has not said what changes."
+      }
+    ],
+    "trap": "Reciting duties of good faith and care from general company law without checking what this Act actually says. The statutory formulation is the starting point in Malaysia, and it may not match a textbook written for another jurisdiction.",
+    "source": "Provision cited in the source fields of the company lessons in this corpus.",
+    "verify": "Read s 213 in the current reprint and check the sections dealing with consequences of breach, which this page does not address.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-cta-s26",
+    "moduleId": "m06-contract",
+    "lessonId": "l-consideration",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 26 and its illustrations",
+    "find": "In the Contracts Act 1950, published free by the Attorney General's Chambers. Read the section with its illustrations, which were enacted with it.",
+    "why": "Malaysian contract law departs from English law here, and this section is where. A reader who learns consideration from an English textbook will get this wrong, which makes it worth reading in the original.",
+    "read": [
+      {
+        "passage": "The opening general rule.",
+        "look_for": "State it in your own words before reading further, then check your sentence against the words."
+      },
+      {
+        "passage": "The exceptions that follow.",
+        "look_for": "Take each separately and ask what circumstance it is aimed at. One of them is the well-known departure from English law; identify which and why it matters."
+      },
+      {
+        "passage": "The illustrations.",
+        "look_for": "They show the intended reach concretely. Where an illustration surprises you, that is the point at which your prior understanding came from somewhere other than this Act."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Identify the exception that most clearly departs from the English position, and state the practical difference.",
+        "model": "A good answer names the exception and then says what a party can do here that they could not do in England — that is the practical difference, and it is what an examiner is testing. Naming the exception without stating its effect describes a difference without showing that you understand it."
+      },
+      {
+        "q": "How should an illustration be used in an answer?",
+        "model": "A good answer treats illustrations as part of the enacted text showing intended scope, not as decoration or as case law. They are strong support for a reading of the section, and they are not authority for propositions beyond it."
+      }
+    ],
+    "trap": "Importing English consideration doctrine wholesale. The Act sets out its own rule with its own exceptions, and s 3 of the Civil Law Act does not override a Malaysian statute that covers the ground.",
+    "source": "Provision cited in the source fields of the contract lessons in this corpus.",
+    "verify": "Read s 26 with its illustrations in the current reprint before relying on this, and check the surrounding sections for the definitions it uses.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-pc-homicide",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-homicide",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Sections 299 and 300",
+    "find": "In the Penal Code, published free by the Attorney General's Chambers. Read the two sections side by side, with their explanations and illustrations; reading either alone is what makes this topic confusing.",
+    "why": "The line between culpable homicide and murder is drawn by two sections whose wording overlaps deliberately. Almost every difficulty students have here comes from meeting them one at a time.",
+    "read": [
+      {
+        "passage": "Section 299, and each limb of it.",
+        "look_for": "Number the limbs as you read. You will need to refer to them individually and the section does not number them for you."
+      },
+      {
+        "passage": "Section 300, clause by clause.",
+        "look_for": "Set each clause of 300 against the limb of 299 it corresponds to. The correspondence is the architecture of the offence, and seeing it is the whole exercise."
+      },
+      {
+        "passage": "The explanations and illustrations attached to both.",
+        "look_for": "They resolve several of the questions the bare words raise. Read them as part of the text, because they were enacted as part of it."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Set out the relationship between the two sections in three sentences.",
+        "model": "A good answer explains that one defines a wider offence and the other identifies when conduct within it amounts to the graver one, so the clauses map onto the limbs rather than standing apart. Getting the direction of the relationship right matters — an answer that treats them as two unrelated definitions will misapply both."
+      },
+      {
+        "q": "Why does this topic reward reading the illustrations more than most?",
+        "model": "A good answer notes that the distinctions turn on fine gradations of intention and knowledge, which are hard to state abstractly and easy to show by example — which is what the illustrations do. They are also enacted text, so they are evidence of intended scope rather than one commentator's view."
+      }
+    ],
+    "trap": "Learning the clauses of s 300 as a list without mapping them back to s 299. The mapping is what the sections are for and it is where problem questions are decided.",
+    "source": "Provisions cited in the source fields of the criminal law lessons in this corpus.",
+    "verify": "Read ss 299 and 300 with explanations and illustrations in the current reprint, and check the exceptions to s 300 separately — this page does not deal with them.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-fc-art4",
+    "moduleId": "m03-constitutional",
+    "lessonId": "l-basic-structure",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 4(1)",
+    "find": "The opening of Part I of the Federal Constitution, published free by the Attorney General's Chambers. It is one sentence; read the rest of Article 4 with it, because the later clauses qualify how it is invoked.",
+    "why": "Constitutional supremacy in a single sentence, and the foundation every constitutional argument in the course stands on. It is also a good lesson in how much a short provision leaves unsaid.",
+    "read": [
+      {
+        "passage": "Clause (1) itself.",
+        "look_for": "Note what is declared supreme, what happens to inconsistent law, and — the part usually missed — the words describing the extent of the invalidity."
+      },
+      {
+        "passage": "The remaining clauses of Article 4.",
+        "look_for": "They restrict how and where the supremacy may be raised. Ask what practical difference those restrictions make to a litigant."
+      }
+    ],
+    "questions": [
+      {
+        "q": "The clause says inconsistent law is void. To what extent, and why does that qualification matter?",
+        "model": "A good answer catches that invalidity runs to the extent of the inconsistency rather than to the whole law, and explains the consequence: a court may strike down part of a provision and leave the rest standing, so an argument should identify precisely what is inconsistent rather than attacking a statute wholesale. That is also why severability is worth pleading in the alternative."
+      },
+      {
+        "q": "Does Article 4(1) by itself tell you which court may declare a law void, or how?",
+        "model": "A good answer says no and points to where those answers live — the later clauses of Article 4 and the provisions on jurisdiction. The useful observation is that a declaration of supremacy is not self-executing: something else must supply the forum and the procedure, and a litigant who cites only 4(1) has not yet said how to get there."
+      }
+    ],
+    "trap": "Quoting the clause and stopping. Supremacy is the premise of a constitutional argument, not the argument — the work is showing the inconsistency and identifying its extent.",
+    "source": "Provision cited in the source fields of the constitutional lessons in this corpus.",
+    "verify": "Read Article 4 whole in the current reprint. This page does not address the amendment power or the basic structure debate; both are separate and contested.",
+    "lastVerified": "2026-09-10"
+  }
+]

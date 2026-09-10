@@ -40,7 +40,9 @@ ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 QUOTED = re.compile(r"[\"“]([^\"”]{40,})[\"”]")
 # A provision reference a reader can actually chase: a section, article or rule
 # with a number in it.
-PROVISION = re.compile(r"(?i)\b(section|art|article|rule|order|s|ss)\b[\s.]*\d")
+# Plurals matter: a scheme is often several sections read together, and
+# "Sections 101 to 106" is a perfectly chaseable pointer.
+PROVISION = re.compile(r"(?i)\b(sections?|arts?|articles?|rules?|orders?|ss?)\b[\s.]*\d")
 
 FIELDS = ["id", "moduleId", "lessonId", "act", "actId", "provision", "find",
           "why", "read", "questions", "trap", "source", "verify", "lastVerified"]

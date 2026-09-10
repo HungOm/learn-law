@@ -22,6 +22,8 @@ import Cases from './routes/Cases.jsx';
 import CaseView from './routes/CaseView.jsx';
 import Writing from './routes/Writing.jsx';
 import WritingView from './routes/WritingView.jsx';
+import Statutes from './routes/Statutes.jsx';
+import StatuteView from './routes/StatuteView.jsx';
 import Progress from './routes/Progress.jsx';
 import Seals from './routes/Seals.jsx';
 import Glossary from './routes/Glossary.jsx';
@@ -124,6 +126,8 @@ export default function App() {
                 <Route path="/case/:id"        element={<Page><CaseView /></Page>} />
                 <Route path="/writing"         element={<Page><Writing /></Page>} />
                 <Route path="/writing/:id"     element={<Page><WritingView /></Page>} />
+                <Route path="/statutes"        element={<Page><Statutes /></Page>} />
+                <Route path="/statute/:id"     element={<Page><StatuteView /></Page>} />
                 <Route path="/progress"        element={<Page><Progress /></Page>} />
                 <Route path="/seals"           element={<Page><Seals /></Page>} />
                 <Route path="/glossary"        element={<Page><Glossary /></Page>} />
