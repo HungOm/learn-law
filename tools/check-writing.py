@@ -42,6 +42,27 @@ LESSONS = ROOT / "content/lessons"
 QUOTE_MAX_WORDS = 25
 ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 QUOTED = re.compile(r"[\"“]([^\"”]{40,})[\"”]")
+# `lastVerified` is stamped with the author's LOCAL calendar date, and this
+# check used to compare it against `datetime.date.today()` — also local, but to
+# whichever machine runs the check. Malaysia is UTC+8, and the deploy workflow's
+# GitHub Actions runner is UTC. For roughly eight hours out of every day, a date
+# that was genuinely "today" when a lesson was authored in Malaysia has not yet
+# arrived in UTC, so the check would reject it as being from the future — on
+# content that was current the moment it was written.
+#
+# This tool is not run in CI today, so it did not fail — but `check-extracts.py`
+# carried the identical comparison and did: `check:extracts` failed the deploy
+# workflow on every one of at least six consecutive commits with exactly this
+# message, and nothing else was wrong. The published site sat several rounds of
+# content behind while every gate a human would think to check locally kept
+# reporting green, because the author's own machine is in the timezone the
+# dates were written in and never saw the mismatch. Fixed here too, on the
+# chance this tool is ever added to that workflow or run from another timezone.
+#
+# One day of grace is enough for a single-author, single-timezone corpus (the
+# real skew here is at most 8 hours) and still catches a genuine mistake — a
+# date a year off, say — which is what this check exists to catch.
+FUTURE_GRACE = datetime.timedelta(days=1)
 
 LEVELS = {"foundation", "advanced", "llb"}
 KINDS = {"case-note", "problem-answer", "advice", "argument", "essay"}
@@ -179,7 +200,7 @@ def main():
             if not ISO.match(lv):
                 errors.append(f"{where}: lastVerified {lv!r} is not YYYY-MM-DD")
             else:
-                if datetime.date.fromisoformat(lv) > datetime.date.today():
+                if datetime.date.fromisoformat(lv) > datetime.date.today() + FUTURE_GRACE:
                     errors.append(f"{where}: lastVerified {lv} is in the future")
 
     if errors:

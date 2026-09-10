@@ -38,6 +38,25 @@ QUOTE_MAX_WORDS = 25
 CITATION = re.compile(r"[\[(]\d{4}[\])]")
 QUOTED = re.compile(r"[\"“]([^\"”]{40,})[\"”]")
 ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# `lastVerified` is stamped with the author's LOCAL calendar date, and this
+# check used to compare it against `datetime.date.today()` — also local, but to
+# whichever machine runs the check. Malaysia is UTC+8, and the GitHub Actions
+# runner that gates the actual deploy is UTC. For roughly eight hours out of
+# every day, a date that was genuinely "today" when a lesson was authored in
+# Malaysia has not yet arrived in UTC, and the check rejected it as being from
+# the future — on content that was current the moment it was written.
+#
+# Found the hard way: `check:extracts` failed the deploy workflow on every one
+# of at least six consecutive commits with exactly this message, and nothing
+# else was wrong. The published site sat several rounds of content behind
+# while every gate a human would think to check locally kept reporting green,
+# because the author's own machine is in the timezone the dates were written
+# in and never saw the mismatch.
+#
+# One day of grace is enough for a single-author, single-timezone corpus (the
+# real skew here is at most 8 hours) and still catches a genuine mistake — a
+# date a year off, say — which is what this check exists to catch.
+FUTURE_GRACE = datetime.timedelta(days=1)
 
 TEXT_FIELDS = ("why", "find", "trap", "source", "verify")
 REQUIRED = ("id", "moduleId", "lessonId", "case", "citation", "court", "year",
@@ -141,7 +160,7 @@ def main():
             lv = x.get("lastVerified", "")
             if lv and not ISO.match(lv):
                 errors.append(f"{where}  lastVerified `{lv}` is not YYYY-MM-DD")
-            elif lv and datetime.date.fromisoformat(lv) > today:
+            elif lv and datetime.date.fromisoformat(lv) > today + FUTURE_GRACE:
                 errors.append(f"{where}  lastVerified `{lv}` is in the future")
 
             order = x.get("order")
