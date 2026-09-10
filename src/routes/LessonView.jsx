@@ -206,6 +206,37 @@ export default function LessonView() {
                   tabIndex={stepping ? -1 : undefined}
                 >{sec.h}</h2>
               </div>
+              {/* The invitation to read one section at a time, offered where the
+                  reader is rather than only at the foot of the lesson.
+                  Continuous-column only: in focus mode the reader is already
+                  reading one section at a time and the offer is nonsense.
+
+                  It is the same rule as the `keypoint` line below, applied in
+                  the opposite direction — that one is stepped-only because a
+                  repeated LINE reads as noise down a column. This survives the
+                  repetition because it is a CONTROL, and a control is only
+                  useful where the reader happens to be.
+
+                  `setStep(n)` first, so entering focus mode here lands on THIS
+                  section. The foot-of-page toggle cannot do that: a reader who
+                  decides at section 4 scrolls to the bottom and arrives at
+                  section 1, having lost the place they were asking to keep. */}
+              {!stepping && (
+                <p className="lsec-mode">
+                  <button
+                    type="button"
+                    className="stepper-mode-btn"
+                    onClick={() => {
+                      setStep(n);
+                      setStepPref(true);
+                      setFocus(true);
+                      window.scrollTo({ top: 0 });
+                    }}
+                  >
+                    Read one section at a time
+                  </button>
+                </p>
+              )}
               {/* Every section carries a `keypoint` — enforced by
                   check-content.py, 20-160 chars, forbidden from repeating the
                   heading — and until now only index pages showed it. Stepped

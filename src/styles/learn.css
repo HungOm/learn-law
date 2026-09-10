@@ -1133,6 +1133,14 @@
 .stepper-btn--next { border-color: var(--border-active); }
 
 .stepper-mode { margin: var(--space-4) 0 0; text-align: center; }
+
+/* The same control, offered at the top of each section on the continuous page.
+   Left-aligned rather than centred: the foot-of-lesson toggle is a page-level
+   control and sits on the page's axis, while this one belongs to the section it
+   opens and reads as part of that column. Reuses `.stepper-mode-btn` so tap
+   height and the underline treatment cannot drift apart from it. */
+.lsec-mode { margin: 0 0 var(--space-4); }
+.lsec-mode .stepper-mode-btn { padding-left: 0; }
 .stepper-mode-btn {
   min-height: var(--tap-min);
   font-family: var(--font-sans); font-size: var(--type-sm);
