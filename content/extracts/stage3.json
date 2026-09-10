@@ -40,7 +40,8 @@
     "trap": "Treating this as a case about an exception to a general rule you already know. In Malaysia the general rule is in section 26, and what looks like an exception to English doctrine may simply be the rule here.",
     "source": "Citation taken from the source field of the consideration lesson in this corpus.",
     "verify": "Check the citation against the report, and read section 26 of the Contracts Act 1950 with its illustrations before deciding what the case adds to it.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 2
   },
   {
     "id": "x-macon-phang",
@@ -79,7 +80,8 @@
     "trap": "Reading a first-instance judgment as though its every observation were binding. It is a careful working-through, and its value here is the method rather than its place in the hierarchy.",
     "source": "Citation taken from the source field of the formation lesson in this corpus.",
     "verify": "Check the citation and the court against the report itself. Confirm whether any later decision has qualified it before relying on it in an answer.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 1
   },
   {
     "id": "x-cavendish-makdessi",
@@ -122,6 +124,7 @@
     "trap": "Citing this as though it stated Malaysian law on penalties. Whether and how far Malaysian courts have taken it up is a separate question and the one your answer actually turns on.",
     "source": "Citation taken from the source field of the remedies lesson in this corpus.",
     "verify": "Check the citation on BAILII, and check the current Malaysian position on penalty clauses — including whether an apex court here has adopted this reasoning — before relying on it.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 3
   }
 ]

@@ -40,7 +40,8 @@
     "trap": "Reciting three elements as a checklist and applying none of them. The elements are not a spell; each is a question about these facts, and an answer that names them without asking them has done nothing.",
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation against the report itself before relying on it, and check whether the Malaysian courts have adopted this reasoning rather than assuming they have.",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-09-09",
+    "order": 1
   },
   {
     "id": "x-ampang-jaya-phoa",
@@ -79,7 +80,8 @@
     "trap": "Treating this as merely the Malaysian version of an English case. It is a court deciding for itself which imported reasoning fits local circumstances, and the deciding is what you are reading it for.",
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation and the court against the report. Read the whole judgment rather than a headnote — the headnote will give you the holding and not the method.",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-09-09",
+    "order": 2
   },
   {
     "id": "x-bolam-friern",
@@ -118,7 +120,8 @@
     "trap": "Citing this as though it settled the Malaysian position. It is the starting point of a long argument, and other cases in this module carry that argument forward.",
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation against the report, and check the current Malaysian position on the professional standard before relying on this in an answer.",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-09-09",
+    "order": 3
   },
   {
     "id": "x-rogers-whitaker",
@@ -157,7 +160,8 @@
     "trap": "Using this to say the professional standard is dead. The case draws a line between kinds of duty; it does not abolish the earlier test for the areas the line leaves on the other side.",
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation on AustLII, and check whether and how the Malaysian courts have taken up this reasoning before using it in an answer.",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-09-09",
+    "order": 4
   },
   {
     "id": "x-zulhasnimar-kuppu",
@@ -200,7 +204,8 @@
     "trap": "Reading this as simply choosing between two foreign tests. It is a Malaysian court deciding what Malaysian law is, using foreign reasoning as material rather than as instruction.",
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation and the court against the report, and check whether anything has since qualified it before relying on it.",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-09-09",
+    "order": 6
   },
   {
     "id": "x-lok-kok-beng",
@@ -239,6 +244,7 @@
     "trap": "Treating pure economic loss as never recoverable. The category is treated with caution and confined, which is a different thing, and an answer that states a flat prohibition will be wrong on the facts where it is recoverable.",
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation and the court against the report, and check the current position on pure economic loss in Malaysia rather than relying on this summary.",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-09-09",
+    "order": 7
   }
 ]

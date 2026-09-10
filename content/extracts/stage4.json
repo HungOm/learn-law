@@ -40,7 +40,8 @@
     "trap": "Reciting the factors as an unordered checklist. The sequence is the substance, and an answer that reaches the balance of convenience before dealing with the threshold has skipped the question that decides most applications.",
     "source": "Citation taken from the source field of the interlocutory lesson in this corpus.",
     "verify": "Check the citation on BAILII, and read the Malaysian authority in this module before relying on this test as stated here.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 1
   },
   {
     "id": "x-keet-gerald",
@@ -79,7 +80,8 @@
     "trap": "Treating this as the English test restated. It is a court exercising its own judgment about how the approach should work here, and the differences are where the marks are.",
     "source": "Citation taken from the source field of the interlocutory lesson in this corpus.",
     "verify": "Check the citation and the court against the report, and check whether any later decision has qualified the approach before relying on it.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 2
   },
   {
     "id": "x-salomon",

@@ -36,10 +36,29 @@ export function byId(id) {
   return extracts.find(x => x.id === id) || null;
 }
 
+/**
+ * Order within a module, where an entry has asked for one.
+ *
+ * Several of these are sequences rather than lists — Bolam, Rogers, Foo Fio Na
+ * and Zulhasnimar are one argument about the standard in medical negligence,
+ * made over sixty years, and read out of order they look like four cases about
+ * the same thing. Before this, order fell out of the FILENAMES the batches
+ * happened to be written in, which meant adding a stage5.json or renaming a file
+ * silently reordered a reader's sequence with nothing on screen to say so.
+ *
+ * `order` is optional. Absent means unsequenced, not last in importance, so
+ * those keep their existing relative order behind the ones that asked.
+ */
+function inReadingOrder(list) {
+  const ranked = list.filter(x => Number.isInteger(x.order));
+  const rest = list.filter(x => !Number.isInteger(x.order));
+  return [...ranked.sort((a, b) => a.order - b.order), ...rest];
+}
+
 /** Grouped for an index page, in the module order the caller already has. */
 export function byModule(moduleIds) {
   return moduleIds
-    .map(id => ({ moduleId: id, list: extracts.filter(x => x.moduleId === id) }))
+    .map(id => ({ moduleId: id, list: inReadingOrder(extracts.filter(x => x.moduleId === id)) }))
     .filter(g => g.list.length);
 }
 

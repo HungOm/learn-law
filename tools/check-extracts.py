@@ -144,6 +144,10 @@ def main():
             elif lv and datetime.date.fromisoformat(lv) > today:
                 errors.append(f"{where}  lastVerified `{lv}` is in the future")
 
+            order = x.get("order")
+            if order is not None and not isinstance(order, int):
+                errors.append(f"{where}  order `{order}` must be a whole number")
+
             # The rule this file exists for.
             for path, text in walk_strings(x):
                 for m in QUOTED.finditer(text):
@@ -156,6 +160,27 @@ def main():
                             f"what to look for instead")
                 for m in re.finditer(r"http://", text):
                     errors.append(f"{where}  {path} has an http:// link — use https")
+
+    # Two entries in one module claiming the same slot is the exact failure the
+    # `order` field exists to prevent: the tie breaks on filename, which is the
+    # implicit coupling the field replaced. Checked across every file, because
+    # the batches are written separately and the collision is between them.
+    slots = {}
+    for f in files:
+        try:
+            data = json.loads(f.read_text())
+        except json.JSONDecodeError:
+            continue
+        for x in (data if isinstance(data, list) else []):
+            if isinstance(x.get("order"), int):
+                key = (x.get("moduleId"), x["order"])
+                if key in slots:
+                    errors.append(
+                        f"{f.relative_to(ROOT)}:{x.get('id')}  order {x['order']} in "
+                        f"{x.get('moduleId')} is already taken by `{slots[key]}` — two "
+                        f"entries claiming one slot fall back to filename order, which "
+                        f"is what `order` exists to stop")
+                slots[key] = x.get("id")
 
     if errors:
         print("check-extracts: FAILED")
