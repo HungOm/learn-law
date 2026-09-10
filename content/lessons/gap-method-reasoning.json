@@ -40,10 +40,10 @@
               "prompt": "Aida read the chapter on deposits last week. Tonight she has one hour. Which of these will leave her remembering more next month?",
               "options": [
                 "Read the chapter again, slowly, from the start",
-                "Copy the important parts into neat notes",
-                "Write down what the chapter said, from memory, before opening it"
+                "Write down what the chapter said, from memory, before opening it",
+                "Copy the important parts into neat notes"
               ],
-              "answer": 2,
+              "answer": 1,
               "reveal": "The third, and it is the least appealing of the three. Trying to remember and half failing does more for memory than reading it again — as long as you then check what you got wrong. Re-reading and copying are work. They are just the wrong work. If this is how you have studied, nothing is wasted. You were buying the cheaper version of the same hour."
             },
             {
@@ -295,12 +295,12 @@
           "id": "pf-q-study-1",
           "q": "What should the first ten minutes of a study session be?",
           "options": [
-            "Answering questions on old material from memory",
             "Reading the new chapter",
             "Copying out yesterday's notes",
-            "Planning the rest of the week"
+            "Planning the rest of the week",
+            "Answering questions on old material from memory"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Testing comes before reviewing. Reading first feels better and teaches less.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -308,12 +308,12 @@
           "id": "pf-q-study-2",
           "q": "Why does re-reading feel like it is working?",
           "options": [
-            "Repetition always builds memory",
             "The second pass is easier, and ease feels like knowing",
+            "Repetition always builds memory",
             "It takes longer, so more goes in",
             "It suits people who learn by reading"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "That feeling is fluency. It fades in about a week and it is not the same as memory.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -348,11 +348,11 @@
           "q": "You have missed a week. What do you do on the first night back?",
           "options": [
             "A double session to catch up",
-            "Ten minutes on material you already know",
             "Start the next module",
-            "Rewrite the timetable"
+            "Rewrite the timetable",
+            "Ten minutes on material you already know"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Restarting is a habit problem. A bigger plan fails twice over.",
           "source": "Ordinary study practice"
         }
@@ -595,12 +595,12 @@
           "id": "pf-q-res-1",
           "q": "An article about an Act, and the Act itself. Which can you rely on?",
           "options": [
-            "The Act, because you can read the words yourself",
             "The article, because it is easier to follow",
             "Either, since they say the same thing",
-            "Neither, without a lawyer"
+            "Neither, without a lawyer",
+            "The Act, because you can read the words yourself"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Comment is a lead to the primary text. It is never a substitute for it.",
           "source": "Standard research practice; the primary text governs, not the comment on it"
         },
@@ -623,10 +623,10 @@
           "options": [
             "Yes, in every respect",
             "Yes, if you print the whole Act",
-            "No, and it may not be used at all",
-            "No — it is the official text, but a print-out is not a copy of the Gazette"
+            "No — it is the official text, but a print-out is not a copy of the Gazette",
+            "No, and it may not be used at all"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "It is right for study and research. A formal setting may need the gazetted version.",
           "source": "Attorney General's Chambers portal, the official free publication of federal statute"
         },
@@ -635,11 +635,11 @@
           "q": "What is a citation for?",
           "options": [
             "It proves the case was correctly decided",
-            "It shows the case is still good law",
             "It is an address, so any reader can find the same words",
+            "It shows the case is still good law",
             "It ranks the case against others"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "It tells you where to look and usually which court. It settles nothing by itself.",
           "source": "Standard Malaysian citation practice"
         },
@@ -661,11 +661,11 @@
           "q": "A free portal shows nothing to suggest a case was overturned. What have you established?",
           "options": [
             "That the case is still good law",
-            "That no appeal was filed",
             "Nothing — free portals do not track what happened later",
+            "That no appeal was filed",
             "That later courts followed it"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Silence is not a clean bill of health. That check needs a paid service.",
           "source": "Standard research practice; free Malaysian sources include no citator"
         }
@@ -930,12 +930,12 @@
           "id": "pf-q-reason-2",
           "q": "What is the first thing to do with a rule before you apply it?",
           "options": [
-            "Find a case about it",
             "Split it into elements and list them",
+            "Find a case about it",
             "Write it out in full",
             "Decide who ought to win"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "An element you never mention is an element you never proved.",
           "source": "Standard problem-question technique; a rule is applied element by element"
         },
@@ -945,10 +945,10 @@
           "options": [
             "He was careless, so he must pay",
             "The law requires reasonable care",
-            "The bike was damaged",
-            "He lifted a loaded bike alone on a wet walkway with help standing beside him"
+            "He lifted a loaded bike alone on a wet walkway with help standing beside him",
+            "The bike was damaged"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Application ties one fact to one element. The others restate the rule or the story.",
           "source": "Standard problem-question technique; the application band of the rubric"
         },
@@ -1252,11 +1252,11 @@
           "q": "What is the first physical step with a hard section?",
           "options": [
             "Read it three times",
-            "Look for a case about it",
             "Copy it out with one clause per line",
+            "Look for a case about it",
             "Read a summary of it first"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "You cannot interpret a clause you have not isolated.",
           "source": "Standard practice for reading a provision"
         },
@@ -1265,11 +1265,11 @@
           "q": "A condition says over eighteen and resident in the State. Who qualifies?",
           "options": [
             "Anyone who is either",
-            "Anyone over eighteen",
             "Only a person who is both",
+            "Anyone over eighteen",
             "Anyone resident in the State"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "And needs every item. Swap it for or and the answer reverses.",
           "source": "Standard practice for reading a provision; a conjunctive condition needs every limb"
         },
@@ -1277,12 +1277,12 @@
           "id": "pf-q-sec-3",
           "q": "A definition says includes rather than means. What follows?",
           "options": [
-            "The ordinary meaning stays, and the definition adds to it",
             "The list is closed",
             "The definition applies to every Act",
-            "The word has no settled meaning"
+            "The word has no settled meaning",
+            "The ordinary meaning stays, and the definition adds to it"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Means gives a closed list. Includes extends the ordinary sense without shutting it down.",
           "source": "Standard drafting convention; 'includes' extends the ordinary meaning, 'means' defines exhaustively"
         },
@@ -1316,12 +1316,12 @@
           "id": "pf-q-sec-6",
           "q": "What is the purpose behind an Act allowed to do?",
           "options": [
-            "Choose between meanings the words can already carry",
             "Add words the Act does not contain",
             "Override a clear definition",
-            "Decide the case on its own"
+            "Decide the case on its own",
+            "Choose between meanings the words can already carry"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "If the words can bear only one meaning, purpose has nothing left to choose between.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         }

@@ -32,10 +32,10 @@
               "prompt": "You have two hours, and a chapter you read last week. Before you read on — which of these leaves more in your head a month later?",
               "options": [
                 "Reading the chapter again, slowly and carefully",
-                "Closing it and writing down what it said, then checking",
-                "Copying the main points out into clean, ordered notes"
+                "Copying the main points out into clean, ordered notes",
+                "Closing it and writing down what it said, then checking"
               ],
-              "answer": 1,
+              "answer": 2,
               "reveal": "Closing the book wins, and it is not close. Re-reading feels far better, and that is exactly the problem. The second pass is smooth, and the mind reads that smoothness as knowing. If you picked it, you picked what almost everybody picks. The rest of this lesson is about why the pleasant option is the weak one."
             },
             {
@@ -265,12 +265,12 @@
           "id": "qhs2",
           "q": "Your revision feels smooth and pleasant. What should you conclude?",
           "options": [
-            "It is working well",
             "Be suspicious — smoothness is not memory",
+            "It is working well",
             "You have found your learning style",
             "You should move on to the next topic"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The second pass is easier than the first, and your brain reads that ease as knowing.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -279,11 +279,11 @@
           "q": "Why mix contract and criminal law in one sitting?",
           "options": [
             "It covers more ground per hour",
-            "It is less tiring",
             "Mixing them teaches you to tell them apart",
+            "It is less tiring",
             "It suits a short attention span"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Doing one topic at a time feels better and teaches you less about telling two bodies of rules apart.",
           "source": "Interleaving research, as summarised in Make It Stick"
         },
@@ -509,10 +509,10 @@
               "q": "A driver was doing 90 km/h in heavy rain. Which part of that is a question of law?",
               "options": [
                 "That the car was doing 90 km/h",
-                "That 90 km/h in heavy rain fell below the standard of a careful driver",
-                "Both, since the speed is measured against a legal limit"
+                "Both, since the speed is measured against a legal limit",
+                "That 90 km/h in heavy rain fell below the standard of a careful driver"
               ],
-              "answer": 1,
+              "answer": 2,
               "why": "The speed is what happened, so it is fact. Whether it fell short of what a careful driver does is what the rules make of it, so it is law. The trap is the third answer. A fact does not become a question of law because a rule is later applied to it."
             }
           ]
@@ -566,10 +566,10 @@
           "options": [
             "Public law is statutory and private law is common law",
             "Public law is criminal and private law is civil",
-            "Public law is decided in superior courts only",
-            "In public law the State is a party in its capacity as the State"
+            "In public law the State is a party in its capacity as the State",
+            "Public law is decided in superior courts only"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "In private law the two sides meet as equals, and the State supplies only the court.",
           "source": "Standard classification"
         },
@@ -579,10 +579,10 @@
           "options": [
             "Prima facie; conclusive",
             "Clear and convincing; preponderance",
-            "Certainty; likelihood",
-            "Beyond reasonable doubt; balance of probabilities"
+            "Beyond reasonable doubt; balance of probabilities",
+            "Certainty; likelihood"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Criminal and civil, in that order. The gap between them is what lets one set of facts produce two different outcomes.",
           "source": "Standard classification; Evidence Act 1950 for the civil standard"
         },
@@ -590,12 +590,12 @@
           "id": "qsl3",
           "q": "Why does being cleared in a criminal case not defeat a civil claim on the same facts?",
           "options": [
-            "The parties are different",
             "The standards of proof are different",
+            "The parties are different",
             "The time limits are different",
             "Civil courts are not bound by criminal findings"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Failing to prove something beyond reasonable doubt is not a finding that it did not happen.",
           "source": "Standard classification; the criminal and civil standards of proof differ"
         },
@@ -603,12 +603,12 @@
           "id": "qsl4",
           "q": "What is the fact-law split for?",
           "options": [
-            "It decides which court can hear the case",
             "It decides appeals, precedent, and who does what at a trial",
+            "It decides which court can hear the case",
             "It decides the standard of proof",
             "It decides who pays the costs"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Fact is what happened. Law is what follows from it. Almost every procedural rule turns on which is which.",
           "source": "Standard classification"
         }
@@ -646,11 +646,11 @@
               "t": "predict",
               "prompt": "Courts decide by looking at how earlier cases were decided. Before you read on — which earlier decisions must a Malaysian High Court judge follow?",
               "options": [
-                "Any decision of any court, here or in another common law country",
                 "Only decisions of courts above her in the Malaysian ladder",
+                "Any decision of any court, here or in another common law country",
                 "Only the decisions she thinks were rightly decided"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "Only what sits above her, on the same ladder. That leaves a great deal of law she may use and need not obey. If you picked the first, you were reading the daily practice correctly: English and Singaporean judgments are cited in Malaysian courts constantly, and often followed. Cited is not the same as binding, and the gap between those two words is most of this lesson."
             },
             {
@@ -700,10 +700,10 @@
               "q": "A judge spends four pages on one point, then settles the case in two sentences on a different point. Which is the ratio?",
               "options": [
                 "The four pages, since the court plainly thought them important",
-                "The two sentences the result actually turned on",
-                "Both, because both are in the judgment"
+                "Both, because both are in the judgment",
+                "The two sentences the result actually turned on"
               ],
-              "answer": 1,
+              "answer": 2,
               "why": "The test is necessity, not length. Take the point away and ask whether the case still comes out the same way. The four pages could go and the result would stand, so they are commentary. The first answer is the trap, and it is a fair mistake to make. Length and force look like weight on the page, and they are not."
             }
           ]
@@ -901,12 +901,12 @@
           "id": "qpr3",
           "q": "What is per incuriam?",
           "options": [
-            "Decided without reasons",
             "Decided in ignorance of a statute or binding authority that would have altered the result",
+            "Decided without reasons",
             "Decided by a single judge",
             "Decided on a concession"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It is narrow. It is not a licence to ignore a decision you think is badly reasoned.",
           "source": "Standard common law doctrine; the per incuriam exception"
         },
@@ -915,11 +915,11 @@
           "q": "What is the difference between overruling and reversing?",
           "options": [
             "They are the same thing",
-            "Overruling is by the Court of Appeal, reversing by the Federal Court",
             "Overruling declares an earlier decision in another case wrong; reversing sets aside the decision below in the same case",
+            "Overruling is by the Court of Appeal, reversing by the Federal Court",
             "Reversing applies only to criminal appeals"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The two words get used interchangeably all the time, and the mix-up is always noticed.",
           "source": "Standard classification"
         },
@@ -927,12 +927,12 @@
           "id": "qpr5",
           "q": "Which of the four ways out will you use most often?",
           "options": [
-            "Overruling",
             "Distinguishing",
+            "Overruling",
             "Reversing",
             "Per incuriam"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It is the only one open to a court that is bound by the earlier decision.",
           "source": "Standard common law method on precedent"
         }
@@ -1157,12 +1157,12 @@
           "id": "qvc1",
           "q": "Ultra vires means what?",
           "options": [
-            "Beyond the powers conferred, and therefore invalid",
             "Against public policy",
             "Without notice",
-            "Beyond the time limit for bringing a claim"
+            "Beyond the time limit for bringing a claim",
+            "Beyond the powers conferred, and therefore invalid"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "An act outside the authority given by the statute or instrument that grants it.",
           "source": "Standard common law vocabulary; the ultra vires principle"
         },
@@ -1171,11 +1171,11 @@
           "q": "Nemo judex in causa sua requires what?",
           "options": [
             "That the other side be heard",
-            "That reasons be given",
             "That a decision-maker have no interest in the outcome",
+            "That reasons be given",
             "That the decision be published"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "No one a judge in his own cause. Hearing the other side is the other rule, audi alteram partem.",
           "source": "Standard common law vocabulary; the rule against bias"
         },
@@ -1184,11 +1184,11 @@
           "q": "Why are actus reus and mens rea less useful in Malaysia than a common law training suggests?",
           "options": [
             "They are Latin",
-            "They apply only to common law offences",
             "The Penal Code defines each offence with its own mental element",
+            "They apply only to common law offences",
             "They have been abolished"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "You reason from the section, not from a general theory of the guilty mind.",
           "source": "Penal Code (Act 574); each offence carries its own mental element"
         },
@@ -1327,10 +1327,10 @@
               "prompt": "There are two High Courts: one for Malaya, one for Sabah and Sarawak. Before you read on — a High Court in Malaya decides a point. Must a High Court judge in Kuching follow it?",
               "options": [
                 "Yes, since both are High Courts and the ruling is High Court law",
-                "Yes, unless the Federal Court has said otherwise",
-                "No, because neither of the two binds the other"
+                "No, because neither of the two binds the other",
+                "Yes, unless the Federal Court has said otherwise"
               ],
-              "answer": 2,
+              "answer": 1,
               "reveal": "Neither binds the other. Precedent runs downwards, and these two sit level, so there is nothing for it to run down. A decision from Malaya is well worth reading in Kuching, and it is still not an order. The first answer is the natural guess if you think of the High Court as one court with two addresses. It is not one court, and the reason goes back to how the Federation was put together."
             },
             {
@@ -1433,11 +1433,11 @@
               "t": "checkpoint",
               "q": "Why is there no single national Syariah hierarchy?",
               "options": [
-                "The Syariah courts are created by State law, so each State has its own",
                 "Because Syariah law has not been written into statutes",
+                "The Syariah courts are created by State law, so each State has its own",
                 "Because the Federal Court has not yet set one up"
               ],
-              "answer": 0,
+              "answer": 1,
               "why": "They are State courts, made under State enactments, so the ladder is repeated State by State. That is also why no appeal runs from the Syariah Appeal Court into the civil courts. Two ladders, not one tree with a branch. The trap is the third answer, which treats this as a gap waiting to be filled. It is a division of subjects the Constitution makes on purpose."
             }
           ]
@@ -1485,12 +1485,12 @@
           "id": "qct1",
           "q": "What is the civil hierarchy, lowest to highest?",
           "options": [
-            "Magistrates → Sessions → High Court → Court of Appeal → Federal Court",
             "Sessions → Magistrates → High Court → Federal Court → Court of Appeal",
             "Magistrates → High Court → Sessions → Court of Appeal → Federal Court",
-            "Magistrates → Sessions → Court of Appeal → High Court → Federal Court"
+            "Magistrates → Sessions → Court of Appeal → High Court → Federal Court",
+            "Magistrates → Sessions → High Court → Court of Appeal → Federal Court"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The Federal Court is the apex.",
           "source": "Courts of Judicature Act 1964; Subordinate Courts Act 1948"
         },
@@ -1499,11 +1499,11 @@
           "q": "How many High Courts are there, and how do they stand to each other?",
           "options": [
             "One, with two registries",
-            "Two, one superior to the other",
             "Two, of coordinate jurisdiction — Malaya, and Sabah and Sarawak",
+            "Two, one superior to the other",
             "Three, one for each region"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Coordinate means level with each other. Neither binds the other, though decisions are highly persuasive.",
           "source": "Federal Constitution Art 121(1)"
         },
@@ -1537,12 +1537,12 @@
           "id": "qct5",
           "q": "What is the Syariah hierarchy?",
           "options": [
-            "Syariah Subordinate Court → Syariah High Court → Syariah Appeal Court",
             "Syariah High Court → Syariah Court of Appeal → Federal Court",
             "A single Syariah Court in each State",
-            "Syariah Subordinate Court → High Court → Federal Court"
+            "Syariah Subordinate Court → High Court → Federal Court",
+            "Syariah Subordinate Court → Syariah High Court → Syariah Appeal Court"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "It is a separate ladder, set up by State law, and it does not feed into the Federal Court.",
           "source": "State law; Federal Constitution, Ninth Schedule List II Item 1"
         }
@@ -1606,11 +1606,11 @@
               "t": "predict",
               "prompt": "Parliament passes an Act, and it clashes with the Constitution. Before you read on — what can a Malaysian court do about it?",
               "options": [
-                "Nothing, because Parliament is the highest lawmaker there is",
                 "Strike the Act down, so far as it clashes",
+                "Nothing, because Parliament is the highest lawmaker there is",
                 "Ask Parliament to think again, and apply the Act meanwhile"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "The court can strike it down, to the extent of the clash. If you picked the first, you picked the British answer, and it is the right answer there. No United Kingdom court can set aside an Act of its Parliament. Malaysia went the other way in 1957, and that single choice is what makes constitutional cases possible here at all."
             },
             {
@@ -1818,12 +1818,12 @@
           "id": "qso1",
           "q": "How does Article 160(2) define 'law'?",
           "options": [
-            "Acts of Parliament only",
             "Written law, the common law so far as in operation here, and custom having the force of law",
+            "Acts of Parliament only",
             "Written law and subsidiary legislation",
             "Statute and judicial decisions"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "That definition is the map of the sources, and custom is the limb people forget.",
           "source": "Federal Constitution Art 160(2)"
         },
@@ -1833,10 +1833,10 @@
           "options": [
             "Parliament has two houses",
             "Parliament may legislate on Federal and Concurrent List matters",
-            "Parliament's legislation is subject to the Constitution",
-            "Parliament is sovereign"
+            "Parliament is sovereign",
+            "Parliament's legislation is subject to the Constitution"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Supremacy belongs to the Constitution under Article 4(1). The slip is carried over from English texts.",
           "source": "Federal Constitution Art 4(1)"
         },
@@ -1870,12 +1870,12 @@
           "id": "qso5",
           "q": "What are the two houses of Parliament?",
           "options": [
-            "Dewan Rakyat and Dewan Negara",
             "Dewan Rakyat and Dewan Undangan Negeri",
             "Dewan Negara and Majlis Raja-Raja",
-            "Dewan Rakyat and the Cabinet"
+            "Dewan Rakyat and the Cabinet",
+            "Dewan Rakyat and Dewan Negara"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The elected lower house, and the appointed and State-elected upper house.",
           "source": "Federal Constitution Art 44"
         }
@@ -1913,11 +1913,11 @@
               "t": "predict",
               "prompt": "The Syariah courts are State courts, and their reach comes from the Ninth Schedule. Before you read on — who can be brought before one?",
               "options": [
-                "Anyone whose case raises a question about Islam",
                 "Only a person professing the religion of Islam",
+                "Anyone whose case raises a question about Islam",
                 "Anyone living in the State that set the court up"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "Only Muslims, and then only on the subjects the Ninth Schedule lists. Two limits, and both get dropped. The first answer is how the arrangement is usually described in conversation. That is worth knowing, because it is where most of the confusion here starts. A case does not change courts because religion turns up in it."
             },
             {
@@ -2113,12 +2113,12 @@
           "id": "qts1",
           "q": "Over whom do the Syariah courts have jurisdiction?",
           "options": [
-            "Anyone in a dispute involving Islam",
             "Persons professing the religion of Islam, on List II Item 1 matters",
+            "Anyone in a dispute involving Islam",
             "All Malaysians in family matters",
             "Anyone who consents"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Both limbs are needed: the right person, and the right subject matter.",
           "source": "Federal Constitution, Ninth Schedule List II Item 1"
         },
@@ -2128,10 +2128,10 @@
           "options": [
             "'The Syariah courts are subordinate to the High Court'",
             "'Article 121(1A) was repealed'",
-            "'Only the Federal Court may interpret it'",
-            "'If Islam is involved, the civil court has no jurisdiction'"
+            "'If Islam is involved, the civil court has no jurisdiction'",
+            "'Only the Federal Court may interpret it'"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The clause removes jurisdiction only where the matter was within Syariah jurisdiction in the first place.",
           "source": "Federal Constitution Art 121(1A)"
         },
@@ -2141,10 +2141,10 @@
           "options": [
             "It gave Syariah courts exclusive family jurisdiction",
             "It repealed Art 12(4)",
-            "It made Syariah decisions appealable to the Federal Court",
-            "It does not oust the civil courts' inherent power of judicial review"
+            "It does not oust the civil courts' inherent power of judicial review",
+            "It made Syariah decisions appealable to the Federal Court"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "And that Syariah jurisdiction cannot reach a person who does not profess the religion of Islam.",
           "source": "Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC)"
         },
@@ -2226,11 +2226,11 @@
               "t": "predict",
               "prompt": "You find a 2003 High Court judgment on a free portal. It answers your question exactly, and nothing on the page warns you about it. Before you read on — what does that silence tell you?",
               "options": [
-                "That the case is still good law, or the portal would say so",
                 "Nothing at all about whether the case still stands",
+                "That the case is still good law, or the portal would say so",
                 "That nobody appealed it"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "It tells you nothing. The portal shows you the judgment. It does not track what later courts did with it. If you picked the first, that is how these pages get used every working day. It is the most expensive assumption in free research. No warning is not a clean bill of health. It is the absence of anybody looking."
             }
           ]
@@ -2377,11 +2377,11 @@
           "q": "What is the correct order of research?",
           "options": [
             "Cases first, then statute",
-            "Textbook, then statute, then cases",
             "Statute, then check it is current, then subsidiary legislation, then cases, then note up",
+            "Textbook, then statute, then cases",
             "Subsidiary legislation, then statute"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Read the section, not a summary of it, and confirm it is in force before you build on it.",
           "source": "Standard research practice"
         },
@@ -2390,11 +2390,11 @@
           "q": "Where is the official free text of Malaysian Acts published?",
           "options": [
             "CommonLII",
-            "The Malayan Law Journal",
             "The Attorney General's Chambers portal",
+            "The Malayan Law Journal",
             "The courts' own portal"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "That is the source to use for statute.",
           "source": "Attorney General's Chambers portal, the official free publication of federal statute"
         },
@@ -2402,12 +2402,12 @@
           "id": "qrs3",
           "q": "What is 'noting up'?",
           "options": [
-            "Adding your own notes to a report",
             "Checking what later courts did with a case, to see if it is still good law",
+            "Adding your own notes to a report",
             "Recording the citation in full",
             "Summarising the ratio"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It is also the step free Malaysian sources cannot complete for you.",
           "source": "Standard research practice"
         },
@@ -2415,12 +2415,12 @@
           "id": "qrs4",
           "q": "A free portal shows no overruling of a case. What does that establish?",
           "options": [
-            "That the case is good law",
             "Nothing — the portal does not track what later courts did",
+            "That the case is good law",
             "That no appeal was brought",
             "That the case was not appealed in time"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The dangerous inference is the silent one. No warning is not a clean bill of health.",
           "source": "Standard research practice; free Malaysian sources include no citator"
         }
@@ -2543,10 +2543,10 @@
               "t": "checkpoint",
               "q": "Your client has a strong claim worth a modest sum. What must the advice include?",
               "options": [
-                "The merits, and a recommendation to proceed",
-                "The merits, the likely cost, the costs risk if it fails, and an honest view of whether the sum justifies the exposure"
+                "The merits, the likely cost, the costs risk if it fails, and an honest view of whether the sum justifies the exposure",
+                "The merits, and a recommendation to proceed"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "A strong claim can still be a bad investment. Only the client can weigh that, and they cannot weigh it without the numbers."
             }
           ]
@@ -2569,12 +2569,12 @@
           "id": "q-mls-atj-2",
           "q": "What is the trade-off in simplified small-claims procedures?",
           "options": [
-            "Reducing process reduces cost and also reduces the protections process provides",
             "They are slower",
             "They apply only to companies",
-            "They require legal representation"
+            "They require legal representation",
+            "Reducing process reduces cost and also reduces the protections process provides"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Process costs money and does something. Removing it makes claims affordable and removes some of what the fuller procedure was protecting."
         }
       ],

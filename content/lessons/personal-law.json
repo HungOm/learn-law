@@ -145,10 +145,10 @@
           "options": [
             "Because it was never codified anywhere",
             "Because it applies only in the Federal Territories",
-            "Because it is left entirely to the courts",
-            "Because Islamic family law is State law, so each State makes its own"
+            "Because Islamic family law is State law, so each State makes its own",
+            "Because it is left entirely to the courts"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Islamic law for Muslims is a State matter, so each State legislates its own enactment. Asking which State is the first step, not a detail."
         },
         {
@@ -308,12 +308,12 @@
           "id": "qsy1",
           "q": "Where do Syariah courts get their authority?",
           "options": [
-            "From State law, under the division of powers in the Ninth Schedule",
             "From federal statute passed by Parliament",
             "From the Rulers directly, without legislation",
-            "From the Federal Court"
+            "From the Federal Court",
+            "From State law, under the division of powers in the Ninth Schedule"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Islamic law and the organisation of Syariah courts are State matters, so each State legislates its own. That is why an answer must name a State."
         },
         {
@@ -322,10 +322,10 @@
           "options": [
             "The Syariah court, because both are Muslims",
             "Either, at the parties' choice",
-            "The Syariah court, because debt is a religious matter",
-            "The civil courts, because contract is not on the State List"
+            "The civil courts, because contract is not on the State List",
+            "The Syariah court, because debt is a religious matter"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Both limits must be met. The parties are Muslims, but the subject is contract — a federal matter — so Syariah jurisdiction does not arise."
         },
         {
@@ -333,23 +333,23 @@
           "q": "What does Article 121(1A) do?",
           "options": [
             "It makes Syariah courts superior to the civil High Courts",
+            "It removes civil High Court jurisdiction over matters within Syariah jurisdiction",
             "It allows appeals from Syariah courts to the Federal Court",
-            "It gives Syariah courts jurisdiction over all Muslims",
-            "It removes civil High Court jurisdiction over matters within Syariah jurisdiction"
+            "It gives Syariah courts jurisdiction over all Muslims"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "It withdraws civil jurisdiction where the matter is within Syariah jurisdiction. It does not create a hierarchy or extend Syariah power."
         },
         {
           "id": "qsy4",
           "q": "A State enactment sets a punishment above the federal ceiling. What is the argument against it?",
           "options": [
-            "That it offends religious principle",
             "That the State exceeded the legislative power the Constitution gives it",
+            "That it offends religious principle",
             "That only the Federal Court may set penalties",
             "That Article 121(1A) forbids punishment"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It is an ordinary legislative competence argument. A State may act only within the power the Constitution allocates to it."
         }
       ],
@@ -474,11 +474,11 @@
               "t": "predict",
               "prompt": "A client married eight months ago and wants to file immediately on the ground of behaviour. What is the first problem?",
               "options": [
-                "Behaviour is hard to prove",
                 "The Act restricts petitions within the first two years",
+                "Behaviour is hard to prove",
                 "The court will order counselling"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "The time bar. It bites before the merits are reached, and lifting it requires the court to be persuaded on the grounds the Act allows."
             }
           ]
@@ -948,10 +948,10 @@
               "t": "predict",
               "prompt": "A State enactment confers jurisdiction over a matter that is not within any State List entry. What is the position?",
               "options": [
-                "The enactment governs, because it was validly passed by the State legislature",
-                "The enactment cannot confer what the State had no power to give"
+                "The enactment cannot confer what the State had no power to give",
+                "The enactment governs, because it was validly passed by the State legislature"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "Passing a law is not the same as having power to pass it. The whole point of an allocated competence is that it can be exceeded, and the remedy for that is a constitutional argument rather than a reading of the enactment."
             }
           ]
@@ -975,11 +975,11 @@
           "q": "Why is 'the position in Malaysia' usually the wrong frame for a Syariah question?",
           "options": [
             "Because the Federal Constitution does not apply",
-            "Because Syariah law is not written down",
             "Because the power is a State power, so the enactments differ between States",
+            "Because Syariah law is not written down",
             "Because only the Federal Court may decide"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "State legislative power produces State law. The applicable enactment is the one for the State in question, and they are not uniform."
         }
       ],
@@ -1084,10 +1084,10 @@
               "t": "predict",
               "prompt": "A claim is pleaded as a straightforward contractual dispute, but granting the relief would require the court to determine a person's religious status. Where does the difficulty lie?",
               "options": [
-                "Nowhere — it is pleaded in contract, so it is a contract case",
-                "In the determination the court must make, not in how the claim is labelled"
+                "In the determination the court must make, not in how the claim is labelled",
+                "Nowhere — it is pleaded in contract, so it is a contract case"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "Pleading does not decide characterisation, or every jurisdictional limit could be drafted around. What the court must decide to grant the order is the honest test, and it is the one an opponent will use."
             }
           ]
@@ -1118,10 +1118,10 @@
               "t": "checkpoint",
               "q": "You are asked about a configuration you know to be contested. What is the strongest answer?",
               "options": [
-                "Pick the better view and argue it as settled",
-                "Set out the competing characterisations, what turns on each, and what would resolve the question"
+                "Set out the competing characterisations, what turns on each, and what would resolve the question",
+                "Pick the better view and argue it as settled"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "Where the authorities are moving, an answer that reports the state of the argument is both more useful and more accurate than one that resolves it. Confidence about a contested point is a claim you cannot support."
             }
           ]
@@ -1134,10 +1134,10 @@
           "options": [
             "Confers jurisdiction on the Syariah courts",
             "Makes Syariah courts superior to civil courts",
-            "Creates a concurrent jurisdiction",
-            "Removes civil court jurisdiction over matters within Syariah court jurisdiction"
+            "Removes civil court jurisdiction over matters within Syariah court jurisdiction",
+            "Creates a concurrent jurisdiction"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "It subtracts from the civil courts by reference to what is within Syariah jurisdiction. It confers nothing, which is why the extent of Syariah jurisdiction has to be established before the provision can be applied at all."
         },
         {
@@ -1145,11 +1145,11 @@
           "q": "What is the most reliable way to characterise a matter for jurisdictional purposes?",
           "options": [
             "By how the claim is pleaded",
-            "By the religion of the parties",
             "By what the court must determine in order to grant the relief sought",
+            "By the religion of the parties",
             "By which court was approached first"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Pleading can be drafted around a limit; the determination required cannot. Asking what the court must decide to make the order keeps the analysis tied to something the other side cannot relabel."
         }
       ],

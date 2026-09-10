@@ -250,12 +250,12 @@
           "id": "pd-q-ps1",
           "q": "When does a police stop become an arrest?",
           "options": [
-            "When the officer says the word arrest",
             "When you are taken into custody and are no longer free to leave",
+            "When the officer says the word arrest",
             "When handcuffs are used",
             "When you reach the police station"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It turns on control, not on any form of words. Handcuffs are not needed either.",
           "source": "Criminal Procedure Code (Act 593); arrest turns on custody and control"
         },
@@ -263,12 +263,12 @@
           "id": "pd-q-ps2",
           "q": "What must you be told when you are arrested?",
           "options": [
-            "The name of the investigating officer",
             "The grounds of your arrest, as soon as may be",
+            "The name of the investigating officer",
             "The maximum sentence you face",
             "Nothing at all until you are charged"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Article 5(3) says so. The trap is thinking the right only starts at the charge.",
           "source": "Federal Constitution Art 5(3)"
         },
@@ -276,12 +276,12 @@
           "id": "pd-q-ps3",
           "q": "After an arrest, who may you ask to contact?",
           "options": [
-            "A lawyer of your choice, and a relative or friend",
             "A lawyer only",
             "A relative only",
-            "Nobody until questioning has finished"
+            "Nobody until questioning has finished",
+            "A lawyer of your choice, and a relative or friend"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Article 5(3) gives you the lawyer; the Code adds the relative or friend. Police often say later, so ask again and note the time.",
           "source": "Federal Constitution Art 5(3); Criminal Procedure Code s 28A"
         },
@@ -302,12 +302,12 @@
           "id": "pd-q-ps5",
           "q": "Must you answer a police question if the answer would expose you to a charge?",
           "options": [
-            "Yes, always",
             "No, though you must answer other questions truthfully",
+            "Yes, always",
             "No, and you need not answer anything at all",
             "Only if a lawyer is present"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The Code asks for truthful answers but protects you from ones that would incriminate you. Refusing to say anything at all is not the rule.",
           "source": "Criminal Procedure Code (Act 593); the protection against self-incriminating answers"
         },
@@ -315,12 +315,12 @@
           "id": "pd-q-ps6",
           "q": "Arrested at nine on Sunday night, still in the lock-up at noon on Tuesday, no Magistrate seen. What is the position?",
           "options": [
-            "The detention has run past the constitutional limit",
             "It is lawful because the investigation is not finished",
             "It is lawful if a senior officer approved it",
-            "It is lawful for the first three days"
+            "It is lawful for the first three days",
+            "The detention has run past the constitutional limit"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Twenty-four hours is the limit without a Magistrate, and only a remand order extends it.",
           "source": "Federal Constitution Art 5(4)"
         }
@@ -476,11 +476,11 @@
               "t": "predict",
               "prompt": "Danial's mother is told at the counter that he can come home today if she pays three thousand ringgit. What is that money?",
               "options": [
+                "A deposit that comes back if he attends every date",
                 "A fine for what he is accused of",
-                "A payment to the police for letting him out",
-                "A deposit that comes back if he attends every date"
+                "A payment to the police for letting him out"
               ],
-              "answer": 2,
+              "answer": 0,
               "reveal": "The third, and the word for it is bail. It secures one thing: that Danial turns up. If you thought fine, you are in very good company."
             },
             {
@@ -601,12 +601,12 @@
           "id": "pd-q-fc2",
           "q": "What is the question at a remand hearing?",
           "options": [
-            "Whether further detention is needed for the investigation",
             "Whether the accused is guilty",
             "Whether bail should be granted",
-            "Whether the charge is properly drafted"
+            "Whether the charge is properly drafted",
+            "Whether further detention is needed for the investigation"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Guilt is not in issue yet. Arguing innocence there wastes the one argument you have.",
           "source": "Criminal Procedure Code s 117"
         },
@@ -614,12 +614,12 @@
           "id": "pd-q-fc3",
           "q": "What must a charge tell the accused?",
           "options": [
-            "The offence, with enough detail of time, place and person",
             "The likely sentence",
             "The evidence the prosecution holds",
-            "The names of the witnesses"
+            "The names of the witnesses",
+            "The offence, with enough detail of time, place and person"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "A person cannot answer a case he has not been told. A vague charge is one to raise at once.",
           "source": "Criminal Procedure Code (Act 593); the provisions on the form of a charge"
         },
@@ -653,12 +653,12 @@
           "id": "pd-q-fc6",
           "q": "When is bail a matter of right rather than of discretion?",
           "options": [
-            "When the offence is classified as bailable",
             "When the accused has no record",
             "When the accused is under twenty-one",
-            "When the police do not object"
+            "When the police do not object",
+            "When the offence is classified as bailable"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The First Schedule does the classifying. Non-bailable means the court has a discretion, not that bail is impossible.",
           "source": "Criminal Procedure Code, First Schedule; ss 387 and 388"
         }
@@ -688,11 +688,11 @@
               "t": "predict",
               "prompt": "Mak Cik Zainab's family has farmed the same lot for forty years. Her father cleared it, and died fifteen years ago. Nobody has been to the land office since. Who owns it today?",
               "options": [
-                "Mak Cik Zainab and her brothers and sisters",
                 "Her father, because his name is still on the register",
+                "Mak Cik Zainab and her brothers and sisters",
                 "Nobody, until a court is asked to decide"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "Her father. A man fifteen years dead is still, on paper, the owner. That is the ordinary position of a lot of family land here. If you picked the first answer you reasoned the way the village does. The law reasons from one page instead."
             },
             {
@@ -898,12 +898,12 @@
           "id": "pd-q-wo1",
           "q": "Who is the owner of registered land in Malaysia?",
           "options": [
-            "The person who has occupied it longest",
             "The person registered as proprietor",
+            "The person who has occupied it longest",
             "The person holding the title document",
             "The person who paid for it"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The register is the title. Keeping the geran in a drawer is not ownership.",
           "source": "National Land Code (Act 828); title is by registration"
         },
@@ -911,12 +911,12 @@
           "id": "pd-q-wo2",
           "q": "What is the geran, the issue document of title?",
           "options": [
-            "The contract of sale",
             "A copy of the register page, held by the proprietor",
+            "The contract of sale",
             "The ownership itself",
             "A licence to occupy State land"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It is a copy. What settles ownership is the register at the land office.",
           "source": "National Land Code (Act 828); the issue document of title is a copy of the register"
         },
@@ -926,10 +926,10 @@
           "options": [
             "The land cannot be dealt with at all",
             "The land is reserved for agriculture",
-            "The proprietor is under eighteen",
-            "State consent is needed before the land is sold or charged"
+            "State consent is needed before the land is sold or charged",
+            "The proprietor is under eighteen"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "It is a condition written on the title. Missing it is a common way for a sale to stall.",
           "source": "National Land Code (Act 828); restrictions in interest endorsed on the title"
         },
@@ -950,12 +950,12 @@
           "id": "pd-q-wo5",
           "q": "Devi signs a sale and purchase agreement and pays her deposit. What does she have?",
           "options": [
-            "Rights under the contract, but not title",
             "Title to the land",
             "A registered charge",
-            "A caveat over the land"
+            "A caveat over the land",
+            "Rights under the contract, but not title"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "A dealing takes effect on registration, and the gap before it is where the risk sits.",
           "source": "National Land Code (Act 828); a dealing takes effect on registration"
         }
@@ -1203,12 +1203,12 @@
           "id": "pd-q-lp1",
           "q": "When does a buyer become the registered owner?",
           "options": [
-            "When the transfer is registered",
             "When the agreement is signed",
             "When the price is paid in full",
+            "When the transfer is registered",
             "When the keys are handed over"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Registration is the moment. Everything before it is contract.",
           "source": "National Land Code (Act 828); a transfer takes effect on registration"
         },
@@ -1217,11 +1217,11 @@
           "q": "What does a bank get when it lends against land?",
           "options": [
             "Ownership of the land",
-            "A caveat over the land",
             "A registered charge, as security for the debt",
+            "A caveat over the land",
             "A lease of the land"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Malaysian law says charge, not mortgage, and the borrower stays the proprietor.",
           "source": "National Land Code (Act 828); the charge provisions"
         },
@@ -1242,12 +1242,12 @@
           "id": "pd-q-lp4",
           "q": "A father dies with land in his name. What happens to the register?",
           "options": [
-            "Nothing, until the estate is distributed and the distribution registered",
             "It passes to the eldest child at once",
             "It passes to the widow at once",
-            "It goes back to the State"
+            "It goes back to the State",
+            "Nothing, until the estate is distributed and the distribution registered"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Land does not move by itself. The distribution has to be obtained and then registered.",
           "source": "Small Estates (Distribution) Act 1955; National Land Code (Act 828)"
         },
@@ -1269,11 +1269,11 @@
           "q": "A transfer was forged. Is the person registered under it safe?",
           "options": [
             "Yes, because the register is always conclusive",
-            "No — forgery is one of the exceptions in s 340",
             "Yes, if a lawyer witnessed the signature",
+            "No — forgery is one of the exceptions in s 340",
             "Only if the true owner objects within a year"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "The exceptions are listed. It is the later innocent buyer for value who is protected, which is why speed matters.",
           "source": "National Land Code s 340; Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC)"
         }
@@ -1281,6 +1281,1471 @@
       "plate": "four-papers",
       "plateCaption": "Four papers, four jobs. Knowing which one is in front of you answers most questions before any law is applied.",
       "readMinutes": 7
+    },
+    {
+      "id": "l-leases-tenancies",
+      "moduleId": "m08-property",
+      "title": "Leases and tenancies, and the line registration draws",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A lease of registered land is a dealing, so it lives on the register and binds whoever buys the land. A short tenancy is exempt from registration, which changes what a buyer of that land ever sees.",
+      "sections": [
+        {
+          "id": "sec-l-leases-tenancies-0",
+          "readMinutes": 1,
+          "keypoint": "Two shoplots, two rent agreements, and the Code files them in completely different places.",
+          "h": "Two shoplots on the same street",
+          "body": [
+            {
+              "t": "p",
+              "text": "Puan Halimah rents her shoplot in Ipoh to Encik Kamal. The term is five years. The rent is RM2,400 a month."
+            },
+            {
+              "t": "p",
+              "text": "Two doors down, Encik Suresh rents an identical shoplot to a baker. That term is two years, at the same rent."
+            },
+            {
+              "t": "p",
+              "text": "Same street. Same building. Same money. The Code treats the two agreements as different animals."
+            },
+            {
+              "t": "predict",
+              "prompt": "A buyer purchases both shoplots. She orders a land search on each title. Which of the two rent agreements is she likely to see on the register?",
+              "options": [
+                "Kamal's five-year agreement",
+                "Both, because both are rent agreements",
+                "Suresh's two-year agreement"
+              ],
+              "answer": 0,
+              "reveal": "The longer one. A lease of registered land is a dealing, so it is registered and it shows. A short tenancy is exempt from registration, so the register may say nothing about it at all. That gap is the whole of this lesson."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-leases-tenancies-1",
+          "readMinutes": 2,
+          "keypoint": "Length of term decides everything: a lease is registered, and a short tenancy cannot be.",
+          "h": "Where the Code draws the line",
+          "body": [
+            {
+              "t": "p",
+              "text": "The Code does not ask what the parties called their document. It asks how long the term is."
+            },
+            {
+              "t": "p",
+              "text": "Above a short threshold the arrangement is a lease. A lease is one of the dealings the Code allows, and it takes effect on registration."
+            },
+            {
+              "t": "rule",
+              "text": "A tenancy for a term not exceeding three years is a tenancy exempt from registration under the National Land Code, and it cannot be registered. An arrangement granting possession for a longer term must be created as a registered lease.",
+              "source": "National Land Code, the provisions on leases and on tenancies exempt from registration. No section number is stated here on purpose."
+            },
+            {
+              "t": "table",
+              "caption": "Lease and short tenancy compared, on the points that decide a real dispute",
+              "columns": [
+                "Question",
+                "Registered lease",
+                "Tenancy exempt from registration"
+              ],
+              "rows": [
+                [
+                  "How long is the term?",
+                  "Longer than the short statutory threshold",
+                  "Not exceeding three years"
+                ],
+                [
+                  "Does it go on the register?",
+                  "Yes, as a registrable dealing",
+                  "No, it cannot be registered"
+                ],
+                [
+                  "When does it take effect?",
+                  "On registration",
+                  "On the agreement, by contract"
+                ],
+                [
+                  "Can a buyer of the land see it?",
+                  "Yes, on a land search",
+                  "Only from an endorsement, or from the tenant being there"
+                ]
+              ],
+              "alt": "A table comparing a registered lease with a short tenancy. A lease runs longer than the statutory threshold. It is a registrable dealing, it takes effect on registration, and it shows on a land search. A short tenancy runs for not more than three years and cannot be registered. It takes effect by contract. A buyer sees it only from an endorsement, or from the tenant being visibly there."
+            },
+            {
+              "t": "caution",
+              "text": "The three-year line is the one figure in this lesson. Confirm it in the current Code before you rely on it. Note too that the Code caps how long a lease may run."
+            },
+            {
+              "t": "p",
+              "text": "That cap is not the same for the whole of a lot and for part of one. This lesson does not give those figures. Look them up."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-leases-tenancies-2",
+          "readMinutes": 2,
+          "keypoint": "A registered lease is an interest in the land itself; a short tenancy leans on contract and on being seen.",
+          "h": "What registration buys the tenant",
+          "body": [
+            {
+              "t": "p",
+              "text": "Registration is not paperwork for its own sake. It changes what the tenant owns."
+            },
+            {
+              "t": "rule",
+              "text": "Section 340(1) protects the title or interest of any person for the time being registered as proprietor, and of any person in whose name a lease, charge or easement is registered. A registered lease is therefore indefeasible on the same terms as a registered title.",
+              "source": "National Land Code, s 340(1)."
+            },
+            {
+              "t": "p",
+              "text": "So Kamal holds an interest in the land itself. If Halimah sells the shoplot, the buyer takes it with Kamal's lease already on the register."
+            },
+            {
+              "t": "p",
+              "text": "Suresh's baker is weaker. The tenancy is a contract with Suresh, and it cannot be put on the register at all."
+            },
+            {
+              "t": "p",
+              "text": "The Code answers that with an endorsement. A tenancy exempt from registration can be noted on the register, so a buyer searching the title sees it."
+            },
+            {
+              "t": "caution",
+              "text": "A tenant who does nothing is relying on two things. One is the contract. The other is that a careful buyer will notice somebody trading from the shop and ask why."
+            },
+            {
+              "t": "p",
+              "text": "Raise this before signing, not after. Ask whether the tenancy will be endorsed, and ask who pays for that."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-leases-tenancies-3",
+          "readMinutes": 1,
+          "keypoint": "A landlord who wants possession back goes to court; changing the locks is not a remedy.",
+          "h": "Getting the land back",
+          "body": [
+            {
+              "t": "p",
+              "text": "A lease or tenancy ends in three ordinary ways. The term runs out, the parties agree to end it, or the tenant breaks a term."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**The term runs out.** Nothing more is needed, though a registered lease still has to come off the register.",
+                "**Surrender.** The parties agree to end it early, and a registered lease is again dealt with on the register.",
+                "**Forfeiture for breach.** The landlord serves notice of the breach first, and gives a chance to put it right."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "What a landlord may not do is take the shop back by hand. That is the rule that surprises people most."
+            },
+            {
+              "t": "rule",
+              "text": "A person in possession of immovable property may not be dispossessed except by due process of law. Self-help recovery of possession is not permitted, and possession is recovered through the court.",
+              "source": "Specific Relief Act 1950, the provisions on recovery of possession. No section number is stated here on purpose."
+            },
+            {
+              "t": "caution",
+              "text": "Changing the locks, cutting the water, or carting out the tenant's stock is unlawful. It also hands the tenant a claim, which is the opposite of what the landlord wanted."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Kamal stops paying rent. Halimah changes the locks on the shoplot early one Sunday. Where does that leave her?",
+              "options": [
+                "She has lawfully forfeited the lease, because the rent was unpaid",
+                "She has acted unlawfully, and Kamal may sue to be let back in",
+                "She is safe, because the lease was registered in Kamal's name"
+              ],
+              "answer": 1,
+              "why": "Unpaid rent may well justify forfeiture. It does not justify taking possession by hand. Possession is recovered through the court, and self-help gives Kamal a claim of his own. Notice how the two questions separate. Whether Halimah has a right, and how she may enforce it, are not the same question."
+            }
+          ]
+        }
+      ],
+      "source": "National Land Code, the provisions on leases, on tenancies exempt from registration and on endorsement, together with s 340(1) on indefeasibility; Specific Relief Act 1950 on recovery of possession.",
+      "verify": "This lesson states no section number for leases, for tenancies exempt from registration or for endorsement on purpose; confirm it in the current National Land Code as published by the Attorney General's Chambers and record the date you checked. Confirm the three-year threshold and the maximum lease terms the same way. The rule against self-help recovery of possession is stated without a section number; confirm it in the Specific Relief Act 1950. Section 340(1) is quoted because it is on the verified list. Sabah and Sarawak have their own land legislation, so do not carry this across.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "national-land-code",
+          "where": "the parts on leases and tenancies, then the definition of a tenancy exempt from registration"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-co-proprietorship",
+      "moduleId": "m08-property",
+      "title": "Owning land with other people",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "Two or more people on one title hold undivided shares, and an undivided share is not a piece of ground. Nothing in the Code lets one of them fence off a corner and call it theirs.",
+      "sections": [
+        {
+          "id": "sec-l-co-proprietorship-0",
+          "readMinutes": 1,
+          "keypoint": "Three siblings, one lot in Kuala Pilah, and a brother who wants to build on his third.",
+          "h": "Three names on one title",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suriani, Faizal and Nurul are on one title in Kuala Pilah. The lot is two acres. It came to them from their late father's estate."
+            },
+            {
+              "t": "p",
+              "text": "The register shows each of them with an undivided one-third share."
+            },
+            {
+              "t": "p",
+              "text": "Faizal wants to build a house at the back of the lot. He says the back third is his."
+            },
+            {
+              "t": "predict",
+              "prompt": "Faizal fences off the back third of the lot and starts building. Is he entitled to?",
+              "options": [
+                "Yes, because he owns a third of the land",
+                "Only if his share is the largest of the three",
+                "No, because his third is a share of the whole lot and not a part of the ground"
+              ],
+              "answer": 2,
+              "reveal": "His share is a fraction of the whole, not a marked-out piece. Until the land is partitioned, no co-proprietor can point at any part of the ground and call it theirs. If you thought a third meant a third of the field, that is the instinct the word undivided exists to correct."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-co-proprietorship-1",
+          "readMinutes": 2,
+          "keypoint": "Each share is a fraction of the whole lot, and a dead co-proprietor's share falls into the estate.",
+          "h": "Undivided shares, and no survivorship",
+          "body": [
+            {
+              "t": "p",
+              "text": "The word to hold on to is undivided. A share is a fraction of the entire lot, from the front fence to the back."
+            },
+            {
+              "t": "rule",
+              "text": "Where land is held under the National Land Code by two or more persons, they hold as co-proprietors in undivided shares. No co-proprietor is entitled to any defined part of the land, and each is entitled to possession of the whole.",
+              "source": "National Land Code, the provisions on co-proprietorship. No section number is stated here on purpose."
+            },
+            {
+              "t": "p",
+              "text": "There is a second consequence, and it catches people trained on English land law."
+            },
+            {
+              "t": "rule",
+              "text": "The Code does not provide for a right of survivorship between co-proprietors. On the death of a co-proprietor, the share forms part of that person's estate and passes under it.",
+              "source": "National Land Code, the provisions on co-proprietorship, read with the law on the distribution of estates. No section number is stated here on purpose."
+            },
+            {
+              "t": "p",
+              "text": "So Nurul's third does not fall to her brother and sister when she dies. It goes into her estate, and her own heirs take it."
+            },
+            {
+              "t": "table",
+              "caption": "What each co-proprietor has, and what none of them has",
+              "columns": [
+                "The claim",
+                "The answer"
+              ],
+              "rows": [
+                [
+                  "A defined piece of the ground",
+                  "No. Shares are undivided until the lot is partitioned."
+                ],
+                [
+                  "A right to be on the land",
+                  "Yes. Each co-proprietor may possess the whole of it."
+                ],
+                [
+                  "A right to keep the others out",
+                  "No. Possession of the whole belongs to all of them."
+                ],
+                [
+                  "A share that passes on death",
+                  "Yes, through the estate. There is no survivorship."
+                ]
+              ],
+              "alt": "A table of four claims. A defined piece of ground: no, shares are undivided until partition. A right to be on the land: yes, each co-proprietor may possess the whole. A right to keep the others out: no, they all possess the whole. A share that passes on death: yes, through the estate, because there is no survivorship."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-co-proprietorship-2",
+          "readMinutes": 2,
+          "keypoint": "You may sell or charge your own share alone; the whole lot needs every co-proprietor.",
+          "h": "What one co-proprietor may do alone",
+          "body": [
+            {
+              "t": "p",
+              "text": "A share is property. Faizal can sell his third, and a bank can take a charge over it."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**Your own share.** You may transfer it, or charge it, without asking the others.",
+                "**The whole lot.** A transfer, lease or charge of the whole needs all the co-proprietors.",
+                "**The ground itself.** Nobody may fence a part off, or shut the others out of it.",
+                "**Rent collected.** A co-proprietor who takes the whole rent can be made to account to the rest."
+              ]
+            },
+            {
+              "t": "caution",
+              "text": "Selling a share is lawful and still hard. Few buyers want a one-third share of a lot with two strangers on the title, and the price shows it."
+            },
+            {
+              "t": "p",
+              "text": "There is a quieter risk. A share can be charged, and a charge on one share can end in an order for sale of that share."
+            },
+            {
+              "t": "p",
+              "text": "The others can protect their position on the register instead of arguing later."
+            },
+            {
+              "t": "rule",
+              "text": "A private caveat may be entered by a person claiming title to the land, or claiming any registrable interest in it, or claiming to be beneficially entitled under any trust affecting it.",
+              "source": "National Land Code, s 323."
+            },
+            {
+              "t": "p",
+              "text": "That matters most before an estate is distributed. An heir is not yet on the register, and a caveat is a common way to hold the claim in place."
+            },
+            {
+              "t": "caution",
+              "text": "Whether an heir of an undistributed estate has a caveatable interest has been fought over more than once. Check the current position before you advise anyone to lodge one."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-co-proprietorship-3",
+          "readMinutes": 1,
+          "keypoint": "Partition turns shares into separate titles; where it cannot be done, the answer is a sale.",
+          "h": "Splitting up, or getting out",
+          "body": [
+            {
+              "t": "p",
+              "text": "The clean answer to Faizal's problem is partition. Partition ends co-proprietorship by cutting the lot into separate titles."
+            },
+            {
+              "t": "p",
+              "text": "After partition each of them holds a lot of their own, with a title of their own. Only then can Faizal build at the back."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Partition is applied for at the land office, under the procedure the Code lays down.",
+                "Each resulting lot has to satisfy the Code's requirements, including any minimum area.",
+                "Whose consent is needed, and when partition may be refused, are set out in the Code.",
+                "Where partition is not practicable, the route is a sale of the whole land instead."
+              ]
+            },
+            {
+              "t": "caution",
+              "text": "Do not leave this to the next generation. Three co-proprietors become nine, then twenty, and every one of them has to be found and has to sign."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Suriani, Faizal and Nurul cannot agree. Faizal wants a title of his own over the back of the lot. What does he need?",
+              "options": [
+                "Partition of the lot, so that a separate title issues",
+                "A private caveat over the back third",
+                "Nothing, because a one-third share already gives him a third of the ground"
+              ],
+              "answer": 0,
+              "why": "A caveat only freezes the register, and it hands over no piece of ground. His share stays undivided until the lot is partitioned. Partition is the procedure that turns a share of the whole into a lot of his own, and it is applied for at the land office."
+            }
+          ]
+        }
+      ],
+      "source": "National Land Code, the provisions on co-proprietorship, on partition and on sale in lieu of partition, together with s 323 on private caveats.",
+      "verify": "This lesson states no section number for co-proprietorship, for partition or for sale in lieu of partition on purpose; confirm it in the current National Land Code as published by the Attorney General's Chambers and record the date you checked. Section 323 is quoted because it is on the verified list. Whether an heir of an undistributed estate holds a caveatable interest has been litigated more than once, so check the current position before advising. Sabah and Sarawak have their own land legislation, so do not carry this across.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "national-land-code",
+          "where": "the parts on co-proprietorship and partition, then s 323 on who may enter a private caveat"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-strata",
+      "moduleId": "m08-property",
+      "title": "Strata title, and what you own in a condominium",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A condominium buyer owns a parcel and an undivided share of the common property, measured in share units. Almost every argument in a strata building starts at that one division.",
+      "sections": [
+        {
+          "id": "sec-l-strata-0",
+          "readMinutes": 1,
+          "keypoint": "Puan Meera has keys, a car park bay and a lift she uses daily, and she does not own all three.",
+          "h": "Keys to unit B-12-3",
+          "body": [
+            {
+              "t": "p",
+              "text": "Puan Meera buys a condominium unit in Cheras for RM480,000. She gets keys to unit B-12-3 and a car park bay downstairs."
+            },
+            {
+              "t": "p",
+              "text": "She uses the lift every day and the pool on Sundays. The corridor outside her door is swept by somebody she has never met."
+            },
+            {
+              "t": "predict",
+              "prompt": "Meera owns unit B-12-3. Which of these does she own outright, on her own?",
+              "options": [
+                "The unit only, plus an undivided share of everything that is shared",
+                "The unit, the corridor and her share of the lift",
+                "The unit and the car park, but not the corridor"
+              ],
+              "answer": 0,
+              "reveal": "The parcel is hers. Everything shared is common property, and she holds an undivided share of it with every other owner. The car park is usually an accessory parcel, tied to her unit and not sellable apart from it. Almost every strata argument begins at that line."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-strata-1",
+          "readMinutes": 2,
+          "keypoint": "Parcels and common property split the building; share units then measure money and votes.",
+          "h": "Parcel, common property, share units",
+          "body": [
+            {
+              "t": "p",
+              "text": "A strata scheme divides one building on one lot into many titles. The division is done by survey and recorded in a strata plan."
+            },
+            {
+              "t": "rule",
+              "text": "Under the Strata Titles Act 1985 a building is divided into parcels and common property. A parcel proprietor holds a strata title to the parcel, together with an undivided share in the common property. The size of that share is expressed in share units.",
+              "source": "Strata Titles Act 1985. No section number is stated here on purpose."
+            },
+            {
+              "t": "table",
+              "caption": "The vocabulary of a strata scheme, and what each word actually owns",
+              "columns": [
+                "Word",
+                "What it means"
+              ],
+              "rows": [
+                [
+                  "Parcel",
+                  "The unit itself. Meera holds a strata title to it."
+                ],
+                [
+                  "Common property",
+                  "Everything outside the parcels: corridors, lifts, roof, pool, drains."
+                ],
+                [
+                  "Accessory parcel",
+                  "A car park or store tied to a parcel. It cannot be sold on its own."
+                ],
+                [
+                  "Share unit",
+                  "The measure of a parcel's share, its charges and its vote."
+                ],
+                [
+                  "Management corporation",
+                  "The body of all parcel proprietors, which holds the common property."
+                ]
+              ],
+              "alt": "Five strata words. A parcel is the unit itself, held under a strata title. Common property is everything outside the parcels, such as corridors, lifts, roof, pool and drains. An accessory parcel is a car park or store tied to a parcel and not sellable on its own. A share unit measures a parcel's share, its charges and its vote. The management corporation is the body of all proprietors, and it holds the common property."
+            },
+            {
+              "t": "p",
+              "text": "Share units do more work than anything else in the scheme. They set what Meera pays each month, and how much her vote is worth."
+            },
+            {
+              "t": "caution",
+              "text": "Read the schedule of share units before buying. A large parcel carries more share units, so it carries a larger share of every bill the building runs up."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-strata-2",
+          "readMinutes": 2,
+          "keypoint": "Management passes from developer to joint management body to management corporation, in that order.",
+          "h": "Who runs the building",
+          "body": [
+            {
+              "t": "p",
+              "text": "Somebody has to sweep the corridor and service the lift. Malaysian law hands that job on in stages."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**The developer** manages first, from vacant possession until a joint management body is formed.",
+                "**The joint management body** is formed at a meeting of buyers, and runs the building before strata titles issue.",
+                "**The management corporation** comes into being once strata titles issue, and takes over at the first annual general meeting."
+              ]
+            },
+            {
+              "t": "rule",
+              "text": "The Strata Management Act 2013 governs the management of stratified property. It covers the maintenance account and the sinking fund, the by-laws, and the recovery of charges. Contributions are payable in proportion to the share units of each parcel.",
+              "source": "Strata Management Act 2013. No section number is stated here on purpose."
+            },
+            {
+              "t": "p",
+              "text": "Two funds matter. The maintenance account pays the day-to-day bills. The sinking fund pays for the big repairs that come later."
+            },
+            {
+              "t": "caution",
+              "text": "Arrears are not a private matter between one owner and the management. The Act gives the management body ways to recover them, and an owner in arrears can lose the right to vote."
+            },
+            {
+              "t": "p",
+              "text": "By-laws bind everyone in the building. Some of them are prescribed by the Act, and the owners may add their own by a proper resolution."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-strata-3",
+          "readMinutes": 1,
+          "keypoint": "Late strata titles leave a buyer with contract rights only, sometimes for years.",
+          "h": "Where strata goes wrong",
+          "body": [
+            {
+              "t": "p",
+              "text": "Two problems come up more than any others. Charges go unpaid, and strata titles are late."
+            },
+            {
+              "t": "p",
+              "text": "The second one bites hardest. A buyer can take vacant possession years before a strata title issues for the parcel."
+            },
+            {
+              "t": "p",
+              "text": "Until then Meera is not the registered proprietor of anything. She holds rights under her sale and purchase agreement, against the developer."
+            },
+            {
+              "t": "p",
+              "text": "Once the strata title issues and is registered in her name, she is a registered proprietor. Section 340 then protects her parcel as it protects any other registered title."
+            },
+            {
+              "t": "caution",
+              "text": "The Strata Management Tribunal hears many strata disputes cheaply, and it is meant to be used without a lawyer. It has a monetary limit, and some disputes belong in court instead."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Meera took vacant possession two years ago. No strata title has issued yet. What does she hold?",
+              "options": [
+                "A registered title to the parcel",
+                "Rights under her agreement with the developer, but no registered title",
+                "An undivided share of the master title, registered in her name"
+              ],
+              "answer": 1,
+              "why": "Registration is what makes a proprietor, and there is no strata title to register yet. Until it issues she holds contractual rights against the developer. This is the same gap you met between signing and registration in an ordinary sale, stretched out over years."
+            }
+          ]
+        }
+      ],
+      "source": "Strata Titles Act 1985; Strata Management Act 2013; National Land Code, s 340 on indefeasibility and the parts on subdivision of buildings.",
+      "verify": "This lesson states no section number for parcels, common property, share units, accessory parcels, management bodies or the recovery of charges on purpose; confirm it in the current Strata Titles Act 1985 and Strata Management Act 2013 as published by the Attorney General's Chambers and record the date you checked. This lesson also states no section number for the National Land Code's provisions on subdivision of buildings on purpose; confirm it in the current National Land Code as published by the Attorney General's Chambers and record the date you checked. Section 340 is named because it is on the verified list, and nothing else here carries a number. The Tribunal's monetary limit is deliberately not stated. Sabah and Sarawak have their own strata legislation, so do not carry this across.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "national-land-code",
+          "where": "the part on subdivision of buildings, then read the Strata Titles Act 1985 alongside it"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-land-acquisition",
+      "moduleId": "m08-property",
+      "title": "When the State takes your land",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "The State can take registered land compulsorily, and an indefeasible title is no answer to it. What an owner can usually fight about is not the taking but the money.",
+      "sections": [
+        {
+          "id": "sec-l-land-acquisition-0",
+          "readMinutes": 1,
+          "keypoint": "A clean title, no charge, no caveat, and a notice on the fence that ends the argument.",
+          "h": "A notice on the fence",
+          "body": [
+            {
+              "t": "p",
+              "text": "Encik Ganesan's family has held a lot in Seberang Perai for thirty years. The register is clean. There is no charge and no caveat."
+            },
+            {
+              "t": "p",
+              "text": "One morning a notice is nailed to the fence. The land is wanted for a road."
+            },
+            {
+              "t": "predict",
+              "prompt": "Ganesan is the registered proprietor, and his title is indefeasible. Does that stop the State taking the land?",
+              "options": [
+                "No, because compulsory acquisition works whatever the register says",
+                "Yes, because an indefeasible title cannot be taken away",
+                "Only if he lodges a caveat quickly enough"
+              ],
+              "answer": 0,
+              "reveal": "Indefeasibility protects you against other people. It is no answer to the State using a statutory power to acquire. What the law gives Ganesan instead is process and compensation. If you assumed a clean title was a shield, this is the lesson that fixes that."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-land-acquisition-1",
+          "readMinutes": 2,
+          "keypoint": "The State Authority acquires, and the Constitution demands law and adequate compensation.",
+          "h": "The power, and what it is for",
+          "body": [
+            {
+              "t": "p",
+              "text": "Land is a State matter. It is the State Authority, not the Federal Government, that acquires land in a State."
+            },
+            {
+              "t": "rule",
+              "text": "Land may be compulsorily acquired by the State Authority under the Land Acquisition Act 1960 for the purposes that Act names. Those include a public purpose, and a purpose the State Authority is satisfied is beneficial to the economic development of the country.",
+              "source": "Land Acquisition Act 1960. No section number is stated here on purpose."
+            },
+            {
+              "t": "p",
+              "text": "The Federal Constitution sits above the Act. It forbids deprivation of property except in accordance with law, and it requires adequate compensation."
+            },
+            {
+              "t": "rule",
+              "text": "No person shall be deprived of property save in accordance with law, and no law shall provide for the compulsory acquisition or use of property without adequate compensation.",
+              "source": "Federal Constitution, the guarantee on deprivation of property. No article number is stated here on purpose."
+            },
+            {
+              "t": "caution",
+              "text": "The economic development purpose is the controversial one. Land can be taken from a family and end up in the hands of a company, and the Act permits that on its own terms."
+            },
+            {
+              "t": "p",
+              "text": "Notice what the Constitution does and does not do. It insists on law, and on adequate compensation. It does not give you a right to keep the land."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-land-acquisition-2",
+          "readMinutes": 2,
+          "keypoint": "Notification, gazetted declaration, enquiry, award, possession, and the declaration is hard to attack.",
+          "h": "How an acquisition runs",
+          "body": [
+            {
+              "t": "p",
+              "text": "The Act runs in a fixed order. Knowing the order tells you where you still have something worth saying."
+            },
+            {
+              "t": "table",
+              "caption": "The stages of a compulsory acquisition, and what happens at each one",
+              "columns": [
+                "Stage",
+                "What happens"
+              ],
+              "rows": [
+                [
+                  "Preliminary notification",
+                  "The State signals that land in the area may be needed. Surveys may follow."
+                ],
+                [
+                  "Declaration in the Gazette",
+                  "The State declares that the land is needed for the stated purpose."
+                ],
+                [
+                  "Enquiry",
+                  "The Land Administrator hears evidence on value and on who is entitled."
+                ],
+                [
+                  "Award",
+                  "Compensation is awarded, and the award is served on the persons interested."
+                ],
+                [
+                  "Possession and vesting",
+                  "The State takes possession, and the land vests in the State Authority."
+                ]
+              ],
+              "alt": "Five stages of a compulsory acquisition. First a preliminary notification that land in an area may be needed, which surveys may follow. Then a declaration in the State Gazette that the land is needed for the stated purpose. Then an enquiry before the Land Administrator into value and entitlement. Then an award of compensation, served on the persons interested. Last, possession is taken and the land vests in the State Authority."
+            },
+            {
+              "t": "rule",
+              "text": "A declaration published in the Gazette is treated by the Act as conclusive evidence that the land is needed for the purpose stated in it.",
+              "source": "Land Acquisition Act 1960. No section number is stated here on purpose."
+            },
+            {
+              "t": "p",
+              "text": "Read that rule twice. It is why arguing that the road is unnecessary almost never works."
+            },
+            {
+              "t": "caution",
+              "text": "Attend the enquiry, and bring evidence of value. A person who ignores the enquiry throws away the cheapest chance to be heard about money."
+            },
+            {
+              "t": "p",
+              "text": "The people paid are the persons interested, and that is wider than the proprietor. A registered chargee or lessee has a claim on the compensation too."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-land-acquisition-3",
+          "readMinutes": 1,
+          "keypoint": "Market value at the date of the declaration, plus named heads, then a reference to the High Court.",
+          "h": "Compensation, and how to fight about it",
+          "body": [
+            {
+              "t": "p",
+              "text": "Compensation is built on market value, taken at the date of the declaration. What the land is worth years later is not the question."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**Market value** of the land at the date of the declaration in the Gazette.",
+                "**Severance**, where taking part of a lot damages the value of the rest.",
+                "**Injurious affection**, where the works themselves harm the land left behind.",
+                "**Removal or relocation costs**, where the taking forces a move.",
+                "**Not** an extra allowance simply because the taking was compulsory."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "One more exclusion is worth remembering. A rise in value caused by the scheme itself is not paid for."
+            },
+            {
+              "t": "p",
+              "text": "If the award is too low, the owner objects and asks for a reference to the High Court. The judge hears it sitting with assessors who know land values."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Ganesan thinks the award for his lot is far too low. What is his route?",
+              "options": [
+                "An objection at the enquiry, then a reference to the High Court on the amount",
+                "Judicial review of the declaration, on the ground that the road is unnecessary",
+                "A private caveat, to stop the land vesting in the State"
+              ],
+              "answer": 0,
+              "why": "The declaration is treated as conclusive that the land is needed, so attacking the purpose almost never works. The amount is a different question, and the Act gives a route for it. Object at the enquiry, then ask for a reference heard by a judge sitting with assessors. A caveat does nothing against a statutory power."
+            }
+          ]
+        }
+      ],
+      "source": "Land Acquisition Act 1960; the Federal Constitution's guarantee against deprivation of property without adequate compensation; National Land Code, on registered title generally.",
+      "verify": "This lesson states no section number for the acquisition purposes, the declaration, the enquiry, the award or the reference to court on purpose; confirm it in the current Land Acquisition Act 1960 as published by the Attorney General's Chambers and record the date you checked. The constitutional guarantee is stated without an article number for the same reason; confirm it in the Federal Constitution as published by the Attorney General's Chambers. This lesson also states no section number for the National Land Code on purpose; confirm it in the current National Land Code as published by the Attorney General's Chambers and record the date you checked. Sabah and Sarawak have their own land and acquisition legislation, so do not carry this across.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "national-land-code",
+          "where": "the parts on registered title, then read the Land Acquisition Act 1960 alongside them"
+        },
+        {
+          "statuteId": "federal-constitution",
+          "where": "the fundamental liberties Part, on deprivation of property and adequate compensation"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-search-seizure",
+      "moduleId": "m05-criminal-procedure",
+      "title": "Search, seizure, and what the police may take",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A search of your shop, your phone or your body is a use of power, and the Criminal Procedure Code decides when that power exists. What you ask for at the door, and what you write down, matters more than anything you argue there.",
+      "sections": [
+        {
+          "id": "sec-l-search-seizure-0",
+          "readMinutes": 2,
+          "keypoint": "Consent and a legal power are different things, and the officer at your door may be relying on either one.",
+          "h": "Four officers at the shop door",
+          "body": [
+            {
+              "t": "p",
+              "text": "Encik Rajan repairs phones in a shop lot in Seremban. At ten in the morning four police officers walk in. They ask to look at the stockroom at the back."
+            },
+            {
+              "t": "p",
+              "text": "Rajan has two questions and no time to think. Must he let them in? And what happens to his stock if they take it?"
+            },
+            {
+              "t": "p",
+              "text": "Start with the difference between asking and having a power. An officer who asks, and is told yes, is searching with your consent."
+            },
+            {
+              "t": "p",
+              "text": "An officer with a power does not need your yes. Which of the two is happening changes what you can complain about afterwards."
+            },
+            {
+              "t": "predict",
+              "prompt": "The officers have no warrant. Rajan says nothing and steps aside to let them past. What has he done?",
+              "options": [
+                "Probably consented, because stepping aside reads as agreement",
+                "Refused, because silence can never be agreement",
+                "Nothing at all, because only a written refusal counts in law"
+              ],
+              "answer": 0,
+              "reveal": "Silence and a step back read as agreement to almost everyone in the room. If you mean to object, say the words out loud, and ask someone to note the time you said them. Objecting in words is not obstruction, and it is the only way to keep the point alive."
+            },
+            {
+              "t": "caution",
+              "text": "Consent given at the door is very hard to argue about months later. If you agree, say so plainly. If you do not agree, say that plainly too, and then stand aside."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-search-seizure-1",
+          "readMinutes": 2,
+          "keypoint": "Some searches need a court's written order and some do not, and the Code does not answer the same way for every situation.",
+          "h": "A warrant, or a power that needs none",
+          "body": [
+            {
+              "t": "p",
+              "text": "A search warrant is a written order from a court. It names the place that may be searched and says what is being looked for."
+            },
+            {
+              "t": "p",
+              "text": "The Code also gives the police powers to search without a warrant. Those powers arise in defined situations, and each one carries its own conditions."
+            },
+            {
+              "t": "rule",
+              "text": "A search warrant is issued by a court and authorises a named search. The Criminal Procedure Code also provides for search without a warrant in defined circumstances, and each of those powers has its own conditions attached to it.",
+              "source": "Criminal Procedure Code (Act 593), the provisions on search warrants and on search without a warrant"
+            },
+            {
+              "t": "p",
+              "text": "The power most people meet is the search of a person who has just been arrested. An arrested person may be searched, and what is found may be taken."
+            },
+            {
+              "t": "p",
+              "text": "So ask two things at the door, and ask them calmly. Is there a warrant? If not, what power is being used?"
+            },
+            {
+              "t": "list",
+              "items": [
+                "Ask whether the officers have a warrant, and ask to read it before they start.",
+                "If there is one, note what place it covers and what it says is being looked for.",
+                "If there is none, ask what power is being used, and write down the answer given.",
+                "Note the time the search started and the time it finished."
+              ]
+            },
+            {
+              "t": "caution",
+              "text": "Do not tear up a warrant, block a doorway, or hide anything. Obstruction is an offence of its own. Objecting in words costs you nothing, and obstruction costs you a charge."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-search-seizure-2",
+          "readMinutes": 1,
+          "keypoint": "Seized things have to be listed, and that list is the document you will need many months later.",
+          "h": "What may be taken, and the list",
+          "body": [
+            {
+              "t": "p",
+              "text": "Seizure is taking a thing away. It is not the same act as searching, and it is the part that closes a small business."
+            },
+            {
+              "t": "rule",
+              "text": "Property seized must be listed, and the Criminal Procedure Code governs how seized property is then held, returned or disposed of, including by an order of the court.",
+              "source": "Criminal Procedure Code (Act 593), the provisions on the list of things seized and on the disposal of property"
+            },
+            {
+              "t": "example",
+              "text": "Rajan's stockroom holds forty phones worth about RM30,000. Six are taken away. He should ask for a written list, with the model and serial number of each one."
+            },
+            {
+              "t": "table",
+              "caption": "What to record on the day of a search",
+              "columns": [
+                "What to note",
+                "Why it matters later"
+              ],
+              "rows": [
+                [
+                  "The names or numbers of the officers, and their station",
+                  "You will need to say who was there, and memory of a bad morning fades"
+                ],
+                [
+                  "Whether there was a warrant, and what it covered",
+                  "A search that went wider than the warrant is a point worth taking"
+                ],
+                [
+                  "Everything taken, with serial numbers",
+                  "Getting property back turns on identifying the exact thing"
+                ],
+                [
+                  "The time the search began and ended",
+                  "Times anchor every other account of what happened"
+                ]
+              ],
+              "alt": "Four things to record on the day of a search, each with the reason it matters later. The officers present and their station: you will need to say who was there. Whether there was a warrant and what it covered: a search that went wider is a point worth taking. Everything taken, with serial numbers: getting property back turns on identifying the exact thing. The times the search began and ended: times anchor every other account."
+            },
+            {
+              "t": "p",
+              "text": "Getting property back is its own application, made to a court. Start it early, and start it with the list in your hand."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-search-seizure-3",
+          "readMinutes": 1,
+          "keypoint": "An unlawful search does not usually make the thing found inadmissible, and the remedy for it lies somewhere else.",
+          "h": "When the search was unlawful",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suppose the search was unlawful. Many people assume that whatever was found cannot then be used against them. That is not the Malaysian position."
+            },
+            {
+              "t": "rule",
+              "text": "Evidence may be given of the existence of every fact in issue and of such other facts as are declared to be relevant. The Evidence Act works through relevance.",
+              "source": "Evidence Act 1950, s 5"
+            },
+            {
+              "t": "p",
+              "text": "Relevance is the gate the Act uses. How a thing came to be found is a different question from whether it is relevant."
+            },
+            {
+              "t": "p",
+              "text": "So unlawfully obtained evidence is not automatically shut out here. Courts have been asked to exclude it, and that argument is live rather than settled."
+            },
+            {
+              "t": "caution",
+              "text": "None of that makes an unlawful search harmless. It may support a complaint, a civil claim, or an attack on the weight of what was found. It is simply not a reliable route to exclusion."
+            },
+            {
+              "t": "checkpoint",
+              "q": "The officers searched Rajan's stockroom with no warrant and no power to do so. They found stolen phones. What follows?",
+              "options": [
+                "The phones are likely to be admissible, and the unlawfulness is fought on other ground",
+                "The charge against Rajan must be withdrawn",
+                "The phones cannot be used in evidence at all"
+              ],
+              "answer": 0,
+              "why": "Malaysian courts have not treated legality and relevance as the same question. The unlawfulness may found a complaint or a civil claim, and it may be used on weight. Exclusion is not the ordinary consequence, so never build a defence on it alone."
+            },
+            {
+              "t": "p",
+              "text": "Ask the harder question instead. Can the prosecution prove that these are the stolen phones, and that Rajan knew what they were?"
+            }
+          ]
+        }
+      ],
+      "source": "Criminal Procedure Code (Act 593), the provisions on search warrants, on search without a warrant, and on the listing and disposal of seized property; Evidence Act 1950, s 5.",
+      "verify": "This lesson states no section number for search, seizure, the list of things seized or the disposal of seized property on purpose; confirm it in the current Criminal Procedure Code as published by the Attorney General's Chambers and record the date you checked. The position on unlawfully obtained evidence is contested, so read the current authority in full rather than relying on the summary here.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "criminal-procedure-code",
+          "where": "the chapters on search warrants and on the search of persons and premises — read them for the conditions on each power, and note the section numbers yourself"
+        },
+        {
+          "bookId": "janab-criminal-procedure",
+          "where": "the chapters on search and seizure, and on the property of an accused person"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-appeal-revision",
+      "moduleId": "m05-criminal-procedure",
+      "title": "Appeal, revision, and who may ask for each",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "An appeal belongs to a party, runs on a short clock, and goes to a court fixed by which court decided the case. Revision is the High Court looking at a subordinate court's record, and nobody has a right to it.",
+      "sections": [
+        {
+          "id": "sec-l-appeal-revision-0",
+          "readMinutes": 2,
+          "keypoint": "One route belongs to the parties and runs on a clock; the other belongs to the High Court and does not.",
+          "h": "Two ways to attack a decision",
+          "body": [
+            {
+              "t": "p",
+              "text": "Puan Kamala was convicted in the Sessions Court in Klang and fined RM5,000. She believes the judge got the law wrong."
+            },
+            {
+              "t": "p",
+              "text": "At the court counter her son hears two words. Appeal, and revision. They are not two names for the same thing."
+            },
+            {
+              "t": "list",
+              "items": [
+                "An appeal is brought by a party. It has a form, a time limit, and a court that must hear it.",
+                "A revision is the High Court looking at the record of a court below. Nobody has a right to one."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "The practical difference is control. Kamala can start an appeal herself. A revision is something she can only invite."
+            },
+            {
+              "t": "rule",
+              "text": "Appeals in criminal matters, and the revisionary jurisdiction of the High Court over the subordinate courts, are provided for by the Criminal Procedure Code and by the Courts of Judicature Act 1964.",
+              "source": "Criminal Procedure Code (Act 593); Courts of Judicature Act 1964 (Act 91)"
+            },
+            {
+              "t": "predict",
+              "prompt": "Kamala has missed the time limit for an appeal by three weeks. Is there anything left for her?",
+              "options": [
+                "Nothing at all, because the time limit ends the matter",
+                "Possibly: the High Court's revisionary power does not run on her deadline",
+                "She may simply file late, because criminal time limits are advisory"
+              ],
+              "answer": 1,
+              "reveal": "Revision is the High Court's own power over the record below, so it is not started by her and is not governed by her deadline. But it is no substitute for an appeal, and a court will not welcome it being used as one. Ask, and never plan on it."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-appeal-revision-1",
+          "readMinutes": 1,
+          "keypoint": "Both sides may appeal, and a guilty plea narrows what an appeal is allowed to attack.",
+          "h": "Who may appeal, and against what",
+          "body": [
+            {
+              "t": "p",
+              "text": "Appeals are not only for the convicted. The prosecution has appeal rights of its own, and people forget that."
+            },
+            {
+              "t": "list",
+              "items": [
+                "A convicted person may appeal against the conviction, against the sentence, or against both.",
+                "The Public Prosecutor may appeal against an acquittal, and against a sentence thought too light.",
+                "A person who pleaded guilty is restricted, and the Code limits what such an appeal may attack."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "That last one catches people every week. Pleading guilty on a Monday and regretting it on a Friday is common. Very little is left to argue."
+            },
+            {
+              "t": "caution",
+              "text": "The Code sets the time for filing an appeal, and it is short. It is counted in days from the decision, not from the day a lawyer was found. Look the period up in the same week."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-appeal-revision-2",
+          "readMinutes": 2,
+          "keypoint": "The court above is fixed by the court that decided, and a case begun in a subordinate court has little road left.",
+          "h": "Where the appeal goes",
+          "body": [
+            {
+              "t": "p",
+              "text": "The route upward is not chosen. It is fixed by which court decided the case in the first place."
+            },
+            {
+              "t": "table",
+              "caption": "Where a criminal appeal goes, by the court that decided",
+              "columns": [
+                "Decided by",
+                "Appeal lies to"
+              ],
+              "rows": [
+                [
+                  "Magistrates' Court",
+                  "The High Court"
+                ],
+                [
+                  "Sessions Court",
+                  "The High Court"
+                ],
+                [
+                  "High Court, trying the case itself",
+                  "The Court of Appeal"
+                ],
+                [
+                  "Court of Appeal",
+                  "The Federal Court, where the Act allows it"
+                ]
+              ],
+              "alt": "Where a criminal appeal goes, by the court that decided. From the Magistrates' Court, to the High Court. From the Sessions Court, also to the High Court. From the High Court trying a case itself, to the Court of Appeal. From the Court of Appeal, to the Federal Court where the Act allows it."
+            },
+            {
+              "t": "p",
+              "text": "A case that started in a subordinate court has already had one appeal by the time the High Court decides it. Going further than that is restricted."
+            },
+            {
+              "t": "caution",
+              "text": "The restriction on a further appeal sits in the Courts of Judicature Act 1964. Read what it allows before you tell anybody the case can go higher."
+            },
+            {
+              "t": "p",
+              "text": "An appellate court is not limited to yes or no. It may confirm, reverse or vary the decision, and it may order a new trial."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Kamala was tried in the Sessions Court and then lost her appeal in the High Court. Can she go to the Court of Appeal?",
+              "options": [
+                "Yes, as of right, in the same way as any other appeal",
+                "Only if the Courts of Judicature Act allows a further appeal in her situation",
+                "No, because the High Court is always the last word"
+              ],
+              "answer": 1,
+              "why": "A second appeal in a case that began below is restricted, and the restriction is statutory. Neither a flat yes nor a flat no is safe. Read the Act before promising a client anything about a further appeal."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-appeal-revision-3",
+          "readMinutes": 1,
+          "keypoint": "Revision corrects what is plainly wrong on the record, and it is not a second chance to argue the evidence.",
+          "h": "Revision, and what it is for",
+          "body": [
+            {
+              "t": "p",
+              "text": "Revision is supervision. The High Court may call for the record of a subordinate court and satisfy itself that the decision was correct and lawful."
+            },
+            {
+              "t": "p",
+              "text": "Anyone may bring a matter to the court's attention. A party may write in, and so may the Public Prosecutor. The court may also act on its own."
+            },
+            {
+              "t": "example",
+              "text": "A Magistrate passes a sentence the law does not allow for that offence. Nobody appealed in time. Revision is how a thing like that gets put right."
+            },
+            {
+              "t": "caution",
+              "text": "Revision is not for re-arguing evidence. It is for what is plainly wrong on the face of the record, such as an illegal sentence or a fundamental irregularity."
+            },
+            {
+              "t": "p",
+              "text": "If an order in revision might go against a person, that person is heard first. Nobody is made worse off unheard."
+            }
+          ]
+        }
+      ],
+      "source": "Criminal Procedure Code (Act 593), the provisions on appeals from subordinate courts and on the revisionary jurisdiction of the High Court; Courts of Judicature Act 1964 (Act 91), on the appellate jurisdiction of the High Court, the Court of Appeal and the Federal Court.",
+      "verify": "This lesson states no section number for appeals, the time for filing an appeal, the restriction on a further appeal, or revision on purpose; confirm it in the current Criminal Procedure Code as published by the Attorney General's Chambers and record the date you checked. Check the appellate routes and the limits on a second appeal against the current Courts of Judicature Act 1964 in the same sitting.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "criminal-procedure-code",
+          "where": "the chapters on appeals and on revision — read who may appeal and what the court above may do, and note the section numbers yourself"
+        },
+        {
+          "statuteId": "courts-of-judicature-act-1964",
+          "where": "the parts on criminal appellate jurisdiction, and on when a further appeal is allowed at all"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-witness-attendance",
+      "moduleId": "m05-criminal-procedure",
+      "title": "Making a witness turn up",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A case is decided on the evidence that reaches the courtroom, not on the evidence that exists somewhere. The Code has two ways of compelling a witness, and the Evidence Act says which questions that witness may still refuse.",
+      "sections": [
+        {
+          "id": "sec-l-witness-attendance-0",
+          "readMinutes": 1,
+          "keypoint": "The best witness in the case is worth nothing to you if she is not in the box on the day.",
+          "h": "The witness who stops answering the phone",
+          "body": [
+            {
+              "t": "p",
+              "text": "Cik Suriani runs a salon in Kuantan. She saw the fight outside her shop and told the police everything she saw."
+            },
+            {
+              "t": "p",
+              "text": "The trial is in six weeks. Suriani has stopped answering her phone. She is frightened of the accused's family."
+            },
+            {
+              "t": "p",
+              "text": "This is the ordinary problem of criminal practice. The evidence exists. Getting it into the courtroom is a separate job from finding it."
+            },
+            {
+              "t": "p",
+              "text": "The Code answers that job with a document, and then with an arrest if the document is ignored."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-witness-attendance-1",
+          "readMinutes": 2,
+          "keypoint": "A summons orders attendance, and ignoring one can end with the witness herself under arrest.",
+          "h": "Summons first, warrant after",
+          "body": [
+            {
+              "t": "p",
+              "text": "A summons to a witness is a court order to attend on a named day. It is served on the person, and the service is recorded."
+            },
+            {
+              "t": "rule",
+              "text": "A court may issue a summons requiring a person to attend and give evidence or produce a document, and may issue a warrant to secure the attendance of a person who fails to obey it.",
+              "source": "Criminal Procedure Code (Act 593), the provisions on securing the attendance of witnesses"
+            },
+            {
+              "t": "p",
+              "text": "So the ladder has two rungs. The summons is the first one. A warrant for the witness is the second, and it is not the usual first step."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Ask the court to issue the summons early, not in the week before trial.",
+                "Give the court a real address, and a way of actually reaching the person.",
+                "Tell the witness the day, the court and the time. Frightened people miss dates.",
+                "If a summons was ignored, tell the court why, and ask for what you actually need."
+              ]
+            },
+            {
+              "t": "caution",
+              "text": "Arresting a frightened witness is a poor way to get good evidence. Ask what the fear is first. A different date, a word from the investigating officer, or protection often does far more."
+            },
+            {
+              "t": "predict",
+              "prompt": "Suriani is served with a summons and still does not come to court. What is the court's first move likely to be?",
+              "options": [
+                "Strike out the prosecution's case for want of evidence",
+                "Adjourn, and then consider a warrant to secure her attendance",
+                "Convict on the statement she gave the police"
+              ],
+              "answer": 1,
+              "reveal": "Courts want the witness, not a punishment. The usual course is a fresh date, and a warrant only if that fails too. Her police statement is not simply read out in her place, and that is exactly why her attendance matters so much."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-witness-attendance-2",
+          "readMinutes": 2,
+          "keypoint": "Attendance can be compelled, but a few questions are protected, and legal privilege belongs to the client.",
+          "h": "What a witness may still refuse",
+          "body": [
+            {
+              "t": "p",
+              "text": "A summons compels attendance. It does not compel every answer once the witness is in the box."
+            },
+            {
+              "t": "p",
+              "text": "The best known protection covers what a client tells a lawyer. It sits in the Evidence Act, and it belongs to the client rather than to the lawyer."
+            },
+            {
+              "t": "rule",
+              "text": "An advocate is not permitted to disclose a communication made to him in the course and for the purpose of his employment as an advocate, except with the client's express consent, and subject to the exceptions the Act itself states.",
+              "source": "Evidence Act 1950, ss 126 to 129"
+            },
+            {
+              "t": "p",
+              "text": "Read the sections after s 126 along with it. They deal with waiver, with interpreters and clerks, and with confidential communications with a legal adviser."
+            },
+            {
+              "t": "p",
+              "text": "There is a second protection, and it comes up far more often. A witness need not answer a question whose answer would expose him to a criminal charge."
+            },
+            {
+              "t": "caution",
+              "text": "Do not tell a witness what to say. Explaining the procedure to a nervous witness is proper and kind. Telling her what her evidence should be is neither, and it is an offence."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-witness-attendance-3",
+          "readMinutes": 1,
+          "keypoint": "A missing witness can cost you twice: the evidence is gone, and the court may hold the gap against you.",
+          "h": "When the witness never comes at all",
+          "body": [
+            {
+              "t": "p",
+              "text": "Sometimes a witness simply cannot be found. The case then runs on what is left, and two rules of evidence start to matter."
+            },
+            {
+              "t": "rule",
+              "text": "The burden of proof lies on the person who asserts a fact and who would fail if no evidence at all were given on either side.",
+              "source": "Evidence Act 1950, ss 101 to 106"
+            },
+            {
+              "t": "p",
+              "text": "So a hole in the evidence hurts whoever needed that fact proved. In a criminal trial that is usually the prosecution."
+            },
+            {
+              "t": "rule",
+              "text": "The court may presume that evidence which could be and is not produced would, if produced, be unfavourable to the person who withholds it.",
+              "source": "Evidence Act 1950, s 114 illustration (g)"
+            },
+            {
+              "t": "p",
+              "text": "That is a permission and not a command. The word is may. It bites where evidence was withheld, not merely where some witness was never called."
+            },
+            {
+              "t": "checkpoint",
+              "q": "The prosecution does not call its one eyewitness and offers no explanation for that. What may the defence ask the court to do?",
+              "options": [
+                "Acquit automatically, because a witness is missing",
+                "Order the police to go and produce her at once",
+                "Presume that the missing evidence would have been unfavourable to the prosecution"
+              ],
+              "answer": 2,
+              "why": "Illustration (g) to s 114 lets a court presume that withheld evidence would have been unfavourable. It is discretionary, and the unexplained gap is what makes the argument worth running. Nothing about it is automatic."
+            }
+          ]
+        }
+      ],
+      "source": "Criminal Procedure Code (Act 593), the provisions on securing the attendance of witnesses; Evidence Act 1950, ss 101 to 106, s 114 illustration (g), and ss 126 to 129.",
+      "verify": "This lesson states no section number for witness summonses, for warrants to secure attendance, or for the protection against self-incriminating answers on purpose; confirm it in the current Criminal Procedure Code as published by the Attorney General's Chambers and record the date you checked. Read the Evidence Act sections in a current reprint of Act 56, and check the current authority on when an adverse inference may properly be drawn.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "criminal-procedure-code",
+          "where": "the chapter on the attendance of witnesses — read the summons, the warrant, and what follows a failure to attend, and note the section numbers yourself"
+        },
+        {
+          "statuteId": "evidence-act-1950",
+          "where": "ss 101 to 106 on burden of proof, s 114 illustration (g), and ss 126 to 129 on privilege"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-plea-bargaining",
+      "moduleId": "m05-criminal-procedure",
+      "title": "Pleading guilty, and bargaining before you do",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A guilty plea can end a case in one morning, and it is the hardest decision in a criminal matter to undo. The Code provides a formal route for bargaining before that plea, and the court still has to be satisfied the plea is a real one.",
+      "sections": [
+        {
+          "id": "sec-l-plea-bargaining-0",
+          "readMinutes": 2,
+          "keypoint": "Bargaining before a plea is provided for by the Code; it is not a favour arranged in a corridor.",
+          "h": "The offer outside the courtroom",
+          "body": [
+            {
+              "t": "p",
+              "text": "Encik Ravi is charged in the Magistrates' Court in Alor Setar. He has been on remand for a week and wants to go home."
+            },
+            {
+              "t": "p",
+              "text": "Before the case is called, the deputy public prosecutor suggests something. A lesser charge, if Ravi pleads guilty this morning."
+            },
+            {
+              "t": "p",
+              "text": "That is plea bargaining, and it is not improper. The Criminal Procedure Code provides for it, with an application and a role for the court."
+            },
+            {
+              "t": "rule",
+              "text": "The Criminal Procedure Code provides a procedure for plea bargaining on an application by an accused person, under which the court satisfies itself that the application was made voluntarily before anything is agreed.",
+              "source": "Criminal Procedure Code (Act 593), the plea bargaining provisions inserted by amendment"
+            },
+            {
+              "t": "p",
+              "text": "Two things can be bargained over. The charge itself, and the sentence the prosecution will ask for."
+            },
+            {
+              "t": "caution",
+              "text": "A conversation in a corridor is not the statutory process. If a bargain is being struck, it belongs on the record, in the form the Code lays down."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-plea-bargaining-1",
+          "readMinutes": 2,
+          "keypoint": "The court checks four things before it acts on a plea, and any one of them failing means there is no plea.",
+          "h": "What the court must be satisfied of",
+          "body": [
+            {
+              "t": "p",
+              "text": "A guilty plea is not simply written down and acted on. The court has work to do before it convicts anybody on one."
+            },
+            {
+              "t": "list",
+              "items": [
+                "That the accused understands the charge, put to him in a language he understands.",
+                "That he understands what pleading guilty is going to mean for him.",
+                "That he admits the facts the prosecution reads out, all of them.",
+                "That the plea is his own, and not the product of a promise or a threat."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "The facts are read out for a reason. A plea is worth nothing if the facts read out do not actually amount to the offence charged."
+            },
+            {
+              "t": "example",
+              "text": "Ravi is charged with theft. The facts read out show he took a bag he honestly believed was his own. The court should not convict him on that plea."
+            },
+            {
+              "t": "predict",
+              "prompt": "Ravi tells the court he is pleading guilty only because he cannot face another week in the lock-up. What should the court do?",
+              "options": [
+                "Record the conviction, because he did say the word guilty",
+                "Adjourn the case for a month and see whether he changes his mind",
+                "Decline to act on that plea, because it is not a free and unqualified one"
+              ],
+              "answer": 2,
+              "reveal": "A plea has to be the accused's own, and it has to be unqualified. Saying it to escape remand is a warning the court is meant to hear. The right course is a plea of not guilty, and the case then takes its ordinary path."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-plea-bargaining-2",
+          "readMinutes": 1,
+          "keypoint": "If mitigation denies part of the offence, the guilty plea has been withdrawn in everything but name.",
+          "h": "A plea that is not really a plea",
+          "body": [
+            {
+              "t": "p",
+              "text": "The commonest problem comes after the plea, during mitigation."
+            },
+            {
+              "t": "example",
+              "text": "Ravi pleads guilty to voluntarily causing hurt. In mitigation his lawyer says he never touched the man at all. That is a denial of the offence."
+            },
+            {
+              "t": "p",
+              "text": "A plea qualified by what is said afterwards is not an unqualified plea. The court should set it aside and enter a plea of not guilty."
+            },
+            {
+              "t": "caution",
+              "text": "Prepare mitigation before the plea, not after it. Mitigation explains why a person who did it did it. It is not the place to start saying he did not."
+            },
+            {
+              "t": "p",
+              "text": "There is a real cost in claiming trial, because credit for an early plea is then gone. There is a worse cost in a conviction the court should never have recorded."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-plea-bargaining-3",
+          "readMinutes": 1,
+          "keypoint": "The sentencing discount is real but never guaranteed, and the plea narrows an appeal to very little.",
+          "h": "What a guilty plea costs you",
+          "body": [
+            {
+              "t": "p",
+              "text": "An early plea usually attracts a lighter sentence than a conviction after a full trial. That is the honest reason most pleas are entered."
+            },
+            {
+              "t": "p",
+              "text": "Usually is not always. No discount is guaranteed, and nobody can promise you a figure. A lawyer who promises one is telling you something he cannot know."
+            },
+            {
+              "t": "p",
+              "text": "The second cost lands on appeal. A person who pleaded guilty is restricted in what an appeal may attack, and the Code sets that restriction out."
+            },
+            {
+              "t": "p",
+              "text": "So the plea is close to final. That is what makes it the one decision worth taking slowly, from a cell, in a bad week."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Ravi wants to plead guilty this morning so that he can sleep at home tonight. What is the one thing he must be told first?",
+              "options": [
+                "That his sentence will certainly be lighter for pleading",
+                "That the conviction is close to final, and an appeal after a guilty plea is narrow",
+                "That he can change his mind again at any point later on"
+              ],
+              "answer": 1,
+              "why": "The discount is likely but never certain, and it cannot be promised to him. Nor can a plea be undone at will once the court has convicted on it. Finality is the fact he does not yet have, and it is the one that decides this."
+            }
+          ]
+        }
+      ],
+      "source": "Criminal Procedure Code (Act 593), the provisions on pleading, on plea bargaining, and on the restriction of an appeal by a person who pleaded guilty.",
+      "verify": "This lesson states no section number for pleading guilty, for plea bargaining, or for the restriction on an appeal after a guilty plea on purpose; confirm it in the current Criminal Procedure Code as published by the Attorney General's Chambers and record the date you checked. The plea bargaining provisions were inserted by amendment and have been amended since, so read the current text rather than any summary of it.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "criminal-procedure-code",
+          "where": "the provisions on the plea and on plea bargaining — read what the court must satisfy itself of, and note the section numbers yourself"
+        },
+        {
+          "bookId": "janab-criminal-procedure",
+          "where": "the chapters on pleading, on plea bargaining and on sentencing after a plea"
+        }
+      ],
+      "quiz": []
     }
   ]
 }

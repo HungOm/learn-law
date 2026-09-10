@@ -8048,19 +8048,15 @@
   },
   {
    "id": "section-5-contracts",
-   "term": "section 5",
+   "term": "Contracts Act section 5",
    "kind": "statute",
    "gloss": "Contracts Act 1950 — when a proposal or acceptance may still be revoked.",
    "intermediate": "Section 5 gives the deadline. A proposal can be revoked until the acceptance is complete as against the proposer; after that it is too late.",
-   "advanced": "Read section 5(1) beside section 4(2): the revocation window closes at the moment of posting, not at the moment of receipt, so a revocation sent afterwards is ineffective however quickly it arrives.",
+   "advanced": "Read section 5(1) beside section 4(2): the revocation window closes at the moment of posting, not at the moment of receipt, so a revocation sent afterwards is ineffective however quickly it arrives. It is named in full here on purpose: the bare number is used in this app for more than one Act — section 5 of the Evidence Act 1950 is a different provision entirely (relevancy) — so it is not auto-linked in prose. Look it up by name rather than expecting a hover.",
    "source": "Contracts Act 1950, s 5",
    "find": "Free at lom.agc.gov.my — Contracts Act 1950 (Act 136)",
    "aliases": [
-    "section 5",
-    "s 5",
-    "section 5(1)",
-    "s 5(1)",
-    "Section 5(1)"
+    "Contracts Act section 5"
    ],
    "see": [
     "revocation",

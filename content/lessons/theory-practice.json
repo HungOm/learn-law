@@ -131,35 +131,35 @@
           "q": "What does legal positivism claim?",
           "options": [
             "That a rule must be just to be law",
-            "That only judges can make law",
             "That law and morality are separate questions, so validity depends on source",
+            "That only judges can make law",
             "That written law is superior to custom"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Positivism separates what law is from what it ought to be. A rule properly made is law even if it is unjust."
         },
         {
           "id": "qjur2",
           "q": "What is the practical worry about the natural law position?",
           "options": [
-            "It gives judges power to deny that a validly passed rule is law",
             "It makes statutes impossible to read",
             "It only applies to written constitutions",
-            "It cannot explain custom"
+            "It cannot explain custom",
+            "It gives judges power to deny that a validly passed rule is law"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "If injustice can defeat validity, someone must decide when. That is a large power, and it is the standard objection."
         },
         {
           "id": "qjur3",
           "q": "Why is positivism sometimes said to make criticism of law easier?",
           "options": [
-            "Because it lets you say a rule is both law and unjust without contradiction",
             "Because it treats all law as unjust",
             "Because it forbids judges from interpreting",
-            "Because it requires a written constitution"
+            "Because it requires a written constitution",
+            "Because it lets you say a rule is both law and unjust without contradiction"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Keeping the questions apart means calling a law unjust does not require denying it is law. The criticism stays coherent."
         }
       ],
@@ -318,24 +318,24 @@
           "id": "qint1",
           "q": "Malaysia ratifies a treaty. What changes in Malaysian domestic law immediately?",
           "options": [
-            "The treaty becomes enforceable in the High Court",
             "Nothing, until Parliament legislates",
+            "The treaty becomes enforceable in the High Court",
             "All inconsistent statutes are repealed",
             "The treaty binds only government departments"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Malaysia follows the dualist approach. Ratification creates an obligation in international law; domestic effect needs legislation."
         },
         {
           "id": "qint2",
           "q": "A statute is ambiguous and one reading fits an unincorporated treaty. What may a court do?",
           "options": [
-            "Prefer the reading that fits the international obligation",
             "Ignore the treaty entirely",
             "Apply the treaty in place of the statute",
-            "Refer the question to the executive"
+            "Refer the question to the executive",
+            "Prefer the reading that fits the international obligation"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "An unincorporated treaty can guide interpretation where there is an ambiguity to guide. It cannot displace clear statutory words."
         },
         {
@@ -494,11 +494,11 @@
           "q": "A client instructs you to run a story you know is false. What must you do?",
           "options": [
             "Run it, because you act on instructions",
-            "Run it but tell the court you doubt it",
             "Refuse, and withdraw if necessary, without disclosing why",
+            "Run it but tell the court you doubt it",
             "Report the client to the police"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The duty to the court forbids the false assertion; confidentiality forbids explaining. Refusal and silence is the resolution."
         },
         {
@@ -517,24 +517,24 @@
           "id": "qeth3",
           "q": "When does a duty of confidence to a client end?",
           "options": [
-            "It continues after the retainer ends",
             "When the case ends",
             "When the client stops paying",
-            "When the client dies"
+            "When the client dies",
+            "It continues after the retainer ends"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Confidence survives the retainer. It is not a term of the engagement that expires with it."
         },
         {
           "id": "qeth4",
           "q": "Why is the conflicts check done before taking a retainer?",
           "options": [
-            "Because the court requires a certificate",
             "Because a conflict discovered later usually means ceasing to act, which helps nobody",
+            "Because the court requires a certificate",
             "Because fees must be agreed first",
             "Because only the client can waive it"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "There is rarely a cure once a conflict has arisen. The remedy is to stop acting, so the check belongs at the start."
         }
       ],
@@ -794,10 +794,10 @@
               "prompt": "A client asks how to structure a transfer so that a creditor cannot reach the asset, intending to defraud that creditor. Is the exchange privileged?",
               "options": [
                 "Yes, it is legal advice",
-                "No, if the purpose was to further a fraud",
-                "Only if the lawyer refused to help"
+                "Only if the lawyer refused to help",
+                "No, if the purpose was to further a fraud"
               ],
-              "answer": 1,
+              "answer": 2,
               "reveal": "No. A communication in furtherance of an illegal purpose falls outside the protection, and the lawyer's innocence does not restore it."
             }
           ]
@@ -939,11 +939,11 @@
               "t": "checkpoint",
               "q": "A partner moves RM10,000 from client account to pay a firm expense, and replaces it the next week. What is the position?",
               "options": [
-                "No breach, because it was replaced",
                 "A breach, whatever happened afterwards",
+                "No breach, because it was replaced",
                 "A breach only if a client complains"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "The breach is the withdrawal of money the firm was not entitled to take. Replacing it repairs the shortfall but does not undo the misuse."
             }
           ]
@@ -1072,10 +1072,10 @@
               "t": "checkpoint",
               "q": "You have identified that your facts sit at the edge of a statutory phrase. What follows?",
               "options": [
-                "The provision does not apply, so the claim fails",
-                "The words will not decide it, so the argument must come from purpose or analogy"
+                "The words will not decide it, so the argument must come from purpose or analogy",
+                "The provision does not apply, so the claim fails"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "The edge is where argument happens rather than where it stops. Recognising that early is what stops an answer repeating the words of the section as though repetition made them decisive."
             }
           ]
@@ -1100,10 +1100,10 @@
           "options": [
             "Certainty in every case",
             "Shorter statutes",
-            "Freedom for judges to decide as they please",
-            "Reach — a rule can apply to circumstances its author never foresaw"
+            "Reach — a rule can apply to circumstances its author never foresaw",
+            "Freedom for judges to decide as they please"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The generality that creates uncertain edges is the same generality that lets an old rule govern a new situation. It is a trade rather than a defect."
         }
       ],
@@ -1223,10 +1223,10 @@
               "t": "predict",
               "prompt": "A judge says the decision was compelled by authority when a different result was clearly available. What is going on?",
               "options": [
-                "The judge is lying",
-                "The convention of stating reasons as compulsion is doing work — it is how a choice is made accountable"
+                "The convention of stating reasons as compulsion is doing work — it is how a choice is made accountable",
+                "The judge is lying"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "It is easy to read this as dishonesty and harder to see what the convention is for. Reasoning that presents itself as compelled invites contradiction from the authorities; reasoning that admits choice is much harder to test. Whether that is a good bargain is exactly the argument."
             }
           ]
@@ -1273,10 +1273,10 @@
           "options": [
             "Judges are not elected",
             "Judgments take too long",
-            "It makes statutes unnecessary",
-            "The losing party is bound by a rule that was not determinate when they acted"
+            "The losing party is bound by a rule that was not determinate when they acted",
+            "It makes statutes unnecessary"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "If the rule did not reach the case until the judgment settled it, the party who acted before that judgment could not have known where they stood. That is a legality objection, not a complaint about outcomes."
         },
         {
@@ -1285,10 +1285,10 @@
           "options": [
             "That this court is free to choose differently",
             "That the earlier decision is old",
-            "That Parliament should legislate instead",
-            "That the earlier court misread principles that were always there"
+            "That the earlier court misread principles that were always there",
+            "That Parliament should legislate instead"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Finding implies the possibility of error, so the submission is one of correction. The rival view supports a different submission — that a choice was made and may be made again."
         }
       ],
@@ -1384,10 +1384,10 @@
               "t": "predict",
               "prompt": "States routinely give visiting heads of state a red carpet. Is that customary international law?",
               "options": [
-                "Yes — the practice is consistent and long-standing",
-                "No — the practice is consistent but nobody thinks it is legally required"
+                "No — the practice is consistent but nobody thinks it is legally required",
+                "Yes — the practice is consistent and long-standing"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "Consistency alone is not enough. Courtesy done consistently is still courtesy. The second limb is what separates a rule from a habit, and it is where most arguments about custom are won or lost."
             },
             {
@@ -1418,10 +1418,10 @@
               "t": "checkpoint",
               "q": "Malaysia ratifies a convention that says exactly what your client needs. Can they rely on it in the High Court?",
               "options": [
-                "Yes, ratification makes it part of Malaysian law",
-                "Not by itself — something must bring it into domestic law first"
+                "Not by itself — something must bring it into domestic law first",
+                "Yes, ratification makes it part of Malaysian law"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "Ratification binds Malaysia as a state. It does not, on its own, create a right a domestic court can enforce. Working out what would is the whole of the next lesson."
             }
           ]
@@ -1444,12 +1444,12 @@
           "id": "q-intl-src-2",
           "q": "A state never signed a widely ratified treaty. Is it bound by it?",
           "options": [
-            "No, not under the treaty",
             "Yes, once enough states ratify",
             "Only if it is a member of the United Nations",
-            "Yes, automatically after ten years"
+            "Yes, automatically after ten years",
+            "No, not under the treaty"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "A treaty binds its parties. A non-party may be bound by a customary rule that happens to have the same content, but that is a separate argument requiring separate proof."
         }
       ],
@@ -1551,10 +1551,10 @@
               "t": "predict",
               "prompt": "Parliament passes an Act implementing a treaty, then later amends the Act so it no longer matches the treaty. What is the position?",
               "options": [
-                "The amendment is invalid, because the treaty binds Malaysia",
-                "The amended Act governs domestically, and Malaysia may be in breach internationally"
+                "The amended Act governs domestically, and Malaysia may be in breach internationally",
+                "The amendment is invalid, because the treaty binds Malaysia"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "Both things are true at once, and keeping them apart is the skill. The domestic court applies the Act as amended. The international obligation is unaffected by what Parliament did, and the breach is a matter between states."
             }
           ]
@@ -1581,10 +1581,10 @@
               "t": "checkpoint",
               "q": "Where is the line between using an unincorporated treaty and relying on one?",
               "options": [
-                "There is no line — it is either in force or it is not",
-                "Informing how existing law is read is available; supplying a right that domestic law does not give is not"
+                "Informing how existing law is read is available; supplying a right that domestic law does not give is not",
+                "There is no line — it is either in force or it is not"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "The residue is real but bounded. If the treaty is doing the work that a statute would have done, the argument has stopped being interpretive."
             }
           ]
@@ -1762,10 +1762,10 @@
               "t": "checkpoint",
               "q": "What is the strongest way to use this material in an essay?",
               "options": [
-                "Recite both positions and conclude that both have merit",
-                "Apply the competing tests to a concrete proposal and show what each would permit or forbid"
+                "Apply the competing tests to a concrete proposal and show what each would permit or forbid",
+                "Recite both positions and conclude that both have merit"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "The positions are only interesting where they diverge. Applying them to a specific proposal is what exposes the divergence, and it is what separates an essay from a summary."
             }
           ]
@@ -1790,10 +1790,10 @@
           "options": [
             "It is too recent",
             "It has no supporters",
-            "It only applies to criminal law",
-            "Everything depends on how widely 'harm' is defined"
+            "Everything depends on how widely 'harm' is defined",
+            "It only applies to criminal law"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Defined widely enough, harm covers distress at conduct one never witnesses, and the principle stops limiting anything. The work is in the definition rather than in the principle."
         }
       ],
@@ -1865,10 +1865,10 @@
               "t": "predict",
               "prompt": "A judge says a result is 'harsh but the law is clear'. What are they claiming?",
               "options": [
-                "That the outcome is just",
-                "That they are delivering procedural justice while denying that substantive justice is theirs to give"
+                "That they are delivering procedural justice while denying that substantive justice is theirs to give",
+                "That the outcome is just"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "It is a statement about the limits of the role, not about the merits. Whether that self-restraint is admirable or evasive is precisely the argument, and it connects to the discretion lesson in this module."
             }
           ]
@@ -1919,10 +1919,10 @@
               "t": "checkpoint",
               "q": "Why does access belong in an essay about justice rather than in one about procedure?",
               "options": [
-                "It does not — access is an administrative matter",
-                "Because a rule nobody can invoke delivers no justice of either kind"
+                "Because a rule nobody can invoke delivers no justice of either kind",
+                "It does not — access is an administrative matter"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "Procedural and substantive justice both presuppose that a claimant gets in front of a decision-maker. Where they cannot, both are unavailable, which makes access prior to either rather than parallel to them."
             }
           ]
@@ -1945,12 +1945,12 @@
           "id": "q-juris-just-2",
           "q": "Why is formal equality insufficient on its own?",
           "options": [
-            "Because identical treatment of differently placed people can produce very different effects",
             "Because it is hard to apply",
             "Because judges dislike it",
-            "Because it applies only to statutes"
+            "Because it applies only to statutes",
+            "Because identical treatment of differently placed people can produce very different effects"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Treating like cases alike says nothing about whether the cases really are alike. Where they are not, uniform application can entrench a disadvantage the rule did not create."
         }
       ],
@@ -2104,12 +2104,12 @@
           "id": "q-juris-chg-2",
           "q": "Why does judicially made law usually follow rather than lead?",
           "options": [
-            "Courts decide only the disputes brought to them, and litigation needs a party with the means and interest",
             "Judges are conservative by temperament",
             "Judges are not permitted to make law",
-            "Precedent forbids change"
+            "Precedent forbids change",
+            "Courts decide only the disputes brought to them, and litigation needs a party with the means and interest"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The constraint is structural rather than attitudinal. A court cannot reform an area nobody litigates, however willing it might be."
         }
       ],

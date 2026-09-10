@@ -156,11 +156,11 @@
           "q": "A shop manager orders ordinary stock without being told to. What kind of authority is that?",
           "options": [
             "Express authority",
-            "No authority at all",
             "Implied authority, because it comes with the job",
+            "No authority at all",
             "Authority only if the principal later agrees"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Implied authority is what comes with the role. A manager engaged to run a shop may do the ordinary things running a shop requires."
         },
         {
@@ -168,11 +168,11 @@
           "q": "A principal privately caps an agent at ten crates. The agent orders forty from a supplier who does not know of the cap. Who is bound?",
           "options": [
             "Nobody, because the agent exceeded authority",
-            "The principal, because the supplier could rely on the appearance of authority",
             "The agent personally, and not the principal",
+            "The principal, because the supplier could rely on the appearance of authority",
             "The supplier, who should have checked"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "A private limit the third party never knew about does not shrink what they may rely on. The principal's remedy is against the agent."
         },
         {
@@ -358,23 +358,23 @@
           "q": "Where does a claim for dismissal without just cause or excuse begin?",
           "options": [
             "In the High Court by writ",
-            "In the Sessions Court",
             "Through a representation under the industrial relations system",
+            "In the Sessions Court",
             "In the Syariah court if the employee is Muslim"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The Industrial Relations Act 1967 route starts with a representation and conciliation, and may be referred on to the Industrial Court."
         },
         {
           "id": "qemp3",
           "q": "An employer proves the misconduct but held no hearing. What is the likely position?",
           "options": [
-            "The dismissal may still be unfair, because procedure is a separate requirement",
             "The dismissal is safe, because the reason was true",
             "The employee must sue for breach of contract instead",
-            "The Employment Act 1955 decides it"
+            "The Employment Act 1955 decides it",
+            "The dismissal may still be unfair, because procedure is a separate requirement"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Just cause has a substantive and a procedural half, and an employer must satisfy both. A true reason does not cure an absent procedure."
         },
         {
@@ -382,11 +382,11 @@
           "q": "What remedy is the unfair dismissal system built around?",
           "options": [
             "Damages for distress",
-            "A criminal penalty on the employer",
             "Reinstatement, with compensation commonly awarded instead",
+            "A criminal penalty on the employer",
             "An injunction against the employer"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The statutory aim is to put the workman back in the job. In practice compensation is usually awarded in place of reinstatement."
         }
       ],
@@ -467,10 +467,10 @@
               "t": "predict",
               "prompt": "Two sophisticated companies negotiate at length, with lawyers, and agree a term the Act expressly declares void. Is it enforceable?",
               "options": [
-                "Yes — they were commercial parties with equal bargaining power and full advice",
-                "No — an express declaration of voidness is not displaced by the quality of the negotiation"
+                "No — an express declaration of voidness is not displaced by the quality of the negotiation",
+                "Yes — they were commercial parties with equal bargaining power and full advice"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "Bargaining equality is an argument about consent, and consent is a different limb. Where the Act declares a class of agreement void, the care taken in reaching it is beside the point."
             }
           ]
@@ -558,11 +558,11 @@
           "q": "Two commercial parties with equal bargaining power agree a term the Act expressly declares void. What follows?",
           "options": [
             "It binds them, because both consented freely",
-            "It binds only the party who drafted it",
             "It is void — the quality of consent does not save an agreement the Act declares void",
+            "It binds only the party who drafted it",
             "It is enforceable if the contract says so"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Consent and express voidness are different limbs of section 10(1). Satisfying one does not answer the other."
         }
       ],
@@ -639,10 +639,10 @@
               "t": "predict",
               "prompt": "A buyer has an unusually lucrative sub-sale and tells the seller about it a week after the contract is signed. The seller breaches. Is the sub-sale profit recoverable under the second limb?",
               "options": [
-                "Yes — the seller knew about it before breaching",
-                "Not under that limb — it asks what the parties knew when they made the contract"
+                "Not under that limb — it asks what the parties knew when they made the contract",
+                "Yes — the seller knew about it before breaching"
               ],
-              "answer": 1,
+              "answer": 0,
               "reveal": "The limb is tied to the time of contracting, because that is when the party could have priced or refused the risk. Later knowledge may matter for other purposes, but it does not retrofit contemplation."
             }
           ]
@@ -698,10 +698,10 @@
               "t": "checkpoint",
               "q": "Your client wants certainty about what a breach will cost. What is the honest advice?",
               "options": [
-                "Name a large sum in the contract — certainty is achieved by drafting",
-                "A named sum engages section 75, so the figure is not automatically the amount recoverable; certainty is limited by what the section allows"
+                "A named sum engages section 75, so the figure is not automatically the amount recoverable; certainty is limited by what the section allows",
+                "Name a large sum in the contract — certainty is achieved by drafting"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "Naming a figure changes which section governs, not whether the court will scrutinise it. Advice that promises certainty from drafting alone has not read the provision the drafting attracts."
             }
           ]
@@ -724,12 +724,12 @@
           "id": "q-comm-rem-2",
           "q": "A commercial contract names a sum payable on breach. Which provision governs?",
           "options": [
-            "Section 74",
             "Section 75",
+            "Section 74",
             "Section 10(1)",
             "Section 26"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Section 75 addresses a sum named in the contract as payable on breach. Section 74 governs compensation for loss caused, which is a different question and can produce a different figure."
         }
       ],
@@ -868,10 +868,10 @@
               "t": "checkpoint",
               "q": "Your client is plainly an employee. Does it follow that the statutory minimum terms apply to them?",
               "options": [
-                "Yes — the Act protects employees",
-                "Not necessarily — that Act defines its own scope, and the definition has conditions"
+                "Not necessarily — that Act defines its own scope, and the definition has conditions",
+                "Yes — the Act protects employees"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "Status and coverage are separate questions. Establishing the first without checking the second produces advice that is right about the category and wrong about the entitlement."
             }
           ]
@@ -1009,10 +1009,10 @@
               "t": "checkpoint",
               "q": "Your client's first question is whether they will get their job back. What does honest advice look like?",
               "options": [
-                "Reassure them — reinstatement is the primary remedy",
-                "Explain that it is the primary remedy in principle but compensation is the common outcome, and say why"
+                "Explain that it is the primary remedy in principle but compensation is the common outcome, and say why",
+                "Reassure them — reinstatement is the primary remedy"
               ],
-              "answer": 1,
+              "answer": 0,
               "why": "Both halves are true and the client needs both. Leading with the principle alone builds an expectation that the process is unlikely to meet, and that is the disappointment good advice exists to prevent."
             }
           ]
@@ -1053,22 +1053,22 @@
           "options": [
             "The dismissal is safe, because the reason was good",
             "The employee must prove bad faith",
-            "Only the reason matters in Malaysian law",
-            "The dismissal may still be successfully challenged, because the procedural limb is separate"
+            "The dismissal may still be successfully challenged, because the procedural limb is separate",
+            "Only the reason matters in Malaysian law"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The substantive and procedural limbs are independent. Each protects something different, so satisfying one does not answer the other."
         },
         {
           "id": "q-emp-rem-2",
           "q": "What should appear at the top of an advice letter on a dismissal?",
           "options": [
-            "The strength of the merits",
             "The time limit for bringing the challenge",
+            "The strength of the merits",
             "The employer's likely defence",
             "The client's employment history"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "A missed deadline cannot be repaired by any later quality of advice, so it belongs where a frightened reader will see it even if they read nothing else."
         }
       ],
@@ -1085,6 +1085,1248 @@
       "source": "The two limbs of a dismissal challenge and the remedial position are standard Malaysian industrial relations doctrine under the Industrial Relations Act 1967. No section and no time limit is stated here, because this corpus has not verified one.",
       "verify": "Find the dismissal and time limit provisions in the Industrial Relations Act 1967 as currently published, and check the reprint's currency date. This lesson states no period on purpose; confirm it in the Act and record the date you checked.",
       "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-rest-hours-overtime",
+      "moduleId": "m20-employment",
+      "title": "Hours, rest days and overtime, and who they actually cover",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "The Employment Act 1955 limits ordinary hours, guarantees a rest day, and requires extra pay for extra work. None of that helps a worker the Act does not cover.",
+      "sections": [
+        {
+          "id": "sec-l-rest-hours-overtime-0",
+          "readMinutes": 2,
+          "keypoint": "Encik Halim's hours problem has two parts, and only one is about the number of hours.",
+          "h": "A long week in Klang",
+          "body": [
+            {
+              "t": "p",
+              "text": "Encik Halim drives a delivery van out of a warehouse in Klang."
+            },
+            {
+              "t": "p",
+              "text": "Some weeks he works every day, and often past dark."
+            },
+            {
+              "t": "p",
+              "text": "His question sounds simple. Can my employer make me work like this?"
+            },
+            {
+              "t": "p",
+              "text": "It splits into two questions, and the split is where the law actually lives."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**Does the Act limit his hours at all?** That depends on rules about hours, rest and overtime.",
+                "**Does the Act apply to him?** That depends on rules about who counts, separate from the hours rules themselves."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec-l-rest-hours-overtime-1",
+          "readMinutes": 2,
+          "keypoint": "Ordinary hours have a ceiling, a rest day is guaranteed, and extra work earns extra pay.",
+          "h": "What the Act actually protects",
+          "body": [
+            {
+              "t": "p",
+              "text": "Where the Act applies, three protections sit alongside each other."
+            },
+            {
+              "t": "rule",
+              "text": "The Employment Act 1955 sets a ceiling on ordinary hours of work, requires a rest day in each week, and requires overtime to be paid at an enhanced rate above ordinary pay.",
+              "source": "Employment Act 1955."
+            },
+            {
+              "t": "p",
+              "text": "Each protection answers a different complaint."
+            },
+            {
+              "t": "list",
+              "items": [
+                "A ceiling on hours answers *I am asked to work without end*.",
+                "A rest day answers *I never get a full day off*.",
+                "Enhanced overtime pay answers *I am paid the same for extra hours as ordinary ones*."
+              ]
+            },
+            {
+              "t": "caution",
+              "text": "This lesson gives no figure for the hours ceiling, the overtime rate, or how a rest day is counted. Read the Act for the current figures."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-rest-hours-overtime-2",
+          "readMinutes": 1,
+          "keypoint": "The same Act that limits hours also decides, on its own terms, who gets that limit.",
+          "h": "Coverage is a separate gate",
+          "body": [
+            {
+              "t": "p",
+              "text": "Being an employee is not the end of the enquiry."
+            },
+            {
+              "t": "p",
+              "text": "The hours, rest day and overtime protections apply only within categories the Act sets for itself."
+            },
+            {
+              "t": "p",
+              "text": "Coverage is often tied to the kind of work done, or how much is earned."
+            },
+            {
+              "t": "p",
+              "text": "A worker can be plainly employed and still sit outside this particular part of the Act."
+            },
+            {
+              "t": "p",
+              "text": "So the coverage question has to be checked provision by provision, not assumed from the job title."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-rest-hours-overtime-3",
+          "readMinutes": 1,
+          "keypoint": "A manager and a driver can work for the same firm and land on opposite sides of the same protection.",
+          "h": "Two workers, one warehouse",
+          "body": [
+            {
+              "t": "p",
+              "text": "Puan Aisyah manages the same warehouse where Encik Halim drives."
+            },
+            {
+              "t": "p",
+              "text": "Both are clearly employees. Neither question from earlier is in doubt for either of them."
+            },
+            {
+              "t": "predict",
+              "prompt": "Does it follow that the hours, rest day and overtime rules apply to Puan Aisyah the same way they apply to Encik Halim?",
+              "options": [
+                "Yes — both are employees, so both get the same protection",
+                "Not necessarily — the Act may draw its own line between them by role or pay",
+                "No — only drivers are ever covered by hours protections"
+              ],
+              "answer": 1,
+              "reveal": "The Act's hours provisions carve out their own coverage, often by the nature of the work or the pay involved. A manager and a driver at the same firm can land on different sides of that line, even though both are employees."
+            }
+          ]
+        }
+      ],
+      "source": "The existence of hours, rest day and overtime protections, and the fact that coverage is set separately by the Employment Act 1955, is standard doctrine. No figure, ceiling or rate is stated here, because this corpus has not verified one.",
+      "lastVerified": "2026-09-11",
+      "verify": "This lesson states no section number, no hours figure, and no rate for X on purpose; confirm it in the current Employment Act 1955 as published by the Attorney General's Chambers and record the date you checked.",
+      "reading": [
+        {
+          "statuteId": "employment-act-1955",
+          "where": "the provisions on hours of work, rest days and overtime, and the provisions defining which employees they cover"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-maternity-protection",
+      "moduleId": "m20-employment",
+      "title": "Pregnancy at work, and the dismissal it is not supposed to trigger",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "The Employment Act 1955 gives eligible employees paid maternity leave, and a dismissal tangled up with pregnancy runs straight into the unjust dismissal system. Timing is evidence, not proof by itself.",
+      "sections": [
+        {
+          "id": "sec-l-maternity-protection-0",
+          "readMinutes": 2,
+          "keypoint": "A dismissal that lands right after a pregnancy announcement raises a question the calendar alone cannot answer.",
+          "h": "Two events, close together",
+          "body": [
+            {
+              "t": "p",
+              "text": "Kak Zurina works at a bakery in Ipoh."
+            },
+            {
+              "t": "p",
+              "text": "She tells her employer she is pregnant. Soon after, she is told her post is being closed."
+            },
+            {
+              "t": "p",
+              "text": "She wants to know two things. Is she owed leave and pay around the birth? And was the timing of her dismissal a coincidence?"
+            },
+            {
+              "t": "p",
+              "text": "Both questions matter, and they are answered by different parts of the law."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-maternity-protection-1",
+          "readMinutes": 2,
+          "keypoint": "Paid maternity leave is a statutory entitlement for an eligible employee, with conditions the Act sets for itself.",
+          "h": "The leave entitlement",
+          "body": [
+            {
+              "t": "rule",
+              "text": "The Employment Act 1955 gives an eligible female employee paid maternity leave around the birth of a child, subject to conditions the Act sets for eligibility.",
+              "source": "Employment Act 1955."
+            },
+            {
+              "t": "p",
+              "text": "Eligibility is not automatic for every pregnant employee."
+            },
+            {
+              "t": "p",
+              "text": "The Act sets its own conditions, and those conditions have to be checked rather than assumed."
+            },
+            {
+              "t": "caution",
+              "text": "No length of leave, no qualifying period, and no rate of pay is stated here. Confirm every figure against the current Act."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-maternity-protection-2",
+          "readMinutes": 1,
+          "keypoint": "A dismissal tied to pregnancy is a strong candidate for a claim of dismissal without just cause or excuse.",
+          "h": "Where dismissal law joins in",
+          "body": [
+            {
+              "t": "p",
+              "text": "Dismissing an employee because she is pregnant does not sit inside the maternity leave rules at all."
+            },
+            {
+              "t": "p",
+              "text": "It sits inside the separate system for challenging a dismissal without just cause or excuse."
+            },
+            {
+              "t": "rule",
+              "text": "The Industrial Relations Act 1967 lets a workman challenge a dismissal without just cause or excuse, and a reason connected to pregnancy is unlikely to be treated as a genuine one.",
+              "source": "Industrial Relations Act 1967."
+            },
+            {
+              "t": "p",
+              "text": "So a pregnant employee who is dismissed may have two live matters, not one: leave and pay already owed, and a separate challenge to the dismissal itself."
+            },
+            {
+              "t": "example",
+              "text": "An employer who dismisses Zurina for 'restructuring' the same week she announces her pregnancy has handed her a strong fact pattern. It is not a defence that ends the enquiry."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-maternity-protection-3",
+          "readMinutes": 1,
+          "keypoint": "Timing that looks suspicious still has to be tested against the employer's actual reason, not assumed to prove it.",
+          "h": "Suspicion is a starting point, not a verdict",
+          "body": [
+            {
+              "t": "p",
+              "text": "Close timing between an announcement and a dismissal invites suspicion. It does not, by itself, decide the case."
+            },
+            {
+              "t": "p",
+              "text": "An employer can have a genuine, unrelated reason that happens to land at an awkward moment."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Zurina is dismissed soon after telling her employer she is pregnant. What is the right next step in advising her?",
+              "options": [
+                "Examine whether the stated reason for dismissal was genuine, using the timing as one piece of evidence among others",
+                "Treat the timing as conclusive proof the dismissal was because of the pregnancy",
+                "Advise her that only the maternity leave rules are relevant, since she has already been dismissed"
+              ],
+              "answer": 0,
+              "why": "Timing is evidence that invites scrutiny of the employer's stated reason. It is not a substitute for testing whether that reason was real, which is exactly what the unjust dismissal enquiry does."
+            }
+          ]
+        }
+      ],
+      "source": "Maternity leave as a distinct statutory entitlement under the Employment Act 1955, and the availability of an unjust dismissal challenge under the Industrial Relations Act 1967 where a dismissal is connected to pregnancy, are standard doctrine. No period, qualifying condition or rate is stated here, because this corpus has not verified one.",
+      "lastVerified": "2026-09-11",
+      "verify": "This lesson states no section number, no leave period, and no eligibility condition for X on purpose; confirm it in the current Employment Act 1955 and Industrial Relations Act 1967 as published by the Attorney General's Chambers and record the date you checked.",
+      "reading": [
+        {
+          "statuteId": "employment-act-1955",
+          "where": "the maternity leave provisions and the conditions for eligibility"
+        },
+        {
+          "statuteId": "industrial-relations-act-1967",
+          "where": "dismissal without just cause or excuse, applied to a dismissal connected to pregnancy"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-termination-layoff-benefits",
+      "moduleId": "m20-employment",
+      "title": "Termination benefits, and why they are not the same claim as unjust dismissal",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A payment for losing a job through no fault of the employee is a different claim from compensation for a dismissal without just cause or excuse. An employer meeting one does not automatically meet the other.",
+      "sections": [
+        {
+          "id": "sec-l-termination-layoff-benefits-0",
+          "readMinutes": 2,
+          "keypoint": "One payment is about the job disappearing. A separate claim is about whether the dismissal itself was lawful.",
+          "h": "A closed factory in Melaka",
+          "body": [
+            {
+              "t": "p",
+              "text": "En. Farid's factory in Melaka shuts its doors. Nobody says he did anything wrong."
+            },
+            {
+              "t": "p",
+              "text": "He is told he will receive a payment for losing his job this way."
+            },
+            {
+              "t": "p",
+              "text": "He also wonders whether he can still challenge the dismissal itself."
+            },
+            {
+              "t": "p",
+              "text": "Both questions can be true at once, and confusing them costs a client money."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-termination-layoff-benefits-1",
+          "readMinutes": 2,
+          "keypoint": "Regulations under the Employment Act 1955 give benefits for termination and lay-off, tied to service rather than fault.",
+          "h": "A payment for no fault at all",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Regulations made under the Employment Act 1955 provide for termination and lay-off benefits, payable to an eligible employee whose employment ends through redundancy, closure or lay-off rather than through their own fault.",
+              "source": "Employment Act 1955."
+            },
+            {
+              "t": "p",
+              "text": "The idea behind this payment is not punishment of the employer."
+            },
+            {
+              "t": "p",
+              "text": "It recognises that losing a job through no fault of your own still costs the person who lost it."
+            },
+            {
+              "t": "caution",
+              "text": "No formula, no qualifying length of service, and no scale of payment is given here. Read the regulations themselves for the current figures."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-termination-layoff-benefits-2",
+          "readMinutes": 1,
+          "keypoint": "One claim is for a fixed payment tied to service. The other is for whether the dismissal itself had just cause.",
+          "h": "A different claim, a different question",
+          "body": [
+            {
+              "t": "p",
+              "text": "Compensation for a dismissal without just cause or excuse is not the same pot of money."
+            },
+            {
+              "t": "p",
+              "text": "That claim asks whether the reason for dismissal was genuine and whether the process was fair, under the Industrial Relations Act 1967."
+            },
+            {
+              "t": "table",
+              "caption": "Two claims that sound alike and are not",
+              "columns": [
+                "Claim",
+                "What it asks",
+                "What triggers it"
+              ],
+              "rows": [
+                [
+                  "Termination or lay-off benefit",
+                  "Has service ended through redundancy, closure or lay-off?",
+                  "The job ending, regardless of who is at fault."
+                ],
+                [
+                  "Unjust dismissal compensation",
+                  "Was there just cause or excuse, reached by a fair process?",
+                  "A dismissal the employee says was wrong or unfairly handled."
+                ]
+              ],
+              "alt": "Two claims side by side. A termination or lay-off benefit asks only whether service ended through redundancy, closure or lay-off, and is triggered by the job ending regardless of fault. Unjust dismissal compensation asks whether there was just cause or excuse reached by a fair process. It is triggered by a dismissal the employee says was wrong or unfairly handled."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-termination-layoff-benefits-3",
+          "readMinutes": 1,
+          "keypoint": "Paying one claim does not close the other, though what is actually owed on each may end up connected in practice.",
+          "h": "Does paying one claim close the other?",
+          "body": [
+            {
+              "t": "p",
+              "text": "An employer who has already paid a termination benefit sometimes argues that settles everything."
+            },
+            {
+              "t": "predict",
+              "prompt": "Farid receives his termination benefit and later wants to argue the whole redundancy exercise was not genuine. Does the payment stop him?",
+              "options": [
+                "No — the two claims are legally distinct, whatever weight the payment is later given",
+                "Yes — accepting the payment always waives any further claim",
+                "Only if he signed a release naming his employer"
+              ],
+              "answer": 0,
+              "reveal": "The benefit and the unjust dismissal claim answer different questions, so paying one does not, by itself, answer the other. What is actually owed once both claims are established is a separate matter. The current position on any set-off belongs in the Act and current practice, not in assumption."
+            }
+          ]
+        }
+      ],
+      "source": "The existence of termination and lay-off benefits under regulations made under the Employment Act 1955, and their separateness from unjust dismissal compensation under the Industrial Relations Act 1967, are standard doctrine. No figure, formula or qualifying period is stated here, because this corpus has not verified one.",
+      "lastVerified": "2026-09-11",
+      "verify": "This lesson states no section number, no regulation number, and no payment figure for X on purpose; confirm it in the current Employment Act 1955, its regulations, and the Industrial Relations Act 1967 as published by the Attorney General's Chambers, and record the date you checked.",
+      "reading": [
+        {
+          "statuteId": "employment-act-1955",
+          "where": "the regulations on termination and lay-off benefits made under this Act"
+        },
+        {
+          "statuteId": "industrial-relations-act-1967",
+          "where": "dismissal without just cause or excuse, as the separate claim this lesson contrasts with a termination benefit"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-retrenchment-lifo",
+      "moduleId": "m20-employment",
+      "title": "Retrenchment, and why last in, first out is a guideline, not a rule",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "Retrenchment is dismissal because a role has genuinely disappeared, and it can still be challenged if the reason is not real or the selection is unfair. Last in, first out is a common yardstick for fairness, not a formula the law commands.",
+      "sections": [
+        {
+          "id": "sec-l-retrenchment-lifo-0",
+          "readMinutes": 2,
+          "keypoint": "Losing a job to a genuine redundancy still leaves two things worth checking before accepting it.",
+          "h": "Half a shift, gone",
+          "body": [
+            {
+              "t": "p",
+              "text": "Cik Yusof has worked at a plastics plant in Johor Bahru for several years."
+            },
+            {
+              "t": "p",
+              "text": "The plant retrenches half of one shift. Yusof is among them."
+            },
+            {
+              "t": "p",
+              "text": "Retrenchment is dismissal because a role has genuinely disappeared, not because of anything Yusof did."
+            },
+            {
+              "t": "p",
+              "text": "That does not put it beyond challenge. Two questions still need asking."
+            },
+            {
+              "t": "list",
+              "items": [
+                "**Was the redundancy genuine?** Has the role actually gone, or is 'retrenchment' covering something else?",
+                "**Was the selection fair?** Given that some roles went and some stayed, why was Yusof one of the ones chosen?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec-l-retrenchment-lifo-1",
+          "readMinutes": 2,
+          "keypoint": "The Industrial Relations Act 1967 lets the Industrial Court test both whether a redundancy was genuine and whether the selection was fair.",
+          "h": "Where retrenchment sits in dismissal law",
+          "body": [
+            {
+              "t": "rule",
+              "text": "The Industrial Relations Act 1967 allows a retrenchment dismissal to be challenged as one without just cause or excuse, examining both whether the redundancy was genuine and whether the employee selected was chosen fairly.",
+              "source": "Industrial Relations Act 1967."
+            },
+            {
+              "t": "p",
+              "text": "The Act does not set out a fixed formula for choosing who goes."
+            },
+            {
+              "t": "p",
+              "text": "What it asks for is a genuine reason and a fair method, which is the same two-limb pattern this whole module keeps returning to."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-retrenchment-lifo-2",
+          "readMinutes": 1,
+          "keypoint": "Seniority-based selection is a familiar and often-accepted yardstick, but the law does not command it in every case.",
+          "h": "Last in, first out, and its limits",
+          "body": [
+            {
+              "t": "p",
+              "text": "A common convention is to let go of the most recently hired employees first."
+            },
+            {
+              "t": "p",
+              "text": "This is usually called last in, first out, and it is a familiar starting point in a retrenchment exercise."
+            },
+            {
+              "t": "p",
+              "text": "It is a convention, not a command. An employer can depart from it for a genuine, objective reason, such as a skill the business still needs."
+            },
+            {
+              "t": "example",
+              "text": "Yusof has less seniority than several colleagues, but he is the only one certified to run a machine the plant depends on. Keeping him and letting more senior colleagues go can still be a fair selection."
+            },
+            {
+              "t": "caution",
+              "text": "A departure from seniority still has to be genuine and applied consistently. A reason invented after the selection was already made will not save it."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-retrenchment-lifo-3",
+          "readMinutes": 1,
+          "keypoint": "Neither strict seniority nor a departure from it is automatically fair — both still have to be tested against the facts.",
+          "h": "Testing a selection either way",
+          "body": [
+            {
+              "t": "p",
+              "text": "Two wrong instincts sit on either side of this topic."
+            },
+            {
+              "t": "p",
+              "text": "One treats last in, first out as a rule that must always be followed. The other treats any departure from it as automatically suspicious."
+            },
+            {
+              "t": "checkpoint",
+              "q": "An employer departs from strict seniority and keeps a junior employee with a scarce skill instead of a more senior one. Is the selection automatically unfair?",
+              "options": [
+                "Yes — departing from last in, first out is always unfair",
+                "It is automatically fair, because employers may always choose based on skill",
+                "No — the selection is fair only if the stated skill reason is genuine and was applied consistently"
+              ],
+              "answer": 2,
+              "why": "Neither extreme is right. Last in, first out is a guideline the Industrial Court often treats as fair evidence. Departing from it is neither forbidden nor automatically safe — the genuine reason still has to be shown and applied consistently."
+            }
+          ]
+        }
+      ],
+      "source": "Retrenchment as a species of dismissal challengeable under the Industrial Relations Act 1967, and last in, first out as an accepted but non-mandatory convention for selection, are standard Malaysian industrial relations doctrine. No section number is stated here, because this corpus has not verified one.",
+      "lastVerified": "2026-09-11",
+      "verify": "This lesson states no section number for X on purpose; confirm it in the current Industrial Relations Act 1967 as published by the Attorney General's Chambers and record the date you checked.",
+      "reading": [
+        {
+          "statuteId": "industrial-relations-act-1967",
+          "where": "dismissal without just cause or excuse, as applied to a retrenchment and the fairness of selection"
+        },
+        {
+          "bookId": "maimunah-industrial-relations",
+          "where": "the treatment of retrenchment and last in, first out in Industrial Court practice"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-sale-goods-quality",
+      "moduleId": "m19-commercial",
+      "title": "What a seller promises about title and quality",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "When you buy goods in Malaysia, the law reads certain promises into the sale even if nobody says them aloud. A seller who cannot show good title, or who hands over defective goods, breaks the contract whether or not a clause said so.",
+      "sections": [
+        {
+          "id": "sec-l-sale-goods-quality-0",
+          "readMinutes": 2,
+          "keypoint": "Selling something you never owned breaks a promise, even if nobody wrote the promise down.",
+          "h": "A laptop a shop never owned",
+          "body": [
+            {
+              "t": "p",
+              "text": "En Razak runs a small electronics shop in Ipoh, buying and reselling secondhand laptops."
+            },
+            {
+              "t": "p",
+              "text": "He sells a laptop to Mei Ling for RM1,200. Two months later, the police seize it as stolen property."
+            },
+            {
+              "t": "p",
+              "text": "Razak never owned that laptop. He could not pass good title to Mei Ling, whatever the receipt said."
+            },
+            {
+              "t": "p",
+              "text": "Malaysian law does not wait for a written promise here. It reads one into the sale automatically."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-sale-goods-quality-1",
+          "readMinutes": 2,
+          "keypoint": "One old statute quietly writes four promises into a sale, whether the parties mention them or not.",
+          "h": "Four promises the Act reads into every sale",
+          "body": [
+            {
+              "t": "p",
+              "text": "The Sale of Goods Act 1957 is old and short, but it still does heavy work today."
+            },
+            {
+              "t": "rule",
+              "text": "A contract for the sale of goods carries terms the parties never had to write down. The seller must actually have the right to sell the goods. Goods sold by description must match that description. Goods sold in the course of a business must be of acceptable quality, and must suit any particular purpose the buyer made known to the seller.",
+              "source": "Sale of Goods Act 1957."
+            },
+            {
+              "t": "table",
+              "caption": "Four implied promises behind an ordinary sale",
+              "columns": [
+                "Promise",
+                "What it protects",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "Title",
+                  "That the seller can actually sell the goods",
+                  "Razak did not own the stolen laptop"
+                ],
+                [
+                  "Description",
+                  "That goods match how they were described",
+                  "A phone sold as 'new' turns out used"
+                ],
+                [
+                  "Quality",
+                  "That goods are of acceptable quality",
+                  "A rice cooker that never switches on"
+                ],
+                [
+                  "Fitness for purpose",
+                  "That goods suit a purpose the buyer named",
+                  "A cable sold 'for this printer' that does not fit it"
+                ]
+              ],
+              "alt": "Four implied promises in a sale. Title: the seller can actually sell the goods, as Razak could not for a stolen laptop. Description: goods match how they were described, so a phone sold as new must not be used. Quality: goods are of acceptable quality, so a rice cooker that never switches on fails this. Fitness for purpose: goods suit a purpose the buyer named, so a cable sold for a named printer must fit it."
+            },
+            {
+              "t": "p",
+              "text": "None of this needs a clause. The Act puts these promises into the sale by itself."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-sale-goods-quality-2",
+          "readMinutes": 1,
+          "keypoint": "A seller can disclaim quality complaints in the price, but cannot sell what was never theirs to sell.",
+          "h": "Why 'sold as is' does not fix a title problem",
+          "body": [
+            {
+              "t": "p",
+              "text": "Shops sometimes mark secondhand goods 'sold as is', hoping to escape complaints later."
+            },
+            {
+              "t": "p",
+              "text": "That phrase can fairly cover wear, scratches, or a missing accessory the buyer could see for themselves."
+            },
+            {
+              "t": "p",
+              "text": "It does not cover the right to sell in the first place. Razak could not have fixed that with a sign."
+            },
+            {
+              "t": "predict",
+              "prompt": "Razak's shop has a sign saying 'all sales final, sold as is'. Does that sign protect him from Mei Ling's claim over the stolen laptop?",
+              "options": [
+                "Yes — the sign covers every complaint about the goods",
+                "No — a disclaimer about condition does not cure a missing right to sell",
+                "Only if Mei Ling read the sign before buying"
+              ],
+              "answer": 1,
+              "reveal": "Title and quality are different promises. A disclaimer aimed at condition does not reach a defect in Razak's right to sell the laptop at all."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-sale-goods-quality-3",
+          "readMinutes": 1,
+          "keypoint": "A broken promise about title or quality is an ordinary breach, with an ordinary buyer's remedy.",
+          "h": "What Mei Ling can do about it",
+          "body": [
+            {
+              "t": "p",
+              "text": "Mei Ling's laptop is gone, seized as stolen property. She still has a claim."
+            },
+            {
+              "t": "p",
+              "text": "A broken promise under the Sale of Goods Act is a breach of contract like any other."
+            },
+            {
+              "t": "p",
+              "text": "She can claim back what she paid, plus compensation for her loss."
+            },
+            {
+              "t": "p",
+              "text": "That question is answered by the general law of contract, covered elsewhere in this module."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Mei Ling wants her RM1,200 back and something for the trouble caused. Which law question is she really asking?",
+              "options": [
+                "A criminal question only the police can answer",
+                "An ordinary breach of contract question, once the implied term is shown to be broken",
+                "A question with no legal answer, since the goods are already gone"
+              ],
+              "answer": 1,
+              "why": "Once the implied term about title is shown to be broken, this becomes an ordinary claim for breach of contract, with the questions about what compensation follows."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-sog-1",
+          "q": "Razak's shop sells a laptop it never owned. Which implied promise is broken?",
+          "options": [
+            "The promise that goods match their description",
+            "The promise that the seller has the right to sell the goods",
+            "The promise that goods are of acceptable quality"
+          ],
+          "answer": 1,
+          "why": "Title is the promise that the seller actually has the right to sell. Razak never owned the laptop, so he broke this promise regardless of its condition."
+        },
+        {
+          "id": "q-sog-2",
+          "q": "A shop's sign says 'sold as is'. Which of these can that phrase fairly cover?",
+          "options": [
+            "A missing right to sell the goods at all",
+            "Any defect whatsoever, no matter how hidden",
+            "Wear and visible defects the buyer could see for themself"
+          ],
+          "answer": 2,
+          "why": "A disclaimer about condition can fairly cover wear and visible defects. It cannot cure a missing right to sell in the first place."
+        }
+      ],
+      "source": "Sale of Goods Act 1957 for the implied terms; no case is cited, and no section number is stated for the Act on purpose.",
+      "lastVerified": "2026-09-11",
+      "verify": "This lesson deliberately states no section number for the seller's implied undertakings on title, description, quality and fitness for purpose; confirm each in the current Sale of Goods Act 1957 as published by the Attorney General's Chambers and record the date you checked.",
+      "reading": [
+        {
+          "statuteId": "contracts-act-1950",
+          "where": "the general rules on breach and compensation, since a broken implied term under the Sale of Goods Act is still an ordinary breach of contract"
+        },
+        {
+          "bookId": "sinnadurai-law-of-contract",
+          "where": "the nearest chapter to sale of goods as a specific contract, for how it sits inside the general law of contract in Malaysia"
+        }
+      ]
+    },
+    {
+      "id": "l-hire-purchase-default",
+      "moduleId": "m19-commercial",
+      "title": "Hire purchase, and what happens when you fall behind",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A hire-purchase agreement lets a small business get a vehicle or machine without paying the full price upfront. Miss enough payments, and the owner's right to take the goods back is not as simple as just walking in and taking them.",
+      "sections": [
+        {
+          "id": "sec-l-hire-purchase-default-0",
+          "readMinutes": 2,
+          "keypoint": "The finance company owns the van until every instalment is paid, even though the caterer drives it daily.",
+          "h": "A catering van bought on hire purchase",
+          "body": [
+            {
+              "t": "p",
+              "text": "Puan Zaleha runs a small catering business in Shah Alam. She needs a van to deliver orders."
+            },
+            {
+              "t": "p",
+              "text": "She cannot pay RM60,000 outright, so she buys the van on hire purchase from a finance company instead."
+            },
+            {
+              "t": "p",
+              "text": "Zaleha uses the van every day. Legally, the finance company still owns it until she pays the last instalment."
+            },
+            {
+              "t": "p",
+              "text": "That gap between using something and owning it is exactly what a hire-purchase agreement creates."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-hire-purchase-default-1",
+          "readMinutes": 2,
+          "keypoint": "The Hire Purchase Act sets required content and formalities that an ordinary loan agreement does not need.",
+          "h": "What the Act actually protects",
+          "body": [
+            {
+              "t": "p",
+              "text": "Hire purchase is common enough that Parliament gave it its own statute."
+            },
+            {
+              "t": "rule",
+              "text": "A hire-purchase agreement must be in writing, and the hirer must be given a copy of it. The Act sets out required content for the agreement, and gives a hirer specific protections that an ordinary loan or ordinary sale does not carry.",
+              "source": "Hire Purchase Act 1967."
+            },
+            {
+              "t": "p",
+              "text": "Those protections exist because a hirer can lose the goods, and any instalments already paid, if things go wrong."
+            },
+            {
+              "t": "list",
+              "items": [
+                "The agreement must set out the cash price, the hire-purchase price, and the instalments.",
+                "A hirer is normally given some minimum period to put the account right.",
+                "The owner's power to repossess is not unlimited once a hirer has paid a meaningful share of the price."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec-l-hire-purchase-default-2",
+          "readMinutes": 1,
+          "keypoint": "Once a hirer has paid a real share of the price, repossession without a court's help is restricted.",
+          "h": "Why the owner cannot just take the van back",
+          "body": [
+            {
+              "t": "p",
+              "text": "Zaleha misses three months of payments. The finance company wants the van back immediately."
+            },
+            {
+              "t": "caution",
+              "text": "This lesson does not state the exact share of the price, or the exact procedure, that limits repossession. Confirm the current threshold and process in the Hire Purchase Act 1967 itself, since this is exactly the kind of detail that must be checked rather than assumed."
+            },
+            {
+              "t": "p",
+              "text": "The general shape of the protection is well known: paying a substantial part of the price changes what the owner may do next."
+            },
+            {
+              "t": "predict",
+              "prompt": "Zaleha has paid more than half the total price when she falls behind. Can the finance company simply seize the van itself, with no court involved?",
+              "options": [
+                "Yes — missing a payment always allows immediate seizure",
+                "Not necessarily — paying a substantial share can require a court's involvement first",
+                "Only if the van is parked in a public place"
+              ],
+              "answer": 1,
+              "reveal": "Malaysian hire-purchase law limits self-help repossession once a hirer has paid a meaningful share of the price. Read the current threshold and procedure in the Act before advising anyone on it."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-hire-purchase-default-3",
+          "readMinutes": 1,
+          "keypoint": "Repossession does not simply cancel out everything a hirer already paid toward the goods.",
+          "h": "The instalments already paid are not automatically lost",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suppose the van is repossessed anyway, properly this time, following the correct process."
+            },
+            {
+              "t": "p",
+              "text": "Zaleha has already paid RM25,000 toward a van now back with the finance company."
+            },
+            {
+              "t": "p",
+              "text": "Whether she can recover any of that, and how any shortfall on resale is settled, is set by the Act's own rules, not by guesswork."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Zaleha wants to know if her RM25,000 in instalments simply disappears once the van is repossessed. What is the honest answer?",
+              "options": [
+                "Yes, all instalments are automatically forfeited",
+                "It is settled by the Act's own accounting rules, which must be checked rather than assumed",
+                "No, she automatically gets every instalment back in full"
+              ],
+              "answer": 1,
+              "why": "The Hire Purchase Act sets its own rules for what happens to instalments already paid. Neither automatic forfeiture nor automatic full refund is a safe assumption without reading them."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-hp-1",
+          "q": "Zaleha's hire-purchase agreement is not in writing at all. What does the Act say about that?",
+          "options": [
+            "It has no requirements about form",
+            "The agreement must be in writing, with a copy given to the hirer",
+            "Only oral agreements are enforceable in hire purchase"
+          ],
+          "answer": 1,
+          "why": "The Hire Purchase Act requires a written agreement, with a copy given to the hirer. This lesson does not state which section sets that out."
+        },
+        {
+          "id": "q-hp-2",
+          "q": "After three months of missed payments, can a finance company always seize hire-purchase goods without any court step?",
+          "options": [
+            "No — paying a substantial share of the price can require a court's involvement",
+            "Yes, missing any payment removes every protection immediately",
+            "Only for vehicles, never for machinery"
+          ],
+          "answer": 0,
+          "why": "Once a hirer has paid a meaningful share of the price, self-help repossession is restricted. Confirm the exact threshold in the current Act."
+        }
+      ],
+      "source": "Hire Purchase Act 1967 for the form of the agreement and for repossession; no case is cited, and no section number is stated for the Act on purpose.",
+      "lastVerified": "2026-09-11",
+      "verify": "This lesson states no section number for the required form of a hire-purchase agreement, for repossession, or for what happens to instalments already paid, on purpose; confirm each in the current Hire Purchase Act 1967 as published by the Attorney General's Chambers and record the date you checked.",
+      "reading": [
+        {
+          "statuteId": "contracts-act-1950",
+          "where": "the general law of contract a hire-purchase agreement still sits inside, before any of the Act's own special protections apply"
+        },
+        {
+          "bookId": "cheong-contract-law-malaysia",
+          "where": "for how a hire-purchase agreement is treated as a contract, ahead of its statutory protections"
+        }
+      ]
+    },
+    {
+      "id": "l-negotiable-instruments",
+      "moduleId": "m19-commercial",
+      "title": "How a cheque actually works as a promise to pay",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A cheque looks like a piece of paper, but the law treats it as an order to a bank to pay money. Understanding what kind of order it is explains why a bounced cheque, and a stolen one, behave so differently.",
+      "sections": [
+        {
+          "id": "sec-l-negotiable-instruments-0",
+          "readMinutes": 2,
+          "keypoint": "A cheque is not money changing hands. It is an order that a bank must be asked to honour.",
+          "h": "A caterer paid with a cheque that bounces",
+          "body": [
+            {
+              "t": "p",
+              "text": "Puan Aminah runs a small catering business in Melaka. A client pays her RM4,000 with a cheque."
+            },
+            {
+              "t": "p",
+              "text": "Aminah deposits it. Three days later, the bank returns it, marked 'refer to drawer' — the client's account has insufficient funds."
+            },
+            {
+              "t": "p",
+              "text": "Aminah has not been paid. She has been handed an order to pay that the bank refused to carry out."
+            },
+            {
+              "t": "p",
+              "text": "That is the entire nature of a cheque. It is a promise wrapped inside an instruction to someone else."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-negotiable-instruments-1",
+          "readMinutes": 2,
+          "keypoint": "A cheque is simply a bill of exchange payable on demand and drawn on a bank.",
+          "h": "What a bill of exchange actually is",
+          "body": [
+            {
+              "t": "p",
+              "text": "The law behind this sits in an old statute most people never read: the Bills of Exchange Act 1949."
+            },
+            {
+              "t": "rule",
+              "text": "A bill of exchange is a written, unconditional order by one person to another, signed by the person giving it, requiring the person to whom it is addressed to pay a sum of money to a named person, or to bearer, on demand or at a fixed or determinable future time. A cheque is a bill of exchange drawn on a bank and payable on demand.",
+              "source": "Bills of Exchange Act 1949."
+            },
+            {
+              "t": "p",
+              "text": "Three parties usually appear: the drawer who writes it, the drawee bank asked to pay, and the payee who is meant to receive the money."
+            },
+            {
+              "t": "table",
+              "caption": "The three parties to a cheque",
+              "columns": [
+                "Party",
+                "Role",
+                "In Aminah's example"
+              ],
+              "rows": [
+                [
+                  "Drawer",
+                  "The person who writes and signs the cheque",
+                  "Aminah's client"
+                ],
+                [
+                  "Drawee",
+                  "The bank asked to pay out",
+                  "The client's bank"
+                ],
+                [
+                  "Payee",
+                  "The person meant to receive the money",
+                  "Aminah"
+                ]
+              ],
+              "alt": "Three parties to a cheque. The drawer writes and signs it — here, Aminah's client. The drawee is the bank asked to pay out — the client's bank. The payee is meant to receive the money — Aminah herself."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-negotiable-instruments-2",
+          "readMinutes": 1,
+          "keypoint": "Signing the back of a cheque can pass the right to be paid on to someone else entirely.",
+          "h": "Why endorsing a cheque matters",
+          "body": [
+            {
+              "t": "p",
+              "text": "Aminah could have signed the back of that cheque over to her supplier, instead of banking it herself."
+            },
+            {
+              "t": "p",
+              "text": "That signature is called an endorsement. It can pass the right to receive payment to a new holder."
+            },
+            {
+              "t": "caution",
+              "text": "This lesson does not name a section for endorsement, negotiation, or holder in due course. Confirm each in the current Bills of Exchange Act 1949 before relying on it."
+            },
+            {
+              "t": "predict",
+              "prompt": "Aminah endorses the cheque to her supplier, who takes it without knowing it will bounce. Can the supplier still demand payment from Aminah if it does?",
+              "options": [
+                "No — once endorsed, Aminah has no further responsibility for it",
+                "Only if the supplier is a bank",
+                "Usually yes — an endorser can still be liable if the cheque is dishonoured"
+              ],
+              "answer": 2,
+              "reveal": "Endorsing a cheque passes it on, but it does not automatically wash the endorser's hands of it. Confirm the current rules on an endorser's liability before advising on any real cheque."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-negotiable-instruments-3",
+          "readMinutes": 1,
+          "keypoint": "Someone who takes a cheque properly and in good faith can end up better protected than the original owner.",
+          "h": "A stolen cheque, and who ends up bearing the loss",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suppose a cheque payable to Aminah is stolen, and the thief manages to cash it."
+            },
+            {
+              "t": "p",
+              "text": "Who bears that loss can depend on whether the person who took the cheque did so properly and in good faith, for value."
+            },
+            {
+              "t": "p",
+              "text": "This is the idea behind a 'holder in due course' — a status the Act protects specially."
+            },
+            {
+              "t": "checkpoint",
+              "q": "A thief negotiates a stolen cheque to a shopkeeper who takes it in good faith and gives value for it. What question decides who bears the loss?",
+              "options": [
+                "Whether the shopkeeper is a registered business",
+                "Whether the shopkeeper qualifies as a holder in due course",
+                "Whether the police ever catch the thief"
+              ],
+              "answer": 1,
+              "why": "The protection given to a genuine holder in due course is exactly the doctrine built to answer this question. This lesson does not name the section; check it in the current Act."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-ni-1",
+          "q": "Which of these is Aminah's cheque, in the language of the Bills of Exchange Act?",
+          "options": [
+            "A bill of exchange payable on demand, drawn on a bank",
+            "A simple IOU with no special legal status",
+            "A form of cash that transfers ownership instantly"
+          ],
+          "answer": 0,
+          "why": "A cheque is defined as a bill of exchange drawn on a bank and payable on demand. That single sentence is the whole of what a cheque legally is."
+        },
+        {
+          "id": "q-ni-2",
+          "q": "A cheque bounces marked 'refer to drawer'. What has actually happened, in legal terms?",
+          "options": [
+            "The cheque has become void and can never be presented again",
+            "The payee has automatically lost all rights against the drawer",
+            "The bank has dishonoured an order it was asked to pay"
+          ],
+          "answer": 2,
+          "why": "Dishonour means the bank refused to carry out the order. The payee's rights against the drawer are not automatically wiped out by that refusal."
+        }
+      ],
+      "source": "Bills of Exchange Act 1949 for the nature of a cheque, endorsement and holder in due course; no case is cited, and no section number is stated for the Act on purpose.",
+      "lastVerified": "2026-09-11",
+      "verify": "This lesson states no section number for the definition of a bill of exchange, for endorsement, or for a holder in due course, on purpose; confirm each in the current Bills of Exchange Act 1949 as published by the Attorney General's Chambers and record the date you checked.",
+      "reading": [
+        {
+          "statuteId": "contracts-act-1950",
+          "where": "the general law of contract and consideration behind any negotiable instrument, since a cheque is itself a species of contract"
+        },
+        {
+          "bookId": "cheong-contract-law-malaysia",
+          "where": "for the general contract-law grounding a negotiable instrument sits on top of"
+        }
+      ]
+    },
+    {
+      "id": "l-ecommerce-terms-bind",
+      "moduleId": "m19-commercial",
+      "title": "Whether a website's terms bind a customer who never read them",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "An online shop's terms and conditions sit behind a link nobody clicks. Malaysian contract law still has to decide when clicking 'buy' creates a binding agreement, and on whose terms.",
+      "sections": [
+        {
+          "id": "sec-l-ecommerce-terms-bind-0",
+          "readMinutes": 2,
+          "keypoint": "A website order still has to go through the ordinary steps of offer and acceptance.",
+          "h": "An online order that seemed simple",
+          "body": [
+            {
+              "t": "p",
+              "text": "Encik Firdaus runs a small online store from Johor Bahru, selling handmade furniture."
+            },
+            {
+              "t": "p",
+              "text": "A customer, Puan Noraini, adds a table to her cart and clicks 'Place Order'. She pays instantly by card."
+            },
+            {
+              "t": "p",
+              "text": "The table arrives three weeks later than the website promised. Noraini wants to cancel and get a refund."
+            },
+            {
+              "t": "p",
+              "text": "Firdaus points to his terms and conditions page, which she never opened. Is she bound by it anyway?"
+            }
+          ]
+        },
+        {
+          "id": "sec-l-ecommerce-terms-bind-1",
+          "readMinutes": 2,
+          "keypoint": "The Contracts Act's rules on offer and acceptance were written for letters, and now apply to clicks.",
+          "h": "The old rules still apply to the click",
+          "body": [
+            {
+              "t": "p",
+              "text": "Malaysian contract law does not have a separate rulebook for websites. It applies the same Act it always has."
+            },
+            {
+              "t": "rule",
+              "text": "Section 2(a) treats a proposal as one person showing another that they are willing to do something, in order to get that other person's agreement to it. That is what an offer is, whether it is spoken, written, or clicked.",
+              "source": "Contracts Act 1950, s 2(a)."
+            },
+            {
+              "t": "p",
+              "text": "Whether Firdaus's website is making an offer, or only inviting Noraini to make one, is the first question to answer."
+            },
+            {
+              "t": "rule",
+              "text": "Section 4 sets out when a proposal, an acceptance, and a revocation are each treated as communicated. A proposal is communicated once it reaches the knowledge of the person it is made to; an acceptance is communicated at a moment the section itself fixes.",
+              "source": "Contracts Act 1950, s 4."
+            },
+            {
+              "t": "p",
+              "text": "These rules were built for letters and telegrams. They still have to answer questions a screen and a server now raise."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-ecommerce-terms-bind-2",
+          "readMinutes": 1,
+          "keypoint": "A proposal can usually be withdrawn before acceptance is complete, which is why timing decides so much online.",
+          "h": "When can Firdaus still pull the listing?",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suppose Firdaus's website lists the table at RM200 by mistake — a typing error, meant to read RM2,000."
+            },
+            {
+              "t": "p",
+              "text": "Noraini orders it at RM200 before anyone notices. Can Firdaus simply cancel once he spots the error?"
+            },
+            {
+              "t": "rule",
+              "text": "Section 5 allows a proposal to be revoked at any time before the communication of its acceptance is complete as against the proposer, but not afterwards. The same timing rule applies to revoking an acceptance.",
+              "source": "Contracts Act 1950, s 5."
+            },
+            {
+              "t": "p",
+              "text": "So the real question is not fairness. It is timing — was Firdaus's proposal revoked before Noraini's acceptance became complete?"
+            },
+            {
+              "t": "predict",
+              "prompt": "Firdaus's site auto-confirms every order the instant 'Place Order' is clicked, before any human checks it. Does that change when the contract is formed?",
+              "options": [
+                "Yes — the moment communication of acceptance is complete can arrive earlier than a human review step",
+                "No — automation is irrelevant, only a court can fix the moment",
+                "It changes nothing, because typing errors always void a sale"
+              ],
+              "answer": 0,
+              "reveal": "An instant, automatic confirmation can complete the communication of acceptance sooner than a business expects. That is a timing point, not a fairness point, and it is where many online-pricing disputes actually turn."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-ecommerce-terms-bind-3",
+          "readMinutes": 1,
+          "keypoint": "A term buried behind an unopened link may not have been properly brought to the customer's notice at all.",
+          "h": "Terms nobody clicked on",
+          "body": [
+            {
+              "t": "p",
+              "text": "Noraini never opened Firdaus's terms and conditions page before paying."
+            },
+            {
+              "t": "p",
+              "text": "The Electronic Commerce Act 2006 recognises that a contract can be made and signed electronically, and does not strike that down for being electronic."
+            },
+            {
+              "t": "p",
+              "text": "It does not, by itself, decide whether one particular clause was properly brought to a customer's attention."
+            },
+            {
+              "t": "caution",
+              "text": "This lesson states no section number for the Electronic Commerce Act 2006 on purpose. Confirm the current provisions in the Act itself, as published by the Attorney General's Chambers, and record the date you checked."
+            },
+            {
+              "t": "p",
+              "text": "The older question still does the real work: was the term given reasonably enough notice before the customer agreed?"
+            },
+            {
+              "t": "checkpoint",
+              "q": "Firdaus wants a refund clause buried at the bottom of a page nobody has to open before paying to bind every customer. What is the honest answer?",
+              "options": [
+                "Yes automatically, because it is written down somewhere on the site",
+                "It might not, unless the term was given reasonably enough notice before the customer agreed",
+                "No — website terms can never bind anyone in Malaysia"
+              ],
+              "answer": 1,
+              "why": "Putting a term online is not the same as giving reasonable notice of it. Whether Noraini is bound turns on notice, not on where the clause happened to be published."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-ecom-1",
+          "q": "Under section 2(a) of the Contracts Act, what does it take to make a proposal?",
+          "options": [
+            "Sending a written contract signed by both parties",
+            "Signifying willingness to do or not do something, to get the other party's assent to it",
+            "Making a payment in advance"
+          ],
+          "answer": 1,
+          "why": "Section 2(a) defines a proposal exactly this way. It says nothing about the medium, so a website listing can qualify just as a letter can."
+        },
+        {
+          "id": "q-ecom-2",
+          "q": "Which question actually decides whether Firdaus can withdraw the RM200 listing after Noraini orders it?",
+          "options": [
+            "Whether Firdaus's revocation came before the communication of Noraini's acceptance was complete",
+            "Whether Firdaus later feels the price was unfair",
+            "Whether the website looks professionally designed"
+          ],
+          "answer": 0,
+          "why": "Section 5 ties revocation to a specific moment: before acceptance is complete. Everything else, including how the mistake happened, is beside that point."
+        }
+      ],
+      "source": "Contracts Act 1950, ss 2(a), 4 and 5 for offer, acceptance and revocation; the Electronic Commerce Act 2006 for the recognition of electronic contracts, with no section number stated for that Act. No case is cited.",
+      "lastVerified": "2026-09-11",
+      "verify": "Read sections 2(a), 4 and 5 in the current published version of the Contracts Act 1950 and check the reprint's currency date. This lesson states no section number for the Electronic Commerce Act 2006 on purpose; confirm the current provisions as published by the Attorney General's Chambers and record the date you checked.",
+      "reading": [
+        {
+          "statuteId": "contracts-act-1950",
+          "where": "ss 2(a), 4 and 5 together — read them slowly, since rules written for letters are being applied here to a click"
+        },
+        {
+          "bookId": "sinnadurai-law-of-contract",
+          "where": "the chapters on offer and acceptance, for how the classical rules meet instantaneous and electronic communication"
+        }
+      ]
     }
   ]
 }

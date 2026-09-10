@@ -233,11 +233,11 @@
           "q": "Aina and Rosli register a company. The company then buys rice on credit and cannot pay. Who owes the supplier?",
           "options": [
             "Aina and Rosli, because they run the shop",
-            "Whoever placed the order",
             "The company",
+            "Whoever placed the order",
             "Aina, Rosli and the company together"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The company made the contract, so the company owes the money. The trap is thinking that the person who did the shopping is the person who owes.",
           "source": "Companies Act 2016 (Act 777); the company contracts in its own name"
         },
@@ -247,10 +247,10 @@
           "options": [
             "How much the company can owe",
             "How long the company can trade",
-            "How many shares can be issued",
-            "How much the owners can lose"
+            "How much the owners can lose",
+            "How many shares can be issued"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The company still owes the full debt. Only the members' exposure is capped, at whatever is still unpaid on their shares.",
           "source": "Companies Act 2016 (Act 777); members' liability is limited to any amount unpaid on their shares"
         },
@@ -258,12 +258,12 @@
           "id": "pe-q-cop-3",
           "q": "Salomon owned almost all the shares and ran the whole business himself. What did the court hold?",
           "options": [
+            "The company was still a separate person, and the debts were its own",
             "One-man control made the company a sham",
             "He was liable because he was also a creditor",
-            "The company was still a separate person, and the debts were its own",
             "The company was separate only for tax"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Total control is not a reason to ignore the company. That is the exact point the case settled, and it is why control alone will not lift the veil.",
           "source": "Salomon v A Salomon & Co Ltd [1897] AC 22"
         },
@@ -271,12 +271,12 @@
           "id": "pe-q-cop-4",
           "q": "The bank can reach Aina's savings but not Rosli's. Why?",
           "options": [
-            "She holds more shares than he does",
             "She signed a personal guarantee and he did not",
+            "She holds more shares than he does",
             "She is a director and he is not",
             "She was the one who dealt with the bank"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The guarantee is a separate contract she made herself. Being a shareholder or a director would not have exposed her savings.",
           "source": "Standard contract principle; a personal guarantee is a separate contract"
         },
@@ -587,10 +587,10 @@
           "options": [
             "The ordinary standard for any director",
             "The standard of a professional accountant only",
-            "Whatever standard the constitution sets",
-            "The ordinary standard, raised by the extra skill she actually has"
+            "The ordinary standard, raised by the extra skill she actually has",
+            "Whatever standard the constitution sets"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Section 213(2) sets an objective floor and then adds any extra knowledge or experience the particular director has. Half-remembering the section as purely objective is the usual slip.",
           "source": "Companies Act 2016 s 213(2)"
         },
@@ -598,12 +598,12 @@
           "id": "pe-q-cor-3",
           "q": "Aina secretly takes a catering job that was offered to the company. Who is the proper claimant?",
           "options": [
-            "The company",
             "Rosli, as the other shareholder",
             "Rosli and the company together",
-            "The Companies Commission"
+            "The Companies Commission",
+            "The company"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The duty is owed to the company, so the loss is the company's. Rosli's route is to get permission to sue in the company's name, not to sue in his own.",
           "source": "Companies Act 2016 ss 347-350; the duty is owed to the company"
         },
@@ -624,12 +624,12 @@
           "id": "pe-q-cor-5",
           "q": "The company made a profit this year. Can a shareholder simply take a share of it?",
           "options": [
-            "No. Profit reaches shareholders only as a declared dividend",
             "Yes, in proportion to shares held",
             "Yes, if the other shareholders agree informally",
-            "Yes, but only in cash"
+            "Yes, but only in cash",
+            "No. Profit reaches shareholders only as a declared dividend"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Until a dividend is properly declared, the profit is the company's money. Helping yourself to it is a director taking company property.",
           "source": "Companies Act 2016 (Act 777); profit reaches members only as a declared dividend"
         }
@@ -752,11 +752,11 @@
               "t": "predict",
               "prompt": "Devi's cousin was not there that day. He wants to tell the judge that a passer-by told him he saw Chong hit the gate. Will the court listen?",
               "options": [
+                "Generally not, because the man who saw it is not here",
                 "Yes, he is willing to swear to it",
-                "Yes, if the passer-by cannot be found",
-                "Generally not, because the man who saw it is not here"
+                "Yes, if the passer-by cannot be found"
               ],
-              "answer": 2,
+              "answer": 0,
               "reveal": "Generally not, and it feels unfair at first. Nobody is calling the cousin a liar. It is that only the passer-by can be asked how far away he was, or how sure."
             },
             {
@@ -862,10 +862,10 @@
           "options": [
             "Is there a rule that excludes it?",
             "Does it feel important to the case?",
-            "Would an ordinary person want to hear it?",
-            "Which section of the Act makes this relevant?"
+            "Which section of the Act makes this relevant?",
+            "Would an ordinary person want to hear it?"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The Act is a closed list, so relevancy has to be found in a section. Starting from the English question, whether anything excludes it, gets the system backwards.",
           "source": "Evidence Act 1950, Part I; relevancy is a closed list"
         },
@@ -873,12 +873,12 @@
           "id": "pe-q-evr-3",
           "q": "A witness wants to repeat what an absent passer-by told him, to prove that it happened. What is that?",
           "options": [
-            "An admission",
             "Hearsay",
+            "An admission",
             "Circumstantial evidence",
             "Expert evidence"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It is second-hand and offered for its truth, and the person who saw the event cannot be questioned. Calling it circumstantial evidence confuses the source with the strength.",
           "source": "Evidence Act 1950; oral evidence must be direct"
         },
@@ -886,12 +886,12 @@
           "id": "pe-q-evr-4",
           "q": "Chong messages Devi: 'Sorry, I will pay for the gate this month.' What is the message worth to her?",
           "options": [
-            "Nothing, because it was not made in court",
             "It is an admission and may be proved against him",
+            "Nothing, because it was not made in court",
             "Nothing, because an apology is not a promise",
             "It settles the case and ends the trial"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "A party's own words pointing against their interest may be proved against them. But an admission is evidence, not the end of the case, and he may still explain it.",
           "source": "Evidence Act 1950; the provisions on admissions"
         },
@@ -1156,10 +1156,10 @@
           "options": [
             "Hafiz loses, because he asserted the gift",
             "The judge splits it between them",
-            "The case is adjourned for evidence",
-            "Kumar loses, because he asserted the loan"
+            "Kumar loses, because he asserted the loan",
+            "The case is adjourned for evidence"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Section 102 puts the burden on whoever would fail on an empty record. Kumar wants judgment, so the blank page defeats him.",
           "source": "Evidence Act 1950 s 102"
         },
@@ -1180,12 +1180,12 @@
           "id": "pe-q-evp-3",
           "q": "A man is acquitted of assault, then loses a civil claim brought by the same victim. Is that a contradiction?",
           "options": [
-            "Yes. One court must be wrong",
             "No. The civil case needed a lower standard of proof",
+            "Yes. One court must be wrong",
             "No, but only because different judges heard them",
             "Yes, unless new evidence appeared"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Beyond reasonable doubt is a much higher bar than more likely than not. Treating an acquittal as a finding of innocence is the trap.",
           "source": "Standard classification; the criminal and civil standards of proof differ"
         },
@@ -1208,10 +1208,10 @@
           "options": [
             "It must presume the evidence would have been unfavourable",
             "It must strike out that party's case",
-            "It must draw no inference at all",
-            "It may presume the evidence would have been unfavourable to that party"
+            "It may presume the evidence would have been unfavourable to that party",
+            "It must draw no inference at all"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Illustration (g) to s 114 is permissive. Treating it as automatic is the mistake, and so is invoking it for a witness who would add nothing.",
           "source": "Evidence Act 1950 s 114 illustration (g)"
         }
@@ -1434,11 +1434,11 @@
           "q": "A tenancy dispute is about whether the landlord promised to return the whole deposit. He denies saying it. Which document starts the case?",
           "options": [
             "An originating summons",
-            "Either, they are interchangeable",
             "A writ",
+            "Either, they are interchangeable",
             "A letter of demand"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The parties disagree about what happened, so witnesses are needed and a writ is the right mode. An originating summons is for agreed facts and a question of construction.",
           "source": "Rules of Court 2012, Order 5"
         },
@@ -1459,12 +1459,12 @@
           "id": "pe-q-cvs-3",
           "q": "Why is service treated as a formal step rather than a formality?",
           "options": [
-            "A judgment can be set aside later if service was defective",
             "The court fee is only payable on service",
             "It fixes the limitation date",
-            "It decides which court hears the case"
+            "It decides which court hears the case",
+            "A judgment can be set aside later if service was defective"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Proper service is what makes the proceedings binding on a defendant. Sloppy service is one of the commonest ways a plaintiff loses ground they had already won.",
           "source": "Rules of Court 2012; the provisions on service of originating process"
         },
@@ -1472,12 +1472,12 @@
           "id": "pe-q-cvs-4",
           "q": "The defendant is served and then does nothing at all. What can the plaintiff seek?",
           "options": [
-            "Judgment in default",
             "An immediate trial date",
             "A striking out of the defence",
-            "Nothing, until the defendant appears"
+            "Nothing, until the defendant appears",
+            "Judgment in default"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Missing the deadline to enter appearance or file a defence exposes a defendant to judgment without a trial. It can often be set aside, but not as of right.",
           "source": "Rules of Court 2012, Order 13"
         },
@@ -1487,10 +1487,10 @@
           "options": [
             "Use the figure in the most popular textbook",
             "Ask the court clerk and rely on that",
-            "Assume it is the same as the High Court",
-            "Look up the current figure in the Subordinate Courts Act 1948"
+            "Look up the current figure in the Subordinate Courts Act 1948",
+            "Assume it is the same as the High Court"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The limits have been raised over the years, so older sources are wrong rather than merely dated. Checking the statute takes a minute and filing in the wrong court wastes months.",
           "source": "Subordinate Courts Act 1948; the limits are statutory figures, raised from time to time"
         }
@@ -1791,12 +1791,12 @@
           "id": "pe-q-cvj-2",
           "q": "During discovery, must a party disclose a document that damages its own case?",
           "options": [
-            "Yes, if it is relevant and not privileged",
             "No, a party never has to help its opponent",
             "Only if the other side already knows it exists",
-            "Only if the court orders it specifically"
+            "Only if the court orders it specifically",
+            "Yes, if it is relevant and not privileged"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Relevance, not helpfulness, decides disclosure. The exception is privilege, and privileged documents are listed rather than handed over.",
           "source": "Rules of Court 2012, Order 24"
         },
@@ -1804,12 +1804,12 @@
           "id": "pe-q-cvj-3",
           "q": "Which application assumes the pleaded facts are true and asks whether they disclose a case?",
           "options": [
-            "Summary judgment",
             "Striking out",
+            "Summary judgment",
             "Judgment in default",
             "An interim injunction"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Striking out attacks the pleading as a document. Summary judgment looks at the evidence and asks whether there is a triable issue, which is a different test.",
           "source": "Rules of Court 2012, Order 18 rule 19"
         },
@@ -1817,12 +1817,12 @@
           "id": "pe-q-cvj-4",
           "q": "You win RM20,000 in court. Why might you still receive nothing?",
           "options": [
-            "A judgment must be enforced, and enforcement needs assets to reach",
             "The judgment expires after one year",
             "The court keeps the money until an appeal is over",
-            "Costs always cancel out the award"
+            "Costs always cancel out the award",
+            "A judgment must be enforced, and enforcement needs assets to reach"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "A judgment is a declaration of debt, not a payment. If the defendant has no goods, land or bank balance, there is nothing for enforcement to bite on.",
           "source": "Rules of Court 2012; enforcement is a separate exercise from obtaining judgment"
         },
@@ -1830,12 +1830,12 @@
           "id": "pe-q-cvj-5",
           "q": "Your client lost, and strongly wants to appeal. What is the first thing to check?",
           "options": [
-            "The time limit for filing the notice of appeal",
             "Whether a different judge would have decided differently",
             "How much the appeal will cost",
-            "Whether new evidence has emerged"
+            "Whether new evidence has emerged",
+            "The time limit for filing the notice of appeal"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Appeal periods are short and strictly applied, so the deadline governs everything else. Merits are worth nothing once the time has gone.",
           "source": "Standard appellate practice; the time for a notice of appeal is fixed by the rules and strictly applied"
         }
