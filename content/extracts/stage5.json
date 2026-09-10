@@ -1,137 +1,166 @@
 [
   {
-    "id": "x-ccsu-gchq",
-    "moduleId": "m12-administrative",
-    "lessonId": "l-judicial-review",
-    "case": "Council of Civil Service Unions v Minister for the Civil Service",
-    "citation": "[1985] AC 374",
-    "court": "House of Lords (England)",
-    "year": 1985,
-    "find": "An English decision, free in full on BAILII (bailii.org) under United Kingdom House of Lords. Search the party names rather than GCHQ: that short name comes from the facts and is how textbooks refer to the case, but it is not part of the citation and a catalogue may not know it. Read the speeches themselves rather than a headnote — the headnote is the publisher's summary and is not what binds anyone.",
-    "why": "The judicial review lesson is built on a three-word frame — illegality, irrationality, procedural impropriety — and this is where the frame comes from. It is worth reading for a reason the lesson cannot supply: in the lesson the three grounds arrive as a settled list, and in the judgment you can watch a judge propose a way of sorting cases that had not been sorted that way before. Read it once for the classification and once for the thing that is easy to miss, which is what the appeal was actually decided on.",
-    "read": [
-      {
-        "passage": "The passage that names the three heads of review.",
-        "look_for": "In the lesson the three heads are three words. In the judgment each arrives with content attached. Copy the content, not the labels — an answer that names three words has named a heading and stated no ground."
-      },
-      {
-        "passage": "Whatever is said about a possible further ground beyond the three.",
-        "look_for": "The lesson tells you proportionality is argued as a fourth ground and that its status should be checked rather than assumed. Find how tentatively this judgment raises it, and notice that raising a possibility is not the same as establishing a ground — least of all in another jurisdiction."
-      },
-      {
-        "passage": "The ground the applicants actually argued, and what answered it.",
-        "look_for": "The classification everyone quotes is not what disposed of the appeal. Apply the removal test the ratio exercise teaches: take the three-head passage out and ask whether the order the House made still follows. What that tells you about the status of the most-cited passage in administrative law is worth more than the passage."
-      },
-      {
-        "passage": "Anything on an expectation arising from a settled practice.",
-        "look_for": "The lesson places legitimate expectation alongside the three grounds and says it can arise from a promise or a consistent practice. Find what this judgment requires before such an expectation exists, and what can defeat one that does."
-      }
-    ],
-    "questions": [
-      {
-        "q": "State the three grounds with the content of each, not the labels.",
-        "model": "Each ground needs a sentence that could decide a case. Illegality reaches getting the law wrong, exceeding the power, using it for an improper purpose, taking account of the irrelevant or ignoring the relevant, and fettering the discretion in advance. Irrationality is the demanding standard — a decision no reasonable authority could have reached — and not merely a decision the court would not have made. Procedural impropriety covers both the procedure laid down and the rules of natural justice. If your three sentences cannot sort a set of facts into one of them, you have memorised a list."
-      },
-      {
-        "q": "This is a 1985 English decision. What work is it doing in a Malaysian judicial review answer, and what should sit next to it?",
-        "model": "The lesson says the Malaysian courts use this sorting, which is a statement about practice, not about binding force. Check the reception provision in section 3 of the Civil Law Act 1956 and its cut-off date: a 1985 decision falls well after it, so it is not received by force of the section. It is persuasive, and it is used here because Malaysian courts have adopted the frame. The sound answer names the frame and then cites the Malaysian authority applying it — the same lesson gives you R Rama Chandran v The Industrial Court of Malaysia [1997] 1 MLJ 145 (FC) and Semenyih Jaya Sdn Bhd v Pentadbir Tanah Daerah Hulu Langat [2017] 3 MLJ 561 (FC)."
-      },
-      {
-        "q": "The judgment floats a fourth ground. How would you find out whether it is available in Malaysia, and what would you write until you had?",
-        "model": "You would look for Malaysian appellate authority applying proportionality as a free-standing ground of review, and you would check the date of whatever you found, because this is an area that moves. Until then you write it as it stands: argued as a fourth ground, with a status to be checked rather than assumed. The lesson's own quiz makes that the answer. An answer that lists proportionality alongside the three as though it were settled has asserted something it cannot support, which is the same failure as a wrong citation wearing a different coat."
-      }
-    ],
-    "trap": "Reaching for irrationality whenever a decision looks unfair. The lesson calls this the reflex to watch, and the standard is set far higher than unfairness — most decisions that feel wrong are attacked under illegality or procedural impropriety, and identifying the right head is most of the mark.",
-    "source": "Council of Civil Service Unions v Minister for the Civil Service [1985] AC 374 (GCHQ), the citation as l-judicial-review states it, where it is given as the source of the rule stating the three grounds. The Malaysian citations named above are taken from the source field of the same lesson.",
-    "verify": "Check the citation and read the three heads in the judgment on BAILII rather than in a textbook's paraphrase of it. Then check how the Malaysian courts state the grounds, and check the current status of proportionality as a fourth ground before asserting it — that is the part of this page most likely to go stale.",
-    "lastVerified": "2026-09-10"
-  },
-  {
-    "id": "x-wagon-mound",
+    "id": "x-donoghue-stevenson",
     "moduleId": "m07-tort",
     "lessonId": "l-negligence",
-    "case": "The Wagon Mound (No 1)",
-    "citation": "[1961] AC 388",
-    "court": "Privy Council",
-    "year": 1961,
-    "find": "A Privy Council decision reported in the Appeal Cases series, so the citation will find it in any law library, and many public university libraries admit visitors. BAILII (bailii.org) carries United Kingdom Privy Council decisions; search the party names, because The Wagon Mound is the ship in the facts and the short title the reports hung on the case, not part of the citation. Mind the (No 1): a second Wagon Mound decision arises out of the same fire and it is not the one this lesson cites, so check the year and the report reference on the copy in front of you before you read a word of it.",
-    "why": "The remoteness rule in the negligence lesson is one sentence long and this case is what it rests on. One sentence is enough to answer a quiz question and not enough to argue a case, because everything turns on a distinction the sentence states without explaining: the kind of damage must be foreseeable, the manner and the extent need not be. Read the judgment for where that line comes from and why a court thought it was the right place to draw it.",
+    "case": "Donoghue v Stevenson",
+    "citation": "[1932] AC 562",
+    "court": "House of Lords",
+    "year": 1932,
+    "order": 1,
+    "find": "On BAILII (bailii.org) under United Kingdom House of Lords Decisions, free and complete. The Appeal Cases citation will find it in any library carrying the English reports. Read the majority speeches rather than a summary; the reasoning is why this case is read and the outcome is not.",
+    "why": "The case the whole of negligence grew out of, and the source of the neighbour principle your lesson states. It belongs first in this module because everything else here — Caparo's caution about single grand tests most of all — is a reaction to it.",
     "read": [
       {
-        "passage": "The court's account of the test it was displacing, and the test it put in its place.",
-        "look_for": "The lesson gives you only the second of the two. You cannot see what the rule does until you see what it replaced — the old test asked a different question and produced different answers. State each in a sentence of your own before reading on."
+        "passage": "The passage stating the neighbour principle.",
+        "look_for": "Write it in your own words before reading on. Then ask what it requires: who counts as a neighbour, and by what test. The phrase is famous and the test inside it is what does the work."
       },
       {
-        "passage": "Whatever the judgment says about the kind of damage as against its extent or the manner of its occurrence.",
-        "look_for": "This is the whole case. Find the words that draw the line, then test them on the facts: oil on water, and a fire. Ask which of the three — kind, manner, extent — each fact belongs to."
+        "passage": "The reasoning about why the absence of a contract was not fatal.",
+        "look_for": "Follow the move from contract to a duty owed independently of it. That move is the reason tort could develop at all, and it is easy to miss because it now seems obvious."
       },
       {
-        "passage": "The findings of fact about what was known and what was found not to be foreseeable.",
-        "look_for": "Remoteness is applied to findings, and the findings were settled before the law was reached. Notice how much of the outcome the facts had already decided. That is a warning about arguing remoteness in an exam on facts you have not pinned down."
+        "passage": "Any dissent, and what it warns about.",
+        "look_for": "The dissent is not foolish. Ask what it feared would follow from a general principle — then read Caparo and notice who was proved partly right."
       }
     ],
     "questions": [
       {
-        "q": "State the remoteness test in one sentence, and say precisely what must be foreseeable and what need not be.",
-        "model": "The lesson gives the rule: damage is too remote unless it is of a kind that was reasonably foreseeable, and the precise manner of its occurrence and its extent need not be. Reading the judgment should let you do the thing the sentence alone will not — take a set of facts and say which element the argument is really about. Most disputes about remoteness are disputes about how widely or narrowly the kind of harm is described, and an answer that never names the kind it is working with has not engaged the test."
+        "q": "State the neighbour principle in one sentence and say what makes someone a neighbour.",
+        "model": "A good answer gives both halves. The principle is easy to half-remember as a duty to avoid harming others, which is too wide to be a legal test. The useful part is the limiting idea inside it — closeness and foreseeability of harm to this claimant — and an answer without a limiting idea has quoted a slogan."
       },
       {
-        "q": "This is not a Malaysian decision. What is its status here?",
-        "model": "Two things to establish rather than assume. First, the jurisdiction the appeal came from, which is on the front page of the report — a Privy Council decision on appeal from Malaya stands differently from one on appeal from elsewhere, and the difference is worth a sentence. Second, the reception provision: section 3 of the Civil Law Act 1956 applies English common law as at a cut-off date, 7 April 1956 for West Malaysia with earlier dates for Sabah and Sarawak, and this decision post-dates it. So the rule is not here by force of that section. It is applied because the Malaysian courts have taken it, which means the citable authority is theirs — find it, cite it, and use this case for the reasoning."
+        "q": "Read this alongside Caparo. What is Caparo reacting to?",
+        "model": "A good answer sees that Caparo's incremental method is a response to the risk of reasoning from one broad principle: a general test lets a court find a duty in a situation nobody has considered, with no comparison case to discipline it. Reading them in this order shows the argument as a development rather than two unrelated tests."
       },
       {
-        "q": "Why does remoteness come last in the negligence sequence, and what has an answer already established by the time it reaches this case?",
-        "model": "The lesson says the order is not stylistic: each step assumes the one before, and an answer arguing remoteness before establishing breach is arguing about nothing. By the time remoteness is live you have a duty, a fall below the standard, and factual causation. Remoteness does not ask whether the defendant caused the harm — that is settled by then. It cuts down what is recoverable for harm the defendant did cause, which is why the honest place for this case in an answer is at the end and never as a substitute for the earlier work."
+        "q": "This is a 1932 Scottish appeal to the House of Lords. What is its standing in Malaysia?",
+        "model": "A good answer places it under section 3 of the Civil Law Act 1956: it predates the reception dates, so it comes in as part of the received common law so far as local circumstances permit. That is a stronger position than the post-reception English cases in this module, and saying why is the point."
       }
     ],
-    "trap": "Citing this case for the proposition that harm must be foreseeable, without saying which foreseeability is in issue. And do not fold it into causation: the lesson keeps the intervening-act question in causation and the kind-of-harm question in remoteness, and an answer that runs them together is answering neither.",
-    "source": "The Wagon Mound (No 1) [1961] AC 388, the citation as l-negligence states it. The remoteness rule block in that lesson names The Wagon Mound as its source, and the full report reference appears in the lesson's own quiz source for the same rule.",
-    "verify": "Confirm the report reference yourself before relying on it: this citation appears within l-negligence but not in that lesson's top-level source list, so it is one to check in a report you can hold. Then check whether a Malaysian appellate court has stated the remoteness rule, and cite that decision alongside this one.",
-    "lastVerified": "2026-09-10",
-    "order": 8
+    "trap": "Treating the neighbour principle as the modern test for duty. It is where the modern law starts, and the module's later cases are the corrections; an answer that stops here is sixty years short.",
+    "source": "Citation taken from the glossary entry for the term \"neighbour\" in this corpus, which states it in full.",
+    "verify": "Check the citation on BAILII. Confirm how the Malaysian courts state the current duty test before relying on the neighbour principle as the operative rule.",
+    "lastVerified": "2026-09-11"
   },
   {
-    "id": "x-selva-kumar",
-    "moduleId": "m06-contract",
-    "lessonId": "l-remedies",
-    "case": "Selva Kumar a/l Murugiah v Thiagarajah a/l Retnasamy",
-    "citation": "[1995] 1 MLJ 817 (FC)",
-    "court": "Federal Court",
-    "year": 1995,
-    "find": "Older than CommonLII's Malaysian coverage, which starts at 2003, so the MLJ citation is the route: a law library, or the Malaysian Bar's document library. Read this one in the report rather than in anybody's summary of it, including a later court's. A decision described by the court that departed from it is described for the purpose of departing from it.",
-    "why": "This is where the section 75 story starts, and it is the case a reader is most likely to know entirely at second hand. The lesson is blunt about what that costs: an answer giving only this case is out of date, and an answer giving only Cubic Electronics has not shown it understands what changed. You cannot say what changed unless you have read the thing that was changed. Read it for the position it laid down, and read it a second time as an exhibit in how a statutory provision can be re-read without a word of it being amended.",
+    "id": "x-wednesbury",
+    "moduleId": "m12-administrative",
+    "lessonId": "l-judicial-review",
+    "case": "Associated Provincial Picture Houses Ltd v Wednesbury Corporation",
+    "citation": "[1948] 1 KB 223",
+    "court": "Court of Appeal",
+    "year": 1948,
+    "order": 1,
+    "find": "On BAILII (bailii.org) under England and Wales Court of Appeal decisions, free. The King's Bench citation will find it in a library. It is short, and the passage everyone cites is shorter still — read the surrounding reasoning as well as the famous sentence.",
+    "why": "The source of a word your lesson uses as a ground of review. Read it to find out how narrow the original formulation is, and how much of what people call Wednesbury unreasonableness the case itself never said.",
     "read": [
       {
-        "passage": "The court's reading of section 75 of the Contracts Act 1950, and what it held a plaintiff had to show.",
-        "look_for": "The lesson states the outcome in a line — actual loss proved, with the named sum as a ceiling. Find the route the court takes to it, and separate the part that is a reading of the words of the section from the part that is a gloss added to them. That separation is what a later court works on."
+        "passage": "The passage describing a decision so unreasonable that no reasonable authority could have made it.",
+        "look_for": "Note how high that sets the bar. Then ask how often a real decision could clear it, and what that implies about how often this ground succeeds."
       },
       {
-        "passage": "Any qualification the court attaches to the requirement of proving loss.",
-        "look_for": "The requirement is usually recited flat, as though it admitted of nothing. Read the judgment and find out whether it allows for the case where loss is real but cannot be measured. Whatever you find there is where most of the later argument lives."
+        "passage": "The court's list of the other things that can vitiate a decision.",
+        "look_for": "The famous ground is one item among several. The others — irrelevant considerations, improper purpose — are separately arguable, and are the ones that usually do the work."
       },
       {
-        "passage": "What the court makes of the named sum itself.",
-        "look_for": "Open the Contracts Act 1950 at section 75 and read it beside the judgment. The lesson's rule is that the figure is a ceiling and not a bill. Ask which words of the section carry that, and whether the court is reading them or supplementing them."
+        "passage": "Anything about the court's own role relative to the authority's.",
+        "look_for": "This is the constitutional point underneath the test: why a court reviews the decision-making rather than the decision. It is the same distinction your lesson draws."
       }
     ],
     "questions": [
       {
-        "q": "State what this decision required of a plaintiff, and state what replaced it.",
-        "model": "Both halves, because the movement is the point. The lesson gives the sequence: the section enacted in 1950 — reasonable compensation not exceeding the sum named; this decision in 1995 — actual loss must be proved, with the named sum as a ceiling; Cubic Electronics in 2019 — the approach reformulated around a legitimate interest and whether the sum is out of all proportion to it. An answer with one half is either out of date or shows no grasp of what moved, and the lesson says so in terms."
+        "q": "State the unreasonableness ground as this case actually puts it, and say how demanding it is.",
+        "model": "A good answer reproduces the structure rather than the phrase — a decision no reasonable authority could have reached — and then says plainly that the bar is very high and the ground rarely succeeds alone. An answer that treats it as meaning simply unreasonable has adopted the loose usage the case does not support."
       },
       {
-        "q": "Section 75 has never been amended. How, then, has the law moved?",
-        "model": "The statute governs throughout. What changed is the construction the courts put on it, and naming that distinction is the answer. It follows that the section is where you start every time, and that a case is authority for how to read it rather than a substitute for it. It also follows that a decision of this kind stays the law until a court with power to depart from it does so — which is what makes the date of every authority in this area part of the answer."
+        "q": "Why is it a mistake to run this ground on its own?",
+        "model": "A good answer notes that the same judgment names other, more tractable failings — irrelevant considerations, improper purpose — and that most successful challenges run those. Naming the ground that fits the facts, rather than the ground with the famous name, is the practical skill."
       },
       {
-        "q": "This decision was revisited in 2019. Is there any use left in it?",
-        "model": "Yes, and an answer that discards it is as weak as one that stops at it. It is the position the current test displaced, so it is how you demonstrate that you know the position changed and in which direction. It also fixes the meaning of the current test by showing what that test was reacting against. State the current law first, then use this case to show the movement — and check for anything decided since, because the lesson warns that this is the paragraph in the contract module most likely to go stale."
+        "q": "Your glossary says this was received in Malaysia. What should you check before relying on that?",
+        "model": "A good answer treats reception as a claim to verify rather than a licence: check the Malaysian authorities on the grounds of review, and whether an apex court here has restated or extended them. The glossary is a study aid, not authority, and this course's own rule is to go to the source."
       }
     ],
-    "trap": "Taking this case's holding from the later judgment that departed from it. Read the earlier decision in its own report; a restatement made in the course of leaving a rule behind is an argument, not a case. And never cite this as the current position on section 75.",
-    "source": "Selva Kumar a/l Murugiah v Thiagarajah a/l Retnasamy [1995] 1 MLJ 817 (FC), cited in l-remedies as the source of the pre-2019 Malaysian position on section 75 of the Contracts Act 1950.",
-    "verify": "Confirm the citation in a report you can hold, and read section 75 in a current copy of the Contracts Act 1950 beside it. Then check whether any Federal Court decision after Cubic Electronics Sdn Bhd v Mars Telecommunications Sdn Bhd [2019] 6 MLJ 15 (FC), also reported at [2019] 2 CLJ 723, has qualified the position — the lesson flags this as the point in the module most likely to change.",
-    "lastVerified": "2026-09-10",
-    "order": 4
+    "trap": "Using the word as a synonym for wrong. It names a specific and very demanding ground, and using it loosely in a submission signals that you have not read the case it comes from.",
+    "source": "Citation taken from the glossary entry for \"Wednesbury unreasonableness\" in this corpus, which states it in full and notes it as received in Malaysia.",
+    "verify": "Check the citation on BAILII, and check how the Malaysian courts currently state the grounds of judicial review before treating this formulation as the local test.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "x-qsr-brands",
+    "moduleId": "m12-administrative",
+    "lessonId": "l-judicial-review",
+    "case": "QSR Brands Bhd v Suruhanjaya Sekuriti",
+    "citation": "[2006] 3 MLJ 164 (CA)",
+    "court": "Court of Appeal",
+    "year": 2006,
+    "order": 2,
+    "find": "Malaysian Court of Appeal decisions of this period are on CommonLII (commonlii.org, Malaysia) and through the government Court Case Judgment Search at malaysia.gov.my. The MLJ citation will find it in a law library.",
+    "why": "A Malaysian appellate court on the Order 53 procedure your lesson and the statute tier both rest on. Read it with Order 53 open — the case is about how the rule works, and the rule is short enough to have in front of you.",
+    "read": [
+      {
+        "passage": "The court's treatment of the leave requirement and what it is for.",
+        "look_for": "Ask what leave is filtering out. A threshold exists to stop something; naming what it stops tells you how hard it should be to cross."
+      },
+      {
+        "passage": "Anything about who may apply, and the interest they must show.",
+        "look_for": "Standing is where many applications die. Note precisely what has to be shown and by whom."
+      },
+      {
+        "passage": "Passages dealing with the relationship between the procedure and the substantive grounds.",
+        "look_for": "Procedure and grounds are separate questions that get argued together. Watch where the court keeps them apart."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does the leave stage decide, and what does it not decide?",
+        "model": "A good answer distinguishes the threshold from the merits: leave asks whether there is an arguable case fit for further consideration, not whether the applicant should win. Collapsing the two is the commonest error, and it produces submissions that argue the whole case at the wrong hearing."
+      },
+      {
+        "q": "Read this with Order 53 in the statute tier. What does the case add to the rule?",
+        "model": "A good answer identifies something the rule's words leave open and the court settles — how a requirement is applied, or what an expression covers. That is what case law adds to a procedural rule, and an answer that merely restates the rule has not used the case."
+      }
+    ],
+    "trap": "Treating judicial review as a single question. Leave, standing, grounds and remedy are four separate hurdles, and an application can be perfectly arguable on the grounds and still fail at the first.",
+    "source": "Citation taken from the glossary entry for \"Order 53\" in this corpus, which states it in full.",
+    "verify": "Check the citation and the court against the report, and read the current Order 53 alongside it — the Rules of Court have been amended and the procedure may not be as this case found it.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "x-sundralingam",
+    "moduleId": "m01-malaysian-legal-system",
+    "lessonId": "l-sources",
+    "case": "Sundralingam v Ramanathan Chettiar",
+    "citation": "[1967] 2 MLJ 211",
+    "court": "High Court",
+    "year": 1967,
+    "order": 1,
+    "find": "A Malayan Law Journal citation from 1967; law libraries carrying the MLJ series will have it, and many Malaysian university libraries admit visitors. CommonLII's Malaysian coverage for this period is thin, so the printed report is likely the reliable route.",
+    "why": "A case about which earlier decisions bind a Malaysian court, from the period when that question was genuinely open. Read it for how a court reasons about its own place in a hierarchy — which is the skill the sources lesson is building.",
+    "read": [
+      {
+        "passage": "The court's account of which decisions it considers itself bound by, and why.",
+        "look_for": "Follow the reasoning about authority rather than the outcome. The question is where binding force comes from, and courts rarely have to say so explicitly."
+      },
+      {
+        "passage": "Anything about decisions of courts that no longer stand above this one.",
+        "look_for": "Hierarchies change. Ask what happens to the authority of a decision when the court that made it is no longer superior — the answer is not obvious and it is the reason this case is cited."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What makes a decision binding on a Malaysian court — the court that made it, or the court's position when it made it?",
+        "model": "A good answer sees that the question has two possible answers and that the case is where the difference matters. It should say which the court adopted and what follows for decisions made before a change in the hierarchy. An answer that assumes the modern position without noticing it was ever open has missed why the case is read."
+      },
+      {
+        "q": "Why does a problem about precedent in Malaysia need history that an English one does not?",
+        "model": "A good answer connects to the corpus: the court structure changed, appeals to an external final court were abolished, and the authority of decisions from that era has to be worked out rather than assumed. The relevant statute is the Courts of Judicature Act 1964, which the problem this case comes from also cites."
+      }
+    ],
+    "trap": "Reading it as settling the modern position. It is a decision from a period when the hierarchy was different, and its value is the reasoning about authority rather than a rule you can transplant.",
+    "source": "Citation taken from the source field and a rubric authority of problem pm-precedent-01 in this corpus, which states it in full.",
+    "verify": "Check the citation against the report. The court structure has changed since 1967 — check the current position on the authority of pre-change decisions before relying on this.",
+    "lastVerified": "2026-09-11"
   }
 ]

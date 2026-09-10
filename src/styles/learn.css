@@ -1045,3 +1045,7 @@
   outline-offset: var(--focus-offset);
 }
 .lsec-h:focus:not(:focus-visible) { outline: none; }
+
+/* SENSITISING PROBE — removed immediately after the run */
+.lsec-body { max-height: 300px; overflow-y: hidden; }
+.stepper { max-width: 90px; overflow-x: hidden; }

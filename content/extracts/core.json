@@ -243,7 +243,7 @@
     "source": "Foo Fio Na v Dr Soo Fook Mun [2007] 1 MLJ 593 (FC); Rogers v Whitaker (1992) 175 CLR 479 (High Court of Australia); Bolam v Friern Hospital Management Committee [1957] 1 WLR 582. All three cited in l-negligence.",
     "verify": "Check all three citations and confirm from a current text how the standard stands today, including any later Federal Court treatment.",
     "lastVerified": "2026-09-09",
-    "order": 5
+    "order": 6
   },
   {
     "id": "x-rama-chandran",
@@ -274,7 +274,8 @@
     "trap": "The lesson also cites Semenyih Jaya. Do not treat this area as frozen in 1997.",
     "source": "R Rama Chandran v The Industrial Court of Malaysia [1997] 1 MLJ 145 (FC) and Semenyih Jaya Sdn Bhd v Pentadbir Tanah Daerah Hulu Langat [2017] 3 MLJ 561 (FC), both cited in l-judicial-review.",
     "verify": "Check both citations and read how a current administrative law text describes the relationship between them.",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-09-09",
+    "order": 3
   },
   {
     "id": "x-pepper-v-hart",

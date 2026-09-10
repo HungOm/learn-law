@@ -306,14 +306,46 @@ function measure({ tapMin, eps }) {
       }
     : null;
 
+  // Below this, a vertical overflow is a rounding artefact or an animation frame
+  // rather than a reader losing something. A lost line of body text is ~32px.
+  const Y_MIN_LOSS = 24;
+  // And the box has to BE a box. The first Y run reported 27 findings, every
+  // one of them `.focusview-surface (139px of content in 0px)` — a reader that
+  // is closed, collapsed to zero height with its contents still mounted. That
+  // is a hidden region, not a severed one, and it is the standard idiom for
+  // both. The failure this catches is content cut off by a container that has a
+  // size and is too small for it; a container with no size is not showing
+  // anything and is not claiming to.
+  const Y_MIN_BOX = 24;
   const clipped = [];
   const truncated = [];
   for (const el of document.querySelectorAll('*')) {
     if (!shown(el)) continue;
     const cs = getComputedStyle(el);
-    const hidesX = cs.overflowX === 'hidden' || cs.overflowX === 'clip';
-    if (!hidesX) continue;                      // scrollable or visible: reachable
-    if (el.scrollWidth <= el.clientWidth + 2) continue;
+    // Both axes. This looked at `overflowX` only for most of its life, and a
+    // vertical clip then cost a reader roughly 400px of a lesson with all
+    // fourteen gates green over it: `.focusview-body` was `overflow-y: auto`
+    // inside a `position: fixed` reader, but a flex item defaults to
+    // `min-height: auto` and will not shrink below its content, so the scroll
+    // never engaged and the pane simply ran past the bottom of the screen. The
+    // check was not wrong about anything it looked at. It could only ever fire
+    // on one axis, and passed confidently on the other.
+    //
+    // The argument against adding Y is that a vertical clip is usually a scroll
+    // container doing its job. It is not: `overflow-y: hidden` with taller
+    // content is unreachable however much the document scrolls, because the box
+    // does not grow. What genuinely produces noise on this axis is animation —
+    // framer-motion collapses a region by animating height with `overflow:
+    // hidden`, so a frame caught mid-collapse is clipped and about to stop
+    // being. Hence Y_MIN_LOSS, which is set past anything a rounding artefact
+    // or a nearly-finished animation produces and well under a lost paragraph.
+    const axis = (cs.overflowX === 'hidden' || cs.overflowX === 'clip')
+        && el.scrollWidth > el.clientWidth + 2 ? 'x'
+      : (cs.overflowY === 'hidden' || cs.overflowY === 'clip')
+        && el.clientHeight >= Y_MIN_BOX
+        && el.scrollHeight > el.clientHeight + Y_MIN_LOSS ? 'y'
+      : null;
+    if (!axis) continue;
     // Clipping is only a defect when a reader LOSES something to it. A
     // full-bleed decorative layer overflows its box on purpose — that is what
     // makes it full-bleed — and the first version of this check reported the
@@ -329,8 +361,17 @@ function measure({ tapMin, eps }) {
     if (!el.textContent.trim() && !el.querySelector(FOCUSABLE)) continue;
     // A deliberate ellipsis is a different claim from content simply severed,
     // so it is reported separately rather than folded in as the same failure.
-    (cs.textOverflow === 'ellipsis' ? truncated : clipped)
-      .push(`${label(el)} (${el.scrollWidth}px of content in ${el.clientWidth}px)`);
+    // A deliberate cut announces itself: `text-overflow: ellipsis` on one axis,
+    // `-webkit-line-clamp` on the other. Both say "there is more, and I know" —
+    // a different claim from content simply severed, so they are reported
+    // separately rather than folded in as the same failure.
+    const deliberate = axis === 'x'
+      ? cs.textOverflow === 'ellipsis'
+      : cs.webkitLineClamp && cs.webkitLineClamp !== 'none';
+    const have = axis === 'x' ? el.scrollWidth : el.scrollHeight;
+    const room = axis === 'x' ? el.clientWidth : el.clientHeight;
+    (deliberate ? truncated : clipped)
+      .push(`${label(el)} (${have}px of content in ${room}px, ${axis === 'x' ? 'across' : 'down'})`);
   }
 
   // Focusable, per DESIGN.md 3: a bounding-box sweep OVERcounts (it flags

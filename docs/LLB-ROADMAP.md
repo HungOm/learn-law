@@ -238,8 +238,14 @@ shipping the lessons without them recreated the exact defect
 who can read and memorise but never find out whether they can apply anything.
 Every one of the 24 modules now has practice.
 
-**Stage 2 — closed.** The case tier went 9 → **26**: every case the corpus cites
-in a lesson `source` field now has a guided reading. Citations were pulled
+**Stage 2 — the citation gap is closed; the stage is not.** The case tier went
+9 → **26** (now 29): every case the corpus cites in a lesson `source` field has
+a guided reading, and that gap is provably zero. **That is a smaller milestone
+than Stage 2 as scoped above**, which is ~150 judgments for ~250 notional hours.
+The 26 were the ones already named by a lesson; the remaining ~120 are not cited
+anywhere yet, so reaching them needs case *selection*, not gap-closing — a
+different and larger job. This entry previously read "closed", which was an
+over-claim against this document's own target. Citations were pulled
 programmatically each time and the remaining gap re-derived by set intersection
 before each batch, never tracked by hand — the one time it was tracked by eye,
 seven present cases were reported as missing.

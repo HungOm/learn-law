@@ -167,7 +167,8 @@
     "trap": "Taking the constitutional passages as free-standing statements of principle. They are reasons for a decision on a specific question, and their weight depends on that connection.",
     "source": "Citation taken from the source field of the judicial review lesson in this corpus.",
     "verify": "Check the citation and the court against the report. This is developing constitutional ground — check what later decisions have said about it before relying on any statement of its effect.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 4
   },
   {
     "id": "x-balachandran",

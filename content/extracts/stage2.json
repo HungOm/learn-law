@@ -41,7 +41,7 @@
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation against the report itself before relying on it, and check whether the Malaysian courts have adopted this reasoning rather than assuming they have.",
     "lastVerified": "2026-09-09",
-    "order": 1
+    "order": 2
   },
   {
     "id": "x-ampang-jaya-phoa",
@@ -81,7 +81,7 @@
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation and the court against the report. Read the whole judgment rather than a headnote — the headnote will give you the holding and not the method.",
     "lastVerified": "2026-09-09",
-    "order": 2
+    "order": 3
   },
   {
     "id": "x-bolam-friern",
@@ -121,7 +121,7 @@
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation against the report, and check the current Malaysian position on the professional standard before relying on this in an answer.",
     "lastVerified": "2026-09-09",
-    "order": 3
+    "order": 4
   },
   {
     "id": "x-rogers-whitaker",
@@ -161,7 +161,7 @@
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation on AustLII, and check whether and how the Malaysian courts have taken up this reasoning before using it in an answer.",
     "lastVerified": "2026-09-09",
-    "order": 4
+    "order": 5
   },
   {
     "id": "x-zulhasnimar-kuppu",
@@ -205,7 +205,7 @@
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation and the court against the report, and check whether anything has since qualified it before relying on it.",
     "lastVerified": "2026-09-09",
-    "order": 6
+    "order": 7
   },
   {
     "id": "x-lok-kok-beng",
@@ -245,6 +245,6 @@
     "source": "Citation taken from the source field of the negligence lesson in content/lessons.",
     "verify": "Check the citation and the court against the report, and check the current position on pure economic loss in Malaysia rather than relying on this summary.",
     "lastVerified": "2026-09-09",
-    "order": 7
+    "order": 8
   }
 ]
