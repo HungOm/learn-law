@@ -176,8 +176,18 @@ console.log(`${ROUTES.length} routes: ${BASE_ROUTES.length} fixed, ` +
   `${FIGURE_ROUTES.length} derived to cover ${FIGURE_KINDS.size} figure kinds ` +
   `(${[...FIGURE_KINDS.keys()].sort().join(', ')})\n`);
 
-// 4179, one past smoke's 4178, so the two can run at the same time.
-const port = 4179;
+// A port of our own, per process.
+//
+// This used to be a fixed 4179 — one past smoke's 4178 — which is right about
+// the sibling tools and says nothing about a second SESSION running the chain.
+// With `--strictPort` vite exits rather than falling back, so when another
+// session already held the port our preview never started; the readiness probe
+// then succeeded against THEIR server, and the run died with
+// ERR_CONNECTION_REFUSED the moment they finished. The `serverDead` guard below
+// cannot catch that case, because the port answers before our own spawn fails.
+// Deriving the port from the pid removes the collision instead of detecting it,
+// and matches diagram-cases.mjs. The base stays above smoke's range.
+const port = 4380 + (process.pid % 40);
 const server = spawn('npx', ['vite', 'preview', '--port', String(port), '--strictPort'],
   { stdio: 'ignore', detached: false });
 
@@ -414,7 +424,16 @@ function measure({ tapMin, eps }) {
  * this measures a configuration the app actually ships.
  */
 async function unlockEverything(page) {
-  await page.goto(base, { waitUntil: 'load' });
+  try {
+    await page.goto(base, { waitUntil: 'load' });
+  } catch (err) {
+    // Without this the raw goto error escapes as a stack trace and the useful
+    // sentence — already written, twenty lines up — never prints.
+    console.error(`responsive: FAILED — could not reach the preview on port ${port}.`);
+    console.error(`  ${String(err).split('\n')[0]}`);
+    console.error('  Nothing was measured. This is a harness failure, not a layout failure.');
+    process.exit(1);
+  }
   await page.evaluate(() => new Promise((resolve, reject) => {
     const open = indexedDB.open('lawstudy', 1);
     open.onerror = () => reject(open.error);

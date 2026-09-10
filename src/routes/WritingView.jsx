@@ -4,6 +4,7 @@ import { useStudy } from '../state/StudyContext.jsx';
 import * as writing from '../lib/writing.js';
 import { Notice } from '../components/Bits.jsx';
 import { plural } from '../lib/format.js';
+import PrintSheet from '../components/PrintSheet.jsx';
 import NotFound from './NotFound.jsx';
 
 /**
@@ -109,6 +110,24 @@ export default function WritingView() {
         ))}
       </div>
 
+      {drafted && (
+        <PrintSheet
+          kind="writing"
+          refId={w.id}
+          title={w.title}
+          moduleTitle={cat.modules.find(m => m.id === w.moduleId)?.title || w.moduleId}
+          moduleId={w.moduleId}
+          lessonTitle={lesson?.title}
+          level={w.level}
+          minutes={w.minutes}
+          brief={w.brief}
+          text={draft?.text || ''}
+          rubric={w.rubric}
+          selfMark={draft?.band}
+          words={n}
+        />
+      )}
+
       <h2>Your draft</h2>
       <p className="small">
         This stays on your device. Nothing is uploaded — there is nowhere to upload it to.
@@ -148,6 +167,16 @@ export default function WritingView() {
               </div>
             ))}
           </div>
+
+          {/* Marking your own writing is the weakest part of studying alone —
+              the gap between what you meant and what you wrote is invisible
+              from the inside. This puts the draft on paper with the brief and
+              an empty rubric, so somebody else can read it. */}
+          <p className="btn-row">
+            <button type="button" className="btn" onClick={() => window.print()}>
+              Print or save as PDF — for someone else to mark
+            </button>
+          </p>
 
           <h2>Mark your own draft</h2>
           <p className="small">

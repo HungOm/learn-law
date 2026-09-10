@@ -1,13 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Warta: the scales struck on a seal. One geometry, used at three sizes —
-       here, in the rail wordmark, and on the level-up crest. -->
+  <!-- ST Chambers: the registry chop. One geometry, three cuts — this is the
+       MINIMAL cut (border and initials only), because a favicon renders at
+       16-32px and the word "CHAMBERS" is 10 units on a 100-unit box, so it
+       would land at 3.2px. The full cut, with the word, is on the level-up
+       crest in Overlays.jsx at 112px; the medium cut is in the rail wordmark.
+       See DESIGN.md — an SVG font-size in viewBox units is a ratio, not a size.
+
+       Georgia rather than Spectral here on purpose: a favicon is parsed
+       outside the app, where a webfont has not loaded and often cannot. Georgia
+       is present on effectively every platform and holds its serif at 16px.
+       Inside the app the same mark is set in Spectral. -->
   <rect width="100" height="100" rx="16" fill="#1B2A3A"/>
-  <circle cx="50" cy="50" r="40" fill="none" stroke="#ECC06B" stroke-width="3" opacity="0.55"/>
-  <g stroke="#ECC06B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <line x1="50" y1="26" x2="50" y2="76"/>
-    <line x1="28" y1="38" x2="72" y2="38"/>
-    <path d="M28 38 L20 60 h16 Z"/>
-    <path d="M72 38 L64 60 h16 Z"/>
-    <line x1="38" y1="76" x2="62" y2="76"/>
-  </g>
+  <rect x="17" y="21" width="66" height="58" rx="2" fill="none" stroke="#ECC06B" stroke-width="6"/>
+  <text x="50" y="63" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="40" font-weight="700" letter-spacing="-1.5" fill="#ECC06B">ST</text>
 </svg>

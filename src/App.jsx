@@ -47,7 +47,7 @@ function Page({ children }) {
  * lesson page names a lesson, and the lesson knows its module. Everywhere else
  * — home, review, the glossary — the reader is not in a module at all, and the
  * honest answer is null, which the field renders as the spread across all
- * sixteen rather than by picking one arbitrarily.
+ * twenty-four rather than by picking one arbitrarily.
  */
 function focusModule(pathname, cat) {
   const mod = pathname.match(/^\/module\/([^/]+)/);

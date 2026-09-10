@@ -29,16 +29,32 @@ machinery around it.
 
 ### The mark
 
-The house mark is a pair of scales inside a ring. **One geometry, three sizes** —
-identical path data on a 100-unit viewBox in all three places:
+The house mark is **ST Chambers' registry chop** — the impression a court stamp
+leaves on a filed document. ST for Shen Ting; *chambering* for the year a
+Malaysian law graduate spends reading in a real set before being called to the
+Bar.
 
-- `public/favicon.svg` — the mark alone, on an ink ground
-- `.wordmark` in `src/components/Rail.jsx` — mark plus name
-- `.levelup-crest` in `src/components/Overlays.jsx` — mark plus a second ring
+It replaced a pair of scales in a ring, and it changed the rule that went with
+it. The scales were **one geometry at three sizes**. The chop **contains its own
+name**, and a word has a legibility floor a drawing does not — so it is
+**three cuts, chosen by size**:
 
-The scales appear without the name **only** as an app icon, where there is no
-room for words. Everywhere else the mark and the name are set together. If the
-drawing changes, it changes in all three files.
+| cut | from | carries | where |
+|---|---|---|---|
+| full | 110px | border, initials, rule, `CHAMBERS` | share cards, print |
+| medium | 32px | border, initials, rule | `.wordmark` in `Rail.jsx`, `.levelup-crest` |
+| minimal | below 32px | border, initials | `public/favicon.svg` and the four PNG icons |
+
+**110px is arithmetic, not taste.** The word is 10 units on a 100-unit box, so it
+renders at a tenth of the mark's width: `11px × (100 ÷ 10) = 110px`. At a 32px
+favicon that word lands at 3.2px. This is §3's SVG ratio trap appearing in the
+identity itself, and it is the whole reason there are three cuts.
+
+The mark is **ink only**. Gold means earned (§2.2) and a logo has earned nothing
+— the gold on the level-up crest is legitimate because a rank is earned, and the
+gold in the favicon is the app-icon ground the palette drift check pins.
+
+If the drawing changes, it changes in all three cuts.
 
 ---
 
@@ -220,7 +236,7 @@ signal. Same shape as the `CAUTION` label.
 
 ### 2.9 Module identity, and the limit of colour
 
-Sixteen modules, one colour each: orientation ("I am in Property, not
+Twenty-four modules, one colour each: orientation ("I am in Property, not
 Contract") and a retrieval cue, which is a real effect — consistent context at
 encoding and retrieval aids recall.
 
@@ -228,7 +244,7 @@ encoding and retrieval aids recall.
 
 | scheme | worst pair, under CVD |
 |---|---|
-| 16 hues evenly round the wheel | ΔE **0.002** (deuteranopia) |
+| 16 hues evenly round the wheel | ΔE **0.002** (deuteranopia) — and the set is 24 now, which is worse |
 | 4 bands × 4 lightness steps | ΔE 0.021 |
 | the best 4 hues obtainable, searched | ΔE 0.067 |
 
@@ -603,6 +619,52 @@ behaviour for one developer and the wrong one while several sessions each need
 a dev server. It is deliberately not set; if this repo ever goes back to a
 single worker, set it.
 
+### The dev server does not serve your source at `/`
+
+**Open `http://localhost:5173/app/`, not `/`.** Measured on a running dev
+server: `/` returns `src="./assets/index-CPrdMOTH.js"`, `/app/` returns
+`src="/src/main.jsx"`.
+
+The reason is deliberate and is in `vite.config.js`'s own comment. GitHub Pages
+publishes this branch's root, so the root must hold the **built** site —
+`index.html` plus `assets/` are committed build artifacts. The build entry
+therefore moved to `app/index.html` (`rollupOptions.input`), but Vite's **root
+deliberately stayed at the repository root**, because moving it broke
+`tools/diagram-cases.mjs`, which fetches `/tools/fixtures/…` from the dev
+server. Only the entry moved.
+
+The consequence is not in that comment: `npx vite` serves the repository root,
+so `/` is the committed bundle. **Every edit under `src/` is invisible at `/`
+until someone rebuilds and commits.** It cost one session an hour of chasing a
+figure width, because its calibration compared a fixture reading live source
+against an app page reading a stale bundle — two pages executing different code,
+which looks exactly like a layout bug.
+
+**And getting the path wrong does not fail — it silently serves the stale
+bundle.** Vite's history fallback answers *any* unmatched path with the root
+`index.html`, which here is the committed build artifact. Measured:
+
+| requested | status | serves |
+|---|---|---|
+| `/app/` | 200 | `/src/main.jsx` — live source |
+| `/aap/` (typo) | 200 | `/assets/index-*.js` — the bundle |
+| `/nonsense/deep/path` | 200 | the bundle |
+| `/typo-entry.html` | 200 | the bundle |
+
+So a typo in an entry path, the entry moving again — it moved once already —
+or anyone hand-typing `localhost:5173` produces a page that **boots perfectly,
+renders the whole app, and is last week's code.** No error, no blank screen, no
+404. The only symptom is numbers that are quietly about different source.
+
+This is why **a "did the app boot" check cannot detect it**: the fallback boots
+fine. Anything verifying it is looking at live source must assert on
+`document.scripts` — that `/src/main.jsx` was actually loaded — not on the app
+having mounted.
+
+`smoke` and `responsive` are unaffected: they build and serve `dist`. It is the
+person eyeballing the dev server who is misled, which makes this worse than a
+broken gate rather than better.
+
 **Both gates serve `dist`, so a dev-only defect is outside the measured set.**
 `smoke.mjs` and `responsive.mjs` each build and serve production output. That is
 right for what they check, and it means **the server a person actually reads the
@@ -711,6 +773,22 @@ Two rules follow, for anything that measures this app in a browser:
    is connected to**, so a hit count you cannot explain is a finding whether it
    is too low or too high. The control validates the walk, not the assertion.
 
+   **Changing a body size in this app changes the layout.** `--measure` is `68ch`,
+   and `ch` scales with the *element's* font-size — so `--type-body` is not only
+   a type token. Measured at a 780px viewport, raising it from 17px to 19px took
+   `68ch` from 578px to 646px, and the sheet track and every figure container
+   built on the measure moved with it, to the pixel. That is the measure doing
+   its job — 68ch is ~75 characters at any size — but the pixel consequences are
+   invisible from the token, and nothing warns you.
+
+   It surfaced as `check:diagram-cases` failing at 780px and passing at 360px,
+   which localises it exactly: below 68ch the viewport binds and the measure
+   never does. The first diagnosis blamed a stylesheet edited 27 seconds
+   earlier — right deduction, right conclusion (*a container width changed*),
+   wrong file, because a fresh mtime is a very persuasive coincidence. It was
+   settled by reverting one token and re-running, which is the only move that
+   ever settles these.
+
    **A validator more forgiving than its renderer is not a validator of the
    renderer.** `check-content.py` read a glossary term's cross-references as
    `t.get("see") or []`; `Glossary.jsx` read `t.see.length` unguarded. Two terms
@@ -721,6 +799,16 @@ Two rules follow, for anything that measures this app in a browser:
    between them was not. The gate now requires the key, and both renderers guard
    with `(t.see || [])`, because a rule stops bad data and a guard stops the
    crash whether or not the rule is still there.
+
+   **A guard whose expected value comes from the thing under test cannot detect
+   the thing it exists to detect.** When the diagram calibration's hardcoded
+   608px went stale, the obvious patch was to derive the expectation from the
+   container being measured — `expect = max(608, inner)`. It was rejected, and
+   correctly: that can only verify the SVG obeys its own stylesheet, so a
+   fixture container at 420px would still pass. The fix was to calibrate against
+   what a *real lesson* renders at each width, which is an independent standard.
+   This is the measurement trap one level up — not a check measuring the wrong
+   object, a check taking its standard *from* the object.
 
    A related shape, from the other end: **a check whose failure path has never
    run.** A guard added to `smoke.mjs` referenced a binding declared below it —

@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 /**
  * The curriculum as a path rather than a list.
  *
- * Sixteen modules in a row of rings, each ring filled by how much of that
+ * Twenty-four modules as a grid of rings, each ring filled by how much of that
  * module has been read. The value of it over the list below is that it answers
- * "where am I" in one look — a list of sixteen rows answers "what exists",
+ * "where am I" in one look — a list of twenty-four rows answers "what exists",
  * which is a different question and the one you only ask once.
  */
 export default function CurriculumMap({ modules, read, byModule }) {

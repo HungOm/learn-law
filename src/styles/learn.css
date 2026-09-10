@@ -954,3 +954,56 @@
   color: var(--signal-correct-text);
 }
 .unlock-title { display: block; font-size: var(--type-base); font-weight: var(--weight-semi); }
+
+/* ---- stepped reading, phone only -------------------------------------------
+   One section at a time below 781px. The continuous page above that width is
+   untouched: this exists because a long lesson on a small screen is a wall to
+   scroll, not because sections read better alone.
+
+   Nothing here marks a section done. Paging is navigation; `lessons.js` refuses
+   to infer attention from scrolling and this refuses to infer it from paging. */
+.stepper { margin: var(--space-6) 0 0; }
+.stepper--top { margin: 0 0 var(--space-5); }
+
+.stepper-where {
+  display: flex; align-items: center; gap: var(--space-3);
+  margin: 0; font-family: var(--font-sans); font-size: var(--type-sm);
+  color: var(--text-secondary);
+}
+.stepper-count { white-space: nowrap; }
+/* The track is not decoration: an empty bar and a full one differ only by it,
+   so it carries the information and needs the 3:1 non-text floor. */
+.stepper-bar {
+  flex: 1; height: var(--line-hairline); background: var(--border-strong);
+  border-radius: var(--radius-sm); overflow: hidden;
+}
+.stepper-bar > i { display: block; height: 100%; background: var(--text-secondary); }
+
+.stepper--foot { display: flex; gap: var(--space-3); }
+.stepper-btn {
+  flex: 1; min-height: var(--tap-min);
+  font-family: var(--font-sans); font-size: var(--type-base);
+  color: var(--text-primary); background: var(--surface-raised);
+  border: var(--line-hairline) solid var(--border-strong);
+  border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);
+}
+.stepper-btn:disabled { opacity: 0.45; }
+.stepper-btn--next { border-color: var(--border-active); }
+
+.stepper-mode { margin: var(--space-4) 0 0; text-align: center; }
+.stepper-mode-btn {
+  min-height: var(--tap-min);
+  font-family: var(--font-sans); font-size: var(--type-sm);
+  color: var(--text-secondary); background: none;
+  border: 0; text-decoration: underline; text-underline-offset: 0.2em;
+  padding: var(--space-2) var(--space-4);
+}
+
+/* The stepped heading is focused programmatically when a section changes, so it
+   needs a visible ring for the sighted keyboard reader — but not the persistent
+   one a mouse click would leave behind. */
+.lsec-h:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+.lsec-h:focus:not(:focus-visible) { outline: none; }

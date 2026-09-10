@@ -17,7 +17,10 @@
         "jur-05",
         "jur-06"
       ],
-      "prepares": [],
+      "prepares": [
+        "s1-jur-guided",
+        "s1-jur-open"
+      ],
       "sections": [
         {
           "id": "sec-l-what-makes-law-0",
@@ -179,7 +182,10 @@
         "int-05",
         "int-06"
       ],
-      "prepares": [],
+      "prepares": [
+        "s1-int-guided",
+        "s1-int-open"
+      ],
       "sections": [
         {
           "id": "sec-l-treaties-domestic-0",
@@ -354,7 +360,10 @@
         "eth-05",
         "eth-06"
       ],
-      "prepares": [],
+      "prepares": [
+        "s1-eth-guided",
+        "s1-eth-open"
+      ],
       "sections": [
         {
           "id": "sec-l-duty-to-court-0",

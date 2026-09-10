@@ -205,9 +205,48 @@
   --railnav-h: 3.5rem;
 }
 
+/* 780 here, while LessonView's stepped one-section reading mode switches at
+   1023. That gap is deliberate and should not be closed by making them share a
+   breakpoint token, however tempting the tidiness — they answer different
+   questions, and a shared token would assert they are one decision.
+      780  is "held close, in a hand, on a narrow measure" — a reading-size
+           question, and the reason 19px exists at all is that 17px made a
+           phone read SMALLER than a desktop.
+      1023 is "too narrow to lay out a lesson as a continuous column beside a
+           contents rail" — a layout-capacity question.
+   In the 781-1023 band a reader gets stepped reading at 18px, which is correct
+   rather than an oversight: 18px there is EQUAL to desktop, so the inversion
+   that justified 19px is simply absent, and a tablet at arm's length is not a
+   phone at reading distance.
+   If you do extend 19px past 780, know that --measure is 68ch, so you move the
+   measure and every figure container across that whole band — verify against
+   check:diagram-cases, which calibrates at every width <= 1024, by reverting
+   and restoring the token rather than by reasoning about it. */
 @media (max-width: 780px) {
   :root {
     --margin-num: 2.5rem;
-    --type-body:  1.0625rem;
+
+    /* 19px on a phone, against 18px on a desktop — deliberately the larger of
+       the two, and it used to be the smaller. 17px had no rationale recorded
+       anywhere and arrived in a commit about the phone nav bar, which reads
+       like it was fitted around a layout rather than decided as a reading
+       size. Mobile reading smaller than desktop is backwards for a readership
+       of children of 12+ and adults reading after a shift on a narrow measure:
+       the bigger type belongs where the harder reading happens.
+
+       The cost is measured, not assumed. 17px -> 19px shortens the line by 1.6
+       characters at 360px (35.1 -> 33.5) and 4.2 at 390px (39.3 -> 35.1), both
+       far below the comfortable 45-75 range either way — that is what a phone
+       does to a measure, and two pixels do not change which regime you are in.
+
+       KNOW THIS BEFORE YOU CHANGE IT: --measure is 68ch, and `ch` scales with
+       the element's font-size, so this token is also a LAYOUT token. At a 780px
+       viewport, 17px -> 19px takes 68ch from 578px to 646px and every figure
+       container built on the measure moves with it, to the pixel. That is the
+       measure doing its job — 68ch is ~75 characters at any size — and in this
+       band it is the better outcome: the figure fills the column and its
+       sideways scroll disappears. But nothing warns you, and it once looked
+       like a defect in a different session's stylesheet. */
+    --type-body:  1.1875rem;
   }
 }

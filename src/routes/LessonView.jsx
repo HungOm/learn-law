@@ -15,6 +15,68 @@ import NotFound from './NotFound.jsx';
 
 const slug = (s, i) => `s${i}-${String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}`;
 
+// Stepping covers every width below the one where the lesson gains its
+// contents rail. 780 was the phone band and left iPad portrait (820) and large
+// phones in landscape on the continuous wall — which is not "all mobile
+// screens". The rail arrives at 1024 in learn.css, and above it there is a
+// persistent way to see where you are, so the wall stops being a wall.
+//
+// THIS DELIBERATELY DISAGREES with the --type-body bump in tokens.css, which
+// stops at 780. The two look like they should match and answer different
+// questions:
+//
+//   - The type bump is about VIEWING DISTANCE. A phone at reading distance
+//     rendering smaller than a desktop is an inversion, and 19px fixes it.
+//     From 781 up the type is already EQUAL to desktop, so that inversion is
+//     absent, and a tablet at arm's length is not a phone held close.
+//   - Stepping is about WAYFINDING. Can the reader see where they are? That
+//     is answered by the contents rail, which arrives at 1024, and it is true
+//     at any type size.
+//
+// What this is NOT about, measured rather than assumed: line length. An
+// earlier version of this comment argued that enlarging type past 768 pushes
+// the measure away from the comfortable 45-75 band. That is false. `--measure`
+// is 68ch, so the column scales WITH the type — at 768 it grows 612px to 646px,
+// +5.5%, exactly the type increase — and characters per line stays at 59.6 at
+// both sizes. Where the measure binds, line length is invariant by
+// construction; where the viewport binds, a 1px step is below the granularity
+// of line breaking (a 164-character paragraph at 360px breaks to 5 lines at
+// both 18px and 19px, and only to 6 at 24px). Do not go looking for a
+// chars-per-line effect here; there is not one to find.
+//
+// So the 243px gap is a real distinction, not drift. If the two ever need to
+// move together, they should share a token rather than being matched by hand —
+// but they do not need to move together today.
+const NARROW = '(max-width: 1023px)';
+const STEP_PREF = 'lessonStepMode';
+
+/** True while the viewport is phone-width. Re-renders when that changes. */
+function useNarrow() {
+  const [narrow, setNarrow] = useState(
+    () => typeof matchMedia === 'function' && matchMedia(NARROW).matches);
+  useEffect(() => {
+    if (typeof matchMedia !== 'function') return undefined;
+    const mq = matchMedia(NARROW);
+    const on = () => setNarrow(mq.matches);
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, []);
+  return narrow;
+}
+
+// The reading mode is a per-device view preference, not progress, so it lives
+// in localStorage rather than in the IndexedDB `meta` store the rest of the
+// app's state uses. Two reasons: it must be readable synchronously or the page
+// flashes the wrong mode on every load, and it is the one piece of state here
+// that a reader would not mind losing. Everything that IS progress stays in
+// `meta`, where the export in Settings can reach it.
+const readStepPref = () => {
+  try { return localStorage.getItem(STEP_PREF) !== 'off'; } catch { return true; }
+};
+const writeStepPref = (on) => {
+  try { localStorage.setItem(STEP_PREF, on ? 'on' : 'off'); } catch { /* private mode */ }
+};
+
 export default function LessonView() {
   const { id } = useParams();
   const { cat, read, best, unlock, markLesson } = useStudy();
@@ -63,9 +125,42 @@ export default function LessonView() {
     return () => obs.disconnect();
   }, [ids]);
 
-  // One set per lesson: a term is linked the first time it appears and left
-  // alone after that. Rebuilt when the lesson changes.
-  const seen = useMemo(() => new Map(), [id]);
+  const narrow = useNarrow();
+  const [stepPref, setStepPref] = useState(readStepPref);
+  const [step, setStep] = useState(0);
+  // Stepping is a phone thing. Above 780 the continuous page stays exactly as
+  // it was — this mode exists because a long lesson on a small screen is a wall
+  // to scroll, not because sections are better read alone.
+  const stepping = narrow && stepPref;
+  useEffect(() => { setStep(0); }, [id]);
+
+  // Moving between sections replaces the whole reading surface, and a swap
+  // nobody is told about is a swap a screen-reader user has to go and discover.
+  // `scrollTo` serves the sighted reader and announces nothing; focus on the
+  // new heading does both jobs at once — it reads the heading, states the new
+  // position, and leaves the reader at the top of the new content rather than
+  // at the bottom of the old. WCAG 4.1.3.
+  const headRef = useRef(null);
+  const settled = useRef(false);
+  useEffect(() => {
+    if (!stepping) { settled.current = false; return; }
+    // Not on first paint. Programmatic focus is not a user-initiated
+    // navigation, and stealing it into the lesson body on arrival is its own
+    // defect — the reader has not asked to go anywhere yet.
+    if (!settled.current) { settled.current = true; return; }
+    headRef.current?.focus();
+  }, [step, stepping]);
+
+  // One map per lesson — or per SECTION while stepping.
+  //
+  // A term links on its first appearance and is left alone after. On a
+  // continuous page that is right: the reader has the earlier mark on screen to
+  // scroll back to. Stepping breaks that assumption, because the first
+  // appearance may be four sections back and unreachable without leaving the
+  // one being read. Worse, it would make the page order-dependent — jump
+  // straight to section 5 and its terms are marked, arrive via section 1 and
+  // they are not. Resetting per step makes each section self-contained.
+  const seen = useMemo(() => new Map(), [id, stepping ? step : 'all']);
 
   if (!meta) return <NotFound />;
 
@@ -160,12 +255,41 @@ export default function LessonView() {
               <p className="lsec-resume">
                 <strong>{p.done} of {p.total} sections done.</strong>{' '}
                 {plural(p.minutesLeft, 'minute')} left — next up,{' '}
-                <a href={`#${ids[sections.indexOf(p.next)]}`}>{p.next.h}</a>.
+                <a
+                  href={`#${ids[sections.indexOf(p.next)]}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const i = sections.indexOf(p.next);
+                    if (stepping) { setStep(i); window.scrollTo({ top: 0 }); return; }
+                    document.getElementById(ids[i])?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}
+                >{p.next.h}</a>.
               </p>
             );
           })()}
 
-          {sections.map((sec, n) => (
+          {stepping && (
+            <div className="stepper stepper--top">
+              <p className="stepper-where">
+                {/* The read time belongs here, not only on the Mark done
+                    button at the foot: a reader deciding whether to start a
+                    section needs the cost before they commit to it, which is
+                    the whole point of the annotation for someone studying
+                    after a shift. */}
+                <span className="stepper-count">
+                  Section {Math.min(step, sections.length - 1) + 1} of {sections.length}
+                  {' · '}
+                  {plural(sections[Math.min(step, sections.length - 1)]?.readMinutes || 1, 'min')}
+                </span>
+                <span className="stepper-bar" aria-hidden="true">
+                  <i style={{ width: `${((Math.min(step, sections.length - 1) + 1) / Math.max(1, sections.length)) * 100}%` }} />
+                </span>
+              </p>
+            </div>
+          )}
+
+          {(stepping ? [sections[Math.min(step, sections.length - 1)]] : sections).map((sec, i) => (
+            (n => (
             <motion.section
               className="lsec"
               id={ids[n]}
@@ -177,8 +301,19 @@ export default function LessonView() {
             >
               <div className="lsec-head">
                 <span className="lsec-num" aria-hidden="true">{n + 1}</span>
-                <h2 className="lsec-h">{sec.h}</h2>
+                <h2
+                  className="lsec-h"
+                  ref={stepping ? headRef : null}
+                  tabIndex={stepping ? -1 : undefined}
+                >{sec.h}</h2>
               </div>
+              {/* Every section carries a `keypoint` — enforced by
+                  check-content.py, 20-160 chars, forbidden from repeating the
+                  heading — and until now only index pages showed it. Stepped
+                  only: down a continuous column it would repeat under every
+                  heading and read as noise, but on a phone it is the line that
+                  tells a reader what they are about to learn. */}
+              {stepping && sec.keypoint && <p className="lede">{sec.keypoint}</p>}
               {(sec.body || []).map((b, k) => <Block key={k} b={b} seen={seen} />)}
               {/* Marking is explicit, never inferred from scrolling. `lessons.js`
                   refuses to guess at a reader's attention and this is the same
@@ -197,7 +332,43 @@ export default function LessonView() {
                 </button>
               </p>
             </motion.section>
+            ))(stepping ? Math.min(step, sections.length - 1) : i)
           ))}
+
+          {stepping && (
+            /* Navigation only. It never marks a section done — `lessons.js`
+               refuses to infer attention from scrolling and this refuses to
+               infer it from paging. If Next marked, every figure downstream
+               (the section counts, the resume point, the module percentages)
+               would quietly stop being a claim the reader made. */
+            <nav className="stepper stepper--foot" aria-label="Sections">
+              <button
+                type="button"
+                className="stepper-btn"
+                disabled={step <= 0}
+                onClick={() => { setStep(n => Math.max(0, n - 1)); window.scrollTo({ top: 0 }); }}
+              >← Previous</button>
+              <button
+                type="button"
+                className="stepper-btn stepper-btn--next"
+                disabled={step >= sections.length - 1}
+                onClick={() => { setStep(n => Math.min(sections.length - 1, n + 1)); window.scrollTo({ top: 0 }); }}
+              >Next section →</button>
+            </nav>
+          )}
+
+          {narrow && (
+            <p className="stepper-mode">
+              <button
+                type="button"
+                className="stepper-mode-btn"
+                aria-pressed={stepping}
+                onClick={() => { const on = !stepPref; setStepPref(on); writeStepPref(on); }}
+              >
+                {stepping ? 'Read straight through instead' : 'Read one section at a time'}
+              </button>
+            </p>
+          )}
 
           {l.quizCount > 0 && (
             <motion.div
@@ -334,9 +505,12 @@ export default function LessonView() {
           <ol className="toc-list">
             {sections.map((s, i) => (
               <li key={ids[i]}>
-                <a href={`#${ids[i]}`} className={i === here ? 'is-here' : ''}
+                <a href={`#${ids[i]}`} className={i === (stepping ? step : here) ? 'is-here' : ''}
                   onClick={(e) => {
                     e.preventDefault();
+                    // While stepping the section is not on the page to scroll
+                    // to, so the contents become a jump rather than an anchor.
+                    if (stepping) { setStep(i); window.scrollTo({ top: 0 }); return; }
                     document.getElementById(ids[i])?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }}>
                   {s.h}

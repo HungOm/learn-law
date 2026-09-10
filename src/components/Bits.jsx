@@ -59,7 +59,7 @@ export function ProgressRing({
 /**
  * WCAG 2.4.2, Page Titled. This is a single-page app, so <title> was written
  * once in index.html and never changed: every route announced itself as
- * "Malaysian law — self-study". A screen reader user hears the same words on
+ * the app name alone. A screen reader user hears the same words on
  * arriving at every page, and browser history, tab strips and bookmarks are
  * indistinguishable from one another.
  *
@@ -76,7 +76,7 @@ export function ProgressRing({
  * not care about transition timing, and it also catches an h1 that changes
  * within a route, such as a loading state resolving into content.
  */
-export function useDocumentTitle(suffix = 'Malaysian law') {
+export function useDocumentTitle(suffix = 'ST Chambers') {
   useEffect(() => {
     const main = document.getElementById('main');
     if (!main) return undefined;

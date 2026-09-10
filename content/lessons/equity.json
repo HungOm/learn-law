@@ -183,7 +183,10 @@
         "eq-result-01",
         "eq-constr-01"
       ],
-      "prepares": [],
+      "prepares": [
+        "s1-eq-guided",
+        "s1-eq-open"
+      ],
       "sections": [
         {
           "id": "sec-l-trusts-certainties-0",

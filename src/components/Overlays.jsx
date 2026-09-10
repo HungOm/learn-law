@@ -230,12 +230,15 @@ export function LevelUpOverlay() {
                   transition={{ duration: 1.1, ease: 'easeInOut', delay: 0.2 }}
                 />
                 <circle cx="50" cy="50" r="40" className="crest-ring2" />
+                {/* The MEDIUM cut, not the full one. This crest is 120px, which
+                    would clear the 11px floor for "CHAMBERS" (10 units renders at
+                    12px here) — but .levelup-num sets the rank number over the
+                    same square, and the word would compete with the one piece of
+                    information the overlay exists to deliver. Identity gives way
+                    to the number. */}
                 <g className="crest-mark">
-                  <line x1="50" y1="26" x2="50" y2="76" />
-                  <line x1="28" y1="38" x2="72" y2="38" />
-                  <path d="M28 38 L20 60 h16 Z" />
-                  <path d="M72 38 L64 60 h16 Z" />
-                  <line x1="38" y1="76" x2="62" y2="76" />
+                  <rect x="20" y="26" width="60" height="52" rx="2" />
+                  <line x1="33" y1="68" x2="67" y2="68" />
                 </g>
               </svg>
               <span className="levelup-num">{levelUp.level}</span>

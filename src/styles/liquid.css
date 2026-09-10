@@ -195,9 +195,11 @@
  * off the left; it lives entirely inside the block's left padding, which is
  * wider than the band can ever grow, so no text can reach it at any viewport.
  * The swell is a large blob at --liquid-alpha-soft that text DOES cross, and
- * 12% is not a taste decision: measured across all sixteen modules in both
- * themes, --text-primary over tint + 12% ink bottoms out at 9.4:1, past the
- * AAA 7:1 floor. The same measurement puts --text-secondary at 4.6:1, under
+ * 12% is not a taste decision: re-measured across all TWENTY-FOUR modules in
+ * both themes after the palette resize (the first figure covered sixteen, and
+ * resizing the set moves every hue), --text-primary over tint + 12% ink bottoms
+ * out at 10.72:1 light and 9.37:1 dark, past the AAA 7:1 floor. The same
+ * measurement puts --text-secondary at 4.81:1 light and 4.64:1 dark, under
  * its 5:1 floor — so secondary text does not go in a brand block, and
  * .brandblock-kicker exists so the eyebrow line has somewhere safe to go.
  */

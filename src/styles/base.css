@@ -109,9 +109,11 @@ a:hover { text-decoration-color: currentColor; }
 }
 
 /* ---------- the wordmark ----------
-   The mark is the seal and the name set together, and they are always set
-   together — the scales never appear without the name outside a favicon or an
-   app icon, where there is no room for words. */
+   ST Chambers' registry chop and the name, set together. Unlike the scales it
+   replaced, this mark CONTAINS the name in its full cut — so the cut changes
+   with the size rather than the drawing staying constant: the word needs 110px
+   of rendered width to clear the 11px floor, and this box is 32px. See the note
+   in Rail.jsx for the three cuts and the arithmetic. */
 
 .wordmark {
   display: flex;
@@ -121,13 +123,23 @@ a:hover { text-decoration-color: currentColor; }
   text-decoration: none;
 }
 .wordmark-seal { flex: 0 0 auto; width: 2rem; height: 2rem; }
-.wordmark-seal .wm-ring { fill: none; stroke: var(--signal-mastery); stroke-width: 4; }
-.wordmark-seal .wm-mark {
-  fill: none;
-  stroke: var(--text-primary);
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+
+/* The chop. Ink only, no gold: in this system gold marks something the reader
+   has EARNED (DESIGN.md 2.2), and a logo has earned nothing. The gold on the
+   level-up crest is legitimate because a rank is earned; this is not that. */
+.wm-chop-edge { fill: none; stroke: var(--text-primary); stroke-width: 4; }
+.wm-chop-rule { stroke: var(--text-primary); stroke-width: 2.5; stroke-linecap: round; }
+.wm-chop-st {
+  fill: var(--text-primary);
+  font-family: var(--font-serif);
+  /* User units on a 100-unit viewBox, not CSS pixels — the box is 2rem, so
+     this renders at about 14px. Sized to fill the stamp, not to a type token:
+     a monogram is recognised rather than read, which is why the --type-* scale
+     does not apply to it and why the FLOOR still does apply to the word in the
+     full cut, which a reader does have to read. */
+  font-size: 44px;
+  font-weight: var(--weight-bold);
+  letter-spacing: -1.5px;
 }
 .wordmark-text { display: block; min-width: 0; }
 .wordmark-name {
@@ -680,9 +692,10 @@ button.tap-exempt,
 }
 
 /* ---------- module identity ----------
-   Sixteen modules, one colour each. It is orientation and a retrieval cue, not
-   an identifier: colour cannot carry sixteen categories for a colour-blind
-   reader — a naive sixteen-hue wheel collapses to dE 0.002 under deuteranopia —
+   Twenty-four modules, one colour each. It is orientation and a retrieval cue, not
+   an identifier: colour cannot carry twenty-four categories for a colour-blind
+   reader — a naive sixteen-hue wheel already collapsed to dE 0.002 under
+   deuteranopia, and twenty-four is worse, not better —
    so the module's NAME is present every time its colour is. Never build
    anything where the colour is the only thing telling two modules apart. */
 

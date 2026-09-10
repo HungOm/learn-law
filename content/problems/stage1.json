@@ -1,0 +1,1296 @@
+{
+  "schemaVersion": 2,
+  "note": "Practice problems for the eight subjects added under docs/LLB-ROADMAP.md Stage 1. One guided and one open per subject, because docs/CURRICULUM.md found that a beginner meeting an open problem with no worked example in between learns that they cannot do it. No case is cited anywhere here; scenarios rest on the named statutes the lessons rest on, and every `verify` says what to check.",
+  "problems": [
+    {
+      "id": "s1-eq-guided",
+      "moduleId": "m15-equity-trusts",
+      "title": "Is this arrangement a trust at all?",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "Puan Devi is ill. She hands her brother RM40,000 in cash and says, in front of two relatives: \"Keep this for Meera's schooling until she finishes Form Five.\" Meera is her daughter, aged eleven.",
+        "Two years later the brother uses RM15,000 of it to repair his lorry. He says the money was a gift and that he was only being asked to be generous."
+      ],
+      "task": "Work through four steps. Step 1 — name the three things that must be certain before a court will find a trust. Step 2 — take certainty of intention: quote the words Devi used and say whether they impose a duty or express a hope, giving your reason. Step 3 — take subject matter and objects in one sentence each, saying whether each is satisfied here. Step 4 — state in one sentence whether a trust exists, and what the brother's position is regarding the RM15,000.",
+      "rubric": [
+        {
+          "id": "s1-eq-g-r1",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Names all three certainties — intention, subject matter, objects — and does not merge them into a single test.",
+          "authority": "Standard trusts doctrine, received under the Civil Law Act 1956, s 3."
+        },
+        {
+          "id": "s1-eq-g-r2",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Treats \"keep this for Meera's schooling until she finishes Form Five\" as imposing a duty rather than expressing a hope, and gives the reason — the brother could not honestly keep it and breach nothing.",
+          "authority": "Certainty of intention."
+        },
+        {
+          "id": "s1-eq-g-r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Identifies the subject matter as certain (a stated sum, handed over) and the object as certain (a named beneficiary), rather than asserting both are met without saying why.",
+          "authority": "Certainty of subject matter and objects."
+        },
+        {
+          "id": "s1-eq-g-r4",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Concludes a trust exists and that the brother holds as trustee, so spending RM15,000 on himself is a breach — not merely unkind, and not answered by calling it a gift.",
+          "authority": "Trustee's duties are owed to the beneficiary."
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Rule",
+          "p": [
+            "The three certainties are intention, subject matter and objects, and all three must be present."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "On intention, the words are the whole question: \"keep this for Meera's schooling\" tells the brother what to do with the money, and he could not lawfully treat it as his own. That is a duty, not a wish — contrast \"trusting he will look after Meera\", which leaves him free. Subject matter is certain: a stated sum, handed over, not \"some of my savings\". Objects are certain: a named child."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "A trust therefore exists, the brother holds as trustee, and the RM15,000 spent on his lorry is a breach of trust. That the arrangement was oral does not matter here; nothing in the facts requires writing."
+          ]
+        }
+      ],
+      "traps": [
+        "Deciding it is a gift because no document was signed. There is no magic in writing any more than in the word trust.",
+        "Running the three certainties as a list without applying any of them to these facts.",
+        "Concluding only that the brother behaved badly. The question is whether a legal duty was imposed, which is a different thing."
+      ],
+      "source": "Civil Law Act 1956, s 3 for reception; the three certainties are standard trusts doctrine.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check the three certainties against a Malaysian trusts text. This problem states no case authority on purpose; find the authority yourself before relying on it in an exam."
+    },
+    {
+      "id": "s1-eq-open",
+      "moduleId": "m15-equity-trusts",
+      "title": "The shophouse in her brother's name",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "In 2013 Aminah paid the whole purchase price of a shophouse in Ipoh. The title was registered in her brother Rahim's name, because she was working abroad and the paperwork was easier that way. The family understood the shop was hers; Rahim collected the rent and passed it to her for nine years.",
+        "In 2022 Rahim stopped sending the rent. In 2024 he told her the shop was his, and pointed to the register. Aminah did nothing for a further two years because she did not want a family quarrel.",
+        "Rahim is now negotiating to sell the shophouse to a buyer who has been told by a neighbour that \"the sister paid for it\"."
+      ],
+      "task": "Advise Aminah. Deal with her position against Rahim, the effect of her delay, and whether the proposed buyer would take free of her interest.",
+      "rubric": [
+        {
+          "id": "s1-eq-o-r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Frames the issue as whether equity treats Rahim as holding for Aminah despite the register, rather than as whether the register can be corrected.",
+          "authority": "Equity acts on the conscience of the holder."
+        },
+        {
+          "id": "s1-eq-o-r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the resulting trust principle: where one person provides the purchase money and another takes the title, equity presumes a trust for the provider unless a gift was intended.",
+          "authority": "Resulting trusts; Civil Law Act 1956, s 3."
+        },
+        {
+          "id": "s1-eq-o-r3",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Applies the facts that point away from a gift — she paid the whole price, the reason for the arrangement was administrative, and nine years of rent went to her — rather than asserting no gift was intended.",
+          "authority": "Rebutting the presumption of gift."
+        },
+        {
+          "id": "s1-eq-o-r4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Addresses the delay as an argument about Aminah's conduct, and distinguishes the nine years of performance from the two years after the dispute arose.",
+          "authority": "Equitable defence of delay."
+        },
+        {
+          "id": "s1-eq-o-r5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Treats the buyer's knowledge as the question for the third party, rather than concluding from the register alone that a buyer always takes free.",
+          "authority": "A purchaser's conscience may be affected by notice."
+        },
+        {
+          "id": "s1-eq-o-r6",
+          "band": "conclusion",
+          "marks": 3,
+          "criterion": "Advises on both fronts — a claim against Rahim and urgent steps before any sale — and names the fact that would most change the advice.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Start where equity starts: not with the register but with Rahim's conscience."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "She provided the whole price and he took the title, which raises a resulting trust for her unless a gift was intended."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The facts rebutting a gift are strong and should be marshalled individually — she paid all of it, the reason for putting it in his name was administrative convenience rather than generosity, and for nine years he handed her the rent, which is conduct consistent only with holding for her. Delay is the argument he will run, and it should be met rather than ignored: the nine years were performance, not sleep, and time that matters runs from 2024 when he first denied her interest. Two years of family reluctance is a weaker point against her than nine years of silence would have been. On the buyer, the register is not the end of it — a purchaser who knows of the arrangement may find their own conscience affected, and \"a neighbour said the sister paid\" is at least enough to put them on inquiry."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "The practical advice is therefore urgent: a claim against Rahim, and something on the register to warn the buyer, before a sale completes. The fact that would change this most is proof that Aminah intended a gift at the time — a contemporaneous document or statement would defeat the whole claim."
+          ]
+        }
+      ],
+      "traps": [
+        "Treating the register as conclusive and stopping. That is the common law answer to a question equity is also answering.",
+        "Saying \"she will be barred by delay\" without asking when the delay started running.",
+        "Ignoring the buyer entirely, when the buyer is the reason the advice is urgent."
+      ],
+      "source": "Resulting and constructive trusts as received under the Civil Law Act 1956, s 3.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check the Malaysian position on resulting trusts and on the effect of notice on a purchaser of registered land before relying on this. The interaction with the National Land Code is deliberately not addressed here and is the first thing to look up."
+    },
+    {
+      "id": "s1-fam-guided",
+      "moduleId": "m16-family",
+      "title": "Which building do they walk into?",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "Three couples come to a legal aid clinic in Melaka on the same morning. All three want to divorce.",
+        "Couple A are both Hindu, married in Johor in 2015. Couple B are both Muslim, married under Selangor Islamic law in 2018. Couple C married under civil law in 2016; last year the husband converted to Islam and the wife did not."
+      ],
+      "task": "Work through three steps. Step 1 — for Couple A, name the statute that governs and the court that may dissolve the marriage. Step 2 — for Couple B, say which body of law applies and explain in one sentence why you must ask which State. Step 3 — for Couple C, do not attempt to resolve it; state in two sentences what makes it hard, and name the first question a court must answer.",
+      "rubric": [
+        {
+          "id": "s1-fam-g-r1",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Names the Law Reform (Marriage and Divorce) Act 1976 for Couple A and identifies the civil High Court, not a Syariah court.",
+          "authority": "Law Reform (Marriage and Divorce) Act 1976."
+        },
+        {
+          "id": "s1-fam-g-r2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "For Couple B, identifies State Islamic family law and explains that Islamic law is a State matter so each State legislates its own enactment.",
+          "authority": "Federal Constitution, Ninth Schedule, State List."
+        },
+        {
+          "id": "s1-fam-g-r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "For Couple C, identifies that the parties are now on different sides of the line, so the systems that would normally apply point to different courts.",
+          "authority": "Structure of the dual system."
+        },
+        {
+          "id": "s1-fam-g-r4",
+          "band": "method",
+          "marks": 2,
+          "criterion": "States that the first question is jurisdiction — which court may hear it — rather than any question about the merits or the children's welfare.",
+          "authority": "Jurisdiction is conferred by law, not assumed from need."
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Rule",
+          "p": [
+            "Couple A are not Muslims, so the Law Reform (Marriage and Divorce) Act 1976 governs and the civil High Court dissolves the marriage; because the Act is federal, it would be the same answer in any State. Couple B are Muslims married under State Islamic law, so a Syariah court has the matter — and you must ask which State, because Islamic law sits on the State List and each State legislates its own enactment, so there is no single national text to reason from."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Couple C is the hard one and the exercise is not to solve it. The marriage was civil, so on its face the 1976 Act and the civil court govern; the husband is now a Muslim, which is the condition Syariah jurisdiction turns on."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "The first question is therefore which court has power at all — not who should get the children, and not whether the conversion was sincere."
+          ]
+        }
+      ],
+      "traps": [
+        "Letting the parties choose their forum. The applicable system is fixed by religion, not by election.",
+        "Answering Couple B with \"Islamic family law\" and stopping, without asking which State.",
+        "Going to the merits for Couple C. Jurisdiction comes first and is the whole difficulty."
+      ],
+      "source": "Law Reform (Marriage and Divorce) Act 1976; Federal Constitution, Ninth Schedule.",
+      "lastVerified": "2026-09-10",
+      "verify": "Read the 1976 Act and the Ninth Schedule State List directly. The position on conversion cases has been considered by the courts and is deliberately left open here — look it up rather than infer it."
+    },
+    {
+      "id": "s1-fam-open",
+      "moduleId": "m16-family",
+      "title": "One parent converts",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "Suresh and Kavitha married in 2014 under civil law and have two children, aged eight and five. In 2025 Suresh converted to Islam. He has left the family home and now lives in another State.",
+        "Kavitha wants a divorce, maintenance, and custody. Suresh says the civil court has no power over him now, and that he will apply to a Syariah court.",
+        "Kavitha is not a Muslim and cannot appear as a party in a Syariah court."
+      ],
+      "task": "Advise Kavitha on the jurisdictional position and on how to frame her application. Do not assume the answer to the constitutional question; identify it and say how it must be argued.",
+      "rubric": [
+        {
+          "id": "s1-fam-o-r1",
+          "band": "issue",
+          "marks": 3,
+          "criterion": "Identifies the issue as which court has jurisdiction over a civil marriage after one party's conversion, and separates it from the merits of custody and maintenance.",
+          "authority": "Structure of the dual system."
+        },
+        {
+          "id": "s1-fam-o-r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States that the marriage was contracted under the Law Reform (Marriage and Divorce) Act 1976 and that Syariah jurisdiction requires both a Muslim party and a subject on the State List.",
+          "authority": "Law Reform (Marriage and Divorce) Act 1976; Federal Constitution, Ninth Schedule."
+        },
+        {
+          "id": "s1-fam-o-r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States Article 121(1A) accurately — it removes civil jurisdiction over matters within Syariah jurisdiction — and does not misstate it as creating a hierarchy.",
+          "authority": "Federal Constitution, Art 121(1A)."
+        },
+        {
+          "id": "s1-fam-o-r4",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Applies both limbs to Kavitha: she is not a Muslim, so a Syariah court has no jurisdiction over her, and argues from that rather than from fairness.",
+          "authority": "Jurisdiction over persons professing Islam."
+        },
+        {
+          "id": "s1-fam-o-r5",
+          "band": "method",
+          "marks": 3,
+          "criterion": "Recognises that the point is contested and says how it must be argued — by locating the matter inside or outside Syariah jurisdiction — rather than asserting a settled answer.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-fam-o-r6",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Gives practical advice on forum and urgency, and names what would change it.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "The merits are not the first question and saying so is worth marks."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "The marriage was contracted under the 1976 Act, which governs non-Muslims; the conversion changes Suresh's position but does not by itself move a civil marriage into another system. Syariah jurisdiction has two limbs and both must be satisfied — a person professing Islam, and a subject on the State List."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Kavitha satisfies neither limb: she is not a Muslim, and a court with no power over her cannot make orders binding her or determine her rights. Article 121(1A) must be stated precisely, because the temptation is to overstate it: it withdraws civil jurisdiction where a matter is within Syariah jurisdiction, which makes the real question whether this matter is within it — not which court ranks higher."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "The honest advice is that this is contested ground and the argument runs on that question, so her application should be framed to locate the matter outside Syariah jurisdiction: a civil marriage, a non-Muslim applicant, and relief sought against a party over whom the civil court has always had power. Urgency matters because parallel proceedings elsewhere create facts."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "What would change the advice most is a determination binding in this State on whether a converted spouse's civil marriage falls within Syariah jurisdiction."
+          ]
+        }
+      ],
+      "traps": [
+        "Stating that Article 121(1A) makes Syariah courts superior. It does not; it removes jurisdiction over a defined class of matters.",
+        "Arguing from hardship. Hardship is real here and it is not a source of jurisdiction.",
+        "Presenting a contested question as settled in either direction."
+      ],
+      "source": "Law Reform (Marriage and Divorce) Act 1976; Federal Constitution, Art 121(1A) and the Ninth Schedule.",
+      "lastVerified": "2026-09-10",
+      "verify": "This is live and contested ground. Read Art 121(1A) and the current authorities before relying on any part of this answer, and check the position in the relevant State."
+    },
+    {
+      "id": "s1-sy-guided",
+      "moduleId": "m17-syariah",
+      "title": "Two limbs, four disputes",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "Four disputes arrive at a State religious department's advice desk.",
+        "(a) Two Muslims disagree about a business loan. (b) A Muslim couple want a divorce. (c) A Muslim and a non-Muslim are in a road accident. (d) A Muslim is accused of an offence against the precepts of Islam created by that State's enactment."
+      ],
+      "task": "Work through three steps. Step 1 — state the two limbs a Syariah court's jurisdiction depends on. Step 2 — for each of the four disputes, say in one line whether both limbs are satisfied. Step 3 — state which forum takes each dispute, and give the reason in one clause.",
+      "rubric": [
+        {
+          "id": "s1-sy-g-r1",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States both limbs — persons professing Islam, and subject matter on the State List — and says both must be satisfied.",
+          "authority": "Federal Constitution, Ninth Schedule, State List."
+        },
+        {
+          "id": "s1-sy-g-r2",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Correctly separates (a) and (c), which fail the subject limb, from (b) and (d), which satisfy both — and gives the reason rather than the label.",
+          "authority": "Contract and tort are federal matters."
+        },
+        {
+          "id": "s1-sy-g-r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "For (c), identifies that the non-Muslim party independently defeats the person limb, as well as the subject limb.",
+          "authority": "Jurisdiction over persons professing Islam."
+        },
+        {
+          "id": "s1-sy-g-r4",
+          "band": "conclusion",
+          "marks": 1,
+          "criterion": "Allocates all four to a forum without hedging.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Rule",
+          "p": [
+            "Jurisdiction turns on two limbs and both must hold: the persons must profess Islam, and the subject must be on the State List."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "(a) is contract, a federal matter, so the subject limb fails and the civil courts take it however devout the parties. (b) satisfies both — Muslim parties, Islamic marriage — so a Syariah court in that State. (c) fails twice over: one party is not a Muslim, and a road accident is tort, which is federal. (d) satisfies both, being an offence against the precepts of Islam created by the State's own enactment and charged against a Muslim."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "The pattern worth carrying away is that the person limb is the one people remember and the subject limb is the one that decides most real disputes."
+          ]
+        }
+      ],
+      "traps": [
+        "Deciding (a) by the parties' religion. Both are Muslims and it still goes to the civil courts.",
+        "Treating \"religious matter\" as a category. The State List is a list, and contract is not on it.",
+        "Hedging on (d) because criminal-sounding. State religious offences are exactly what the enactments create."
+      ],
+      "source": "Federal Constitution, Ninth Schedule, State List.",
+      "lastVerified": "2026-09-10",
+      "verify": "Read the State List entry on Islamic law in the Constitution itself, and the relevant State's enactment for the offences it actually creates."
+    },
+    {
+      "id": "s1-sy-open",
+      "moduleId": "m17-syariah",
+      "title": "An enactment that goes too far",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "A State legislature passes an enactment creating a religious offence and providing for a punishment substantially heavier than the ceiling Parliament has set for Syariah court punishments.",
+        "Encik Hafiz is charged under it. He wants to challenge the enactment itself, not merely to defend the charge.",
+        "The State Legal Adviser argues that Islamic law is a State matter, that the Constitution allocates it to the States, and that a federal statute cannot cut down what the Constitution has given."
+      ],
+      "task": "Advise Hafiz on the challenge. Address the State Legal Adviser's argument directly.",
+      "rubric": [
+        {
+          "id": "s1-sy-o-r1",
+          "band": "issue",
+          "marks": 3,
+          "criterion": "Frames the issue as legislative competence — whether the State had power to enact this — rather than as a question about religion or about the severity of the punishment.",
+          "authority": "Federal Constitution, division of legislative power."
+        },
+        {
+          "id": "s1-sy-o-r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States that a State legislature may act only within the power the Constitution allocates, and that the State List entry is itself bounded.",
+          "authority": "Federal Constitution, Ninth Schedule, State List."
+        },
+        {
+          "id": "s1-sy-o-r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "Identifies that Parliament has legislated a ceiling on Syariah court punishments and explains how that operates as a limit rather than as an intrusion.",
+          "authority": "Federal legislation limiting Syariah court punishments."
+        },
+        {
+          "id": "s1-sy-o-r4",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Meets the Legal Adviser's argument on its own ground: the grant of power is real, and it is a grant of bounded power, so exceeding the bound is acting outside the grant.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-sy-o-r5",
+          "band": "method",
+          "marks": 3,
+          "criterion": "Argues this as an ordinary federal-structure question of the same shape as any State law exceeding its List, rather than as a special religious case.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-sy-o-r6",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Concludes on the enactment's validity to the extent of the excess, and says what relief is sought.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "The issue is competence, and framing it that way is most of the work."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "The State Legal Adviser is right that the Constitution allocates Islamic law to the States and wrong about what follows. A constitutional grant of legislative power is a grant of bounded power; the boundary is part of the grant, not an intrusion on it. Parliament's ceiling on Syariah court punishments operates within that structure, so an enactment providing for more is not a State exercising its power vigorously — it is a State acting where it has none."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "The argument should be run in exactly the same shape as any State law exceeding its List, because that is what it is, and running it as a special religious argument invites the answer that religion is a State matter, which is true and beside the point."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Relief is a declaration that the enactment is invalid to the extent of the excess; whether the whole provision falls or only the punishment depends on severability, which should be argued in the alternative. What would change the advice is a determination that the federal ceiling itself is beyond Parliament's power — which is the argument the State would have to win, and it should be anticipated rather than left to reply."
+          ]
+        }
+      ],
+      "traps": [
+        "Arguing that the punishment is too harsh. Severity is not the ground; competence is.",
+        "Accepting that a State matter means unlimited State power. The grant is bounded.",
+        "Forgetting severability, and so asking for more than a court needs to give."
+      ],
+      "source": "Federal Constitution, division of legislative power and the Ninth Schedule; federal legislation limiting Syariah court punishments.",
+      "lastVerified": "2026-09-10",
+      "verify": "Identify the federal Act setting the ceiling and read its terms; the limits are specific and are not stated here. Check the current position before relying on this."
+    },
+    {
+      "id": "s1-jur-guided",
+      "moduleId": "m18-jurisprudence",
+      "title": "Which side is this argument on?",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "Four statements are made in a seminar about a validly enacted but oppressive statute.",
+        "(a) \"It is law, and it is wicked, and the second does not touch the first.\" (b) \"A rule this unjust was never law, whatever the gazette says.\" (c) \"If judges decide what counts as law by their own morals, nobody can know the law in advance.\" (d) \"A court should read the words as narrowly as they will bear, to avoid the injustice.\""
+      ],
+      "task": "Work through three steps. Step 1 — label (a) and (b) with the tradition each belongs to. Step 2 — say which of the two (c) is an argument for, and what it is an argument about. Step 3 — for (d), say which side it leans towards in effect, and explain why the answer is about effect rather than about what the speaker says they believe.",
+      "rubric": [
+        {
+          "id": "s1-jur-g-r1",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Labels (a) as positivism and (b) as natural law, and states the separation each accepts or denies.",
+          "authority": "Standard accounts of the two traditions."
+        },
+        {
+          "id": "s1-jur-g-r2",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Identifies (c) as an argument for positivism, and specifically as an argument about certainty rather than about justice.",
+          "authority": "Certainty argument for positivism."
+        },
+        {
+          "id": "s1-jur-g-r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Identifies that (d) leans natural law in effect, because the moral quality of the outcome is shaping what the law is taken to say.",
+          "authority": "The debate as it surfaces in interpretation."
+        },
+        {
+          "id": "s1-jur-g-r4",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Explains that a position is identified by what an argument does, not by the label its author would accept.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Rule",
+          "p": [
+            "(a) is positivism: validity depends on source, so a rule can be law and be wicked, and holding both is not a contradiction. (b) is natural law, denying exactly that separation."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "(c) argues for positivism, and the useful observation is what it argues about — certainty, not justice. It concedes the injustice and says the cost of letting each judge's morals decide validity is that nobody can know the law in advance. (d) is the interesting one. The speaker may hold no theoretical position at all, but straining clear words to avoid an unjust result lets the moral quality of the outcome shape what the law is taken to say, which is the natural law move in working clothes."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "Positions here are identified by what an argument does, because most people who make these arguments in practice never name a tradition."
+          ]
+        }
+      ],
+      "traps": [
+        "Treating (c) as a natural law argument because it mentions justice. It concedes injustice and argues from certainty.",
+        "Asking what the speaker believes. The question is what the argument does.",
+        "Assuming positivism means approving of the statute. It means keeping two questions apart."
+      ],
+      "source": "Standard accounts of legal positivism and natural law.",
+      "lastVerified": "2026-09-10",
+      "verify": "Read a jurisprudence text before using these labels in an essay; each tradition has versions that differ from the sketch given here."
+    },
+    {
+      "id": "s1-jur-open",
+      "moduleId": "m18-jurisprudence",
+      "title": "The judge who does not want to apply it",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "A statute is clear on its face and was passed in proper form. Applied to the facts before the court it produces a result the judge regards as seriously unjust, and no ambiguity in the words offers a way out.",
+        "Counsel invites the court to hold that a provision this unjust is not law at all."
+      ],
+      "task": "Write an argued answer on whether the court should accept that invitation. Take a position, and answer the strongest objection to it.",
+      "rubric": [
+        {
+          "id": "s1-jur-o-r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "States the question as whether injustice can defeat validity, not whether the statute is unjust.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-jur-o-r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "Sets out both traditions accurately and briefly, without caricaturing either as the callous one or the sentimental one.",
+          "authority": "Standard accounts of the two traditions."
+        },
+        {
+          "id": "s1-jur-o-r3",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Takes a position and argues it, rather than surveying both and declining to choose.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-jur-o-r4",
+          "band": "application",
+          "marks": 4,
+          "criterion": "States the strongest objection to the chosen position in a form its proponent would accept, and answers it on its merits.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-jur-o-r5",
+          "band": "method",
+          "marks": 3,
+          "criterion": "Connects the theoretical question to what a court can actually do — interpretation, declaration, refusal — rather than leaving it abstract.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-jur-o-r6",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Concludes on what this court should do on these facts.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "A good answer commits. Either commitment can earn full marks; refusing to commit cannot."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "If you take the positivist side, the argument is that the court should apply the statute and say plainly that it is unjust — and the strongest objection is not sentimentality but the case of a regime whose decrees were properly enacted and monstrous, which you must meet rather than avoid, usually by pointing to what a court gains in candour and what it loses in predictability. If you take the natural law side, the argument is that legal validity is not merely procedural — and the strongest objection is that someone must decide when injustice is grave enough, that this is a large and unreviewable power, and that a court which can unmake a statute on moral grounds can also decline to unmake one."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "The best answers do the third thing as well: notice that in practice the fight rarely reaches validity, because interpretation absorbs it. A court that reads harsh words narrowly has taken a position without announcing one, and saying so is what connects the seminar question to the judgment the court actually has to write."
+          ]
+        }
+      ],
+      "traps": [
+        "Surveying both positions and concluding that both have merit. That is the answer that cannot score.",
+        "Choosing the objection that is easiest to answer rather than the strongest.",
+        "Leaving it abstract, when the court has to make an order this afternoon."
+      ],
+      "source": "Standard accounts of legal positivism and the natural law tradition.",
+      "lastVerified": "2026-09-10",
+      "verify": "Read a jurisprudence text on the debate before writing this for assessment; the argument here is a shape, not any particular writer's version of it."
+    },
+    {
+      "id": "s1-com-guided",
+      "moduleId": "m19-commercial",
+      "title": "Who is bound by the order?",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "Encik Zainal owns a hardware shop and employs Lim to manage it. Zainal told Lim privately never to order more than ten crates of anything.",
+        "Lim has ordered stock from the same supplier for a year, always in Zainal's name, and Zainal has always paid. This week Lim ordered forty crates of tile adhesive. The supplier knew nothing of the ten-crate limit."
+      ],
+      "task": "Work through four steps. Step 1 — name the three ways an agent's authority can arise. Step 2 — say which kind Lim had for ordinary stock, and why. Step 3 — say whether the private ten-crate limit binds the supplier, and give the reason. Step 4 — state who must pay the supplier, and what Zainal's remedy is and against whom.",
+      "rubric": [
+        {
+          "id": "s1-com-g-r1",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Names express, implied and apparent authority and distinguishes them by source rather than by example alone.",
+          "authority": "Contracts Act 1950, agency provisions."
+        },
+        {
+          "id": "s1-com-g-r2",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Identifies implied authority from the role, and apparent authority from a year of unchallenged dealing, rather than choosing only one.",
+          "authority": "Implied and apparent authority."
+        },
+        {
+          "id": "s1-com-g-r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "States that a limit the third party never knew of does not reduce what they may rely on, and ties this to the appearance the principal created.",
+          "authority": "Doctrine of apparent authority."
+        },
+        {
+          "id": "s1-com-g-r4",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Concludes that Zainal is bound to the supplier and that his remedy lies against Lim, keeping the two relationships apart.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Rule",
+          "p": [
+            "Authority arises expressly from what the principal said, impliedly from the job given, or apparently from how the principal made things look to outsiders."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Lim had implied authority to order ordinary stock, because that is what running a shop requires, and apparent authority as well, because Zainal let him order for a year and paid every time. The private ten-crate limit is between Zainal and Lim; the supplier never knew of it and may rely on the appearance Zainal created, so the limit does not shrink what the supplier is entitled to."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Zainal is therefore bound to pay for the forty crates. His remedy is against Lim for exceeding what he was actually told. The two relationships are separate: breaking the internal one does not undo the external one."
+          ]
+        }
+      ],
+      "traps": [
+        "Concluding nobody is bound because Lim exceeded his authority. He exceeded his actual authority, not his apparent authority.",
+        "Making Lim personally liable to the supplier as the main answer.",
+        "Merging the principal-agent and principal-third party relationships into one."
+      ],
+      "source": "The general law of agency in Malaysia is in the Contracts Act 1950.",
+      "lastVerified": "2026-09-10",
+      "verify": "Read the agency provisions of the Contracts Act 1950 directly. No section numbers are given here on purpose."
+    },
+    {
+      "id": "s1-com-open",
+      "moduleId": "m19-commercial",
+      "title": "The commission nobody mentioned",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "Puan Sarah engaged an agent, Kumar, to find and buy machinery for her factory. Kumar found a supplier and negotiated a price of RM120,000, which independent evidence shows was a fair market price at the time.",
+        "The supplier paid Kumar RM6,000 for directing the business to them. Kumar did not tell Sarah. She has now found out.",
+        "Sarah wants the RM6,000, wants to know whether she can undo the machinery contract, and wants to refuse Kumar's agreed fee."
+      ],
+      "task": "Advise Sarah on all three questions. Deal with Kumar's argument that she suffered no loss because the price was fair.",
+      "rubric": [
+        {
+          "id": "s1-com-o-r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Separates the three questions — the secret profit, the contract with the supplier, and the agent's fee — rather than answering them as one.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-com-o-r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the agent's duty of loyalty as a duty against undisclosed profit and conflict, not merely a duty of care.",
+          "authority": "Fiduciary duties of an agent."
+        },
+        {
+          "id": "s1-com-o-r3",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Answers the no-loss argument directly: absence of loss meets a damages claim and does not meet a claim to the profit itself.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-com-o-r4",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Treats the supplier's position separately, turning on the supplier's own knowledge and participation, rather than assuming the contract falls automatically.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-com-o-r5",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Addresses the agent's fee as a separate consequence of the breach rather than assuming it follows.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-com-o-r6",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Advises on each of the three, and identifies what evidence would most strengthen the position.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Three questions, and they have three different answers."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "On the RM6,000: Kumar's duty is not merely to get a good price but to avoid an undisclosed profit and an undisclosed conflict, and he breached both. His argument that the price was fair answers a claim for damages, because it shows no loss — and it does not answer the claim to the profit, which does not depend on loss at all. Sarah is entitled to the RM6,000. On the machinery contract, do not assume it falls. The supplier is a third party, and the position turns on what the supplier knew and did: paying a secret commission to the other side's agent is participation, not innocence, and it is that participation rather than Kumar's breach which would open the contract to challenge."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "On the fee, an agent who acts in breach of the duty of loyalty may forfeit the right to be paid for the work affected; that is a consequence of the breach and should be argued as one, not assumed. The evidence that would most strengthen all three is anything showing the supplier knew the commission was undisclosed — correspondence, or the way the RM6,000 was recorded."
+          ]
+        }
+      ],
+      "traps": [
+        "Accepting the no-loss argument. It is a good answer to the wrong claim.",
+        "Rescinding the supplier contract automatically. The supplier's knowledge is the question.",
+        "Treating the forfeited fee as obvious rather than arguing it."
+      ],
+      "source": "Fiduciary duties of an agent; the general law of agency is in the Contracts Act 1950.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check the Malaysian position on secret commissions and on forfeiture of an agent's remuneration before relying on this. No case is cited here on purpose."
+    },
+    {
+      "id": "s1-emp-guided",
+      "moduleId": "m20-employment",
+      "title": "Two questions, two forums",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "Puan Faridah worked at a factory for six years. On Monday she was told not to return. She was not paid her notice, and no reason was given to her at any point.",
+        "She wants her money and she wants her job back."
+      ],
+      "task": "Work through four steps. Step 1 — separate her two complaints into the two questions they belong to. Step 2 — name the statute that answers the first and say what kind of thing it provides. Step 3 — name the statute that answers the second and describe the route in one sentence. Step 4 — say which of the two has a short time limit, and what happens if it is missed.",
+      "rubric": [
+        {
+          "id": "s1-emp-g-r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Separates the claim for money owed from the challenge to the dismissal itself, and notes they go to different systems.",
+          "authority": "Structure of Malaysian employment law."
+        },
+        {
+          "id": "s1-emp-g-r2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Names the Employment Act 1955 for minimum terms and notes that its scope is defined and must be checked, not assumed.",
+          "authority": "Employment Act 1955."
+        },
+        {
+          "id": "s1-emp-g-r3",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Names the Industrial Relations Act 1967 and describes representation, conciliation and possible reference to the Industrial Court.",
+          "authority": "Industrial Relations Act 1967."
+        },
+        {
+          "id": "s1-emp-g-r4",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Identifies the representation time limit as short and states that missing it is the commonest way a good claim is lost.",
+          "authority": "Industrial Relations Act 1967."
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Her two complaints are two questions."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "Was she paid what she was owed is a minimum-terms question, answered mainly by the Employment Act 1955, which sets a floor below which a contract cannot go — and whose scope is defined by the Act, so whether Faridah is covered has to be checked rather than assumed. Should she have been dismissed at all is a different question, and it does not start in the ordinary courts: the Industrial Relations Act 1967 provides for a representation, conciliation, and possible reference to the Industrial Court, built around reinstatement."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "The second has a short time limit for making the representation, and missing it is the commonest way a strong claim dies — so it is the first thing to diarise, before any argument about the merits."
+          ]
+        }
+      ],
+      "traps": [
+        "Filing everything in one place. The two questions have different forums.",
+        "Assuming everyone is covered by every provision of the Employment Act.",
+        "Leaving the time limit to later. It is the first thing, not a detail."
+      ],
+      "source": "Employment Act 1955; Industrial Relations Act 1967.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check the current scope of the Employment Act 1955 and the exact representation time limit under the Industrial Relations Act 1967 in the statutes themselves. Neither is stated here."
+    },
+    {
+      "id": "s1-emp-open",
+      "moduleId": "m20-employment",
+      "title": "The theft nobody asked about",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "A warehouse supervisor, Encik Daud, was dismissed on the spot after stock was found in his car. The employer has CCTV that appears to show him loading it.",
+        "There was no inquiry of any kind. Daud was not told what was alleged, was not shown the recording, and was not asked to explain. He says the stock was returned goods he had been told to take to another branch.",
+        "The employer says an inquiry would have been a formality because the recording speaks for itself."
+      ],
+      "task": "Advise Daud on a claim for dismissal without just cause or excuse. Address the employer's argument that an inquiry would have made no difference.",
+      "rubric": [
+        {
+          "id": "s1-emp-o-r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Frames the issue as whether there was just cause or excuse, and identifies that this has two limbs.",
+          "authority": "Industrial Relations Act 1967."
+        },
+        {
+          "id": "s1-emp-o-r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the substantive and procedural limbs and that the employer must satisfy both.",
+          "authority": "Standard industrial relations doctrine."
+        },
+        {
+          "id": "s1-emp-o-r3",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Applies the procedural limb to these facts — no allegation put, no evidence shown, no opportunity to answer — as three separate failures rather than one.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-emp-o-r4",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Answers the futility argument on its merits: Daud's explanation is one an inquiry would have surfaced, so the employer cannot assert it would have made no difference.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-emp-o-r5",
+          "band": "method",
+          "marks": 3,
+          "criterion": "Notes the forum and the short time limit for the representation before turning to remedy.",
+          "authority": "Industrial Relations Act 1967."
+        },
+        {
+          "id": "s1-emp-o-r6",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Advises on likely remedy, noting reinstatement as the statutory aim and compensation as the common outcome.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Rule",
+          "p": [
+            "Just cause or excuse has two limbs and the employer must satisfy both, so the strength of the CCTV goes to only half the case."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "On procedure there were three distinct failures, and listing them separately is worth more than calling the process unfair: the allegation was never put, the evidence was never shown, and no opportunity to answer was given. The futility argument is the one to meet head-on, and these facts answer it better than any general proposition. Daud says the stock was returned goods he had been instructed to move — that is precisely the kind of explanation an inquiry exists to surface, and it may be checkable against the branch's records. An employer who never asked cannot then assert that asking would have changed nothing, because the failure to ask is why nobody knows."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "Procedurally, the representation must be made within the short statutory period, and that comes before any argument about merits."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "On remedy, the statutory aim is reinstatement, though compensation is commonly awarded instead; where trust has genuinely broken down, compensation is the realistic outcome and it is honest to say so."
+          ]
+        }
+      ],
+      "traps": [
+        "Conceding the case because the CCTV looks strong. It goes to one limb only.",
+        "Calling the procedure unfair without saying what specifically was missing.",
+        "Leaving the time limit until the end, when it decides whether there is a claim at all."
+      ],
+      "source": "Industrial Relations Act 1967; the two limbs are standard industrial relations doctrine.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check the representation time limit and the current authorities on procedural fairness and on futility arguments before relying on this."
+    },
+    {
+      "id": "s1-int-guided",
+      "moduleId": "m21-international",
+      "title": "Can she sue on the treaty?",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "A client brings a treaty that Malaysia has signed and ratified. It states that people in her position have a particular right. No Act of Parliament mentions it.",
+        "She wants to sue on it in the High Court next week."
+      ],
+      "task": "Work through four steps. Step 1 — state in one sentence what ratification did and did not do. Step 2 — name the model Malaysia follows and say what the bridge into domestic law is. Step 3 — say whether she can sue on the treaty directly, and why. Step 4 — name the one route that does not require new legislation, and state the condition it depends on.",
+      "rubric": [
+        {
+          "id": "s1-int-g-r1",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "States that ratification binds Malaysia as a state in international law and does not by itself create domestic rights.",
+          "authority": "Dualist approach to treaty implementation."
+        },
+        {
+          "id": "s1-int-g-r2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "Names the dualist model and identifies legislation as the bridge.",
+          "authority": "Dualist approach."
+        },
+        {
+          "id": "s1-int-g-r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "Concludes she cannot sue on it directly, and gives the reason rather than the label.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-int-g-r4",
+          "band": "method",
+          "marks": 2,
+          "criterion": "Identifies interpretation of an ambiguous statute as the route, and states that it needs an ambiguity to work on.",
+          "authority": "Standard interpretive principle."
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Rule",
+          "p": [
+            "Ratification created a real obligation owed by Malaysia to the other states party to the treaty, and created nothing a Malaysian judge can enforce for this client. Malaysia is dualist: the two systems are separate and the bridge between them is an Act of Parliament."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "So the answer to her question is no, not because the treaty is unimportant but because nothing has carried it across."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "The one route that does not wait for legislation is interpretation — where an existing statute is ambiguous, a court may prefer the reading that fits the state's international obligations. That route depends entirely on there being an ambiguity; against clear statutory words it does nothing. So the practical next step is to look for a Malaysian statute that touches her situation and read it closely, rather than to plead the treaty."
+          ]
+        }
+      ],
+      "traps": [
+        "Saying the treaty is irrelevant. It binds the state and it can shape interpretation.",
+        "Advising her to plead the treaty as a cause of action.",
+        "Offering the interpretation route without checking that an ambiguity exists."
+      ],
+      "source": "Standard account of the dualist approach and of treaty interpretation as an aid.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check whether the particular treaty has in fact been implemented by an Act; ratification and implementation are different events and the answer turns on the second."
+    },
+    {
+      "id": "s1-int-open",
+      "moduleId": "m21-international",
+      "title": "Two readings and a convention",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "A Malaysian statute uses a term that is capable of two readings. One reading matches an obligation in a convention Malaysia has ratified but never implemented by legislation; the other does not.",
+        "Nothing in the statute mentions the convention. The other side argues that an unimplemented convention is legally irrelevant and that referring to it would be smuggling in law Parliament never enacted."
+      ],
+      "task": "Write submissions arguing that the court should prefer the reading consistent with the convention. Address the argument that the convention is irrelevant.",
+      "rubric": [
+        {
+          "id": "s1-int-o-r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "States the issue as which of two available readings to prefer, and not as whether the convention is part of Malaysian law.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-int-o-r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the dualist position accurately and concedes that the convention is not directly enforceable.",
+          "authority": "Dualist approach to treaty implementation."
+        },
+        {
+          "id": "s1-int-o-r3",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States the interpretive principle and its condition — that it operates on ambiguity and cannot displace clear words.",
+          "authority": "Standard interpretive principle."
+        },
+        {
+          "id": "s1-int-o-r4",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Establishes the ambiguity as a first step rather than assuming it, since the whole argument depends on it.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-int-o-r5",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Answers the smuggling argument by distinguishing enforcement from interpretation, and by pointing to the presumption that Parliament does not intend to legislate contrary to the state's obligations.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-int-o-r6",
+          "band": "conclusion",
+          "marks": 2,
+          "criterion": "Asks for the specific reading, and says what would defeat the argument.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "Concede the dualist point in the first line; it is correct and conceding it costs nothing while making everything after it credible. The convention is not directly enforceable and no claim is made on it. The argument is about which of two available readings the court should prefer, which is a question the court must answer anyway."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "The order of work matters: establish the ambiguity first, from the words and the structure of the statute, because if the words are clear the argument ends there and an advocate who assumes the ambiguity has skipped the only step that can fail. Then the smuggling argument, which conflates enforcement with interpretation. Nothing is being enforced; the convention is being used as a reason to prefer one meaning of a Malaysian statute over another, and the reason is the ordinary presumption that Parliament does not intend to place the state in breach of its international obligations."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Ask for the specific reading rather than for a general principle. What would defeat the argument is a demonstration that the words are not ambiguous at all — which is why establishing the ambiguity is the load-bearing part and should be argued at length rather than asserted."
+          ]
+        }
+      ],
+      "traps": [
+        "Arguing the convention is part of Malaysian law. It is not, and the argument does not need it to be.",
+        "Assuming the ambiguity. It is the step the whole submission rests on.",
+        "Asking for a general principle when the case needs one reading of one provision."
+      ],
+      "source": "Standard account of the dualist approach and of unimplemented treaties as an aid to interpretation.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check the Malaysian authorities on the use of unimplemented treaties in interpretation before relying on this; the strength of the presumption is a matter to look up."
+    },
+    {
+      "id": "s1-eth-guided",
+      "moduleId": "m22-ethics",
+      "title": "Four requests, four answers",
+      "kind": "guided",
+      "minutes": 20,
+      "marks": 8,
+      "scenario": [
+        "In one week an advocate faces four situations.",
+        "(a) A client insists on giving evidence the advocate knows is false. (b) The advocate finds a binding authority squarely against the argument. (c) A former client's opponent asks the advocate to act against that former client, in the same matter. (d) After the case ends, a journalist asks what the client told the advocate."
+      ],
+      "task": "Work through four steps, one per situation. For each, name the duty engaged and state in one sentence what the advocate must do.",
+      "rubric": [
+        {
+          "id": "s1-eth-g-r1",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "For (a), identifies the paramount duty to the court and states refusal, with withdrawal if necessary and no disclosure of the reason.",
+          "authority": "The advocate's paramount duty; duty of confidence."
+        },
+        {
+          "id": "s1-eth-g-r2",
+          "band": "rule",
+          "marks": 2,
+          "criterion": "For (b), states the duty of candour and that the authority must be drawn to the court's attention and then distinguished.",
+          "authority": "Duty of candour to the court."
+        },
+        {
+          "id": "s1-eth-g-r3",
+          "band": "application",
+          "marks": 2,
+          "criterion": "For (c), identifies the conflict arising from information held from the former client and declines the retainer.",
+          "authority": "Conflicts rules."
+        },
+        {
+          "id": "s1-eth-g-r4",
+          "band": "application",
+          "marks": 2,
+          "criterion": "For (d), states that confidence survives the retainer, so the answer is nothing.",
+          "authority": "Duty of confidence."
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Rule",
+          "p": [
+            "(a) engages the paramount duty to the court: the advocate may not assert what they know is false, must refuse, must withdraw if the client insists — and must not tell the court why, because confidence still binds. Refusal and silence together."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "(b) engages candour: the authority must be put before the court and then argued around, because concealing binding authority misleads it, while distinguishing it is legitimate advocacy. (c) engages conflicts: acting against a former client in the same matter, while holding their information, is the clearest case there is, and the answer is to decline rather than to manage. (d) engages confidence, which does not end when the case does — so the answer to the journalist is nothing at all, and that remains true however interesting the case was."
+          ]
+        }
+      ],
+      "traps": [
+        "Telling the court the real reason for withdrawing in (a). That breaks the second duty while honouring the first.",
+        "Leaving the bad authority for the opponent to find in (b).",
+        "Trying to manage the conflict in (c) with an information barrier, when the advocate personally holds the information."
+      ],
+      "source": "Standard statements of the advocate's duties; the profession is regulated under the Legal Profession Act 1976.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check the professional conduct rules made under the Legal Profession Act 1976 for the binding formulation; these are principles, not rule text."
+    },
+    {
+      "id": "s1-eth-open",
+      "moduleId": "m22-ethics",
+      "title": "The alibi you cannot run",
+      "kind": "problem",
+      "minutes": 45,
+      "marks": 18,
+      "scenario": [
+        "You act for an accused in a criminal trial. In conference he tells you he was at the scene. He instructs you to run an alibi at trial and to call his cousin, who will say they were together elsewhere.",
+        "The trial begins in three days. Your client says that if you will not run the alibi he will report you for failing to follow instructions, and that he cannot afford to instruct anyone else.",
+        "You believe the prosecution case is otherwise weak and that an acquittal is realistically available on the evidence."
+      ],
+      "task": "Advise on what you may and may not do, and on how to handle the practical consequences. Explain why the answer does not change because an acquittal was available.",
+      "rubric": [
+        {
+          "id": "s1-eth-o-r1",
+          "band": "issue",
+          "marks": 2,
+          "criterion": "Identifies the conflict between instructions and the duty to the court, and states which is paramount.",
+          "authority": "The advocate's paramount duty."
+        },
+        {
+          "id": "s1-eth-o-r2",
+          "band": "rule",
+          "marks": 3,
+          "criterion": "States precisely what is prohibited — asserting as true what is known to be false, and calling evidence known to be false — and what remains permitted.",
+          "authority": "Duty to the court; duty to the client."
+        },
+        {
+          "id": "s1-eth-o-r3",
+          "band": "application",
+          "marks": 4,
+          "criterion": "Distinguishes what may still be done: testing the prosecution case, putting it to proof, and arguing the evidence does not establish guilt.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-eth-o-r4",
+          "band": "application",
+          "marks": 3,
+          "criterion": "Deals with confidence: if withdrawal follows, the reason may not be given to the court.",
+          "authority": "Duty of confidence."
+        },
+        {
+          "id": "s1-eth-o-r5",
+          "band": "method",
+          "marks": 3,
+          "criterion": "Addresses the practical pressures — the threat, the timing, the client's means — without letting any of them alter the answer.",
+          "authority": "—"
+        },
+        {
+          "id": "s1-eth-o-r6",
+          "band": "conclusion",
+          "marks": 3,
+          "criterion": "Explains why the availability of an acquittal is irrelevant to what may be asserted, and states the position on withdrawal.",
+          "authority": "—"
+        }
+      ],
+      "modelAnswer": [
+        {
+          "h": "Issue",
+          "p": [
+            "The instruction cannot be followed."
+          ]
+        },
+        {
+          "h": "Rule",
+          "p": [
+            "You may not assert as true what you know to be false, and you may not call evidence you know to be false, so the alibi is out and the cousin cannot be called."
+          ]
+        },
+        {
+          "h": "Application",
+          "p": [
+            "Say clearly what remains, because a great deal does: you may test the prosecution case, put it to strict proof, cross-examine on weaknesses, and argue that the evidence does not establish guilt beyond reasonable doubt. That is not a reduced defence, it is the defence — and on facts where the prosecution case is weak it may well be the better one. If the client insists on the alibi, you must withdraw; and if you withdraw you may not tell the court why, because confidence binds after the retainer ends. Refusal and silence together, which will be uncomfortable and is not optional."
+          ]
+        },
+        {
+          "h": "Method",
+          "p": [
+            "The threat, the three days and his means are real pressures and none of them changes the answer; noticing that they are pressures rather than arguments is part of the skill."
+          ]
+        },
+        {
+          "h": "Conclusion",
+          "p": [
+            "Finally, the availability of an acquittal is the seductive point and it is beside the point: the rule is not that deception is forbidden when it is unnecessary, it is that the court must be able to rely on what advocates tell it. An advocate who would deceive to secure a deserved acquittal is an advocate whose assertions are worth nothing in the next case — including to the next client."
+          ]
+        }
+      ],
+      "traps": [
+        "Running the alibi because the client is probably innocent of the charge as framed.",
+        "Explaining the real reason for withdrawal to the court.",
+        "Treating the weak prosecution case as a reason the rule should bend, when it is a reason the rule costs the client little."
+      ],
+      "source": "Standard statements of the advocate's duties to court and client; the profession is regulated under the Legal Profession Act 1976.",
+      "lastVerified": "2026-09-10",
+      "verify": "Check the professional conduct rules made under the Legal Profession Act 1976, and the current guidance on withdrawal in criminal matters, before relying on this."
+    }
+  ]
+}

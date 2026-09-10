@@ -18,7 +18,10 @@
         "com-06",
         "com-07"
       ],
-      "prepares": [],
+      "prepares": [
+        "s1-com-guided",
+        "s1-com-open"
+      ],
       "sections": [
         {
           "id": "sec-l-agency-basics-0",
@@ -205,7 +208,10 @@
         "emp-06",
         "emp-07"
       ],
-      "prepares": [],
+      "prepares": [
+        "s1-emp-guided",
+        "s1-emp-open"
+      ],
       "sections": [
         {
           "id": "sec-l-employment-protection-0",

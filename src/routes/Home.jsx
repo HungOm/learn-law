@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useStudy } from '../state/StudyContext.jsx';
 import * as sched from '../lib/scheduler.js';
 import * as lessonsLib from '../lib/lessons.js';
-import { ArrRow, CountUp, ProgressRing, TodayCard } from '../components/Bits.jsx';
+import { ArrRow, CountUp, Notice, ProgressRing, TodayCard } from '../components/Bits.jsx';
 import CurriculumMap from '../components/CurriculumMap.jsx';
 import { TERMS } from '../lib/glossary.js';
 import { plural } from '../lib/format.js';
@@ -23,9 +23,24 @@ export default function Home() {
     <div className="wrap wrap--dash">
       <h1>Malaysian law, from zero</h1>
       <p className="lede">
-        A sixteen-module curriculum. Progress is gated on whether you can write a
+        A twenty-four-module curriculum. Progress is gated on whether you can write a
         competent answer, not on how much you have read.
       </p>
+
+      {/* Said on the first screen, before anything is learned, and not buried in
+          Settings. The readership includes adults who never got the chance to go
+          to university — the readers most likely to believe a study site is a
+          route to practising, and the ones a wrong belief costs most. It is
+          stated plainly and then the page moves on: the point is to be accurate,
+          not to discourage. */}
+      <Notice>
+        <strong>This is not a law degree, and it cannot become one.</strong> Only a
+        university accredited by the Malaysian Qualifications Agency can award an LLB,
+        and only the Legal Profession Qualifying Board decides who may practise law in
+        Malaysia. Nothing here counts towards either, and no part of this site is a
+        qualification. What it can do is teach you the law properly, and leave you
+        ready for a course that does count.
+      </Notice>
 
       {/* The hero and the day's card are one unit: what you have done, and what
           to do next. Stacked in source order so a phone is unaffected; a wide

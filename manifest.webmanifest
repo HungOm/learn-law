@@ -1,21 +1,49 @@
 {
-  "name": "Malaysian law — self-study",
-  "short_name": "Warta",
-  "description": "A self-directed curriculum in Malaysian law: lessons, spaced review, quizzes and problem questions.",
+  "name": "ST Chambers — Malaysian law, from zero",
+  "short_name": "ST Chambers",
+  "description": "ST Chambers: a self-directed curriculum in Malaysian law — lessons, spaced review, quizzes, case reading, guided writing and problem questions.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "lang": "en",
   "dir": "ltr",
-  "categories": ["education", "books"],
+  "categories": [
+    "education",
+    "books"
+  ],
   "background_color": "#FCFBF9",
   "theme_color": "#FCFBF9",
   "icons": [
-    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "./icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
-    { "src": "./icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
-    { "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
   ]
 }

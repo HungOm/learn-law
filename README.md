@@ -1,4 +1,6 @@
-# Malaysian law — self-study
+# ST Chambers
+
+**Malaysian law, from zero.**
 
 A study app for working through Malaysian law from zero. Content is JSON in the
 repo; scheduling is FSRS-6 running in the browser; progress lives in IndexedDB.

@@ -94,6 +94,15 @@ export default function Rail() {
           })}
         </nav>
 
+        {/* On every page, because on a phone the same statement on Home sits
+            696px down — one scroll below the fold on the device most of this
+            readership uses. Measured by site-59; a statement that needs a
+            scroll is not the permanent one the roadmap asked for. */}
+        <p className="rail-foot small">
+          This site is not a qualification and confers nothing. Only an accredited
+          university awards a law degree, and only the LPQB decides who may practise.
+        </p>
+
         <p className="rail-foot small">
           XP counts work done, not law known. The numbers that make a claim about
           what you know are on{' '}
@@ -132,29 +141,37 @@ export default function Rail() {
 }
 
 /**
- * The mark and the name, always set together. The scales alone are the app
- * icon and nothing else — at favicon size there is no room for words, and
- * everywhere else there is.
+ * The mark and the name, set together.
  *
- * One geometry serves three sizes: this, public/favicon.svg, and the level-up
- * crest in Overlays.jsx. If the drawing changes, it changes in all three.
+ * ST Chambers' registry chop, in three cuts rather than one geometry at three
+ * sizes — because the name is INSIDE this mark, and a word has a legibility
+ * floor a drawing does not:
+ *
+ *   full     >= 110px   border, initials, rule, "CHAMBERS"   Overlays.jsx crest
+ *   medium   32-109px   border, initials, rule               here
+ *   minimal  < 32px     border, initials                     public/favicon.svg
+ *
+ * 110px is not a taste call: the word is 10 units on a 100-unit box, so it
+ * renders at a tenth of the mark's width, and 11px x (100 / 10) = 110px. Change
+ * the drawing and change it in all three.
  */
 function Wordmark() {
   return (
     <NavLink to="/" className="wordmark" end>
+      {/* The MEDIUM cut of the chop: border, initials, rule — no "CHAMBERS".
+          The word is 10 units on a 100-unit box, so it needs 110px of rendered
+          width to clear the 11px floor, and this box is 32px. The name is set
+          beside it in real Spectral anyway; printing it twice, once at 3.2px,
+          would be worse than not printing it. Full cut on the level-up crest,
+          minimal cut in public/favicon.svg. */}
       <svg className="wordmark-seal" viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="50" cy="50" r="40" className="wm-ring" opacity="0.55" />
-        <g className="wm-mark">
-          <line x1="50" y1="26" x2="50" y2="76" />
-          <line x1="28" y1="38" x2="72" y2="38" />
-          <path d="M28 38 L20 60 h16 Z" />
-          <path d="M72 38 L64 60 h16 Z" />
-          <line x1="38" y1="76" x2="62" y2="76" />
-        </g>
+        <rect x="8" y="14" width="84" height="72" rx="2" className="wm-chop-edge" />
+        <text x="50" y="60" textAnchor="middle" className="wm-chop-st">ST</text>
+        <line x1="26" y1="70" x2="74" y2="70" className="wm-chop-rule" />
       </svg>
       <span className="wordmark-text">
-        <span className="wordmark-name">Malaysian law</span>
-        <span className="wordmark-sub">Self-study, zero to legal reasoning</span>
+        <span className="wordmark-name">ST Chambers</span>
+        <span className="wordmark-sub">Malaysian law, from zero</span>
       </span>
     </NavLink>
   );

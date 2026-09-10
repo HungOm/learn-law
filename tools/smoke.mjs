@@ -96,7 +96,15 @@ if (missing.length) {
 }
 
 // Serve the built site, so this tests what actually ships.
-const port = 4178;
+// A port of our own, per process. Fixed ports collide once more than one
+// session runs the chain: `--strictPort` makes vite exit rather than fall back,
+// and the readiness probe below then succeeds against the OTHER session's
+// preview — so the walk starts honestly and dies with ERR_CONNECTION_REFUSED
+// the moment they finish. No guard can see that: the port is genuinely serving
+// when it is checked. Reproduced on responsive.mjs before this was applied
+// here — two concurrent runs on a pinned port, one fails; on per-process
+// ports, both pass. Matches diagram-cases.mjs and responsive.mjs.
+const port = 4380 + (process.pid % 40);
 const server = spawn('npx', ['vite', 'preview', '--port', String(port), '--strictPort'],
   { stdio: 'ignore', detached: false });
 const base = `http://localhost:${port}/`;

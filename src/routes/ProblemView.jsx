@@ -9,6 +9,7 @@ import { Rehearsal, RehearsalScore } from '../components/Rehearsal.jsx';
 import { CalibrationLine } from '../components/Insight.jsx';
 import { fanfare } from '../lib/fx.js';
 import { copyText, daysAgo, fmtClock, plural, round1 } from '../lib/format.js';
+import PrintSheet from '../components/PrintSheet.jsx';
 import NotFound from './NotFound.jsx';
 
 const EMPTY_RUN = { stage: 'read', text: '', startedAt: null, elapsedMs: 0, predicted: null, awarded: {} };
@@ -18,6 +19,10 @@ export default function ProblemView() {
   const navigate = useNavigate();
   const { cat, award, toast } = useStudy();
   const p = cat.byId.problem[id];
+  // Which lesson sends a reader here. Problems carry a moduleId but no lesson,
+  // and a marker holding the printed sheet needs to know the topic it belongs
+  // to, so it is read off the lesson that prepares it.
+  const preparedBy = p ? cat.lessons.find(l => (l.prepares || []).includes(p.id)) : null;
 
   const [run, setRun] = useState(null);
   const [history, setHistory] = useState([]);
@@ -223,6 +228,7 @@ export default function ProblemView() {
       <MarkStage
         p={p} run={run} update={update} total={total} persist={persist} header={header}
         toast={toast}
+        moduleTitle={mod.title} lessonTitle={preparedBy?.title}
         onSave={async () => {
           const unmarked = (p.rubric || []).filter(r => run.awarded[r.id] === undefined);
           if (unmarked.length && !window.confirm(
@@ -379,7 +385,7 @@ function PredictStage({ p, run, total, header, onBack, onReveal, toast }) {
   );
 }
 
-function MarkStage({ p, run, update, total, persist, header, onSave, toast }) {
+function MarkStage({ p, run, update, total, persist, header, onSave, toast, moduleTitle, lessonTitle }) {
   const rubric = [...(p.rubric || [])].sort((a, b) => prob.bandRank(a.band) - prob.bandRank(b.band));
   const score = prob.scoreOf(p, run.awarded);
   const markedCount = rubric.filter(r => run.awarded[r.id] !== undefined).length;
@@ -401,6 +407,31 @@ function MarkStage({ p, run, update, total, persist, header, onSave, toast }) {
         <summary>Your answer — {prob.countWords(run.text)} words in {fmtClock(run.elapsedMs)}</summary>
         <div className="answer-read">{run.text}</div>
       </details>
+
+      {/* Marking yourself is the weakest part of studying alone: the gap between
+          what you meant and what you wrote is invisible from the inside. This
+          takes the answer off the screen and onto paper, with the question and
+          an empty rubric, so somebody else can read it. */}
+      <p className="btn-row">
+        <button type="button" className="btn" onClick={() => window.print()}>
+          Print or save as PDF — for someone else to mark
+        </button>
+      </p>
+      <PrintSheet
+        kind="problem"
+        refId={p.id}
+        title={p.title}
+        moduleTitle={moduleTitle}
+        moduleId={p.moduleId}
+        lessonTitle={lessonTitle}
+        level={p.kind}
+        minutes={p.minutes}
+        marks={total}
+        brief={p.task}
+        text={run.text}
+        rubric={rubric}
+        words={prob.countWords(run.text)}
+      />
 
       <div className="running">
         <span className="running-n"><CountUp value={score} decimals={score % 1 ? 1 : 0} /></span>

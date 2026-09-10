@@ -16,7 +16,7 @@ import { useId } from 'react';
  *
  * What it must never become:
  *
- *   - an identifier. Sixteen categories is far past what colour can carry
+ *   - an identifier. Twenty-four categories is far past what colour can carry
  *     (DESIGN.md 2.9), so the module's NAME is on screen every time this is,
  *     and it is the name that identifies. The field is reinforcement.
  *   - data. No orb count, size, speed or position means a quantity. Nothing
@@ -52,7 +52,7 @@ const ORB_COUNT = 6;
 
 /* Only used when the caller has no catalogue to hand — the first render before
    content resolves, or a route that does not know its modules. Six ids spread
-   across the sixteen so the field is varied rather than one hue. An id that no
+   across the twenty-four so the field is varied rather than one hue. An id that no
    longer exists is not a failure: it simply matches no [data-module] rule and
    inherits the root default. */
 const FALLBACK = [
@@ -208,12 +208,16 @@ export function LiquidGoo({ module = null, className = '' }) {
  *      the block's left padding, which is wider than the band can grow, so no
  *      text can reach it at any viewport width.
  *   3. the swell — a large --module-ink blob at --liquid-alpha-soft sweeping
- *      the panel, which text DOES sit over. Measured across all sixteen
- *      modules in both themes: --text-primary over tint + 12% ink bottoms out
- *      at 9.4:1, comfortably past the AAA 7:1 floor.
+ *      the panel, which text DOES sit over. Re-measured across all TWENTY-FOUR
+ *      modules in both themes after the palette resize — the original figure
+ *      covered sixteen, and resizing the set moves every hue, so the old
+ *      measurement was void rather than merely incomplete. --text-primary over
+ *      tint + 12% ink bottoms out at 10.72:1 light (module 07) and 9.37:1 dark
+ *      (module 15), comfortably past the AAA 7:1 floor.
  *
  * The measurement is also the constraint: at the same 12% wash
- * --text-secondary bottoms out at 4.6:1, under its 5:1 floor. So a brand block
+ * --text-secondary bottoms out at 4.81:1 light and 4.64:1 dark, under its 5:1
+ * floor at twenty-four modules exactly as it was at sixteen. So a brand block
  * sets --text-primary on its contents and secondary text does not go in one.
  * Use .brandblock-kicker for the eyebrow — it is the metadata line, set in the
  * apparatus face at label size, in an ink that survives the wash.

@@ -1,0 +1,195 @@
+/* ---------- paper ----------
+   The printable sheet, and the only stylesheet in this app that is not about a
+   screen.
+
+   Two things make it different from everything else in src/styles. First, it
+   sets ink and paper as literal black and white rather than through the palette:
+   the palette answers to the reader's theme, and a reader in dark mode printing
+   a page of dark ink on a dark ground would waste both the paper and the toner.
+   Paper is white here whatever the screen is doing. Second, it hides the entire
+   application rather than restyling it — the sheet is portaled to <body>, so
+   everything else at that level goes away and what remains is a document.
+
+   Sizes are in pt because that is what a printer works in, and because a value
+   in px means nothing once the page is 210mm wide. */
+
+/* On screen the sheet does not exist. It is markup waiting for a print. */
+@media screen {
+  .printsheet { display: none; }
+}
+
+@media print {
+  /* Everything at body level that is not the sheet: the shell, the phone
+     navigation bar, toasts, overlays, the confetti canvas. */
+  body > *:not(.printsheet) { display: none !important; }
+
+  @page {
+    margin: 18mm 16mm;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .printsheet {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 11pt;
+    line-height: 1.5;
+    color: black;
+    background: white;
+  }
+
+  /* Styled paragraphs, not headings: see PrintSheet.jsx. */
+  .printsheet .ps-title,
+  .printsheet .ps-h {
+    font-family: var(--font-serif);
+    color: black;
+    margin: 0;
+  }
+
+  .ps-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 8pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 2mm;
+  }
+
+  .ps-title {
+    font-size: 17pt;
+    line-height: 1.2;
+    margin-bottom: 4mm;
+  }
+
+  /* Identification. A marker holding two sheets from the same module has to be
+     able to tell them apart without opening the app, so this block carries the
+     module, the lesson, the exercise's own reference and the date. */
+  .ps-ident {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1mm 4mm;
+    margin: 0 0 5mm;
+    padding: 3mm 0;
+    border-top: 0.4pt solid black;
+    border-bottom: 0.4pt solid black;
+    font-family: var(--font-sans);
+    font-size: 9pt;
+  }
+  .ps-ident > div { display: contents; }
+  .ps-ident dt { font-weight: 600; }
+  .ps-ident dd { margin: 0; }
+
+  /* Two ruled fields. The app never asks a reader for their name and is not
+     going to start in order to print one — so the paper asks instead. */
+  .ps-byline {
+    display: flex;
+    gap: 8mm;
+    margin: 0 0 6mm;
+  }
+  .ps-rule {
+    flex: 1;
+    border-bottom: 0.4pt solid black;
+    padding-bottom: 6mm;
+    position: relative;
+  }
+  .ps-rule-label {
+    font-family: var(--font-sans);
+    font-size: 8pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .ps-brief {
+    margin: 0 0 6mm;
+    padding-left: 4mm;
+    border-left: 1.5pt solid black;
+  }
+  .ps-brief .ps-h,
+  .ps-answer .ps-h {
+    font-size: 10pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: var(--font-sans);
+    margin-bottom: 2mm;
+  }
+  .ps-brief p { margin: 0; }
+
+  .ps-answer p { margin: 0 0 3mm; }
+  .ps-answer p:last-child { margin-bottom: 0; }
+  .ps-empty { font-style: italic; }
+
+  /* The rubric starts on its own page so the reader forms a view of the writing
+     before they meet the bands — the same order the app makes the writer work
+     in, and the reason the bands are worth anything. */
+  .ps-feedback {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .ps-note {
+    margin: 0 0 5mm;
+    max-width: 46em;
+  }
+
+  .ps-rubric {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin: 0 0 8mm;
+  }
+  .ps-rubric th,
+  .ps-rubric td {
+    border-bottom: 0.4pt solid black;
+    padding: 2.5mm 3mm 2.5mm 0;
+    text-align: left;
+    vertical-align: top;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .ps-rubric thead th {
+    font-family: var(--font-sans);
+    font-size: 8pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom-width: 1pt;
+  }
+  .ps-rubric tr { break-inside: avoid; page-break-inside: avoid; }
+  .ps-band { font-weight: 600; white-space: nowrap; padding-right: 4mm; }
+  .ps-self { font-weight: 400; font-style: italic; white-space: normal; }
+  .ps-tick { width: 8mm; }
+  .ps-marks { width: 14mm; text-align: right; font-family: var(--font-sans); }
+
+  /* A box to tick, drawn rather than typed: a checkbox glyph prints at whatever
+     size the font decides, and half of them do not print at all. */
+  .ps-box {
+    display: inline-block;
+    width: 4mm;
+    height: 4mm;
+    border: 0.6pt solid black;
+  }
+
+  .ps-comments .ps-h {
+    font-family: var(--font-sans);
+    font-size: 9pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 5mm 0 3mm;
+  }
+  /* Ruled space. The comment is the part that teaches, so it gets room on the
+     page rather than a box the size of a margin note. */
+  .ps-line {
+    display: block;
+    border-bottom: 0.4pt solid black;
+    height: 8mm;
+  }
+
+  .ps-foot {
+    margin-top: 8mm;
+    padding-top: 3mm;
+    border-top: 0.4pt solid black;
+    font-family: var(--font-sans);
+    font-size: 8pt;
+  }
+}

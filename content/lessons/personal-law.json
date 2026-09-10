@@ -18,7 +18,10 @@
         "fam-06",
         "fam-07"
       ],
-      "prepares": [],
+      "prepares": [
+        "s1-fam-guided",
+        "s1-fam-open"
+      ],
       "sections": [
         {
           "id": "sec-l-family-two-systems-0",
@@ -182,7 +185,10 @@
         "sy-07",
         "sy-08"
       ],
-      "prepares": [],
+      "prepares": [
+        "s1-sy-guided",
+        "s1-sy-open"
+      ],
       "sections": [
         {
           "id": "sec-l-syariah-jurisdiction-0",

@@ -383,7 +383,7 @@
 
 /* ---------- the curriculum map ----------
  *
- * Sixteen module nodes. The map used to be one 58rem row inside a 68ch column
+ * Twenty-four module nodes. The map used to be one 58rem row inside a 68ch column
  * with `overflow-x: auto`, which on every screen in the world meant a reader
  * saw six modules and had to discover a horizontal scrollbar to learn that the
  * other ten existed. A curriculum that answers "where am I" cannot be the one
@@ -424,7 +424,8 @@
   overflow: visible;
 }
 
-/* Four across, then eight. Sixteen modules divide by both, so the last row is
+/* Four across, then eight. Twenty-four divides by both (6 rows, then 3), so
+   the last row is
    never a stranded one or two — which is what a fluid `auto-fit` gave at most
    widths (5 + 5 + 5 + 1 on a tablet, measured). The count is fixed and the
    nodes take whatever width the pane has; a plate that grows is better than a
@@ -495,7 +496,7 @@
    these behind — so the ring, the track and the arc had no rules at all, which
    in SVG does not fail loudly: an unstyled <circle> is a solid BLACK disc,
    because `fill` defaults to black and `stroke` to none. The map rendered as
-   sixteen filled circles with their labels overlapping.
+   twenty-four filled circles with their labels overlapping.
 
    Worth stating plainly, because it is the reason this happened: deleting a
    duplicate is only safe when the survivor is complete, and "game.css declares
@@ -592,7 +593,7 @@
             rows of four; below this it would be narrower, not wider
      68rem  ~125px at eight across — the last step is air, not size
 
-   Sixteen divides by four and by eight, so no arrangement here ends in a
+   Twenty-four divides by four and by eight, so no arrangement here ends in a
    stranded row. .mapwrap's own padding cannot live in these blocks: an element
    is not a descendant of itself, so it stays on the viewport ladder below. */
 
@@ -1204,6 +1205,9 @@
 .crest-ring  { fill: none; stroke: var(--signal-mastery); stroke-width: 2.5; }
 .crest-ring2 { fill: none; stroke: var(--signal-mastery); stroke-width: 1; opacity: 0.45; stroke-dasharray: 3 5; }
 .crest-mark  { stroke: var(--text-primary); stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+/* The rank numeral sits inside the chop's stamp, so the stamp is drawn
+   smaller than the rings and the numeral keeps the centre. */
+.levelup-crest .levelup-num { z-index: 1; }
 /* The rank pip matches .rank-level in the rail — the same disc meaning the same
    thing in two places. It was white-on-gold, which is 3.1:1 and was carrying a
    numeral. */
