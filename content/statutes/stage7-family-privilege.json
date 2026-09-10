@@ -1,0 +1,205 @@
+[
+  {
+    "id": "st-lrmda-s53-54",
+    "moduleId": "m16-family",
+    "lessonId": "l-divorce-grounds",
+    "act": "Law Reform (Marriage and Divorce) Act 1976",
+    "actId": "law-reform-marriage-divorce-1976",
+    "provision": "Sections 53 and 54, read with section 106",
+    "order": 1,
+    "find": "Published without charge by the Attorney General's Chambers at the Laws of Malaysia portal, and sold cheaply in print. Open Part VI for the dissolution provisions and read section 53 before section 54; then find section 106 separately, because it is a precondition and not part of the ground.",
+    "why": "The divorce grounds lesson rests on a structure that reads oddly until you see it in the Act: there is one ground, and the facts are the way it is proved. Reading section 53 and section 54 in that order is what makes the point visible, and section 106 is the step that stops most petitions before either matters.",
+    "read": [
+      {
+        "passage": "Section 53, and the single thing it requires the court to be satisfied of.",
+        "look_for": "Note that it states one thing, not a list. Write it down before reading further — everything in the next section is subordinate to it, and readers who meet the facts first never see that."
+      },
+      {
+        "passage": "Section 54, and the facts it sets out.",
+        "look_for": "Ask what each fact is evidence OF. They are not alternative grounds; they are routes to the single matter section 53 names, and the difference decides how a petition is pleaded."
+      },
+      {
+        "passage": "Section 106, and what it requires before a petition.",
+        "look_for": "Read it for who must do what, and for the exceptions. A requirement with exceptions is really two rules, and the exceptions are where a particular case will or will not fit."
+      }
+    ],
+    "questions": [
+      {
+        "q": "How many grounds for divorce does this Act provide, and what are the facts in section 54 doing?",
+        "model": "A good answer says one, and then explains the facts as means of proving it rather than as alternatives. The test of understanding is whether the answer can say why establishing a fact is not automatically the end of the matter — the court still has to be satisfied of the thing section 53 names."
+      },
+      {
+        "q": "What does section 106 require, and what happens to a petition that ignores it?",
+        "model": "A good answer states the requirement and then locates the exceptions, because the practical question is always whether this case falls inside one. It should be honest that the consequence of non-compliance is a procedural question to be checked in the Act and the rules rather than asserted from memory."
+      },
+      {
+        "q": "Your lesson says the civil and Syariah systems cannot swap. Where does that line come from, and is it in this Act?",
+        "model": "A good answer looks outside this statute for the answer — the jurisdictional line is constitutional, and this Act operates within it rather than creating it. Recognising that a statute is silent on something you expected it to govern is a real reading skill, and this is a clean example of it."
+      }
+    ],
+    "trap": "Reading section 54 as a list of grounds. It is the most common description of it in ordinary speech, and it inverts the structure the Act actually has — which then makes section 53 look like a formality rather than the thing being proved.",
+    "source": "Law Reform (Marriage and Divorce) Act 1976, ss 53 and 54 and s 106 — as stated in the source field and reading assignment of the divorce grounds lesson in this corpus.",
+    "verify": "Read sections 53, 54 and 106 in the current version published by the Attorney General's Chambers, and check the currency date printed on the front matter of that reprint. Confirm the exceptions to section 106 from the section itself rather than from this page.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-lrmda-s76",
+    "moduleId": "m16-family",
+    "lessonId": "l-matrimonial-assets",
+    "act": "Law Reform (Marriage and Divorce) Act 1976",
+    "actId": "law-reform-marriage-divorce-1976",
+    "provision": "Section 76",
+    "order": 2,
+    "find": "In the same free publication from the Attorney General's Chambers. Section 76 sits in the part dealing with the consequences of dissolution; read the whole section including its subsections, because the list it contains is the operative part and it is easy to stop at the first sentence.",
+    "why": "This is the section a client actually cares about, and it is a good example of a provision that hands a court a discretion and then structures it. The matters the court must have regard to are where the argument happens, and one of them is the reason this section is taught rather than merely cited.",
+    "read": [
+      {
+        "passage": "The words giving the court its power, and any condition on when it arises.",
+        "look_for": "Note what has to have happened before the power exists at all. A discretion with a precondition is two questions, and the first one is often conceded too quickly."
+      },
+      {
+        "passage": "The list of matters the court must have regard to.",
+        "look_for": "Read every item, and write down which of them are about money and which are not. The non-financial ones are the point of the section."
+      },
+      {
+        "passage": "Anything distinguishing assets by how they were acquired.",
+        "look_for": "Ask whether the Act treats all matrimonial assets identically. If it does not, find the words that make the distinction and work out what turns on them."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What must the court have regard to, and which item on that list is doing work that a pure contributions approach would miss?",
+        "model": "A good answer reproduces the structure of the list rather than a summary of it, and then identifies the limb that recognises a contribution not measured in money. Explaining why that limb exists — that a division counting only financial contribution would systematically undervalue one spouse's work — is the part that shows the section has been understood rather than read."
+      },
+      {
+        "q": "Is this section a formula or a discretion, and what follows for how you argue under it?",
+        "model": "A good answer sees it as a structured discretion and draws the practical consequence: there is no percentage to compute, so an argument works by directing the court to the listed matters and applying them to specific facts. An answer that produces a figure without a route to it has not used the section."
+      }
+    ],
+    "trap": "Assuming an equal split as the starting point and treating the listed matters as reasons to depart from it. The section does not begin there, and an argument built on that assumption is arguing against a rule the Act does not contain.",
+    "source": "Law Reform (Marriage and Divorce) Act 1976, s 76 — as stated in the source field and reading assignment of the matrimonial assets lesson in this corpus.",
+    "verify": "Read section 76 in the current published version and check the currency date on the reprint's front matter. This section has been amended; confirm the list of matters from the section itself before relying on any account of it, including this one.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-lrmda-s88",
+    "moduleId": "m16-family",
+    "lessonId": "l-children-welfare",
+    "act": "Law Reform (Marriage and Divorce) Act 1976",
+    "actId": "law-reform-marriage-divorce-1976",
+    "provision": "Section 88",
+    "order": 3,
+    "find": "Same free publication from the Attorney General's Chambers. Section 88 is in the part dealing with children; read the sections immediately around it as well, because custody, care and maintenance are dealt with across several provisions and section 88 is the one that states the governing principle.",
+    "why": "The children lesson turns on a principle that sounds obvious and is not: something is paramount, which is a stronger word than important. This section is where that word appears, and reading it is the difference between knowing the phrase and knowing what it displaces.",
+    "read": [
+      {
+        "passage": "The words stating what is paramount.",
+        "look_for": "Note the exact word and what it is paramount over. Paramount is not the same as a factor to be weighed, and the section is choosing between those two ideas."
+      },
+      {
+        "passage": "Any presumption the section contains, and any words qualifying it.",
+        "look_for": "Look for whether a presumption is stated and whether it can be displaced. A rebuttable presumption and a rule look identical until you find the words that rebut."
+      },
+      {
+        "passage": "Anything about the wishes of a parent or of the child.",
+        "look_for": "Ask how those wishes relate to the paramount consideration. They are not the same thing, and the section's treatment of them tells you how much weight either can carry."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does it mean for something to be paramount rather than merely relevant, and what does that do to a parent's claim?",
+        "model": "A good answer distinguishes a consideration that outweighs others from one that is placed above them, and then draws the consequence: a parent's interest is not a competing right of the same kind, and an argument framed as one has misread the section. The distinction is the whole reason the word was chosen."
+      },
+      {
+        "q": "Your lesson separates custody from care and control from access. Does the section use those words, and what follows if it does not?",
+        "model": "A good answer reports what the section actually says rather than what the vocabulary suggests, and treats the distinction as one to trace through the Act and the case law. Noticing that a familiar set of terms is not all in the statute is exactly the habit the reading tier exists to build."
+      }
+    ],
+    "trap": "Treating welfare as a tiebreaker applied after the parents' claims are weighed. It is the question, not the tiebreaker, and an argument that reaches it last has structured itself the wrong way round.",
+    "source": "Law Reform (Marriage and Divorce) Act 1976, s 88 — as stated in the reading assignment of the children and welfare lesson in this corpus, whose source names Part VIII and the Guardianship of Infants Act 1961.",
+    "verify": "Read section 88 and the provisions around it in the current published version, and check the reprint's currency date. Read the Guardianship of Infants Act 1961 alongside it — the two are read together and this page covers only one of them.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-ea-s126-129",
+    "moduleId": "m22-ethics",
+    "lessonId": "l-confidence-and-privilege",
+    "act": "Evidence Act 1950",
+    "actId": "evidence-act-1950",
+    "provision": "Sections 126 to 129, and the proviso to section 126",
+    "order": 1,
+    "find": "The Evidence Act 1950 is published free by the Attorney General's Chambers and is cheap in print. Read sections 126 to 129 as a block rather than separately — they set up a protection, its exceptions, who may waive it and how far it reaches — and read the proviso to section 126 slowly.",
+    "why": "The confidence and privilege lesson draws a line most people cannot draw: confidentiality is a professional duty, privilege is a rule about what a court can compel. This is where the second one lives, and the exceptions in the proviso are the part that decides real cases.",
+    "read": [
+      {
+        "passage": "Section 126, and precisely whose communications it protects.",
+        "look_for": "Identify who is prevented from disclosing, and note that this is a rule addressed to one party. Ask what that implies about who the protection actually belongs to."
+      },
+      {
+        "passage": "The proviso to section 126, and the situations it excepts.",
+        "look_for": "Take the exceptions one at a time and ask what each is worried about. They are not a single idea, and an answer that treats them as one will apply the wrong one."
+      },
+      {
+        "passage": "Sections 127 to 129, and what each adds.",
+        "look_for": "One extends the protection to other people, and one deals with the client's own position. Work out which is which, because they pull in opposite directions."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Whose privilege is it, and why does the answer matter for waiver?",
+        "model": "A good answer identifies the holder and then draws the consequence: if it belongs to the client, the advocate cannot waive it and cannot be relieved of it by their own convenience. The reasoning from who holds a right to who may give it up is the point, and it is more useful than the label."
+      },
+      {
+        "q": "The proviso excepts certain communications. What do those exceptions have in common, and what does that tell you about the purpose of the protection?",
+        "model": "A good answer reads the exceptions as a group and infers the limit of the rule from them — protection is for obtaining legal advice, not for what the lesson would call using a lawyer as an instrument. Reasoning from exceptions back to purpose is a transferable statutory technique and it is what this question is really testing."
+      },
+      {
+        "q": "Your lesson distinguishes confidentiality from privilege. Which of the two do these sections govern, and what governs the other?",
+        "model": "A good answer confines these sections to what a court may compel, and locates the professional duty elsewhere — in the regulatory instruments made under the Legal Profession Act 1976 rather than in the Evidence Act. It should say that the duty is wider and the privilege narrower, and that a communication can be confidential without being privileged."
+      }
+    ],
+    "trap": "Treating privilege as a general right of secrecy that a lawyer may assert whenever a client would prefer it. It is a specific rule with express exceptions, and the exceptions are where the cases are.",
+    "source": "Evidence Act 1950, ss 126 to 129 and the proviso to s 126 — as stated in the source field and reading assignment of the confidence and privilege lesson in this corpus.",
+    "verify": "Read sections 126 to 129 in the current published version of the Evidence Act 1950 and check the currency date on the reprint's front matter. Confirm the exceptions from the proviso itself; this page names none of them.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-goia-s11",
+    "moduleId": "m16-family",
+    "lessonId": "l-children-welfare",
+    "act": "Guardianship of Infants Act 1961",
+    "actId": "guardianship-infants-act-1961",
+    "provision": "Section 11",
+    "order": 4,
+    "find": "Published free by the Attorney General's Chambers at the Laws of Malaysia portal. There is no verified deep link for this Act in this corpus yet, so search the portal by title rather than trusting a constructed URL. Read section 11 together with the sections defining who a guardian is; the section assumes that vocabulary.",
+    "why": "The children and welfare lesson names two statutes and says they are read together rather than one replacing the other. This is the second of them, and reading it is how you find out what that means: the 1976 Act governs custody on divorce, and this Act governs guardianship whether or not there is a divorce. A reader who knows only the first has a rule that runs out the moment the parents were never married.",
+    "read": [
+      {
+        "passage": "Section 11, and what the court is directed to regard.",
+        "look_for": "Compare it word for word with the equivalent direction in the 1976 Act. Two statutes stating the same principle in different words is either a distinction or a drafting accident, and deciding which is the exercise."
+      },
+      {
+        "passage": "Any matters the section lists for the court to consider.",
+        "look_for": "Note whether the list is exhaustive or illustrative. That single question decides whether an argument outside the list is available at all."
+      },
+      {
+        "passage": "The words describing whose application the court may act on.",
+        "look_for": "Ask who can bring a question about a child to court under this Act. It is a wider group than divorce proceedings allow, and that is most of why this Act matters separately."
+      }
+    ],
+    "questions": [
+      {
+        "q": "This Act and the 1976 Act both deal with children. When would you reach for this one?",
+        "model": "A good answer identifies the gap the 1976 Act leaves — it operates on the dissolution of a marriage — and says that guardianship questions arise outside that. It should give a concrete situation where only this Act is available. An answer that treats the two as interchangeable has not seen why the lesson insists they are read together."
+      },
+      {
+        "q": "Does section 11 state the same principle as section 88 of the 1976 Act, and how would you argue it if the wording differs?",
+        "model": "A good answer compares the actual words rather than the summaries, and is willing to conclude either way. If the wording differs, the argument is about whether the difference was intended to change anything, which is a standard interpretive move; if it does not, the point is that the principle is consistent across the civil regime. Either conclusion is fine; asserting one without having compared the words is not."
+      }
+    ],
+    "trap": "Assuming that because both statutes protect the child's welfare, it does not matter which you cite. Jurisdiction, who may apply, and what orders are available differ, and citing the wrong Act can mean citing one that does not reach your client's situation at all.",
+    "source": "Guardianship of Infants Act 1961, s 11 — as stated in the source field of the children and welfare lesson in this corpus, which names it alongside s 88 of the Law Reform (Marriage and Divorce) Act 1976.",
+    "verify": "Read section 11 in the current published version and check the currency date on the front matter. This corpus has no verified deep link or currency date for this Act yet, so confirm you are reading a current reprint rather than an archived copy before relying on it.",
+    "lastVerified": "2026-09-11"
+  }
+]

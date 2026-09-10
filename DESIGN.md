@@ -889,6 +889,91 @@ satisfied by accident: one CSS pixel per unit needs no pin, so
 `fontSize={15}` is 15px by construction and there is no constant in two files
 to drift.
 
+### Establishing that a check *can* fail
+
+The section above is about instruments that could not report a problem. This is
+the procedure that tells you which kind you have, and the two findings that
+produced it.
+
+**Use a known-bad input.** A syntax check on three files printed `PARSE OK` for
+all three while the parser had never run: the command piped to `tail`, and `&&`
+read the exit code off the *pipeline* rather than off the checker. Two sessions
+hit that same shape the same evening, in different commands. The second then hit
+a subtler variant — a control that could not fire, because the flag was only
+valid for stdin, so the real file and a deliberately broken one produced
+identical errors. Two identical errors read as "this tool is noisy", which is how
+a broken control gets ignored instead of fixed.
+
+There is a third way it goes wrong, and it is the hardest to catch because it
+looks like vigilance rather than silence: **a control that fires on everything.**
+A checker reporting findings on every input reads as thorough right up until
+someone asks what a clean run would look like.
+
+So: only a known-bad input separates the three.
+
+```
+<div><span></div>   must exit 1
+the real file       must exit 0
+```
+
+Both, every time, before a pass from that command means anything. And **predict
+the count before you look** — a hit count you cannot explain is a finding whether
+it is too high or too low.
+
+The same evening produced a worked example of a control that fires on everything.
+A first pass at diffing ten lessons' citations against the guided-reading tier
+used a nearest-Act-before-the-citation heuristic. It split "Law Reform (Marriage
+and Divorce) Act 1976" at the parenthesis, invented an Act called "Divorce) Act
+1976", filed `s 88` under the Guardianship Act and `Order 53` under the Federal
+Constitution — and produced a clean, plausible, complete table that was
+worthless. Nothing about the output announced it. What worked instead was reading
+the `source` and `reading` fields, where the Act and the provision are stated
+together by whoever wrote the lesson, rather than inferred from proximity.
+
+**And the rule that fell out of it, which is the most useful sentence in this
+file for anyone writing content:** a numbered provision in a lesson's `source` is
+a guided reading page that can exist; an Act named generally is not. Of ten
+lessons' citations, four were buildable and six were not, entirely on that
+distinction — and the six are correctly unbuildable, because writing a page for
+"the Trustee Act 1949" without a section means choosing a section, which on a law
+site is authoring a citation.
+
+**And a check earns its place by asking a question nobody is asking.**
+`tools/check-provisions.py` fires when one provision alias would gloss two
+different Acts. Hours after it was written, it caught `s 106` — cited in
+`l-divorce-grounds` for the conciliatory-body requirement of the Law Reform
+(Marriage and Divorce) Act 1976, against a `section-106` term scoped to the
+Evidence Act — in ten lessons its own author had just written and merged.
+
+Five gates were green at that merge: content, prose, density, glossary-density
+and statutes. The author was **not** looking and missing it; the question never
+occurred to him, and no instrument he had asked it either. He had also written
+that very checker a few hours earlier *because* `section 6` meant three Acts and
+`section 103` meant two — failure mode fully in mind, two terms disambiguated by
+hand — and walked into a third instance in his own content.
+
+**Knowing about a class of defect does not protect you from producing one.**
+Nobody holds a whole corpus in their head. That is the argument for the gate,
+and it is a better one than "look harder", which is what the flattering version
+of this story invites.
+
+**The fix is also a rule.** The checker offers two outs: rename the term so it
+stops auto-linking, or add it to REVIEWED. REVIEWED is for aliases where the
+*attribution heuristic misfired* — a second Act name sitting near a citation that
+belongs to only one of them. This was not that. Both readings were correct: the
+corpus genuinely cites s 106 of two Acts. Silencing it there would have hidden a
+true positive, and **a bucket that took both false positives and genuine
+ambiguity would degrade into a suppression list within a week.** So the term was
+renamed `Evidence Act section 106`, findable but no longer auto-linking — the
+same treatment as `section 6` and `section 103`.
+
+The linker matches one regex over the whole corpus and has no module scope, so
+"family-law readers get the 1976 Act, evidence readers get the Evidence Act" is
+not an available outcome — one term owns a string everywhere or none does. That
+was proposed here before anyone checked what the linker could do, which is its
+own instance of the trap two sections up: reasoning from what a reader should get
+without reading the mechanism.
+
 ### Green and invisible: when the gate sees content the app does not
 
 Twice in one session, in two different content tiers, a batch of authored

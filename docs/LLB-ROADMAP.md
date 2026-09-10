@@ -274,3 +274,85 @@ all.
 | Stage 5 | Assessment at standard — 41 problems now, ~300 wanted. |
 | **Verification** | **The largest debt.** Every proposition in the eight new subjects' lessons, cards and problems needs checking against a Malaysian text. They cite nothing by design, so nothing is *wrong*-with-authority — but nothing is confirmed either, and `books.json` reading lists for all eight are empty on purpose. |
 | Engine coverage | Every accessibility result in this repo is a Chrome result. See the note in DESIGN.md. |
+
+---
+
+## 10. The wall, found three times (2026-09-11)
+
+Three tiers stalled independently this week, and the stopping point was the same
+one each time. It is worth writing down because it is not a scheduling problem
+and no amount of authoring effort moves it.
+
+- **Stage 2** stopped at 30 of ~150 case readings. Not because 120 are hard to
+  write, but because the corpus cites about thirty judgments in total, and the
+  tier is built only from citations the corpus already carries.
+- **Stage 3** stopped at 43 provisions. Roughly a third of the provisions that
+  looked buildable turned out to be covered already inside broader pages.
+- **The writing tier's other half** — a guided reading for each of the ten
+  modules that have none — could not be built at all. Every numbered provision
+  those ten modules cite **already has a page**, owned by whichever module
+  claimed it first: Civil Law Act s 3 is `st-cla-s3` in m01, Article 121(1A) is
+  `st-fc-art121-1a` in m17, Tan Ying Hong is `x-tan-ying-hong` in m08. The
+  coverage rule in `check-statutes.py` forbids a second page on one provision,
+  and it is right to — two pages on section 3 would drift apart and one of them
+  would be wrong.
+
+**The corpus is smaller than the curriculum.** The constraint on all three tiers
+is source material, not labour. Everything these tiers can be built from is a
+citation someone has already verified, and the supply of those is exhausted at
+about thirty cases and forty-three provisions. Adding the next one is a syllabus
+decision — deciding which judgment a Malaysian law student should read — and
+that is not a gap this document can close by scheduling more work.
+
+**What the wall does NOT block, and what was done instead.**
+
+The writing tier needs no citation: it teaches a form. So the closable half was
+closed. `content/writing/stage6.json` adds fifteen exercises, one for each
+module that had none, and the tier is now 25 across all 24 modules —
+foundation 7, advanced 7, llb 11. Every exercise's `verify` field names what the
+reader must check rather than asserting it, which is why none of them needed a
+source this corpus does not have.
+
+And the guided-reading half turned out to be a **surfacing** problem wearing an
+authoring problem's coat. `l-equity-reception`'s whole argument rests on section
+3 of the Civil Law Act; there is an excellent guided reading of section 3, in
+m01, where an equity reader will never see it. `relatedForLesson` in
+`src/lib/statutes.js` and `src/lib/extracts.js` matches a page against a pointer
+the lesson itself already carries, and invents nothing. It is deliberately
+narrow — matching on the Act alone would put eleven Contracts Act pages under a
+lesson about agency — so `l-agency-basics` gets nothing, which is the honest
+answer.
+
+**Revised position: 193 notional hours, 4.0% of an LLB** (was 154h and 3.2%).
+The remaining stages are unchanged in size and two of them are now known to be
+gated on source material rather than on time.
+
+### 10.1 The wall moves when the corpus grows, and only then
+
+Within hours of the above being written, site-17 added ten lessons across four
+modules and the wall moved: **ten modules with no guided reading became eight.**
+That is the proof of the diagnosis rather than an exception to it. Nothing was
+unblocked by effort; it was unblocked by new lessons carrying new citations.
+
+Of the ten citations offered, four could be built and six could not, and the
+line between them is a single rule worth stating on its own:
+
+> **A numbered provision in a lesson's `source` is a guided reading page that
+> can exist. An Act named generally is not.**
+
+Built: `st-lrmda-s53-54`, `st-lrmda-s76`, `st-lrmda-s88` (m16-family, which had
+none and now has three) and `st-ea-s126-129` (m22-ethics). Refused: Order 53
+r 2(4), because `st-roc-o53` already covers the Order and a page on an Order
+covers its rules — extend it rather than add beside it; the Trustee Act 1949 and
+the Legal Profession Act 1976, both cited without a section; and — briefly — the
+Guardianship of Infants Act 1961 s 11, which was numbered and buildable but
+whose Act was not in `books.json`. site-62 added the entry within the hour and
+`st-goia-s11` was written, so m16-family went from nothing to four pages in a
+single evening. The lesson there: **the blocker was one line of registry, not a
+week of authoring**, and it was invisible until someone tried to build the page
+and was refused by the gate.
+
+**m15-equity-trusts is the instructive failure.** It gained two lessons and
+stayed on the gap list, because both cite Civil Law Act s 3 — already covered by
+`st-cla-s3` — and the National Land Code without a number. More lessons in a
+module does not move the wall. More *citations* does.

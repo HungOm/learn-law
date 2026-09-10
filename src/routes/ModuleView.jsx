@@ -10,6 +10,7 @@ import { LessonRow } from './LessonIndex.jsx';
 import * as prog from '../lib/progression.js';
 import { ProblemRow } from './Problems.jsx';
 import { BookRow, StatuteRow } from './Books.jsx';
+import { relatedActs } from '../lib/statutes.js';
 import { plural } from '../lib/format.js';
 import NotFound from './NotFound.jsx';
 
@@ -108,6 +109,55 @@ export default function ModuleView() {
 
       <h2>Statutes</h2>
       {m.statuteRefs.length ? m.statuteRefs.map(s => <StatuteRow key={s.id} s={s} />) : <p className="small">None.</p>}
+
+      <GuidedElsewhere m={m} cat={cat} />
     </div>
+  );
+}
+
+/**
+ * Guided readings of this module's own Acts, written under another module.
+ *
+ * Ten modules have no guided reading of their own, and not for want of one
+ * being written: every numbered provision they cite already HAS a page, owned
+ * by whichever module claimed it first, and `check-statutes.py` rightly forbids
+ * a second page on one provision. So a reader in Commercial Law is one hop from
+ * eleven guided readings of the Act their module runs on, with nothing on the
+ * page to say so.
+ *
+ * Deliberately a weaker claim than the lists above it, and separated so it
+ * reads as one. A page written FOR this module is a strong claim; a page
+ * surfaced here because the module declares the same Act is correct, useful and
+ * not the same thing — and flattening the two is how a reader stops checking.
+ * Same reasoning as the tiering in `ReadAlongside.jsx`.
+ */
+function GuidedElsewhere({ m, cat }) {
+  const groups = relatedActs(m.id, m.statutes);
+  if (!groups.length) return null;
+  return (
+    <>
+      <h2>Guided elsewhere in the course</h2>
+      <p className="small">
+        Guided readings of the Acts this module runs on, written for another
+        module's lesson. They open when that lesson is marked read.
+      </p>
+      {groups.map(g => (
+        <div className="book" key={g.actId}>
+          <div className="book-title">{g.act}</div>
+          <p className="book-byline">
+            {plural(g.list.length, 'guided reading')}, in{' '}
+            {[...new Set(g.list.map(x => x.moduleId))]
+              .map(id => cat.byId.module[id]?.title || id).join(', ')}
+          </p>
+          <p className="book-note">
+            {g.list.map((x, i) => (
+              <span key={x.id}>
+                {i ? ' · ' : ''}<Link to={`/statute/${x.id}`}>{x.provision}</Link>
+              </span>
+            ))}
+          </p>
+        </div>
+      ))}
+    </>
   );
 }
