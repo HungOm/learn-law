@@ -29,7 +29,7 @@ machinery around it.
 
 ### The mark
 
-The house mark is **ST Chambers' registry chop** — the impression a court stamp
+The house mark is **ST's Chambers' registry chop** — the impression a court stamp
 leaves on a filed document. ST for Shen Ting; *chambering* for the year a
 Malaysian law graduate spends reading in a real set before being called to the
 Bar.

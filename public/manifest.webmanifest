@@ -1,7 +1,7 @@
 {
-  "name": "ST Chambers — Malaysian law, from zero",
-  "short_name": "ST Chambers",
-  "description": "ST Chambers: a self-directed curriculum in Malaysian law — lessons, spaced review, quizzes, case reading, guided writing and problem questions.",
+  "name": "ST's Chambers — Malaysian law, from zero",
+  "short_name": "ST's Chambers",
+  "description": "ST's Chambers: a self-directed curriculum in Malaysian law — lessons, spaced review, quizzes, case reading, guided writing and problem questions.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

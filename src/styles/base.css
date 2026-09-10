@@ -109,7 +109,7 @@ a:hover { text-decoration-color: currentColor; }
 }
 
 /* ---------- the wordmark ----------
-   ST Chambers' registry chop and the name, set together. Unlike the scales it
+   ST's Chambers' registry chop and the name, set together. Unlike the scales it
    replaced, this mark CONTAINS the name in its full cut — so the cut changes
    with the size rather than the drawing staying constant: the word needs 110px
    of rendered width to clear the 11px floor, and this box is 32px. See the note

@@ -144,7 +144,7 @@ export default function Rail() {
 /**
  * The mark and the name, set together.
  *
- * ST Chambers' registry chop, in three cuts rather than one geometry at three
+ * ST's Chambers' registry chop, in three cuts rather than one geometry at three
  * sizes — because the name is INSIDE this mark, and a word has a legibility
  * floor a drawing does not:
  *
@@ -171,7 +171,7 @@ function Wordmark() {
         <line x1="26" y1="70" x2="74" y2="70" className="wm-chop-rule" />
       </svg>
       <span className="wordmark-text">
-        <span className="wordmark-name">ST Chambers</span>
+        <span className="wordmark-name">ST's Chambers</span>
         <span className="wordmark-sub">Malaysian law, from zero</span>
       </span>
     </NavLink>

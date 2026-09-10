@@ -76,7 +76,7 @@ export function ProgressRing({
  * not care about transition timing, and it also catches an h1 that changes
  * within a route, such as a loading state resolving into content.
  */
-export function useDocumentTitle(suffix = 'ST Chambers') {
+export function useDocumentTitle(suffix = "ST's Chambers") {
   useEffect(() => {
     const main = document.getElementById('main');
     if (!main) return undefined;

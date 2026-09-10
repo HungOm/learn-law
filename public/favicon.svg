@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- ST Chambers: the registry chop. One geometry, three cuts — this is the
+  <!-- ST's Chambers: the registry chop. One geometry, three cuts — this is the
        MINIMAL cut (border and initials only), because a favicon renders at
        16-32px and the word "CHAMBERS" is 10 units on a 100-unit box, so it
        would land at 3.2px. The full cut, with the word, is on the level-up

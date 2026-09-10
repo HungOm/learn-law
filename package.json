@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "ST Chambers: a self-directed curriculum in Malaysian law \u2014 lessons, spaced review, quizzes, case reading, guided writing and problem questions.",
+  "description": "ST's Chambers: a self-directed curriculum in Malaysian law \u2014 lessons, spaced review, quizzes, case reading, guided writing and problem questions.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
