@@ -4,6 +4,7 @@ import { useStudy } from '../state/StudyContext.jsx';
 import * as statutes from '../lib/statutes.js';
 import { Notice } from '../components/Bits.jsx';
 import NotFound from './NotFound.jsx';
+import ActText from '../components/ActText.jsx';
 
 /**
  * One provision: where to read it, what to look for, and questions answered
@@ -55,6 +56,11 @@ export default function StatuteView() {
 
       <h2>Where to read it</h2>
       <p>{x.find}</p>
+      {/* The prose above tells a reader to search for the Act. This opens it.
+          It does not carry the text: see the note in ActText.jsx for the two
+          measurements behind that, and src/lib/statutes.js for why a stored
+          copy of legislation is worse than a pointer to it. */}
+      <ActText actId={x.actId} act={x.act} provision={x.provision} />
 
       <h2>What to look for</h2>
       <div className="arrangement">

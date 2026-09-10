@@ -3,6 +3,8 @@ import * as extractsLib from '../lib/extracts.js';
 import * as statutesLib from '../lib/statutes.js';
 import * as readingLib from '../lib/reading.js';
 import { plural } from '../lib/format.js';
+import ActText from './ActText.jsx';
+import { useStudy } from '../state/StudyContext.jsx';
 
 /**
  * The reading assignment for one lesson.
@@ -26,6 +28,7 @@ import { plural } from '../lib/format.js';
  * heading on those would teach the reader the section is decorative.
  */
 export default function ReadAlongside({ lesson }) {
+  const { cat } = useStudy();
   if (!lesson) return null;
 
   const { statutes, cases, secondary } = readingLib.authorities(lesson);
@@ -83,9 +86,16 @@ export default function ReadAlongside({ lesson }) {
         <>
           <h3>{plural(statutes.length, 'provision')} to read</h3>
           <ul className="readalong-list">
-            {statutes.map(s => (
-              <li key={s} className={linked.has(s) ? 'is-linked' : undefined}>{s}</li>
-            ))}
+            {statutes.map(s => {
+              // The Act only — never the section. See actIdFor in lib/reading.js.
+              const actId = readingLib.actIdFor(s, cat.statutes || []);
+              return (
+                <li key={s} className={linked.has(s) ? 'is-linked' : undefined}>
+                  {s}
+                  {actId && <ActText actId={actId} provision={s} className="readalong-where" />}
+                </li>
+              );
+            })}
           </ul>
         </>
       )}

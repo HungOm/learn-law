@@ -14,6 +14,7 @@ import { daysAgo, plural } from '../lib/format.js';
 import NotFound from './NotFound.jsx';
 import { focusOn, setFocus } from '../lib/focus.js';
 import { useDialog } from '../components/Overlays.jsx';
+import ReadAlongside from '../components/ReadAlongside.jsx';
 
 const slug = (s, i) => `s${i}-${String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}`;
 
@@ -389,13 +390,25 @@ export default function LessonView() {
             <>
               <h2>Read alongside</h2>
               {l.reading.map((r, n) => {
-                const b = cat.byId.book[r.bookId];
+                // A reading may be a book or the law itself. For a lesson whose
+                // subject IS a provision — s 3 of the Civil Law Act, Article
+                // 121(1A) — sending the reader to a commentary and not to the
+                // words is the wrong way round, and the words are free where
+                // the commentary costs a week's wages.
+                const b = r.statuteId ? cat.byId.statute[r.statuteId] : cat.byId.book[r.bookId];
                 if (!b) return null;
+                const byline = r.statuteId
+                  ? [b.citation, b.cost === 'free' ? 'free from the official repository' : null]
+                      .filter(Boolean).join(' · ')
+                  : [b.author, b.edition ? `${b.edition} ed.` : null].filter(Boolean).join(' · ');
                 return (
                   <div className="book" key={n}>
                     <div className="book-title">{b.title}</div>
                     <p className="book-byline">
-                      {[b.author, b.edition ? `${b.edition} ed.` : null].filter(Boolean).join(' · ')}
+                      {byline}
+                      {r.statuteId && b.source && (
+                        <> · <a href={b.source} target="_blank" rel="noreferrer noopener">{b.source.replace(/^https?:\/\//, '')}</a></>
+                      )}
                     </p>
                     <p className="book-note">{r.where}</p>
                   </div>
@@ -404,9 +417,21 @@ export default function LessonView() {
             </>
           )}
 
-          {/* Guarded on `source` because the generated chunks do not currently
-              carry it — see the note in tools/split-content.py's docstring,
-              which says they should. Half a source note is worse than none. */}
+        {/* The lesson's own authorities, under the textbooks rather than
+            instead of them. Two different things share the word "reading":
+            `l.reading` above is which CHAPTER to open, this is which SECTIONS
+            and JUDGMENTS the lesson actually rests on, derived from the rule
+            blocks rather than authored — see src/lib/reading.js. A peer read
+            the heading and called them duplicates; they share no field. */}
+        <ReadAlongside lesson={l} />
+
+          {/* Still guarded on `source`, but no longer because the chunks lack it.
+              They carry it now: split-content.py wrote the body chunk as a
+              fixed three-key object and dropped `reading`, `source`, `verify`
+              and `plateCaption` on the floor, so every lesson's source note was
+              invisible until that was fixed. The guard stays for the lessons
+              that genuinely have no source — half a source note is worse than
+              none, and a method lesson has no authority to state. */}
           {l.source && (
             <div className="source-note">
               <p className="small"><strong>Sources.</strong> {l.source}</p>

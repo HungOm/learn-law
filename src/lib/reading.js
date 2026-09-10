@@ -76,3 +76,32 @@ export function estimate(lesson) {
   if (!low) return null;
   return { low: Math.max(5, low), high: Math.max(10, high) };
 }
+
+/**
+ * The Act a citation belongs to, or null.
+ *
+ * Deliberately NOT fuzzy, and deliberately only the Act — never the provision.
+ * The test is exact containment of a known Act title within the citation
+ * string, against the closed list in books.json, longest title first so
+ * "Interpretation Acts 1948 and 1967" is not beaten by a shorter substring.
+ * "Contracts Act 1950, s 26" contains "Contracts Act 1950" and resolves; a
+ * citation naming an Act the app does not carry resolves to null and the
+ * citation stays plain text.
+ *
+ * Matching the ACT is safe in a way that matching the PROVISION is not. An Act
+ * title is a proper name from a fixed list of twelve; a section number is a
+ * token that recurs across every Act in the book, and pairing the wrong one
+ * with a citation would send a reader to a real provision that is not theirs —
+ * the kind of near-miss nobody checks. Which is why the card this feeds opens
+ * the Act and asks the reader to find the section themselves.
+ */
+export function actIdFor(citation, statutes) {
+  if (typeof citation !== 'string' || !Array.isArray(statutes)) return null;
+  let best = null;
+  for (const s of statutes) {
+    const title = s && typeof s.title === 'string' ? s.title : null;
+    if (!title || !citation.includes(title)) continue;
+    if (!best || title.length > best.title.length) best = s;
+  }
+  return best ? best.id : null;
+}

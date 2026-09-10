@@ -167,6 +167,31 @@ if (missing.length) {
 }
 
 const ALL = process.argv.includes('--all');
+// `--self-test` injects two real clips at runtime and asserts the check finds
+// them. It exists because a gate reporting zero is indistinguishable from a
+// gate that cannot fire, and this one demonstrated both halves of that in one
+// night: the stale-dist guard fired on every run for weeks because it compared
+// a truncated `mtime` against `mtimeMs`, and the clip check tested `overflowX`
+// only, so it passed with total confidence on a vertical clip that cost a
+// reader 400px of a lesson.
+//
+// It injects with `addStyleTag` rather than by editing a stylesheet, and that
+// is not a style preference. Proving the Y branch by appending a rule to
+// `src/styles/learn.css` on a working copy three sessions commit from put three
+// lines of debug CSS into a peer's commit and into the published bundle. They
+// were inert only because both selectors had been renamed in a refactor the
+// week before. Injection needs no build, cannot be committed by anyone, and
+// keeps the minifier out of the question — which also fixes the control that
+// could not distinguish "the check stayed quiet" from "my change never reached
+// the output".
+const SELF_TEST = process.argv.includes('--self-test');
+// Chosen by measurement, not by guess: both selectors are asserted to match
+// something before the run is believed, so a rename cannot turn this control
+// into a silent pass the way it nearly did on the live site.
+const PROBE_CSS = `
+  .lsec { max-height: 300px !important; overflow-y: hidden !important; }
+  .wrap { max-width: 90px !important; overflow-x: hidden !important; }
+`;
 const builtAt = statSync(distIndex).mtime;
 // Compared against `mtimeMs` below, and it must be read the same way. `.mtime`
 // is a Date and `.getTime()` truncates to whole milliseconds, while `.mtimeMs`
@@ -581,6 +606,18 @@ try {
       // Web fonts change every box on the page. Measuring before they settle
       // reports the fallback face's geometry, which is not what ships.
       await page.evaluate(() => document.fonts.ready);
+      if (SELF_TEST) {
+        const matched = await page.evaluate(() => ({
+          lsec: document.querySelectorAll('.lsec').length,
+          wrap: document.querySelectorAll('.wrap').length,
+        }));
+        if (!matched.lsec && !matched.wrap) {
+          console.error(`responsive: SELF-TEST INVALID — neither probe selector matches on ${route}. `
+            + 'The stimulus never arrived, so a quiet check proves nothing. Pick selectors that exist.');
+          process.exit(2);
+        }
+        await page.addStyleTag({ content: PROBE_CSS });
+      }
       await wait(450);
 
       // Page through a stepped lesson, measuring every step.
@@ -744,6 +781,30 @@ if (movedDuringRun) {
 }
 
 const uniqFailures = [...new Set(failures)];
+
+// In self-test mode the verdict is inverted, and it is a verdict rather than a
+// pile of output for a human to interpret. The question is not "is the tree
+// clean" — it plainly is not, two clips were just injected into it — but "did
+// each branch of the clip check find the clip aimed at it". Both, separately:
+// a check that fires on one axis and is asserted as a whole would hide exactly
+// the defect that prompted this, which is a check that could only ever fire
+// across and passed in silence on a clip that ran down.
+if (SELF_TEST) {
+  const across = uniqFailures.some(f => f.includes('clipped and unreachable') && f.includes('across'));
+  const down = uniqFailures.some(f => f.includes('clipped and unreachable') && f.includes('down'));
+  for (const [axis, found] of [['across', across], ['down', down]]) {
+    console.log(`  ${found ? 'fired' : 'SILENT'} on the injected ${axis} clip`);
+  }
+  if (across && down) {
+    console.log(`responsive: SELF-TEST PASSED — both branches found their clip `
+      + `(${uniqFailures.length} findings from two injected rules)`);
+    process.exit(0);
+  }
+  console.error('responsive: SELF-TEST FAILED — a branch of the clip check did not fire on a '
+    + 'clip aimed straight at it. The gate cannot be trusted to report a real one.');
+  process.exit(1);
+}
+
 if (uniqFailures.length) {
   console.error(`\nresponsive: FAILED — ${uniqFailures.length} findings`);
   for (const f of ALL ? uniqFailures : uniqFailures.slice(0, 60)) console.error(`  - ${f}`);

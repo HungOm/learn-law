@@ -166,7 +166,17 @@
       ],
       "source": "Law Reform (Marriage and Divorce) Act 1976 for the civil regime. The division of legislative power over Islamic law is in the Federal Constitution, Ninth Schedule.",
       "lastVerified": "2026-09-09",
-      "verify": "Check the 1976 Act itself for the grounds of divorce, and check your own State's Islamic family law enactment rather than assuming another State's text applies."
+      "verify": "Check the 1976 Act itself for the grounds of divorce, and check your own State's Islamic family law enactment rather than assuming another State's text applies.",
+      "reading": [
+        {
+          "statuteId": "law-reform-marriage-divorce-1976",
+          "where": "the civil regime, and the provision that says who it does not apply to"
+        },
+        {
+          "statuteId": "federal-constitution",
+          "where": "the Ninth Schedule State List — where the division of legislative power over Islamic law actually sits"
+        }
+      ]
     },
     {
       "id": "l-syariah-jurisdiction",
@@ -341,7 +351,13 @@
       ],
       "source": "Federal Constitution, Art 121(1A) and the Ninth Schedule State List. Federal legislation caps the punishments Syariah courts may impose.",
       "lastVerified": "2026-09-09",
-      "verify": "Read Art 121(1A) and the State List entry on Islamic law in the Constitution itself. For any specific court, read that State's own enactment; the position is not uniform."
+      "verify": "Read Art 121(1A) and the State List entry on Islamic law in the Constitution itself. For any specific court, read that State's own enactment; the position is not uniform.",
+      "reading": [
+        {
+          "statuteId": "federal-constitution",
+          "where": "Article 121(1A) and the Ninth Schedule State List. Read 121(1A) slowly: it is one sentence and it decides which court may hear what"
+        }
+      ]
     }
   ]
 }

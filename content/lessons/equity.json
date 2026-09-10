@@ -164,7 +164,13 @@
       ],
       "source": "Civil Law Act 1956, s 3, for the reception and its date. The account of equity's origins is standard legal history and is not tied to any single authority.",
       "lastVerified": "2026-09-09",
-      "verify": "Read section 3 of the Civil Law Act 1956 itself, and check the dates for Sabah and Sarawak against the section rather than against this page."
+      "verify": "Read section 3 of the Civil Law Act 1956 itself, and check the dates for Sabah and Sarawak against the section rather than against this page.",
+      "reading": [
+        {
+          "statuteId": "civil-law-act-1956",
+          "where": "section 3 — the reception provision, including its cut-off date. One section carries the whole argument of this lesson"
+        }
+      ]
     },
     {
       "id": "l-trusts-certainties",
@@ -365,7 +371,13 @@
       ],
       "source": "The three certainties and the two non-express trusts are standard trusts doctrine, received in Malaysia under the Civil Law Act 1956, s 3.",
       "lastVerified": "2026-09-09",
-      "verify": "This lesson deliberately states no case citations. Check each proposition against a Malaysian trusts text before relying on it, and note that reception under section 3 is subject to local circumstances."
+      "verify": "This lesson deliberately states no case citations. Check each proposition against a Malaysian trusts text before relying on it, and note that reception under section 3 is subject to local circumstances.",
+      "reading": [
+        {
+          "statuteId": "civil-law-act-1956",
+          "where": "section 3 again, this time as the authority for trusts doctrine applying here at all"
+        }
+      ]
     }
   ]
 }

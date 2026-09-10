@@ -190,7 +190,13 @@
       ],
       "source": "The general law of agency in Malaysia is contained in the Contracts Act 1950. The categories of authority and the agent's duties as described here are standard agency doctrine.",
       "lastVerified": "2026-09-09",
-      "verify": "This lesson deliberately gives no section numbers. Read the agency provisions of the Contracts Act 1950 directly and check each proposition against the section text before relying on it."
+      "verify": "This lesson deliberately gives no section numbers. Read the agency provisions of the Contracts Act 1950 directly and check each proposition against the section text before relying on it.",
+      "reading": [
+        {
+          "statuteId": "contracts-act-1950",
+          "where": "the agency provisions — read them beside the lesson's categories of authority, and notice that the Act, not the case law, is the starting point"
+        }
+      ]
     },
     {
       "id": "l-employment-protection",
@@ -382,7 +388,17 @@
       ],
       "source": "Employment Act 1955 for minimum terms; Industrial Relations Act 1967 for dismissal without just cause or excuse. The substantive and procedural limbs are standard industrial relations doctrine.",
       "lastVerified": "2026-09-09",
-      "verify": "No section numbers or time limits are stated here on purpose. Check the current scope of the Employment Act 1955, the representation time limit under the Industrial Relations Act 1967, and the position in Sabah and Sarawak, against the statutes themselves."
+      "verify": "No section numbers or time limits are stated here on purpose. Check the current scope of the Employment Act 1955, the representation time limit under the Industrial Relations Act 1967, and the position in Sabah and Sarawak, against the statutes themselves.",
+      "reading": [
+        {
+          "statuteId": "employment-act-1955",
+          "where": "the minimum terms an employer cannot contract out of"
+        },
+        {
+          "statuteId": "industrial-relations-act-1967",
+          "where": "dismissal without just cause or excuse — the substantive and procedural limbs the lesson separates"
+        }
+      ]
     }
   ]
 }

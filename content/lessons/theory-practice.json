@@ -165,7 +165,13 @@
       ],
       "source": "Standard accounts of legal positivism and the natural law tradition. No single authority is relied on and none is cited.",
       "lastVerified": "2026-09-09",
-      "verify": "Read a jurisprudence text on the positivism debate before using these labels in an essay. This lesson gives the shape of the argument, not any writer's version of it."
+      "verify": "Read a jurisprudence text on the positivism debate before using these labels in an essay. This lesson gives the shape of the argument, not any writer's version of it.",
+      "reading": [
+        {
+          "bookId": "schauer-thinking-like-a-lawyer",
+          "where": "for the positivist account the lesson describes, argued at length by someone who holds it"
+        }
+      ]
     },
     {
       "id": "l-treaties-domestic",
@@ -343,7 +349,13 @@
       ],
       "source": "Standard accounts of the dualist approach and of the sources of international law. No Malaysian authority is cited.",
       "lastVerified": "2026-09-09",
-      "verify": "Check how any particular treaty was implemented in Malaysia by finding the implementing Act, if there is one, rather than assuming from ratification."
+      "verify": "Check how any particular treaty was implemented in Malaysia by finding the implementing Act, if there is one, rather than assuming from ratification.",
+      "reading": [
+        {
+          "statuteId": "federal-constitution",
+          "where": "the treaty-making and legislative power provisions — the dualist position is a consequence of them, not a rule stated anywhere"
+        }
+      ]
     },
     {
       "id": "l-duty-to-court",
@@ -520,7 +532,13 @@
       ],
       "source": "Standard statements of the advocate's duties to court and client. The profession in Malaysia is regulated under the Legal Profession Act 1976.",
       "lastVerified": "2026-09-09",
-      "verify": "Check the current professional conduct rules made under the Legal Profession Act 1976 for the binding formulation. This lesson states the principles, not the rule text."
+      "verify": "Check the current professional conduct rules made under the Legal Profession Act 1976 for the binding formulation. This lesson states the principles, not the rule text.",
+      "reading": [
+        {
+          "statuteId": "legal-profession-act-1976",
+          "where": "how the profession is regulated, and where the duties owed to the court get their statutory footing"
+        }
+      ]
     }
   ]
 }

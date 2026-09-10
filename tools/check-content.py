@@ -173,6 +173,28 @@ def scene_keys():
 SCENES = scene_keys()
 
 
+def check_reading(lessons, books, errors):
+    """Every reading pointer must name a text that exists.
+
+    This gate exists because the reading assignments spent the project's whole
+    life authored correctly and rendering nowhere: the splitter dropped the
+    field, and every checker read the source JSON where it was present and
+    fine. A reference that resolves in content/ and not in the app is the shape
+    to watch for, so this checks the ids against the same books.json the app
+    indexes, and the smoke gate checks that the block reaches the page.
+    """
+    known = {b["id"] for b in books.get("books", [])} | {s["id"] for s in books.get("statutes", [])}
+    for l in lessons:
+        for i, r in enumerate(l.get("reading") or []):
+            ref = r.get("bookId") or r.get("statuteId")
+            if not ref:
+                errors.append(f"{l['id']}  reading[{i}] names neither a bookId nor a statuteId")
+            elif ref not in known:
+                errors.append(f"{l['id']}  reading[{i}] points at `{ref}`, which is not in books.json")
+            if not (r.get("where") or "").strip():
+                errors.append(f"{l['id']}  reading[{i}] has no `where` — a text with no pointer is a bibliography")
+
+
 def main():
     errors = []
     books = load("content/books.json")
@@ -319,8 +341,15 @@ def main():
                 planted.setdefault(cid, []).append(l["id"])
             for pid in l.get("prepares") or []:
                 prepared.setdefault(pid, []).append(l["id"])
+            # A reading is a book OR a piece of primary law. For a lesson whose
+            # subject is a provision, the provision is the reading and a
+            # commentary on it is the second-best thing — so `statuteId` is a
+            # first-class pointer here, not a special case.
             for r in l.get("reading") or []:
-                if r.get("bookId") not in {b["id"] for b in books["books"]}:
+                if r.get("statuteId"):
+                    if r["statuteId"] not in {x["id"] for x in books["statutes"]}:
+                        errors.append(f"{where}: unknown statute {r['statuteId']}")
+                elif r.get("bookId") not in {b["id"] for b in books["books"]}:
                     errors.append(f"{where}: unknown book {r.get('bookId')}")
 
     # --- curriculum order -------------------------------------------------
@@ -460,9 +489,18 @@ def main():
     )
     gterms = len(json.loads((ROOT / "content/glossary.json").read_text(encoding="utf-8"))["terms"]) \
         if (ROOT / "content/glossary.json").exists() else 0
+
+    all_lessons = [
+        l
+        for path in sorted((ROOT / "content/lessons").glob("*.json"))
+        for l in json.loads(path.read_text(encoding="utf-8")).get("lessons", [])
+    ]
+    check_reading(all_lessons, books, errors)
+    with_reading = sum(1 for l in all_lessons if l.get("reading"))
     print(f"{len(section_seen)} sections, "
           f"{lessons} lessons, {cards} cards, {problems} problems, "
           f"{quiz_total} quiz questions, {gterms} glossary terms, {len(modules)} modules")
+    print(f"{with_reading} of {len(all_lessons)} lessons carry a reading assignment")
     if errors:
         print(f"\n{len(errors)} problem{'' if len(errors) == 1 else 's'}:")
         for e in errors:

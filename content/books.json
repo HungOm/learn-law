@@ -582,6 +582,50 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free"
+    },
+    {
+      "id": "employment-act-1955",
+      "title": "Employment Act 1955",
+      "citation": "Act 265",
+      "modules": [
+        "m20-employment"
+      ],
+      "source": "https://lom.agc.gov.my",
+      "cost": "free",
+      "notes": "Minimum terms. Read beside the Industrial Relations Act, which handles dismissal."
+    },
+    {
+      "id": "industrial-relations-act-1967",
+      "title": "Industrial Relations Act 1967",
+      "citation": "Act 177",
+      "modules": [
+        "m20-employment"
+      ],
+      "source": "https://lom.agc.gov.my",
+      "cost": "free",
+      "notes": "Dismissal without just cause or excuse, and the route to the Industrial Court."
+    },
+    {
+      "id": "law-reform-marriage-divorce-1976",
+      "title": "Law Reform (Marriage and Divorce) Act 1976",
+      "citation": "Act 164",
+      "modules": [
+        "m16-family"
+      ],
+      "source": "https://lom.agc.gov.my",
+      "cost": "free",
+      "notes": "The civil regime. It does not apply to Muslims, which is the whole point of the two-systems lesson."
+    },
+    {
+      "id": "legal-profession-act-1976",
+      "title": "Legal Profession Act 1976",
+      "citation": "Act 166",
+      "modules": [
+        "m22-ethics"
+      ],
+      "source": "https://lom.agc.gov.my",
+      "cost": "free",
+      "notes": "How the profession is regulated, and the statutory frame for the duties owed to the court."
     }
   ],
   "modules": [
