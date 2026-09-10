@@ -930,9 +930,32 @@ and `glossary-dom` prints how many lessons it compared, so a short walk is
 visible in a passing run. A gate that prints findings and nothing else cannot
 show you it was cut off.
 
-There is a third way a control goes wrong, and it is the hardest to catch because
-it looks like vigilance rather than silence: **a control that fires on
-everything.**
+There is a third way a control goes wrong: **it fires only on an input the world
+never generates.**
+
+`tools/overlap-report.py` looks for two lessons covering one subject —
+`check-content.py` enforces unique lesson *ids*, not unique *subjects*, so a
+second nuisance lesson under a new id passes every gate and leaves a reader
+wondering which of the two they were meant to read. Its first control was an
+exact duplicate under a new id. Detected instantly, and worthless: nobody
+produces a byte-identical lesson. It was a green light on a rule that had not
+been tested.
+
+The realistic control — a *reworded* duplicate sharing no title word with the
+original — was **missed**. It scored 30% word overlap where the highest
+legitimate same-module pair scores 40%. The populations are inverted, so no
+cutoff on that signal works in either direction. Weighting by corpus rarity fixed
+the ranking: 8 shared distinctive words against a worst legitimate 6.
+
+Two words of margin from one synthetic example is not enough to refuse content,
+which is why it is a report that always exits 0 and is deliberately outside
+`npm run check`. **A gate that fires on a legitimate pair gets switched off, and
+then catches nothing** — strictly worse than a report someone reads. Its
+`--self-test` asserts the reworded duplicate sorts to #1, not merely that
+something fired.
+
+And a fourth way, the hardest to catch, because it looks like vigilance rather
+than silence: **a control that fires on everything.**
 A checker reporting findings on every input reads as thorough right up until
 someone asks what a clean run would look like.
 
