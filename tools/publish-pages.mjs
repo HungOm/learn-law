@@ -1,46 +1,74 @@
 /**
- * Copy the built site to the repository root, because that is what GitHub Pages
- * publishes for this repo.
+ * Build what is COMMITTED, and copy it to the repository root.
  *
- * Pages here is set to "deploy from a branch" at the root. In that mode GitHub
- * serves the branch verbatim — so the branch itself has to contain a servable
- * site. It did not: `dist/` is gitignored, the root held Vite's SOURCE
- * index.html, and what got published was a page pointing at /src/main.jsx,
- * which no browser can execute. Every route was blank while the URL answered
- * 200, which is the worst shape a deploy failure can take.
+ * GitHub Pages here serves this branch from its root, so the root has to hold a
+ * built site. The obvious way to produce one is to build the working copy — and
+ * on a checkout five sessions share, that is a trap with no safe branch:
  *
- * The alternative is switching Pages to the GitHub Actions source, which is
- * cleaner — no build output in version control — but needs repo-admin rights a
- * workflow token does not have. This is the route that works without it.
+ *   * publish assets built from uncommitted work and the site in front of
+ *     readers cannot be reproduced from its own source. Worse than
+ *     irreproducible, it is unfixable by rollback: reverting the commits does
+ *     not remove content that was never in them.
+ *   * commit the source to fix that, and you have committed somebody's lesson
+ *     mid-sentence. That happened tonight in miniature — three lines of debug
+ *     CSS reached readers this way — and the next one was 1,082 new lines.
  *
- * So: the entry is app/index.html, the build goes to dist/ (where smoke.mjs and
- * responsive.mjs still find it), and this copies dist/ over the root. It only
- * ever writes the files the build produced; nothing is deleted, and no source
- * directory shares a name with one of them.
+ * So the build happens in a throwaway worktree checked out at HEAD. The output
+ * embeds exactly what is committed, whatever the shared tree looks like at that
+ * moment, and the question stops needing judgement. `prebuild` regenerates
+ * src/generated inside the worktree, so the content split is the committed
+ * content too.
  *
- *     npm run pages     # build, then copy
+ * node_modules is symlinked rather than installed: it is 200MB of dependencies
+ * that the lockfile already pins, and a second `npm ci` per publish would make
+ * the safe path the slow one.
+ *
+ *     npm run pages
  */
 
-import { cpSync, existsSync, readdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { cpSync, existsSync, mkdtempSync, readdirSync, rmSync, symlinkSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const dist = join(root, 'dist');
+const git = (...args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
 
-if (!existsSync(dist)) {
-  console.error('publish-pages: no dist/ — run `npm run build` first');
-  process.exit(1);
+const head = git('rev-parse', 'HEAD');
+const subject = git('log', '-1', '--format=%s');
+const work = mkdtempSync(join(tmpdir(), 'warta-publish-'));
+const tree = join(work, 'src');
+
+console.log(`publish-pages: building ${head.slice(0, 8)} — ${subject}`);
+
+let added = false;
+try {
+  execFileSync('git', ['worktree', 'add', '--detach', '--quiet', tree, head], { cwd: root, stdio: 'inherit' });
+  added = true;
+
+  symlinkSync(join(root, 'node_modules'), join(tree, 'node_modules'), 'dir');
+
+  execFileSync('npm', ['run', 'build'], { cwd: tree, stdio: 'inherit' });
+
+  const dist = join(tree, 'dist');
+  const entries = readdirSync(dist);
+  if (!entries.includes('index.html')) {
+    throw new Error('the build produced no index.html — refusing to publish a partial build');
+  }
+
+  // Copied, never mirrored: an old hashed asset stays behind on purpose. A
+  // reader mid-session holds an index.html naming the previous chunks, and
+  // deleting them turns their next navigation into a blank page.
+  for (const name of entries) {
+    cpSync(join(dist, name), join(root, name), { recursive: true, force: true });
+  }
+  console.log(`publish-pages: copied ${entries.length} entries to the repository root`);
+  console.log('publish-pages: this output is exactly HEAD — nothing uncommitted can be in it');
+} finally {
+  if (added) {
+    try { execFileSync('git', ['worktree', 'remove', '--force', tree], { cwd: root, stdio: 'ignore' }); }
+    catch { /* the temp dir goes below regardless */ }
+  }
+  if (existsSync(work)) rmSync(work, { recursive: true, force: true });
 }
-
-const entries = readdirSync(dist);
-if (!entries.includes('index.html')) {
-  console.error('publish-pages: dist/ has no index.html — refusing to publish a partial build');
-  process.exit(1);
-}
-
-for (const name of entries) {
-  cpSync(join(dist, name), join(root, name), { recursive: true, force: true });
-}
-
-console.log(`publish-pages: copied ${entries.length} entries to the repository root — ${entries.join(', ')}`);

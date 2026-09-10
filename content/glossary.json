@@ -7495,19 +7495,18 @@
   },
   {
    "id": "section-106",
-   "term": "section 106",
+   "term": "Evidence Act section 106",
    "kind": "statute",
    "gloss": "A fact especially within a person's knowledge is for him to prove.",
    "intermediate": "Where a fact is especially within the knowledge of any person, the burden of proving that fact is upon him.",
-   "advanced": "The most over-used provision in the Act. It reaches a specific fact peculiarly within someone's knowledge — a licence, an authority, a reason for being somewhere — and cannot be used to reverse the general burden or to relieve the prosecution of proving its case. Deploying it to shift the whole case is a misreading that is easy for a marker to spot.",
+   "advanced": "The most over-used provision in the Act. It reaches a specific fact peculiarly within someone's knowledge — a licence, an authority, a reason for being somewhere — and cannot be used to reverse the general burden or to relieve the prosecution of proving its case. Deploying it to shift the whole case is a misreading that is easy for a marker to spot. It is named in full here on purpose: the bare number is used in this app for more than one Act — section 106 of the Law Reform (Marriage and Divorce) Act 1976 is the conciliatory-body requirement — so it is not auto-linked in prose. Look it up by name rather than expecting a hover.",
    "source": "Evidence Act 1950 s 106",
    "see": [
     "legal-burden",
     "section-105"
    ],
    "aliases": [
-    "section 106",
-    "s 106"
+    "Evidence Act section 106"
    ]
   },
   {

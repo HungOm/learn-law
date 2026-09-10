@@ -386,6 +386,321 @@
           "where": "the chapters on the three certainties, and on resulting and constructive trusts"
         }
       ]
+    },
+    {
+      "id": "l-trustee-duties",
+      "moduleId": "m15-equity-trusts",
+      "title": "What a trustee may not do",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A trustee holds property for someone else, and equity is strict about it. The rules are not about honesty. A trustee who acts in perfect good faith and makes the beneficiary richer can still have to hand the money back.",
+      "sections": [
+        {
+          "id": "sec-l-trustee-duties-0",
+          "readMinutes": 2,
+          "keypoint": "A trustee can be made to give up a profit even when nobody lost anything by it.",
+          "h": "The honest trustee who still loses",
+          "body": [
+            {
+              "t": "p",
+              "text": "Encik Salleh is trustee of a piece of land held for his late brother's children. A developer offers to buy it. Salleh gets a good price for the children, and the developer also gives him a separate consulting fee for his help."
+            },
+            {
+              "t": "p",
+              "text": "The children are better off than before. Salleh took nothing from them. He did not hide the fee, and nobody says he was dishonest."
+            },
+            {
+              "t": "p",
+              "text": "He still has to hand the fee over. Equity does not ask whether the beneficiaries lost. It asks whether the profit came from the position."
+            },
+            {
+              "t": "rule",
+              "text": "A trustee must not profit from the trust, and must not place themselves in a position where duty and personal interest conflict. Liability does not depend on loss to the beneficiary, on bad faith, or on the trust being worse off.",
+              "source": "Equitable principle received under the Civil Law Act 1956, s 3."
+            },
+            {
+              "t": "p",
+              "text": "This looks harsh. It is meant to. The rule is set where it is so that nobody has to prove what was in a trustee's mind."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-trustee-duties-1",
+          "readMinutes": 2,
+          "keypoint": "Two rules do most of the work: no profit from the position, and no conflict with the duty.",
+          "h": "The two rules underneath",
+          "body": [
+            {
+              "t": "p",
+              "text": "Almost every trustee case comes back to one of two rules. Name which one you are running before you argue it."
+            },
+            {
+              "t": "table",
+              "caption": "The no-profit rule and the no-conflict rule",
+              "columns": [
+                "Rule",
+                "What it forbids",
+                "The usual answer"
+              ],
+              "rows": [
+                [
+                  "No profit",
+                  "Taking any benefit that came from being trustee.",
+                  "Give the profit up. The remedy strips gain rather than repairing loss."
+                ],
+                [
+                  "No conflict",
+                  "Being in a position where self-interest could pull against duty.",
+                  "The transaction can be set aside, whether or not it was a fair price."
+                ]
+              ],
+              "alt": "Two rules compared. No profit forbids taking any benefit that came from being trustee. The answer is to give the profit up. The remedy strips gain rather than repairing loss. No conflict forbids being in a position where self-interest could pull against duty, and the transaction can be set aside whether or not the price was fair."
+            },
+            {
+              "t": "p",
+              "text": "Both can be answered the same way: fully informed consent, given in advance. That is what a trust instrument is often doing when it permits a trustee to charge."
+            },
+            {
+              "t": "caution",
+              "text": "Consent has to be real. A beneficiary who was told nothing has not consented, and silence is not agreement here."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-trustee-duties-2",
+          "readMinutes": 2,
+          "keypoint": "Investing trust money is a duty of care, and the standard is not what the trustee would risk with their own.",
+          "h": "Looking after the money",
+          "body": [
+            {
+              "t": "p",
+              "text": "Holding is only half of it. A trustee usually has to invest, and investing badly is its own breach."
+            },
+            {
+              "t": "p",
+              "text": "The standard is objective. It is not what this trustee thought sensible, and it is not what they would have done with their own savings."
+            },
+            {
+              "t": "rule",
+              "text": "A trustee must exercise the care of an ordinary prudent person managing the affairs of someone else. A trustee may invest only as the trust instrument or the Act allows.",
+              "source": "Trustee Act 1949 (Act 208), and the general equitable duty of care."
+            },
+            {
+              "t": "p",
+              "text": "Note the phrase *someone else*. A person may gamble with their own money. A trustee holding a child's inheritance may not."
+            },
+            {
+              "t": "predict",
+              "prompt": "A trustee puts the whole trust fund into one company's shares. The shares double. Has the trustee breached the trust?",
+              "options": [
+                "No, because the fund gained",
+                "Yes, if the investment was outside what was permitted",
+                "Only if the beneficiaries object"
+              ],
+              "answer": 1,
+              "reveal": "Yes. A profit does not cure an unauthorised investment, and the gain belongs to the trust in any event. Breach is judged by what was done, not by how it turned out."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-trustee-duties-3",
+          "readMinutes": 2,
+          "keypoint": "Trust property can often be followed into whatever the trustee bought with it.",
+          "h": "Following the property",
+          "body": [
+            {
+              "t": "p",
+              "text": "A beneficiary is not limited to suing for money. Where trust property has been misapplied, equity will often let them claim what it became."
+            },
+            {
+              "t": "example",
+              "text": "A trustee takes RM200,000 of trust money and buys a shop lot. The shop lot is now worth RM350,000. The beneficiaries may claim the shop lot, not merely the RM200,000 with interest."
+            },
+            {
+              "t": "p",
+              "text": "That difference matters most when the trustee is bankrupt. A money claim ranks with every other creditor. A claim to the asset itself does not."
+            },
+            {
+              "t": "caution",
+              "text": "Tracing has limits. It fails once the property is gone, and it fails against a purchaser in good faith for value without notice."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Why would a beneficiary prefer to claim the shop lot rather than the money?",
+              "options": [
+                "It is simpler to prove",
+                "It captures the increase in value and survives the trustee's insolvency",
+                "The court prefers it"
+              ],
+              "answer": 1,
+              "why": "A proprietary claim takes the asset as it now stands, including any rise in value, and it is not shared with the trustee's other creditors."
+            }
+          ]
+        }
+      ],
+      "source": "Trustee Act 1949 (Act 208). The no-profit and no-conflict rules are equitable principles applied in Malaysia under the Civil Law Act 1956, s 3.",
+      "verify": "Read the Trustee Act 1949 itself for the investment and delegation provisions, and check the trust instrument in any real problem — it can widen or narrow a trustee's powers and often permits charging.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "civil-law-act-1956",
+          "where": "section 3, and the words that limit received equity to local circumstances"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-implied-trusts",
+      "moduleId": "m15-equity-trusts",
+      "title": "Trusts nobody wrote down",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "Some trusts arise without anyone declaring one. They decide who really owns a house when the title says one name and two people paid for it, which is where most ordinary people meet trusts law at all.",
+      "sections": [
+        {
+          "id": "sec-l-implied-trusts-0",
+          "readMinutes": 2,
+          "keypoint": "A house in one name is not always owned by one person.",
+          "h": "One name on the title, two people paying",
+          "body": [
+            {
+              "t": "p",
+              "text": "Mei Ling and her brother buy a house together. Each pays half. The title is registered in his name alone, because she was working abroad when it was signed."
+            },
+            {
+              "t": "p",
+              "text": "Years later he wants to sell and keep everything. The register says the land is his. Under the National Land Code, registration is title."
+            },
+            {
+              "t": "p",
+              "text": "She is not without an answer. Registration decides who holds the legal title. It does not decide who the land is held for."
+            },
+            {
+              "t": "rule",
+              "text": "One person provides the purchase money. The property is put in another's name. Equity presumes the holder takes it on trust for the person who paid, in proportion to what they paid.",
+              "source": "Resulting trust, applied in Malaysia as received equity under the Civil Law Act 1956, s 3."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-implied-trusts-1",
+          "readMinutes": 2,
+          "keypoint": "An implied trust is not an exception to the register — it operates on the person who holds.",
+          "h": "How this sits with the register",
+          "body": [
+            {
+              "t": "p",
+              "text": "This is the point most readers get wrong, so take it slowly."
+            },
+            {
+              "t": "p",
+              "text": "An implied trust does not make the register lie. The brother is still the registered proprietor and the world may treat him as such."
+            },
+            {
+              "t": "p",
+              "text": "Equity acts on him personally. He owns the land, and he owes a duty about how he holds it. That is a duty a court can enforce against him."
+            },
+            {
+              "t": "caution",
+              "text": "So the claim is strong against the brother and weak against a stranger. Once he sells to a purchaser in good faith for value, the buyer's registered title is generally unanswerable. The sister is left with a claim for the money."
+            },
+            {
+              "t": "p",
+              "text": "This is why a caveat matters. It protects the claim while it is being decided, by stopping dealings in the meantime."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-implied-trusts-2",
+          "readMinutes": 2,
+          "keypoint": "Two kinds arise without a declaration, and they answer different questions.",
+          "h": "Resulting and constructive",
+          "body": [
+            {
+              "t": "p",
+              "text": "Two labels appear constantly, and they are not the same thing."
+            },
+            {
+              "t": "table",
+              "caption": "Resulting and constructive trusts compared",
+              "columns": [
+                "",
+                "Resulting",
+                "Constructive"
+              ],
+              "rows": [
+                [
+                  "What triggers it",
+                  "Someone paid and took nothing on paper.",
+                  "The holder's conduct makes it unconscionable to keep the benefit."
+                ],
+                [
+                  "The question asked",
+                  "Who provided the money?",
+                  "Would it be against conscience to deny the claim?"
+                ],
+                [
+                  "Typical use",
+                  "A house bought in one name with another's money.",
+                  "A promise relied on, or a profit made from a position of trust."
+                ]
+              ],
+              "alt": "Resulting and constructive trusts compared on three points. A resulting trust is triggered where someone paid and took nothing on paper. It asks who provided the money. It is typically used for a house bought in one name with another's money. A constructive trust is triggered where the holder's conduct makes it unconscionable to keep the benefit. It asks whether denying the claim would be against conscience. It is used where a promise was relied on, or a profit made from a position of trust."
+            },
+            {
+              "t": "p",
+              "text": "Say which one you are arguing. A resulting trust needs proof of contribution. A constructive trust needs conduct the court will call unconscionable, which is a harder and more arguable thing."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-implied-trusts-3",
+          "readMinutes": 2,
+          "keypoint": "Contribution has to be proved, and paying for the wedding is not paying for the house.",
+          "h": "What counts as contributing",
+          "body": [
+            {
+              "t": "p",
+              "text": "The presumption is only as good as the evidence of payment. Keep the two separate in your head."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Direct payment of the deposit or the price is the strongest case.",
+                "Paying the loan instalments over years is usually contribution too.",
+                "Paying for furniture, renovations or living costs is much weaker, and often counts for nothing.",
+                "Work in the home is the hardest of all, and Malaysian courts have not treated it as automatically giving a share."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "A gift is the other answer. Money handed over as a present raises no trust, and the person holding may say that is what it was."
+            },
+            {
+              "t": "p",
+              "text": "So the fight is usually factual rather than legal. Bank records decide more of these cases than argument does."
+            },
+            {
+              "t": "caution",
+              "text": "Where the parties are married, do not run this analysis first. Division of matrimonial assets on divorce is statutory and gives a court a discretion that trusts law does not."
+            }
+          ]
+        }
+      ],
+      "source": "Resulting and constructive trusts as received equity under the Civil Law Act 1956, s 3, read with the National Land Code on the effect of registration.",
+      "verify": "Check how the Malaysian courts have treated indirect and non-financial contributions before relying on them — the position is not settled, and English authority on this point may not have been followed here.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "civil-law-act-1956",
+          "where": "section 3, and what it means for equity to apply only so far as local circumstances permit"
+        },
+        {
+          "statuteId": "national-land-code",
+          "where": "the effect of registration, and the caveat provisions"
+        }
+      ],
+      "quiz": []
     }
   ]
 }

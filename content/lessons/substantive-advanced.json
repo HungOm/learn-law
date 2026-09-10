@@ -4131,6 +4131,303 @@
       "plate": "empty-chair",
       "plateCaption": "A hearing with one chair empty. The commonest ground, and the one most often pleaded without saying what fairness required on these facts.",
       "readMinutes": 8
+    },
+    {
+      "id": "l-review-standing",
+      "moduleId": "m12-administrative",
+      "title": "Getting a decision into court",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "Judicial review has a doorway before it has an argument. Leave, time, standing and the right remedy are decided first, and most challenges that fail never reach a ground at all.",
+      "sections": [
+        {
+          "id": "sec-l-review-standing-0",
+          "readMinutes": 2,
+          "keypoint": "Judicial review starts with an application for leave, decided before the merits.",
+          "h": "You need permission to argue",
+          "body": [
+            {
+              "t": "p",
+              "text": "A council refuses Encik Bakri a hawker licence. He believes the refusal was unlawful and wants a court to say so."
+            },
+            {
+              "t": "p",
+              "text": "He cannot simply sue. Judicial review runs through a particular procedure, and the first step is asking the court for leave to bring it."
+            },
+            {
+              "t": "rule",
+              "text": "An application for judicial review shall not be made unless leave has been granted. The application for leave must be made promptly and within the time the Rules prescribe.",
+              "source": "Rules of Court 2012, Order 53."
+            },
+            {
+              "t": "p",
+              "text": "Leave is a filter, not a hearing. It asks whether the case is arguable and whether the applicant should be allowed to bring it."
+            },
+            {
+              "t": "caution",
+              "text": "Time runs from the decision, not from when the applicant learned it was arguable. Delay defeats more reviews than any ground succeeds on."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-review-standing-1",
+          "readMinutes": 2,
+          "keypoint": "Standing asks whether this applicant is the right person to complain.",
+          "h": "Whether it is your complaint to make",
+          "body": [
+            {
+              "t": "p",
+              "text": "Public law is not open to everybody who disagrees. The applicant must have a sufficient interest in the matter."
+            },
+            {
+              "t": "p",
+              "text": "Bakri plainly has one. The decision was about his licence."
+            },
+            {
+              "t": "p",
+              "text": "The harder cases are the ones brought by somebody affected indirectly: a neighbour, a rival trader, an association speaking for members."
+            },
+            {
+              "t": "rule",
+              "text": "The court shall not grant leave unless it considers that the applicant has a sufficient interest in the matter to which the application relates.",
+              "source": "Rules of Court 2012, Order 53 r 2(4)."
+            },
+            {
+              "t": "p",
+              "text": "Standing is decided at leave, which is why it comes before anything about legality."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-review-standing-2",
+          "readMinutes": 2,
+          "keypoint": "The remedies are separate orders, and they do different jobs.",
+          "h": "Asking for the right thing",
+          "body": [
+            {
+              "t": "p",
+              "text": "Naming the remedy is part of the pleading. Ask for the wrong one and the right argument achieves nothing."
+            },
+            {
+              "t": "table",
+              "caption": "The orders, and what each one does",
+              "columns": [
+                "Order",
+                "What it does"
+              ],
+              "rows": [
+                [
+                  "Certiorari",
+                  "Quashes a decision already made."
+                ],
+                [
+                  "Prohibition",
+                  "Stops a body from acting or continuing to act."
+                ],
+                [
+                  "Mandamus",
+                  "Compels a body to perform a public duty it has refused."
+                ],
+                [
+                  "Declaration",
+                  "States the legal position, without commanding anyone."
+                ]
+              ],
+              "alt": "Four orders. Certiorari quashes a decision already made. Prohibition stops a body from acting or continuing. Mandamus compels a body to perform a public duty it has refused. A declaration states the legal position without commanding anyone."
+            },
+            {
+              "t": "p",
+              "text": "More than one can be sought together. Quashing a refusal often needs mandamus beside it, or the body simply refuses again."
+            },
+            {
+              "t": "checkpoint",
+              "q": "The council never decided Bakri's application at all. Which order fits?",
+              "options": [
+                "Certiorari, to quash the refusal",
+                "Mandamus, to compel a decision",
+                "Prohibition, to stop the council"
+              ],
+              "answer": 1,
+              "why": "There is no decision to quash. The complaint is inaction, and mandamus is the order that compels a public body to perform its duty."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-review-standing-3",
+          "readMinutes": 2,
+          "keypoint": "Winning a review usually sends the decision back rather than replacing it.",
+          "h": "What winning gets you",
+          "body": [
+            {
+              "t": "p",
+              "text": "Readers expect a successful review to hand them the licence. It usually does not."
+            },
+            {
+              "t": "p",
+              "text": "The court quashes the decision and the matter returns to the body, which decides again, lawfully this time."
+            },
+            {
+              "t": "p",
+              "text": "The body may reach the same result. If it does so on relevant grounds and after a fair procedure, that outcome stands."
+            },
+            {
+              "t": "caution",
+              "text": "There is authority for a court going further and substituting its own decision in an appropriate case. Treat that as exceptional and argue for it expressly rather than assuming it."
+            },
+            {
+              "t": "p",
+              "text": "This follows from what review is for. The court polices how the power was used; it does not take the power over."
+            }
+          ]
+        }
+      ],
+      "source": "Rules of Court 2012, Order 53. The remedies are the prerogative orders as applied in Malaysia.",
+      "verify": "Read Order 53 itself for the leave requirement, the time limit and the sufficient-interest test, and check the current time limit rather than relying on a textbook.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "rules-of-court-2012",
+          "where": "Order 53, and the leave stage in particular"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-discretion-limits",
+      "moduleId": "m12-administrative",
+      "title": "The limits on a discretion",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A power that says the Minister may do as he thinks fit is still a limited power. Four familiar failures turn a lawful-looking decision into an unlawful one, and none of them is about the decision being wrong.",
+      "sections": [
+        {
+          "id": "sec-l-discretion-limits-0",
+          "readMinutes": 2,
+          "keypoint": "A discretion has to be exercised for the purpose it was given for.",
+          "h": "A power given for a reason",
+          "body": [
+            {
+              "t": "p",
+              "text": "A statute lets a local authority close a market for reasons of public health. The authority closes one to make room for a development it favours."
+            },
+            {
+              "t": "p",
+              "text": "Nothing here is dishonest, and the decision may even be sensible. It is still unlawful."
+            },
+            {
+              "t": "rule",
+              "text": "A statutory power must be exercised for the purpose for which it was conferred. Using it to achieve some other object is an improper purpose, whatever the merits of that object.",
+              "source": "Administrative law principle applied in Malaysia; see the grounds recognised under Order 53 review."
+            },
+            {
+              "t": "p",
+              "text": "Find the purpose in the Act, not in what seems reasonable. That is what makes this a legality question rather than a merits one."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-discretion-limits-1",
+          "readMinutes": 2,
+          "keypoint": "Considering the wrong things, or ignoring the right ones, is itself a ground.",
+          "h": "What was taken into account",
+          "body": [
+            {
+              "t": "p",
+              "text": "The second failure is about the ingredients rather than the answer."
+            },
+            {
+              "t": "p",
+              "text": "A decision-maker must consider what the statute makes relevant, and must not be influenced by what it does not."
+            },
+            {
+              "t": "example",
+              "text": "A licensing authority refuses a permit partly because the applicant had criticised the council in the newspaper. That is an irrelevant consideration, and the refusal is open to challenge even if there were also good reasons."
+            },
+            {
+              "t": "caution",
+              "text": "The presence of a good reason does not always save a decision. Ask whether the irrelevant matter actually influenced the outcome."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-discretion-limits-2",
+          "readMinutes": 2,
+          "keypoint": "A body that applies a rigid policy has stopped exercising the discretion it was given.",
+          "h": "Refusing to decide",
+          "body": [
+            {
+              "t": "p",
+              "text": "The third failure is the subtlest, and it looks like good administration."
+            },
+            {
+              "t": "p",
+              "text": "A body adopts a policy so it treats like cases alike. Then it applies the policy to every case without looking at any of them."
+            },
+            {
+              "t": "rule",
+              "text": "A body entrusted with a discretion must not fetter it by applying a rigid rule. It may adopt a policy, but it must remain willing to consider an application that asks it to depart from that policy.",
+              "source": "Administrative law principle applied in Malaysia."
+            },
+            {
+              "t": "p",
+              "text": "So the answer to a policy is not that policies are unlawful. The answer is that this applicant was never actually considered."
+            },
+            {
+              "t": "predict",
+              "prompt": "An authority says: we never grant licences to applicants under 21, and we made no exception here. What is the ground?",
+              "options": [
+                "Irrationality",
+                "Fettering the discretion",
+                "Procedural impropriety"
+              ],
+              "answer": 1,
+              "reveal": "Fettering. The authority may have a policy about age, but refusing to consider whether this case warrants departing from it means the statutory discretion was never exercised."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-discretion-limits-3",
+          "readMinutes": 2,
+          "keypoint": "A clause saying a decision may not be questioned does not always mean what it says.",
+          "h": "Clauses that try to shut the court out",
+          "body": [
+            {
+              "t": "p",
+              "text": "Parliament sometimes writes that a decision shall be final and shall not be called into question in any court."
+            },
+            {
+              "t": "p",
+              "text": "Taken literally that ends review. Courts have not read such clauses literally."
+            },
+            {
+              "t": "p",
+              "text": "The reasoning is narrow and worth stating precisely. The clause protects decisions the body had power to make. A decision made outside the power is not a decision of the kind the clause protects."
+            },
+            {
+              "t": "caution",
+              "text": "This is contested ground in Malaysia and the authorities repay careful reading. Do not assert that ouster clauses are simply ineffective — say why this decision falls outside what the clause covers."
+            },
+            {
+              "t": "p",
+              "text": "Note also Article 121 in the background. How far Parliament may remove judicial power is a constitutional question, not merely one of construction."
+            }
+          ]
+        }
+      ],
+      "source": "The grounds of review as applied under Rules of Court 2012, Order 53; Federal Constitution, Article 121 for the constitutional dimension of ouster clauses.",
+      "verify": "Check the current Malaysian authorities on ouster clauses before relying on this — the position has moved, and this lesson deliberately states the principle without asserting where the line now sits.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "rules-of-court-2012",
+          "where": "Order 53, and the grounds a challenge must be fitted into"
+        },
+        {
+          "statuteId": "federal-constitution",
+          "where": "Article 121, and the question of what judicial power Parliament may remove"
+        }
+      ],
+      "quiz": []
     }
   ]
 }
