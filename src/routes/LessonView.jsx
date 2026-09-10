@@ -12,57 +12,35 @@ import { Prose, TermLayer } from '../components/Term.jsx';
 import { burstFrom } from '../lib/fx.js';
 import { daysAgo, plural } from '../lib/format.js';
 import NotFound from './NotFound.jsx';
+import { focusOn, setFocus } from '../lib/focus.js';
+import { useDialog } from '../components/Overlays.jsx';
 
 const slug = (s, i) => `s${i}-${String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}`;
 
-// Stepping covers every width below the one where the lesson gains its
-// contents rail. 780 was the phone band and left iPad portrait (820) and large
-// phones in landscape on the continuous wall — which is not "all mobile
-// screens". The rail arrives at 1024 in learn.css, and above it there is a
-// persistent way to see where you are, so the wall stops being a wall.
+// Focus mode has no width gate: every lesson is read one section at a time, at
+// every size.
 //
-// THIS DELIBERATELY DISAGREES with the --type-body bump in tokens.css, which
-// stops at 780. The two look like they should match and answer different
-// questions:
+// It used to stop at 1023, on the reasoning that stepping was a small-screen
+// remedy — a long lesson on a phone is a wall to scroll — and that above the
+// contents rail at 1024 the wall stopped being a wall. That reasoning was sound
+// for the question it asked, and it asked the wrong one. It treated stepping as
+// WAYFINDING, solved by a rail. The intent is ATTENTION: one section per screen
+// is how this material is meant to be met, and a reader on a large monitor is
+// no better served by a wall than a reader on a phone. The rail survives as a
+// section switcher rather than a scroll map — clicking an entry sets the step,
+// which the handler below already did.
 //
-//   - The type bump is about VIEWING DISTANCE. A phone at reading distance
-//     rendering smaller than a desktop is an inversion, and 19px fixes it.
-//     From 781 up the type is already EQUAL to desktop, so that inversion is
-//     absent, and a tablet at arm's length is not a phone held close.
-//   - Stepping is about WAYFINDING. Can the reader see where they are? That
-//     is answered by the contents rail, which arrives at 1024, and it is true
-//     at any type size.
+// The escape hatch stays and widens. `stepPref` still defaults ON, and the
+// toggle now renders at every width instead of only below 1024, so a reader who
+// wants the continuous page can still ask for it at the size where they are
+// most likely to want it.
 //
-// What this is NOT about, measured rather than assumed: line length. An
-// earlier version of this comment argued that enlarging type past 768 pushes
-// the measure away from the comfortable 45-75 band. That is false. `--measure`
-// is 68ch, so the column scales WITH the type — at 768 it grows 612px to 646px,
-// +5.5%, exactly the type increase — and characters per line stays at 59.6 at
-// both sizes. Where the measure binds, line length is invariant by
-// construction; where the viewport binds, a 1px step is below the granularity
-// of line breaking (a 164-character paragraph at 360px breaks to 5 lines at
-// both 18px and 19px, and only to 6 at 24px). Do not go looking for a
-// chars-per-line effect here; there is not one to find.
-//
-// So the 243px gap is a real distinction, not drift. If the two ever need to
-// move together, they should share a token rather than being matched by hand —
-// but they do not need to move together today.
-const NARROW = '(max-width: 1023px)';
-const STEP_PREF = 'lessonStepMode';
-
-/** True while the viewport is phone-width. Re-renders when that changes. */
-function useNarrow() {
-  const [narrow, setNarrow] = useState(
-    () => typeof matchMedia === 'function' && matchMedia(NARROW).matches);
-  useEffect(() => {
-    if (typeof matchMedia !== 'function') return undefined;
-    const mq = matchMedia(NARROW);
-    const on = () => setNarrow(mq.matches);
-    mq.addEventListener('change', on);
-    return () => mq.removeEventListener('change', on);
-  }, []);
-  return narrow;
-}
+// One measured finding is kept from the breakpoint rationale this replaces,
+// because it is easy to re-derive wrongly: enlarging body type does NOT push
+// line length out of the comfortable band. `--measure` is 68ch, so the column
+// scales WITH the type — at 768 it grows 612px to 646px, exactly the type
+// increase — and characters per line stays at 59.6 at both sizes. There is no
+// chars-per-line effect here to find.
 
 // The reading mode is a per-device view preference, not progress, so it lives
 // in localStorage rather than in the IndexedDB `meta` store the rest of the
@@ -70,12 +48,6 @@ function useNarrow() {
 // flashes the wrong mode on every load, and it is the one piece of state here
 // that a reader would not mind losing. Everything that IS progress stays in
 // `meta`, where the export in Settings can reach it.
-const readStepPref = () => {
-  try { return localStorage.getItem(STEP_PREF) !== 'off'; } catch { return true; }
-};
-const writeStepPref = (on) => {
-  try { localStorage.setItem(STEP_PREF, on ? 'on' : 'off'); } catch { /* private mode */ }
-};
 
 export default function LessonView() {
   const { id } = useParams();
@@ -125,13 +97,9 @@ export default function LessonView() {
     return () => obs.disconnect();
   }, [ids]);
 
-  const narrow = useNarrow();
-  const [stepPref, setStepPref] = useState(readStepPref);
+  const [stepPref, setStepPref] = useState(focusOn);
   const [step, setStep] = useState(0);
-  // Stepping is a phone thing. Above 780 the continuous page stays exactly as
-  // it was — this mode exists because a long lesson on a small screen is a wall
-  // to scroll, not because sections are better read alone.
-  const stepping = narrow && stepPref;
+  const stepping = stepPref;
   useEffect(() => { setStep(0); }, [id]);
 
   // Moving between sections replaces the whole reading surface, and a swap
@@ -205,6 +173,61 @@ export default function LessonView() {
     setBusy(false);
   };
 
+  // One section, rendered the same whether it is inline on the page or alone
+  // inside the reader. Extracting it is what lets focus mode be a full screen
+  // rather than a paginated page: the same JSX is the whole of one and a part
+  // of the other, so the two cannot drift into different-looking sections.
+  const renderSection = (sec, n) => (
+            <motion.section
+              className="lsec"
+              id={ids[n]}
+              key={ids[n]}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="lsec-head">
+                <span className="lsec-num" aria-hidden="true">{n + 1}</span>
+                <h2
+                  className="lsec-h"
+                  ref={stepping ? headRef : null}
+                  tabIndex={stepping ? -1 : undefined}
+                >{sec.h}</h2>
+              </div>
+              {/* Every section carries a `keypoint` — enforced by
+                  check-content.py, 20-160 chars, forbidden from repeating the
+                  heading — and until now only index pages showed it. Stepped
+                  only: down a continuous column it would repeat under every
+                  heading and read as noise, but on a phone it is the line that
+                  tells a reader what they are about to learn. */}
+              {stepping && sec.keypoint && <p className="lede">{sec.keypoint}</p>}
+              {(sec.body || []).map((b, k) => <Block key={k} b={b} seen={seen} />)}
+              {/* Marking is explicit, never inferred from scrolling. `lessons.js`
+                  refuses to guess at a reader's attention and this is the same
+                  refusal one level down: a section is done because the reader
+                  said so. */}
+              <p className="lsec-done">
+                <button
+                  type="button"
+                  className="lsec-done-btn"
+                  aria-pressed={!!secRead[sec.id]}
+                  onClick={async () => setSecRead(secRead[sec.id]
+                    ? await sections_.markUnread(sec.id)
+                    : await sections_.markRead(sec.id))}
+                >
+                  {secRead[sec.id] ? 'Done' : `Mark done · ${sec.readMinutes || 1} min`}
+                </button>
+              </p>
+            </motion.section>
+  );
+
+  // Escape closes, Tab cannot walk out, the body behind does not scroll, and
+  // focus goes back where it came from on close.
+  const readerRef = useDialog(stepping, () => { setStepPref(false); setFocus(false); });
+  const activeIdx = Math.min(step, sections.length - 1);
+  const active = sections[activeIdx];
+
   return (
     <TermLayer>
       <motion.div className="readbar" style={{ scaleX: bar }} aria-hidden="true" />
@@ -215,7 +238,15 @@ export default function LessonView() {
           .wrap--dash also carries an opaque ground, which would paint over the
           field across the whole layout and undo the .lesson-main.sheet
           treatment written for this element by hand. */}
-      <div className="lesson-layout" data-module={l.moduleId}>
+      {/* The reader covers the screen, so the page behind it is not merely
+          hidden from view — it is not rendered as a surface at all. My user
+          asked for "only the contents of each section on full screen, and only
+          on close should other contents be visible", and `display: none` is the
+          honest form of that: nothing behind is paintable, focusable, or
+          reachable by a screen reader, so there is no second copy of the lesson
+          for anyone to land in. */}
+      <div className="lesson-layout" data-module={l.moduleId}
+        style={stepping ? { display: 'none' } : undefined}>
         {/* The prose column, and the only part of this layout that is a
             column of prose — .lesson-main is already capped at --measure, and
             .sheet is what stops the field being composited behind body text
@@ -268,107 +299,20 @@ export default function LessonView() {
             );
           })()}
 
-          {stepping && (
-            <div className="stepper stepper--top">
-              <p className="stepper-where">
-                {/* The read time belongs here, not only on the Mark done
-                    button at the foot: a reader deciding whether to start a
-                    section needs the cost before they commit to it, which is
-                    the whole point of the annotation for someone studying
-                    after a shift. */}
-                <span className="stepper-count">
-                  Section {Math.min(step, sections.length - 1) + 1} of {sections.length}
-                  {' · '}
-                  {plural(sections[Math.min(step, sections.length - 1)]?.readMinutes || 1, 'min')}
-                </span>
-                <span className="stepper-bar" aria-hidden="true">
-                  <i style={{ width: `${((Math.min(step, sections.length - 1) + 1) / Math.max(1, sections.length)) * 100}%` }} />
-                </span>
-              </p>
-            </div>
-          )}
 
-          {(stepping ? [sections[Math.min(step, sections.length - 1)]] : sections).map((sec, i) => (
-            (n => (
-            <motion.section
-              className="lsec"
-              id={ids[n]}
-              key={ids[n]}
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          {!stepping && sections.map((sec, i) => renderSection(sec, i))}
+
+
+          <p className="stepper-mode">
+            <button
+              type="button"
+              className="stepper-mode-btn"
+              aria-pressed={stepping}
+              onClick={() => { const on = !stepPref; setStepPref(on); setFocus(on); }}
             >
-              <div className="lsec-head">
-                <span className="lsec-num" aria-hidden="true">{n + 1}</span>
-                <h2
-                  className="lsec-h"
-                  ref={stepping ? headRef : null}
-                  tabIndex={stepping ? -1 : undefined}
-                >{sec.h}</h2>
-              </div>
-              {/* Every section carries a `keypoint` — enforced by
-                  check-content.py, 20-160 chars, forbidden from repeating the
-                  heading — and until now only index pages showed it. Stepped
-                  only: down a continuous column it would repeat under every
-                  heading and read as noise, but on a phone it is the line that
-                  tells a reader what they are about to learn. */}
-              {stepping && sec.keypoint && <p className="lede">{sec.keypoint}</p>}
-              {(sec.body || []).map((b, k) => <Block key={k} b={b} seen={seen} />)}
-              {/* Marking is explicit, never inferred from scrolling. `lessons.js`
-                  refuses to guess at a reader's attention and this is the same
-                  refusal one level down: a section is done because the reader
-                  said so. */}
-              <p className="lsec-done">
-                <button
-                  type="button"
-                  className="lsec-done-btn"
-                  aria-pressed={!!secRead[sec.id]}
-                  onClick={async () => setSecRead(secRead[sec.id]
-                    ? await sections_.markUnread(sec.id)
-                    : await sections_.markRead(sec.id))}
-                >
-                  {secRead[sec.id] ? 'Done' : `Mark done · ${sec.readMinutes || 1} min`}
-                </button>
-              </p>
-            </motion.section>
-            ))(stepping ? Math.min(step, sections.length - 1) : i)
-          ))}
-
-          {stepping && (
-            /* Navigation only. It never marks a section done — `lessons.js`
-               refuses to infer attention from scrolling and this refuses to
-               infer it from paging. If Next marked, every figure downstream
-               (the section counts, the resume point, the module percentages)
-               would quietly stop being a claim the reader made. */
-            <nav className="stepper stepper--foot" aria-label="Sections">
-              <button
-                type="button"
-                className="stepper-btn"
-                disabled={step <= 0}
-                onClick={() => { setStep(n => Math.max(0, n - 1)); window.scrollTo({ top: 0 }); }}
-              >← Previous</button>
-              <button
-                type="button"
-                className="stepper-btn stepper-btn--next"
-                disabled={step >= sections.length - 1}
-                onClick={() => { setStep(n => Math.min(sections.length - 1, n + 1)); window.scrollTo({ top: 0 }); }}
-              >Next section →</button>
-            </nav>
-          )}
-
-          {narrow && (
-            <p className="stepper-mode">
-              <button
-                type="button"
-                className="stepper-mode-btn"
-                aria-pressed={stepping}
-                onClick={() => { const on = !stepPref; setStepPref(on); writeStepPref(on); }}
-              >
-                {stepping ? 'Read straight through instead' : 'Read one section at a time'}
-              </button>
-            </p>
-          )}
+              {stepping ? 'Read straight through instead' : 'Read one section at a time'}
+            </button>
+          </p>
 
           {l.quizCount > 0 && (
             <motion.div
@@ -524,6 +468,61 @@ export default function LessonView() {
           </div>
         </aside>
       </div>
+      {stepping && (
+        <div className="focusview" ref={readerRef} tabIndex={-1} role="dialog" aria-modal="true"
+          aria-label={`${l.title} — section ${activeIdx + 1} of ${sections.length}`}>
+          <div className="focusview-top">
+          <div className="stepper stepper--top">
+            <p className="stepper-where">
+              {/* The read time belongs here, not only on the Mark done
+                  button at the foot: a reader deciding whether to start a
+                  section needs the cost before they commit to it, which is
+                  the whole point of the annotation for someone studying
+                  after a shift. */}
+              <span className="stepper-count">
+                Section {Math.min(step, sections.length - 1) + 1} of {sections.length}
+                {' · '}
+                {plural(sections[Math.min(step, sections.length - 1)]?.readMinutes || 1, 'min')}
+              </span>
+              <span className="stepper-bar" aria-hidden="true">
+                <i style={{ width: `${((Math.min(step, sections.length - 1) + 1) / Math.max(1, sections.length)) * 100}%` }} />
+              </span>
+            </p>
+          </div>
+            <button
+              type="button"
+              className="focusview-close"
+              onClick={() => { setStepPref(false); setFocus(false); }}
+            >Close ✕</button>
+          </div>
+
+          <div className="focusview-col">
+            {renderSection(active, activeIdx)}
+          </div>
+
+          <div className="focusview-foot">
+          /* Navigation only. It never marks a section done — `lessons.js`
+             refuses to infer attention from scrolling and this refuses to
+             infer it from paging. If Next marked, every figure downstream
+             (the section counts, the resume point, the module percentages)
+             would quietly stop being a claim the reader made. */
+          <nav className="stepper stepper--foot" aria-label="Sections">
+            <button
+              type="button"
+              className="stepper-btn"
+              disabled={step <= 0}
+              onClick={() => { setStep(n => Math.max(0, n - 1)); window.scrollTo({ top: 0 }); }}
+            >← Previous</button>
+            <button
+              type="button"
+              className="stepper-btn stepper-btn--next"
+              disabled={step >= sections.length - 1}
+              onClick={() => { setStep(n => Math.min(sections.length - 1, n + 1)); window.scrollTo({ top: 0 }); }}
+            >Next section →</button>
+          </nav>
+          </div>
+        </div>
+      )}
     </TermLayer>
   );
 }

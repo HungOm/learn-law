@@ -49,6 +49,12 @@ export default function PrintSheet({
   rubric = [],
   selfMark,
   words,
+  // A blank worksheet, for a reader who wants to write the thing by hand and
+  // away from the screen — which for this readership is the common case, not
+  // the fallback. `steps` prints the scaffold so the sheet is usable with no
+  // device at all; `blankLines` gives them somewhere to write.
+  steps = [],
+  blankLines = 0,
 }) {
   const today = new Date().toLocaleDateString(undefined, {
     year: 'numeric', month: 'long', day: 'numeric',
@@ -92,11 +98,28 @@ export default function PrintSheet({
           </div>
         )}
 
+        {steps.length > 0 && (
+          <div className="ps-brief">
+            <p className="ps-h">How to build it</p>
+            <ol className="ps-steps">
+              {steps.map((st, i) => (
+                <li key={i}><strong>{st.step}.</strong> {st.prompt}</li>
+              ))}
+            </ol>
+          </div>
+        )}
+
         <div className="ps-answer">
-          <p className="ps-h">The answer as written</p>
-          {paragraphs.length
-            ? paragraphs.map((p, i) => <p key={i}>{p}</p>)
-            : <p className="ps-empty">Nothing was written.</p>}
+          <p className="ps-h">
+            {blankLines > 0 ? 'Your answer' : 'The answer as written'}
+          </p>
+          {blankLines > 0
+            ? Array.from({ length: blankLines }, (_, i) => (
+                <span className="ps-writeline" key={i} />
+              ))
+            : paragraphs.length
+              ? paragraphs.map((p, i) => <p key={i}>{p}</p>)
+              : <p className="ps-empty">Nothing was written.</p>}
         </div>
       </section>
 

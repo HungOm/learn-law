@@ -691,6 +691,176 @@ button.tap-exempt,
   margin-bottom: var(--space-2);
 }
 
+/* ---------- the focus reader ----------
+   A section on its own, over everything else. Not a paginated page: the rail,
+   the hero, the mark-as-read row and the quiz invite are all gone while it is
+   open, and come back on close.
+
+   LAYER. 35 — above the phone nav bar and the contents strip (both 30), below
+   the toast stack (40), the seal pop (45), the level-up scrim (50), the
+   glossary term card (60), the command palette (70) and the skip link (100).
+   That ordering is deliberate rather than incidental: a term card MUST open
+   above the reader, because tapping a glossary term is a thing a reader does
+   while reading, and a level-up must not be swallowed by it.
+
+   "ELEVATED", and why it is not a scrim. Nothing behind may be visible, so the
+   ground is opaque — a translucent scrim would leave the page showing through,
+   which is the one thing this mode exists to prevent. Elevation is therefore
+   carried by an edge and a shadow rather than by dimming what is underneath.
+
+   Full-bleed on a phone, where there is no room for an edge and a reader wants
+   every pixel. From 1024 it insets and becomes a real surface: a 68ch column
+   full-bleed on a 2560px monitor is the same short-column-in-a-void that the
+   desktop rebuild existed to remove, and it would arrive again by a new route.
+   The backdrop stays opaque at every width. */
+
+.focusview {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  background: var(--surface-page);
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior: contain;
+}
+
+/* The reading surface itself. At phone widths it IS the backdrop; from 1024 it
+   separates from it and picks up the edge and the lift. */
+.focusview-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.focusview-top,
+.focusview-foot {
+  flex: 0 0 auto;
+  position: sticky;
+  z-index: 1;
+  background: var(--surface-page);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+}
+.focusview-top  { top: 0;    border-bottom: var(--line-hairline) solid var(--border-hairline); }
+.focusview-foot {
+  bottom: 0;
+  border-top: var(--line-hairline) solid var(--border-hairline);
+  justify-content: space-between;
+  /* Clears the home indicator on a notched phone, where this bar is the last
+     thing above the bottom edge. env() is 0 where there is no inset. */
+  padding-bottom: calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+}
+
+/* The progress statement is the only thing telling a reader where they are once
+   the contents rail is off screen, so it takes body ink rather than secondary. */
+.focusview-where { color: var(--text-strong); font-weight: var(--weight-semi); font-variant-numeric: tabular-nums; }
+.focusview-top > :last-child { margin-left: auto; }
+
+.focusview-close {
+  min-width: var(--tap-min);
+  min-height: var(--tap-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-3);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  font: inherit;
+  cursor: pointer;
+}
+.focusview-close:hover { border-color: var(--border-active); }
+
+/* The column. It sets the same four component-local properties learn.css sets
+   on .lesson-layout, so every figure rule in that file applies here unchanged —
+   a diagram breaks out of the measure by --fig-bleed exactly as it does in the
+   sheet. Without these the geometry work would stop applying in the mode most
+   people now read in. */
+.focusview-col {
+  --sheet-marg: var(--space-4);
+  --sheet-pad:  var(--space-4);
+  --fig-bleed:  0px;
+  max-width: calc(var(--measure) + var(--sheet-marg) + var(--sheet-pad));
+  margin-inline: auto;
+  padding: var(--space-6) var(--sheet-pad) var(--space-8) var(--sheet-marg);
+}
+
+@media (min-width: 781px) {
+  .focusview-col { --sheet-marg: var(--space-6); --sheet-pad: var(--space-6); --fig-bleed: var(--space-4); }
+}
+
+@media (min-width: 1024px) {
+  /* Inset and lifted. --shadow-modal because this is a dismissible surface over
+     the page, which is exactly what DESIGN.md reserves shadow for. */
+  .focusview { padding: var(--space-6); }
+  .focusview-surface {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    max-width: var(--pane-dash);
+    width: 100%;
+    margin-inline: auto;
+    background: var(--surface-raised);
+    border: var(--line-hairline) solid var(--border-hairline);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-modal);
+    overflow: hidden;
+  }
+  .focusview-surface .focusview-top,
+  .focusview-surface .focusview-foot { background: var(--surface-raised); }
+  .focusview-col { --sheet-marg: var(--margin-num); --sheet-pad: var(--space-7); --fig-bleed: var(--space-6); }
+}
+
+@media (min-width: 1440px) {
+  .focusview { padding: var(--space-7); }
+  .focusview-col { --sheet-marg: calc(var(--margin-num) + var(--space-5)); --sheet-pad: var(--space-8); --fig-bleed: var(--space-7); }
+}
+
+/* ---------- read alongside ----------
+   The per-lesson reading list. Ruled off above rather than boxed: it is the
+   last thing on a lesson and it is apparatus, not material — a card would make
+   it compete with the prose it follows. */
+.readalong {
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: var(--line-marker) solid var(--border-hairline);
+}
+.readalong > h2 { margin-top: 0; }
+.readalong > .small { margin-bottom: var(--space-5); }
+.readalong h3 { margin-top: var(--space-6); }
+.readalong .arrangement { margin-top: var(--space-3); }
+
+/* The authorities themselves. Set in the serif, because a citation is material
+   rather than apparatus — it is the thing the reader is being sent to. Marked
+   with a rule down the left rather than bullets: a list of provisions is closer
+   to a schedule than to prose. */
+.readalong-list {
+  list-style: none;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  border-left: var(--line-hairline) solid var(--border-strong);
+}
+.readalong-list li {
+  padding: var(--space-2) 0 var(--space-2) var(--space-4);
+  font-size: var(--type-base);
+  line-height: var(--leading-snug);
+}
+.readalong-list li + li { border-top: var(--line-hairline) solid var(--border-hairline); }
+/* Already reachable as a guided page above; the citation is repeated because
+   the list is the lesson's own order, and a gap in it would read as an omission. */
+.readalong-list li.is-linked { color: var(--text-secondary); }
+/* Not law. Kept visibly apart from the authorities above it. */
+.readalong-list.is-secondary { border-left-color: var(--border-hairline); }
+.readalong-list.is-secondary li { color: var(--text-secondary); font-size: var(--type-sm); }
+
 /* ---------- module identity ----------
    Twenty-four modules, one colour each. It is orientation and a retrieval cue, not
    an identifier: colour cannot carry twenty-four categories for a colour-blind

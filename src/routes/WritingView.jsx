@@ -6,6 +6,7 @@ import { Notice } from '../components/Bits.jsx';
 import { plural } from '../lib/format.js';
 import PrintSheet from '../components/PrintSheet.jsx';
 import NotFound from './NotFound.jsx';
+import { focusOn, setFocus } from '../lib/focus.js';
 
 /**
  * One writing exercise: brief, steps, a place to draft, and — only after the
@@ -23,6 +24,8 @@ export default function WritingView() {
   const { cat, read } = useStudy();
   const w = writing.byId(id);
 
+  const [stepPref, setStepPref] = useState(focusOn);
+  const [step, setStep] = useState(0);
   const [draft, setDraft] = useState(null);
   const [revealed, setRevealed] = useState(false);
   const [saved, setSaved] = useState('');
@@ -72,6 +75,37 @@ export default function WritingView() {
   const n = writing.words(draft?.text);
   const drafted = writing.isDrafted(draft);
 
+  // Focus mode over a writing exercise is not pagination of equal sections —
+  // the stages are different in kind, and their ORDER is the pedagogy. The
+  // brief before the scaffold, the scaffold before the blank box, and
+  // everything that would let a reader produce an answer without composing one
+  // behind forty words of their own. Stepping states that order instead of
+  // leaving it to a reader's scroll discipline, which is the whole argument for
+  // the mode.
+  //
+  // The reveal is ONE step rather than four. Its four headings are a single
+  // stage that unlocks together, and splitting them would put three Next
+  // presses between a reader and the rubric they just earned.
+  const STAGES = [
+    [0, 'The brief'],
+    [1, 'Before you start'],
+    [2, 'How to build it'],
+    [3, 'Your draft'],
+    [4, 'The shape, the model and the rubric'],
+    [5, 'Sources'],
+  ];
+  const visible = STAGES.filter(([k]) => k !== 4 || drafted);
+  // No width condition, deliberately, and the same decision as the lesson —
+  // the argument is written out at LessonView.jsx above the stage state, and
+  // the short version is that stepping is about ATTENTION, not wayfinding, so
+  // a large screen is not a reason to hand the reader the whole wall. A
+  // width-free stepper on a 1920px monitor reads like an oversight if you meet
+  // it without that; it is not one. Both views share `focusOn` so the reader
+  // sets this once.
+  const stepping = stepPref;
+  const idx = Math.min(step, visible.length - 1);
+  const on = k => !stepping || visible[idx][0] === k;
+
   return (
     <div className="wrap sheet" data-module={w.moduleId}>
       <p className="small taplink-row"><Link className="taplink" to="/writing">← Writing</Link></p>
@@ -82,10 +116,25 @@ export default function WritingView() {
         {lesson && <> · from <Link to={`/lesson/${lesson.id}`}>{lesson.title}</Link></>}
       </p>
 
+      {on(0) && (<>
       <h2>The brief</h2>
       <p>{w.brief}</p>
       <p className="small"><strong>Who you are writing for.</strong> {w.audience}</p>
 
+      {/* On the brief, not further in: this is where a reader decides whether
+          to do the exercise on paper, and the old placement put the only print
+          button behind forty words typed on the screen they wanted to leave. */}
+      <p className="btn-row">
+        <button type="button" className="btn" onClick={() => window.print()}>
+          {drafted
+            ? 'Print or save as PDF — your draft, for someone else to mark'
+            : 'Print or save as PDF — blank, to write by hand'}
+        </button>
+      </p>
+
+      </>)}
+
+      {on(1) && (<>
       <h2>Before you start</h2>
       <div className="arrangement">
         {w.before.map((b, i) => (
@@ -96,6 +145,10 @@ export default function WritingView() {
         ))}
       </div>
 
+
+      </>)}
+
+      {on(2) && (<>
       <h2>How to build it</h2>
       <div className="arrangement">
         {w.scaffold.map((s, i) => (
@@ -110,23 +163,41 @@ export default function WritingView() {
         ))}
       </div>
 
-      {drafted && (
-        <PrintSheet
-          kind="writing"
-          refId={w.id}
-          title={w.title}
-          moduleTitle={cat.modules.find(m => m.id === w.moduleId)?.title || w.moduleId}
-          moduleId={w.moduleId}
-          lessonTitle={lesson?.title}
-          level={w.level}
-          minutes={w.minutes}
-          brief={w.brief}
-          text={draft?.text || ''}
-          rubric={w.rubric}
-          selfMark={draft?.band}
-          words={n}
-        />
-      )}
+      </>)}
+
+      {/* One sheet, two shapes, mounted once and outside the step gating —
+          two mounted sheets would both print.
+
+          Before there is a draft it is a WORKSHEET: brief, the steps, and
+          ruled lines to write on. That is the case this readership actually
+          has — a phone, prepaid data, and a preference for paper — and the old
+          version served it not at all, because the print button only appeared
+          after forty words had already been typed on the screen the reader was
+          trying to get away from.
+
+          The rubric is deliberately absent from the worksheet. It is behind
+          the same forty-word gate as the model on screen, and printing it
+          early would hand over the answer's shape before a word is written,
+          which is the one thing this tier exists to prevent. */}
+      <PrintSheet
+        kind="writing"
+        refId={w.id}
+        title={w.title}
+        moduleTitle={cat.modules.find(m => m.id === w.moduleId)?.title || w.moduleId}
+        moduleId={w.moduleId}
+        lessonTitle={lesson?.title}
+        level={w.level}
+        minutes={w.minutes}
+        brief={w.brief}
+        text={drafted ? (draft?.text || '') : ''}
+        steps={drafted ? [] : w.scaffold}
+        blankLines={drafted ? 0 : 26}
+        rubric={drafted ? w.rubric : []}
+        selfMark={draft?.band}
+        words={n}
+      />
+
+      {on(3) && (<>
 
       <h2>Your draft</h2>
       <p className="small">
@@ -146,14 +217,17 @@ export default function WritingView() {
         {!drafted && n > 0 && ` ${40 - n} more before the rubric opens.`}
       </p>
 
-      {!drafted ? (
+      {!drafted && (
         <Notice>
           <strong>The shape, the model and the rubric are behind your draft.</strong> Forty
           words of your own opens them. Reading them first would give you someone else's
           answer to reproduce, and you would learn nothing about your own writing — which is
           the only thing this exercise can teach you.
         </Notice>
-      ) : (
+      )}
+      </>)}
+
+      {on(4) && drafted && (
         <>
           <h2>The shape a good answer has</h2>
           <div className="arrangement">
@@ -253,10 +327,43 @@ export default function WritingView() {
         </>
       )}
 
+      {on(5) && (<>
       <h2>Sources</h2>
       <p className="small">{w.source}</p>
       <p className="small"><strong>Check your own work.</strong> {w.verify}</p>
       <p className="small">Last verified {w.lastVerified}.</p>
+      </>)}
+
+      {stepping && (
+        <nav className="stepper stepper--foot" aria-label="Writing stages">
+          <button
+            type="button"
+            className="stepper-btn"
+            disabled={idx === 0}
+            onClick={() => { setStep(i => Math.max(0, i - 1)); window.scrollTo({ top: 0 }); }}
+          >← Back</button>
+          <span className="stepper-count">
+            {visible[idx][1]} · {idx + 1} of {visible.length}
+          </span>
+          <button
+            type="button"
+            className="stepper-btn stepper-btn--next"
+            disabled={idx >= visible.length - 1}
+            onClick={() => { setStep(i => Math.min(visible.length - 1, i + 1)); window.scrollTo({ top: 0 }); }}
+          >Next →</button>
+        </nav>
+      )}
+
+      <p className="stepper-mode">
+        <button
+          type="button"
+          className="stepper-mode-btn"
+          aria-pressed={stepping}
+          onClick={() => { const next = !stepPref; setStepPref(next); setFocus(next); }}
+        >
+          {stepping ? 'Read straight through instead' : 'Read one stage at a time'}
+        </button>
+      </p>
     </div>
   );
 }

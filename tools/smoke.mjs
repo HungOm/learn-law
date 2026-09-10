@@ -262,9 +262,33 @@ try {
     // staged screen and does not check it arrived will keep passing after the
     // gating changes, over a screen it is no longer reaching — which is how the
     // lesson routes went a whole day being "checked" against a locked panel.
-    if (route === '#/writing/w-ratio-sentence' && (state.textareas || 0) < 2) {
-      failures.push(`${route}  reached with ${state.textareas} textarea(s), expected 2 — `
-        + `the draft seed no longer opens the drafted state, so this walk proves nothing`);
+    //
+    // Focus mode paginates this screen, so the two textareas are no longer on
+    // one page: the draft box is its own stage and the self-mark note sits on
+    // the reveal stage behind forty words. Counting textareas on the first
+    // stage proves nothing in either direction, so walk the stages and require
+    // the REVEAL to have been reachable — which is the state the seed is for.
+    // With focus mode off the walk still terminates on the first pass, because
+    // there is no Next to press and both textareas are already present.
+    if (route === '#/writing/w-ratio-sentence') {
+      const seen = await page.evaluate(async () => {
+        const out = { textareas: 0, selfnote: false, stages: 0 };
+        for (let i = 0; i < 20; i++) {
+          out.stages++;
+          out.textareas += document.querySelectorAll('textarea').length;
+          if (document.querySelector('#selfnote')) out.selfnote = true;
+          const next = document.querySelector('.stepper-btn--next');
+          if (!next || next.disabled) break;
+          next.click();
+          await new Promise(r => setTimeout(r, 250));
+        }
+        return out;
+      });
+      if (!seen.selfnote || seen.textareas < 2) {
+        failures.push(`${route}  walked ${seen.stages} stage(s) and found ${seen.textareas} `
+          + `textarea(s), self-mark note ${seen.selfnote ? 'present' : 'MISSING'} — the draft seed `
+          + `no longer opens the drafted state, so this walk proves nothing`);
+      }
     }
 
     const L = state.levels || [];

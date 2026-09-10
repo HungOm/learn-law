@@ -192,4 +192,23 @@
     font-family: var(--font-sans);
     font-size: 8pt;
   }
+
+  /* ---------- blank worksheet ----------------------------------------------
+     A reader who prints before drafting will write on the page, so the sheet
+     has to give them somewhere to do it. Ruled lines rather than an empty box:
+     a box invites one cramped paragraph, while ruled lines set the expected
+     length before a word is written — the same job the on-screen word count
+     does.
+
+     A border rather than a background, because most printers drop background
+     graphics by default and a worksheet with invisible lines is worse than one
+     with none. Black and point units to match the rest of this file: the sheet
+     is monochrome on purpose, and screen colour roles do not survive a printer. */
+  .ps-writeline {
+    display: block;
+    height: 8mm;
+    border-bottom: 0.4pt solid black;
+  }
+  .ps-steps { margin: 0; padding-left: 5mm; }
+  .ps-steps li { margin: 0 0 1.5mm; }
 }
