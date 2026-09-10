@@ -1,0 +1,80 @@
+[
+  {
+    "id": "st-nlc-s323",
+    "moduleId": "m08-property",
+    "lessonId": "l-caveats",
+    "act": "National Land Code",
+    "actId": "national-land-code",
+    "provision": "Section 323",
+    "find": "The National Land Code is published free with the Laws of Malaysia by the Attorney General's Chambers at lom.agc.gov.my. Open section 323 in the current reprint, and read it with the neighbouring caveat provisions rather than on its own.",
+    "why": "The lesson says that not everybody may lodge a private caveat, and that this section says who may. Everything a caveat can do for a purchaser between signing and registration depends on being inside the classes this section names, so the classes are worth reading in the Code's own words rather than in a summary of them.",
+    "read": [
+      {
+        "passage": "The opening words setting out who may apply for a private caveat.",
+        "look_for": "Write down each class of applicant separately, in your own words. The lesson gives three: a claim to title, a claim to a registrable interest, and a beneficial entitlement under a trust. Check whether the section you are reading matches that count, and note anything it adds."
+      },
+      {
+        "passage": "The words describing the kind of interest a claimant must assert.",
+        "look_for": "The qualifying word does real work. Ask what an interest has to be before it counts here, and therefore what kind of grievance falls outside — a debt owed by the proprietor, for instance, is not on its face a claim to the land."
+      },
+      {
+        "passage": "The section read against the surrounding caveat provisions, which the lesson locates at ss 320 to 330.",
+        "look_for": "Find where entry, lapse and removal are dealt with. This section is the gateway only; the period after which a caveat lapses and the route for a person aggrieved to have it removed live elsewhere in the group, and an answer that stops at entry has answered half the question."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A purchaser has signed the sale agreement and paid the deposit but is not yet registered. On the words of the section, may he lodge a private caveat?",
+        "model": "A good answer names the class he falls into rather than asserting that he obviously can. It should identify the interest he actually holds before registration and match it against the classes the section lists, and it should be clear that lodging the caveat gives him nothing new: it freezes the register while the claim he already has is worked out."
+      },
+      {
+        "q": "Why does the section begin by limiting who may apply, rather than leaving that to the court on a later application to remove?",
+        "model": "A good answer sees the caveat as a unilateral block on somebody else's dealings, entered without a hearing. The threshold at entry is what stops the machinery being used as a general weapon, and it is why entering one without reasonable cause carries an exposure to compensation. A reader who treats the entry test and the removal test as the same test has missed that there are two stages."
+      }
+    ],
+    "trap": "Reading the section as if lodging a caveat created an interest in the land. It creates none. It prevents dealings being registered while it stands, which buys time for a claim that must already exist — and lodging one without reasonable cause exposes the caveator to compensation, so it is not a free holding move.",
+    "source": "National Land Code, s 323, as cited in the lesson 'Dealings, charges and caveats: how an interest is protected'.",
+    "verify": "The Code was revised and its section numbering must be checked against the current text before this section is cited. Confirm the Act number as well as the number of the section, and read the caveat provisions as a group in the current reprint.",
+    "lastVerified": "2026-09-10",
+    "order": 2
+  },
+  {
+    "id": "st-ca-s218",
+    "moduleId": "m09-company",
+    "lessonId": "pe-l-company-roles",
+    "act": "Companies Act 2016",
+    "actId": "companies-act-2016",
+    "provision": "Section 218",
+    "find": "The Companies Act 2016 is published free by the Attorney General's Chambers at lom.agc.gov.my. Section 218 is short. Open it in the same sitting as sections 213 and 214, which the lesson reads with it.",
+    "why": "The lesson states the duty in this section as a prohibition on improperly using the company's property, position or information to gain a benefit or to cause the company harm. That is a different duty from the one in s 213, and the difference decides which section a set of facts belongs to — a disloyal act and a merely bad decision are not judged by the same words.",
+    "read": [
+      {
+        "passage": "The list of things a director must not improperly use.",
+        "look_for": "There is more than one item, and they are not the same thing. Property is the easiest to see; position and information are the ones that catch a director who took nothing tangible at all. Note that the improper use is the wrong, not the taking."
+      },
+      {
+        "passage": "The words describing the purpose for which the use is forbidden.",
+        "look_for": "Read closely whether the benefit has to be a benefit to the director personally, and whether harm to the company is required or is a separate limb. This is the part that decides whether a director who gained something while the company lost nothing is caught."
+      },
+      {
+        "passage": "Whom the section binds, and what the Act attaches to a breach of it.",
+        "look_for": "Check the section's own words and the Act's definitions rather than assuming it stops at serving directors. Note also whether this section carries its own consequence or leaves that to another provision — the answer changes what you would advise."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A customer offers the company a catering job. A director takes it in her own name. The company never had a contract and so lost nothing it held. Is she caught by this section?",
+        "model": "A good answer works from the words rather than from the absence of loss. It should identify which of the listed things she used — the position she held, and the information that reached her through it — and point at the purpose limb to show that a benefit gained can be enough without the company being out of pocket. An answer that says the company lost nothing and stops has answered a different question."
+      },
+      {
+        "q": "How does this section differ from s 213, and why does it matter which one a set of facts falls under?",
+        "model": "A good answer distinguishes a standard for exercising powers from a prohibition on a particular kind of misuse. Section 213 governs how a director exercises what she has — proper purpose, good faith, and the care, skill and diligence expected of her. This section forbids turning the office to private account. It matters because a director who decided badly may have the shelter s 214 gives an honest, informed, disinterested business judgement, and a director who used her position for herself is not making that kind of decision at all."
+      }
+    ],
+    "trap": "Reciting a general no-conflict rule learned from equity or from another jurisdiction's company law instead of reading what this Act says. The statutory formulation is the starting point in Malaysia, and the second trap sits behind the first: treating an absence of loss to the company as an answer, when the section is aimed at the use of the office rather than at the damage done.",
+    "source": "Companies Act 2016, s 218, as cited in the lesson 'Who runs a company, who owns it, and when a court looks behind it'.",
+    "verify": "Read s 218 in the current text at lom.agc.gov.my together with ss 213 and 214. The 2016 Act replaced the Companies Act 1965, so anything written before 2017 may be describing repealed law.",
+    "lastVerified": "2026-09-10",
+    "order": 1
+  }
+]

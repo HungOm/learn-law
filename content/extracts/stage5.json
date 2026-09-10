@@ -1,0 +1,137 @@
+[
+  {
+    "id": "x-ccsu-gchq",
+    "moduleId": "m12-administrative",
+    "lessonId": "l-judicial-review",
+    "case": "Council of Civil Service Unions v Minister for the Civil Service",
+    "citation": "[1985] AC 374",
+    "court": "House of Lords (England)",
+    "year": 1985,
+    "find": "An English decision, free in full on BAILII (bailii.org) under United Kingdom House of Lords. Search the party names rather than GCHQ: that short name comes from the facts and is how textbooks refer to the case, but it is not part of the citation and a catalogue may not know it. Read the speeches themselves rather than a headnote — the headnote is the publisher's summary and is not what binds anyone.",
+    "why": "The judicial review lesson is built on a three-word frame — illegality, irrationality, procedural impropriety — and this is where the frame comes from. It is worth reading for a reason the lesson cannot supply: in the lesson the three grounds arrive as a settled list, and in the judgment you can watch a judge propose a way of sorting cases that had not been sorted that way before. Read it once for the classification and once for the thing that is easy to miss, which is what the appeal was actually decided on.",
+    "read": [
+      {
+        "passage": "The passage that names the three heads of review.",
+        "look_for": "In the lesson the three heads are three words. In the judgment each arrives with content attached. Copy the content, not the labels — an answer that names three words has named a heading and stated no ground."
+      },
+      {
+        "passage": "Whatever is said about a possible further ground beyond the three.",
+        "look_for": "The lesson tells you proportionality is argued as a fourth ground and that its status should be checked rather than assumed. Find how tentatively this judgment raises it, and notice that raising a possibility is not the same as establishing a ground — least of all in another jurisdiction."
+      },
+      {
+        "passage": "The ground the applicants actually argued, and what answered it.",
+        "look_for": "The classification everyone quotes is not what disposed of the appeal. Apply the removal test the ratio exercise teaches: take the three-head passage out and ask whether the order the House made still follows. What that tells you about the status of the most-cited passage in administrative law is worth more than the passage."
+      },
+      {
+        "passage": "Anything on an expectation arising from a settled practice.",
+        "look_for": "The lesson places legitimate expectation alongside the three grounds and says it can arise from a promise or a consistent practice. Find what this judgment requires before such an expectation exists, and what can defeat one that does."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the three grounds with the content of each, not the labels.",
+        "model": "Each ground needs a sentence that could decide a case. Illegality reaches getting the law wrong, exceeding the power, using it for an improper purpose, taking account of the irrelevant or ignoring the relevant, and fettering the discretion in advance. Irrationality is the demanding standard — a decision no reasonable authority could have reached — and not merely a decision the court would not have made. Procedural impropriety covers both the procedure laid down and the rules of natural justice. If your three sentences cannot sort a set of facts into one of them, you have memorised a list."
+      },
+      {
+        "q": "This is a 1985 English decision. What work is it doing in a Malaysian judicial review answer, and what should sit next to it?",
+        "model": "The lesson says the Malaysian courts use this sorting, which is a statement about practice, not about binding force. Check the reception provision in section 3 of the Civil Law Act 1956 and its cut-off date: a 1985 decision falls well after it, so it is not received by force of the section. It is persuasive, and it is used here because Malaysian courts have adopted the frame. The sound answer names the frame and then cites the Malaysian authority applying it — the same lesson gives you R Rama Chandran v The Industrial Court of Malaysia [1997] 1 MLJ 145 (FC) and Semenyih Jaya Sdn Bhd v Pentadbir Tanah Daerah Hulu Langat [2017] 3 MLJ 561 (FC)."
+      },
+      {
+        "q": "The judgment floats a fourth ground. How would you find out whether it is available in Malaysia, and what would you write until you had?",
+        "model": "You would look for Malaysian appellate authority applying proportionality as a free-standing ground of review, and you would check the date of whatever you found, because this is an area that moves. Until then you write it as it stands: argued as a fourth ground, with a status to be checked rather than assumed. The lesson's own quiz makes that the answer. An answer that lists proportionality alongside the three as though it were settled has asserted something it cannot support, which is the same failure as a wrong citation wearing a different coat."
+      }
+    ],
+    "trap": "Reaching for irrationality whenever a decision looks unfair. The lesson calls this the reflex to watch, and the standard is set far higher than unfairness — most decisions that feel wrong are attacked under illegality or procedural impropriety, and identifying the right head is most of the mark.",
+    "source": "Council of Civil Service Unions v Minister for the Civil Service [1985] AC 374 (GCHQ), the citation as l-judicial-review states it, where it is given as the source of the rule stating the three grounds. The Malaysian citations named above are taken from the source field of the same lesson.",
+    "verify": "Check the citation and read the three heads in the judgment on BAILII rather than in a textbook's paraphrase of it. Then check how the Malaysian courts state the grounds, and check the current status of proportionality as a fourth ground before asserting it — that is the part of this page most likely to go stale.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-wagon-mound",
+    "moduleId": "m07-tort",
+    "lessonId": "l-negligence",
+    "case": "The Wagon Mound (No 1)",
+    "citation": "[1961] AC 388",
+    "court": "Privy Council",
+    "year": 1961,
+    "find": "A Privy Council decision reported in the Appeal Cases series, so the citation will find it in any law library, and many public university libraries admit visitors. BAILII (bailii.org) carries United Kingdom Privy Council decisions; search the party names, because The Wagon Mound is the ship in the facts and the short title the reports hung on the case, not part of the citation. Mind the (No 1): a second Wagon Mound decision arises out of the same fire and it is not the one this lesson cites, so check the year and the report reference on the copy in front of you before you read a word of it.",
+    "why": "The remoteness rule in the negligence lesson is one sentence long and this case is what it rests on. One sentence is enough to answer a quiz question and not enough to argue a case, because everything turns on a distinction the sentence states without explaining: the kind of damage must be foreseeable, the manner and the extent need not be. Read the judgment for where that line comes from and why a court thought it was the right place to draw it.",
+    "read": [
+      {
+        "passage": "The court's account of the test it was displacing, and the test it put in its place.",
+        "look_for": "The lesson gives you only the second of the two. You cannot see what the rule does until you see what it replaced — the old test asked a different question and produced different answers. State each in a sentence of your own before reading on."
+      },
+      {
+        "passage": "Whatever the judgment says about the kind of damage as against its extent or the manner of its occurrence.",
+        "look_for": "This is the whole case. Find the words that draw the line, then test them on the facts: oil on water, and a fire. Ask which of the three — kind, manner, extent — each fact belongs to."
+      },
+      {
+        "passage": "The findings of fact about what was known and what was found not to be foreseeable.",
+        "look_for": "Remoteness is applied to findings, and the findings were settled before the law was reached. Notice how much of the outcome the facts had already decided. That is a warning about arguing remoteness in an exam on facts you have not pinned down."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the remoteness test in one sentence, and say precisely what must be foreseeable and what need not be.",
+        "model": "The lesson gives the rule: damage is too remote unless it is of a kind that was reasonably foreseeable, and the precise manner of its occurrence and its extent need not be. Reading the judgment should let you do the thing the sentence alone will not — take a set of facts and say which element the argument is really about. Most disputes about remoteness are disputes about how widely or narrowly the kind of harm is described, and an answer that never names the kind it is working with has not engaged the test."
+      },
+      {
+        "q": "This is not a Malaysian decision. What is its status here?",
+        "model": "Two things to establish rather than assume. First, the jurisdiction the appeal came from, which is on the front page of the report — a Privy Council decision on appeal from Malaya stands differently from one on appeal from elsewhere, and the difference is worth a sentence. Second, the reception provision: section 3 of the Civil Law Act 1956 applies English common law as at a cut-off date, 7 April 1956 for West Malaysia with earlier dates for Sabah and Sarawak, and this decision post-dates it. So the rule is not here by force of that section. It is applied because the Malaysian courts have taken it, which means the citable authority is theirs — find it, cite it, and use this case for the reasoning."
+      },
+      {
+        "q": "Why does remoteness come last in the negligence sequence, and what has an answer already established by the time it reaches this case?",
+        "model": "The lesson says the order is not stylistic: each step assumes the one before, and an answer arguing remoteness before establishing breach is arguing about nothing. By the time remoteness is live you have a duty, a fall below the standard, and factual causation. Remoteness does not ask whether the defendant caused the harm — that is settled by then. It cuts down what is recoverable for harm the defendant did cause, which is why the honest place for this case in an answer is at the end and never as a substitute for the earlier work."
+      }
+    ],
+    "trap": "Citing this case for the proposition that harm must be foreseeable, without saying which foreseeability is in issue. And do not fold it into causation: the lesson keeps the intervening-act question in causation and the kind-of-harm question in remoteness, and an answer that runs them together is answering neither.",
+    "source": "The Wagon Mound (No 1) [1961] AC 388, the citation as l-negligence states it. The remoteness rule block in that lesson names The Wagon Mound as its source, and the full report reference appears in the lesson's own quiz source for the same rule.",
+    "verify": "Confirm the report reference yourself before relying on it: this citation appears within l-negligence but not in that lesson's top-level source list, so it is one to check in a report you can hold. Then check whether a Malaysian appellate court has stated the remoteness rule, and cite that decision alongside this one.",
+    "lastVerified": "2026-09-10",
+    "order": 8
+  },
+  {
+    "id": "x-selva-kumar",
+    "moduleId": "m06-contract",
+    "lessonId": "l-remedies",
+    "case": "Selva Kumar a/l Murugiah v Thiagarajah a/l Retnasamy",
+    "citation": "[1995] 1 MLJ 817 (FC)",
+    "court": "Federal Court",
+    "year": 1995,
+    "find": "Older than CommonLII's Malaysian coverage, which starts at 2003, so the MLJ citation is the route: a law library, or the Malaysian Bar's document library. Read this one in the report rather than in anybody's summary of it, including a later court's. A decision described by the court that departed from it is described for the purpose of departing from it.",
+    "why": "This is where the section 75 story starts, and it is the case a reader is most likely to know entirely at second hand. The lesson is blunt about what that costs: an answer giving only this case is out of date, and an answer giving only Cubic Electronics has not shown it understands what changed. You cannot say what changed unless you have read the thing that was changed. Read it for the position it laid down, and read it a second time as an exhibit in how a statutory provision can be re-read without a word of it being amended.",
+    "read": [
+      {
+        "passage": "The court's reading of section 75 of the Contracts Act 1950, and what it held a plaintiff had to show.",
+        "look_for": "The lesson states the outcome in a line — actual loss proved, with the named sum as a ceiling. Find the route the court takes to it, and separate the part that is a reading of the words of the section from the part that is a gloss added to them. That separation is what a later court works on."
+      },
+      {
+        "passage": "Any qualification the court attaches to the requirement of proving loss.",
+        "look_for": "The requirement is usually recited flat, as though it admitted of nothing. Read the judgment and find out whether it allows for the case where loss is real but cannot be measured. Whatever you find there is where most of the later argument lives."
+      },
+      {
+        "passage": "What the court makes of the named sum itself.",
+        "look_for": "Open the Contracts Act 1950 at section 75 and read it beside the judgment. The lesson's rule is that the figure is a ceiling and not a bill. Ask which words of the section carry that, and whether the court is reading them or supplementing them."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State what this decision required of a plaintiff, and state what replaced it.",
+        "model": "Both halves, because the movement is the point. The lesson gives the sequence: the section enacted in 1950 — reasonable compensation not exceeding the sum named; this decision in 1995 — actual loss must be proved, with the named sum as a ceiling; Cubic Electronics in 2019 — the approach reformulated around a legitimate interest and whether the sum is out of all proportion to it. An answer with one half is either out of date or shows no grasp of what moved, and the lesson says so in terms."
+      },
+      {
+        "q": "Section 75 has never been amended. How, then, has the law moved?",
+        "model": "The statute governs throughout. What changed is the construction the courts put on it, and naming that distinction is the answer. It follows that the section is where you start every time, and that a case is authority for how to read it rather than a substitute for it. It also follows that a decision of this kind stays the law until a court with power to depart from it does so — which is what makes the date of every authority in this area part of the answer."
+      },
+      {
+        "q": "This decision was revisited in 2019. Is there any use left in it?",
+        "model": "Yes, and an answer that discards it is as weak as one that stops at it. It is the position the current test displaced, so it is how you demonstrate that you know the position changed and in which direction. It also fixes the meaning of the current test by showing what that test was reacting against. State the current law first, then use this case to show the movement — and check for anything decided since, because the lesson warns that this is the paragraph in the contract module most likely to go stale."
+      }
+    ],
+    "trap": "Taking this case's holding from the later judgment that departed from it. Read the earlier decision in its own report; a restatement made in the course of leaving a rule behind is an argument, not a case. And never cite this as the current position on section 75.",
+    "source": "Selva Kumar a/l Murugiah v Thiagarajah a/l Retnasamy [1995] 1 MLJ 817 (FC), cited in l-remedies as the source of the pre-2019 Malaysian position on section 75 of the Contracts Act 1950.",
+    "verify": "Confirm the citation in a report you can hold, and read section 75 in a current copy of the Contracts Act 1950 beside it. Then check whether any Federal Court decision after Cubic Electronics Sdn Bhd v Mars Telecommunications Sdn Bhd [2019] 6 MLJ 15 (FC), also reported at [2019] 2 CLJ 723, has qualified the position — the lesson flags this as the point in the module most likely to change.",
+    "lastVerified": "2026-09-10",
+    "order": 4
+  }
+]

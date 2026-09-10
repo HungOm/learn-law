@@ -833,6 +833,52 @@ separate piece of geometry reasoning about `matrix` happened to be right — but
 by a 12u margin, large enough to survive being approximately wrong. Use the
 arithmetic to decide what to measure; do not file it as the measurement.
 
+### Green and invisible: when the gate sees content the app does not
+
+Twice in one session, in two different content tiers, a batch of authored
+content passed its gate and reached no reader at all. The shape is identical
+both times:
+
+| | |
+|---|---|
+| `tools/check-statutes.py:78` | globs `content/statutes/*.json` |
+| `src/lib/statutes.js` (before the fix) | imported `core.json`, alone |
+
+The checker walks the directory, so a new `stage3.json` gates itself the moment
+it lands and reports a rising count. The app imports one file, so the same
+entries render for nobody. Both halves are working correctly and they disagree,
+and the half that speaks — the one that prints `OK — 13 provisions across 9
+Acts` — is the half that is wrong about what a reader will see.
+
+`content/extracts/` had the same defect earlier the same day: a peer's batch was
+gated green and sat invisible for a day while they waited on a publish they
+believed had already happened.
+
+**Neither was a mistake when it was written.** The library imported one file
+because there *was* one file. It stopped being true when the tier grew to two,
+and nothing in the repo was watching for that moment. This is why it is worth a
+section rather than two bug fixes: the next tier will be written the same way,
+one file, correct on the day, and will inherit it.
+
+Both libraries now glob:
+
+```js
+const modules = import.meta.glob('../../content/statutes/*.json', { eager: true });
+const statutes = Object.keys(modules).sort()
+  .flatMap((path) => modules[path].default ?? modules[path]);
+```
+
+**Adding a content tier?** Glob the directory in the library on day one, while
+there is one file and it makes no difference. And when a gate reports a count,
+the count is the gate's, not the app's — to know what a reader sees, ask the
+app.
+
+**Sorting by path is a second, quieter version of the same trap.** Path order
+means a `stage5.json` or a rename silently reorders content that was written as
+a sequence. `content/extracts/` carries an optional integer `order` per entry,
+sorted within a module, with the gate failing two entries that claim one slot.
+Absent means unsequenced, not last.
+
 ### A kind with no uses is not a gap
 
 `matrix` is a verified, working diagram kind that **no content uses**, and that

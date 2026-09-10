@@ -1,0 +1,409 @@
+[
+  {
+    "id": "st-cpc-s28a",
+    "moduleId": "m05-criminal-procedure",
+    "lessonId": "pd-l-police-stop",
+    "act": "Criminal Procedure Code",
+    "actId": "criminal-procedure-code",
+    "provision": "Section 28A",
+    "find": "In the Criminal Procedure Code (Act 593), published free by the Attorney General's Chambers. Read the section whole and in a current reprint — it was inserted by amendment and has been amended since, so a textbook summary is the wrong place to meet it.",
+    "why": "The lesson tells an arrested person to ask for three things, and this section is where two of them come from: someone at home told where you are, and a lawyer of your choice. It is the provision most likely to matter to a reader of this course at eleven at night, and the one whose detail moves most often.",
+    "read": [
+      {
+        "passage": "The section from its first subsection to its last, in one pass.",
+        "look_for": "Read it through without stopping, then go back and list in order every step it requires of the police. It is written as a sequence of duties and it reads badly if you dip into the middle of it."
+      },
+      {
+        "passage": "The words that fix when each duty arises.",
+        "look_for": "The lesson's point is that these rights begin at the arrest and not at the charge. Find the words that fix the moment, and write them down in your own words before reading any commentary."
+      },
+      {
+        "passage": "Any subsection that qualifies, postpones or excepts what the earlier ones give.",
+        "look_for": "A right stated in one subsection and cut back in a later one is a common shape in this Code. Note exactly what the qualification covers, because that is what will be relied on when the answer to a request is later."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Which two people may an arrested person ask to be put in touch with, on the words of the section?",
+        "model": "A relative or friend, and a lawyer of his choice. The lesson's point is that the lawyer is remembered and the relative or friend is forgotten, and it is the call home that tells a family where a person is being held at all. Naming the section is what makes the answer checkable."
+      },
+      {
+        "q": "The lesson says to ask, ask again, and have someone note each time you asked. What in the section makes that advice worth following?",
+        "model": "A good answer notes that the section imposes duties owed at particular moments, so whether they were performed later becomes a question of fact about times, requests and answers. A written note of when each request was made is evidence for that question; a memory of a bad night is not."
+      },
+      {
+        "q": "Does reading section 28A settle when access to a lawyer must actually be allowed?",
+        "model": "No. A good answer reads the section for what it requires, then notes that the timing of access is contested in the courts and that the section has been amended more than once. Treating the bare words as the end of the argument is what the lesson's caution warns against."
+      }
+    ],
+    "trap": "Reading the section as being about lawyers only. The right to have a relative or friend contacted is the one that gets word out of a lock-up, and it is the one most often not exercised because nobody thought to ask for it.",
+    "source": "Criminal Procedure Code (Act 593), s 28A, as cited in the lesson 'When the police stop you'.",
+    "verify": "Read s 28A in a current reprint of Act 593; it has been amended more than once. Then check the current case law on when access to a legal practitioner must be allowed, because the section's words are not the end of that argument.",
+    "lastVerified": "2026-09-10",
+    "order": 1
+  },
+  {
+    "id": "st-cpc-s117",
+    "moduleId": "m05-criminal-procedure",
+    "lessonId": "pd-l-first-court-day",
+    "act": "Criminal Procedure Code",
+    "actId": "criminal-procedure-code",
+    "provision": "Section 117",
+    "find": "In the Criminal Procedure Code (Act 593), published free by the Attorney General's Chambers. Read the section in a current reprint — the maximum periods it allows are graduated by the sentence the offence carries and they have been amended.",
+    "why": "Twenty-four hours is the constitutional limit on police detention, and this is the section that says who may extend it and on what basis. The lesson's remand hearing is this section in operation, and families arrive at one with no idea what is about to be decided.",
+    "read": [
+      {
+        "passage": "The words describing what the officer must place before the Magistrate.",
+        "look_for": "Work out what the police have to produce and what they have to show. That is the shape of the hearing, and it tells you what an argument against remand has to be aimed at."
+      },
+      {
+        "passage": "The words giving the Magistrate the power to authorise detention, and any limit on the period.",
+        "look_for": "Note that the period is the Magistrate's to fix, and note what caps it. Then check how the cap is worked out — the lesson warns that it is graduated rather than a single number."
+      },
+      {
+        "passage": "The purpose for which detention may be authorised.",
+        "look_for": "The section ties remand to the investigation. Write down that purpose, because it is the reason guilt is not the question at the hearing and why arguing innocence there is the wrong argument."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What is the question at a remand hearing, and what is not?",
+        "model": "A good answer says the question is whether further detention is needed for the investigation, and that guilt is not in issue. It grounds that in the purpose the section itself states, rather than in practice or in a textbook, and notes that an argument aimed at innocence spends the one opportunity there is on the wrong point."
+      },
+      {
+        "q": "A Magistrate is asked for seven days. What would you need from the section to argue for four?",
+        "model": "A good answer works from the section: the period is for the Magistrate to fix, tied to what the investigation requires, and subject to whatever maximum the section sets for an offence of that gravity. So the argument is about what investigative step is still outstanding and how long it needs, not about the strength of the case."
+      },
+      {
+        "q": "Why can no figure from this section be quoted from memory?",
+        "model": "A good answer notes that the maximum periods are graduated by the sentence the offence carries and have been amended, so a remembered number is a number that may be out of date. The honest move is to read the current text before saying how long a person may be held."
+      }
+    ],
+    "trap": "Treating the hearing as a preview of the trial. Nobody is deciding guilt, and the arguments that work are about what the investigation still needs and how long that takes.",
+    "source": "Criminal Procedure Code (Act 593), s 117, as cited in the lesson 'The lock-up, the charge and the first day in court'.",
+    "verify": "Read s 117 in a current reprint of Act 593. The maximum remand periods are graduated by the sentence the offence carries and have been amended, so confirm them against the current text before relying on any figure.",
+    "lastVerified": "2026-09-10",
+    "order": 2
+  },
+  {
+    "id": "st-cpc-bail",
+    "moduleId": "m05-criminal-procedure",
+    "lessonId": "l-bail-trial",
+    "act": "Criminal Procedure Code",
+    "actId": "criminal-procedure-code",
+    "provision": "Sections 387 and 388",
+    "find": "In the Criminal Procedure Code (Act 593), published free by the Attorney General's Chambers. Read the two sections one after the other in a current reprint, then turn to the First Schedule at the back of the Code — the sections only operate once the offence has been classified there, and s 388 in particular has been amended.",
+    "why": "The lesson turns on a distinction the vocabulary hides: one section deals with the offences where release on bail is the accused's entitlement, the other with the offences where it is the court's decision. Read apart, each looks like a rule about bail; read together, they are a scheme with a lookup in front of it.",
+    "read": [
+      {
+        "passage": "Section 387, and the verb it uses.",
+        "look_for": "Notice whether the section says the accused shall or may be released. That single word is the whole difference between entitlement and discretion, and it is what makes the classification worth looking up."
+      },
+      {
+        "passage": "The opening of section 388, and the verb it uses.",
+        "look_for": "Set it against s 387 and write the contrast in one line. Then note where the section makes a further, stricter provision for the gravest offences, and what triggers it."
+      },
+      {
+        "passage": "The First Schedule at the back of the Code, before you go further.",
+        "look_for": "It is a table, not prose. Work out what each column is telling you, then read across the row for an offence you already know. The classification is looked up here rather than argued from how serious the offence feels, and neither section works until you have done the lookup."
+      },
+      {
+        "passage": "The provisos to section 388.",
+        "look_for": "The lesson says the provisos include provision for young persons, women, and the sick or infirm. Read them for yourself and note exactly whom each covers and what it permits — a proviso is not a general softening of the section."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the difference between the two sections in one sentence each.",
+        "model": "A good answer says that for a bailable offence release on bail is the accused's entitlement, and that for a non-bailable offence release is in the court's discretion under s 388. It grounds each in the section's own verb rather than in the labels, and does not treat non-bailable as meaning bail is unavailable."
+      },
+      {
+        "q": "Neither section tells you which class an offence falls into. Where does that come from, and why does the order matter?",
+        "model": "From the First Schedule to the Code, which classifies offence by offence in a table. The order matters because the sections only operate once the class is known: applying s 388's discretion to an offence that is in fact bailable takes away an entitlement the Code gives. A good answer says the classification is looked up rather than reasoned from gravity."
+      },
+      {
+        "q": "Why is it not enough to apply this scheme to any charge in front of you?",
+        "model": "Because a statute outside the Code may create its own bail regime and some exclude bail altogether. A good answer says the statute creating the offence has to be checked before the Code's scheme is applied, which is the lesson's caution and a practical trap rather than an academic one."
+      }
+    ],
+    "trap": "Hearing non-bailable as no bail. It means bail is in the court's hands rather than the accused's right, and an answer built on the label instead of the section gets the client's question backwards.",
+    "source": "Criminal Procedure Code ss 387 and 388, and the First Schedule, as cited in the lessons 'Bail, and the shape of a criminal trial' and 'The lock-up, the charge and the first day in court'.",
+    "verify": "Read ss 387 and 388 in a current reprint of Act 593, with the First Schedule. The terms of s 388 have been amended, so confirm the current wording of the restriction and its provisos, and note that a statute outside the Code may displace this scheme for the offence charged.",
+    "lastVerified": "2026-09-10",
+    "order": 4
+  },
+  {
+    "id": "st-cpc-s180",
+    "moduleId": "m05-criminal-procedure",
+    "lessonId": "l-bail-trial",
+    "act": "Criminal Procedure Code",
+    "actId": "criminal-procedure-code",
+    "provision": "Section 180",
+    "find": "In the Criminal Procedure Code (Act 593), published free by the Attorney General's Chambers. It is short. Read it beside s 182A, which puts the question asked at the other end of the trial, because the pair is what the lesson is about.",
+    "why": "A criminal trial stops twice and asks a question, and merging the two questions is the classic error. This section is the first stop: what the court must consider when the prosecution closes its case, and what follows in each direction.",
+    "read": [
+      {
+        "passage": "The words describing what the court shall consider at the close of the prosecution case.",
+        "look_for": "Write the standard out exactly as the section puts it. The phrase the section uses is the one an examiner is looking for, and paraphrasing it is how the two stages get merged."
+      },
+      {
+        "passage": "What the section directs in each of the two outcomes.",
+        "look_for": "Note that the consequences are stated as duties, not options, and note that one of them ends the case. This is why the stage is a real filter rather than a formality."
+      },
+      {
+        "passage": "Section 182A, read immediately afterwards.",
+        "look_for": "Set the two questions side by side and write down how they differ. If you cannot state the difference in one line, you have merged them, which is exactly the error the lesson is guarding against."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What must the court decide at the close of the prosecution case, and what happens either way?",
+        "model": "Whether a prima facie case has been made out: if it has, the accused is called to enter his defence; if it has not, an acquittal is recorded. A good answer uses the section's own words for the standard and notes that both consequences are directed rather than discretionary."
+      },
+      {
+        "q": "How does the question at this stage differ from the question at the close of the defence?",
+        "model": "A good answer says this stage asks whether the prosecution's evidence, standing alone, would warrant a conviction, while the later stage asks whether the case is proved beyond reasonable doubt on the whole of the evidence. It adds that the defence need only raise a reasonable doubt and need not be believed, and that the burden has not shifted save where a statute shifts it."
+      },
+      {
+        "q": "The phrase maximum evaluation is not in the section. Where does it come from, and what does it add?",
+        "model": "From the case law about what this section requires, not from the text. A good answer says it means the court must properly evaluate the prosecution's evidence at this stage rather than ask whether some evidence exists, and then goes and reads the current authority instead of relying on the phrase."
+      }
+    ],
+    "trap": "Writing that the accused must prove his defence once he is called. That merges the two stages. The exception is where a statute places a burden on him, as s 105 of the Evidence Act 1950 does for the general exceptions of the Penal Code.",
+    "source": "Criminal Procedure Code s 180, as cited in the lesson 'Bail, and the shape of a criminal trial'.",
+    "verify": "Read s 180 in a current reprint of Act 593, together with s 182A. The standard at this stage has been amended and much discussed, so check the current authority on what a prima facie case requires before relying on any description of it.",
+    "lastVerified": "2026-09-10",
+    "order": 5
+  },
+  {
+    "id": "st-pc-s378",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-property-offences",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Section 378",
+    "find": "In the Penal Code (Act 574), published free by the Attorney General's Chambers. Read the definition with any Explanations and illustrations printed with it, and read it in the same sitting as ss 405 and 415 — the three are told apart by comparison, not one at a time.",
+    "why": "The lesson's single question is how the accused came to have the property, and this section is the answer for property that was never given at all. Its elements are also where two quiet traps live: what kind of property can be stolen, and how early the offence is complete.",
+    "read": [
+      {
+        "passage": "The definition, broken into its elements.",
+        "look_for": "Number them as you go. Two do the work here — the property must come out of someone else's possession, and it must go without that person's consent — and the rest are easy to lose if you read the section as a single sentence."
+      },
+      {
+        "passage": "The word describing the kind of property the section covers.",
+        "look_for": "It is narrower than property in general. Note what is therefore outside the section altogether, and check your answer against the Explanations rather than against your instinct."
+      },
+      {
+        "passage": "The word describing the act the accused must do to the property.",
+        "look_for": "Work out at what moment the offence is complete. Getting away with the goods afterwards is not what the section asks for, and this is the point most often assumed rather than read."
+      },
+      {
+        "passage": "Any Explanations and illustrations printed with the section, and then the section that punishes theft.",
+        "look_for": "The illustrations are enacted text and show the intended reach of possession and consent. Note that the punishment sits in its own section, so a charge cites both."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What two elements separate theft from the other two property offences in the lesson?",
+        "model": "That the property comes out of another person's possession, and that it goes without that person's consent. A good answer frames both as being about how possession was obtained rather than about what was taken, which is what keeps criminal breach of trust and cheating out of the answer."
+      },
+      {
+        "q": "A cashier is allowed to take payments from customers and pockets a customer's cash. Why is that not theft on the words of this section?",
+        "model": "Because nothing came out of anyone else's possession — the money reached her hands lawfully in the course of her job. A good answer identifies the failing element by name and then goes to s 405, rather than concluding that no offence was committed."
+      },
+      {
+        "q": "Why does it matter that the offence is complete on moving the property?",
+        "model": "Because an accused stopped at the door has still committed the offence if the other elements are made out, so an argument that nothing was actually carried away misses the section. A good answer takes that from the words of the section rather than from a general sense of when a theft has happened."
+      }
+    ],
+    "trap": "Reading the section as being about ownership. All three of the lesson's offences involve property belonging to someone else; possession and consent are what tell them apart, and starting from who owned the thing answers a question the section never asks.",
+    "source": "Penal Code, s 378, as cited in the lesson 'Property offences: how possession was obtained'.",
+    "verify": "Read s 378 with its Explanations and illustrations in a current reprint of Act 574, and confirm the number of the section that punishes theft before citing it in a charge or an answer.",
+    "lastVerified": "2026-09-10",
+    "order": 2
+  },
+  {
+    "id": "st-pc-s405",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-property-offences",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Section 405",
+    "find": "In the Penal Code (Act 574), published free by the Attorney General's Chambers. Read the definition with any Explanations and illustrations printed with it, and then read the aggravated form that applies to a clerk or servant, which is where most employee cases actually sit.",
+    "why": "This is the section for property that reached the accused lawfully and was then treated as his own. The lesson uses it as the middle of three routes, and it is the one an investigating officer most often charges as theft by mistake.",
+    "read": [
+      {
+        "passage": "The words describing how the accused came to have the property.",
+        "look_for": "The section covers being entrusted with property and being entrusted with dominion over it. Note that they are not the same thing, and write down what each would look like on a set of facts."
+      },
+      {
+        "passage": "The words describing what the accused must then do.",
+        "look_for": "There is more than one route here — misappropriating or converting to his own use, and using or disposing of the property in breach of a direction or a contract. List them, because a charge has to pick one."
+      },
+      {
+        "passage": "Any Explanations and illustrations printed with the section.",
+        "look_for": "Entrustment is the contested element in practice, and the illustrations are the drafter's own examples of its reach. Read them as part of the text, because they were enacted as part of it."
+      },
+      {
+        "passage": "The aggravated section that applies where the accused is a clerk or servant.",
+        "look_for": "Note what it adds to the basic offence and what it does to the punishment. Most employee cases are charged under it rather than under the definition section alone."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why is pocketing a customer's payment criminal breach of trust rather than theft?",
+        "model": "Because the money reached the cashier lawfully, in her job, so nothing was moved out of anyone else's possession. A good answer names the element of theft that fails and the element of this section that is satisfied, instead of choosing between the two offences by how the conduct feels."
+      },
+      {
+        "q": "A neighbour is handed money to pay someone's electricity bill and spends it on himself. Which of the three offences fits, and why not the other two?",
+        "model": "This section: the money was put into his hands for a stated purpose, so nothing came out of anyone's possession, and nothing in the facts says a lie is what made her hand it over. A good answer disposes of theft and cheating by naming the element each lacks."
+      },
+      {
+        "q": "The lesson says not to assume that an employee has possession of everything passing through their hands. What turns on that?",
+        "model": "Whether the property was entrusted to them at all, and how far the entrustment went. A good answer treats it as a genuine question about what this employee was actually entrusted with — being a cashier does not put the whole shop in her hands — and argues it rather than asserting it."
+      }
+    ],
+    "trap": "Charging conduct as theft because it looks like stealing. The property here started out lawfully in the accused's hands, so the element theft needs is missing, and the charge is wrong however dishonest the conduct was.",
+    "source": "Penal Code, s 405, as cited in the lesson 'Property offences: how possession was obtained'.",
+    "verify": "Read s 405 with its Explanations and illustrations in a current reprint of Act 574, and confirm the number of the aggravated section for a clerk or servant before citing it.",
+    "lastVerified": "2026-09-10",
+    "order": 3
+  },
+  {
+    "id": "st-pc-s415",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-property-offences",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Section 415",
+    "find": "In the Penal Code (Act 574), published free by the Attorney General's Chambers. Read the definition with any Explanations and illustrations printed with it, and note that the punishment for cheating which induces delivery of property sits in a later section of its own.",
+    "why": "Cheating is the odd one of the lesson's three: the owner agrees and hands the property over. What makes it an offence is the deception that produced the agreement, so the lie is the element that has to be proved rather than assumed.",
+    "read": [
+      {
+        "passage": "The words describing what the accused does to the victim's mind.",
+        "look_for": "Deception comes first and everything else follows from it. Write down what has to be shown about the deception itself, as distinct from what the victim then did."
+      },
+      {
+        "passage": "The link the section requires between the deception and what the victim does.",
+        "look_for": "The section is about inducement. Note that a lie told alongside a transaction is not enough — it has to be the thing that produced the delivery, and that link is where these cases are won and lost."
+      },
+      {
+        "passage": "Whatever the section covers beyond delivery of property.",
+        "look_for": "Read the whole definition rather than stopping at the limb the lesson uses. Note the other conduct it reaches, because a charge may fit that limb instead."
+      },
+      {
+        "passage": "Any Explanations and illustrations printed with the section, and then the punishment section for cheating that induces delivery of property.",
+        "look_for": "Note which punishment section applies to which limb. The lesson says charging under the wrong punishment section is a real error and not a matter of style."
+      }
+    ],
+    "questions": [
+      {
+        "q": "The owner handed the money over willingly. Why is that not an answer to the charge?",
+        "model": "Because the agreement was produced by the deception. A good answer says that consent is present in cheating and is exactly what the lie poisons, and contrasts that with theft, where the absence of consent is an element."
+      },
+      {
+        "q": "What has to be shown about the deception, beyond the fact that a lie was told?",
+        "model": "That it induced the delivery. A good answer treats the causal link as a separate thing to prove, and notes that a false statement made in the course of a transaction which the victim did not act on will not carry the charge."
+      },
+      {
+        "q": "Why does the punishment section matter here in a way it does not in every offence?",
+        "model": "Because the definition covers more than one kind of conduct and the punishment for cheating which induces delivery of property sits in its own section. A good answer says the charge has to cite the right one and treats that as substance rather than form."
+      }
+    ],
+    "trap": "Reaching for cheating whenever an accused was dishonest about something. The section needs a deception that caused the delivery. Where the property was handed over for a purpose and no lie produced the handover, the offence is criminal breach of trust instead.",
+    "source": "Penal Code, s 415, as cited in the lesson 'Property offences: how possession was obtained'.",
+    "verify": "Read s 415 with its Explanations and illustrations in a current reprint of Act 574, and confirm the number of the punishment section for cheating which induces delivery of property before citing it.",
+    "lastVerified": "2026-09-10",
+    "order": 4
+  },
+  {
+    "id": "st-pc-s6",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-general-exceptions",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Section 6",
+    "find": "In the Penal Code (Act 574), published free by the Attorney General's Chambers. It is a short section near the front, among the general provisions. Read it, then turn to the Chapter of General Exceptions so you can see what it is pointing at.",
+    "why": "You will not find private defence, accident or unsoundness of mind mentioned in the section that defines an offence, and this section is the reason why. It is the hinge that attaches a whole chapter to every definition in the Code, and a reader who has not met it will keep looking for defences in the wrong place.",
+    "read": [
+      {
+        "passage": "Section 6 itself, twice.",
+        "look_for": "It is one sentence doing a structural job. Say in your own words what it does to every other definition in the Code, and note that it says the exceptions are not repeated in the definitions."
+      },
+      {
+        "passage": "The heading and the span of the Chapter the section points to.",
+        "look_for": "Find where the General Exceptions begin and end, and note the run of sections. That range is the thing being attached, so knowing it is what makes the section usable."
+      },
+      {
+        "passage": "One definition section you already know, read again with s 6 in mind.",
+        "look_for": "Take a definition from the property or homicide lessons and note that it says nothing about any exception. That silence is what s 6 fills, and seeing it once is what makes the point stick."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does this section do, and why is it needed?",
+        "model": "It makes every definition of an offence in the Code subject to the General Exceptions, even though no definition repeats them. Without it a reader could take a definition as complete, and the exceptions would look like defences to particular offences rather than provisions that run through the whole Code."
+      },
+      {
+        "q": "A homicide answer works carefully through s 299, the limbs of s 300 and the Exceptions to s 300. What has it still missed?",
+        "model": "The General Exceptions — private defence, unsoundness of mind, accident and the rest — which s 6 attaches to the murder definition as much as to any other. A good answer notes that the Exceptions to s 300 and the General Exceptions in Chapter IV are two different things."
+      },
+      {
+        "q": "Does establishing that a general exception is in play win the point?",
+        "model": "No. Section 6 puts the exception in the frame; who proves it is a separate question, and s 105 of the Evidence Act 1950 places that burden on the accused, on the balance of probabilities. A good answer keeps the two questions apart."
+      }
+    ],
+    "trap": "Expecting a defence to be mentioned in the section that creates the offence. It never is, and reading a definition as though it were the whole of the law on that offence is the error this section exists to prevent.",
+    "source": "Penal Code, s 6, as cited in the lesson 'The general exceptions, and who has to prove them'.",
+    "verify": "Read s 6 in a current reprint of Act 574, and check the current span of the Chapter of General Exceptions rather than relying on a remembered range of section numbers.",
+    "lastVerified": "2026-09-10",
+    "order": 5
+  },
+  {
+    "id": "st-pc-s99",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-general-exceptions",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Sections 99(3) and 99(4)",
+    "find": "In the Penal Code (Act 574), published free by the Attorney General's Chambers. Read the whole of s 99 and not only these two clauses, then read ss 100 and 103 immediately afterwards — s 99 sets the outer edges and those sections say how far the right reaches inside them.",
+    "why": "Private defence turns up in more problems than any other general exception, and it is genuinely arguable because it is a matter of degree. These two clauses are what hold it in place: one says when no right arises at all, the other caps the harm the right can ever justify.",
+    "read": [
+      {
+        "passage": "Clause (3), and both of the conditions in it.",
+        "look_for": "Two things have to be true together for the right to be excluded. Write them both down. An answer that relies on one of them alone has misread the clause, and that is the commonest way it is misapplied."
+      },
+      {
+        "passage": "Clause (4), and the measure it uses.",
+        "look_for": "This is the cap on the response. Note that it applies even where the right plainly exists, so it is a separate question from whether the right arose at all."
+      },
+      {
+        "passage": "Sections 100 and 103, read next.",
+        "look_for": "One deals with defence of the body and the other with defence of property, and each sets out when the right extends to causing death. Note that these are enumerated cases rather than a general test of proportionality."
+      },
+      {
+        "passage": "Exception 2 to section 300, read last.",
+        "look_for": "It is what the Code does with an excess. Note the conditions it attaches, and note that it changes the conviction rather than only the sentence."
+      }
+    ],
+    "questions": [
+      {
+        "q": "In what order should the two questions raised by section 99 be asked?",
+        "model": "Whether a right of private defence arose at all comes first; how far it extended comes second. A good answer says that clause (3) can end the enquiry before the response is ever examined, and that answering the two in the wrong order is the commonest error in this area."
+      },
+      {
+        "q": "An accused defends himself, goes further than the danger needed, and kills. Is the right simply lost?",
+        "model": "No. Excess goes to whether the right extended this far, and an accused who exceeds it in good faith and without premeditation may bring murder down to culpable homicide not amounting to murder under Exception 2 to s 300. A good answer says that the conviction changes, not merely the sentence."
+      },
+      {
+        "q": "A man could have walked to a police station instead of striking. Does clause (3) exclude the right?",
+        "model": "Not on its own. The clause requires both that there was time to have recourse to the protection of the public authorities and that the act did not reasonably cause apprehension of death or grievous hurt. A good answer applies both limbs to the facts rather than treating the availability of the police as decisive."
+      }
+    ],
+    "trap": "Treating an excessive response as destroying a right that existed. The two questions are separate: whether the right arose, and how far it extended. Collapsing them loses both the argument that there was a right and the argument that the excess reduces the offence.",
+    "source": "Penal Code, ss 99(3) and 99(4), as cited in the lesson 'The general exceptions, and who has to prove them'.",
+    "verify": "Read the whole of s 99 in a current reprint of Act 574, together with ss 100 and 103 and Exception 2 to s 300. Check also the current Federal Court statement of the standard to which an accused must prove a general exception.",
+    "lastVerified": "2026-09-10",
+    "order": 6
+  }
+]

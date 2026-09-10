@@ -1,0 +1,228 @@
+[
+  {
+    "id": "st-cla-s12",
+    "moduleId": "m07-tort",
+    "lessonId": "l-tort-damage",
+    "act": "Civil Law Act 1956",
+    "actId": "civil-law-act-1956",
+    "provision": "Section 12, and in particular subsection (1)",
+    "find": "The Attorney General's Chambers publishes the Laws of Malaysia online without charge; open the current reprint of the Civil Law Act 1956 and read section 12 whole, subsection by subsection, rather than the one sentence everybody quotes.",
+    "why": "Contributory negligence was once a complete defence, and a plaintiff partly at fault recovered nothing. This section replaced that with apportionment, so the question in every answer is now a proportion rather than a yes or a no. Two lessons in this course cite it, one as section 12 and one as section 12(1), which is itself worth checking against the text.",
+    "read": [
+      {
+        "passage": "The opening words of subsection (1), up to the point where they say what does not happen to the claim.",
+        "look_for": "The claimant's own fault is not excused here; only its consequence is changed. Write down what the subsection stops from happening, in your own words, before you read the rest of it."
+      },
+      {
+        "passage": "The words directing how much the damages are reduced.",
+        "look_for": "Note what the court is told to have regard to. It is a share in responsibility, which is not the same thing as a share in the physical causing of the harm, and the difference is where the argument lives."
+      },
+      {
+        "passage": "The remaining subsections of section 12, and any definition the Act gives of fault.",
+        "look_for": "Settle for yourself whether the two citations used in this course point at one rule or two. If the apportionment rule sits wholly in subsection (1), then the subsection is the better citation, because the section carries more than that one rule."
+      },
+      {
+        "passage": "The neighbouring provisions of the Act dealing with claims after a death.",
+        "look_for": "The lesson says the claims that follow a death — one for the dependants, one for the estate — are shaped by this Act rather than left at large. Find where, and note that the recoverable heads are constrained by statute."
+      }
+    ],
+    "questions": [
+      {
+        "q": "This course cites the provision twice, once as section 12 and once as section 12(1). Open the Act and say whether those are one rule or two.",
+        "model": "A good answer settles it from the text instead of assuming. The apportionment rule the two lessons state is the same rule in both — same reduction, same just and equitable standard, same regard to the claimant's share in the responsibility — so the two citations are a section and the subsection inside it, not two provisions. The habit that matters here is checking a citation against the Act rather than trusting that a different number means a different rule."
+      },
+      {
+        "q": "A motorcyclist wearing no helmet is knocked down by a car that ran a red light. State the effect of this section on his claim in two sentences.",
+        "model": "The claim survives — the section stops his own fault from defeating it — and the damages are cut by his share of the responsibility for the damage. The second sentence is where marks are won or lost: a good answer proposes a figure and gives reasons for it, because the section asks the court to apportion. An answer that stops at damages will be reduced has left the whole exercise undone."
+      },
+      {
+        "q": "What does this section do that a plea of volenti non fit injuria does not?",
+        "model": "This section divides the loss; volenti ends the claim. A good answer keeps the two apart on that basis and notes why the complete defence is rare — it needs real knowledge of the risk and real agreement to run it, whereas apportionment needs only carelessness contributing to the damage. Confusing them turns a reduction into a dismissal, which is the wrong outcome for the plaintiff and the wrong answer on the paper."
+      }
+    ],
+    "trap": "Treating contributory negligence as though it still defeated the claim, or — much more common in written answers — naming it correctly and then refusing to commit to a proportion. The section asks the court to apportion. An answer that will not put a share on it has not applied the section.",
+    "source": "Civil Law Act 1956, s 12, as cited in the lesson 'Negligence, in four questions', and s 12(1), as cited in the lesson 'Causation, remoteness, and the injured person's own fault'.",
+    "verify": "Read the current reprint from the Attorney General's Chambers. Malaysian damages for death and personal injury are shaped by statute in ways that differ from English practice, so confirm the current text before stating what is recoverable or how it is calculated.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-roc-o18",
+    "moduleId": "m11-civil-procedure",
+    "lessonId": "l-civil-procedure",
+    "act": "Rules of Court 2012",
+    "actId": "rules-of-court-2012",
+    "provision": "Order 18",
+    "find": "The Rules of Court 2012 are subsidiary legislation and are published with the Laws of Malaysia by the Attorney General's Chambers, free of charge. Open Order 18 and read the rules in sequence — the drafting of pleadings, the rules on admissions and denials, the rules requiring particulars, and rule 19 at the end.",
+    "why": "Pleadings define what the trial is about. A party is bound by them and cannot run at trial a case that was never pleaded, so an error in this Order is not a drafting blemish — it decides what evidence the court will hear. This is also where the striking-out power lives.",
+    "read": [
+      {
+        "passage": "The rule stating what a pleading must contain.",
+        "look_for": "Material facts, and not the evidence for them or the law they attract. Take one paragraph of a real statement of claim and mark which words are fact, which are evidence and which are legal label. Most drafts contain all three."
+      },
+      {
+        "passage": "The rules on admissions and denials.",
+        "look_for": "Find what happens to an allegation the defence does not answer. Then work out why a blanket denial of everything is not a defence, and say which rule makes that so."
+      },
+      {
+        "passage": "The rules requiring particulars.",
+        "look_for": "The Order lists matters that must be pleaded specifically and with particulars — fraud and misrepresentation among them. Copy the list out. Pleading fraud without particulars is worse than not pleading it at all, and the reason is in these words."
+      },
+      {
+        "passage": "Rule 19, the striking-out power.",
+        "look_for": "Note the separate limbs and what each one attacks. On the limb about disclosing no reasonable cause of action, ask what evidence the court may look at, and note the answer is not the same as on the other limbs."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A client tells you the seller lied about a car's mileage and you want to plead fraud. What does this Order require of you beyond the allegation itself?",
+        "model": "Particulars. A good answer cites the rule requiring specific pleading, says what the particulars have to do — put the other side on notice of the case actually being made — and notes the practical consequence: an unparticularised allegation of fraud invites a strike-out application and damages your credibility before the trial starts."
+      },
+      {
+        "q": "A defence denies paragraph 3 in a single line and says nothing at all about paragraph 4. What is the position on each paragraph?",
+        "model": "Two different problems. The bare denial engages the rules on how a denial must be made, and a defence that denies everything without answering anything is not a defence in substance. The silence on paragraph 4 is worse: an allegation not answered is generally taken as admitted. A good answer names the rule for each and does not treat the two as the same defect."
+      },
+      {
+        "q": "Distinguish an application under rule 19 from an application for summary judgment under Order 14.",
+        "model": "Rule 19 attacks the pleading as a document and, on the no-reasonable-cause-of-action limb, assumes the pleaded facts are true and admits no evidence at all. Order 14 looks at the evidence and asks whether there is a triable issue. A good answer states both tests in the Order's own terms and notes that striking out is used sparingly, in plain and obvious cases."
+      }
+    ],
+    "trap": "Drafting a pleading that argues the case — reciting the evidence, or setting out the legal test. That is a submission, not a pleading. The other half of the same mistake is running a point at trial that never appeared in the pleadings, which a party is not permitted to do.",
+    "source": "Rules of Court 2012, Order 18, as cited in the lesson 'How a civil action is shaped'; Order 18 rule 19 as cited in the same module's lessons on interlocutory applications and the civil justice sequence.",
+    "verify": "The Rules of Court 2012 are amended periodically. Confirm the current numbering and text of Order 18 at the Attorney General's Chambers portal before citing a rule number, particularly the particulars rules and rule 19.",
+    "lastVerified": "2026-09-10",
+    "order": 1
+  },
+  {
+    "id": "st-roc-o14",
+    "moduleId": "m11-civil-procedure",
+    "lessonId": "l-interlocutory",
+    "act": "Rules of Court 2012",
+    "actId": "rules-of-court-2012",
+    "provision": "Order 14",
+    "find": "The Rules of Court 2012 are subsidiary legislation published with the Laws of Malaysia by the Attorney General's Chambers at no cost. Open Order 14 and read it end to end; it is short, and the whole Order is about one question asked at one stage.",
+    "why": "Most civil cases never reach trial, and this is one of the main doors they leave by. The Order gives judgment without a trial where the defence has no substance — but the threshold is not whether the defence would win, and an answer that weighs the merits as though at trial has applied the wrong test.",
+    "read": [
+      {
+        "passage": "The rule permitting the application, and the affidavit that must support it.",
+        "look_for": "Note what the affidavit has to do: verify the facts, and state a belief about the defence. Write down what the plaintiff is swearing to, because that is the foundation the whole application stands on."
+      },
+      {
+        "passage": "The words setting out what the defendant must show to resist.",
+        "look_for": "Copy the threshold out in full. Then put beside it the sentence would the defence succeed at trial, and satisfy yourself that they are different questions. This is the single point the Order most often loses."
+      },
+      {
+        "passage": "The orders the court may make on the application.",
+        "look_for": "There are more than two. Beyond judgment and unconditional leave to defend sits conditional leave, and a condition such as payment into court is how the court handles a defence that is thin but not hopeless."
+      },
+      {
+        "passage": "Any limit the Order places on the claims it can be used for.",
+        "look_for": "Check the Order's own words rather than assuming the procedure is available in every action. If it excludes categories of claim, note them, because an application in an excluded case fails without the merits ever being reached."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A buyer's defence says only that he disputes the sum owed. What must he show to stop judgment, and what must he not be asked to show?",
+        "model": "He must show an issue or question in dispute which ought to be tried, or some other reason for a trial. He must not be asked to show that his defence will probably succeed — the court is not deciding who wins. A good answer states the threshold in the Order's terms and resists the pull towards weighing the merits, which is where most answers go wrong."
+      },
+      {
+        "q": "The court grants leave to defend on condition that the defendant pays the sum into court. What does that tell you about how the court assessed the defence?",
+        "model": "That it was shadowy — not hopeless, so judgment was not entered, but thin enough that the court was unwilling to let it hold up the claim for nothing. A good answer explains that the condition is a middle course the Order makes available, and that its existence is itself proof the test is not a simple win-or-lose assessment of the defence."
+      },
+      {
+        "q": "On the same facts, when would you apply under this Order and when under Order 18 rule 19?",
+        "model": "Order 14 when the defence has no substance on the evidence — affidavits go in on both sides and the question is whether there is a triable issue. Order 18 rule 19 when the pleading is bad as a document — the pleaded facts are assumed true and, on the first limb, no evidence is admissible at all. A good answer picks one and says why the other would fail on these facts."
+      }
+    ],
+    "trap": "Treating the application as a mini-trial. The question is whether there is something worth trying, not who would win it; an answer that weighs the competing affidavits to decide the merits has applied the wrong test, however confident it sounds.",
+    "source": "Rules of Court 2012, Order 14, as cited in the lesson 'Ending a case early, and holding the position meanwhile'.",
+    "verify": "The Rules of Court 2012 are amended periodically. Confirm the current text of Order 14 at the Attorney General's Chambers portal, including any restriction on the claims for which the procedure is available, before relying on it.",
+    "lastVerified": "2026-09-10",
+    "order": 2
+  },
+  {
+    "id": "st-ea-s5",
+    "moduleId": "m10-evidence",
+    "lessonId": "pe-l-evidence-relevance",
+    "act": "Evidence Act 1950",
+    "actId": "evidence-act-1950",
+    "provision": "Section 5",
+    "find": "The Evidence Act 1950 is published free of charge by the Attorney General's Chambers with the Laws of Malaysia. Open section 5 first, then keep reading into the run of sections that follows it, because section 5 only makes sense together with the list it points to.",
+    "why": "This is the door. The Act is a code and section 5 makes it a closed list: evidence may be given of facts in issue and of the facts the Act itself declares relevant, and of nothing else. Every admissibility argument in a Malaysian court starts here, and the question is never whether something feels relevant but which section makes it so.",
+    "read": [
+      {
+        "passage": "The words of the section defining what evidence may be given of.",
+        "look_for": "Two categories, and then a closing phrase that shuts out everything outside them. Identify all three parts. The closing phrase is the one that makes this a code rather than a guideline."
+      },
+      {
+        "passage": "Anything attached to the section — an explanation, a proviso, or an illustration.",
+        "look_for": "Read it against the rule you have just read and note what it takes away or lets back in. An explanation attached to a section is part of the section, not a commentary on it."
+      },
+      {
+        "passage": "The sections that follow, which are the list section 5 refers to.",
+        "look_for": "Skim them and note how generous the list is: cause and effect of a fact in issue, motive, preparation, and what a person did before and after the event. The list is wide, which is exactly why people forget it is a list."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Opposing counsel objects that a piece of evidence is irrelevant. Under this Act, what is the question the court is actually asking?",
+        "model": "Which section makes this fact relevant. A good answer refuses the everyday sense of relevance and puts the burden on the party tendering the evidence to name a provision. If no section can be named, the evidence does not come in — not because a rule excludes it, but because nothing lets it in."
+      },
+      {
+        "q": "An English textbook says relevant evidence is admissible unless a rule excludes it. Why is that the wrong starting point in Malaysia, and what practical difference does it make?",
+        "model": "It is the opposite starting point. Malaysia begins closed and opens by enumeration; the English position begins open and closes by exception. The practical difference shows up in how an answer is written: here you argue by citing the section that admits the fact, rather than by arguing that no exclusionary rule applies. A good answer names that difference in structure, not just in outcome."
+      },
+      {
+        "q": "Devi sues her neighbour Chong over a broken gate. She wants to tell the court that Chong is rude to people at the surau. What is the analysis?",
+        "model": "Start with the facts in issue — did Chong hit the gate, and what did the repair cost. Chong's rudeness connects to neither. Then ask whether any section of the Act declares it relevant; if none does, it stays out even if it happens to be true. A good answer runs those two steps in that order rather than dismissing the evidence on instinct."
+      }
+    ],
+    "trap": "Arguing from everyday relevance — that the evidence obviously bears on the case, so it must be admissible. In a code the reasoning runs the other way. If you cannot name the section, the evidence stays out.",
+    "source": "Evidence Act 1950, s 5, as cited in the lesson 'What a court is allowed to listen to'.",
+    "verify": "Read section 5 and the following sections in the current reprint. Check the Act's numbering before citing a section number, and confirm that any explanation attached to the section still reads as this page describes.",
+    "lastVerified": "2026-09-10",
+    "order": 1
+  },
+  {
+    "id": "st-ea-s114g",
+    "moduleId": "m10-evidence",
+    "lessonId": "pe-l-evidence-proof",
+    "act": "Evidence Act 1950",
+    "actId": "evidence-act-1950",
+    "provision": "Section 114, illustration (g)",
+    "find": "The Evidence Act 1950 is published free of charge by the Attorney General's Chambers. Read the body of section 114 before the illustration — an illustration only makes sense against the words it illustrates, and this one is regularly cited as though it stood alone.",
+    "why": "This is the inference a court may draw when a party could have produced evidence and did not. It is one of the most frequently invoked passages in the Act and one of the most frequently overstated, because it is permissive and conditional and is usually pleaded as though it were neither.",
+    "read": [
+      {
+        "passage": "The body of section 114, before the illustrations begin.",
+        "look_for": "Find the verb. Note whether the court is directed to presume or merely permitted to, and note what the section says the court may have regard to in deciding. That verb governs everything that follows."
+      },
+      {
+        "passage": "Illustration (g) itself.",
+        "look_for": "Two conditions are built into it: the evidence could have been produced, and it was not. Write down what the party asking for the inference therefore has to establish before the court can even consider drawing it."
+      },
+      {
+        "passage": "The other illustrations, and anything the section adds after them.",
+        "look_for": "Read enough of the neighbouring illustrations to see that they are examples of one permissive power rather than a set of separate rules. The illustrations were enacted with the section, which is why they carry weight the textbook gloss does not."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A party did not call an obvious witness. What must the other side establish before it can ask the court for an adverse inference?",
+        "model": "That the witness was available to be called and that the evidence mattered — the illustration reaches evidence which could have been produced and was withheld, not every witness who did not appear. A good answer then adds the qualification that even when both are shown, the court may draw the inference and is not obliged to."
+      },
+      {
+        "q": "What is the difference between a gap in a party's evidence and a withholding of evidence?",
+        "model": "A gap is an absence; a withholding is a choice not to produce something available and material. If the missing witness would only have repeated what is already proved, nothing was withheld in the sense the illustration contemplates and no inference follows. A good answer keeps failure to prove and suppression of proof apart, because only the second engages this illustration."
+      },
+      {
+        "q": "Why does the difference between may and shall change how you write this point in an answer?",
+        "model": "Because a permissive presumption has to be argued for, not asserted. An answer that says the court will draw an adverse inference has overstated the provision; an answer that sets out the availability of the evidence, its materiality and why the inference is a fair one on these facts has actually made the argument. The word in the section decides which of those two answers is available to you."
+      }
+    ],
+    "trap": "Treating the inference as automatic. It is permissive, and it does not relieve the party who bears the burden of proving its own case — a prosecution that has not proved its elements is not rescued by an inference from what the defence did not call.",
+    "source": "Evidence Act 1950, s 114 illustration (g), as cited in the lesson 'Who has to prove it, and how sure the judge must be'.",
+    "verify": "Read section 114 with its illustrations in the current reprint. Confirm the illustration lettering before citing it, and read the body of the section rather than relying on any paraphrase of the illustration alone.",
+    "lastVerified": "2026-09-10",
+    "order": 2
+  }
+]

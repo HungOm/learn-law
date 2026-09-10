@@ -1,0 +1,149 @@
+[
+  {
+    "id": "st-fc-art74",
+    "moduleId": "m03-constitutional",
+    "lessonId": "l-federalism",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 74(1) and (2), read with the Ninth Schedule",
+    "find": "The Federal Constitution is published without charge by the Attorney General's Chambers; open Part VI and read Article 74, then turn to the Ninth Schedule and read the three Lists it refers to. Print copies are inexpensive and widely sold. Do not read the Article without the Lists — it is a pointer to them.",
+    "why": "This is the provision that decides who may legislate on what, and the federalism lesson rests on it. It is also the clearest example in the Constitution of a section that does almost nothing on its own: the substance is in a Schedule it directs you to, and a reader who stops at the Article has read the signpost and not the road.",
+    "read": [
+      {
+        "passage": "Clause (1), and the List it points to.",
+        "look_for": "Note which body it empowers and which Lists it names. Then go to the Ninth Schedule and read that List properly — this is the step most readers skip, and it is the only one that tells you anything concrete."
+      },
+      {
+        "passage": "Clause (2), and the Lists it points to.",
+        "look_for": "Compare the two clauses side by side. One List appears in both, and working out why is most of what this Article teaches."
+      },
+      {
+        "passage": "The Ninth Schedule itself, at least one entry in each of the three Lists.",
+        "look_for": "Read entries, not headings. The scope of a legislative power is set by the words of its entry, and entries are more specific and more qualified than their titles suggest."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Which List appears in both clauses, and what follows from that?",
+        "model": "A good answer names the Concurrent List and then says what concurrency actually means in practice — both legislatures may act on those matters, which raises the question of what happens when both do. That question is answered elsewhere in the Constitution, and noticing that this Article raises it without answering it is the useful observation."
+      },
+      {
+        "q": "Why can you not answer a question about legislative competence from Article 74 alone?",
+        "model": "A good answer explains that the Article allocates power by reference to Lists and does not contain them, so the operative words are in the Ninth Schedule. Competence arguments are won and lost on the wording of a particular entry, and an answer citing only Article 74 has established the framework and none of the case."
+      },
+      {
+        "q": "A State enacts a law on a matter that is not on any List. How would you frame the argument against it?",
+        "model": "A good answer treats it as a question about the source of the State's power rather than about the law's merits: a State legislature may act only within what the Constitution allocates to it, so the argument is that no allocation covers this. The same shape works for any competence challenge, which is why the framework is worth learning independently of any one dispute."
+      }
+    ],
+    "trap": "Reading the List headings instead of the entries. Headings are short and memorable and are not the law; the entry's own words carry the scope, and they usually carry qualifications the heading gives no hint of.",
+    "source": "Federal Constitution Arts 74(1) and 74(2), read with the Ninth Schedule — as stated in the rule block of the federalism lesson in this corpus.",
+    "verify": "Read Article 74 and the Ninth Schedule in the current reprint from the Attorney General's Chambers. The Lists have been amended; confirm the current entries rather than relying on any summary, including this one.",
+    "lastVerified": "2026-09-10",
+    "order": 2
+  },
+  {
+    "id": "st-fc-art160-2",
+    "moduleId": "m01-malaysian-legal-system",
+    "lessonId": "l-sources",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 160(2)",
+    "find": "In Part XV of the Federal Constitution, published free by the Attorney General's Chambers. It is the interpretation Article and it is long; find the definition you want rather than reading it through, and read the whole of that definition including anything that qualifies it.",
+    "why": "The sources lesson turns on what counts as law in Malaysia, and this is the provision that answers it. It is worth reading for a second reason too: it shows that a constitutional definition can be broader than the everyday word, and that arguments are sometimes won by noticing what a definition includes rather than what it excludes.",
+    "read": [
+      {
+        "passage": "The definition of law in clause (2).",
+        "look_for": "Count the limbs. There is more than one, and each brings in a different kind of source — write them down separately before you try to summarise them."
+      },
+      {
+        "passage": "Any words limiting one of those limbs.",
+        "look_for": "At least one limb carries a qualification about the extent to which it operates. Ask what work that qualification does and what it would exclude."
+      }
+    ],
+    "questions": [
+      {
+        "q": "List the limbs of the definition and give an example of a source falling under each.",
+        "model": "A good answer separates the limbs rather than paraphrasing the definition as a whole, and supplies a concrete example for each — a statute, a received rule, a custom. The examples are what show the definition has been understood rather than memorised, and the third limb is the one most readers cannot illustrate."
+      },
+      {
+        "q": "Why does it matter that the definition is broad rather than confined to legislation?",
+        "model": "A good answer connects the breadth to a consequence: provisions elsewhere in the Constitution that operate on law operate on everything within this definition, so what counts as law here determines the reach of those provisions. An answer that says only that the definition is wide has not said what turns on it."
+      }
+    ],
+    "trap": "Treating law as meaning statute. The definition is wider than that, and several constitutional arguments depend on the wider reading — a reader who assumes the narrow one will not see the argument at all.",
+    "source": "Federal Constitution, Art 160(2) — as stated in the rule block of the sources lesson in this corpus.",
+    "verify": "Read Article 160(2) in the current reprint. Check the definition against the Article itself rather than against this page or a textbook paraphrase; the limbs are precisely worded.",
+    "lastVerified": "2026-09-10",
+    "order": 1
+  },
+  {
+    "id": "st-fc-art12-4",
+    "moduleId": "m01-malaysian-legal-system",
+    "lessonId": "l-two-systems",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 12(4), read with the Eleventh Schedule",
+    "find": "Article 12 is in Part II of the Federal Constitution; the Eleventh Schedule is at the end. Both are in the free reprint from the Attorney General's Chambers. Read the Article first and the Schedule second — the Schedule is a rule about how words in the Constitution are read, and it changes what the Article says.",
+    "why": "A short clause about who decides a child's religion, and a good demonstration that a constitutional provision can turn on a rule of construction found in a Schedule rather than on anything in the clause itself. The two-systems lesson uses it for exactly that reason.",
+    "read": [
+      {
+        "passage": "Clause (4) itself, and the word describing who decides.",
+        "look_for": "Note whether that word is singular or plural, and write it down exactly as it appears. The whole question rests on it."
+      },
+      {
+        "passage": "The Eleventh Schedule provision about the singular and the plural.",
+        "look_for": "Read what it does to words used in the Constitution. Then read clause (4) again with it in mind and ask whether your first reading survives."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Read clause (4) alone, then again with the Eleventh Schedule. Does your reading change?",
+        "model": "A good answer reports both readings honestly, including the case where the first survives. The exercise is not to reach a particular result but to notice that a rule of construction in a Schedule can bear directly on a clause that does not mention it — which is a habit that transfers to every statute with an interpretation section."
+      },
+      {
+        "q": "Why does this matter in a family where the parents are not of the same religion?",
+        "model": "A good answer connects the construction point to the consequence: whether one parent may decide alone, or whether both must, is precisely what the singular-and-plural question resolves. It should stop there rather than asserting the answer — this has been litigated, and the honest position is to name the question and point at the authority."
+      }
+    ],
+    "trap": "Reading clause (4) without the Eleventh Schedule. On its own the clause looks complete, which is exactly why the omission is easy — nothing in it tells you to go and look.",
+    "source": "Federal Constitution, Art 12(4); Eleventh Schedule — as stated in the rule block of the two-systems lesson in this corpus.",
+    "verify": "Read Article 12(4) and the Eleventh Schedule in the current reprint. This provision has been the subject of litigation; check the current authority before relying on any reading, including the lesson's.",
+    "lastVerified": "2026-09-10",
+    "order": 3
+  },
+  {
+    "id": "st-fc-art145-3",
+    "moduleId": "m00-foundations",
+    "lessonId": "l-civil-criminal",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 145(3)",
+    "find": "Article 145 is in Part X of the Federal Constitution, published free by the Attorney General's Chambers. Read the whole Article rather than clause (3) alone — the surrounding clauses establish the office the clause gives the power to, and the power makes little sense detached from it.",
+    "why": "The foundations lesson distinguishes criminal from civil proceedings, and this is the provision that anchors the criminal side in Malaysia: it is where the power to prosecute is located. It is also a short, concrete example of a constitutional provision that decides who may do something rather than what may be done.",
+    "read": [
+      {
+        "passage": "Clause (3), and the words describing the power and its limits.",
+        "look_for": "Identify precisely what the power extends to and what it does not. Note any proceedings expressly carved out — the exclusions are as informative as the grant."
+      },
+      {
+        "passage": "The rest of Article 145, particularly the clauses establishing the office.",
+        "look_for": "Ask who holds this power and how they are appointed. A discretionary power's practical character depends on who exercises it and to whom they answer."
+      }
+    ],
+    "questions": [
+      {
+        "q": "In whom is the power to institute criminal proceedings vested, and what is expressly outside it?",
+        "model": "A good answer names the holder and then names the exclusions from the clause itself rather than from memory of a textbook. The exclusions are the part most answers omit, and they are the part that decides whether a particular proceeding falls under this power at all."
+      },
+      {
+        "q": "How does this provision support the distinction the foundations lesson draws between criminal and civil proceedings?",
+        "model": "A good answer connects the two: a criminal proceeding is brought in the name of the State by the officer this clause empowers, whereas a civil claim is brought by whoever has the right. That is a structural difference about who may sue and in whose name, and it explains several of the other differences the lesson lists rather than merely sitting alongside them."
+      }
+    ],
+    "trap": "Treating the distinction between criminal and civil as being only about punishment versus compensation. Who may bring the proceeding is a difference of the same importance, and this clause is where that difference comes from in Malaysia.",
+    "source": "Federal Constitution Art 145(3) — stated in the source field of the civil and criminal lesson in this corpus, and in the rule block noting that the prosecution power is vested in the Public Prosecutor.",
+    "verify": "Read Article 145 whole in the current reprint from the Attorney General's Chambers, and confirm the exclusions from the clause itself rather than from this page.",
+    "lastVerified": "2026-09-10"
+  }
+]

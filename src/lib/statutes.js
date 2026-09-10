@@ -23,7 +23,15 @@
 // legislation is impenetrable, which is untrue and is the belief this tier
 // exists to remove.
 
-import statutes from '../../content/statutes/core.json';
+// Every file in content/statutes/, not just core.json. `tools/check-statutes.py`
+// globs the directory, so a batch written into stage3.json gates itself the
+// moment it lands — but the app imported core.json alone, so a gated batch was
+// green and invisible at the same time. Three provisions sat in that gap. The
+// extract tier already solved this; the statute tier was written when there was
+// one file and never revisited. Sorted by path so a batch's own order survives.
+const modules = import.meta.glob('../../content/statutes/*.json', { eager: true });
+const statutes = Object.keys(modules).sort()
+  .flatMap((path) => modules[path].default ?? modules[path]);
 
 export function all() {
   return statutes;

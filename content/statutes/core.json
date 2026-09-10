@@ -39,7 +39,8 @@
     "trap": "Treating reception as meaning English law simply is Malaysian law. The section makes it a source, at a date, subject to conditions — and each of those three words is doing work.",
     "source": "Provision cited in the source fields of the legal system, tort, property and equity lessons in this corpus.",
     "verify": "Read the current reprint from the Attorney General's Chambers. Confirm the reception dates for the States of Malaya, Sabah and Sarawak from the section itself rather than from this page.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 2
   },
   {
     "id": "st-fc-art121-1a",
@@ -119,7 +120,8 @@
     "trap": "Working from the twenty-four hours alone and forgetting the rights in clause (3). Most real complaints involve both, and an answer that runs only the clock misses half the case.",
     "source": "Provision cited in the source fields of the criminal procedure lessons in this corpus.",
     "verify": "Read Article 5 in the current reprint, and check the Criminal Procedure Code for the machinery that gives effect to it. This page gives no time computation rules; find them in the text.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 3
   },
   {
     "id": "st-ia-s17a",
@@ -191,7 +193,8 @@
     "trap": "Reciting \"he who asserts must prove\" and stopping. The Act sets out a scheme with exceptions, and the exceptions are where the marks and the real disputes are.",
     "source": "Provisions cited in the source fields of the evidence lessons in this corpus.",
     "verify": "Read ss 101 to 106 with their illustrations in the current reprint. Check whether the Act's numbering has changed before citing a section number in an exam.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 3
   },
   {
     "id": "st-nlc-s340",
@@ -229,7 +232,8 @@
     "trap": "Learning the labels — immediate and deferred indefeasibility — without being able to point at the words producing either. The labels are a shorthand for a reading of this section, not a substitute for it.",
     "source": "Provision cited in the source fields of the property lessons in this corpus.",
     "verify": "Read s 340 in the current reprint. The National Land Code has been amended; confirm the current text and numbering before relying on this.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 1
   },
   {
     "id": "st-ca-s213",
@@ -263,7 +267,8 @@
     "trap": "Reciting duties of good faith and care from general company law without checking what this Act actually says. The statutory formulation is the starting point in Malaysia, and it may not match a textbook written for another jurisdiction.",
     "source": "Provision cited in the source fields of the company lessons in this corpus.",
     "verify": "Read s 213 in the current reprint and check the sections dealing with consequences of breach, which this page does not address.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 2
   },
   {
     "id": "st-cta-s26",
@@ -301,7 +306,8 @@
     "trap": "Importing English consideration doctrine wholesale. The Act sets out its own rule with its own exceptions, and s 3 of the Civil Law Act does not override a Malaysian statute that covers the ground.",
     "source": "Provision cited in the source fields of the contract lessons in this corpus.",
     "verify": "Read s 26 with its illustrations in the current reprint before relying on this, and check the surrounding sections for the definitions it uses.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 4
   },
   {
     "id": "st-pc-homicide",
@@ -309,9 +315,9 @@
     "lessonId": "l-homicide",
     "act": "Penal Code",
     "actId": "penal-code",
-    "provision": "Sections 299 and 300",
+    "provision": "Sections 299 and 300, with the Exceptions to section 300",
     "find": "In the Penal Code, published free by the Attorney General's Chambers. Read the two sections side by side, with their explanations and illustrations; reading either alone is what makes this topic confusing.",
-    "why": "The line between culpable homicide and murder is drawn by two sections whose wording overlaps deliberately. Almost every difficulty students have here comes from meeting them one at a time.",
+    "why": "The line between culpable homicide and murder is drawn by two sections whose wording overlaps deliberately, and then partly undrawn again by the Exceptions to section 300. Almost every difficulty students have here comes from meeting the three pieces one at a time — and the Exceptions are the piece most often left out entirely, which is why this page now carries them.",
     "read": [
       {
         "passage": "Section 299, and each limb of it.",
@@ -324,6 +330,18 @@
       {
         "passage": "The explanations and illustrations attached to both.",
         "look_for": "They resolve several of the questions the bare words raise. Read them as part of the text, because they were enacted as part of it."
+      },
+      {
+        "passage": "Exception 1 to section 300, and the two adjectives it applies to the provocation.",
+        "look_for": "Both adjectives must be satisfied and they do different work — one is about degree, the other about timing. Underline them separately and ask which one the facts of any problem are really contesting; it is usually the second."
+      },
+      {
+        "passage": "The provisos beneath Exception 1.",
+        "look_for": "Count them, and note that any one of them defeats the exception on its own. Read each as a question to put to the facts rather than as a caveat to remember."
+      },
+      {
+        "passage": "Exception 4, and the conditions attached to it.",
+        "look_for": "A sudden fight is a different route to the same reduction. Ask what stops an accused relying on it, and compare those limits with Exception 1's provisos — the two exceptions guard against different things."
       }
     ],
     "questions": [
@@ -334,12 +352,21 @@
       {
         "q": "Why does this topic reward reading the illustrations more than most?",
         "model": "A good answer notes that the distinctions turn on fine gradations of intention and knowledge, which are hard to state abstractly and easy to show by example — which is what the illustrations do. They are also enacted text, so they are evidence of intended scope rather than one commentator's view."
+      },
+      {
+        "q": "What do the Exceptions to section 300 actually do to a charge, and what do they not do?",
+        "model": "A good answer is precise about the effect: they reduce murder to culpable homicide not amounting to murder — a lesser offence with a lesser sentence — and they do not acquit anybody. Writing that provocation is a defence, or that it excuses the killing, is the commonest error in this area and it misstates the outcome rather than merely the label."
+      },
+      {
+        "q": "Where do the Exceptions to section 300 sit in relation to the General Exceptions in ss 76 to 106?",
+        "model": "A good answer keeps them apart. The Exceptions to s 300 are specific to this offence and reduce it; the General Exceptions apply to every offence in the Code and may defeat liability altogether. A homicide answer that runs one and never asks about the other has looked at half the picture — and s 6 is the provision that says so."
       }
     ],
-    "trap": "Learning the clauses of s 300 as a list without mapping them back to s 299. The mapping is what the sections are for and it is where problem questions are decided.",
-    "source": "Provisions cited in the source fields of the criminal law lessons in this corpus.",
-    "verify": "Read ss 299 and 300 with explanations and illustrations in the current reprint, and check the exceptions to s 300 separately — this page does not deal with them.",
-    "lastVerified": "2026-09-10"
+    "trap": "Learning the clauses of s 300 as a list without mapping them back to s 299, and then stopping before the Exceptions. The mapping is what the sections are for; the Exceptions are where a problem that looks like murder is often decided. And they reduce — they do not excuse.",
+    "source": "Penal Code (Act 574) ss 299, 300 and Exceptions 1 and 4 — as stated in the source field of the homicide lesson in this corpus, which also carries a rule block sourced to 'Penal Code, s 300, Exception 1'.",
+    "verify": "Read ss 299 and 300 with their explanations, illustrations and the Exceptions in the current reprint from the Attorney General's Chambers. Check the provisos to Exception 1 and the conditions on Exception 4 against the text rather than this page. The General Exceptions in ss 76 to 106 are a separate matter and are not dealt with here.",
+    "lastVerified": "2026-09-10",
+    "order": 1
   },
   {
     "id": "st-fc-art4",
@@ -373,6 +400,7 @@
     "trap": "Quoting the clause and stopping. Supremacy is the premise of a constitutional argument, not the argument — the work is showing the inconsistency and identifying its extent.",
     "source": "Provision cited in the source fields of the constitutional lessons in this corpus.",
     "verify": "Read Article 4 whole in the current reprint. This page does not address the amendment power or the basic structure debate; both are separate and contested.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 4
   }
 ]

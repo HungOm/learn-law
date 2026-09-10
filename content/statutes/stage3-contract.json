@@ -1,0 +1,412 @@
+[
+  {
+    "id": "st-cta-s2a",
+    "moduleId": "m06-contract",
+    "lessonId": "l-formation",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 2(a), and the lettered paragraphs that follow it",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint and go to section 2, the definitions section, where paragraph (a) is the first limb. Read the lettered paragraphs of section 2 in one sitting rather than paragraph (a) on its own.",
+    "why": "This is where Malaysian formation begins, and it begins in a statute rather than in the English cases. The lesson's whole method rests on that: the Act has its own vocabulary, and every moment that sections 4 and 5 fix is the timing of something paragraph (a) and its neighbours define. A reader who has not read the definition is timing a thing they have not identified.",
+    "read": [
+      {
+        "passage": "The elements paragraph (a) requires before there is a proposal at all.",
+        "look_for": "Signifying something to another person, and doing it with a view to obtaining that person's assent. Write the elements out as a numbered list, then test the advertisement in your own problem against each one separately."
+      },
+      {
+        "passage": "The rest of section 2, paragraph by paragraph.",
+        "look_for": "The paragraphs form a chain, from a proposal through to a contract. Follow it once from (a) to the end and note which paragraph first uses each of those words, and what each one is made to depend on."
+      },
+      {
+        "passage": "What paragraph (a) says nothing about.",
+        "look_for": "There is no mention here of an invitation to treat. That distinction comes from the case law and not from the Act, so an answer must not attribute it to a section."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A landlord advertises a room at RM450 a month. Run that advertisement against each element of paragraph (a) and say whether it is a proposal.",
+        "model": "A good answer works the definition element by element instead of reaching for a label. The advertisement does signify something to other people; the harder element is whether it is made with a view to obtaining assent, and the usual conclusion is that it invites proposals rather than making one. The answer should also say where that conclusion comes from, which is the case law rather than paragraph (a)."
+      },
+      {
+        "q": "Why does it matter that the Act says proposal and promise where an English textbook says offer and acceptance?",
+        "model": "A good answer treats the vocabulary as a signal about the source of the rule. Formation here is governed by an enacted definition, so the argument opens with the statutory words and the English cases enter only as illustration. Using the Act's own terms is also the cheapest way to show an examiner that the Act itself has been read."
+      }
+    ],
+    "trap": "Answering a formation question out of the English offer-and-acceptance cases. The definition is enacted here, and where a textbook and the Act differ the Act governs. The second half of the trap is crediting the Act with the invitation-to-treat distinction, which paragraph (a) does not draw.",
+    "source": "Contracts Act 1950, s 2(a), as cited in the rule block on proposal and acceptance in the lesson 'Formation: the moment a contract exists'.",
+    "verify": "Read section 2 in a current reprint of Act 136 and check the paragraph lettering against your own text before citing it. The lesson's own verification note asks for the same check across the neighbouring formation sections.",
+    "lastVerified": "2026-09-10",
+    "order": 1
+  },
+  {
+    "id": "st-cta-s4",
+    "moduleId": "m06-contract",
+    "lessonId": "l-formation",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 4, all three subsections",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 4 and read all three subsections in one pass, with the paragraph lettering of subsections (2) and (3) in front of you. The section is short, and any summary of it, including the table in the lesson, is a summary of these few lines.",
+    "why": "This is the provision that decides most formation problems, and the reason it is hard is that it does not contain one rule. It fixes a different moment for each kind of message, and for two of them a different moment again depending on which side is relying on it. The lesson's pattern only becomes visible on the page: sending is enough to bind the person the message is aimed at in exactly one case, and everywhere else the Act asks for knowledge.",
+    "read": [
+      {
+        "passage": "Subsection (1), on the communication of a proposal.",
+        "look_for": "Only one moment is fixed here, and it is knowledge rather than delivery or despatch. Ask why this subsection needs only one moment when the next two need two each."
+      },
+      {
+        "passage": "Subsection (2), on an acceptance, and its two paragraphs.",
+        "look_for": "Paragraph (a) and paragraph (b) fix different moments against different people out of a single posting. Note the words in (a) describing the point at which the acceptance has left the acceptor's control, because that phrase and not the date of delivery is what a posted-letter problem turns on."
+      },
+      {
+        "passage": "Subsection (3), on a revocation, and its two paragraphs.",
+        "look_for": "The same two-sided structure as an acceptance, but the halves do different work. Read paragraph (b) slowly: it asks for knowledge, and it could have asked for delivery and does not."
+      },
+      {
+        "passage": "The three subsections read together.",
+        "look_for": "Count the moments the section fixes, then count how many turn on sending and how many on knowledge. There is exactly one of the first kind, and the lopsidedness is deliberate."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Before looking at any summary, build the table for yourself: three rows, one per kind of message, and for each the moment communication is complete against the maker and against the other party. One cell has nothing in it. Which, and why?",
+        "model": "The maker's column for a proposal is empty. A proposal is not something that binds its maker at the moment of despatch, so subsection (1) fixes only the moment against the person it is made to. A good answer notices the gap and explains it, rather than filling it in by symmetry with the other two rows."
+      },
+      {
+        "q": "A letter revoking a proposal is delivered to the offeree's office on Monday and opened on Wednesday. When is the revocation complete against her, and which words decide it?",
+        "model": "Wednesday, on subsection (3)(b), because the paragraph asks for knowledge. A good answer points at the operative word instead of paraphrasing it, since the whole point is that delivery and knowledge are different things and the paragraph chose one of them. This is the step most answers skip."
+      }
+    ],
+    "trap": "Reaching for one rule and applying it to every message in the problem. Section 4 fixes four separate moments, and a question with two letters in it is testing whether the right subsection is applied to each. The other half of the trap is treating delivery as communication: an unopened letter on a desk has been delivered and has not been communicated to anybody.",
+    "source": "Contracts Act 1950, ss 4(1), 4(2) and 4(3), each cited in its own rule block in the lesson 'Formation: the moment a contract exists', which also cites s 4 as a whole for the table of moments the section fixes.",
+    "verify": "Read section 4 in a current reprint of Act 136 and check the subsection and paragraph lettering against your text before quoting it. The lesson's own verification note asks for exactly that check.",
+    "lastVerified": "2026-09-10",
+    "order": 2
+  },
+  {
+    "id": "st-cta-s5",
+    "moduleId": "m06-contract",
+    "lessonId": "l-formation",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 5(1), read with section 4(2)(a)",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 5 and read both its subsections, keeping section 4 open beside it. Subsection (1) borrows its deadline from section 4 and cannot be understood on its own.",
+    "why": "This is the subsection that decides the race in a crossing-letters problem. On its own it looks like a platitude, that an offer may be taken back before acceptance. Read beside section 4(2)(a), as the lesson reads it, the deadline becomes an exact moment: the proposer may withdraw until the acceptance is sent, and not one minute after. The cross-reference is the whole mechanism.",
+    "read": [
+      {
+        "passage": "The words in subsection (1) that fix the deadline.",
+        "look_for": "It does not say before acceptance. It says something more precise, and the precision is what decides a posted-letter problem. Note the closing words as well, which shut the door once the moment has passed."
+      },
+      {
+        "passage": "The cross-reference into section 4.",
+        "look_for": "Turn to section 4(2)(a) and read the moment it fixes, then write the deadline out as a plain date-and-time sentence on the facts in front of you. Doing that on paper is what stops the analysis sliding back into delivery dates."
+      },
+      {
+        "passage": "The rest of section 5, past subsection (1).",
+        "look_for": "Read to the end of the section rather than stopping at the subsection the lesson quotes, and note whether the deadlines it fixes all depend on the same person's knowledge. Write down anything the section does that subsection (1) does not."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A proposer posts an offer on 3 March and posts a withdrawal on 10 March. The withdrawal is delivered to the offeree's office on 12 March and she opens it on 14 March. She had posted her acceptance at nine in the morning on 12 March. Is there a contract?",
+        "model": "Yes, and a good answer reaches that by two separate steps rather than by comparing dates of delivery. The acceptance bound the proposer when it went into the postbox, under s 4(2)(a), so s 5(1) closed the door on his revocation at that moment. The revocation did nothing to the offeree until she knew of it on 14 March, under s 4(3)(b). Answers that race the two deliveries against each other, rather than the two statutory moments, get this wrong."
+      },
+      {
+        "q": "A proposer promises to hold his offer open for fourteen days and then lets the room to somebody else on day three. How far does s 5(1) take the offeree?",
+        "model": "Not far on its own. Section 5(1) establishes that he could still revoke, because no acceptance had yet been sent. A good answer separates could from did, checks under s 4 whether an acceptance had in fact been put into transmission, and only then turns to whether the promise to wait was paid for. Treating the section as an answer rather than as one step is the usual error."
+      }
+    ],
+    "trap": "Reading s 5(1) as though it said before acceptance. It borrows the moment fixed by s 4(2)(a), and on a posted acceptance those are different days. The related error is doing the arithmetic on the wrong pair of events: the race is between two statutory moments, not between two deliveries.",
+    "source": "Contracts Act 1950, s 5(1), as cited in the rule block on revocation in the lesson 'Formation: the moment a contract exists'.",
+    "verify": "Check section 5 in a current reprint of Act 136 together with section 4, and confirm the subsection and paragraph lettering of s 4(2) that s 5(1) depends on, as the lesson's own verification note requires.",
+    "lastVerified": "2026-09-10",
+    "order": 3
+  },
+  {
+    "id": "st-cta-s10",
+    "moduleId": "m06-contract",
+    "lessonId": "l-vitiating",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 10(1)",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 10, read subsection (1) once slowly, and then look ahead to the sections that unpack each of its requirements. Reading it without following those pointers leaves you with a list and no content.",
+    "why": "This is the gate every contract has to pass, and the vitiating factors are the failure of only one of the four things it requires. The lesson opens here for that reason: reading s 10(1) first tells you which requirement is actually in issue on your facts, and stops an answer wandering into consent when the real problem is capacity or an unlawful object.",
+    "read": [
+      {
+        "passage": "The requirements subsection (1) sets out, counted.",
+        "look_for": "Write them out as a numbered list before reading anything else, then check your list against the words. Most people can name two from memory and miss the other two."
+      },
+      {
+        "passage": "Where each requirement is defined.",
+        "look_for": "Free consent goes to s 14, competence of the parties to s 11, lawful consideration and lawful object to s 24. Note that subsection (1) defines none of its own terms — it is an index."
+      },
+      {
+        "passage": "The requirement about agreements expressly declared to be void.",
+        "look_for": "This is a pointer to other sections of the Act rather than a test of its own. Ask which sections it is pointing at, and note that s 24 is one of them, so two of the four requirements can be engaged by the same facts."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the four requirements of s 10(1) and, for each, name the section of the Act that defines it.",
+        "model": "Free consent, defined by s 14; competence of the parties, by s 11; lawful consideration and lawful object, by s 24; and that the agreement is not expressly declared void. A good answer treats the subsection as the index it is, because naming the defining section for each requirement is what turns a memorised list into a plan for the answer."
+      },
+      {
+        "q": "Why is it worth opening a vitiating-factors question at s 10(1) rather than at the factor itself?",
+        "model": "Because it identifies which of four requirements has failed. An answer that opens at undue influence has silently assumed free consent is the issue. Opening at s 10(1) shows that capacity and lawfulness are separate routes to failure and lets you say in a line why they are not in issue here, which is worth more than it costs."
+      }
+    ],
+    "trap": "Treating s 10(1) as a definition. It defines nothing; it names four requirements and every one of them is defined somewhere else. An answer that stops at s 10(1) has stated the question rather than answered it.",
+    "source": "Contracts Act 1950, s 10(1), as cited in the opening rule block of the lesson 'When an agreement can be undone: the vitiating factors'.",
+    "verify": "Check section 10 in a current reprint of Act 136 and confirm the section numbers the lesson gives for each requirement. The lesson's own verification note warns that the numbering it uses is the traditional numbering and should be checked against the current consolidated text.",
+    "lastVerified": "2026-09-10",
+    "order": 5
+  },
+  {
+    "id": "st-cta-s14",
+    "moduleId": "m06-contract",
+    "lessonId": "l-vitiating",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 14, with the definitions in sections 15 to 23",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 14, which is a single sentence, and then read straight on through the sections that follow it. Section 14 names five things and defines none of them, so reading it alone tells you almost nothing.",
+    "why": "Free consent is the requirement that carries most of the litigation, and the Act defines it negatively: consent is free unless one of five named things caused it. The lesson turns on that list being closed. Reading it is what stops an answer reasoning from English duress or English misrepresentation, which in this Act gets the consequence wrong as well as the test.",
+    "read": [
+      {
+        "passage": "The five things the section names, in the order it names them.",
+        "look_for": "Write them down. This is a closed list, and nothing outside it makes consent unfree however unfair the bargain looks from the outside."
+      },
+      {
+        "passage": "The word linking the factor to the consent.",
+        "look_for": "Consent is unfree only where it was caused by one of the five. Causation is a separate requirement from the factor itself, and on real facts it is often the arguable point."
+      },
+      {
+        "passage": "The defining sections that follow, one visit each.",
+        "look_for": "Take each of the five to its own section and note how much narrower the defined term is than the everyday word. Coercion is the one that surprises people, because the definition reaches for a criminal statute rather than for a standard of pressure."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A supplier says he will stop deliveries unless the price is raised, and the buyer agrees. Is the buyer's consent unfree within s 14?",
+        "model": "A good answer goes to the defining section rather than to the feel of the facts, and finds that commercial pressure of this kind does not obviously answer the statutory definition of coercion. The point being tested is that s 14's list is closed and the definitions under it are narrow, so pressure that is real and unwelcome can still leave consent free. Saying so, and then looking honestly at undue influence, is worth more than straining the word coercion."
+      },
+      {
+        "q": "Why does starting from an English doctrine here usually produce the wrong consequence as well as the wrong test?",
+        "model": "Because the consequence in this Act attaches to the statutory factor and not to how serious the conduct feels. Coercion, fraud and misrepresentation lead one way under s 19(1), and a shared mistake of essential fact leads another. An answer that reasons its way to duress by an English route arrives with no section of this Act to hang a consequence on."
+      }
+    ],
+    "trap": "Treating s 14 as a general standard of fairness. It is a closed list of five named factors, each with its own defining section, and a hard bargain that fits none of them is a contract. The definitions are all narrower than the ordinary words, and coercion is the one that catches people out.",
+    "source": "Contracts Act 1950, s 14, as cited in the rule block on free consent in the lesson 'When an agreement can be undone: the vitiating factors'.",
+    "verify": "Check section 14 and the definitions in sections 15 to 23 in a current reprint of Act 136. The lesson's own verification note says the numbering it uses is the traditional numbering and should be confirmed against the current consolidated text.",
+    "lastVerified": "2026-09-10",
+    "order": 6
+  },
+  {
+    "id": "st-cta-s19",
+    "moduleId": "m06-contract",
+    "lessonId": "l-vitiating",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 19(1), read with sections 21 and 66",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 19 and read the whole section, not subsection (1) alone. Then turn to section 21 for the different consequence a shared mistake carries, and to section 66 for what has to be given back.",
+    "why": "This is the consequence provision, and the lesson says plainly that answers lose their footing at the consequence far more often than at the test. Three of the five vitiating factors land here and produce a contract the wronged party may take down; a shared mistake of essential fact lands somewhere else and produces no contract at all. The practical difference is the election, and it is worth reading in the words rather than off a diagram.",
+    "read": [
+      {
+        "passage": "The factors subsection (1) names, set beside the five in section 14.",
+        "look_for": "Three of the five appear here. Two do not, and finding where their consequence lives is the exercise; do not assume the section forgot them."
+      },
+      {
+        "passage": "The word voidable, and whose option it is.",
+        "look_for": "The choice belongs to one named party and to nobody else. Until that party exercises it there is a contract, binding on both sides, and that is what voidable means as against void."
+      },
+      {
+        "passage": "The rest of section 19, past subsection (1).",
+        "look_for": "Do not stop at the subsection the lesson quotes. Note what else the section contains and whether any of it conditions the right subsection (1) has just given, because that is where a real dispute is fought."
+      },
+      {
+        "passage": "Sections 21 and 66, in the same sitting.",
+        "look_for": "Section 21 attaches a different consequence to a shared mistake of essential fact, and section 66 deals with restoring an advantage received under an agreement discovered to be void. Read the three together so the branch sits in your head as statute rather than as a picture."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A seller induces a sale by a lie about the land. The buyer asks whether she has a contract at all. Answer her, and say what she may do about it.",
+        "model": "She has one, voidable at her option. A good answer gives both halves: it binds her until she takes it down, and the choice is hers alone. She may rescind and unwind the exchange, or hold the seller to the sale on the footing that what he told her was true. An answer that calls the agreement void has borrowed the consequence that belongs to a shared mistake."
+      },
+      {
+        "q": "Why is the difference between void and voidable more than terminology?",
+        "model": "Because it decides who has a decision to make and what can be lost. A voidable contract stands until the wronged party elects, so affirming after learning the truth, waiting too long, or restitution becoming impossible can all take the right away. A void agreement leaves nobody anything to elect about, and restoration is handled by section 66 instead. A good answer names a practical consequence rather than repeating the two words."
+      }
+    ],
+    "trap": "Attaching the consequence to how bad the conduct feels instead of to the section. Fraud sounds worse than a shared mistake and produces the weaker result: the agreement is only voidable, and the right to undo it can be lost by affirmation, by delay, or by restitution becoming impossible.",
+    "source": "Contracts Act 1950, s 19(1), as cited in the rule block on void and voidable in the lesson 'When an agreement can be undone: the vitiating factors'.",
+    "verify": "Check section 19 in a current reprint of Act 136, together with sections 21 and 66. The lesson's own verification note says its numbering is the traditional numbering and should be confirmed against the current consolidated text.",
+    "lastVerified": "2026-09-10",
+    "order": 7
+  },
+  {
+    "id": "st-cta-s24",
+    "moduleId": "m06-contract",
+    "lessonId": "l-vitiating",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 24, and its limbs",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 24 and read it as the list it is, marking where one limb ends and the next begins. Then read section 25, which deals with an agreement only part of which is unlawful.",
+    "why": "The lesson's warning is that there is no single doctrine of illegality to reach for here. Section 24 sets out categories, and the argument in a real case is about which limb is engaged. It is also a separate route to failure from free consent: this is the lawful consideration and lawful object requirement of section 10(1), and what it produces is a void agreement rather than a voidable one.",
+    "read": [
+      {
+        "passage": "The limbs, counted and separated on paper.",
+        "look_for": "Number them as you go. They are alternatives, and an answer that says an agreement is illegal without naming a limb has left out the argument entirely."
+      },
+      {
+        "passage": "The limb about defeating a law.",
+        "look_for": "It reaches past what is expressly forbidden. Ask what work it does that the forbidden-by-law limb does not, because the gap between them is where the interesting cases sit."
+      },
+      {
+        "passage": "The limb resting on immorality or public policy, and who decides it.",
+        "look_for": "That limb is expressed as a matter for the court, which makes it different in kind from being forbidden by a statute. Note the wording, since it is all a submission on public policy has to work with."
+      },
+      {
+        "passage": "Section 25, immediately after.",
+        "look_for": "It deals with an agreement that is only partly unlawful. Read it before concluding that everything the parties agreed has fallen."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Two people agree that one will pay the other RM5,000 to withdraw a police report. Which limb of section 24 do you run, and what is the consequence?",
+        "model": "A good answer picks a limb and commits to it instead of saying the agreement is illegal. Defeating a law and public policy are both arguable on facts like these, and naming the one you are running is the analysis. The consequence is that the agreement is void, so there is no contract to sue on and no election for anybody to make."
+      },
+      {
+        "q": "Why is the sentence 'this agreement is illegal' weak in an answer on this section?",
+        "model": "Because the section does not contain a doctrine of illegality; it contains categories, and the dispute is about which of them the facts engage. A good answer names the limb, applies its actual words to the facts, and then checks section 25 before concluding that the whole agreement falls."
+      }
+    ],
+    "trap": "Reaching for illegality as one large general doctrine. Section 24 lists its categories and an answer has to say which one it is running. The second error is writing off the whole agreement without looking at section 25, which deals with an agreement that is only partly unlawful.",
+    "source": "Contracts Act 1950, s 24, as cited in the rule block on lawful objects in the lesson 'When an agreement can be undone: the vitiating factors'.",
+    "verify": "Check section 24 and section 25 in a current reprint of Act 136 and read the limbs as the current text words them. The lesson's own verification note says its numbering is the traditional numbering and should be confirmed.",
+    "lastVerified": "2026-09-10",
+    "order": 8
+  },
+  {
+    "id": "st-cta-s40",
+    "moduleId": "m06-contract",
+    "lessonId": "l-remedies",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 40, read with sections 56 and 57",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 40 and read the whole of it, including the words at the end about acquiescence. Then read sections 56 and 57 on time, which the lesson pairs with it.",
+    "why": "This is the election, and it is the step a remedies answer has to settle before it reaches the money. Section 40 lets the innocent party put an end to the contract when the other side has refused outright, and takes that right away from a party who has shown he wants the contract to continue. Whether he terminated or affirmed decides which contract the loss is then measured against.",
+    "read": [
+      {
+        "passage": "What the other party must have done before section 40 is available.",
+        "look_for": "The section is about a refusal, or a disabling, and it qualifies the promise concerned. Mark that qualifying phrase: not every breach opens this door."
+      },
+      {
+        "passage": "The closing words about acquiescence in the contract continuing.",
+        "look_for": "The right is lost by signifying, in words or by conduct, that you want performance to go on. Conduct counts, so ask what the innocent party actually did after he learned of the refusal."
+      },
+      {
+        "passage": "Sections 56 and 57, on time.",
+        "look_for": "Whether time is of the essence is a question of the parties' intention, and a stipulation as to time is not automatically essential. Read them before arguing that late performance amounted to a refusal to perform at all."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A buyer pays a deposit. A week before delivery the seller says he has sold the goods to somebody else. What are the buyer's two paths, and what does he give up by taking each?",
+        "model": "He may end the contract under section 40 and claim what the breach cost him, or hold the seller to it and keep pressing for performance. A good answer says this is an election: pressing on can amount to acquiescence in the contract continuing, which leaves him with damages only. It also notes that the choice is made once, and can be lost by conduct as easily as by words."
+      },
+      {
+        "q": "Why must a remedies answer settle section 40 before it reaches the measure of loss?",
+        "model": "Because the measure depends on which contract you are measuring against, one that was brought to an end or one that continues. A good answer treats termination or affirmation as a step in its own right, says which happened on these facts and why, and only then moves to the money."
+      }
+    ],
+    "trap": "Assuming any breach lets the innocent party walk away. Section 40 is aimed at a refusal or a disabling that goes to the promise as a whole, and late performance is not automatically that — sections 56 and 57 make whether time is essential a question of intention. The other half is forgetting that the right is lost by conduct, so pressing for performance after a repudiation can itself be acquiescence.",
+    "source": "Contracts Act 1950, s 40, as cited in the rule block on ending the contract in the lesson 'Breach, damages, and the trouble with an agreed sum'.",
+    "verify": "Check section 40 in a current reprint of Act 136, together with sections 56 and 57 on time, and confirm the numbering against the current consolidated text before citing it.",
+    "lastVerified": "2026-09-10",
+    "order": 9
+  },
+  {
+    "id": "st-cta-s74",
+    "moduleId": "m06-contract",
+    "lessonId": "l-remedies",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 74, subsections (1) and (2), with the explanation to the section",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 74 and read subsections (1) and (2) together with the explanation that follows them. The explanation is easy to skip and it is where mitigation comes from, so read to the end of the section rather than to the end of the subsections.",
+    "why": "This is the measure of damages, and the lesson's point is where the rule comes from. The two limbs are the familiar common law rule on remoteness put into statute, which changes how the argument runs: you open with the statutory words and the English cases come in as illustration, not as the source. The explanation then supplies the statutory foothold for mitigation, which an answer usually asserts without a section behind it.",
+    "read": [
+      {
+        "passage": "The first limb in subsection (1).",
+        "look_for": "Loss arising naturally, in the usual course of things, from such a breach. Ask what makes a loss ordinary, and note that this limb needs no proof of what the defendant knew about the claimant."
+      },
+      {
+        "passage": "The second limb, and the moment it fixes.",
+        "look_for": "It turns on what the parties knew when the contract was made, not on what was learned later. That timing is the trap, so mark the words that carry it before you go on."
+      },
+      {
+        "passage": "Subsection (2), on remote and indirect loss.",
+        "look_for": "This is a boundary rather than a third limb. Read it as the line the two limbs are drawn inside, and ask what it adds that they do not already exclude."
+      },
+      {
+        "passage": "The explanation at the end of the section.",
+        "look_for": "It requires the means available for remedying the inconvenience caused by the non-performance to be taken into account. An answer that argues a duty to mitigate without pointing here has left the rule floating free of the Act."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A buyer hires a replacement van at RM100 a day, and separately loses a RM40,000 job he never mentioned when the contract was made. What does he recover?",
+        "model": "The hire cost, under the first limb, because it is what would ordinarily follow such a breach. Not the RM40,000, because the second limb turns on what the parties knew when the contract was made and he said nothing then. A good answer separates the two heads and applies a different limb to each, and refuses to let the seller's later knowledge do any work."
+      },
+      {
+        "q": "How should an English remoteness case be used in an answer on this section?",
+        "model": "As an illustration of the statutory words, not as the source of the rule. The limbs are enacted here, so the argument opens with the section and reaches for a case to show how a limb has been applied. A good answer then checks the explanation for mitigation before settling on a figure."
+      }
+    ],
+    "trap": "Letting knowledge acquired after the contract into the second limb. It fixes the parties' knowledge at the moment of contracting, and being told of a special loss after the breach does not bring it in. The second error is arguing mitigation as a general principle, when the Act puts it in the explanation to this very section.",
+    "source": "Contracts Act 1950, s 74(1) and (2), as cited in the rule block on the measure of damages in the lesson 'Breach, damages, and the trouble with an agreed sum'.",
+    "verify": "Check section 74 in a current reprint of Act 136, with its subsections and the explanation, before quoting any part of it.",
+    "lastVerified": "2026-09-10",
+    "order": 10
+  },
+  {
+    "id": "st-cta-s75",
+    "moduleId": "m06-contract",
+    "lessonId": "l-remedies",
+    "act": "Contracts Act 1950",
+    "actId": "contracts-act-1950",
+    "provision": "Section 75",
+    "find": "The Attorney General's Chambers publishes Act 136 online without charge; open the current reprint at section 75 and read it beside section 74, because section 75 works on the compensation section 74 measures. The section is short, and almost everything argued about it lives in the cases, so read the words first and the case law second.",
+    "why": "The lesson calls this the single most important check-before-you-rely-on-it point in the contract module. Two things need reading in the original. The first is on the face of the section: a figure the parties named in advance operates as a ceiling and not as a bill. The second is that these words have not changed while what a claimant must show under them has, so the date on your notes matters here more than anywhere else in the module.",
+    "read": [
+      {
+        "passage": "What the section entitles the complaining party to receive.",
+        "look_for": "Reasonable compensation, with the named sum operating as a maximum. Note that nothing in the words makes the named sum payable simply because the breach occurred."
+      },
+      {
+        "passage": "The relation between the named sum and the compensation.",
+        "look_for": "Write the two quantities out and state the relation between them in one sentence of your own. Most misreadings of this section collapse them into a single figure."
+      },
+      {
+        "passage": "The section set beside section 74.",
+        "look_for": "Section 74 says how compensation is measured; section 75 caps it where the parties named a figure. Ask what is left of the exercise of naming a figure once that is understood."
+      },
+      {
+        "passage": "What the section does not contain.",
+        "look_for": "There is no test for when a named sum is a penalty and no list of factors. Everything argued beyond the ceiling comes from the cases — which is exactly how the position could move, as it has, without a word of the section changing. Read the two Federal Court decisions the lesson names, Selva Kumar and then Cubic Electronics, in that order."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A contract names RM500 for every day of delay, and the goods arrive six days late. Is the seller simply liable for RM3,000?",
+        "model": "No. The named figure is a ceiling, so what is recovered is reasonable compensation up to RM3,000 and still has to be justified. A good answer says why that is not obvious — in some systems the agreed figure is simply payable — and then states what the claimant has to show, which is where the case law and its movement come in."
+      },
+      {
+        "q": "Sketch how the Malaysian position under this section has moved, and say why an answer resting on one case only is incomplete.",
+        "model": "The words of the section have not changed; what a claimant must show under them has. A good answer names the earlier Federal Court position requiring proof of actual loss with the named sum as a ceiling, then the later decision that reformulated the approach around a legitimate interest and proportionality to it, states what changed between them, and closes by saying it has checked whether anything has been decided since. An answer giving only the earlier case is out of date; one giving only the later case has not shown that it knows anything moved."
+      }
+    ],
+    "trap": "Reading the clause the way the parties wrote it. A named sum is a maximum under this section, not an invoice, and reasonable compensation still has to be justified. The larger trap is the date on your notes: what a claimant must show under these unchanged words has already been reformulated once by the Federal Court, so an answer that gives only one of the two leading decisions is either out of date or unaware that the position moved at all.",
+    "source": "Contracts Act 1950, s 75, as cited in the rule block on a sum named in the contract in the lesson 'Breach, damages, and the trouble with an agreed sum'. The case authorities that lesson gives on it are Selva Kumar a/l Murugiah v Thiagarajah a/l Retnasamy [1995] 1 MLJ 817 (FC) and Cubic Electronics Sdn Bhd (in liquidation) v Mars Telecommunications Sdn Bhd [2019] 6 MLJ 15 (FC), also reported at [2019] 2 CLJ 723, which drew on Cavendish Square Holding BV v Talal El Makdessi [2015] UKSC 67.",
+    "verify": "Check section 75 in a current reprint of Act 136, then check the case law rather than trusting this page. The lesson records that the Cubic Electronics citation was previously given wrongly in this corpus, so confirm both reports in a series you can hold, and check whether any Federal Court decision since Cubic Electronics has qualified it. The lesson calls this the paragraph in the whole module most likely to go stale.",
+    "lastVerified": "2026-09-10",
+    "order": 11
+  }
+]

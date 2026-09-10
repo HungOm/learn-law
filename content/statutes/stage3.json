@@ -35,7 +35,8 @@
     "trap": "Quoting the right without the restriction. A submission built on clause (1)(a) alone is answerable in one line by clause (2)(a), and this is the single most common way a first attempt at a constitutional question fails.",
     "source": "Federal Constitution, Art 10(1)(a) and Art 10(2)(a), as cited in the lesson 'Fundamental liberties'.",
     "verify": "Check the current reprint: Article 10 has been amended, and the grounds in clause (2) are not identical to those in the Constitution as enacted.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 1
   },
   {
     "id": "st-fc-art75",
@@ -69,7 +70,8 @@
     "trap": "Reaching for Article 75 before asking whether the State had legislative competence at all. If the subject matter is on the Federal List, the State law fails on Article 74 and the Ninth Schedule, and inconsistency never arises.",
     "source": "Federal Constitution, Art 75, as cited in the lesson 'Federalism: two legislatures, one country'.",
     "verify": "Confirm against the current reprint, and read it alongside Article 74 and the Ninth Schedule rather than on its own.",
-    "lastVerified": "2026-09-10"
+    "lastVerified": "2026-09-10",
+    "order": 3
   },
   {
     "id": "st-roc-o53",
