@@ -92,6 +92,21 @@ const server = spawn('npx', ['vite', '--port', String(port), '--strictPort'],
   { cwd: ROOT, stdio: 'ignore' });
 const stop = () => { try { server.kill(); } catch {} };
 process.on('exit', stop); process.on('SIGINT', () => { stop(); process.exit(130); });
+
+// A sensitised run that exits early prints no finding count, and a MISSING
+// count reads exactly like a zero — which by this file's own rule means "the
+// walk never reached the figures", i.e. the opposite of the truth. site-17 hit
+// this shape on its own gate: an unrelated early exit truncated the output its
+// control was counting, and the control reported failure of a fix that had
+// worked. So every exit path says so, including ones added later.
+let sensitisedReported = false;
+process.on('exit', () => {
+  if (SENSITISE && !sensitisedReported) {
+    console.error('diagram-cases: SENSITISED — CONTROL DID NOT RUN. The run exited early (above),');
+    console.error('  so there is no finding count. A missing count is NOT a zero — it means the');
+    console.error('  control was never exercised. Fix the early exit, then re-run the control.');
+  }
+});
 await new Promise(r => setTimeout(r, 4000));
 
 const browser = await chromium.launch({ executablePath: exe });
@@ -228,6 +243,7 @@ await browser.close();
 stop();
 
 if (SENSITISE) {
+  sensitisedReported = true;
   console.log(`\ndiagram-cases: SENSITISED — ${findings.length} findings across ${cases} case-renders.`);
   if (findings.length < cases) {
     console.error('  Too few. Every case should report touching labels at this threshold;');

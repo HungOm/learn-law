@@ -227,11 +227,44 @@ positions. That is the balancer working as designed — `prepare()` shuffles
 options unseeded at render, so on-disk position is never what a learner sees —
 but it is a large diff in other people's files and worth expecting.
 
+## 9. Stages 1 to 3 complete (2026-09-10)
+
+**Stage 1 — closed.** All eight missing subjects exist: equity and trusts, family,
+syariah, jurisprudence, commercial, employment, public international law,
+professional practice and ethics. Nine lessons, 77 cards, 31 quiz questions —
+and **16 practice problems**, one guided and one open per subject, because
+shipping the lessons without them recreated the exact defect
+`docs/CURRICULUM.md` names as the most important the project ever had: a reader
+who can read and memorise but never find out whether they can apply anything.
+Every one of the 24 modules now has practice.
+
+**Stage 2 — closed.** The case tier went 9 → **26**: every case the corpus cites
+in a lesson `source` field now has a guided reading. Citations were pulled
+programmatically each time and the remaining gap re-derived by set intersection
+before each batch, never tracked by hand — the one time it was tracked by eye,
+seven present cases were reported as missing.
+
+**Stage 3 — built.** A statute tier: `content/statutes/`,
+`tools/check-statutes.py`, `src/lib/statutes.js`, `Statutes.jsx`,
+`StatuteView.jsx`, and a `check:statutes` gate. **Ten provisions across eight
+Acts**, each gated on the lesson that relies on it.
+
+It carries a justification the case tier does not, and it is the strongest of
+the three: **a judgment is fixed on the day it is handed down; a section is
+not.** A provision can be substituted, renumbered or repealed between one
+reading and the next, so a stored copy does not merely age — it goes wrong
+*silently*, and the reader cannot tell. The app holds a pointer and a date, and
+the index says outright that if the Act differs from the page, the Act is right.
+
+**Also landed:** the not-a-qualification statement, on Home and in the rail
+footer on every page. §6.1 said it should land in Stage 1; it had not landed at
+all.
+
 ### Still to do
 
 | | |
 |---|---|
-| Stage 1 | 7 subjects remain: family, syariah, jurisprudence, commercial, employment, international, ethics. Module slots and colours are ready. |
-| Stage 2 | Case tier 9 → ~23 from citations already in the corpus. Owned by another session; the citation list has been handed over. |
-| Stage 3 | Statute tier — not started. |
-| Verification | Every proposition in `equity.json` and `cards/equity.json` needs checking against a Malaysian text, and `books.json` reading lists for all eight new modules are empty on purpose. |
+| Stage 4 | Depth on the core — ~340k words. Unstarted, and gated on §6.5 having an answer. |
+| Stage 5 | Assessment at standard — 41 problems now, ~300 wanted. |
+| **Verification** | **The largest debt.** Every proposition in the eight new subjects' lessons, cards and problems needs checking against a Malaysian text. They cite nothing by design, so nothing is *wrong*-with-authority — but nothing is confirmed either, and `books.json` reading lists for all eight are empty on purpose. |
+| Engine coverage | Every accessibility result in this repo is a Chrome result. See the note in DESIGN.md. |

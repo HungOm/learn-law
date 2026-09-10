@@ -381,7 +381,7 @@ function measure({ tapMin, eps }) {
         const a = ts[i].bb, c = ts[j].bb;
         const ox = Math.min(a.x + a.width, c.x + c.width) - Math.max(a.x, c.x);
         const oy = Math.min(a.y + a.height, c.y + c.height) - Math.max(a.y, c.y);
-        if (ox > 3 && oy > 3) {
+        if (ox > -40 && oy > -40) {
           collisions.push(`"${ts[i].s}" over "${ts[j].s}" by ${Math.round(ox)}x${Math.round(oy)}u`);
         }
       }

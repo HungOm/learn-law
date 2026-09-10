@@ -51,6 +51,12 @@ const ROUTES = [
   // where the rubric, its self-mark buttons and the second textarea exist. The
   // assertion further down is what stops that silently regressing.
   '#/writing', '#/writing/w-ratio-sentence',
+  // The statute tier. `st-cla-s3` gates on l-sources, which the seed carries,
+  // so it renders open; `st-fc-art121-1a` gates on a lesson the seed leaves
+  // OUT, so the same run walks the locked branch too — that is the branch that
+  // shipped a bare panel with no h1 in two earlier tiers. Plus a bad id for the
+  // Not-found fallback.
+  '#/statutes', '#/statute/st-cla-s3', '#/statute/st-fc-art121-1a', '#/statute/x-nope',
 ];
 const CHROME_CANDIDATES = [
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -149,7 +155,7 @@ try {
       // `l-precedent`, and seeding `l-torrens` alone left the route showing its
       // locked panel while the walk reported a clean pass over it.
       const now = new Date().toISOString();
-      store.put({ key: 'lessonsRead', value: { 'l-torrens': now, 'l-precedent': now } });
+      store.put({ key: 'lessonsRead', value: { 'l-torrens': now, 'l-precedent': now, 'l-sources': now } });
       // Past the forty-word gate, so the drafted state is what gets walked.
       store.put({ key: 'writingDrafts',
         value: { 'w-ratio-sentence': { text: 'The ratio is the proposition the decision actually needed, and the test is whether the result would change without it. Length and eloquence are not evidence of ratio; necessity is. A long passage may be commentary while one sentence carries the whole decision, so ask what the case could not have decided without.', band: null, note: '' } } });

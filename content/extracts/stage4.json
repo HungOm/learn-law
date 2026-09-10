@@ -1,0 +1,330 @@
+[
+  {
+    "id": "x-american-cyanamid",
+    "moduleId": "m11-civil-procedure",
+    "lessonId": "l-interlocutory",
+    "case": "American Cyanamid Co v Ethicon Ltd",
+    "citation": "[1975] AC 396",
+    "court": "House of Lords",
+    "year": 1975,
+    "find": "On BAILII (bailii.org) under United Kingdom House of Lords Decisions, free and complete. The Appeal Cases citation will find it in any library carrying the English reports.",
+    "why": "The interlocutory injunction test that Malaysian practice starts from. Read it first and read the Malaysian case next — the pair teaches more than either alone, which is why they sit together in this module.",
+    "read": [
+      {
+        "passage": "The passages on what a plaintiff must show at the threshold.",
+        "look_for": "Note how low the court sets the first hurdle, and what it says the court should NOT do at this stage. The prohibition is as important as the test."
+      },
+      {
+        "passage": "The treatment of the balance of convenience.",
+        "look_for": "List the factors in the order the court takes them. The order is not decorative — it is an instruction about which questions are answered before which."
+      },
+      {
+        "passage": "Anything about the adequacy of damages.",
+        "look_for": "Ask where this sits in the sequence. Many wrong answers put it in the wrong place, and the sequence is what makes the test workable at speed."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the sequence the court sets out, in order, in no more than four steps.",
+        "model": "A good answer gives an ordered sequence rather than a list of considerations, because the ordering is the contribution. It should also say what the court forbids at the threshold — trying the merits on affidavit — since an answer that omits the prohibition describes half the test and the half that is easier to remember."
+      },
+      {
+        "q": "Why does the court warn against resolving conflicts of evidence at this stage?",
+        "model": "A good answer gives the practical reason rather than a principle: the application is heard urgently, on affidavit, without cross-examination or discovery, so a court that decides the merits there is deciding on material designed for a different purpose. The warning protects the trial, not the defendant."
+      },
+      {
+        "q": "This is an English decision from 1975. What is its status in Malaysia?",
+        "model": "A good answer notes the reception date under section 3 of the Civil Law Act 1956 and does not stop there — the useful point is that Malaysian courts have addressed this test directly, so the honest citation is the Malaysian authority, using this case for the reasoning it supplies. Read the Malaysian case in this module before deciding how to cite either."
+      }
+    ],
+    "trap": "Reciting the factors as an unordered checklist. The sequence is the substance, and an answer that reaches the balance of convenience before dealing with the threshold has skipped the question that decides most applications.",
+    "source": "Citation taken from the source field of the interlocutory lesson in this corpus.",
+    "verify": "Check the citation on BAILII, and read the Malaysian authority in this module before relying on this test as stated here.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-keet-gerald",
+    "moduleId": "m11-civil-procedure",
+    "lessonId": "l-interlocutory",
+    "case": "Keet Gerald Francis Noel John v Mohd Noor bin Abdullah",
+    "citation": "[1995] 1 MLJ 193 (CA)",
+    "court": "Court of Appeal",
+    "year": 1995,
+    "find": "A Malayan Law Journal citation; law libraries carrying the MLJ series will have it and many Malaysian university libraries admit visitors. CommonLII's Malaysian Court of Appeal coverage for the mid-1990s is uneven, so the printed report may be the reliable route.",
+    "why": "A Malaysian appellate court setting out how interlocutory injunctions should be approached here. Read it immediately after the English case: this is what it looks like when a court takes an imported test and states its own working version.",
+    "read": [
+      {
+        "passage": "The court's statement of the approach a judge should take.",
+        "look_for": "Compare it line by line with the English sequence. Note what is kept, what is reordered, and what is added — all three happen and each tells you something different."
+      },
+      {
+        "passage": "Anything about the judge's duty to consider the whole of the evidence before them.",
+        "look_for": "Ask how this sits with the warning against trying the merits. The two are in tension and the resolution is the practical skill."
+      },
+      {
+        "passage": "Passages dealing with discretion and how an appellate court reviews it.",
+        "look_for": "This matters for advising: it tells you how much room a first-instance judge has, and therefore how much an appeal is worth."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Set the two approaches side by side and name one thing this court adds.",
+        "model": "A good answer identifies a specific addition or reordering and says what practical difference it makes, rather than concluding that the Malaysian court broadly followed the English one. The specific difference is the answer; the general statement is available to anyone who has not read either."
+      },
+      {
+        "q": "How would you cite the law on interlocutory injunctions in a Malaysian submission?",
+        "model": "A good answer leads with the Malaysian authority because it binds, and uses the English case for the reasoning behind it. It should also say why that order matters: a submission opening with an English case invites the question whether it has been adopted, and answering that question first is cheaper than being asked."
+      }
+    ],
+    "trap": "Treating this as the English test restated. It is a court exercising its own judgment about how the approach should work here, and the differences are where the marks are.",
+    "source": "Citation taken from the source field of the interlocutory lesson in this corpus.",
+    "verify": "Check the citation and the court against the report, and check whether any later decision has qualified the approach before relying on it.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-salomon",
+    "moduleId": "m09-company",
+    "lessonId": "l-members-remedies",
+    "case": "Salomon v A Salomon & Co Ltd",
+    "citation": "[1897] AC 22",
+    "court": "House of Lords",
+    "year": 1897,
+    "find": "On BAILII (bailii.org) under United Kingdom House of Lords Decisions, free. It is old, short by modern standards, and the language rewards slow reading rather than skimming.",
+    "why": "Separate legal personality, decided in a case where every instinct pulled the other way. Read it for the doctrine and for the discipline of a court applying a statute it plainly found uncomfortable.",
+    "read": [
+      {
+        "passage": "The facts, and how much of the company Mr Salomon controlled.",
+        "look_for": "Notice how extreme they are. The doctrine is easy to accept on neutral facts; the case is famous because these are not neutral."
+      },
+      {
+        "passage": "The reasoning about what the Act required and whether it had been complied with.",
+        "look_for": "Follow the move from what the court thinks of the arrangement to what the statute says about it. That move is the case."
+      },
+      {
+        "passage": "Anything said about the motives for incorporating.",
+        "look_for": "Ask whether motive was treated as relevant, and what that implies for arguments that a company was set up to avoid something."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State the principle in one sentence, without using the word veil.",
+        "model": "A good answer says that a properly incorporated company is a legal person distinct from its members, so its debts are its own and not theirs. The metaphor of a veil came later and does more harm than good in a first statement — it invites the question of when it is lifted before the reader is clear what it is."
+      },
+      {
+        "q": "What does the court's treatment of motive tell you about arguments that a company is a sham?",
+        "model": "A good answer notes that compliance with the statute was what mattered, and draws the consequence: an argument that a company should be disregarded needs more than the observation that it was formed to limit liability, because limiting liability is what incorporation is for. That is why sham arguments are hard and why most fail."
+      },
+      {
+        "q": "Why does this 1897 English case matter for Malaysian company law?",
+        "model": "A good answer connects it to the statute: separate personality here rests on the Companies Act 2016, and this decision is the classic articulation of a principle that the Malaysian Act embodies. The right use is to explain the principle, not to cite a nineteenth-century English case as the source of a Malaysian rule."
+      }
+    ],
+    "trap": "Racing to the exceptions. Most answers spend their length on when the veil is lifted and never establish the principle it is an exception to, which makes the exceptions unintelligible.",
+    "source": "Citation taken from the source field of the company lessons in this corpus.",
+    "verify": "Check the citation on BAILII, and read the separate-personality provisions of the Companies Act 2016, which are the operative source in Malaysia.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-semenyih-jaya",
+    "moduleId": "m12-administrative",
+    "lessonId": "l-judicial-review",
+    "case": "Semenyih Jaya Sdn Bhd v Pentadbir Tanah Daerah Hulu Langat",
+    "citation": "[2017] 3 MLJ 561 (FC)",
+    "court": "Federal Court",
+    "year": 2017,
+    "find": "Malaysian Federal Court decisions from 2003 onwards are on CommonLII (commonlii.org, Malaysia, Federal Court), and the government Court Case Judgment Search at malaysia.gov.my carries written grounds. The MLJ citation will find it in a law library.",
+    "why": "A Federal Court decision about judicial power itself — where it sits, what may be taken from it, and what follows. Long and demanding, and the most consequential thing in this module.",
+    "read": [
+      {
+        "passage": "The court's discussion of judicial power and where the Constitution locates it.",
+        "look_for": "Track the constitutional provisions relied on, and read them yourself alongside the judgment. This is a case where the argument is unusable without the text."
+      },
+      {
+        "passage": "The treatment of the earlier constitutional amendment and its effect.",
+        "look_for": "Notice the structure of the argument: what was amended, what the amendment was said to do, and why the court concluded what it did about that."
+      },
+      {
+        "passage": "Anything about the role of the judge relative to assessors or other decision-makers.",
+        "look_for": "This is the concrete question the case arose on. Follow how the constitutional reasoning bears on it, because that is the step most summaries skip."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What is the relationship between the concrete issue in the case and the constitutional reasoning?",
+        "model": "A good answer shows the connection running in both directions: the constitutional point decides the concrete issue, and the concrete issue is what made the constitutional point necessary rather than obiter. An answer treating the constitutional discussion as a separate essay has missed why it is part of the ratio."
+      },
+      {
+        "q": "Why does this case require you to read the constitutional provisions alongside it?",
+        "model": "A good answer notes that the reasoning turns on what particular provisions say and on what an amendment did to them, so a reader working from the judgment alone is taking the court's reading on trust — which is exactly the habit this tier exists to break. Read the Article, then read what the court says about it."
+      },
+      {
+        "q": "How would you state what this case decided, at the right level of generality?",
+        "model": "A good answer resists both extremes: too wide and it decides the constitutionality of amendments the court never considered; too narrow and it is about one kind of proceeding only. Test the sentence against the order actually made, which is the same discipline as every ratio exercise in this course and is harder here because the judgment is long."
+      }
+    ],
+    "trap": "Taking the constitutional passages as free-standing statements of principle. They are reasons for a decision on a specific question, and their weight depends on that connection.",
+    "source": "Citation taken from the source field of the judicial review lesson in this corpus.",
+    "verify": "Check the citation and the court against the report. This is developing constitutional ground — check what later decisions have said about it before relying on any statement of its effect.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-balachandran",
+    "moduleId": "m05-criminal-procedure",
+    "lessonId": "l-criminal-procedure",
+    "case": "Balachandran v PP",
+    "citation": "[2005] 2 MLJ 301 (FC)",
+    "court": "Federal Court",
+    "year": 2005,
+    "find": "On CommonLII (commonlii.org, Malaysia, Federal Court) and through the government Court Case Judgment Search at malaysia.gov.my. The MLJ citation will find it in a law library.",
+    "why": "What the prosecution must establish at the close of its case, and what the standard means in practice. This is the case behind the procedural spine of the module.",
+    "read": [
+      {
+        "passage": "The court's statement of the test at the close of the prosecution case.",
+        "look_for": "Write the standard in your own words, then ask what it demands of the judge — in particular whether the evidence is to be evaluated or merely counted."
+      },
+      {
+        "passage": "Anything about the difference between this stage and the end of the trial.",
+        "look_for": "Two different exercises are being distinguished. Name both and say what changes between them."
+      },
+      {
+        "passage": "The treatment of what follows if the test is met.",
+        "look_for": "Follow the consequence for the accused. The practical significance of the standard is what it obliges the defence to do next."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State what the prosecution must establish at the close of its case, and what the judge must do to decide it.",
+        "model": "A good answer gives both the standard and the judicial task, because the second is where the difficulty lies. It should be explicit about whether the judge weighs the evidence at this stage — an answer that states the phrase without saying what the judge actually does with the evidence has not engaged the case."
+      },
+      {
+        "q": "Why does the distinction between this stage and the end of the trial matter to an accused?",
+        "model": "A good answer traces the practical consequence: what the accused must decide, and when, once the threshold is crossed. The doctrine matters here because it changes what happens in the room, and an answer that stays at the level of standards has left out the part a client would ask about."
+      }
+    ],
+    "trap": "Confusing the standard at the close of the prosecution case with the standard for conviction. They are different exercises at different points and mixing them is the commonest error in this area.",
+    "source": "Citation taken from the source field of the criminal procedure lessons in this corpus.",
+    "verify": "Check the citation and the court against the report, and read the relevant provisions of the Criminal Procedure Code alongside it. Check for later authority before relying on this.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-visuvanathan",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-homicide",
+    "case": "PP v Visuvanathan",
+    "citation": "[1978] 1 MLJ 159",
+    "court": "High Court",
+    "year": 1978,
+    "find": "A Malayan Law Journal citation from 1978; law libraries carrying the MLJ series will have it. CommonLII's coverage for this period is thin, so the printed report is likely the reliable route.",
+    "why": "The clauses of section 300 applied to facts, in a judgment short enough to read in one sitting. Read it with the Penal Code open — this is a case that is nearly unintelligible without the section beside it and straightforward with it.",
+    "read": [
+      {
+        "passage": "The court's identification of which clause of section 300 was in play.",
+        "look_for": "Note that the clause is chosen before it is applied. Choosing the clause is a step most answers skip and it is where the analysis starts."
+      },
+      {
+        "passage": "The reasoning about the injury and what was intended.",
+        "look_for": "Follow precisely what had to be intended: the injury, or the death, or something else. The clauses differ on exactly this and the difference is the case."
+      },
+      {
+        "passage": "Anything about the sufficiency of the injury in the ordinary course of nature.",
+        "look_for": "Ask who decides that and on what evidence. The answer shapes what a defence can realistically contest."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Which clause of section 300 was applied, and what did the prosecution have to prove under it?",
+        "model": "A good answer names the clause and then sets out its elements separately, because the clause is a compound and each element is separately contestable. An answer that says murder was made out without decomposing the clause has described the result rather than the reasoning."
+      },
+      {
+        "q": "Why is this case a good exercise in reading a statute and a judgment together?",
+        "model": "A good answer observes that the judgment assumes the section is in front of you: it moves between clause and fact without restating the words, so a reader without the Penal Code open is reconstructing the argument from half its material. Reading the two together is the habit; this case makes the cost of not doing so obvious."
+      }
+    ],
+    "trap": "Learning the case as a proposition about intention generally. It is an application of one clause, and the clause's wording is doing the work.",
+    "source": "Citation taken from the source field of the criminal law lessons in this corpus.",
+    "verify": "Check the citation against the report and read sections 299 and 300 of the Penal Code alongside it. Check for later authority on the same clause before relying on this.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-muhammad-hilman",
+    "moduleId": "m03-constitutional",
+    "lessonId": "l-liberties",
+    "case": "Muhammad Hilman bin Idham v Kerajaan Malaysia",
+    "citation": "[2011] 6 MLJ 507 (CA)",
+    "court": "Court of Appeal",
+    "year": 2011,
+    "find": "On CommonLII (commonlii.org, Malaysia, Court of Appeal) and through the government Court Case Judgment Search at malaysia.gov.my. The MLJ citation will find it in a law library.",
+    "why": "A Malaysian appellate court applying the Article 10 framework to a real restriction. Read it after the constitutional lessons for what a court does with the words necessary or expedient when someone is actually before it.",
+    "read": [
+      {
+        "passage": "The court's identification of the right engaged and the restriction attacked.",
+        "look_for": "Note how precisely both are identified. Vagueness at this step is what makes weak constitutional arguments weak."
+      },
+      {
+        "passage": "The treatment of whether the restriction fell within a permitted head.",
+        "look_for": "Follow the two questions separately: whether the head is available, and whether this restriction is within it. They are often collapsed and they are not the same."
+      },
+      {
+        "passage": "Anything about proportionality or about how far the court may review the judgment of the maker.",
+        "look_for": "This is the live question in Malaysian Article 10 law. Note what the court says and how firmly it says it."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Set out the steps of the argument in the order the court takes them.",
+        "model": "A good answer produces an ordered chain — right engaged, restriction identified, permitted head, and the question of review — rather than a discussion. The order is the reusable part, because it is the order any Article 10 argument has to be built in."
+      },
+      {
+        "q": "What does this case add to your reading of the constitutional lessons?",
+        "model": "A good answer identifies something the lesson states abstractly and the case makes concrete — most usefully, how a court treats the words permitting restriction when a real restriction is in front of it. The abstract statement and the applied instance are different kinds of knowledge and an answer should say which this supplies."
+      }
+    ],
+    "trap": "Reading it as establishing a general proposition about student speech. It is an application of the Article 10 framework, and the framework is the transferable part.",
+    "source": "Citation taken from the source field of the constitutional lessons in this corpus.",
+    "verify": "Check the citation and the court against the report. This area has moved; check later authority on Article 10 before relying on any statement of the current position.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "x-mutho",
+    "moduleId": "m01-malaysian-legal-system",
+    "lessonId": "l-two-systems",
+    "case": "Mutho v Pengarah Jabatan Agama Islam Perak",
+    "citation": "[2018] 1 MLJ 545 (FC)",
+    "court": "Federal Court",
+    "year": 2018,
+    "find": "On CommonLII (commonlii.org, Malaysia, Federal Court) and through the government Court Case Judgment Search at malaysia.gov.my. The MLJ citation will find it in a law library.",
+    "why": "The two-court structure examined by the apex court in a case where a family sat on both sides of the line. Read it after the legal system lesson and before the Syariah module — it is the bridge between them.",
+    "read": [
+      {
+        "passage": "The court's identification of which matters fell within which jurisdiction.",
+        "look_for": "Follow the allocation carefully. The reasoning is about categories of matter and classes of person, and losing track of which is being discussed is what makes this area feel impossible."
+      },
+      {
+        "passage": "The treatment of Article 121(1A).",
+        "look_for": "Compare what the court says with the words of the clause you read in the statute tier. Ask whether the court is reading the clause or reading around it."
+      },
+      {
+        "passage": "Anything about the position of a party who is not a Muslim.",
+        "look_for": "This is where the jurisdictional limits bite hardest, and it is the practical question in almost every real dispute of this kind."
+      }
+    ],
+    "questions": [
+      {
+        "q": "State how the court allocated the matters in issue, and on what basis.",
+        "model": "A good answer distinguishes allocation by subject from allocation by person and says which did the work here. The two limbs are separate and an answer that runs them together will misstate the reasoning even where it reaches the right result."
+      },
+      {
+        "q": "Read Article 121(1A) first, then this judgment. What does the comparison show?",
+        "model": "A good answer reports something specific: whether the court's reading is available on the words, what it adds, and where it draws on structure or other provisions. The point of the exercise is that a reader who knows the clause can assess the judgment, and a reader who knows only the judgment cannot."
+      },
+      {
+        "q": "Why is this case placed in the legal system module rather than the Syariah module?",
+        "model": "A good answer sees that it is about the architecture rather than about Islamic law — which courts exist, what each may decide, and how the boundary is policed. That is a legal system question, and it is why the case is a bridge between the two modules rather than belonging to one."
+      }
+    ],
+    "trap": "Reading it as a case about religion. It is a case about jurisdiction, and answers that argue from the merits of the underlying dispute miss what the court was deciding.",
+    "source": "Citation taken from the source field of the legal system lessons in this corpus.",
+    "verify": "Check the citation and the court against the report, and read Article 121(1A) and the Ninth Schedule State List alongside it. This is contested ground; check later authority.",
+    "lastVerified": "2026-09-10"
+  }
+]
