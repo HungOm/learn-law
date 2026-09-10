@@ -1,0 +1,116 @@
+[
+  {
+    "id": "st-fc-art10",
+    "moduleId": "m03-constitutional",
+    "lessonId": "l-liberties",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 10, clauses (1)(a) and (2)(a)",
+    "find": "The Attorney General's Chambers publishes the Federal Constitution online without charge; open the current reprint and go to Part II. Read both clauses together in one sitting — reading (1)(a) alone gives a false picture of the right, and reading (2)(a) alone gives a false picture of the power.",
+    "why": "This pair is the shape of every liberty in Part II: a right stated, then a power to cut it down. The lesson turns on the fact that the two clauses are read together and never apart, and the second is where almost all the litigation actually happens.",
+    "read": [
+      {
+        "passage": "Clause (1)(a), and who exactly it is conferred on.",
+        "look_for": "Note the class of person named. It is narrower than 'everyone', and that limit does real work in cases about non-citizens."
+      },
+      {
+        "passage": "Clause (2)(a), and the grounds listed in it.",
+        "look_for": "Count the grounds and write them down. Then note the words describing how Parliament must judge the restriction — whether the test is what is necessary, or what Parliament considers necessary, changes who decides."
+      },
+      {
+        "passage": "How clause (2) refers back to clause (1).",
+        "look_for": "The restricting power is tied to the specific right it restricts. Check whether a ground listed for one right is available against another."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Write clause (1)(a) as a sentence beginning 'Every citizen may…', then write clause (2)(a) as a sentence beginning 'But Parliament may…'. Which of the two is longer?",
+        "model": "The restricting clause is substantially longer than the right. That asymmetry is the point of the lesson: the grounds of restriction are enumerated in detail while the right is stated in a line."
+      },
+      {
+        "q": "On the words of clause (2)(a), who decides whether a restriction is necessary — Parliament or the court?",
+        "model": "Read the clause's own wording before answering, and note that this is precisely the question the Malaysian cases in this module argue about. Your answer should quote the operative words rather than paraphrase them."
+      }
+    ],
+    "trap": "Quoting the right without the restriction. A submission built on clause (1)(a) alone is answerable in one line by clause (2)(a), and this is the single most common way a first attempt at a constitutional question fails.",
+    "source": "Federal Constitution, Art 10(1)(a) and Art 10(2)(a), as cited in the lesson 'Fundamental liberties'.",
+    "verify": "Check the current reprint: Article 10 has been amended, and the grounds in clause (2) are not identical to those in the Constitution as enacted.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-fc-art75",
+    "moduleId": "m03-constitutional",
+    "lessonId": "l-federalism",
+    "act": "Federal Constitution",
+    "actId": "federal-constitution",
+    "provision": "Article 75",
+    "find": "Open the current reprint of the Federal Constitution at Part VI, which deals with relations between the Federation and the States. Article 75 is short — a single sentence — and worth reading in full rather than in summary.",
+    "why": "It is the collision rule of Malaysian federalism. Articles 74 and the Ninth Schedule divide the subject matter; this is what happens when the division fails and both legislatures have acted on the same ground.",
+    "read": [
+      {
+        "passage": "The whole Article. It is one sentence.",
+        "look_for": "Identify the three moving parts: the condition that triggers it, which law prevails, and what happens to the other one."
+      },
+      {
+        "passage": "The words describing the extent of the consequence.",
+        "look_for": "The State law is not struck down entirely. Note the qualifying phrase and write down what survives — this is the difference between inconsistency and invalidity, and it is examinable."
+      }
+    ],
+    "questions": [
+      {
+        "q": "A State enactment and a federal Act both regulate the same activity, and they conflict on one point out of ten. On Article 75, what is the position of the other nine?",
+        "model": "Work it out from the qualifying words about extent rather than from the general idea that federal law wins. The Article is deliberately narrower than 'the State law is void'."
+      },
+      {
+        "q": "Article 75 says nothing about which legislature had power in the first place. Where does that question get answered?",
+        "model": "In Article 74 and the Ninth Schedule's Lists. Article 75 only operates once both laws are otherwise valid — a State law made wholly outside State power never reaches this Article at all."
+      }
+    ],
+    "trap": "Reaching for Article 75 before asking whether the State had legislative competence at all. If the subject matter is on the Federal List, the State law fails on Article 74 and the Ninth Schedule, and inconsistency never arises.",
+    "source": "Federal Constitution, Art 75, as cited in the lesson 'Federalism: two legislatures, one country'.",
+    "verify": "Confirm against the current reprint, and read it alongside Article 74 and the Ninth Schedule rather than on its own.",
+    "lastVerified": "2026-09-10"
+  },
+  {
+    "id": "st-roc-o53",
+    "moduleId": "m12-administrative",
+    "lessonId": "l-judicial-review",
+    "act": "Rules of Court 2012",
+    "actId": "rules-of-court-2012",
+    "provision": "Order 53",
+    "find": "The Rules of Court 2012 are subsidiary legislation and are published with the Laws of Malaysia. Open Order 53 in full — it is the procedural gateway to every judicial review application in the High Court, and it is short enough to read at one sitting.",
+    "why": "Judicial review has a procedure of its own, and most applications that fail never reach the merits. This Order is where leave, standing and the time limit live, and a reader who knows the grounds but not this Order cannot bring the case.",
+    "read": [
+      {
+        "passage": "The rule requiring leave, and what must be filed to obtain it.",
+        "look_for": "Note that leave is a separate stage with its own documents. Write down what the applicant must put before the court at that stage as opposed to at the hearing."
+      },
+      {
+        "passage": "The rule about who may apply.",
+        "look_for": "The Order states a threshold for the applicant's connection to the decision. Write it in your own words — the lesson's phrase and the Order's phrase should match."
+      },
+      {
+        "passage": "The time limit, and where it runs from.",
+        "look_for": "Identify the trigger date. It is not the date the applicant learned of the decision unless the Order says so, and this is where otherwise good applications are lost."
+      },
+      {
+        "passage": "The remedies the Order makes available.",
+        "look_for": "List them. Note whether the Order allows more than one to be sought in a single application."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What must an applicant do before the court will hear the substance of a judicial review application?",
+        "model": "Obtain leave. State from the Order what has to be filed, and note that this stage exists to filter unarguable applications rather than to decide them."
+      },
+      {
+        "q": "From what date does the time limit run, on the words of the Order?",
+        "model": "Read the rule rather than assuming. Getting the trigger date wrong is the most common way a meritorious application is shut out, and the answer should cite the sub-rule."
+      }
+    ],
+    "trap": "Treating judicial review as an appeal with a different name. The Order gives no power to substitute a better decision — the remedies are directed at the legality of how the decision was reached, which is why the grounds and the procedure have to be learned together.",
+    "source": "Rules of Court 2012, Order 53, as cited in the lesson 'Judicial review'.",
+    "verify": "The Rules of Court 2012 are amended periodically. Confirm the current text of Order 53, particularly the time limit, against the latest version before relying on it.",
+    "lastVerified": "2026-09-10"
+  }
+]
