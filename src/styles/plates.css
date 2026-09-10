@@ -31,23 +31,30 @@
  *
  *     min_rendered_px = 11 x (800 / 15) = 587px  ->  37rem
  *
- * The comment this replaces claimed the floor held "at the narrowest layout".
- * It does not, and could not: at 800/15 the frame has to be 587px wide before
- * a tag reaches 11px, and on a 390px phone the same label renders at 6.7px.
- * A number nobody could have measured is not evidence, which is exactly the
- * failure DESIGN.md 3 describes.
+ * ==> SUPERSEDED. The pin is off, and the lightbox is why.
  *
- * So the width is declared and the box scrolls. The cost is real and belongs
- * in the open: below about a 592px pane — every phone, and the low end of the
- * tablet band — the plate is now dragged sideways rather than shrunk. That is
- * the right way round. A plate carries a full text alternative and a caption;
- * a label at 6.7px carries neither, to the readers who need it most.
+ * The arithmetic above is still correct and still the reason a plate cannot
+ * simply be shrunk: at 800 units over a 15-unit tag, the frame has to be 587px
+ * wide before a label reaches 11px, and on a 390px phone the same label lands
+ * at 6.7px. Unlike diagrams, plates could not be rewritten to reflow — the fix
+ * is a larger design size for `.pl-tag` across 97 label positions in 55
+ * drawings, and that job has not been done.
  *
- * The fix that would remove the scroll is a larger design size for .pl-tag in
- * the scenes themselves, which is a change to 97 label positions across 55
- * drawings and belongs to whoever owns them.
+ * So the pin was the honest choice while the only alternatives were "scroll
+ * sideways" and "shrink below the floor". There is now a third: the plate
+ * scales to the column, and an enlarge control opens it in a lightbox where
+ * the reader can pan at full size. A whole illustration at 328px is legible AS
+ * A WHOLE — the composition, the labelled parts, the caption — and the detail
+ * is one tap away for a reader who has asked for it.
+ *
+ * That is the distinction worth keeping: a page that drags sideways without
+ * being asked is a defect; a surface that pans because the reader opened it is
+ * not. Same argument as the phone nav drawer.
+ *
+ * The 97-position redraw is still the fix that would make plates legible in
+ * place, and it is still worth doing. This makes them usable meanwhile.
  */
-.plate-svg { display: block; width: 100%; min-width: 37rem; height: auto; }
+.plate-svg { display: block; width: 100%; height: auto; }
 /* Capped above the floor, not below it. 34rem put every inline plate under the
    11px line on every screen in the app, desktop included. */
 .plate-inline .plate-frame { max-width: 40rem; margin-inline: auto; }
@@ -347,6 +354,8 @@
   color: var(--text-primary);
   margin-bottom: var(--space-3);
 }
+/* Above 600px a table is a table and scrolls in its own box if it must. Below
+   it, the box comes off entirely — see the stacked layout further down. */
 .table-wrap { overflow-x: auto; }
 .dtable {
   width: 100%;
@@ -372,6 +381,111 @@
   font-family: var(--font-sans);
   font-weight: var(--weight-medium);
   color: var(--text-primary);
+}
+
+/* ---------- a table stops being a table below 600px ----------
+   A scroll box was the old answer and it is the wrong one: a reader on a phone
+   had to drag a table sideways to find out what a number meant, and the column
+   heading — the thing that gives the number its meaning — was the first cell to
+   leave the screen. Scrolling to read a value you can already see is the worst
+   version of the trade.
+
+   So each row becomes a block and each cell carries its own heading. That needs
+   the heading IN THE DOM, which is why Blocks.jsx, Chart.jsx and Insight.jsx
+   emit `data-label` on every `<td>`: CSS cannot reach into `thead` and pair the
+   nth cell with the nth heading. A cell with no `data-label` renders as a bare
+   value rather than a broken pair — the row still reads, it just says less.
+
+   On the ARIA semantics, and read this before repeating what it corrects.
+   It is widely held — and was asserted here, in this comment, before anyone
+   measured it — that `display: block` on a `tr` or `td` drops the element's
+   implicit ARIA role. **Measured, it did not.** With the stacked layout active
+   at 390px and `display: block` confirmed on the rows and cells, the AX tree
+   reported table / row / rowheader / cell, and reported the same with every
+   explicit `role` stripped at runtime. The received rule did not reproduce on
+   the engine we can test.
+
+   Two honest limits on that measurement: it is one Chrome build, and Safari is
+   untested because the harness's playwright-core drives Chrome only — which is
+   the engine where this behaviour was historically worst. So the three
+   components that render `.dtable` do carry explicit `role="table"`, `"row"`,
+   `"rowheader"` and `"cell"`. They are correct per spec, inert where the
+   implicit roles already hold, and cheap insurance for the browser nobody here
+   can measure.
+
+   What this comment must not become is a known-true defect nobody re-checks.
+   It said one for a while. */
+@media (max-width: 600px) {
+  .table-wrap { overflow-x: visible; }
+
+  .dtable {
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  /* The heading row goes, rather than being visually hidden.
+     Every column name is already on the cell it belongs to, as `data-label`
+     rendered by the `::before` below — so a retained `thead` would say each
+     heading twice to a screen reader: once as a stranded row of words with no
+     values attached, then again beside each value. The stacked layout does not
+     have a header ROW any more; it has labelled cells, which is the whole idea.
+
+     Visually hiding it was the first attempt and `responsive.mjs` was right to
+     reject it: 489px of real text in a 1px box, not hidden from assistive tech,
+     is exactly the "clipped and unreachable" shape the gate exists to catch,
+     and dodging that detector to keep a duplicate reading would have been
+     gaming a check rather than answering it.
+
+     The cost, named rather than buried: `::before` content is exposed by
+     Chrome, Firefox and Safari with VoiceOver, but it is generated content and
+     support is not universal. Where a label MUST survive that, it belongs in
+     the markup — which is the same three components that owe this table its
+     ARIA roles. */
+  .dtable thead { display: none; }
+
+  .dtable tbody tr {
+    display: block;
+    padding: var(--space-4) 0;
+    border-bottom: var(--line-hairline) solid var(--border-hairline);
+  }
+
+  .dtable tbody tr:last-child { border-bottom: 0; }
+
+  /* The row heading is the block's title, so it leads at full width. */
+  .dtable tbody th {
+    display: block;
+    padding: 0 0 var(--space-2);
+    border-bottom: 0;
+    font-size: var(--type-body);
+    color: var(--text-strong);
+  }
+
+  .dtable tbody td {
+    display: flex;
+    gap: var(--space-4);
+    align-items: baseline;
+    justify-content: space-between;
+    padding: var(--space-1) 0;
+    border-bottom: 0;
+  }
+
+  .dtable tbody td[data-label]::before {
+    content: attr(data-label);
+    flex: 0 1 auto;
+    /* The label is the quieter half: the reader came for the value. */
+    font-family: var(--font-sans);
+    font-size: var(--type-xs);
+    color: var(--text-secondary);
+    line-height: var(--leading-snug);
+  }
+
+  /* Numbers keep their alignment against each other down the block, which is
+     the one thing the table shape was doing that stacking could lose. */
+  .dtable tbody td.is-num {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
 }
 /* A lone link in a table cell is a control, not a link inside a sentence, so
    the WCAG 2.5.5 inline exemption does not reach it. Measured in a browser at
@@ -515,4 +629,93 @@
   .dtable { font-size: var(--type-base); }
   .bar-label, .bar-value { font-size: var(--type-base); }
   .compare-col { padding: var(--space-5); }
+}
+
+
+/* ---------- the lightbox ----------
+   A plate scales to the reader's column now that `.plate-svg` has no pin, and a
+   whole illustration at 328px is legible AS A WHOLE — composition, labelled
+   parts, caption. What it is not is legible in DETAIL: `.pl-tag` is 15 units on
+   an 800-unit drawing, so at a 328px frame a label lands near 6px. This is
+   where the detail lives, on request.
+
+   Panning in here is expected, not a failure. A page that drags sideways
+   without being asked is a defect; a surface the reader opened in order to look
+   closer is doing what it was opened for. Same distinction as the phone nav
+   drawer, and the reason `overflow: auto` sits here and not on `.table-wrap`.
+
+   z-index 55: above the nav drawer (37), the toast stack (40) and the seal pop
+   (45), because it is a modal the reader opened deliberately; below the term
+   card (60), since a term card opened from a caption inside this must still
+   win; below the skip link (100), always. */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  /* Opaque. A translucent scrim would leave lesson prose showing through the
+     one surface that exists to be looked at closely. */
+  background: var(--surface-page);
+}
+
+.lightbox-bar {
+  flex: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--space-3) var(--space-4);
+  padding-top: calc(var(--space-3) + env(safe-area-inset-top, 0px));
+  border-bottom: var(--line-hairline) solid var(--border-hairline);
+  background: var(--surface-page);
+}
+
+/* Measured at 86x44 by the component's own author — WCAG 2.5.5 in both
+   dimensions, and it is the only control in here, so it does not compete. */
+.lightbox-close {
+  min-height: var(--tap-min);
+  padding: 0 var(--space-4);
+  border: var(--line-hairline) solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.lightbox-fig {
+  flex: 1 1 auto;
+  overflow: auto;
+  /* Momentum scrolling stops at this surface rather than pulling the lesson
+     behind it once the drawing reaches its edge. */
+  overscroll-behavior: contain;
+  padding: var(--space-4);
+}
+
+/* The drawing at its own size, not the column's. `min-width` is exactly the
+   pin that came off `.plate-svg` — here it is right, because here the reader
+   asked for the size and the box is built to pan. */
+.lightbox-svg {
+  display: block;
+  width: 100%;
+  min-width: 37rem;
+  height: auto;
+  margin-inline: auto;
+}
+
+.lightbox-caption {
+  max-width: var(--measure);
+  margin: var(--space-4) auto 0;
+  font-family: var(--font-sans);
+  font-size: var(--type-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-snug);
+}
+
+/* The trigger. Rendered by Plate.jsx only below 780px, so this is a phone and
+   tablet control; it says what it does rather than carrying an icon, because a
+   magnifier glyph is also the symbol for search. */
+.plate-enlarge {
+  margin-top: var(--space-3);
+  text-align: center;
 }

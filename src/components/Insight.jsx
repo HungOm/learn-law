@@ -43,7 +43,7 @@ function Cell({ value, note, label }) {
   return (
     /* `data-label`: see the note in Blocks.jsx. Without it the stacked layout
        at narrow widths renders six unlabelled numbers per module. */
-    <td className="is-num" data-label={label}>
+    <td role="cell" className="is-num" data-label={label}>
       {value}
       {note && <span className="dtable-note">{note}</span>}
     </td>
@@ -58,23 +58,30 @@ export function ModuleTable({ rows }) {
        and named. Also in Diagram.jsx, Blocks.jsx and Chart.jsx — change all
        four or none. See the note in Blocks.jsx. */
     <div className="table-wrap" tabIndex={0} role="group" aria-label="Progress by module">
-      <table className="dtable">
-        <thead>
-          <tr>
-            <th scope="col">Module</th>
-            <th scope="col" className="is-num">Cards</th>
-            <th scope="col" className="is-num">Recall, 30 days</th>
-            <th scope="col" className="is-num">Quiz</th>
-            <th scope="col" className="is-num">Mean mark</th>
-            <th scope="col" className="is-num">Gap, unaided</th>
+      {/* Explicit roles, restating what the markup already implies. Below
+          600px the stacked layout sets `display: block` on the rows and cells
+          so each becomes a labelled block — and in Chrome and Safari that
+          DROPS the implicit ARIA role, so the table stops being a table to a
+          screen reader exactly where it is hardest to read anyway. CSS cannot
+          put the semantics back; only these can. They are inert at wide
+          widths, where they say what the tags already said. */}
+      <table className="dtable" role="table">
+        <thead role="rowgroup">
+          <tr role="row">
+            <th scope="col" role="columnheader">Module</th>
+            <th scope="col" role="columnheader" className="is-num">Cards</th>
+            <th scope="col" role="columnheader" className="is-num">Recall, 30 days</th>
+            <th scope="col" role="columnheader" className="is-num">Quiz</th>
+            <th scope="col" role="columnheader" className="is-num">Mean mark</th>
+            <th scope="col" role="columnheader" className="is-num">Gap, unaided</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody role="rowgroup">
           {rows.map(r => {
             const rc = r.recall, qz = r.quiz, mk = r.marks;
             return (
-              <tr key={r.moduleId}>
-                <th scope="row">
+              <tr key={r.moduleId} role="row">
+                <th scope="row" role="rowheader">
                   <Link to={`/module/${r.moduleId}`}>{r.title}</Link>
                 </th>
                 <Cell

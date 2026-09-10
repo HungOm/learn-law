@@ -857,6 +857,21 @@ a 32px disagreement by overriding both sides with the same constant.
 Removing the pin did not break the calibration. **It made it capable of
 failing, and it failed immediately.**
 
+**A mute check and a confidently wrong one are not the same failure.** A check
+that can never fire wastes the effort of writing it. A check that fires
+confidently on meaningless evidence *spends* trust: every green calibration run
+made the fixture look verified, so nobody re-derived it, and a 32px
+disagreement between the fixture and the app survived for a day behind a row of
+passes. The mute ones cost nothing but their own authorship. This kind is
+load-bearing in everyone's confidence, which is why it survives longest.
+
+The sixth instance is the proof. `responsive.mjs`'s guard reported INCONCLUSIVE
+on every run, so `npm run check` exited 0 through it all evening — and it was
+covering a live WCAG 4.1.3 failure at six widths, where advancing a lesson
+section left focus on `body` and announced nothing. Replacing the guard with a
+dist-content fingerprint turned the chain red within one run. The chain had not
+been green; it had been unable to say otherwise.
+
 So the question to ask of a green check is not "did it pass". It is:
 
 > **What would have to be true for this to report something else?**

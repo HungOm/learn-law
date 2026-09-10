@@ -129,15 +129,22 @@ function Table({ caption, columns = [], rows = [], note, source, seen }) {
           someone re-examining this keeps it for a reason that was never
           about it. */}
       <div className="table-wrap" tabIndex={0} role="group" aria-label={caption || 'Table'}>
-        <table className="dtable">
-          <thead>
-            <tr>{columns.map((c, i) => (
-              <th key={i} scope="col" className={c.align === 'num' ? 'is-num' : ''}>{c.label}</th>
+      {/* Explicit roles, restating what the markup already implies. Below
+          600px the stacked layout sets `display: block` on the rows and cells
+          so each becomes a labelled block — and in Chrome and Safari that
+          DROPS the implicit ARIA role, so the table stops being a table to a
+          screen reader exactly where it is hardest to read anyway. CSS cannot
+          put the semantics back; only these can. They are inert at wide
+          widths, where they say what the tags already said. */}
+        <table className="dtable" role="table">
+          <thead role="rowgroup">
+            <tr role="row">{columns.map((c, i) => (
+              <th key={i} scope="col" role="columnheader" className={c.align === 'num' ? 'is-num' : ''}>{c.label}</th>
             ))}</tr>
           </thead>
-          <tbody>
+          <tbody role="rowgroup">
             {rows.map((r, ri) => (
-              <tr key={ri}>
+              <tr key={ri} role="row">
                 {r.map((cell, ci) => {
                   const Tag = ci === 0 ? 'th' : 'td';
                   return (
@@ -148,6 +155,7 @@ function Table({ caption, columns = [], rows = [], note, source, seen }) {
                        the DOM on its own, because a cell has no way back to
                        its column heading. */
                     <Tag key={ci} scope={ci === 0 ? 'row' : undefined}
+                      role={ci === 0 ? 'rowheader' : 'cell'}
                       data-label={columns[ci]?.label}
                       className={columns[ci]?.align === 'num' ? 'is-num' : ''}>
                       <Prose text={cell} seen={seen} />

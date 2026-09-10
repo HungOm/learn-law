@@ -137,21 +137,28 @@ function Rows({ data, series, unit }) {
        declared rather than borrowed. Also in Diagram.jsx, Blocks.jsx and
        Insight.jsx — change all four or none. See the note in Blocks.jsx. */
     <div className="table-wrap" tabIndex={0} role="group" aria-label="Chart data as a table">
-      <table className="dtable">
-        <thead>
-          <tr>
-            <th scope="col">&nbsp;</th>
-            {keys.map(s => <th scope="col" key={s.key} className="is-num">{s.label || 'Value'}{unit ? ` (${unit})` : ''}</th>)}
+      {/* Explicit roles, restating what the markup already implies. Below
+          600px the stacked layout sets `display: block` on the rows and cells
+          so each becomes a labelled block — and in Chrome and Safari that
+          DROPS the implicit ARIA role, so the table stops being a table to a
+          screen reader exactly where it is hardest to read anyway. CSS cannot
+          put the semantics back; only these can. They are inert at wide
+          widths, where they say what the tags already said. */}
+      <table className="dtable" role="table">
+        <thead role="rowgroup">
+          <tr role="row">
+            <th scope="col" role="columnheader">&nbsp;</th>
+            {keys.map(s => <th scope="col" role="columnheader" key={s.key} className="is-num">{s.label || 'Value'}{unit ? ` (${unit})` : ''}</th>)}
           </tr>
         </thead>
-        <tbody>
+        <tbody role="rowgroup">
           {data.map(d => (
-            <tr key={d.label}>
-              <th scope="row">{d.label}{d.note ? <span className="dtable-note">{d.note}</span> : null}</th>
+            <tr key={d.label} role="row">
+              <th scope="row" role="rowheader">{d.label}{d.note ? <span className="dtable-note">{d.note}</span> : null}</th>
               {/* data-label: see the note in Blocks.jsx — it is what the
                   narrow stacked layout reads to name each value. */}
               {keys.map(s => (
-                <td key={s.key} className="is-num" data-label={`${s.label || 'Value'}${unit ? ` (${unit})` : ''}`}>
+                <td key={s.key} role="cell" className="is-num" data-label={`${s.label || 'Value'}${unit ? ` (${unit})` : ''}`}>
                   {d[s.key] ?? '—'}
                 </td>
               ))}
