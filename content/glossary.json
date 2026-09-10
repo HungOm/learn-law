@@ -6,9 +6,29 @@
   "doctrine": "A rule or principle of substantive law.",
   "statute": "A named Act, or a section pinned to one.",
   "institution": "A court, office or body.",
-  "method": "How law is studied, researched or argued."
+  "method": "How law is studied, researched or argued.",
+  "word": "An academic or higher-level word, in plain English."
  },
  "terms": [
+  {
+   "id": "absence",
+   "term": "absence",
+   "kind": "word",
+   "gloss": "Something not being there — which can itself be legally significant.",
+   "intermediate": "The absence of a document, a witness or a reason can support an inference. It is not proof, but it is not nothing either.",
+   "advanced": "Section 114(g) of the Evidence Act permits an adverse inference where evidence that could be produced is withheld. The inference is discretionary and does not reverse the burden of proof.",
+   "source": "Evidence Act 1950, s 114(g)",
+   "aliases": [
+    "absence",
+    "absent"
+   ],
+   "see": [
+    "adverse-inference",
+    "inference",
+    "evidence",
+    "legal-burden"
+   ]
+  },
   {
    "id": "absolute-privilege",
    "term": "absolute privilege",
@@ -56,7 +76,28 @@
    ],
    "aliases": [
     "acceptance",
-    "acceptor"
+    "acceptor",
+    "acceptor's"
+   ]
+  },
+  {
+   "id": "account",
+   "term": "account",
+   "kind": "doctrine",
+   "gloss": "A record of money — and, in equity, a remedy requiring one.",
+   "intermediate": "An order to account makes someone show what they received and hand over what was not theirs. It is used against trustees, directors and agents.",
+   "advanced": "An account of profits strips gain rather than compensating loss, so it can exceed the plaintiff's damage. That is why it belongs to fiduciary and equitable claims and not to negligence.",
+   "source": "Equity; Companies Act 2016",
+   "aliases": [
+    "account",
+    "accounts",
+    "accounting"
+   ],
+   "see": [
+    "fiduciary-duty",
+    "trustee",
+    "directors-duty",
+    "remedy"
    ]
   },
   {
@@ -68,11 +109,32 @@
    "advanced": "The accused carries no burden to prove innocence. Where a General Exception is raised, the burden of bringing the case within it falls on the accused on the balance of probabilities, and the prosecution's own burden beyond reasonable doubt is untouched by that.",
    "source": "Criminal Procedure Code",
    "aliases": [
-    "accused"
+    "accused",
+    "accused's"
    ],
    "see": [
     "defendant",
     "prosecution"
+   ]
+  },
+  {
+   "id": "acquit",
+   "term": "acquit",
+   "kind": "doctrine",
+   "gloss": "To find an accused not guilty and release them.",
+   "intermediate": "An acquittal is not a finding of innocence in fact. It means the prosecution did not prove the case to the required standard.",
+   "advanced": "An acquittal after a full trial bars a second prosecution for the same offence, which is the criminal form of res judicata. A discharge not amounting to an acquittal does not.",
+   "source": "Criminal Procedure Code",
+   "aliases": [
+    "acquit",
+    "acquits",
+    "acquitted"
+   ],
+   "see": [
+    "acquittal",
+    "discharge-not-amounting",
+    "beyond-reasonable-doubt",
+    "res-judicata"
    ]
   },
   {
@@ -109,6 +171,25 @@
    ]
   },
   {
+   "id": "administrative",
+   "term": "administrative",
+   "kind": "doctrine",
+   "gloss": "To do with the exercise of executive power under law.",
+   "intermediate": "Administrative law is about how public bodies decide, not about what they decide. It polices the process and the limits.",
+   "advanced": "The label matters for remedies: an administrative decision is reviewable under Order 53, while a private contractual decision by the same body is not.",
+   "source": "Administrative law",
+   "aliases": [
+    "administrative",
+    "administration"
+   ],
+   "see": [
+    "judicial-review",
+    "order-53",
+    "natural-justice",
+    "ultra-vires"
+   ]
+  },
+  {
    "id": "admissibility",
    "term": "admissibility",
    "kind": "doctrine",
@@ -126,6 +207,49 @@
    ]
   },
   {
+   "id": "admission",
+   "term": "admission",
+   "kind": "doctrine",
+   "gloss": "A statement by a party that goes against their own case.",
+   "intermediate": "An admission is evidence against the person who made it. It is not the same as a confession, which is a full admission of the offence.",
+   "advanced": "Sections 17-23 of the Evidence Act govern admissions in civil and criminal cases alike, and section 23 keeps admissions made without prejudice out. A confession under section 24 has its own, stricter rules.",
+   "source": "Evidence Act 1950, ss 17-24",
+   "aliases": [
+    "admission",
+    "admissions",
+    "admit",
+    "admits",
+    "admitted"
+   ],
+   "see": [
+    "evidence-act",
+    "admissibility",
+    "accused",
+    "evidence"
+   ]
+  },
+  {
+   "id": "advance",
+   "term": "advance",
+   "kind": "word",
+   "gloss": "Beforehand — or to put forward an argument.",
+   "intermediate": "Notice in advance is what makes a hearing fair. An argument advanced late is often an argument not allowed.",
+   "advanced": "Advance notice has statutory content in several places, including the notice before an order for sale and the notice required before certain claims against the Government.",
+   "source": "Natural justice; National Land Code",
+   "aliases": [
+    "advance",
+    "advanced",
+    "advancing",
+    "advances"
+   ],
+   "see": [
+    "notice",
+    "natural-justice",
+    "order-for-sale",
+    "government"
+   ]
+  },
+  {
    "id": "adverse-inference",
    "term": "adverse inference",
    "kind": "doctrine",
@@ -140,7 +264,8 @@
    "aliases": [
     "adverse inference",
     "section 114",
-    "s 114"
+    "s 114",
+    "s 114(g)"
    ]
   },
   {
@@ -176,7 +301,8 @@
     "acquiescence",
     "affirmation",
     "affirmed",
-    "affirm"
+    "affirm",
+    "affirms"
    ]
   },
   {
@@ -192,6 +318,26 @@
    ],
    "see": [
     "statute"
+   ]
+  },
+  {
+   "id": "agent",
+   "term": "agent",
+   "kind": "doctrine",
+   "gloss": "Someone authorised to act for another and bind them.",
+   "intermediate": "An agent's acts count as the principal's acts, within the authority given. That is what makes agency useful and dangerous.",
+   "advanced": "Authority can be actual or apparent, and apparent authority binds the principal even where the agent had none in fact. A company acts only through agents, which is why the two subjects run together.",
+   "source": "Contracts Act 1950, Part X",
+   "aliases": [
+    "agent",
+    "agents",
+    "agency"
+   ],
+   "see": [
+    "principal",
+    "company",
+    "vicarious-liability",
+    "director"
    ]
   },
   {
@@ -240,6 +386,29 @@
    "see": [
     "penal-code",
     "evidence-act"
+   ]
+  },
+  {
+   "id": "amendment",
+   "term": "amendment",
+   "kind": "statute",
+   "gloss": "A change made to a statute, a pleading or the Constitution.",
+   "intermediate": "Acts are amended constantly. The version you read must be the version in force on the relevant date.",
+   "advanced": "Constitutional amendment needs a two-thirds majority under Article 159, and the basic structure argument asks whether some features are beyond amendment at all. That question is unsettled in Malaysia.",
+   "source": "Federal Constitution, Article 159",
+   "aliases": [
+    "amendment",
+    "amendments",
+    "amend",
+    "amended",
+    "amending",
+    "amends"
+   ],
+   "see": [
+    "basic-structure",
+    "enactment",
+    "statute",
+    "research"
    ]
   },
   {
@@ -292,6 +461,26 @@
    ]
   },
   {
+   "id": "applicant",
+   "term": "applicant",
+   "kind": "method",
+   "gloss": "The party who applies to the court for something.",
+   "intermediate": "You are an applicant in judicial review and in interlocutory applications, a plaintiff in a writ action, an appellant on appeal. The label follows the procedure.",
+   "advanced": "In Order 53 the applicant must first obtain leave, and must show sufficient interest in the matter — standing is decided at that stage rather than at the hearing.",
+   "source": "Rules of Court 2012, Order 53",
+   "aliases": [
+    "applicant",
+    "applicants",
+    "applicant's"
+   ],
+   "see": [
+    "order-53",
+    "locus-standi",
+    "judicial-review",
+    "respondent"
+   ]
+  },
+  {
    "id": "application",
    "term": "application",
    "kind": "method",
@@ -304,7 +493,30 @@
     "calibration"
    ],
    "aliases": [
-    "application"
+    "application",
+    "applications"
+   ]
+  },
+  {
+   "id": "applied",
+   "term": "apply",
+   "kind": "method",
+   "gloss": "To use a rule on facts — or, of a case, to follow it.",
+   "intermediate": "In a judgment, *applied* means the court followed an earlier case. In an answer, applying the rule is the step most people skip.",
+   "advanced": "Citators use a fixed vocabulary: applied, followed, distinguished, doubted, overruled. Learning that vocabulary is how you read a case's later history quickly.",
+   "source": "Citators; legal method",
+   "aliases": [
+    "apply",
+    "applies",
+    "applied",
+    "applying",
+    "applies'"
+   ],
+   "see": [
+    "citator",
+    "noting-up",
+    "distinguishing",
+    "irac"
    ]
   },
   {
@@ -321,6 +533,70 @@
    "aliases": [
     "apportionment",
     "apportioned"
+   ]
+  },
+  {
+   "id": "appropriate",
+   "term": "appropriate",
+   "kind": "word",
+   "gloss": "Fitting for the situation — usually a discretion word.",
+   "intermediate": "When a statute says a body may do what is appropriate, it is granting choice. Review then asks whether the choice was open, not whether it was best.",
+   "advanced": "Appropriateness language widens discretion and narrows review, which is why the ground shifts to Wednesbury unreasonableness or improper purpose rather than simple error.",
+   "source": "Administrative law",
+   "aliases": [
+    "appropriate",
+    "appropriately"
+   ],
+   "see": [
+    "discretion",
+    "wednesbury",
+    "exercise-power",
+    "improper"
+   ]
+  },
+  {
+   "id": "argument",
+   "term": "argument",
+   "kind": "word",
+   "gloss": "A reason offered for a conclusion, not just a disagreement.",
+   "intermediate": "A legal argument has a shape: here is the rule, here are the facts, here is why the rule applies. Assertion without that shape is not argument.",
+   "advanced": "Arguments are addressed to a standard of review. An argument that would persuade the trial judge on the facts is the wrong argument on appeal, where only errors of law are usually open.",
+   "source": "Legal method",
+   "aliases": [
+    "argument",
+    "arguments",
+    "argue",
+    "argues",
+    "argued",
+    "arguing",
+    "arguable"
+   ],
+   "see": [
+    "irac",
+    "thinking-like-a-lawyer",
+    "ground",
+    "merits"
+   ]
+  },
+  {
+   "id": "arrangement",
+   "term": "arrangement",
+   "kind": "doctrine",
+   "gloss": "An understanding between people, which may or may not be a contract.",
+   "intermediate": "Not every arrangement is enforceable. Family and social arrangements are usually not intended to create legal relations.",
+   "advanced": "Malaysian law reaches this through the Contracts Act rather than through a separate intention doctrine: the question is whether there is a proposal, acceptance and consideration or a case within section 26.",
+   "source": "Contracts Act 1950",
+   "aliases": [
+    "arrangement",
+    "arrangements",
+    "arrange",
+    "arranged"
+   ],
+   "see": [
+    "agreement",
+    "contract",
+    "section-26",
+    "consideration"
    ]
   },
   {
@@ -357,7 +633,57 @@
    "aliases": [
     "Article 10(2)",
     "Article 10",
-    "Art 10"
+    "Art 10",
+    "Article 10(1)(a)",
+    "Art 10(1)(a)",
+    "Article 10(1)",
+    "Article 10(2)(a)",
+    "Art 10(2)(a)",
+    "Art 10(2)"
+   ]
+  },
+  {
+   "id": "article-12",
+   "term": "Article 12(4)",
+   "kind": "statute",
+   "gloss": "Federal Constitution — who decides a minor's religion.",
+   "intermediate": "Article 12(4) says the religion of a person under eighteen is decided by their parent or guardian. The singular and plural of *parent* is the whole of the dispute.",
+   "advanced": "Article 160(2) provides that words in the singular include the plural, which is why the unilateral-conversion cases turn on an interpretation provision rather than on Article 12 itself.",
+   "source": "Federal Constitution, Article 12(4)",
+   "find": "Free at lom.agc.gov.my — Federal Constitution, Part II",
+   "aliases": [
+    "Article 12(4)",
+    "Art 12(4)",
+    "Article 12",
+    "Art 12"
+   ],
+   "see": [
+    "article-160",
+    "religion",
+    "syariah-court",
+    "article-121a"
+   ]
+  },
+  {
+   "id": "article-121",
+   "term": "Article 121",
+   "kind": "statute",
+   "gloss": "Federal Constitution — where the judicial power of the Federation sits.",
+   "intermediate": "Article 121 establishes the two High Courts and the courts below them. Before 1988 it vested *the judicial power of the Federation* in those courts in so many words.",
+   "advanced": "The 1988 amendment replaced that vesting with jurisdiction *conferred by federal law*, and the question ever since is whether judicial power survives as an inherent constitutional feature. Read it with Article 121(1A) and the basic structure cases.",
+   "source": "Federal Constitution, Article 121",
+   "find": "Free at lom.agc.gov.my — Federal Constitution, Part IX",
+   "aliases": [
+    "Article 121",
+    "Art 121",
+    "Article 121(1)",
+    "Art 121(1)"
+   ],
+   "see": [
+    "judicial-power",
+    "article-121a",
+    "basic-structure",
+    "high-court"
    ]
   },
   {
@@ -398,6 +724,28 @@
    ]
   },
   {
+   "id": "article-160",
+   "term": "Article 160(2)",
+   "kind": "statute",
+   "gloss": "Federal Constitution — the interpretation article.",
+   "intermediate": "Article 160(2) defines the words the Constitution uses, including *law* itself. It is the first place to look when a constitutional word is in dispute.",
+   "advanced": "Its definition of *law* takes in written law, the common law so far as it operates here, and custom having the force of law. That breadth matters in Article 8 and Article 5 arguments about what a *law* may do.",
+   "source": "Federal Constitution, Article 160(2)",
+   "find": "Free at lom.agc.gov.my — Federal Constitution, Part XII",
+   "aliases": [
+    "Article 160(2)",
+    "Art 160(2)",
+    "Article 160",
+    "Art 160"
+   ],
+   "see": [
+    "definition",
+    "article-12",
+    "article-5",
+    "federal-constitution"
+   ]
+  },
+  {
    "id": "article-4",
    "term": "Article 4(1)",
    "kind": "statute",
@@ -413,7 +761,8 @@
    "aliases": [
     "Article 4(1)",
     "Article 4",
-    "Art 4(1)"
+    "Art 4(1)",
+    "Articles 4(3)"
    ]
   },
   {
@@ -433,7 +782,32 @@
     "Article 5(3)",
     "Article 5(4)",
     "Article 5",
-    "Art 5"
+    "Art 5",
+    "Art 5(3)",
+    "Art 5(4)"
+   ]
+  },
+  {
+   "id": "article-74",
+   "term": "Article 74",
+   "kind": "statute",
+   "gloss": "Federal Constitution — which legislature may make law on what.",
+   "intermediate": "Article 74 sends you to the Ninth Schedule: the Federal List, the State List and the Concurrent List. A law made outside your list is beyond your power.",
+   "advanced": "Competence is decided by the pith and substance of the law, not by its title or its incidental effects. Article 75 then resolves what happens when a valid state law meets a valid federal one.",
+   "source": "Federal Constitution, Article 74",
+   "find": "Free at lom.agc.gov.my — Federal Constitution, Part VI",
+   "aliases": [
+    "Article 74",
+    "Art 74",
+    "Article 74(1)",
+    "Arts 74",
+    "Arts 74(1)"
+   ],
+   "see": [
+    "ninth-schedule",
+    "legislative-competence",
+    "article-75",
+    "supremacy"
    ]
   },
   {
@@ -488,7 +862,52 @@
    "aliases": [
     "Article 8(1)",
     "Article 8",
-    "Art 8"
+    "Art 8",
+    "Art 8(1)"
+   ]
+  },
+  {
+   "id": "assert",
+   "term": "assert",
+   "kind": "word",
+   "gloss": "To claim something is so, without yet proving it.",
+   "intermediate": "An assertion is where an argument starts, not where it ends. Whoever asserts generally has to prove.",
+   "advanced": "Section 101 ties the burden to assertion: he who desires a court to give judgment as to any legal right dependent on facts must prove those facts exist.",
+   "source": "Evidence Act 1950, s 101",
+   "aliases": [
+    "assert",
+    "asserts",
+    "asserted",
+    "assertion"
+   ],
+   "see": [
+    "legal-burden",
+    "prove",
+    "section-101",
+    "argument"
+   ]
+  },
+  {
+   "id": "assume",
+   "term": "assume",
+   "kind": "word",
+   "gloss": "To take something as true without proving it.",
+   "intermediate": "Assumptions are useful in an answer if you say you are making them. An unstated assumption is a hole in the argument.",
+   "advanced": "Assuming a fact in issue is a specific error: it decides the case by presupposing the very thing the burden of proof was placed on someone to establish.",
+   "source": "Legal method",
+   "aliases": [
+    "assume",
+    "assumes",
+    "assumed",
+    "assuming",
+    "assumption",
+    "assumptions"
+   ],
+   "see": [
+    "presumption",
+    "fact-in-issue",
+    "legal-burden",
+    "irac"
    ]
   },
   {
@@ -506,6 +925,24 @@
    ],
    "aliases": [
     "audi alteram partem"
+   ]
+  },
+  {
+   "id": "bail",
+   "term": "bail",
+   "kind": "doctrine",
+   "gloss": "Release from custody before trial, on conditions and usually against money.",
+   "intermediate": "Bail is not a finding that the accused is innocent. It answers a narrower question: can this person be trusted to come back to court, and to leave the case alone in the meantime.",
+   "advanced": "Offences are bailable, non-bailable or unbailable, and the label decides whether release is a right or a discretion. Non-bailable does not mean no bail — it means bail requires the court to be persuaded.",
+   "source": "Criminal Procedure Code, ss 387-389",
+   "aliases": [
+    "bail"
+   ],
+   "see": [
+    "bailable",
+    "non-bailable",
+    "accused",
+    "remand"
    ]
   },
   {
@@ -559,6 +996,27 @@
    ]
   },
   {
+   "id": "bank",
+   "term": "bank",
+   "kind": "institution",
+   "gloss": "A licensed institution that takes deposits and lends money.",
+   "intermediate": "Banks appear in land and contract problems as the lender holding a charge. When a borrower defaults, the bank's remedy runs through the register.",
+   "advanced": "A bank taking a charge is a purchaser for value within the section 340(3) proviso, which is why forgery cases so often end up being about whether the bank made proper inquiry.",
+   "source": "Financial Services Act 2013",
+   "aliases": [
+    "bank",
+    "banks",
+    "bank's",
+    "chargee bank"
+   ],
+   "see": [
+    "charge",
+    "order-for-sale",
+    "section-340",
+    "creditor"
+   ]
+  },
+  {
    "id": "basic-structure",
    "term": "basic structure",
    "kind": "doctrine",
@@ -577,6 +1035,26 @@
    ]
   },
   {
+   "id": "benefit",
+   "term": "benefit",
+   "kind": "word",
+   "gloss": "Something of value received.",
+   "intermediate": "Benefit matters where the law asks who gained. Consideration can be a benefit to one side or a detriment to the other.",
+   "advanced": "Section 26 of the Contracts Act departs from English law by not requiring consideration in several cases. So a promise without benefit to the promisor may still be enforceable here where it would not be in England.",
+   "source": "Contracts Act 1950, s 26",
+   "aliases": [
+    "benefit",
+    "benefits",
+    "beneficial"
+   ],
+   "see": [
+    "consideration",
+    "section-26",
+    "quantum-meruit",
+    "promise"
+   ]
+  },
+  {
    "id": "beyond-reasonable-doubt",
    "term": "beyond reasonable doubt",
    "kind": "doctrine",
@@ -591,6 +1069,26 @@
    ],
    "aliases": [
     "beyond reasonable doubt"
+   ]
+  },
+  {
+   "id": "bind",
+   "term": "bind",
+   "kind": "method",
+   "gloss": "To oblige someone to follow — a rule, a decision or an agreement.",
+   "intermediate": "A decision binds a lower court: it must follow it whether or not it agrees. A contract binds the parties to it and nobody else.",
+   "advanced": "Binding force runs down the hierarchy and forward in time, and attaches to the ratio only. A decision on identical facts by a court of equal standing is persuasive, not binding.",
+   "source": "Stare decisis",
+   "aliases": [
+    "bind",
+    "binds",
+    "bound"
+   ],
+   "see": [
+    "stare-decisis",
+    "binding-authority",
+    "ratio-decidendi",
+    "persuasive-authority"
    ]
   },
   {
@@ -612,6 +1110,47 @@
    ]
   },
   {
+   "id": "borrower",
+   "term": "borrower",
+   "kind": "doctrine",
+   "gloss": "The person who takes a loan and must repay it.",
+   "intermediate": "The borrower owes the money whether or not the security is good. If the security fails, the debt is still there.",
+   "advanced": "A borrower in default is entitled to strict compliance with the statutory notice before an order for sale, and that entitlement is the commonest and most successful line of defence.",
+   "source": "National Land Code",
+   "aliases": [
+    "borrower",
+    "borrowers",
+    "borrow",
+    "borrowed",
+    "borrows"
+   ],
+   "see": [
+    "loan",
+    "debtor",
+    "default",
+    "order-for-sale"
+   ]
+  },
+  {
+   "id": "boundary",
+   "term": "boundary",
+   "kind": "word",
+   "gloss": "The line where one thing ends and another begins.",
+   "intermediate": "Legal boundaries are usually contested at the edge, not in the middle. Nobody argues about the clear cases.",
+   "advanced": "Boundary reasoning is why hypotheticals are useful: push a proposed rule to its edge and see whether the result is one the law would accept.",
+   "source": "Legal method",
+   "aliases": [
+    "boundary",
+    "boundaries"
+   ],
+   "see": [
+    "classification",
+    "distinction",
+    "thinking-like-a-lawyer",
+    "limb"
+   ]
+  },
+  {
    "id": "breach",
    "term": "breach of contract",
    "kind": "doctrine",
@@ -627,7 +1166,8 @@
    "aliases": [
     "breach of contract",
     "breach",
-    "broken"
+    "broken",
+    "breaches"
    ]
   },
   {
@@ -683,6 +1223,49 @@
    ]
   },
   {
+   "id": "buyer",
+   "term": "buyer",
+   "kind": "doctrine",
+   "gloss": "The person who agrees to buy — the purchaser.",
+   "intermediate": "A buyer under a contract has rights against the seller. A buyer of land has no rights against the world until the transfer is registered.",
+   "advanced": "The phrase that matters in land is *purchaser in good faith and for valuable consideration*. It is that status, not the fact of buying, that engages the proviso to section 340(3).",
+   "source": "Sale of Goods Act 1957; National Land Code",
+   "aliases": [
+    "buyer",
+    "buyers",
+    "buyer's",
+    "purchaser",
+    "purchasers"
+   ],
+   "see": [
+    "seller",
+    "transfer",
+    "deferred-indefeasibility",
+    "section-340"
+   ]
+  },
+  {
+   "id": "by-law-word",
+   "term": "by-law",
+   "kind": "statute",
+   "gloss": "A rule made by a local authority under power given by an Act.",
+   "intermediate": "By-laws cover parking, licensing, markets and building. They have the force of law within the area, but only as far as the parent Act allows.",
+   "advanced": "A by-law outside the enabling power is ultra vires and void, and its validity can be challenged collaterally when someone is prosecuted under it.",
+   "source": "Local Government Act 1976",
+   "aliases": [
+    "by-law",
+    "by-laws",
+    "bylaw",
+    "bylaws"
+   ],
+   "see": [
+    "subsidiary-legislation",
+    "ultra-vires",
+    "council",
+    "enactment"
+   ]
+  },
+  {
    "id": "calibration",
    "term": "calibration",
    "kind": "method",
@@ -696,6 +1279,26 @@
    ],
    "aliases": [
     "calibration"
+   ]
+  },
+  {
+   "id": "careless",
+   "term": "careless",
+   "kind": "doctrine",
+   "gloss": "Falling below the standard a reasonable person would keep.",
+   "intermediate": "Carelessness is judged by an objective standard. It does not matter that the defendant was doing their honest best if a reasonable person would have done better.",
+   "advanced": "Carelessness alone is not a tort. Negligence needs a duty, a breach, and damage caused by it and not too remote — four questions, in order.",
+   "source": "Tort",
+   "aliases": [
+    "careless",
+    "carelessly",
+    "carelessness"
+   ],
+   "see": [
+    "negligence",
+    "breach-of-duty",
+    "duty-of-care",
+    "causation"
    ]
   },
   {
@@ -788,6 +1391,25 @@
    ]
   },
   {
+   "id": "chain",
+   "term": "chain",
+   "kind": "word",
+   "gloss": "A sequence where each step depends on the one before.",
+   "intermediate": "Causation is a chain from the defendant's act to the claimant's damage. An intervening act can break it.",
+   "advanced": "A novus actus interveniens breaks the chain where it is free, deliberate and informed. Foreseeable intervening conduct — including a rescuer's — usually does not.",
+   "source": "Tort",
+   "aliases": [
+    "chain",
+    "chains"
+   ],
+   "see": [
+    "causation",
+    "novus-actus",
+    "but-for",
+    "remoteness"
+   ]
+  },
+  {
    "id": "charge",
    "term": "charge",
    "kind": "doctrine",
@@ -803,7 +1425,9 @@
    "aliases": [
     "chargee",
     "chargor",
-    "charge"
+    "charge",
+    "chargee's",
+    "charges"
    ]
   },
   {
@@ -824,6 +1448,72 @@
    ]
   },
   {
+   "id": "choice",
+   "term": "choice",
+   "kind": "word",
+   "gloss": "A decision between options the law leaves open.",
+   "intermediate": "Where the law gives a choice, making it is the lawyer's job: which cause of action, which forum, which remedy. Each closes others off.",
+   "advanced": "Some choices are irreversible. Electing between inconsistent remedies, and choosing to affirm rather than rescind, both bind once communicated.",
+   "source": "Legal method",
+   "aliases": [
+    "choice",
+    "choices",
+    "choose",
+    "chooses",
+    "choosing",
+    "chosen"
+   ],
+   "see": [
+    "election-vote",
+    "remedy",
+    "forum",
+    "discretion"
+   ]
+  },
+  {
+   "id": "circumstances",
+   "term": "circumstances",
+   "kind": "word",
+   "gloss": "The surrounding facts that decide how a rule applies.",
+   "intermediate": "Most legal standards are contextual: what is reasonable in one set of circumstances is not in another. That is why facts matter so much.",
+   "advanced": "Circumstantial evidence is different again — evidence of surrounding facts from which a fact in issue can be inferred. It is not weaker than direct evidence, only differently reasoned.",
+   "source": "Evidence Act 1950",
+   "aliases": [
+    "circumstances",
+    "circumstance",
+    "circumstantial"
+   ],
+   "see": [
+    "inference",
+    "material-fact",
+    "evidence",
+    "fact-in-issue"
+   ]
+  },
+  {
+   "id": "citation",
+   "term": "citation",
+   "kind": "method",
+   "gloss": "The reference that tells you where to find a case or a section.",
+   "intermediate": "A citation is an address, not a description. [1968] 1 MLJ 170 says year, volume, report series and page.",
+   "advanced": "Square brackets mean the year is needed to find the volume; round brackets mean it is only informative. Neutral citations identify the judgment rather than any publisher's report of it.",
+   "source": "Citation convention",
+   "aliases": [
+    "citation",
+    "citations",
+    "cite",
+    "cited",
+    "cites",
+    "citing"
+   ],
+   "see": [
+    "mlj",
+    "clj",
+    "headnote",
+    "noting-up"
+   ]
+  },
+  {
    "id": "citator",
    "term": "citator",
    "kind": "method",
@@ -837,6 +1527,26 @@
    ],
    "aliases": [
     "citator"
+   ]
+  },
+  {
+   "id": "citizen",
+   "term": "citizen",
+   "kind": "doctrine",
+   "gloss": "A person with the legal status of belonging to the state.",
+   "intermediate": "Some constitutional rights belong to citizens only — to move and reside, to form associations, to speak freely. Others belong to every person.",
+   "advanced": "Read Part II of the Federal Constitution carefully for the words *citizen* and *person*. Article 5 protects every person; Article 10 protects citizens. That distinction decides standing before anything else is argued.",
+   "source": "Federal Constitution, Part II",
+   "aliases": [
+    "citizen",
+    "citizens",
+    "citizenship"
+   ],
+   "see": [
+    "fundamental-liberties",
+    "article-10",
+    "article-5",
+    "locus-standi"
    ]
   },
   {
@@ -855,6 +1565,48 @@
    "aliases": [
     "Civil Law Act 1956",
     "Civil Law Act"
+   ]
+  },
+  {
+   "id": "classification",
+   "term": "classification",
+   "kind": "method",
+   "gloss": "Deciding which legal category a thing falls into.",
+   "intermediate": "Classification comes before analysis. Is it a lease or a licence, a condition or a warranty, murder or culpable homicide — the answer decides which rules apply.",
+   "advanced": "Classification is where most marks are won and lost, because the rules that follow are usually uncontroversial. Argue the category on the facts rather than reciting the consequences.",
+   "source": "Legal method",
+   "aliases": [
+    "classification",
+    "classify",
+    "classified",
+    "classifying",
+    "classifications",
+    "classifies"
+   ],
+   "see": [
+    "thinking-like-a-lawyer",
+    "irac",
+    "limb",
+    "construction"
+   ]
+  },
+  {
+   "id": "client",
+   "term": "client",
+   "kind": "institution",
+   "gloss": "The person a lawyer acts for.",
+   "intermediate": "A lawyer's duties run to the client, to the court and to the profession, in that order of loyalty but not of priority. Duty to the court comes first when they conflict.",
+   "advanced": "Communications with a client for the purpose of legal advice are privileged under sections 126-129 of the Evidence Act, and the privilege belongs to the client rather than to the lawyer.",
+   "source": "Evidence Act 1950, ss 126-129",
+   "aliases": [
+    "client",
+    "clients",
+    "client's"
+   ],
+   "see": [
+    "admissibility",
+    "evidence-act",
+    "agent"
    ]
   },
   {
@@ -924,6 +1676,47 @@
    ]
   },
   {
+   "id": "commit",
+   "term": "commit",
+   "kind": "word",
+   "gloss": "To do the act that makes up an offence.",
+   "intermediate": "You commit an offence, not a punishment. The word points at the conduct element rather than at the consequences.",
+   "advanced": "Commission covers acts and, where a statute says so, omissions. Section 32 of the Penal Code makes words referring to acts include illegal omissions.",
+   "source": "Penal Code, s 32",
+   "aliases": [
+    "commit",
+    "commits",
+    "committed",
+    "committing",
+    "commission"
+   ],
+   "see": [
+    "actus-reus",
+    "offence",
+    "mens-rea",
+    "penal-code"
+   ]
+  },
+  {
+   "id": "common",
+   "term": "common",
+   "kind": "word",
+   "gloss": "Shared — and, of law, judge-made rather than enacted.",
+   "intermediate": "The common law is the body of rules developed by judges through decided cases. Statute can change it; it cannot change statute.",
+   "advanced": "Section 3 of the Civil Law Act applies English common law and equity as at 7 April 1956, so far as local circumstances permit and subject to local statute. Everything about that sentence is a limit.",
+   "source": "Civil Law Act 1956, s 3",
+   "aliases": [
+    "common",
+    "common law"
+   ],
+   "see": [
+    "section-3-cla",
+    "reception",
+    "stare-decisis",
+    "codification"
+   ]
+  },
+  {
    "id": "communication-complete",
    "term": "communication complete",
    "kind": "doctrine",
@@ -970,11 +1763,133 @@
    "source": "Companies Act 2016",
    "aliases": [
     "company",
-    "companies"
+    "companies",
+    "company's"
    ],
    "see": [
     "director",
     "shareholder"
+   ]
+  },
+  {
+   "id": "compensation",
+   "term": "compensation",
+   "kind": "doctrine",
+   "gloss": "Money meant to put the loss right.",
+   "intermediate": "Compensation looks backwards at what the claimant lost, not at what the defendant gained. That is what separates it from an account of profits.",
+   "advanced": "Section 74 of the Contracts Act codifies Hadley v Baxendale: compensation for loss naturally arising, or which the parties knew was likely. Remote loss is excluded even where it plainly happened.",
+   "source": "Contracts Act 1950, s 74",
+   "aliases": [
+    "compensation",
+    "compensate",
+    "compensated"
+   ],
+   "see": [
+    "damages",
+    "section-74",
+    "remoteness",
+    "mitigation"
+   ]
+  },
+  {
+   "id": "complaint",
+   "term": "complaint",
+   "kind": "method",
+   "gloss": "A formal allegation that starts a process.",
+   "intermediate": "A complaint to a magistrate can begin a criminal case, and a complaint to a body can trigger an inquiry. It is an allegation, not proof.",
+   "advanced": "A magistrate receiving a complaint under section 133 of the Criminal Procedure Code must examine the complainant on oath before issuing process, which is a real filter and not a formality.",
+   "source": "Criminal Procedure Code, s 133",
+   "aliases": [
+    "complaint",
+    "complaints",
+    "complain",
+    "complains",
+    "complainant"
+   ],
+   "see": [
+    "magistrates-court",
+    "investigation",
+    "offence",
+    "prosecution"
+   ]
+  },
+  {
+   "id": "conclusion",
+   "term": "conclusion",
+   "kind": "word",
+   "gloss": "The answer your reasoning arrives at.",
+   "intermediate": "A conclusion should follow from what came before it. In IRAC it is the last step and it must be a real answer, not a summary of both sides.",
+   "advanced": "On an unsettled point, state which way the court is likely to go and why, then note the contrary argument. Refusing to conclude is a weaker answer than concluding and being wrong.",
+   "source": "Legal method",
+   "aliases": [
+    "conclusion",
+    "conclusions",
+    "conclude",
+    "concluded"
+   ],
+   "see": [
+    "irac",
+    "argument",
+    "reasoning",
+    "thinking-like-a-lawyer"
+   ]
+  },
+  {
+   "id": "condition",
+   "term": "condition",
+   "kind": "doctrine",
+   "gloss": "A term so important that breaking it lets the other side walk away.",
+   "intermediate": "Contract terms are not equal. Break a condition and the innocent party may end the contract; break a lesser term and the remedy is damages only.",
+   "advanced": "Malaysian law works through sections 40 and 56 of the Contracts Act rather than through the English condition-warranty classification, so ask whether the breach amounted to a refusal to perform.",
+   "source": "Contracts Act 1950, ss 40, 56",
+   "aliases": [
+    "condition",
+    "conditions",
+    "conditional"
+   ],
+   "see": [
+    "breach",
+    "repudiation",
+    "discharge-not-amounting",
+    "contract"
+   ]
+  },
+  {
+   "id": "conduct",
+   "term": "conduct",
+   "kind": "doctrine",
+   "gloss": "What a person actually did — behaviour the law can look at.",
+   "intermediate": "Conduct is the outward part: acts, words, silences. Law usually pairs it with a state of mind before attaching consequences.",
+   "advanced": "Section 8 of the Evidence Act makes conduct relevant where it influences or is influenced by a fact in issue. That is a rule of admissibility, and it does not decide what the conduct proves.",
+   "source": "Evidence Act 1950, s 8",
+   "aliases": [
+    "conduct"
+   ],
+   "see": [
+    "actus-reus",
+    "evidence",
+    "relevancy",
+    "mens-rea"
+   ]
+  },
+  {
+   "id": "consequence",
+   "term": "consequence",
+   "kind": "word",
+   "gloss": "What follows from an act — factually or in law.",
+   "intermediate": "Keep the two apart. A factual consequence is what actually happened; a legal consequence is what the law attaches to it.",
+   "advanced": "Result crimes require a consequence to be caused, which brings in both factual and legal causation. Conduct crimes are complete on the act, and causation never arises.",
+   "source": "Penal Code; tort",
+   "aliases": [
+    "consequence",
+    "consequences",
+    "consequential"
+   ],
+   "see": [
+    "causation",
+    "but-for",
+    "remoteness",
+    "actus-reus"
    ]
   },
   {
@@ -991,7 +1906,26 @@
     "contracts-act"
    ],
    "aliases": [
-    "consideration"
+    "consideration",
+    "considerations"
+   ]
+  },
+  {
+   "id": "supremacy",
+   "term": "constitutional supremacy",
+   "kind": "doctrine",
+   "gloss": "The Constitution outranks every other law; inconsistent law is void.",
+   "intermediate": "Article 4(1) provides that law passed after Merdeka Day which is inconsistent with the Constitution is void to the extent of the inconsistency.",
+   "advanced": "Two details are routinely dropped. First, the invalidity is partial — 'to the extent of the inconsistency' — so severance is the ordinary course rather than striking down a whole Act. Second, describing Parliament as sovereign is not a loose way of saying it is powerful; it is a category error carried over from English texts and it undermines every constitutional argument built on top of it.",
+   "source": "Federal Constitution Art 4(1)",
+   "see": [
+    "article-4",
+    "federal-constitution",
+    "ultra-vires"
+   ],
+   "aliases": [
+    "supremacy of the Constitution",
+    "constitutional supremacy"
    ]
   },
   {
@@ -1024,24 +1958,6 @@
    "see": [
     "agreement",
     "consideration"
-   ]
-  },
-  {
-   "id": "supremacy",
-   "term": "constitutional supremacy",
-   "kind": "doctrine",
-   "gloss": "The Constitution outranks every other law; inconsistent law is void.",
-   "intermediate": "Article 4(1) provides that law passed after Merdeka Day which is inconsistent with the Constitution is void to the extent of the inconsistency.",
-   "advanced": "Two details are routinely dropped. First, the invalidity is partial — 'to the extent of the inconsistency' — so severance is the ordinary course rather than striking down a whole Act. Second, describing Parliament as sovereign is not a loose way of saying it is powerful; it is a category error carried over from English texts and it undermines every constitutional argument built on top of it.",
-   "source": "Federal Constitution Art 4(1)",
-   "see": [
-    "article-4",
-    "federal-constitution",
-    "ultra-vires"
-   ],
-   "aliases": [
-    "supremacy of the Constitution",
-    "constitutional supremacy"
    ]
   },
   {
@@ -1111,6 +2027,26 @@
     "piercing the veil",
     "lifting the veil",
     "corporate veil"
+   ]
+  },
+  {
+   "id": "council",
+   "term": "council",
+   "kind": "institution",
+   "gloss": "An elected or appointed body with powers given by statute.",
+   "intermediate": "Local councils make by-laws and grant licences. Their powers come from an Act, so anything outside that Act is beyond their authority.",
+   "advanced": "A council is the standard defendant in judicial review because it exercises public functions under statute. That statutory source is what makes its decisions reviewable at all.",
+   "source": "Local Government Act 1976",
+   "aliases": [
+    "council",
+    "councils",
+    "council's"
+   ],
+   "see": [
+    "ultra-vires",
+    "judicial-review",
+    "by-law-word",
+    "subsidiary-legislation"
    ]
   },
   {
@@ -1204,6 +2140,24 @@
    ]
   },
   {
+   "id": "damage-harm",
+   "term": "damage",
+   "kind": "doctrine",
+   "gloss": "The loss or injury actually suffered — not the money paid for it.",
+   "intermediate": "Damage is the harm; damages are the money. In negligence you must prove damage, because there is no tort of carelessness alone.",
+   "advanced": "Damage is the gist of negligence, which is why the cause of action accrues when the damage occurs rather than when the careless act happened. Limitation runs from that date.",
+   "source": "Tort; Limitation Act 1953",
+   "aliases": [
+    "damage"
+   ],
+   "see": [
+    "damages",
+    "negligence",
+    "causation",
+    "limitation"
+   ]
+  },
+  {
    "id": "damages",
    "term": "damages",
    "kind": "doctrine",
@@ -1238,6 +2192,44 @@
    ]
   },
   {
+   "id": "death",
+   "term": "death",
+   "kind": "doctrine",
+   "gloss": "The end of legal personality — and, in many offences, the required result.",
+   "intermediate": "Where death is an element, the prosecution must prove that the accused's act caused it. Which offence it becomes then depends on the state of mind.",
+   "advanced": "Section 299 and section 300 of the Penal Code build the same physical result into a ladder of mental states. Causation of death is proved once; the grading is done by mens rea and the exceptions.",
+   "source": "Penal Code, ss 299-300",
+   "aliases": [
+    "death",
+    "deaths"
+   ],
+   "see": [
+    "murder",
+    "culpable-homicide",
+    "causation",
+    "mens-rea"
+   ]
+  },
+  {
+   "id": "debt",
+   "term": "debt",
+   "kind": "doctrine",
+   "gloss": "A fixed sum of money one person owes another.",
+   "intermediate": "A debt is owed as a number, not as compensation. That makes it easier to sue on: you prove the sum, not the loss.",
+   "advanced": "A claim in debt needs no proof of damage and no mitigation, which is why pleading a liquidated sum rather than damages changes what you must prove and what the defendant can argue.",
+   "source": "Contract; Rules of Court",
+   "aliases": [
+    "debt",
+    "debts"
+   ],
+   "see": [
+    "debtor",
+    "creditor",
+    "damages",
+    "liquidated-damages"
+   ]
+  },
+  {
    "id": "debtor",
    "term": "debtor",
    "kind": "doctrine",
@@ -1247,10 +2239,34 @@
    "source": "Standard usage",
    "aliases": [
     "debtor",
-    "debtors"
+    "debtors",
+    "debtor's"
    ],
    "see": [
     "creditor"
+   ]
+  },
+  {
+   "id": "decision",
+   "term": "decision",
+   "kind": "method",
+   "gloss": "What a court or an official actually decided.",
+   "intermediate": "A decision is the outcome plus the reasons for it. In case law only part of it binds later courts — the reasoning necessary to the result.",
+   "advanced": "Separate three things that get called *the decision*: the order made, the ratio, and the surrounding discussion. Only the second binds, and only the first can be enforced.",
+   "source": "Legal method",
+   "aliases": [
+    "decision",
+    "decisions",
+    "decide",
+    "decides",
+    "decided",
+    "deciding"
+   ],
+   "see": [
+    "ratio-decidendi",
+    "obiter-dictum",
+    "judicial-review",
+    "judge-role"
    ]
   },
   {
@@ -1273,6 +2289,27 @@
    ]
   },
   {
+   "id": "default",
+   "term": "default",
+   "kind": "doctrine",
+   "gloss": "Failing to do what an agreement or a rule requires.",
+   "intermediate": "Default is the trigger word in loans and in procedure. A borrower in default gives the lender its remedies; a defendant in default of appearance can lose without a hearing.",
+   "advanced": "Statutory default under the National Land Code runs through a prescribed notice, and the validity of that notice is the commonest ground for setting an order for sale aside.",
+   "source": "National Land Code; Rules of Court 2012",
+   "aliases": [
+    "default",
+    "defaults",
+    "defaulted",
+    "defaulting"
+   ],
+   "see": [
+    "charge",
+    "order-for-sale",
+    "summary-judgment",
+    "breach"
+   ]
+  },
+  {
    "id": "defendant",
    "term": "defendant",
    "kind": "doctrine",
@@ -1282,7 +2319,8 @@
    "source": "Rules of Court 2012",
    "aliases": [
     "defendant",
-    "defendants"
+    "defendants",
+    "defendant's"
    ],
    "see": [
     "plaintiff",
@@ -1307,6 +2345,86 @@
    ]
   },
   {
+   "id": "definition",
+   "term": "definition",
+   "kind": "method",
+   "gloss": "A statutory instruction about what a word is to mean.",
+   "intermediate": "When an Act defines a word, that meaning wins inside that Act even if it is odd in ordinary English. Always check the definition section first.",
+   "advanced": "*Means* is exhaustive; *includes* is extending and leaves the ordinary meaning intact. Reading one as the other is a standard interpretation error.",
+   "source": "Interpretation Acts 1948 and 1967",
+   "aliases": [
+    "definition",
+    "definitions",
+    "define",
+    "defines",
+    "defined"
+   ],
+   "see": [
+    "construction",
+    "meaning",
+    "ejusdem-generis",
+    "statute"
+   ]
+  },
+  {
+   "id": "deliberate",
+   "term": "deliberate",
+   "kind": "word",
+   "gloss": "Done on purpose.",
+   "intermediate": "Deliberate conduct is not automatically unlawful, and unlawful conduct is not always deliberate. The law asks about state of mind separately.",
+   "advanced": "Deliberateness distinguishes the fault levels: intention, knowledge, rashness and negligence are a ladder, and the same act can sit on any rung depending on what was in the mind.",
+   "source": "Penal Code",
+   "aliases": [
+    "deliberate",
+    "deliberately"
+   ],
+   "see": [
+    "mens-rea",
+    "intention",
+    "knowledge",
+    "careless"
+   ]
+  },
+  {
+   "id": "demand",
+   "term": "demand",
+   "kind": "doctrine",
+   "gloss": "A formal request for payment or performance, often required before suing.",
+   "intermediate": "Some rights only become enforceable once a demand is made. Until then there is nothing to sue on.",
+   "advanced": "Where a demand is a precondition, limitation runs from the demand rather than from the underlying obligation — which can keep alive a claim that looks long expired.",
+   "source": "Contract; Limitation Act 1953",
+   "aliases": [
+    "demand",
+    "demands",
+    "demanded"
+   ],
+   "see": [
+    "default",
+    "limitation",
+    "notice",
+    "breach"
+   ]
+  },
+  {
+   "id": "deposit",
+   "term": "deposit",
+   "kind": "doctrine",
+   "gloss": "Money paid up front, as earnest of a bargain or as part payment.",
+   "intermediate": "A true deposit can be forfeited if the payer walks away. Part payment usually cannot, so the label matters.",
+   "advanced": "An excessive deposit may be relieved against as a penalty. Section 75 of the Contracts Act lets the court award reasonable compensation not exceeding the stipulated sum, whatever the clause says.",
+   "source": "Contracts Act 1950, s 75",
+   "aliases": [
+    "deposit",
+    "deposits"
+   ],
+   "see": [
+    "section-75",
+    "liquidated-damages",
+    "contract",
+    "breach"
+   ]
+  },
+  {
    "id": "desired-retention",
    "term": "desired retention",
    "kind": "method",
@@ -1323,6 +2441,26 @@
    ]
   },
   {
+   "id": "direction",
+   "term": "direction",
+   "kind": "word",
+   "gloss": "An instruction from a court or an authority.",
+   "intermediate": "Directions manage a case: what must be filed, and when. They are procedural orders, not decisions on the merits.",
+   "advanced": "A misdirection is different again — it is a judge stating the law wrongly to themselves or to a jury, and it is a classic ground of appeal.",
+   "source": "Rules of Court 2012",
+   "aliases": [
+    "direction",
+    "directions",
+    "directed"
+   ],
+   "see": [
+    "appeal",
+    "proceedings",
+    "record",
+    "judge-role"
+   ]
+  },
+  {
    "id": "director",
    "term": "director",
    "kind": "doctrine",
@@ -1332,7 +2470,8 @@
    "source": "Companies Act 2016",
    "aliases": [
     "director",
-    "directors"
+    "directors",
+    "directors'"
    ],
    "see": [
     "shareholder",
@@ -1376,6 +2515,28 @@
    ]
   },
   {
+   "id": "disclose",
+   "term": "disclose",
+   "kind": "doctrine",
+   "gloss": "To reveal something the other side does not know.",
+   "intermediate": "There is no general duty to disclose in an ordinary contract. Silence becomes actionable where a relationship or a half-truth creates a duty to speak.",
+   "advanced": "Fiduciaries must disclose conflicts, and a director's interest in a contract must be declared. Failure engages the no-conflict rule rather than the law of misrepresentation.",
+   "source": "Companies Act 2016; equity",
+   "aliases": [
+    "disclose",
+    "discloses",
+    "disclosed",
+    "disclosure",
+    "non-disclosure"
+   ],
+   "see": [
+    "fiduciary-duty",
+    "misrepresentation",
+    "directors-duty",
+    "silence"
+   ]
+  },
+  {
    "id": "discretion",
    "term": "discretion",
    "kind": "doctrine",
@@ -1408,6 +2569,66 @@
    "aliases": [
     "dishonestly",
     "dishonest"
+   ]
+  },
+  {
+   "id": "dismissal",
+   "term": "dismissal",
+   "kind": "doctrine",
+   "gloss": "Ending something — a claim by the court, or an employee by the employer.",
+   "intermediate": "A claim dismissed is decided against the claimant. An employee dismissed has lost the job, and the question becomes whether there was just cause.",
+   "advanced": "Dismissal without just cause or excuse is a statutory claim under section 20 of the Industrial Relations Act, and it runs to the Industrial Court rather than the civil courts.",
+   "source": "Industrial Relations Act 1967, s 20",
+   "aliases": [
+    "dismissal",
+    "dismiss",
+    "dismissed",
+    "dismissing"
+   ],
+   "see": [
+    "employee",
+    "striking-out",
+    "tribunal",
+    "forum"
+   ]
+  },
+  {
+   "id": "dispute",
+   "term": "dispute",
+   "kind": "word",
+   "gloss": "A disagreement the parties cannot settle themselves.",
+   "intermediate": "A dispute becomes a case when someone takes it to a court or tribunal. Not every disagreement is one the law can decide.",
+   "advanced": "Whether a dispute is justiciable is a separate question from whether the plaintiff is right. Policy questions committed to the executive can be real disputes and still not be for a court.",
+   "source": "Civil procedure",
+   "aliases": [
+    "dispute",
+    "disputes",
+    "disputed"
+   ],
+   "see": [
+    "justiciable",
+    "cause-of-action",
+    "locus-standi",
+    "tribunal"
+   ]
+  },
+  {
+   "id": "distinction",
+   "term": "distinction",
+   "kind": "method",
+   "gloss": "A difference the law treats as mattering.",
+   "intermediate": "Drawing a distinction means showing why two situations should be treated differently. If the difference changes nothing legally, it is not a distinction.",
+   "advanced": "Distinguishing a binding case is the disciplined form of this: identify a material fact present here and absent there, and show it was material to the ratio rather than merely mentioned.",
+   "source": "Legal method",
+   "aliases": [
+    "distinction",
+    "distinctions"
+   ],
+   "see": [
+    "distinguishing",
+    "ratio-decidendi",
+    "material-fact",
+    "stare-decisis"
    ]
   },
   {
@@ -1446,6 +2667,67 @@
    ]
   },
   {
+   "id": "divorce",
+   "term": "divorce",
+   "kind": "doctrine",
+   "gloss": "The legal ending of a marriage by court order.",
+   "intermediate": "A divorce needs a court, a ground and usually an attempt at reconciliation first. Separation by agreement does not by itself end a marriage.",
+   "advanced": "The single ground under the 1976 Act is irretrievable breakdown, proved by one of the listed facts. Ancillary orders on property, maintenance and custody are separate exercises of discretion and are not automatic consequences of the decree.",
+   "source": "Law Reform (Marriage and Divorce) Act 1976",
+   "aliases": [
+    "divorce",
+    "divorces",
+    "divorced"
+   ],
+   "see": [
+    "marriage",
+    "syariah-court",
+    "jurisdiction"
+   ]
+  },
+  {
+   "id": "document",
+   "term": "document",
+   "kind": "doctrine",
+   "gloss": "Anything on which something is written or recorded, used as evidence.",
+   "intermediate": "The Evidence Act's meaning is wider than paper. A photograph, a map, a message on a phone can all be documents.",
+   "advanced": "Documentary evidence raises two separate questions in sequence: is the document admissible, and is the copy before the court proof of its contents. Sections 61-73A do not merge them.",
+   "source": "Evidence Act 1950, s 3",
+   "aliases": [
+    "document",
+    "documents",
+    "document's"
+   ],
+   "see": [
+    "evidence",
+    "evidence-act",
+    "admissibility"
+   ]
+  },
+  {
+   "id": "driver",
+   "term": "driver",
+   "kind": "doctrine",
+   "gloss": "The person in control of a vehicle — the standard negligence defendant.",
+   "intermediate": "A driver owes a duty to other road users. The standard is that of the reasonably competent driver, and inexperience is no excuse.",
+   "advanced": "The standard is objective and does not drop for a learner. Where the injured party contributed — no helmet, no seatbelt — damages are apportioned rather than refused.",
+   "source": "Tort; Road Transport Act 1987",
+   "aliases": [
+    "driver",
+    "drivers",
+    "drive",
+    "driving",
+    "driver's",
+    "drives"
+   ],
+   "see": [
+    "negligence",
+    "careless",
+    "contributory-negligence",
+    "apportionment"
+   ]
+  },
+  {
    "id": "duty-of-care",
    "term": "duty of care",
    "kind": "doctrine",
@@ -1461,7 +2743,28 @@
    ],
    "aliases": [
     "duty of care",
-    "duty"
+    "duty",
+    "duties"
+   ]
+  },
+  {
+   "id": "effect",
+   "term": "effect",
+   "kind": "word",
+   "gloss": "What a rule or document actually does, as opposed to what it says.",
+   "intermediate": "Courts look at substance over form. A document called a licence that gives exclusive possession may take effect as a lease.",
+   "advanced": "*Takes effect* also fixes timing: when an Act comes into force, when an order operates, when a transfer passes title. Those dates decide which law applies.",
+   "source": "Interpretation Acts 1948 and 1967",
+   "aliases": [
+    "effect",
+    "effects",
+    "effective"
+   ],
+   "see": [
+    "substance-form",
+    "lease",
+    "licence",
+    "enactment"
    ]
   },
   {
@@ -1499,6 +2802,87 @@
    ]
   },
   {
+   "id": "election-vote",
+   "term": "election",
+   "kind": "doctrine",
+   "gloss": "Choosing between two rights you cannot both have — or a public vote.",
+   "intermediate": "In private law, election means picking one remedy and giving up the inconsistent one. You cannot affirm a contract and rescind it.",
+   "advanced": "Election is irrevocable once made with knowledge of the facts and communicated. That is why advice on affirming or rescinding must come before anything is said to the other side.",
+   "source": "Contract; equity",
+   "aliases": [
+    "election",
+    "elections",
+    "elect",
+    "elected",
+    "elects"
+   ],
+   "see": [
+    "rescission",
+    "repudiation",
+    "remedy",
+    "voidable"
+   ]
+  },
+  {
+   "id": "element",
+   "term": "element",
+   "kind": "method",
+   "gloss": "One of the things that must be proved for a claim or offence to succeed.",
+   "intermediate": "Break every offence and every cause of action into elements, then attack the weakest. If one element fails, the whole thing fails.",
+   "advanced": "Elements are what the burden attaches to. Section 101 of the Evidence Act puts the burden on whoever asserts the existence of facts constituting the right, which means element by element rather than case as a whole.",
+   "source": "Evidence Act 1950, s 101",
+   "aliases": [
+    "element",
+    "elements"
+   ],
+   "see": [
+    "actus-reus",
+    "mens-rea",
+    "cause-of-action",
+    "legal-burden"
+   ]
+  },
+  {
+   "id": "employee",
+   "term": "employee",
+   "kind": "doctrine",
+   "gloss": "A person working under a contract of service.",
+   "intermediate": "An employee works *under* the employer's control; an independent contractor works for them. The label in the contract does not settle it.",
+   "advanced": "The distinction decides vicarious liability, statutory protection and tax. Courts apply a multi-factor test — control, integration, who bears the risk — rather than any single question.",
+   "source": "Employment Act 1955; tort",
+   "aliases": [
+    "employee",
+    "employees",
+    "employed",
+    "employment"
+   ],
+   "see": [
+    "employer",
+    "vicarious-liability",
+    "dismissal",
+    "contract"
+   ]
+  },
+  {
+   "id": "employer",
+   "term": "employer",
+   "kind": "doctrine",
+   "gloss": "The person or company an employee works for.",
+   "intermediate": "An employer can be liable for what an employee does in the course of employment, even without any fault of its own.",
+   "advanced": "Vicarious liability requires a relationship and a sufficiently close connection between the wrong and the work. A frolic of one's own falls outside it; a wrongful act done badly at work usually does not.",
+   "source": "Tort",
+   "aliases": [
+    "employer",
+    "employers"
+   ],
+   "see": [
+    "employee",
+    "vicarious-liability",
+    "liability",
+    "fault"
+   ]
+  },
+  {
    "id": "enactment",
    "term": "enactment",
    "kind": "doctrine",
@@ -1512,6 +2896,25 @@
    ],
    "see": [
     "statute"
+   ]
+  },
+  {
+   "id": "entitled",
+   "term": "entitled",
+   "kind": "word",
+   "gloss": "Having a legal right to something, whether or not you ask for it.",
+   "intermediate": "Entitled means the right exists. It says nothing about whether the right has been claimed, or whether the court has any discretion about it.",
+   "advanced": "The word marks the divide between a remedy as of right and a discretionary one. A plaintiff is entitled to damages once breach and loss are proved; specific performance is never something anyone is entitled to.",
+   "source": "General usage",
+   "aliases": [
+    "entitled",
+    "entitlement"
+   ],
+   "see": [
+    "remedy",
+    "damages",
+    "specific-performance",
+    "equitable"
    ]
   },
   {
@@ -1543,6 +2946,83 @@
     "EOT"
    ],
    "see": []
+  },
+  {
+   "id": "equitable",
+   "term": "equitable",
+   "kind": "doctrine",
+   "gloss": "Belonging to equity rather than to the common law.",
+   "intermediate": "An equitable right is one equity recognises even though the common law does not. An equitable remedy is one the court may give, but does not have to.",
+   "advanced": "The discretion is the point: damages come as of right once a breach is proved, while specific performance can be refused for delay, hardship or bad conduct even in a plain case.",
+   "source": "Equity; Civil Law Act 1956",
+   "aliases": [
+    "equitable",
+    "equitably"
+   ],
+   "see": [
+    "equity-law",
+    "specific-performance",
+    "trustee",
+    "fiduciary-duty"
+   ]
+  },
+  {
+   "id": "equity-law",
+   "term": "equity",
+   "kind": "doctrine",
+   "gloss": "The body of rules developed to soften the common law's hard edges.",
+   "intermediate": "Equity began as the Chancellor's conscience and became a system of its own. It supplies remedies the common law will not give, such as specific performance and injunctions.",
+   "advanced": "Equity acts on the person, not the thing, and is discretionary — which is why clean hands, delay and hardship are arguments in equity and not at law. Section 3 of the Civil Law Act carries it into Malaysia.",
+   "source": "Civil Law Act 1956, s 3",
+   "aliases": [
+    "equity"
+   ],
+   "see": [
+    "equitable",
+    "specific-performance",
+    "interlocutory-injunction",
+    "section-3-cla"
+   ]
+  },
+  {
+   "id": "establish",
+   "term": "establish",
+   "kind": "word",
+   "gloss": "To prove to the court's satisfaction.",
+   "intermediate": "Establishing something is stronger than raising it. A defendant may only need to raise a defence; the prosecution must establish the offence.",
+   "advanced": "Watch which party must establish what. Under section 105 of the Evidence Act the accused must bring the case within an exception, while the prosecution retains the burden on the elements throughout.",
+   "source": "Evidence Act 1950, ss 101-105",
+   "aliases": [
+    "establish",
+    "establishes",
+    "established",
+    "establishing"
+   ],
+   "see": [
+    "legal-burden",
+    "evidential-burden",
+    "prove",
+    "section-105"
+   ]
+  },
+  {
+   "id": "estate",
+   "term": "estate",
+   "kind": "doctrine",
+   "gloss": "Everything a person owns — especially what they leave behind.",
+   "intermediate": "On death, the estate is collected, debts are paid, and what is left goes to those entitled. Someone must be appointed to do that.",
+   "advanced": "An executor's title comes from the will and is confirmed by probate; an administrator's comes only from the grant of letters of administration. The difference decides when they can lawfully deal with the assets.",
+   "source": "Probate and Administration Act 1959",
+   "aliases": [
+    "estate",
+    "estates"
+   ],
+   "see": [
+    "trustee",
+    "property-law",
+    "grant",
+    "ownership-word"
+   ]
   },
   {
    "id": "evidence",
@@ -1612,6 +3092,109 @@
    ]
   },
   {
+   "id": "exception",
+   "term": "exception",
+   "kind": "method",
+   "gloss": "A case the general rule deliberately leaves out.",
+   "intermediate": "An exception is part of the rule, not a defeat of it. Find the rule first, then ask whether the facts fall inside a recognised exception.",
+   "advanced": "Who proves an exception is a separate question from who proves the rule. Section 105 of the Evidence Act puts the burden of proving an exception on the accused, on the balance of probabilities.",
+   "source": "Evidence Act 1950, s 105",
+   "aliases": [
+    "exception",
+    "exceptions",
+    "exceptional",
+    "exceptions'"
+   ],
+   "see": [
+    "section-105",
+    "general-exceptions",
+    "legal-burden",
+    "construction"
+   ]
+  },
+  {
+   "id": "exercise-power",
+   "term": "exercise",
+   "kind": "method",
+   "gloss": "To use a power that has been given to you.",
+   "intermediate": "Public bodies exercise powers, and the exercise is what gets reviewed. Having a power is lawful; using it badly may not be.",
+   "advanced": "Discretion must be exercised, not surrendered: a body that applies a rigid policy without considering the case has fettered its discretion, which is a distinct ground of review.",
+   "source": "Administrative law",
+   "aliases": [
+    "exercise",
+    "exercised",
+    "exercising",
+    "exercises"
+   ],
+   "see": [
+    "discretion",
+    "judicial-review",
+    "ultra-vires",
+    "ground"
+   ]
+  },
+  {
+   "id": "existence",
+   "term": "existence",
+   "kind": "word",
+   "gloss": "Whether something is there at all, as opposed to how far it goes.",
+   "intermediate": "Split every question in two: does the right exist, and what is its extent. Mixing them is how arguments go in circles.",
+   "advanced": "Section 101 of the Evidence Act frames the burden around the existence of facts. Existence questions are also where jurisdiction lives: a body cannot give itself power by finding that it has some.",
+   "source": "Evidence Act 1950, s 101",
+   "aliases": [
+    "existence",
+    "exist",
+    "exists",
+    "existed",
+    "existing"
+   ],
+   "see": [
+    "jurisdiction",
+    "legal-burden",
+    "extent",
+    "ultra-vires"
+   ]
+  },
+  {
+   "id": "experience",
+   "term": "experience",
+   "kind": "word",
+   "gloss": "What a person has actually seen and done.",
+   "intermediate": "Experience does not lower a legal standard. A learner driver is judged by the standard of a competent one.",
+   "advanced": "It does matter in two places: where a statute makes it relevant, and where a professional holds themselves out as having a particular skill, which raises rather than lowers the standard.",
+   "source": "Tort",
+   "aliases": [
+    "experience",
+    "experienced",
+    "experiences"
+   ],
+   "see": [
+    "careless",
+    "driver",
+    "breach-of-duty",
+    "fault"
+   ]
+  },
+  {
+   "id": "explanation",
+   "term": "explanation",
+   "kind": "statute",
+   "gloss": "A numbered passage in a statute that clarifies the section above it.",
+   "intermediate": "Penal Code sections often carry Explanations and Illustrations. They are part of the Act and are read with the section, not as commentary.",
+   "advanced": "An Explanation cannot contradict the section it explains, but it can restrict or widen its apparent scope. Ignoring one is a standard way to misstate an offence.",
+   "source": "Penal Code; Contracts Act 1950",
+   "aliases": [
+    "explanation",
+    "explanations"
+   ],
+   "see": [
+    "proviso",
+    "illustration",
+    "construction",
+    "marginal-note"
+   ]
+  },
+  {
    "id": "expressio-unius",
    "term": "expressio unius est exclusio alterius",
    "kind": "latin",
@@ -1626,6 +3209,43 @@
    "aliases": [
     "expressio unius est exclusio alterius",
     "expressio unius"
+   ]
+  },
+  {
+   "id": "expressly",
+   "term": "expressly",
+   "kind": "word",
+   "gloss": "Said in so many words, rather than implied.",
+   "intermediate": "An express term is written or spoken; an implied one is read in. Courts imply terms sparingly and never against an express one.",
+   "advanced": "Expressio unius rests on the same idea: what a statute mentions expressly suggests that what it leaves out was meant to be left out. It is a guide, not a rule.",
+   "source": "Statutory interpretation; contract",
+   "aliases": [
+    "express",
+    "expressly"
+   ],
+   "see": [
+    "expressio-unius",
+    "construction",
+    "contract",
+    "condition"
+   ]
+  },
+  {
+   "id": "extent",
+   "term": "extent",
+   "kind": "word",
+   "gloss": "How far something reaches.",
+   "intermediate": "Legal answers are usually about extent, not existence. A duty exists — the fight is over how far it goes.",
+   "advanced": "Article 75 voids an inconsistent state law *to the extent of the inconsistency*, not entirely. Reading extent words carefully is what keeps a partial invalidity from becoming a total one.",
+   "source": "Federal Constitution, Article 75",
+   "aliases": [
+    "extent"
+   ],
+   "see": [
+    "article-75",
+    "inconsistent",
+    "construction",
+    "proportionality"
    ]
   },
   {
@@ -1644,6 +3264,70 @@
    "aliases": [
     "facts in issue",
     "fact in issue"
+   ]
+  },
+  {
+   "id": "failure",
+   "term": "failure",
+   "kind": "word",
+   "gloss": "Not doing something the law or an agreement required.",
+   "intermediate": "A failure is an omission with consequences. Failure to perform is breach; failure to appear can cost you the case.",
+   "advanced": "Liability for omissions is exceptional in tort and requires a duty to act — from a relationship, an undertaking, or control over the source of danger. The general rule is that there is no duty to rescue.",
+   "source": "Tort; Rules of Court 2012",
+   "aliases": [
+    "failure",
+    "failures",
+    "fail",
+    "fails",
+    "failed",
+    "failing"
+   ],
+   "see": [
+    "breach",
+    "duty-of-care",
+    "default",
+    "striking-out"
+   ]
+  },
+  {
+   "id": "fair",
+   "term": "fair",
+   "kind": "word",
+   "gloss": "Even-handed in procedure — not the same as producing a good outcome.",
+   "intermediate": "When lawyers say a hearing was unfair they usually mean the process was wrong: no notice, no chance to answer, a biased decider.",
+   "advanced": "Fairness in public law is the modern name for natural justice, and its content varies with context. A licensing renewal and a dismissal do not attract the same procedure.",
+   "source": "Natural justice",
+   "aliases": [
+    "fair",
+    "fairly",
+    "fairness",
+    "unfair"
+   ],
+   "see": [
+    "natural-justice",
+    "audi-alteram-partem",
+    "nemo-judex",
+    "legitimate-expectation"
+   ]
+  },
+  {
+   "id": "fault",
+   "term": "fault",
+   "kind": "doctrine",
+   "gloss": "Blameworthiness — the reason the law attaches liability.",
+   "intermediate": "Most liability needs fault of some kind: intention, knowledge or carelessness. Some does not, and that is the exception worth noticing.",
+   "advanced": "Strict liability dispenses with fault as to one element, usually to make enforcement workable. It rarely dispenses with the act itself, so an involuntary act is still a defence.",
+   "source": "Tort; Penal Code",
+   "aliases": [
+    "fault",
+    "faults",
+    "faulty"
+   ],
+   "see": [
+    "strict-liability",
+    "mens-rea",
+    "careless",
+    "liability"
    ]
   },
   {
@@ -1701,6 +3385,108 @@
    ]
   },
   {
+   "id": "force-of-law",
+   "term": "force of law",
+   "kind": "word",
+   "gloss": "Legal effect — or physical compulsion, depending on context.",
+   "intermediate": "A rule with the force of law can be enforced by a court. Force in the physical sense appears in assault, private defence and arrest.",
+   "advanced": "Subsidiary legislation has the force of law only within the enabling Act. Guidance and circulars usually have none, though they can generate a legitimate expectation.",
+   "source": "Interpretation Acts 1948 and 1967",
+   "aliases": [
+    "force of law",
+    "in force"
+   ],
+   "see": [
+    "subsidiary-legislation",
+    "private-defence",
+    "legitimate-expectation",
+    "enactment"
+   ]
+  },
+  {
+   "id": "foreseeable",
+   "term": "foreseeable",
+   "kind": "doctrine",
+   "gloss": "Something a reasonable person would have seen coming.",
+   "intermediate": "Foreseeability is judged objectively and in advance, not with hindsight. The question is what a reasonable person in the defendant's position would have anticipated.",
+   "advanced": "It appears twice in negligence and means different things: at duty it is about the class of person, at remoteness it is about the kind of damage. Wagon Mound made the second a separate hurdle.",
+   "source": "Tort",
+   "aliases": [
+    "foreseeable",
+    "foreseeability",
+    "foresee",
+    "foreseen",
+    "unforeseeable"
+   ],
+   "see": [
+    "duty-of-care",
+    "remoteness",
+    "negligence",
+    "eggshell-skull"
+   ]
+  },
+  {
+   "id": "forgery",
+   "term": "forgery",
+   "kind": "doctrine",
+   "gloss": "Making a false document to pass it off as genuine.",
+   "intermediate": "Forgery is about the document lying about who made it, not merely about the contents being untrue. A truthful statement on a document signed in someone else's name is still a forgery.",
+   "advanced": "In land, a forged instrument is one of the exceptions in section 340(2), and the fight is over whether the immediate transferee or a subsequent purchaser is protected by the proviso.",
+   "source": "Penal Code, ss 463-471; National Land Code, s 340",
+   "aliases": [
+    "forgery",
+    "forge",
+    "forged",
+    "forging",
+    "forges"
+   ],
+   "see": [
+    "section-340",
+    "deferred-indefeasibility",
+    "sign",
+    "fraud"
+   ]
+  },
+  {
+   "id": "formality",
+   "term": "formality",
+   "kind": "doctrine",
+   "gloss": "A required form — writing, signature, registration, a witness.",
+   "intermediate": "Most contracts need no formality at all. Where a statute requires one, failing it can make the transaction unenforceable or void.",
+   "advanced": "Distinguish formalities that go to validity from those that go to proof. A dealing in land is ineffective without registration; a contract may be perfectly valid and merely harder to prove.",
+   "source": "National Land Code; Contracts Act 1950",
+   "aliases": [
+    "formality",
+    "formalities",
+    "formal"
+   ],
+   "see": [
+    "substance-form",
+    "registration",
+    "transfer",
+    "void"
+   ]
+  },
+  {
+   "id": "forum",
+   "term": "forum",
+   "kind": "method",
+   "gloss": "The court or body with authority to hear the matter.",
+   "intermediate": "Choosing the wrong forum wastes the case. A tribunal, a syariah court and a civil court each have a defined reach.",
+   "advanced": "Article 121(1A) makes forum the first question in many family and religious disputes: if the matter is within syariah jurisdiction, the civil High Court has none, however strong the merits.",
+   "source": "Federal Constitution, Article 121(1A)",
+   "aliases": [
+    "forum",
+    "forums"
+   ],
+   "see": [
+    "jurisdiction",
+    "syariah-court",
+    "article-121a",
+    "tribunal"
+   ]
+  },
+  {
    "id": "fraud",
    "term": "fraud",
    "kind": "doctrine",
@@ -1735,6 +3521,25 @@
    ],
    "aliases": [
     "free consent"
+   ]
+  },
+  {
+   "id": "freedom",
+   "term": "freedom",
+   "kind": "doctrine",
+   "gloss": "A liberty the Constitution protects — and limits.",
+   "intermediate": "Constitutional freedoms are not absolute. Each comes with the grounds on which Parliament may restrict it, written into the same Article.",
+   "advanced": "Article 10 protects speech, assembly and association for citizens, subject to restrictions Parliament deems necessary or expedient on listed grounds. The fight is over how far *necessary or expedient* is reviewable at all.",
+   "source": "Federal Constitution, Article 10",
+   "aliases": [
+    "freedom",
+    "freedoms"
+   ],
+   "see": [
+    "article-10",
+    "fundamental-liberties",
+    "proportionality",
+    "citizen"
    ]
   },
   {
@@ -1824,6 +3629,25 @@
    ]
   },
   {
+   "id": "genuine",
+   "term": "genuine",
+   "kind": "word",
+   "gloss": "Real rather than pretended.",
+   "intermediate": "Genuine appears where the law tests sincerity: a genuine pre-estimate of loss, a genuine dispute, a genuine signature.",
+   "advanced": "A clause that is a genuine pre-estimate of loss is enforceable at common law. Section 75 of the Contracts Act sidesteps that inquiry and asks instead for reasonable compensation.",
+   "source": "Contracts Act 1950, s 75",
+   "aliases": [
+    "genuine",
+    "genuinely"
+   ],
+   "see": [
+    "liquidated-damages",
+    "section-75",
+    "forgery",
+    "free-consent"
+   ]
+  },
+  {
    "id": "golden-rule",
    "term": "golden rule",
    "kind": "doctrine",
@@ -1840,20 +3664,64 @@
    ]
   },
   {
-   "id": "guarantee",
-   "term": "guarantee",
-   "kind": "doctrine",
-   "gloss": "A promise to answer for another's default.",
-   "intermediate": "A promise that if someone else does not pay, you will. A bank asking a director to sign personally is asking for a guarantee.",
-   "advanced": "A guarantee is a secondary obligation, so it depends on the principal debt existing. It is the commonest hole in the protection of separate legal personality — not the shares and not the seat on the board, but a contract signed in the person's own name.",
-   "source": "Contracts Act 1950",
+   "id": "govern",
+   "term": "govern",
+   "kind": "word",
+   "gloss": "To control the answer — the rule that applies.",
+   "intermediate": "When a case says a section governs the question, it means look there first and stop looking elsewhere unless it sends you on.",
+   "advanced": "A governing provision displaces the common law only so far as it covers the ground. Section 3 of the Civil Law Act keeps English rules alive precisely where no local statute governs.",
+   "source": "Statutory interpretation",
    "aliases": [
-    "guarantee",
-    "guarantees"
+    "govern",
+    "governs",
+    "governed",
+    "governing"
    ],
    "see": [
-    "indemnity",
-    "company"
+    "section-3-cla",
+    "construction",
+    "codification",
+    "statute"
+   ]
+  },
+  {
+   "id": "government",
+   "term": "government",
+   "kind": "institution",
+   "gloss": "The executive — federal or state — as a legal person.",
+   "intermediate": "The Government can sue and be sued, but on special terms. Claims against it follow a statutory procedure.",
+   "advanced": "The Government Proceedings Act 1956 sets the conditions, including notice requirements and limits on the remedies available. An injunction against the Government is a particularly restricted remedy.",
+   "source": "Government Proceedings Act 1956",
+   "aliases": [
+    "government",
+    "governments"
+   ],
+   "see": [
+    "minister",
+    "judicial-review",
+    "interlocutory-injunction",
+    "administrative"
+   ]
+  },
+  {
+   "id": "grant",
+   "term": "grant",
+   "kind": "doctrine",
+   "gloss": "To give something formally — a right, an order or permission.",
+   "intermediate": "Courts grant orders; authorities grant licences; the state grants land. In each case the grantor has power to give and conditions to attach.",
+   "advanced": "In land, the state grant is the origin of title under the National Land Code, and the conditions in it — express and implied — bind every later proprietor.",
+   "source": "National Land Code",
+   "aliases": [
+    "grant",
+    "grants",
+    "granted",
+    "granting"
+   ],
+   "see": [
+    "licence",
+    "register-title",
+    "proprietor",
+    "remedy"
    ]
   },
   {
@@ -1875,6 +3743,79 @@
    ]
   },
   {
+   "id": "grievous",
+   "term": "grievous",
+   "kind": "doctrine",
+   "gloss": "Serious, in the specific sense a statute defines.",
+   "intermediate": "Grievous hurt is not simply bad hurt. The Penal Code lists exactly what counts, and an injury outside the list is not grievous however painful.",
+   "advanced": "Section 320 gives eight kinds of grievous hurt, closing with hurt that endangers life or keeps the sufferer in severe bodily pain for twenty days. The list is exhaustive, and charging practice turns on it.",
+   "source": "Penal Code, s 320",
+   "aliases": [
+    "grievous"
+   ],
+   "see": [
+    "injury",
+    "offence",
+    "penal-code",
+    "punishment"
+   ]
+  },
+  {
+   "id": "ground",
+   "term": "ground",
+   "kind": "method",
+   "gloss": "A reason the law recognises for granting what you are asking for.",
+   "intermediate": "Grounds are not arguments in general — they are the recognised heads. Judicial review has three: illegality, irrationality and procedural impropriety. Anything else has to be fitted into one of them.",
+   "advanced": "Naming the ground disciplines the pleading. A challenge that cannot be located in a ground is usually a complaint about the merits dressed as a complaint about legality.",
+   "source": "Judicial review; Rules of Court",
+   "aliases": [
+    "ground",
+    "grounds"
+   ],
+   "see": [
+    "judicial-review",
+    "gchq",
+    "wednesbury",
+    "pleading"
+   ]
+  },
+  {
+   "id": "guarantee",
+   "term": "guarantee",
+   "kind": "doctrine",
+   "gloss": "A promise to answer for another's default.",
+   "intermediate": "A promise that if someone else does not pay, you will. A bank asking a director to sign personally is asking for a guarantee.",
+   "advanced": "A guarantee is a secondary obligation, so it depends on the principal debt existing. It is the commonest hole in the protection of separate legal personality — not the shares and not the seat on the board, but a contract signed in the person's own name.",
+   "source": "Contracts Act 1950",
+   "aliases": [
+    "guarantee",
+    "guarantees"
+   ],
+   "see": [
+    "indemnity",
+    "company"
+   ]
+  },
+  {
+   "id": "guilty",
+   "term": "guilty",
+   "kind": "doctrine",
+   "gloss": "Found by a court to have committed the offence.",
+   "intermediate": "Guilty is a verdict, not a description. Until a court says so, an accused is presumed innocent however strong the evidence looks.",
+   "advanced": "A plea of guilty must be unequivocal and made with an understanding of the charge, otherwise the conviction is liable to be set aside. That is a procedural safeguard, not a technicality.",
+   "source": "Criminal Procedure Code",
+   "aliases": [
+    "guilty",
+    "guilt"
+   ],
+   "see": [
+    "conviction",
+    "acquittal",
+    "accused",
+    "beyond-reasonable-doubt"
+   ]
+  },
+  {
    "id": "habeas-corpus",
    "term": "habeas corpus",
    "kind": "latin",
@@ -1889,6 +3830,101 @@
    ],
    "aliases": [
     "habeas corpus"
+   ]
+  },
+  {
+   "id": "habit",
+   "term": "habit",
+   "kind": "word",
+   "gloss": "A settled way of doing something — occasionally evidence of what was done.",
+   "intermediate": "Evidence of habit can support an inference about a particular occasion, but it is weak on its own and easily over-read.",
+   "advanced": "Habit and character are different. Character evidence is tightly restricted by sections 52-55 of the Evidence Act; habit is relevant only where it bears on a fact in issue.",
+   "source": "Evidence Act 1950, ss 52-55",
+   "aliases": [
+    "habit",
+    "habits",
+    "habitual"
+   ],
+   "see": [
+    "evidence",
+    "relevancy",
+    "inference",
+    "fact-in-issue"
+   ]
+  },
+  {
+   "id": "harm",
+   "term": "harm",
+   "kind": "word",
+   "gloss": "Injury or loss of any kind, physical or financial.",
+   "intermediate": "A general word covering everything from a broken leg to a lost contract. Law usually needs it narrowed: which harm, to whom, caused by what.",
+   "advanced": "Not every harm is actionable. The question is whether the defendant owed a duty in respect of *this kind* of harm — which is why economic loss and psychiatric injury are treated separately from physical damage.",
+   "source": "Tort",
+   "aliases": [
+    "harm",
+    "harms",
+    "harmed"
+   ],
+   "see": [
+    "damage-harm",
+    "duty-of-care",
+    "remoteness"
+   ]
+  },
+  {
+   "id": "headnote",
+   "term": "headnote",
+   "kind": "method",
+   "gloss": "The reporter's summary at the top of a reported case.",
+   "intermediate": "A headnote tells you what the case was about and what was held, in a few lines. It is written by the law reporter, not by the court.",
+   "advanced": "A headnote is not authority and has been wrong. Use it to decide whether to read the case, then cite the paragraph of the judgment that actually says what you claim.",
+   "source": "Law reporting convention",
+   "aliases": [
+    "headnote",
+    "headnotes"
+   ],
+   "see": [
+    "mlj",
+    "ratio-decidendi",
+    "held",
+    "noting-up"
+   ]
+  },
+  {
+   "id": "hearing",
+   "term": "hearing",
+   "kind": "method",
+   "gloss": "The occasion on which a court or body listens before deciding.",
+   "intermediate": "A hearing does not always mean an oral one. What fairness requires is a real opportunity to answer, which can sometimes be in writing.",
+   "advanced": "Audi alteram partem sets the floor. Its content is contextual: notice of the case, the substance of adverse material, and time to respond, scaled to what is at stake.",
+   "source": "Natural justice",
+   "aliases": [
+    "hearing",
+    "hearings"
+   ],
+   "see": [
+    "audi-alteram-partem",
+    "natural-justice",
+    "fair",
+    "trial"
+   ]
+  },
+  {
+   "id": "held",
+   "term": "held",
+   "kind": "method",
+   "gloss": "What a court decided — the word that introduces the holding.",
+   "intermediate": "In a case note, *held* signals the court's actual decision on a point of law. It is the part later courts must follow.",
+   "advanced": "A headnote's *held* is the reporter's summary, not the court's words. Cite the paragraph of the judgment, because the headnote is not authority and has been wrong before.",
+   "source": "Law reporting convention",
+   "aliases": [
+    "held"
+   ],
+   "see": [
+    "ratio-decidendi",
+    "headnote",
+    "obiter-dictum",
+    "binding-authority"
    ]
   },
   {
@@ -1926,6 +3962,105 @@
    "see": [
     "uksc",
     "ac"
+   ]
+  },
+  {
+   "id": "identical",
+   "term": "identical",
+   "kind": "word",
+   "gloss": "The same in every respect that matters.",
+   "intermediate": "Cases are never identical in fact. The question is whether they are alike in the respects the rule makes relevant.",
+   "advanced": "That is the whole of distinguishing. A difference that did not matter to the earlier ratio is not a ground for departing from it, however striking it looks.",
+   "source": "Legal method",
+   "aliases": [
+    "identical"
+   ],
+   "see": [
+    "distinguishing",
+    "material-fact",
+    "ratio-decidendi",
+    "reasoning"
+   ]
+  },
+  {
+   "id": "illustration",
+   "term": "illustration",
+   "kind": "statute",
+   "gloss": "A worked example printed inside a statute.",
+   "intermediate": "The Contracts Act and Penal Code contain lettered illustrations. They show how the section is meant to work on facts.",
+   "advanced": "Illustrations are part of the Act and are strong guides to construction, though they cannot override the section's clear words where the two genuinely conflict.",
+   "source": "Contracts Act 1950; Penal Code",
+   "aliases": [
+    "illustration",
+    "illustrations"
+   ],
+   "see": [
+    "explanation",
+    "construction",
+    "contracts-act",
+    "penal-code"
+   ]
+  },
+  {
+   "id": "improper",
+   "term": "improper",
+   "kind": "method",
+   "gloss": "Done for the wrong reason, or in the wrong way.",
+   "intermediate": "Improper purpose is a ground of review: the power was used for something it was not given for. The decision can be perfectly reasonable and still unlawful.",
+   "advanced": "Improper purpose overlaps with irrelevant considerations and bad faith but is distinct. Bad faith requires dishonesty; improper purpose does not.",
+   "source": "Administrative law",
+   "aliases": [
+    "improper",
+    "improperly",
+    "impropriety"
+   ],
+   "see": [
+    "judicial-review",
+    "ground",
+    "ultra-vires",
+    "exercise-power"
+   ]
+  },
+  {
+   "id": "include",
+   "term": "include",
+   "kind": "word",
+   "gloss": "In a definition, to add to the ordinary meaning rather than replace it.",
+   "intermediate": "*Includes* extends: the word keeps its normal sense and gains what follows. *Means* replaces it entirely.",
+   "advanced": "Reading *includes* as exhaustive is one of the most common interpretation errors, and it narrows statutes that Parliament wrote to be wide.",
+   "source": "Interpretation Acts 1948 and 1967",
+   "aliases": [
+    "include",
+    "includes",
+    "included",
+    "including",
+    "inclusive"
+   ],
+   "see": [
+    "definition",
+    "construction",
+    "ejusdem-generis",
+    "meaning"
+   ]
+  },
+  {
+   "id": "inconsistent",
+   "term": "inconsistent",
+   "kind": "word",
+   "gloss": "Unable to stand together — one contradicts the other.",
+   "intermediate": "Inconsistency is a legal test, not just an observation. A state law inconsistent with a federal law is void to the extent of the inconsistency.",
+   "advanced": "Article 75 requires a real conflict, not merely overlapping subject matter. Two laws that can both be obeyed are not inconsistent, however untidy the overlap.",
+   "source": "Federal Constitution, Article 75",
+   "aliases": [
+    "inconsistent",
+    "inconsistency",
+    "inconsistencies"
+   ],
+   "see": [
+    "article-75",
+    "legislative-competence",
+    "supremacy",
+    "ninth-schedule"
    ]
   },
   {
@@ -1980,6 +4115,65 @@
    ]
   },
   {
+   "id": "information-word",
+   "term": "information",
+   "kind": "doctrine",
+   "gloss": "Facts communicated — and, in procedure, the report that starts a case.",
+   "intermediate": "A first information report starts a police investigation. Information in the wider sense is what evidence conveys.",
+   "advanced": "Section 27 of the Evidence Act makes so much of information received from an accused admissible as leads to a discovery of fact, which is a narrow and heavily litigated exception to the rules on confessions.",
+   "source": "Evidence Act 1950, s 27",
+   "aliases": [
+    "information"
+   ],
+   "see": [
+    "investigation",
+    "evidence-act",
+    "admissibility",
+    "admission"
+   ]
+  },
+  {
+   "id": "injury",
+   "term": "injury",
+   "kind": "doctrine",
+   "gloss": "Harm to a person's body, mind, reputation or legal rights.",
+   "intermediate": "Personal injury is the everyday sense. But law also speaks of injury to a right — a wrong done to your legal position, even without a bruise.",
+   "advanced": "Injuria sine damno (a wrong without loss) is actionable in torts that protect a right as such, like trespass. Damnum sine injuria (loss without a wrong) is not actionable at all.",
+   "source": "Tort",
+   "aliases": [
+    "injury",
+    "injuries",
+    "injured"
+   ],
+   "see": [
+    "damage-harm",
+    "negligence",
+    "eggshell-skull",
+    "tort"
+   ]
+  },
+  {
+   "id": "intention",
+   "term": "intention",
+   "kind": "doctrine",
+   "gloss": "What a person meant to do or bring about.",
+   "intermediate": "Intention is a state of mind, proved by conduct rather than confession. Courts infer it from what was done and said.",
+   "advanced": "Distinguish intention in crime, where it grades the offence, from intention in contract, where it is objective — what a reasonable person would take the words to mean, not what the speaker privately meant.",
+   "source": "Penal Code; Contracts Act 1950",
+   "aliases": [
+    "intention",
+    "intentions",
+    "intentional",
+    "intentionally"
+   ],
+   "see": [
+    "mens-rea",
+    "murder",
+    "construction",
+    "proposal"
+   ]
+  },
+  {
    "id": "interleaving",
    "term": "interleaving",
    "kind": "method",
@@ -2013,7 +4207,8 @@
    "aliases": [
     "interlocutory injunction",
     "interim injunction",
-    "injunction"
+    "injunction",
+    "injunctions"
    ]
   },
   {
@@ -2032,6 +4227,28 @@
    ]
   },
   {
+   "id": "investigation",
+   "term": "investigation",
+   "kind": "doctrine",
+   "gloss": "The police stage of a criminal case, before anyone is charged.",
+   "intermediate": "Investigation gathers evidence: statements, searches, seizures. Charging comes afterwards, and the decision to charge is not the police's alone.",
+   "advanced": "Chapter XIII of the Criminal Procedure Code governs police investigation, and statements recorded under section 112 are subject to strict limits on later use at trial.",
+   "source": "Criminal Procedure Code, Chapter XIII",
+   "aliases": [
+    "investigation",
+    "investigations",
+    "investigate",
+    "investigated",
+    "investigating"
+   ],
+   "see": [
+    "arrest",
+    "remand",
+    "public-prosecutor",
+    "seizable"
+   ]
+  },
+  {
    "id": "irac",
    "term": "IRAC",
    "kind": "method",
@@ -2046,6 +4263,27 @@
    ],
    "aliases": [
     "IRAC"
+   ]
+  },
+  {
+   "id": "judge-role",
+   "term": "judge",
+   "kind": "institution",
+   "gloss": "The officer who decides the case and gives reasons for it.",
+   "intermediate": "A judge finds the facts (unless a jury does), applies the law, and writes the judgment. What binds later courts is the reasoning, not the result.",
+   "advanced": "Judicial power is vested by Article 121. A judge's own view of good policy is not a source of law, which is the whole point of the distinction between ratio and obiter.",
+   "source": "Federal Constitution, Article 121",
+   "aliases": [
+    "judge",
+    "judges",
+    "judge's",
+    "judges'"
+   ],
+   "see": [
+    "judicial-power",
+    "ratio-decidendi",
+    "obiter-dictum",
+    "high-court"
    ]
   },
   {
@@ -2098,6 +4336,107 @@
    "see": [
     "judicial-review",
     "ultra-vires"
+   ]
+  },
+  {
+   "id": "justiciable",
+   "term": "justiciable",
+   "kind": "method",
+   "gloss": "Suitable for a court to decide.",
+   "intermediate": "Some questions have no legal standard to decide them by — whether a policy was wise, for example. Those are said not to be justiciable.",
+   "advanced": "Non-justiciability is about the nature of the question, not the identity of the decision-maker. A minister's decision on legality is reviewable even where the same minister's decision on priorities is not.",
+   "source": "Administrative law",
+   "aliases": [
+    "justiciable",
+    "justiciability",
+    "non-justiciable"
+   ],
+   "see": [
+    "judicial-review",
+    "ouster-clause",
+    "discretion",
+    "ground"
+   ]
+  },
+  {
+   "id": "kill",
+   "term": "kill",
+   "kind": "doctrine",
+   "gloss": "To cause the death of another person.",
+   "intermediate": "Killing is not automatically murder. The same act can be murder, culpable homicide, or no offence at all, depending on state of mind and defences.",
+   "advanced": "Section 299 defines culpable homicide; section 300 lifts it to murder in four situations, and the exceptions to section 300 bring it back down. Read the ladder in that order.",
+   "source": "Penal Code, ss 299-300",
+   "aliases": [
+    "kill",
+    "kills",
+    "killed",
+    "killing"
+   ],
+   "see": [
+    "murder",
+    "culpable-homicide",
+    "death",
+    "mens-rea"
+   ]
+  },
+  {
+   "id": "knowledge",
+   "term": "knowledge",
+   "kind": "doctrine",
+   "gloss": "Actually knowing something — a state of mind the law often requires.",
+   "intermediate": "Many offences and liabilities need knowledge, not just carelessness. Proving it usually means proving what the person must have realised.",
+   "advanced": "Knowledge sits between intention and negligence on the fault ladder. Section 26 of the Penal Code defines *reason to believe*, which is lower than knowledge and higher than mere suspicion.",
+   "source": "Penal Code, ss 25-26",
+   "aliases": [
+    "knowledge",
+    "know",
+    "knows",
+    "knowing",
+    "knowingly"
+   ],
+   "see": [
+    "mens-rea",
+    "dishonestly",
+    "intention",
+    "notice"
+   ]
+  },
+  {
+   "id": "landlord",
+   "term": "landlord",
+   "kind": "doctrine",
+   "gloss": "The person who grants a lease or tenancy of land.",
+   "intermediate": "The landlord keeps ownership and gives away possession for a period. What is left is called the reversion — the right to have the land back.",
+   "advanced": "Distinguish a landlord's contractual rights from proprietary ones. A registered lease binds a purchaser of the reversion; a mere agreement to lease may not.",
+   "source": "National Land Code; Contracts Act 1950",
+   "aliases": [
+    "landlord",
+    "landlords",
+    "landlord's"
+   ],
+   "see": [
+    "tenant",
+    "lease",
+    "possession",
+    "property-law"
+   ]
+  },
+  {
+   "id": "lawful",
+   "term": "lawful",
+   "kind": "word",
+   "gloss": "Permitted by law.",
+   "intermediate": "Lawful means the law allows it. It does not mean the law requires it, and it does not mean it is a good idea.",
+   "advanced": "Watch the load the word carries in a defence. Lawful authority, lawful excuse and lawful justification are separate doorways, and pleading the wrong one loses a winnable point.",
+   "source": "General usage in statutes",
+   "aliases": [
+    "lawful",
+    "lawfully"
+   ],
+   "see": [
+    "unlawful",
+    "private-defence",
+    "general-exceptions"
    ]
   },
   {
@@ -2237,6 +4576,27 @@
    ]
   },
   {
+   "id": "licence",
+   "term": "licence",
+   "kind": "doctrine",
+   "gloss": "Permission to do something that would otherwise be wrong.",
+   "intermediate": "A licence makes lawful what would be a trespass or an offence. It gives permission, not ownership — a licensee on land has no interest in it.",
+   "advanced": "The line between a licence and a lease is exclusive possession, not what the parties called the document. Getting it wrong changes whether the occupier has any right the courts will protect against a new owner.",
+   "source": "Land law; regulatory statutes",
+   "aliases": [
+    "licence",
+    "licences",
+    "licensed",
+    "licensee"
+   ],
+   "see": [
+    "lease",
+    "possession",
+    "tol",
+    "property-law"
+   ]
+  },
+  {
    "id": "lien-holders-caveat",
    "term": "lien-holder's caveat",
    "kind": "doctrine",
@@ -2253,6 +4613,45 @@
     "lien holder's caveat",
     "lien-holder's caveat",
     "lien"
+   ]
+  },
+  {
+   "id": "likely",
+   "term": "likely",
+   "kind": "word",
+   "gloss": "Probable — the word most legal standards are built from.",
+   "intermediate": "*Likely* usually means more probable than not. That is the civil standard, and it is lower than the criminal one.",
+   "advanced": "Section 74 of the Contracts Act uses knowledge of what was *likely* to result to fix the outer limit of recoverable loss. Likelihood is judged at the time of contracting, not at breach.",
+   "source": "Contracts Act 1950, s 74",
+   "aliases": [
+    "likely",
+    "likelihood",
+    "unlikely"
+   ],
+   "see": [
+    "balance-of-probabilities",
+    "remoteness",
+    "section-74",
+    "foreseeable"
+   ]
+  },
+  {
+   "id": "limb",
+   "term": "limb",
+   "kind": "method",
+   "gloss": "One branch of a test that has several parts.",
+   "intermediate": "When a rule has three requirements, lawyers call each one a limb. Saying which limb fails is more useful than saying the test is not met.",
+   "advanced": "Limbs can be cumulative or alternative, and the difference decides the case. Caparo's three are cumulative; the grounds of judicial review are alternatives.",
+   "source": "Legal method",
+   "aliases": [
+    "limb",
+    "limbs"
+   ],
+   "see": [
+    "irac",
+    "duty-of-care",
+    "ground",
+    "element"
    ]
   },
   {
@@ -2310,6 +4709,25 @@
    ]
   },
   {
+   "id": "loan",
+   "term": "loan",
+   "kind": "doctrine",
+   "gloss": "Money lent, to be repaid on agreed terms.",
+   "intermediate": "A loan creates a debt from the moment it is drawn down. Security is separate: it is what the lender can seize if the debt is not paid.",
+   "advanced": "A loan agreement and the charge securing it are distinct contracts with distinct remedies. A defect in the charge does not extinguish the debt, and a paid debt does not automatically clear the register.",
+   "source": "Contract; National Land Code",
+   "aliases": [
+    "loan",
+    "loans"
+   ],
+   "see": [
+    "debt",
+    "security",
+    "charge",
+    "borrower"
+   ]
+  },
+  {
    "id": "locus-standi",
    "term": "locus standi",
    "kind": "latin",
@@ -2359,7 +4777,28 @@
    "aliases": [
     "Magistrates' Court",
     "Magistrates Court",
-    "Magistrate"
+    "Magistrate",
+    "magistrates",
+    "magistrate's"
+   ]
+  },
+  {
+   "id": "majority",
+   "term": "majority",
+   "kind": "method",
+   "gloss": "The judges who agreed on the result — whose reasoning counts.",
+   "intermediate": "In an appellate court the majority decides. A dissent is worth reading but binds nobody.",
+   "advanced": "Where the majority agree on the result for different reasons, finding the ratio is harder: look for the narrowest reasoning that commands majority support.",
+   "source": "Precedent",
+   "aliases": [
+    "majority",
+    "majorities"
+   ],
+   "see": [
+    "ratio-decidendi",
+    "federal-court",
+    "court-of-appeal",
+    "binding-authority"
    ]
   },
   {
@@ -2430,6 +4869,26 @@
    ]
   },
   {
+   "id": "marriage",
+   "term": "marriage",
+   "kind": "doctrine",
+   "gloss": "A legally recognised union, with consequences the parties cannot fully choose.",
+   "intermediate": "Marriage changes legal status, not just living arrangements. It affects property, maintenance, children and inheritance.",
+   "advanced": "Malaysia runs two systems side by side: the Law Reform (Marriage and Divorce) Act 1976 for non-Muslims, and syariah law administered by state authorities for Muslims. Jurisdiction is decided first, and Article 121(1A) keeps the civil courts out of matters within syariah jurisdiction.",
+   "source": "Law Reform (Marriage and Divorce) Act 1976; Article 121(1A)",
+   "aliases": [
+    "marriage",
+    "marriages",
+    "married"
+   ],
+   "see": [
+    "divorce",
+    "syariah-court",
+    "article-121a",
+    "jurisdiction"
+   ]
+  },
+  {
    "id": "material-fact",
    "term": "material fact",
    "kind": "method",
@@ -2464,6 +4923,68 @@
    ]
   },
   {
+   "id": "meaning",
+   "term": "meaning",
+   "kind": "word",
+   "gloss": "What words in a statute or contract are taken to signify.",
+   "intermediate": "Meaning is decided by the court, not by what the writer says they meant. The question is what the words convey to a reasonable reader in context.",
+   "advanced": "Ordinary meaning, technical meaning and defined meaning are three different things, and a definition section beats all the others within its Act.",
+   "source": "Statutory interpretation",
+   "aliases": [
+    "meaning",
+    "meanings"
+   ],
+   "see": [
+    "construction",
+    "literal-rule",
+    "purposive-approach",
+    "definition"
+   ]
+  },
+  {
+   "id": "member",
+   "term": "member",
+   "kind": "doctrine",
+   "gloss": "A shareholder, seen from the company's side.",
+   "intermediate": "The register of members is the company's own list of owners. Rights against the company — to vote, to petition, to sue — belong to members.",
+   "advanced": "Membership, not shareholding in fact, gives standing under sections 346 and 347. Someone holding shares beneficially through a nominee is not on the register and must act through the nominee.",
+   "source": "Companies Act 2016",
+   "aliases": [
+    "member",
+    "members",
+    "member's",
+    "members'",
+    "membership"
+   ],
+   "see": [
+    "shareholder",
+    "company",
+    "oppression",
+    "derivative-action"
+   ]
+  },
+  {
+   "id": "memory-word",
+   "term": "memory",
+   "kind": "word",
+   "gloss": "What you can retrieve later — the point of studying at all.",
+   "intermediate": "Recognising a rule when you see it is not the same as being able to produce it. Only the second survives an exam or a client meeting.",
+   "advanced": "Retrieval practice and spacing beat rereading by a wide margin in the evidence, which is why this app tests rather than displays. Difficulty during study is a feature, not a fault.",
+   "source": "Cognitive psychology of learning",
+   "aliases": [
+    "memory",
+    "memorise",
+    "memorised",
+    "memorises"
+   ],
+   "see": [
+    "retrieval-practice",
+    "spacing",
+    "interleaving",
+    "desired-retention"
+   ]
+  },
+  {
    "id": "mens-rea",
    "term": "mens rea",
    "kind": "latin",
@@ -2478,6 +4999,25 @@
    ],
    "aliases": [
     "mens rea"
+   ]
+  },
+  {
+   "id": "mental",
+   "term": "mental",
+   "kind": "doctrine",
+   "gloss": "To do with the mind — the fault side of an offence.",
+   "intermediate": "Every offence has a physical part and usually a mental part. Proving the act without the required state of mind proves nothing.",
+   "advanced": "Mental element and motive are different. Motive is why someone acted and is never an element; the mental element is what they intended or knew, and it always is where the section says so.",
+   "source": "Penal Code",
+   "aliases": [
+    "mental",
+    "mentally"
+   ],
+   "see": [
+    "mens-rea",
+    "actus-reus",
+    "intention",
+    "knowledge"
    ]
   },
   {
@@ -2496,6 +5036,65 @@
    "aliases": [
     "Merdeka Day",
     "Merdeka"
+   ]
+  },
+  {
+   "id": "merits",
+   "term": "merits",
+   "kind": "method",
+   "gloss": "Whether a decision was right — as opposed to whether it was lawfully made.",
+   "intermediate": "Judicial review is not an appeal. The court asks whether the decision-maker stayed within the law, not whether it would have decided the same way.",
+   "advanced": "Wednesbury is the boundary marker: a decision so unreasonable that no reasonable authority could reach it becomes a legality question. Below that line the merits belong to the decision-maker.",
+   "source": "Administrative law",
+   "aliases": [
+    "merits",
+    "merit"
+   ],
+   "see": [
+    "judicial-review",
+    "wednesbury",
+    "ground",
+    "proportionality"
+   ]
+  },
+  {
+   "id": "method-word",
+   "term": "method",
+   "kind": "method",
+   "gloss": "A repeatable way of working through a legal problem.",
+   "intermediate": "Method is what you fall back on when you do not know the answer. IRAC is one; noting up a case is another.",
+   "advanced": "Method is transferable across subjects in a way content is not. A reader who can find the current text of a section and check whether a case still stands is not dependent on any particular syllabus.",
+   "source": "Legal method",
+   "aliases": [
+    "method",
+    "methods"
+   ],
+   "see": [
+    "irac",
+    "noting-up",
+    "thinking-like-a-lawyer",
+    "citator"
+   ]
+  },
+  {
+   "id": "minister",
+   "term": "minister",
+   "kind": "institution",
+   "gloss": "A member of the executive with powers given by statute.",
+   "intermediate": "Ministers make subsidiary legislation and take decisions that statutes assign to them. Those decisions are reviewable for legality.",
+   "advanced": "A minister's satisfaction clause — *if the Minister is satisfied* — narrows review but does not remove it. The court can still ask whether there was material capable of supporting the satisfaction.",
+   "source": "Administrative law",
+   "aliases": [
+    "minister",
+    "ministers",
+    "minister's",
+    "ministerial"
+   ],
+   "see": [
+    "subsidiary-legislation",
+    "judicial-review",
+    "ouster-clause",
+    "discretion"
    ]
   },
   {
@@ -2532,6 +5131,26 @@
    "aliases": [
     "misrepresentation",
     "misrepresent"
+   ]
+  },
+  {
+   "id": "mistake",
+   "term": "mistake",
+   "kind": "doctrine",
+   "gloss": "A belief that is wrong — and sometimes a reason to undo a contract.",
+   "intermediate": "Not every mistake matters. The law asks whether both sides were wrong about the same fundamental thing, or whether one side simply made a bad bargain.",
+   "advanced": "Sections 21-23 of the Contracts Act separate a mistake of fact by both parties, which can void the agreement, from a mistake by one party or a mistake of law, which generally does not.",
+   "source": "Contracts Act 1950, ss 21-23",
+   "aliases": [
+    "mistake",
+    "mistakes",
+    "mistaken"
+   ],
+   "see": [
+    "free-consent",
+    "void",
+    "misrepresentation",
+    "contract"
    ]
   },
   {
@@ -2601,6 +5220,27 @@
    ]
   },
   {
+   "id": "narrow",
+   "term": "narrow",
+   "kind": "word",
+   "gloss": "Confined to a small compass — of a rule or a reading.",
+   "intermediate": "A narrow reading of a case restricts it to its facts. It is the main way courts avoid a precedent without overruling it.",
+   "advanced": "Narrowing is legitimate where the earlier reasoning was tied to facts not present here. Narrowing merely because the result is inconvenient is what per incuriam and overruling exist to do openly.",
+   "source": "Precedent",
+   "aliases": [
+    "narrow",
+    "narrowly",
+    "narrower",
+    "narrows"
+   ],
+   "see": [
+    "distinguishing",
+    "overruling",
+    "per-incuriam",
+    "ratio-decidendi"
+   ]
+  },
+  {
    "id": "national-land-code",
    "term": "National Land Code",
    "kind": "statute",
@@ -2637,6 +5277,26 @@
    ]
   },
   {
+   "id": "necessary",
+   "term": "necessary",
+   "kind": "word",
+   "gloss": "Required — a word that does real work in legal tests.",
+   "intermediate": "*Necessary* sets a higher bar than useful or desirable. When a test uses it, showing convenience is not enough.",
+   "advanced": "It also marks the ratio: the reasoning *necessary* to the decision binds, and the rest is obiter. And necessary implication is the only route by which a statute takes away a fundamental right without saying so.",
+   "source": "Legal method; statutory interpretation",
+   "aliases": [
+    "necessary",
+    "necessarily",
+    "necessity"
+   ],
+   "see": [
+    "ratio-decidendi",
+    "obiter-dictum",
+    "proportionality",
+    "construction"
+   ]
+  },
+  {
    "id": "negligence",
    "term": "negligence",
    "kind": "doctrine",
@@ -2653,6 +5313,25 @@
    "aliases": [
     "negligence",
     "negligent"
+   ]
+  },
+  {
+   "id": "neighbour",
+   "term": "neighbour",
+   "kind": "doctrine",
+   "gloss": "Anyone so closely affected by what you do that you ought to have them in mind.",
+   "intermediate": "The word comes from Lord Atkin in Donoghue v Stevenson. It is a test of legal closeness, not of who lives next door.",
+   "advanced": "The neighbour principle was the original duty test and has since been narrowed. Caparo asks foreseeability, proximity and whether a duty is fair, just and reasonable — the neighbour idea survives inside the first two.",
+   "source": "Donoghue v Stevenson [1932] AC 562",
+   "aliases": [
+    "neighbour",
+    "neighbours",
+    "neighbour principle"
+   ],
+   "see": [
+    "duty-of-care",
+    "negligence",
+    "remoteness"
    ]
   },
   {
@@ -2729,6 +5408,26 @@
    ]
   },
   {
+   "id": "notice",
+   "term": "notice",
+   "kind": "doctrine",
+   "gloss": "Knowing something, or being treated by law as knowing it.",
+   "intermediate": "Notice can be actual (you knew) or constructive (you would have known if you had looked). It also means a formal document telling someone something.",
+   "advanced": "Under a Torrens system, notice of a prior unregistered interest does not by itself defeat a registered title. That is a deliberate difference from English land law and a common source of error.",
+   "source": "National Land Code; equity",
+   "aliases": [
+    "notice",
+    "notices",
+    "notified"
+   ],
+   "see": [
+    "register-title",
+    "indefeasibility",
+    "caveat",
+    "default"
+   ]
+  },
+  {
    "id": "noting-up",
    "term": "noting up",
    "kind": "method",
@@ -2783,6 +5482,65 @@
    ]
   },
   {
+   "id": "object-purpose",
+   "term": "object",
+   "kind": "doctrine",
+   "gloss": "The aim of an agreement or an Act — and, in contract, a ground of invalidity.",
+   "intermediate": "If the object of an agreement is unlawful, the agreement is void. The object is what the parties were trying to bring about.",
+   "advanced": "Section 24 of the Contracts Act makes consideration or object void where it is forbidden, defeats a law, is fraudulent, injures a person or property, or is immoral or against public policy.",
+   "source": "Contracts Act 1950, s 24",
+   "aliases": [
+    "object"
+   ],
+   "see": [
+    "section-24",
+    "void",
+    "unlawful",
+    "purpose"
+   ]
+  },
+  {
+   "id": "obligation",
+   "term": "obligation",
+   "kind": "word",
+   "gloss": "Something you are legally bound to do or not do.",
+   "intermediate": "Obligations come from agreement, from statute, or from the general law of wrongs. Naming the source tells you what happens when it is broken.",
+   "advanced": "The classical division is contract, tort and unjust enrichment. Malaysian law adds a fourth source in the Contracts Act's quasi-contract provisions, sections 69-73.",
+   "source": "Contracts Act 1950, ss 69-73",
+   "aliases": [
+    "obligation",
+    "obligations",
+    "obliged"
+   ],
+   "see": [
+    "contract",
+    "tort",
+    "quantum-meruit",
+    "owe"
+   ]
+  },
+  {
+   "id": "obtain",
+   "term": "obtain",
+   "kind": "word",
+   "gloss": "To get something — often by a required procedure.",
+   "intermediate": "You obtain leave, obtain an order, obtain consent. The word signals that permission or a step is needed first.",
+   "advanced": "Obtaining by deception is also the core of cheating under section 415 of the Penal Code, where the inducement and the delivery of property are separate elements.",
+   "source": "Rules of Court 2012; Penal Code, s 415",
+   "aliases": [
+    "obtain",
+    "obtains",
+    "obtained",
+    "obtaining"
+   ],
+   "see": [
+    "order-53",
+    "cheating",
+    "section-415",
+    "grant"
+   ]
+  },
+  {
    "id": "offence",
    "term": "offence",
    "kind": "doctrine",
@@ -2797,6 +5555,84 @@
    "see": [
     "actus-reus",
     "mens-rea"
+   ]
+  },
+  {
+   "id": "office",
+   "term": "office",
+   "kind": "institution",
+   "gloss": "A position with powers attached to the post rather than the person.",
+   "intermediate": "An officeholder exercises the powers of the office, not their own. When they leave, the powers stay with the post.",
+   "advanced": "This is why judicial review names the office rather than the individual, and why an act done in a personal capacity by an officeholder is not reviewable at all.",
+   "source": "Public law",
+   "aliases": [
+    "office",
+    "offices",
+    "officeholder"
+   ],
+   "see": [
+    "officer",
+    "judicial-review",
+    "public-prosecutor",
+    "agc"
+   ]
+  },
+  {
+   "id": "officer",
+   "term": "officer",
+   "kind": "institution",
+   "gloss": "A person holding an office, public or corporate.",
+   "intermediate": "Police officers, court officers and company officers all hold defined roles with defined powers. The word signals that duties come from the position.",
+   "advanced": "In company law *officer* is defined widely and reaches beyond directors, which matters because several offences and duties attach to officers rather than to directors alone.",
+   "source": "Companies Act 2016, s 2; Criminal Procedure Code",
+   "aliases": [
+    "officer",
+    "officers",
+    "officer's"
+   ],
+   "see": [
+    "office",
+    "director",
+    "company",
+    "arrest"
+   ]
+  },
+  {
+   "id": "official",
+   "term": "official",
+   "kind": "institution",
+   "gloss": "A person exercising public power, or the version issued by authority.",
+   "intermediate": "An official act is one done in the role, and it is the role that makes it reviewable. An official copy of a statute is the government's own text.",
+   "advanced": "Prefer official sources when citing legislation, because unofficial reprints go out of date silently. The Attorney General's Chambers portal is the authoritative text for Malaysian Acts.",
+   "source": "Attorney General's Chambers",
+   "aliases": [
+    "official",
+    "officially",
+    "officials"
+   ],
+   "see": [
+    "agc",
+    "officer",
+    "judicial-review",
+    "enactment"
+   ]
+  },
+  {
+   "id": "opposite",
+   "term": "opposite",
+   "kind": "word",
+   "gloss": "The reverse — often the fastest way to test a rule.",
+   "intermediate": "Ask what the opposite result would mean. If it is absurd, the rule you have stated is probably too wide.",
+   "advanced": "The converse of a rule does not follow from it. That a registered proprietor gets an indefeasible title does not mean an unregistered one gets nothing — a caveat and an equitable interest may still exist.",
+   "source": "Legal method",
+   "aliases": [
+    "opposite"
+   ],
+   "see": [
+    "reasoning",
+    "indefeasibility",
+    "caveat",
+    "boundary"
    ]
   },
   {
@@ -2815,6 +5651,26 @@
    "aliases": [
     "oppression",
     "oppressive"
+   ]
+  },
+  {
+   "id": "order-18",
+   "term": "Order 18",
+   "kind": "statute",
+   "gloss": "Rules of Court 2012 — pleadings.",
+   "intermediate": "Order 18 governs what a pleading must contain: the material facts relied on, not the evidence and not the law. Fraud and other serious allegations need particulars.",
+   "advanced": "A party is confined to its pleaded case, and Order 18 rule 19 is the striking-out power. Both are why the pleading is a strategic document rather than a formality.",
+   "source": "Rules of Court 2012, Order 18",
+   "find": "Free at kehakiman.gov.my — Rules of Court 2012 (P.U.(A) 205/2012)",
+   "aliases": [
+    "Order 18",
+    "O 18"
+   ],
+   "see": [
+    "pleading",
+    "material-fact",
+    "striking-out",
+    "particular"
    ]
   },
   {
@@ -2853,6 +5709,25 @@
    ]
   },
   {
+   "id": "ordinary",
+   "term": "ordinary",
+   "kind": "word",
+   "gloss": "The everyday sense of a word, as against a technical one.",
+   "intermediate": "Courts start with the ordinary meaning of statutory words. They leave it only where the Act defines the word or the context demands otherwise.",
+   "advanced": "*Ordinary* also marks the standard actor: the ordinary reasonable person in defamation, the ordinary prudent director in company law. Those are legal constructs, not surveys.",
+   "source": "Statutory interpretation",
+   "aliases": [
+    "ordinary",
+    "ordinarily"
+   ],
+   "see": [
+    "literal-rule",
+    "construction",
+    "meaning",
+    "careless"
+   ]
+  },
+  {
    "id": "originating-summons",
    "term": "originating summons",
    "kind": "doctrine",
@@ -2867,6 +5742,24 @@
    ],
    "aliases": [
     "originating summons"
+   ]
+  },
+  {
+   "id": "otherwise",
+   "term": "otherwise",
+   "kind": "word",
+   "gloss": "In another way — a word that quietly widens a statute.",
+   "intermediate": "*Or otherwise* at the end of a list usually extends it. How far it extends is settled by the class the earlier words establish.",
+   "advanced": "This is where ejusdem generis bites: general words after specific ones are read as confined to the same genus, unless the Act shows a wider purpose.",
+   "source": "Statutory interpretation",
+   "aliases": [
+    "otherwise"
+   ],
+   "see": [
+    "ejusdem-generis",
+    "noscitur-a-sociis",
+    "construction",
+    "include"
    ]
   },
   {
@@ -2889,6 +5782,25 @@
    ]
   },
   {
+   "id": "outcome",
+   "term": "outcome",
+   "kind": "word",
+   "gloss": "The practical effect of a decision on the parties.",
+   "intermediate": "The outcome is who won and what they got. It matters to the parties and much less to the law.",
+   "advanced": "Keep outcome apart from disposal: a successful appeal may still leave a party worse off after a remittal and a costs order.",
+   "source": "Legal method",
+   "aliases": [
+    "outcome",
+    "outcomes"
+   ],
+   "see": [
+    "result",
+    "remedy",
+    "decision",
+    "appeal"
+   ]
+  },
+  {
    "id": "overruling",
    "term": "overruling",
    "kind": "doctrine",
@@ -2904,6 +5816,86 @@
     "overruling",
     "overruled",
     "overrule"
+   ]
+  },
+  {
+   "id": "owe",
+   "term": "owe",
+   "kind": "word",
+   "gloss": "To be under an obligation — of money, or of care.",
+   "intermediate": "You owe a debt and you owe a duty. The word marks that someone else has a corresponding right.",
+   "advanced": "Duties are owed to particular people, not at large. Identifying to whom the duty was owed is what disposes of most novel negligence claims.",
+   "source": "Contract; tort",
+   "aliases": [
+    "owe",
+    "owes",
+    "owed",
+    "owing"
+   ],
+   "see": [
+    "duty-of-care",
+    "debt",
+    "obligation",
+    "liability"
+   ]
+  },
+  {
+   "id": "ownership-word",
+   "term": "ownership",
+   "kind": "doctrine",
+   "gloss": "The largest set of rights the law allows over a thing.",
+   "intermediate": "An owner can use, exclude, sell and destroy — subject to law. Ownership is a stronger claim than possession, which is only control.",
+   "advanced": "For land, ownership is defined by the register rather than by the strength of your documents. For goods, title can pass without possession, which is why sale of goods asks separately when property passes and when delivery happens.",
+   "source": "Land and personal property",
+   "aliases": [
+    "ownership"
+   ],
+   "see": [
+    "property-law",
+    "possession",
+    "register-title",
+    "proprietor"
+   ]
+  },
+  {
+   "id": "particular",
+   "term": "particular",
+   "kind": "word",
+   "gloss": "Specific rather than general — and, in pleading, the details relied on.",
+   "intermediate": "Particulars are the facts that make a bare allegation checkable. Fraud must be pleaded with particulars; a general accusation will be struck out.",
+   "advanced": "The rule is strict because an allegation of fraud damages a reputation before it is proved. Section 540 of the Companies Act and the Rules of Court both require the specific acts to be identified.",
+   "source": "Rules of Court 2012, Order 18",
+   "aliases": [
+    "particular",
+    "particulars",
+    "particularly"
+   ],
+   "see": [
+    "pleading",
+    "fraud",
+    "striking-out",
+    "material-fact"
+   ]
+  },
+  {
+   "id": "party",
+   "term": "party",
+   "kind": "method",
+   "gloss": "Someone whose name is on the case — the one suing, or the one being sued.",
+   "intermediate": "Only a party can win or lose. A witness gives evidence and goes home; a party is bound by the judgment.",
+   "advanced": "Being a party is what makes res judicata bite, and privity is the contract version of the same idea. Ask early who the parties are, because it decides who can be ordered to do anything.",
+   "source": "Rules of Court 2012",
+   "aliases": [
+    "party",
+    "parties",
+    "party's",
+    "parties'"
+   ],
+   "see": [
+    "plaintiff",
+    "defendant",
+    "privity",
+    "res-judicata"
    ]
   },
   {
@@ -2956,6 +5948,27 @@
    ]
   },
   {
+   "id": "permit",
+   "term": "permit",
+   "kind": "doctrine",
+   "gloss": "Official permission — or, as a verb, to allow.",
+   "intermediate": "A permit is a licence by another name. It makes lawful what a statute otherwise forbids, on the terms written into it.",
+   "advanced": "A permit granted by a body acting outside its statutory power is void, and a person prosecuted for acting without one can raise that in defence rather than having to bring a separate review.",
+   "source": "Regulatory statutes",
+   "aliases": [
+    "permit",
+    "permits",
+    "permitted",
+    "permission"
+   ],
+   "see": [
+    "licence",
+    "ultra-vires",
+    "by-law-word",
+    "council"
+   ]
+  },
+  {
    "id": "persuasive-authority",
    "term": "persuasive authority",
    "kind": "doctrine",
@@ -2974,6 +5987,25 @@
    ]
   },
   {
+   "id": "phrase",
+   "term": "phrase",
+   "kind": "word",
+   "gloss": "A group of words read together as a unit.",
+   "intermediate": "Statutes are read phrase by phrase. A word takes its colour from the words beside it, so pulling one out on its own distorts it.",
+   "advanced": "That is the basis of noscitur a sociis and ejusdem generis: general words following a list are read as limited to the same class. Both are aids, and both yield to clear contrary purpose.",
+   "source": "Statutory interpretation",
+   "aliases": [
+    "phrase",
+    "phrases"
+   ],
+   "see": [
+    "noscitur-a-sociis",
+    "ejusdem-generis",
+    "construction",
+    "meaning"
+   ]
+  },
+  {
    "id": "plaintiff",
    "term": "plaintiff",
    "kind": "doctrine",
@@ -2983,10 +6015,31 @@
    "source": "Rules of Court 2012",
    "aliases": [
     "plaintiff",
-    "plaintiffs"
+    "plaintiffs",
+    "plaintiff's"
    ],
    "see": [
     "defendant"
+   ]
+  },
+  {
+   "id": "plead",
+   "term": "plead",
+   "kind": "method",
+   "gloss": "To set out your case formally — or to answer a criminal charge.",
+   "intermediate": "In a civil case you plead facts, not evidence and not law. In a criminal case you plead guilty or not guilty to the charge.",
+   "advanced": "A party is bound by its pleadings and cannot win on a case it never pleaded. Amendments are possible but are discretionary and get harder the later they come.",
+   "source": "Rules of Court 2012, Order 18",
+   "aliases": [
+    "plead",
+    "pleads",
+    "pleaded"
+   ],
+   "see": [
+    "pleading",
+    "material-fact",
+    "striking-out",
+    "guilty"
    ]
   },
   {
@@ -3009,6 +6062,62 @@
    ]
   },
   {
+   "id": "position",
+   "term": "position",
+   "kind": "word",
+   "gloss": "The state of the law on a question, or a party's standing in a dispute.",
+   "intermediate": "*The position in Malaysia* means what our law currently says. It can differ from England even where the wording is identical.",
+   "advanced": "Always state the local position before the comparative one. English authority is persuasive here and its weight depends on whether a Malaysian statute has occupied the ground.",
+   "source": "Legal method",
+   "aliases": [
+    "position",
+    "positions"
+   ],
+   "see": [
+    "section-3-cla",
+    "persuasive-authority",
+    "reception",
+    "source-of-law"
+   ]
+  },
+  {
+   "id": "possession",
+   "term": "possession",
+   "kind": "doctrine",
+   "gloss": "Physical control of a thing, with the intention to control it.",
+   "intermediate": "Possession is two things at once: holding something, and meaning to hold it. Both are needed, which is why a parcel left in your porch is not in your possession until you know it is there.",
+   "advanced": "Possession does the work of ownership in criminal statutes, where knowledge is the fought-over element, and in landlord and tenant, where exclusive possession marks a lease off from a licence.",
+   "source": "Land law; Penal Code",
+   "aliases": [
+    "possession"
+   ],
+   "see": [
+    "ownership-word",
+    "lease",
+    "licence",
+    "property-law"
+   ]
+  },
+  {
+   "id": "practical",
+   "term": "practical",
+   "kind": "word",
+   "gloss": "To do with what actually happens, rather than what is theoretically so.",
+   "intermediate": "Courts care about practical effect: whether a remedy would achieve anything, whether a right can be exercised in fact.",
+   "advanced": "Practical considerations run through discretion — the balance of convenience for an injunction, futility as an answer to a review, and whether damages would be an adequate remedy.",
+   "source": "Equity; administrative law",
+   "aliases": [
+    "practical",
+    "practically"
+   ],
+   "see": [
+    "interlocutory-injunction",
+    "remedy",
+    "discretion",
+    "equitable"
+   ]
+  },
+  {
    "id": "preamble",
    "term": "preamble",
    "kind": "doctrine",
@@ -3023,6 +6132,45 @@
    ],
    "aliases": [
     "preamble"
+   ]
+  },
+  {
+   "id": "precedent",
+   "term": "precedent",
+   "kind": "method",
+   "gloss": "An earlier decision used to decide a later case.",
+   "intermediate": "A precedent binds a lower court on the same point of law. It persuades everywhere else.",
+   "advanced": "Only the ratio is precedent. The rest of the judgment is obiter, and a precedent can be departed from where it was decided per incuriam or has been overruled.",
+   "source": "Stare decisis",
+   "aliases": [
+    "precedent",
+    "precedents"
+   ],
+   "see": [
+    "stare-decisis",
+    "ratio-decidendi",
+    "binding-authority",
+    "per-incuriam"
+   ]
+  },
+  {
+   "id": "precise",
+   "term": "precise",
+   "kind": "word",
+   "gloss": "Exact — and in law, usually necessary.",
+   "intermediate": "Precision is not pedantry here. Naming the section, the limb and the party is what makes an argument checkable.",
+   "advanced": "Imprecision hides errors. *The contract was breached* conceals which term, by which party, and whether the breach went to the root — three questions the remedy depends on.",
+   "source": "Legal method",
+   "aliases": [
+    "precise",
+    "precisely",
+    "precision"
+   ],
+   "see": [
+    "irac",
+    "element",
+    "citation",
+    "thinking-like-a-lawyer"
    ]
   },
   {
@@ -3041,7 +6189,8 @@
     "conclusive proof",
     "shall presume",
     "may presume",
-    "presumption"
+    "presumption",
+    "presumptions"
    ]
   },
   {
@@ -3095,6 +6244,24 @@
    ]
   },
   {
+   "id": "principal",
+   "term": "principal",
+   "kind": "doctrine",
+   "gloss": "The person an agent acts for.",
+   "intermediate": "The principal gets the benefit of the agent's authorised acts and carries the burden of them. Do not confuse it with *principle*, a rule.",
+   "advanced": "An undisclosed principal may generally sue and be sued on a contract the agent made, which is one of the few real inroads on privity.",
+   "source": "Contracts Act 1950, Part X",
+   "aliases": [
+    "principal",
+    "principals"
+   ],
+   "see": [
+    "agent",
+    "privity",
+    "contract"
+   ]
+  },
+  {
    "id": "private-defence",
    "term": "private defence",
    "kind": "doctrine",
@@ -3144,6 +6311,25 @@
    ]
   },
   {
+   "id": "proceedings",
+   "term": "proceedings",
+   "kind": "method",
+   "gloss": "The formal steps of a case, from filing to judgment.",
+   "intermediate": "Proceedings are the case as a process. They can be civil or criminal, and they can be stayed, struck out or discontinued without ever reaching a trial.",
+   "advanced": "Whether proceedings have been *commenced* fixes the limitation date and engages the court's jurisdiction, so the mode of commencement — writ or originating summons — is a real choice, not a formality.",
+   "source": "Rules of Court 2012",
+   "aliases": [
+    "proceedings",
+    "proceeding"
+   ],
+   "see": [
+    "writ",
+    "originating-summons",
+    "striking-out",
+    "limitation"
+   ]
+  },
+  {
    "id": "promise",
    "term": "promise",
    "kind": "doctrine",
@@ -3158,6 +6344,63 @@
    "see": [
     "acceptance",
     "consideration"
+   ]
+  },
+  {
+   "id": "properly",
+   "term": "properly",
+   "kind": "word",
+   "gloss": "In the way the law requires.",
+   "intermediate": "A power properly exercised is one used for its purpose, on relevant considerations, after a fair procedure. Each of those is separately reviewable.",
+   "advanced": "*Properly constituted*, *properly served* and *properly pleaded* are technical phrases with defined content. Treating them as loose praise loses the point being made.",
+   "source": "Administrative law; civil procedure",
+   "aliases": [
+    "proper",
+    "properly"
+   ],
+   "see": [
+    "exercise-power",
+    "improper",
+    "natural-justice",
+    "pleading"
+   ]
+  },
+  {
+   "id": "property-law",
+   "term": "property",
+   "kind": "doctrine",
+   "gloss": "A thing you own, and the bundle of rights that ownership gives you.",
+   "intermediate": "Lawyers use *property* for the right, not just the object. Two people can hold different property in the same house: an owner and a tenant both have rights, of different shapes.",
+   "advanced": "Divide it two ways: real property (land and things fixed to it) against personal property, and legal against equitable title. Which division matters depends on the question — a trust splits the second, a lease the first.",
+   "source": "Land and equity",
+   "aliases": [
+    "property",
+    "properties"
+   ],
+   "see": [
+    "possession",
+    "ownership-word",
+    "equity-law",
+    "lease"
+   ]
+  },
+  {
+   "id": "proportion",
+   "term": "proportion",
+   "kind": "word",
+   "gloss": "Relative size — and the idea that a response should match what caused it.",
+   "intermediate": "Proportion appears in apportioning blame between parties and in asking whether a restriction goes further than necessary.",
+   "advanced": "Contributory negligence reduces damages in proportion to responsibility. Proportionality in public law is a different tool, testing whether a limit on a right is no more than needed.",
+   "source": "Civil Law Act 1956, s 12; constitutional law",
+   "aliases": [
+    "proportion",
+    "proportions"
+   ],
+   "see": [
+    "apportionment",
+    "proportionality",
+    "contributory-negligence",
+    "fundamental-liberties"
    ]
   },
   {
@@ -3195,7 +6438,29 @@
    "aliases": [
     "proposal",
     "proposer",
-    "offer"
+    "offer",
+    "proposals",
+    "proposer's",
+    "offers"
+   ]
+  },
+  {
+   "id": "proposition",
+   "term": "proposition",
+   "kind": "method",
+   "gloss": "A statement of law that a case is said to support.",
+   "intermediate": "When you cite a case you cite it *for* a proposition. Make sure the case actually decided that, rather than merely mentioning it.",
+   "advanced": "The commonest citation failure is stating a proposition wider than the ratio supports. Narrow the proposition to what was necessary to the decision, then argue the extension separately.",
+   "source": "Legal method",
+   "aliases": [
+    "proposition",
+    "propositions"
+   ],
+   "see": [
+    "ratio-decidendi",
+    "citation",
+    "obiter-dictum",
+    "binding-authority"
    ]
   },
   {
@@ -3225,10 +6490,54 @@
    "source": "Federal Constitution Art 145(3); Criminal Procedure Code",
    "aliases": [
     "prosecution",
-    "prosecutions"
+    "prosecutions",
+    "prosecution's"
    ],
    "see": [
     "accused"
+   ]
+  },
+  {
+   "id": "prove",
+   "term": "prove",
+   "kind": "method",
+   "gloss": "To satisfy the court that something is true, to the required standard.",
+   "intermediate": "Proving is not asserting. You prove a fact by evidence the court accepts, at the standard the case demands — the balance of probabilities in a civil case, beyond reasonable doubt in a criminal one.",
+   "advanced": "Keep proof apart from the burden. The burden says who must prove; the standard says how convincingly. Section 101 of the Evidence Act answers the first, not the second.",
+   "source": "Evidence Act 1950, ss 101-103",
+   "aliases": [
+    "prove",
+    "proved",
+    "proves",
+    "proving",
+    "proven"
+   ],
+   "see": [
+    "legal-burden",
+    "balance-of-probabilities",
+    "beyond-reasonable-doubt",
+    "evidence"
+   ]
+  },
+  {
+   "id": "provide",
+   "term": "provide",
+   "kind": "statute",
+   "gloss": "Of a statute: to lay down. What it says is a provision.",
+   "intermediate": "When a section provides for something, that is the law until it is amended or repealed. Read the words, not the summary of them.",
+   "advanced": "*Provided that* introduces a proviso, which cuts down what came before it. A proviso is construed narrowly and against the section it qualifies, not as a free-standing rule.",
+   "source": "Statutory interpretation",
+   "aliases": [
+    "provide",
+    "provides",
+    "provided",
+    "providing"
+   ],
+   "see": [
+    "provision",
+    "proviso",
+    "construction",
+    "statute"
    ]
   },
   {
@@ -3281,7 +6590,71 @@
     "Public Prosecutor",
     "Attorney General",
     "Article 145(3)",
-    "PP"
+    "PP",
+    "Art 145(3)"
+   ]
+  },
+  {
+   "id": "published",
+   "term": "publish",
+   "kind": "doctrine",
+   "gloss": "To communicate something to at least one other person.",
+   "intermediate": "In defamation, publication is what makes a statement actionable. Saying it only to the person it is about is not publication.",
+   "advanced": "Every repetition is a fresh publication with its own limitation period, which is why forwarding a message can create liability where the original author's claim has expired.",
+   "source": "Defamation Act 1957",
+   "aliases": [
+    "publish",
+    "published",
+    "publishes",
+    "publication",
+    "publishing"
+   ],
+   "see": [
+    "defamation",
+    "libel",
+    "slander",
+    "qualified-privilege"
+   ]
+  },
+  {
+   "id": "punishment",
+   "term": "punishment",
+   "kind": "doctrine",
+   "gloss": "What the law imposes on a person convicted of an offence.",
+   "intermediate": "Punishment follows conviction and is a separate stage with its own principles. Guilt is about the past; sentence looks at the offender as well as the offence.",
+   "advanced": "A mandatory sentence removes the court's discretion entirely, which is why the classification of an offence can matter more to the outcome than anything argued at trial.",
+   "source": "Penal Code; Criminal Procedure Code",
+   "aliases": [
+    "punishment",
+    "punishments",
+    "punish",
+    "punishable",
+    "punishes"
+   ],
+   "see": [
+    "conviction",
+    "mandatory",
+    "offence",
+    "guilty"
+   ]
+  },
+  {
+   "id": "purpose",
+   "term": "purpose",
+   "kind": "method",
+   "gloss": "What a provision was meant to achieve.",
+   "intermediate": "Reading for purpose means asking what problem Parliament was solving. It is now the starting point in Malaysia, not a last resort.",
+   "advanced": "Section 17A of the Interpretation Acts requires a construction promoting the purpose to be preferred. Purpose is found in the Act itself first — long title, preamble, scheme — before external material.",
+   "source": "Interpretation Acts 1948 and 1967, s 17A",
+   "aliases": [
+    "purpose",
+    "purposes"
+   ],
+   "see": [
+    "purposive-approach",
+    "section-17a",
+    "long-title",
+    "construction"
    ]
   },
   {
@@ -3337,6 +6710,25 @@
    ]
   },
   {
+   "id": "range",
+   "term": "range",
+   "kind": "word",
+   "gloss": "The set of outcomes a decision-maker could lawfully reach.",
+   "intermediate": "Review asks whether the decision was inside the range, not whether it was the best point in it. Two different decisions can both be lawful.",
+   "advanced": "The range idea is what makes Wednesbury a boundary rather than a merits test. It is also why proportionality is more intrusive: it asks about the point chosen within the range, not just the range.",
+   "source": "Administrative law",
+   "aliases": [
+    "range",
+    "ranges"
+   ],
+   "see": [
+    "wednesbury",
+    "proportionality",
+    "merits",
+    "discretion"
+   ]
+  },
+  {
    "id": "ratio-decidendi",
    "term": "ratio decidendi",
    "kind": "latin",
@@ -3353,6 +6745,63 @@
    "aliases": [
     "ratio decidendi",
     "ratio"
+   ]
+  },
+  {
+   "id": "reason",
+   "term": "reason",
+   "kind": "word",
+   "gloss": "The stated basis for a decision.",
+   "intermediate": "Courts give reasons so the losing side knows why and so higher courts can check. Reasons are also where the law for future cases is made.",
+   "advanced": "A duty to give reasons is not universal in Malaysian administrative law, but absence of reasons can support an inference that there were none that were good — and inadequate reasons can themselves be a ground of review.",
+   "source": "Administrative law; judgments",
+   "aliases": [
+    "reason",
+    "reasons"
+   ],
+   "see": [
+    "ratio-decidendi",
+    "judicial-review",
+    "ground",
+    "natural-justice"
+   ]
+  },
+  {
+   "id": "reasoning",
+   "term": "reasoning",
+   "kind": "method",
+   "gloss": "The chain of steps that gets from the rule to the result.",
+   "intermediate": "Reasoning is what you follow when you read a case, and what you must produce in an answer. The conclusion alone earns nothing.",
+   "advanced": "Legal reasoning is mostly analogy and distinction rather than deduction. Two cases are alike for legal purposes when they are alike in the respects the rule makes relevant, which is an argument rather than an observation.",
+   "source": "Legal method",
+   "aliases": [
+    "reasoning"
+   ],
+   "see": [
+    "ratio-decidendi",
+    "distinguishing",
+    "irac",
+    "thinking-like-a-lawyer"
+   ]
+  },
+  {
+   "id": "recall",
+   "term": "recall",
+   "kind": "word",
+   "gloss": "Bringing something back from memory without being shown it.",
+   "intermediate": "Recall is harder than recognition and worth much more. If you can only recognise a rule, you do not yet know it.",
+   "advanced": "Free recall under retrieval conditions is what predicts later performance. That is the design principle behind testing yourself before rereading, and behind spaced review.",
+   "source": "Cognitive psychology of learning",
+   "aliases": [
+    "recall",
+    "recalls",
+    "recalled"
+   ],
+   "see": [
+    "retrieval-practice",
+    "memory-word",
+    "spacing",
+    "srs"
    ]
   },
   {
@@ -3374,6 +6823,48 @@
    ]
   },
   {
+   "id": "record",
+   "term": "record",
+   "kind": "method",
+   "gloss": "The official written material a court produced or considered.",
+   "intermediate": "An appeal is decided on the record: the pleadings, the evidence and the judgment. New material is admitted only exceptionally.",
+   "advanced": "An error of law on the face of the record was historically the only defect certiorari could reach. That limit has gone, but the phrase survives in judgments and needs recognising.",
+   "source": "Administrative law; Rules of Court 2012",
+   "aliases": [
+    "record",
+    "records",
+    "recorded"
+   ],
+   "see": [
+    "certiorari",
+    "appeal",
+    "judicial-review",
+    "evidence"
+   ]
+  },
+  {
+   "id": "recover",
+   "term": "recover",
+   "kind": "word",
+   "gloss": "To get back, through a court, what you are owed.",
+   "intermediate": "Recovery is the practical end of a claim. A judgment you cannot enforce has recovered nothing.",
+   "advanced": "Ask early whether the defendant can pay. A claim against a company with no assets and a claim against its solvent director are different claims, and the corporate veil is what stands between them.",
+   "source": "Civil procedure",
+   "aliases": [
+    "recover",
+    "recovers",
+    "recovered",
+    "recovery",
+    "recoverable"
+   ],
+   "see": [
+    "damages",
+    "corporate-veil",
+    "remedy",
+    "debt"
+   ]
+  },
+  {
    "id": "reflective-loss",
    "term": "reflective loss",
    "kind": "doctrine",
@@ -3391,6 +6882,46 @@
    ]
   },
   {
+   "id": "register-title",
+   "term": "register",
+   "kind": "doctrine",
+   "gloss": "The official list of who owns what land, kept by the state.",
+   "intermediate": "Malaysia records land ownership in a government register. The register is not evidence of ownership — it *is* ownership. Your name on it makes you the owner; your name off it means you are not, whatever your papers say.",
+   "advanced": "This is the Torrens system, given effect by the National Land Code. Registration confers title rather than recording it, which is why forgery cases turn on section 340 rather than on who signed what.",
+   "source": "National Land Code, registration provisions",
+   "aliases": [
+    "register",
+    "the register",
+    "registers",
+    "register's"
+   ],
+   "see": [
+    "torrens",
+    "registration",
+    "indefeasibility",
+    "national-land-code"
+   ]
+  },
+  {
+   "id": "registered",
+   "term": "registered",
+   "kind": "doctrine",
+   "gloss": "Entered on the official register — and so, for land, actually owned.",
+   "intermediate": "A registered interest is one the state has written down. For land that word does the heavy lifting: an unregistered buyer with a signed contract does not own the land yet.",
+   "advanced": "Distinguish a registered interest from a registrable one. A caveat protects the second while the first is being obtained; it does not create the first.",
+   "source": "National Land Code",
+   "aliases": [
+    "registered",
+    "registering"
+   ],
+   "see": [
+    "register-title",
+    "torrens",
+    "caveat",
+    "indefeasibility"
+   ]
+  },
+  {
    "id": "registration",
    "term": "registration",
    "kind": "doctrine",
@@ -3403,6 +6934,27 @@
    ],
    "see": [
     "indefeasibility"
+   ]
+  },
+  {
+   "id": "released",
+   "term": "release",
+   "kind": "doctrine",
+   "gloss": "Letting someone go, or giving up a claim against them.",
+   "intermediate": "A person is released from custody; a party is released from a liability. In the second sense a release ends the claim for good.",
+   "advanced": "A release given to one joint wrongdoer can discharge the others, while a covenant not to sue does not. Which document was signed decides who is still exposed.",
+   "source": "Contract; Criminal Procedure Code",
+   "aliases": [
+    "release",
+    "released",
+    "releases",
+    "releasing"
+   ],
+   "see": [
+    "bail",
+    "discharge-not-amounting",
+    "remand",
+    "liability"
    ]
   },
   {
@@ -3422,6 +6974,48 @@
     "relevant fact",
     "relevancy",
     "relevant"
+   ]
+  },
+  {
+   "id": "religion",
+   "term": "religion",
+   "kind": "doctrine",
+   "gloss": "Belief and practice — protected by Article 11, and limited by it.",
+   "intermediate": "Article 11 gives the right to profess and practise a religion. Islam has a special constitutional position, and state law may control propagation among Muslims.",
+   "advanced": "Article 11(5) subjects the right to public order, health and morality, and Article 121(1A) removes matters within syariah jurisdiction from the civil courts. Most hard cases are jurisdictional before they are substantive.",
+   "source": "Federal Constitution, Articles 3, 11, 121(1A)",
+   "aliases": [
+    "religion",
+    "religions",
+    "religious"
+   ],
+   "see": [
+    "fundamental-liberties",
+    "article-121a",
+    "syariah-court",
+    "jurisdiction"
+   ]
+  },
+  {
+   "id": "rely",
+   "term": "rely",
+   "kind": "word",
+   "gloss": "To act on something said or done by another.",
+   "intermediate": "Reliance turns a statement into a legal problem. A misrepresentation matters because someone relied on it and entered the contract.",
+   "advanced": "Reliance is also the engine of estoppel and legitimate expectation: the promise or practice is protected because someone reasonably ordered their affairs around it.",
+   "source": "Contract; administrative law",
+   "aliases": [
+    "rely",
+    "relies",
+    "relied",
+    "reliance",
+    "relying"
+   ],
+   "see": [
+    "misrepresentation",
+    "legitimate-expectation",
+    "free-consent",
+    "promise"
    ]
   },
   {
@@ -3473,6 +7067,28 @@
    "aliases": [
     "remoteness",
     "too remote"
+   ]
+  },
+  {
+   "id": "representation",
+   "term": "representation",
+   "kind": "doctrine",
+   "gloss": "A statement of fact made to get someone to act.",
+   "intermediate": "A representation induces the contract; a term is part of it. Breaking a term is breach, and a false representation is misrepresentation.",
+   "advanced": "The remedies differ sharply. Misrepresentation leads to rescission and, under section 19 of the Contracts Act, a voidable contract; breach of a term leads to damages and sometimes termination.",
+   "source": "Contracts Act 1950, ss 18-19",
+   "aliases": [
+    "representation",
+    "representations",
+    "represent",
+    "represents",
+    "represented"
+   ],
+   "see": [
+    "misrepresentation",
+    "voidable",
+    "rescission",
+    "condition"
    ]
   },
   {
@@ -3545,6 +7161,24 @@
    ]
   },
   {
+   "id": "research",
+   "term": "research",
+   "kind": "method",
+   "gloss": "Finding the law that governs a question, and checking it is still good.",
+   "intermediate": "Research is two jobs: finding the source, and confirming it has not been amended, overruled or distinguished away.",
+   "advanced": "Skipping the second job is the characteristic beginner's failure. A repealed section and a current one look identical on the page.",
+   "source": "Legal method",
+   "aliases": [
+    "research"
+   ],
+   "see": [
+    "noting-up",
+    "citator",
+    "official",
+    "agc"
+   ]
+  },
+  {
    "id": "resolution",
    "term": "resolution",
    "kind": "doctrine",
@@ -3576,6 +7210,47 @@
    "see": [
     "appellant",
     "judicial-review"
+   ]
+  },
+  {
+   "id": "restriction-in-interest",
+   "term": "restriction",
+   "kind": "doctrine",
+   "gloss": "A limit written into a title, or into a right.",
+   "intermediate": "Land titles can carry a restriction in interest — the owner cannot sell or charge without someone's consent. It sits on the title and binds whoever holds it.",
+   "advanced": "A restriction in interest is distinct from an express condition and from a caveat. It limits dealing rather than use, and a dealing entered in breach of it is liable to be rejected at the registry.",
+   "source": "National Land Code",
+   "aliases": [
+    "restriction",
+    "restrictions",
+    "restriction in interest"
+   ],
+   "see": [
+    "register-title",
+    "caveat",
+    "dealing",
+    "charge"
+   ]
+  },
+  {
+   "id": "result",
+   "term": "result",
+   "kind": "word",
+   "gloss": "What happened at the end — the outcome, not the reasoning.",
+   "intermediate": "Two cases can reach the same result for different reasons. It is the reasons that bind, so never argue from the result alone.",
+   "advanced": "A result-only reading is what produces the classic misuse of authority: citing a case for a proposition it never decided, because the outcome happened to suit.",
+   "source": "Legal method",
+   "aliases": [
+    "result",
+    "results",
+    "resulted",
+    "resulting"
+   ],
+   "see": [
+    "ratio-decidendi",
+    "obiter-dictum",
+    "outcome",
+    "decision"
    ]
   },
   {
@@ -3632,6 +7307,26 @@
    ]
   },
   {
+   "id": "risk",
+   "term": "risk",
+   "kind": "word",
+   "gloss": "The chance that something will go wrong, and who carries it.",
+   "intermediate": "Law allocates risk. Contracts do it by their terms; tort does it by asking who should have guarded against the harm.",
+   "advanced": "In sale of goods, risk usually passes with property rather than with delivery, so goods destroyed after property passes are the buyer's loss even though they never arrived.",
+   "source": "Sale of Goods Act 1957",
+   "aliases": [
+    "risk",
+    "risks",
+    "risky"
+   ],
+   "see": [
+    "frustration",
+    "duty-of-care",
+    "remoteness",
+    "volenti"
+   ]
+  },
+  {
    "id": "rules-of-court",
    "term": "Rules of Court 2012",
    "kind": "statute",
@@ -3667,6 +7362,25 @@
    ]
   },
   {
+   "id": "scheme",
+   "term": "scheme",
+   "kind": "method",
+   "gloss": "The overall design of an Act — how its parts fit together.",
+   "intermediate": "Reading the scheme means seeing what the Act is trying to do as a whole, not just the section in front of you.",
+   "advanced": "Scheme is a legitimate and internal aid to construction, and it usually settles ambiguity before any external material is needed. Read the long title, the arrangement of parts, and the definitions together.",
+   "source": "Statutory interpretation",
+   "aliases": [
+    "scheme",
+    "schemes"
+   ],
+   "see": [
+    "purposive-approach",
+    "long-title",
+    "construction",
+    "section-17a"
+   ]
+  },
+  {
    "id": "section-10",
    "term": "section 10",
    "kind": "statute",
@@ -3676,11 +7390,35 @@
    "source": "Contracts Act 1950 s 10",
    "aliases": [
     "section 10",
-    "s 10"
+    "s 10",
+    "s 10(1)"
    ],
    "see": [
     "contract",
     "section-24"
+   ]
+  },
+  {
+   "id": "section-100-penal",
+   "term": "section 100",
+   "kind": "statute",
+   "gloss": "Penal Code — when private defence of the body extends to causing death.",
+   "intermediate": "The right of private defence exists first; section 100 says how far it goes. Only in the listed situations does it extend to causing death.",
+   "advanced": "Reasonable apprehension of death or grievous hurt is the commonest of the listed grounds. The apprehension must be reasonable and the response proportionate — the right ends when the threat does.",
+   "source": "Penal Code, s 100",
+   "find": "Free at lom.agc.gov.my — Penal Code (Act 574)",
+   "aliases": [
+    "section 100",
+    "s 100",
+    "Section 100",
+    "section 100(1)",
+    "Section 100(1)"
+   ],
+   "see": [
+    "private-defence",
+    "general-exceptions",
+    "grievous",
+    "murder"
    ]
   },
   {
@@ -3693,7 +7431,9 @@
    "source": "Evidence Act 1950 s 101",
    "aliases": [
     "section 101",
-    "s 101"
+    "s 101",
+    "sections 101",
+    "ss 101"
    ],
    "see": [
     "section-102",
@@ -3714,6 +7454,25 @@
    ],
    "see": [
     "section-101"
+   ]
+  },
+  {
+   "id": "section-103-evidence",
+   "term": "Evidence Act section 103",
+   "kind": "statute",
+   "gloss": "Evidence Act 1950 — the burden of proving any particular fact.",
+   "intermediate": "Section 103 puts the burden of a particular fact on whoever wants the court to believe it. It works fact by fact, inside a case whose overall burden section 101 has already placed.",
+   "advanced": "Sections 101 and 102 describe the legal burden — who loses if nothing is proved. Section 103 is doing something narrower, and confusing the two produces the common error of arguing that the burden has *shifted*. It is named in full here on purpose: the bare number is used in this app for more than one Act, so it is not auto-linked in prose. Look it up by name rather than expecting a hover.",
+   "source": "Evidence Act 1950, s 103",
+   "find": "Free at lom.agc.gov.my — Evidence Act 1950 (Act 56)",
+   "aliases": [
+    "Evidence Act section 103"
+   ],
+   "see": [
+    "section-101",
+    "section-102",
+    "legal-burden",
+    "evidential-burden"
    ]
   },
   {
@@ -3769,6 +7528,50 @@
    ]
   },
   {
+   "id": "section-12-cla",
+   "term": "section 12",
+   "kind": "statute",
+   "gloss": "Civil Law Act 1956 — damages are reduced for the claimant's own share of the blame.",
+   "intermediate": "Where a claimant is partly responsible for their own damage, section 12 lets the court reduce the award to what is just and equitable. It does not defeat the claim.",
+   "advanced": "Apportionment replaced the old rule that contributory negligence was a complete defence. The reduction is by share of responsibility, which takes in both blameworthiness and causal potency, not by arithmetic on the injuries.",
+   "source": "Civil Law Act 1956, s 12",
+   "find": "Free at lom.agc.gov.my — Civil Law Act 1956 (Act 67)",
+   "aliases": [
+    "section 12",
+    "s 12",
+    "section 12(1)",
+    "s 12(1)"
+   ],
+   "see": [
+    "contributory-negligence",
+    "apportionment",
+    "damages",
+    "negligence"
+   ]
+  },
+  {
+   "id": "section-14-contracts",
+   "term": "section 14",
+   "kind": "statute",
+   "gloss": "Contracts Act 1950 — what makes consent free.",
+   "intermediate": "Section 14 says consent is free when it is not caused by coercion, undue influence, fraud, misrepresentation or mistake. Those five are the whole list.",
+   "advanced": "It is a closed list, and sections 15 to 23 supply the statutory definitions. Do not import English vitiating doctrines that do not fit one of the five — the statute has occupied the ground.",
+   "source": "Contracts Act 1950, s 14",
+   "find": "Free at lom.agc.gov.my — Contracts Act 1950 (Act 136)",
+   "aliases": [
+    "section 14",
+    "s 14",
+    "section 14(1)",
+    "s 14(1)"
+   ],
+   "see": [
+    "free-consent",
+    "coercion",
+    "undue-influence",
+    "misrepresentation"
+   ]
+  },
+  {
    "id": "section-17a",
    "term": "section 17A",
    "kind": "statute",
@@ -3787,6 +7590,28 @@
    ]
   },
   {
+   "id": "section-19-contracts",
+   "term": "section 19",
+   "kind": "statute",
+   "gloss": "Contracts Act 1950 — the contract is voidable where consent was not free.",
+   "intermediate": "Where consent was caused by coercion, fraud or misrepresentation, section 19 makes the agreement voidable at the option of the party wronged.",
+   "advanced": "Voidable, not void: the contract stands until it is rescinded, and the right to rescind can be lost by affirmation, delay, or third-party rights. Mistake under section 21 is the different case, and makes the agreement void.",
+   "source": "Contracts Act 1950, s 19",
+   "find": "Free at lom.agc.gov.my — Contracts Act 1950 (Act 136)",
+   "aliases": [
+    "section 19",
+    "s 19",
+    "section 19(1)",
+    "s 19(1)"
+   ],
+   "see": [
+    "voidable",
+    "rescission",
+    "section-21-contracts",
+    "free-consent"
+   ]
+  },
+  {
    "id": "section-2-contracts",
    "term": "section 2",
    "kind": "statute",
@@ -3796,12 +7621,38 @@
    "source": "Contracts Act 1950 s 2",
    "aliases": [
     "section 2",
-    "s 2"
+    "s 2",
+    "Section 2(a)",
+    "s 2(a)",
+    "Section 2(d)",
+    "s 2(d)"
    ],
    "see": [
     "contract",
     "consideration",
     "promise"
+   ]
+  },
+  {
+   "id": "section-21-contracts",
+   "term": "section 21",
+   "kind": "statute",
+   "gloss": "Contracts Act 1950 — a shared mistake of fact makes the agreement void.",
+   "intermediate": "Section 21 applies where both parties are mistaken about a matter of fact essential to the agreement. The agreement is void from the start.",
+   "advanced": "Void, not voidable, so there is no election to make and nothing to rescind. Compare section 22: a mistake by one party alone does not make the agreement voidable on that ground.",
+   "source": "Contracts Act 1950, s 21",
+   "find": "Free at lom.agc.gov.my — Contracts Act 1950 (Act 136)",
+   "aliases": [
+    "section 21",
+    "s 21",
+    "section 21(1)",
+    "Section 21(1)"
+   ],
+   "see": [
+    "mistake",
+    "void",
+    "section-19-contracts",
+    "free-consent"
    ]
   },
   {
@@ -3814,11 +7665,62 @@
    "source": "Companies Act 2016 s 213",
    "aliases": [
     "section 213",
-    "s 213"
+    "s 213",
+    "s 213(1)",
+    "s 213(2)",
+    "sections 213",
+    "section 213(2)"
    ],
    "see": [
     "director",
     "company"
+   ]
+  },
+  {
+   "id": "section-214",
+   "term": "section 214",
+   "kind": "statute",
+   "gloss": "Companies Act 2016 — the business judgement rule.",
+   "intermediate": "Section 214 shelters a director who makes a business judgement in good faith, for a proper purpose, without a material personal interest, on reasonable information, and rationally believing it to be in the company's best interest.",
+   "advanced": "It is a shelter for the *judgement*, not for the process. Each condition must be met, and the fifth is judged rationally rather than reasonably — a low bar, but not an absent one.",
+   "source": "Companies Act 2016, s 214",
+   "find": "Free at ssm.com.my and lom.agc.gov.my — Companies Act 2016 (Act 777)",
+   "aliases": [
+    "section 214",
+    "s 214",
+    "Section 214",
+    "section 214(1)",
+    "Section 214(2)"
+   ],
+   "see": [
+    "business-judgement-rule",
+    "directors-duty",
+    "section-213",
+    "director"
+   ]
+  },
+  {
+   "id": "section-218",
+   "term": "section 218",
+   "kind": "statute",
+   "gloss": "Companies Act 2016 — improper use of the company's property, position or information.",
+   "intermediate": "A director must not use the company's property, position, opportunity or information to gain an advantage or to cause the company detriment.",
+   "advanced": "This is the statutory form of the no-conflict and no-profit rules. It bites even where the company could not have taken the opportunity itself, which is what makes it stricter than an ordinary loyalty test.",
+   "source": "Companies Act 2016, s 218",
+   "find": "Free at ssm.com.my and lom.agc.gov.my — Companies Act 2016 (Act 777)",
+   "aliases": [
+    "section 218",
+    "s 218",
+    "Section 218",
+    "section 218(1)",
+    "s 218(1)",
+    "Section 218(1)"
+   ],
+   "see": [
+    "directors-duty",
+    "fiduciary-duty",
+    "section-213",
+    "disclose"
    ]
   },
   {
@@ -3852,7 +7754,51 @@
    ],
    "aliases": [
     "section 26",
-    "s 26"
+    "s 26",
+    "Section 26(b)",
+    "section 26(a)"
+   ]
+  },
+  {
+   "id": "section-28a-cpc",
+   "term": "section 28A",
+   "kind": "statute",
+   "gloss": "Criminal Procedure Code — the rights of a person arrested.",
+   "intermediate": "Section 28A requires the arrested person to be told why, and gives the right to contact a relative or friend and to consult a lawyer of their choice.",
+   "advanced": "The rights may be deferred where the police believe compliance would compromise the investigation, and that exception is where the litigation is. Article 5(3) of the Constitution stands behind the section and is not limited by it.",
+   "source": "Criminal Procedure Code, s 28A",
+   "find": "Free at lom.agc.gov.my — Criminal Procedure Code (Act 593)",
+   "aliases": [
+    "section 28A",
+    "s 28A",
+    "Section 28A"
+   ],
+   "see": [
+    "arrest",
+    "article-5",
+    "remand",
+    "criminal-procedure-code"
+   ]
+  },
+  {
+   "id": "section-299",
+   "term": "section 299",
+   "kind": "statute",
+   "gloss": "Penal Code — the definition of culpable homicide.",
+   "intermediate": "Section 299 defines culpable homicide: causing death by an act done with the intention of causing death, or of causing bodily injury likely to cause death, or with knowledge that it is likely to cause death.",
+   "advanced": "Every murder is culpable homicide; not every culpable homicide is murder. Section 300 lifts it, and the exceptions to section 300 bring it back down to culpable homicide not amounting to murder.",
+   "source": "Penal Code, s 299",
+   "find": "Free at lom.agc.gov.my — Penal Code (Act 574)",
+   "aliases": [
+    "section 299",
+    "s 299",
+    "Section 299"
+   ],
+   "see": [
+    "culpable-homicide",
+    "murder",
+    "section-300",
+    "death"
    ]
   },
   {
@@ -3865,7 +7811,9 @@
    "source": "Civil Law Act 1956 s 3",
    "aliases": [
     "section 3",
-    "s 3"
+    "s 3",
+    "section 3(1)",
+    "s 3(1)"
    ],
    "see": [
     "statute"
@@ -3881,11 +7829,79 @@
    "source": "Penal Code s 300",
    "aliases": [
     "section 300",
-    "s 300"
+    "s 300",
+    "Section 300(c)",
+    "s 300(c)"
    ],
    "see": [
     "section-6-penal",
     "offence"
+   ]
+  },
+  {
+   "id": "section-302",
+   "term": "section 302",
+   "kind": "statute",
+   "gloss": "Penal Code — the punishment for murder.",
+   "intermediate": "Section 302 sets the sentence for murder. Since 2023 the death penalty for it is no longer mandatory.",
+   "advanced": "The conviction and the sentence are separate questions. Reducing murder to culpable homicide not amounting to murder moves the case from section 302 to section 304, which is a different sentencing range entirely.",
+   "source": "Penal Code, s 302",
+   "find": "Free at lom.agc.gov.my — Penal Code (Act 574)",
+   "aliases": [
+    "section 302",
+    "s 302",
+    "Section 302"
+   ],
+   "see": [
+    "murder",
+    "section-300",
+    "section-304",
+    "punishment"
+   ]
+  },
+  {
+   "id": "section-304",
+   "term": "section 304",
+   "kind": "statute",
+   "gloss": "Penal Code — the punishment for culpable homicide not amounting to murder.",
+   "intermediate": "Section 304 is where a killing lands when an exception to section 300 applies, or when the mental element for murder is not made out.",
+   "advanced": "It has two limbs with different maxima, turning on whether the act was done with intention or only with knowledge. Which limb applies is argued at sentence and is often the real contest once the exception is accepted.",
+   "source": "Penal Code, s 304",
+   "find": "Free at lom.agc.gov.my — Penal Code (Act 574)",
+   "aliases": [
+    "section 304",
+    "s 304",
+    "Section 304"
+   ],
+   "see": [
+    "culpable-homicide",
+    "section-300",
+    "provocation",
+    "punishment"
+   ]
+  },
+  {
+   "id": "section-323-nlc",
+   "term": "section 323",
+   "kind": "statute",
+   "gloss": "National Land Code — who may lodge a private caveat.",
+   "intermediate": "Not everybody may caveat. Section 323 lists who can: broadly, a person claiming title or a registrable interest, and certain others the Code names.",
+   "advanced": "A caveat lodged without a caveatable interest is liable to be removed with compensation payable. The claim must be to an interest in the land itself, not merely a contractual right against the proprietor.",
+   "source": "National Land Code, s 323",
+   "find": "Free at lom.agc.gov.my — National Land Code (Act 828)",
+   "aliases": [
+    "section 323",
+    "s 323",
+    "Section 323",
+    "section 323(1)",
+    "s 323(1)",
+    "Section 323(1)"
+   ],
+   "see": [
+    "caveat",
+    "lien-holders-caveat",
+    "register-title",
+    "dealing"
    ]
   },
   {
@@ -3898,11 +7914,121 @@
    "source": "National Land Code s 340",
    "aliases": [
     "section 340",
-    "s 340"
+    "s 340",
+    "Section 340(1)",
+    "s 340(1)",
+    "s 340(2)",
+    "s 340(3)",
+    "section 340(2)"
    ],
    "see": [
     "indefeasibility",
     "proprietor"
+   ]
+  },
+  {
+   "id": "section-378",
+   "term": "section 378",
+   "kind": "statute",
+   "gloss": "Penal Code — the definition of theft.",
+   "intermediate": "Theft is taking movable property out of someone's possession, dishonestly, without their consent. The property never has to have been handed over.",
+   "advanced": "Theft, criminal breach of trust and cheating are told apart by how possession was obtained: never given, given lawfully then misappropriated, or given because of a deception. That branching answers most property-offence problems.",
+   "source": "Penal Code, s 378",
+   "find": "Free at lom.agc.gov.my — Penal Code (Act 574)",
+   "aliases": [
+    "section 378",
+    "s 378",
+    "Section 378",
+    "section 378(1)",
+    "Section 378(1)",
+    "s 378(1)"
+   ],
+   "see": [
+    "theft",
+    "criminal-breach-of-trust",
+    "cheating",
+    "dishonestly"
+   ]
+  },
+  {
+   "id": "section-387",
+   "term": "section 387",
+   "kind": "statute",
+   "gloss": "Criminal Procedure Code — bail in bailable offences.",
+   "intermediate": "Where the offence is bailable, section 387 makes release on bail a right rather than a favour. The court sets the amount and the conditions.",
+   "advanced": "Read it with section 388, which governs non-bailable offences and makes release discretionary. The classification comes from the First Schedule, so the schedule decides the argument before it starts.",
+   "source": "Criminal Procedure Code, ss 387-388",
+   "find": "Free at lom.agc.gov.my — Criminal Procedure Code (Act 593)",
+   "aliases": [
+    "section 387",
+    "s 387",
+    "ss 387",
+    "Section 387",
+    "section 388",
+    "s 388",
+    "Section 388"
+   ],
+   "see": [
+    "bail",
+    "bailable",
+    "non-bailable",
+    "criminal-procedure-code"
+   ]
+  },
+  {
+   "id": "section-4-contracts",
+   "term": "section 4",
+   "kind": "statute",
+   "gloss": "Contracts Act 1950 — when a communication is complete.",
+   "intermediate": "Section 4 fixes the moment a proposal, an acceptance or a revocation takes effect. Formation problems are usually decided by these timings rather than by what the parties meant.",
+   "advanced": "Acceptance is complete against the proposer when it is put in a course of transmission, and against the acceptor only when it comes to the proposer's knowledge. That gap is deliberate, and it is what section 5 then works against.",
+   "source": "Contracts Act 1950, s 4",
+   "find": "Free at lom.agc.gov.my — Contracts Act 1950 (Act 136)",
+   "aliases": [
+    "section 4",
+    "s 4",
+    "section 4(1)",
+    "s 4(1)",
+    "section 4(2)",
+    "s 4(2)",
+    "section 4(3)",
+    "s 4(3)",
+    "Section 4(2)(a)",
+    "section 4(2)(a)",
+    "section 4(3)(b)",
+    "Section 4(3)(b)",
+    "sections 4",
+    "ss 4"
+   ],
+   "see": [
+    "communication-complete",
+    "proposal",
+    "acceptance",
+    "section-5-contracts"
+   ]
+  },
+  {
+   "id": "section-405",
+   "term": "section 405",
+   "kind": "statute",
+   "gloss": "Penal Code — the definition of criminal breach of trust.",
+   "intermediate": "Section 405 covers a person entrusted with property who then misappropriates it or uses it against the terms of the trust. The property was handed over lawfully.",
+   "advanced": "Entrustment is the element that separates it from theft, and dishonest misappropriation the element that separates it from a mere civil breach. Both must be proved; a broken promise is not enough.",
+   "source": "Penal Code, s 405",
+   "find": "Free at lom.agc.gov.my — Penal Code (Act 574)",
+   "aliases": [
+    "section 405",
+    "s 405",
+    "Section 405",
+    "section 405(1)",
+    "Section 405(1)",
+    "s 405(1)"
+   ],
+   "see": [
+    "criminal-breach-of-trust",
+    "entrustment",
+    "theft",
+    "dishonestly"
    ]
   },
   {
@@ -3922,16 +8048,61 @@
    ]
   },
   {
+   "id": "section-5-contracts",
+   "term": "section 5",
+   "kind": "statute",
+   "gloss": "Contracts Act 1950 — when a proposal or acceptance may still be revoked.",
+   "intermediate": "Section 5 gives the deadline. A proposal can be revoked until the acceptance is complete as against the proposer; after that it is too late.",
+   "advanced": "Read section 5(1) beside section 4(2): the revocation window closes at the moment of posting, not at the moment of receipt, so a revocation sent afterwards is ineffective however quickly it arrives.",
+   "source": "Contracts Act 1950, s 5",
+   "find": "Free at lom.agc.gov.my — Contracts Act 1950 (Act 136)",
+   "aliases": [
+    "section 5",
+    "s 5",
+    "section 5(1)",
+    "s 5(1)",
+    "Section 5(1)"
+   ],
+   "see": [
+    "revocation",
+    "section-4-contracts",
+    "proposal",
+    "communication-complete"
+   ]
+  },
+  {
+   "id": "section-540",
+   "term": "section 540",
+   "kind": "statute",
+   "gloss": "Companies Act 2016 — personal liability for fraudulent trading.",
+   "intermediate": "Where the business has been carried on to defraud creditors, the court may declare that those knowingly party to it are personally liable for the company's debts.",
+   "advanced": "This is a statutory route past separate legal personality, and it needs actual dishonesty rather than mere insolvency or optimism. Fraud must be pleaded with particulars.",
+   "source": "Companies Act 2016, s 540",
+   "find": "Free at ssm.com.my and lom.agc.gov.my — Companies Act 2016 (Act 777)",
+   "aliases": [
+    "section 540",
+    "s 540",
+    "Section 540",
+    "section 540(1)",
+    "Section 540(1)"
+   ],
+   "see": [
+    "corporate-veil",
+    "separate-legal-personality",
+    "fraud",
+    "particular"
+   ]
+  },
+  {
    "id": "section-6-penal",
-   "term": "section 6",
+   "term": "Penal Code section 6",
    "kind": "statute",
    "gloss": "Penal Code s 6 — every offence is read with the General Exceptions.",
    "intermediate": "Every definition of an offence in the Code is understood subject to the General Exceptions, even though the section defining the offence never mentions them.",
-   "advanced": "This is why a homicide answer that discusses only the Exceptions to s 300 has looked at half the picture. Sections 76 to 106 apply to every offence in the Code, and private defence lives there rather than in the offence sections.",
+   "advanced": "This is why a homicide answer that discusses only the Exceptions to s 300 has looked at half the picture. Sections 76 to 106 apply to every offence in the Code, and private defence lives there rather than in the offence sections. It is named in full here on purpose: the bare number is used in this app for more than one Act, so it is not auto-linked in prose. Look it up by name rather than expecting a hover.",
    "source": "Penal Code s 6",
    "aliases": [
-    "section 6",
-    "s 6"
+    "Penal Code section 6"
    ],
    "see": [
     "section-300",
@@ -3972,7 +8143,8 @@
    ],
    "aliases": [
     "section 74",
-    "s 74"
+    "s 74",
+    "s 74(1)"
    ]
   },
   {
@@ -4003,10 +8175,31 @@
    "source": "Penal Code s 99",
    "aliases": [
     "section 99",
-    "s 99"
+    "s 99",
+    "ss 99(3)"
    ],
    "see": [
     "section-6-penal"
+   ]
+  },
+  {
+   "id": "security",
+   "term": "security",
+   "kind": "doctrine",
+   "gloss": "Something a lender can fall back on if the borrower does not pay.",
+   "intermediate": "A charge over land and a guarantee from a third party are both security. They give the lender a second route to its money.",
+   "advanced": "Real security attaches to an asset and survives insolvency in a way personal security does not. That difference, not the paperwork, is why lenders want charges.",
+   "source": "National Land Code; Contracts Act 1950",
+   "aliases": [
+    "security",
+    "securities",
+    "secured"
+   ],
+   "see": [
+    "charge",
+    "guarantee",
+    "creditor",
+    "order-for-sale"
    ]
   },
   {
@@ -4026,6 +8219,28 @@
     "seizable offence",
     "non-seizable",
     "seizable"
+   ]
+  },
+  {
+   "id": "seller",
+   "term": "seller",
+   "kind": "doctrine",
+   "gloss": "The person who agrees to sell — the vendor.",
+   "intermediate": "A seller must deliver what was promised, with the right to sell it. A seller who has no title generally cannot give one.",
+   "advanced": "Nemo dat quod non habet is the default, and the exceptions are narrow and statutory. Under a Torrens register, registration itself can defeat the rule, which is why land is not analysed like goods.",
+   "source": "Sale of Goods Act 1957",
+   "aliases": [
+    "seller",
+    "sellers",
+    "seller's",
+    "vendor",
+    "vendors"
+   ],
+   "see": [
+    "buyer",
+    "transfer",
+    "indefeasibility",
+    "contract"
    ]
   },
   {
@@ -4064,6 +8279,46 @@
    ]
   },
   {
+   "id": "settled",
+   "term": "settled",
+   "kind": "method",
+   "gloss": "Of law: no longer in doubt. Of a case: ended by agreement rather than judgment.",
+   "intermediate": "Two different meanings share one word. Settled law is a position later courts treat as fixed; a settled case never reaches a decision at all.",
+   "advanced": "Settled law can still be departed from — the Federal Court is not absolutely bound by its own decisions. So *settled* is a description of practice, not a rule of law.",
+   "source": "Precedent; Rules of Court 2012",
+   "aliases": [
+    "settled",
+    "settle",
+    "settlement",
+    "settles"
+   ],
+   "see": [
+    "stare-decisis",
+    "binding-authority",
+    "overruling",
+    "federal-court"
+   ]
+  },
+  {
+   "id": "share",
+   "term": "shares",
+   "kind": "doctrine",
+   "gloss": "A unit of ownership in a company.",
+   "intermediate": "A share is a bundle of rights against the company: to vote, to receive a dividend if one is declared, to a slice of what is left if it is wound up. It is not ownership of the company's assets.",
+   "advanced": "Because the shareholder owns the share and the company owns the assets, a fall in share value caused by a wrong to the company is reflective loss and not recoverable by the member.",
+   "source": "Companies Act 2016",
+   "aliases": [
+    "shares",
+    "shareholding"
+   ],
+   "see": [
+    "shareholder",
+    "company",
+    "dividend",
+    "reflective-loss"
+   ]
+  },
+  {
    "id": "shareholder",
    "term": "shareholder",
    "kind": "doctrine",
@@ -4073,11 +8328,54 @@
    "source": "Companies Act 2016",
    "aliases": [
     "shareholder",
-    "shareholders"
+    "shareholders",
+    "shareholder's"
    ],
    "see": [
     "director",
     "company"
+   ]
+  },
+  {
+   "id": "sign",
+   "term": "sign",
+   "kind": "doctrine",
+   "gloss": "To put your name to a document, adopting it as yours.",
+   "intermediate": "A signature is evidence that you agreed to what the document says. Some transactions need one; many contracts need none at all.",
+   "advanced": "Section 340 turns on instruments that are forged or void, so proving whether a signature is genuine can decide who owns land. Handwriting is proved under section 45 or section 47 of the Evidence Act.",
+   "source": "Evidence Act 1950, ss 45, 47",
+   "aliases": [
+    "sign",
+    "signs",
+    "signed",
+    "signing",
+    "signature",
+    "signatures"
+   ],
+   "see": [
+    "forgery",
+    "transfer",
+    "section-340",
+    "document"
+   ]
+  },
+  {
+   "id": "silence",
+   "term": "silence",
+   "kind": "doctrine",
+   "gloss": "Saying nothing — which the law sometimes reads and sometimes must not.",
+   "intermediate": "Silence is not acceptance in contract. In criminal procedure, an accused's silence is protected and generally cannot be held against them.",
+   "advanced": "Silence can become significant where there is a duty to speak — in a fiduciary relationship, or where a half-truth has been told, making non-disclosure a misrepresentation.",
+   "source": "Contracts Act 1950; Evidence Act 1950",
+   "aliases": [
+    "silence",
+    "silent"
+   ],
+   "see": [
+    "acceptance",
+    "misrepresentation",
+    "fiduciary-duty",
+    "adverse-inference"
    ]
   },
   {
@@ -4094,6 +8392,25 @@
    ],
    "aliases": [
     "slander"
+   ]
+  },
+  {
+   "id": "source-of-law",
+   "term": "source",
+   "kind": "method",
+   "gloss": "Where a rule comes from, and therefore how strong it is.",
+   "intermediate": "Constitution, statute, case law, and in gaps English common law. A rule's source decides what can override it.",
+   "advanced": "Naming the source is the first move in any answer: it fixes the hierarchy, the method of interpretation and the ways the rule can be changed.",
+   "source": "Legal method",
+   "aliases": [
+    "source",
+    "sources"
+   ],
+   "see": [
+    "supremacy",
+    "statute",
+    "stare-decisis",
+    "section-3-cla"
    ]
   },
   {
@@ -4132,6 +8449,22 @@
    ]
   },
   {
+   "id": "srs",
+   "term": "SRS",
+   "kind": "method",
+   "gloss": "Spaced repetition system.",
+   "intermediate": "Software that schedules review at growing gaps, so you meet a card just as it starts to fade. This app uses one.",
+   "advanced": "An SRS trains recognition and recall of things you have already understood. It cannot teach reasoning, which is why the problem questions and the checkpoint blocks exist alongside it.",
+   "source": "Standard study-method usage",
+   "aliases": [
+    "SRS"
+   ],
+   "see": [
+    "fsrs",
+    "spacing"
+   ]
+  },
+  {
    "id": "ssm",
    "term": "SSM",
    "kind": "institution",
@@ -4165,6 +8498,25 @@
    ]
   },
   {
+   "id": "statute",
+   "term": "statute",
+   "kind": "doctrine",
+   "gloss": "A law made by a legislature.",
+   "intermediate": "An Act passed by Parliament or a State Legislature. A statute is the law itself; a case is evidence of what it means.",
+   "advanced": "Research runs in that order for a reason: find the Act, read the section, check it is the current reprint and that any amendment is in force, and only then look for cases. An answer that reasons from a case without naming the provision it construes has started in the middle.",
+   "source": "Interpretation Acts 1948 and 1967",
+   "aliases": [
+    "statute",
+    "statutes",
+    "statutory",
+    "statute's"
+   ],
+   "see": [
+    "provision",
+    "enactment"
+   ]
+  },
+  {
    "id": "derivative-action",
    "term": "statutory derivative action",
    "kind": "doctrine",
@@ -4180,40 +8532,6 @@
    "aliases": [
     "statutory derivative action",
     "derivative action"
-   ]
-  },
-  {
-   "id": "srs",
-   "term": "SRS",
-   "kind": "method",
-   "gloss": "Spaced repetition system.",
-   "intermediate": "Software that schedules review at growing gaps, so you meet a card just as it starts to fade. This app uses one.",
-   "advanced": "An SRS trains recognition and recall of things you have already understood. It cannot teach reasoning, which is why the problem questions and the checkpoint blocks exist alongside it.",
-   "source": "Standard study-method usage",
-   "aliases": [
-    "SRS"
-   ],
-   "see": [
-    "fsrs",
-    "spacing"
-   ]
-  },
-  {
-   "id": "statute",
-   "term": "statute",
-   "kind": "doctrine",
-   "gloss": "A law made by a legislature.",
-   "intermediate": "An Act passed by Parliament or a State Legislature. A statute is the law itself; a case is evidence of what it means.",
-   "advanced": "Research runs in that order for a reason: find the Act, read the section, check it is the current reprint and that any amendment is in force, and only then look for cases. An answer that reasons from a case without naming the provision it construes has started in the middle.",
-   "source": "Interpretation Acts 1948 and 1967",
-   "aliases": [
-    "statute",
-    "statutes",
-    "statutory"
-   ],
-   "see": [
-    "provision",
-    "enactment"
    ]
   },
   {
@@ -4252,6 +8570,25 @@
    ]
   },
   {
+   "id": "subject-to",
+   "term": "subject",
+   "kind": "word",
+   "gloss": "Governed by, or made to give way to.",
+   "intermediate": "*Subject to* sets a hierarchy: the provision that follows yields to the one named. Read the named provision first.",
+   "advanced": "*Notwithstanding* does the opposite, overriding what it names. Getting these two backwards inverts the meaning of a section, and it happens often.",
+   "source": "Statutory interpretation",
+   "aliases": [
+    "subject",
+    "subject to"
+   ],
+   "see": [
+    "construction",
+    "supremacy",
+    "proviso",
+    "inconsistent"
+   ]
+  },
+  {
    "id": "subordinate-courts",
    "term": "subordinate courts",
    "kind": "institution",
@@ -4287,6 +8624,24 @@
    ]
   },
   {
+   "id": "substance-form",
+   "term": "substance",
+   "kind": "word",
+   "gloss": "What something really is, as against what it is called.",
+   "intermediate": "Substance over form is a habit of legal reading. The label the parties chose does not decide the legal category.",
+   "advanced": "The principle has limits. Under a registration system, form often *is* substance — an unregistered transfer does not become effective because everyone meant it to be.",
+   "source": "Equity; land law",
+   "aliases": [
+    "substance"
+   ],
+   "see": [
+    "effect",
+    "lease",
+    "licence",
+    "register-title"
+   ]
+  },
+  {
    "id": "substantive",
    "term": "substantive",
    "kind": "method",
@@ -4299,6 +8654,29 @@
    ],
    "see": [
     "procedural"
+   ]
+  },
+  {
+   "id": "sue",
+   "term": "sue",
+   "kind": "method",
+   "gloss": "To bring a civil claim against someone.",
+   "intermediate": "Suing needs a cause of action, a defendant who can be found, and a claim within time. All three fail cases before the merits are reached.",
+   "advanced": "Who may sue is a separate question from who is right. A company's loss is the company's to sue for, which is why a shareholder's reflective loss claim fails at this gate.",
+   "source": "Rules of Court 2012",
+   "aliases": [
+    "sue",
+    "sued",
+    "sues",
+    "suing",
+    "suit",
+    "suits"
+   ],
+   "see": [
+    "cause-of-action",
+    "plaintiff",
+    "limitation",
+    "reflective-loss"
    ]
   },
   {
@@ -4320,6 +8698,45 @@
    ]
   },
   {
+   "id": "supplier",
+   "term": "supplier",
+   "kind": "doctrine",
+   "gloss": "Someone who provides goods or services under a contract.",
+   "intermediate": "Suppliers turn up in problem questions as the party who delivered late, delivered the wrong thing, or delivered nothing. Start with what the contract required.",
+   "advanced": "A supplier's liability can run in contract to the buyer and in tort to a third party who is injured. Donoghue v Stevenson exists because those two claims are separate.",
+   "source": "Contract; tort",
+   "aliases": [
+    "supplier",
+    "suppliers",
+    "supplier's"
+   ],
+   "see": [
+    "buyer",
+    "contract",
+    "negligence",
+    "privity"
+   ]
+  },
+  {
+   "id": "surety",
+   "term": "surety",
+   "kind": "doctrine",
+   "gloss": "A person who promises to answer for another's default.",
+   "intermediate": "In a guarantee the surety is the backup payer. In bail the surety promises the accused will attend and puts up money against it.",
+   "advanced": "A surety is discharged by a material variation of the principal contract made without consent, because the risk guaranteed is no longer the risk agreed to.",
+   "source": "Contracts Act 1950, Part VIII; Criminal Procedure Code",
+   "aliases": [
+    "surety",
+    "sureties"
+   ],
+   "see": [
+    "guarantee",
+    "bail",
+    "creditor",
+    "indemnity"
+   ]
+  },
+  {
    "id": "syariah-court",
    "term": "Syariah court",
    "kind": "institution",
@@ -4335,6 +8752,27 @@
     "Syariah courts",
     "Syariah court",
     "Syariah"
+   ]
+  },
+  {
+   "id": "tenant",
+   "term": "tenant",
+   "kind": "doctrine",
+   "gloss": "The person who holds land under a lease or tenancy.",
+   "intermediate": "A tenant has exclusive possession for a time, and can keep the landlord out during it. That is what separates a tenant from a lodger or a licensee.",
+   "advanced": "A tenancy exempt from registration binds a purchaser without appearing on the title, which is a rare and important exception to the completeness of the register.",
+   "source": "National Land Code",
+   "aliases": [
+    "tenant",
+    "tenants",
+    "tenant's",
+    "tenancy"
+   ],
+   "see": [
+    "landlord",
+    "lease",
+    "licence",
+    "possession"
    ]
   },
   {
@@ -4368,6 +8806,25 @@
    ],
    "see": [
     "ratio-decidendi"
+   ]
+  },
+  {
+   "id": "threshold",
+   "term": "threshold",
+   "kind": "word",
+   "gloss": "The level something must reach before the law takes notice.",
+   "intermediate": "Thresholds keep trivial cases out. A prima facie case is a threshold; so is the leave stage in judicial review.",
+   "advanced": "Crossing a threshold is not winning. It shifts the argument to the next stage, and treating it as a decision on the merits is a standard confusion.",
+   "source": "Legal method",
+   "aliases": [
+    "threshold",
+    "thresholds"
+   ],
+   "see": [
+    "prima-facie-case",
+    "order-53",
+    "locus-standi",
+    "striking-out"
    ]
   },
   {
@@ -4424,6 +8881,107 @@
    ]
   },
   {
+   "id": "transaction",
+   "term": "transaction",
+   "kind": "doctrine",
+   "gloss": "A dealing between parties that the law attaches consequences to.",
+   "intermediate": "A transaction can be a sale, a loan, a transfer or a gift. Identify it precisely, because different rules follow from each.",
+   "advanced": "In evidence, facts forming part of the same transaction are relevant under section 6 even if they would otherwise be inadmissible. The scope of *the same transaction* is the fought-over point.",
+   "source": "Evidence Act 1950, s 6",
+   "aliases": [
+    "transaction",
+    "transactions"
+   ],
+   "see": [
+    "dealing",
+    "relevancy",
+    "evidence-act",
+    "contract"
+   ]
+  },
+  {
+   "id": "transfer",
+   "term": "transfer",
+   "kind": "doctrine",
+   "gloss": "Moving ownership of something from one person to another.",
+   "intermediate": "For land, a transfer is a form that is registered. Signing it is not enough — the registrar's entry is what shifts the title.",
+   "advanced": "A transfer void for forgery still passes an indefeasible title to a later purchaser in good faith and for value, under the proviso to section 340(3). That is the whole battleground of deferred indefeasibility.",
+   "source": "National Land Code, s 340",
+   "aliases": [
+    "transfer",
+    "transfers",
+    "transferred",
+    "transferee",
+    "transferor"
+   ],
+   "see": [
+    "register-title",
+    "indefeasibility",
+    "section-340",
+    "deferred-indefeasibility"
+   ]
+  },
+  {
+   "id": "treat",
+   "term": "treat",
+   "kind": "word",
+   "gloss": "To handle something as if it were a particular thing.",
+   "intermediate": "Courts treat one thing as another all the time: a licence as a lease, a transaction as a sham, a company and its owner as one where the veil is lifted.",
+   "advanced": "*Treated as* language in a statute is a deeming provision. It creates a legal fiction with defined limits, and it must not be pushed beyond the purpose it was enacted for.",
+   "source": "Statutory interpretation",
+   "aliases": [
+    "treat",
+    "treats",
+    "treated",
+    "treatment",
+    "treatments"
+   ],
+   "see": [
+    "corporate-veil",
+    "substance-form",
+    "construction",
+    "classification"
+   ]
+  },
+  {
+   "id": "treaty",
+   "term": "treaty",
+   "kind": "doctrine",
+   "gloss": "A binding agreement between states.",
+   "intermediate": "Malaysia signing a treaty does not by itself change Malaysian law. Parliament must bring it in by statute before a court can apply it.",
+   "advanced": "This is the dualist position. An unincorporated treaty may still be used as an aid to construction where domestic law is ambiguous, but it cannot create rights on its own.",
+   "source": "Public international law; Article 74",
+   "aliases": [
+    "treaty",
+    "treaties"
+   ],
+   "see": [
+    "construction",
+    "statute",
+    "fundamental-liberties",
+    "supremacy"
+   ]
+  },
+  {
+   "id": "trial",
+   "term": "trial",
+   "kind": "method",
+   "gloss": "The hearing where evidence is given and the case is decided.",
+   "intermediate": "A trial is where witnesses are called and documents are proved. Appeals come afterwards and do not usually hear the witnesses again — they read the record.",
+   "advanced": "The trial court's findings of fact carry weight on appeal precisely because it saw the witnesses. That is why an appellate court will disturb a finding of primary fact only where it is plainly wrong.",
+   "source": "Criminal Procedure Code; Rules of Court",
+   "aliases": [
+    "trial",
+    "trials"
+   ],
+   "see": [
+    "appeal",
+    "witness",
+    "evidence",
+    "prima-facie-case"
+   ]
+  },
+  {
    "id": "tribunal",
    "term": "tribunal",
    "kind": "institution",
@@ -4449,7 +9007,8 @@
    "source": "Trustee Act 1949",
    "aliases": [
     "trustee",
-    "trustees"
+    "trustees",
+    "trustee's"
    ],
    "see": [
     "director"
@@ -4522,6 +9081,105 @@
    ]
   },
   {
+   "id": "unlawful",
+   "term": "unlawful",
+   "kind": "word",
+   "gloss": "Forbidden by law — but not always a crime.",
+   "intermediate": "Unlawful is wider than criminal. A contract can be unlawful and simply unenforceable; nobody is prosecuted for it.",
+   "advanced": "Section 24 of the Contracts Act makes an unlawful object or consideration void, which is a civil consequence. Keep it apart from illegality that also attracts a penalty.",
+   "source": "Contracts Act 1950, s 24",
+   "aliases": [
+    "unlawful",
+    "unlawfully"
+   ],
+   "see": [
+    "lawful",
+    "void",
+    "section-24",
+    "offence"
+   ]
+  },
+  {
+   "id": "unreasonable",
+   "term": "unreasonable",
+   "kind": "doctrine",
+   "gloss": "Outside the range of decisions a reasonable body could reach.",
+   "intermediate": "This is a high bar. A decision the court disagrees with is not unreasonable in the legal sense.",
+   "advanced": "Wednesbury unreasonableness means a decision so outrageous in its defiance of logic that no sensible person could have arrived at it. Proportionality is a more searching test and its place in Malaysian law is contested.",
+   "source": "Administrative law",
+   "aliases": [
+    "unreasonable",
+    "unreasonably",
+    "unreasonableness"
+   ],
+   "see": [
+    "wednesbury",
+    "judicial-review",
+    "proportionality",
+    "merits"
+   ]
+  },
+  {
+   "id": "valid",
+   "term": "valid",
+   "kind": "method",
+   "gloss": "Legally effective — it does what it was meant to do.",
+   "intermediate": "Valid, void and voidable are three different states. A void agreement never had effect; a voidable one has effect until someone ends it.",
+   "advanced": "Validity is also the question in judicial review of subsidiary legislation: a rule outside the enabling power is invalid, and can be attacked collaterally when someone is prosecuted under it.",
+   "source": "Contracts Act 1950; administrative law",
+   "aliases": [
+    "valid",
+    "validity",
+    "invalid",
+    "validly"
+   ],
+   "see": [
+    "void",
+    "voidable",
+    "ultra-vires",
+    "subsidiary-legislation"
+   ]
+  },
+  {
+   "id": "value-worth",
+   "term": "value",
+   "kind": "doctrine",
+   "gloss": "Worth in money — and, in contract, what makes a promise binding.",
+   "intermediate": "*For value* means something was given in return. A buyer for value is in a stronger position than someone who received a gift.",
+   "advanced": "Valuable consideration need not be adequate, only real. Explanation 2 to section 26 of the Contracts Act says inadequacy does not make an agreement void, though it is evidence on free consent.",
+   "source": "Contracts Act 1950, s 26",
+   "aliases": [
+    "value",
+    "valuable"
+   ],
+   "see": [
+    "consideration",
+    "section-26",
+    "buyer",
+    "free-consent"
+   ]
+  },
+  {
+   "id": "vehicle",
+   "term": "vehicle",
+   "kind": "doctrine",
+   "gloss": "A conveyance — and a favourite example in road traffic and negligence.",
+   "intermediate": "Road accident problems turn on standard of care, causation and contributory negligence. The vehicle itself is rarely the legal issue.",
+   "advanced": "Statutory definitions of *motor vehicle* differ between the Road Transport Act and insurance policies, and a claim can fail on a definition rather than on the driving.",
+   "source": "Road Transport Act 1987",
+   "aliases": [
+    "vehicle",
+    "vehicles",
+    "vehicles'"
+   ],
+   "see": [
+    "negligence",
+    "contributory-negligence",
+    "causation",
+    "apportionment"
+   ]
+  },
+  {
    "id": "vicarious-liability",
    "term": "vicarious liability",
    "kind": "doctrine",
@@ -4536,6 +9194,25 @@
    "aliases": [
     "vicarious liability",
     "vicariously liable"
+   ]
+  },
+  {
+   "id": "victim",
+   "term": "victim",
+   "kind": "word",
+   "gloss": "The person harmed by an offence or a wrong.",
+   "intermediate": "In a criminal case the victim is a witness, not a party. The prosecution is brought by the state, and the victim cannot withdraw it at will.",
+   "advanced": "That is why a civil claim runs alongside: the victim's own remedy is in tort, and it is decided on the balance of probabilities regardless of what happened in the criminal court.",
+   "source": "Criminal Procedure Code; tort",
+   "aliases": [
+    "victim",
+    "victims"
+   ],
+   "see": [
+    "prosecution",
+    "public-prosecutor",
+    "party",
+    "balance-of-probabilities"
    ]
   },
   {
@@ -4590,6 +9267,25 @@
    ]
   },
   {
+   "id": "warrant",
+   "term": "warrant",
+   "kind": "doctrine",
+   "gloss": "A written court order authorising arrest, search or seizure.",
+   "intermediate": "A warrant is permission from a court, given in advance. Some arrests and searches can be made without one, and those powers are defined narrowly.",
+   "advanced": "Whether an offence is seizable decides whether the police may act without a warrant. The label is set by the First Schedule to the Criminal Procedure Code, not by how serious the offence feels.",
+   "source": "Criminal Procedure Code, First Schedule",
+   "aliases": [
+    "warrant",
+    "warrants"
+   ],
+   "see": [
+    "arrest",
+    "seizable",
+    "remand",
+    "criminal-procedure-code"
+   ]
+  },
+  {
    "id": "wednesbury",
    "term": "Wednesbury unreasonableness",
    "kind": "doctrine",
@@ -4605,6 +9301,45 @@
     "Wednesbury unreasonableness",
     "irrationality",
     "Wednesbury"
+   ]
+  },
+  {
+   "id": "weight",
+   "term": "weight",
+   "kind": "word",
+   "gloss": "How much a piece of evidence is worth once it is allowed in.",
+   "intermediate": "Admissibility and weight are two different questions. Evidence can be admissible and still count for very little.",
+   "advanced": "Admissibility is a question of law for the judge; weight is a question of fact. Confusing them produces the common error of excluding evidence because it is unconvincing.",
+   "source": "Evidence Act 1950",
+   "aliases": [
+    "weight"
+   ],
+   "see": [
+    "admissibility",
+    "evidence",
+    "relevancy",
+    "evidential-burden"
+   ]
+  },
+  {
+   "id": "withdrawal",
+   "term": "withdrawal",
+   "kind": "doctrine",
+   "gloss": "Taking back something already done — a charge, a claim, an offer.",
+   "intermediate": "An offer can be withdrawn before it is accepted. A prosecution can be withdrawn, and what follows depends on whether the court discharges or acquits.",
+   "advanced": "Revocation of a proposal must reach the offeree before acceptance is complete against the proposer — sections 4 and 5 of the Contracts Act set out that timing, and it is where most offer-and-acceptance problems are decided.",
+   "source": "Contracts Act 1950, ss 4-6",
+   "aliases": [
+    "withdrawal",
+    "withdraw",
+    "withdrawn",
+    "withdrew"
+   ],
+   "see": [
+    "revocation",
+    "proposal",
+    "communication-complete",
+    "discharge-not-amounting"
    ]
   },
   {

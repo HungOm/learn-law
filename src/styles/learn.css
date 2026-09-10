@@ -30,6 +30,44 @@
   outline-offset: var(--focus-offset);
 }
 
+/* Ordinary vocabulary: glossed, but not advertised.
+   ------------------------------------------------
+   The glossary now carries two different things. A term of art — indefeasibility,
+   ratio decidendi, seizable — is vocabulary the reader has to acquire, and the
+   dotted underline is an invitation to acquire it. An ordinary academic word —
+   circumstances, threshold, particular — is glossed so that nobody is stopped by
+   it, which is a different job: the reader who already knows the word should not
+   have to see a mark on it at all.
+
+   Drawn the same, the second swamps the first. Measured with
+   tools/glossary-density.py after the vocabulary went from 269 terms to 475: the
+   share of passages carrying four or more marks had a median of 25%, and 22 of
+   64 lessons were past the ceiling — a page of underlines, in which the terms
+   that actually needed learning no longer stood out from the words that did not.
+   Making this tier quiet took the same median to 14% without removing a single
+   gloss.
+
+   So `word`-kind terms rest with no underline and reveal it when the pointer is
+   anywhere in the passage. That keeps them discoverable — a reader whose mouse
+   is in the paragraph they are reading sees every word that has a gloss — while
+   a reader scanning down the page sees only the terms of art. Keyboard users get
+   the focus ring, which is unchanged, and on touch the tap opens the card as
+   before; `@media (hover: hover)` keeps the reveal rule off touch entirely,
+   where a "hover" is a stuck state after a tap rather than an intention. */
+.term-word { border-bottom-color: transparent; }
+
+@media (hover: hover) {
+  :is(p, li, td, th, dd, figcaption):hover .term-word {
+    border-bottom-color: var(--border-strong);
+  }
+}
+
+/* Its own hover and open states stay exactly as loud as any other term's — the
+   tier decides the resting state, not what happens once the reader arrives. */
+.term-word:hover,
+.term-word:focus-visible,
+.term-word.is-open { border-bottom-color: var(--border-active); }
+
 .termcard {
   position: fixed;
   z-index: 60;

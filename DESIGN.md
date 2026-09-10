@@ -833,6 +833,47 @@ separate piece of geometry reasoning about `matrix` happened to be right — but
 by a 12u margin, large enough to survive being approximately wrong. Use the
 arithmetic to decide what to measure; do not file it as the measurement.
 
+### A check that cannot fail
+
+Five times in one evening, across four sessions, an instrument reported and
+nobody asked what it would take for it to report something else. Each ran, each
+was green or hedging, and none could have said otherwise.
+
+| the instrument | why it could not fail |
+|---|---|
+| `responsive.mjs`'s dist guard | compared truncated `mtime` against sub-millisecond `mtimeMs` — never equal, so it cried INCONCLUSIVE on **every** run since it was added |
+| `Diagram.jsx`'s spectrum crowding fallback | gated on `plan.room`, which `plan` did not carry: `undefined < 110` is false, so the fallback layout was unreachable code |
+| `check-statutes.py`'s coverage rule | stopped firing after a tightening — correctly, as it turned out, but silence is what a broken rule and a satisfied rule both look like |
+| `check-statutes.py` vs `src/lib/statutes.js` | the gate globbed the directory, the app imported one file, so a batch could gate green and reach no reader |
+| `diagram-cases.mjs`'s calibration | while `.dia-svg` had `min-width: 38rem`, the fixture and the app both rendered 608px **regardless of their containers** — two numbers equal for a reason unrelated to the thing being calibrated |
+
+The last is the worst variant and the one worth studying. The others were mute.
+That one **fired correctly on every run, on evidence that meant nothing.** The
+fixture had never been the width the app gives a figure — its chain has no
+`.main`, so `.sheet`'s `margin-inline: -16px` bled against `body` and *added*
+16px a side where the app's cancels a gutter, 334px against 302px. The pin hid
+a 32px disagreement by overriding both sides with the same constant.
+
+Removing the pin did not break the calibration. **It made it capable of
+failing, and it failed immediately.**
+
+So the question to ask of a green check is not "did it pass". It is:
+
+> **What would have to be true for this to report something else?**
+
+If there is no answer, the check is decoration, and a decoration is worse than
+no check because it is load-bearing in everyone's confidence.
+
+**Three habits that came out of the same evening.** Force the failure before
+trusting the rule — site-59 forced five, including a negative control, because
+the risk when closing a quiet-failure hole is over-firing, and a rule that
+over-fires gets switched off. When a rule stops firing, find out why rather
+than filing it as resolved; site-59 listed every Penal Code entry and found the
+*content* had moved, not the rule. And prefer an assertion that cannot be
+satisfied by accident: one CSS pixel per unit needs no pin, so
+`fontSize={15}` is 15px by construction and there is no constant in two files
+to drift.
+
 ### Green and invisible: when the gate sees content the app does not
 
 Twice in one session, in two different content tiers, a batch of authored

@@ -125,41 +125,32 @@
 /* THIS DECLARATION SETS THE TYPE FLOOR FOR EVERY DIAGRAM IN THE APP, AND
  * Diagram.jsx IS WRITTEN AGAINST THE NUMBER IN IT.
  *
- * ==> If you move this min-width, move `MIN_RENDERED` in Diagram.jsx with it.
- *     That constant is 608 because this is 38rem, every unit size in that file
- *     is computed from it, and nothing in either file will fail if they drift.
- *     A label would simply get smaller, silently, everywhere.
+ * ==> SUPERSEDED. There is no pin here any more, and no ratio to keep.
  *
- * Read DESIGN.md 3 before changing it. An SVG font-size in viewBox units is a
- * ratio, not a size, so this min-width is the only thing that turns a unit
- * size into a pixel size. On Diagram.jsx's 760-unit box:
+ * Everything below the line was true while an SVG font-size was a RATIO: the
+ * viewBox was a fixed 760 units wide, so `rendered_px = units x (box_px / 760)`
+ * and this min-width was the only thing turning a unit size into a pixel size.
+ * That coupling ran across two files — `MIN_RENDERED` in Diagram.jsx was 608
+ * because this was 38rem — and nothing in either file failed when they drifted.
+ * A label just got smaller, silently, everywhere.
  *
- *     rendered_px = units x (min_width_px / 760)
+ * Diagram.jsx now takes its width from a ResizeObserver and draws a viewBox
+ * exactly that wide, so ONE UNIT IS ONE CSS PIXEL and `fontSize={15}` is 15px.
+ * The floor is satisfied by arithmetic that cannot drift instead of by a pin
+ * that had to be maintained in step. `MIN_PIN` is gone from
+ * tools/diagram-cases.mjs for the same reason.
  *
- * At 38rem / 608px, with the unit sizes Diagram.jsx now sets:
+ * So the pin comes off, and with it the sideways drag it cost: a diagram had to
+ * be 608px wide on a 328px phone pane, which is 280px of scrolling on every
+ * figure on the device most of this readership uses. Figures now fit the column
+ * they are given, at every width, and reflow rather than scroll — a row of two
+ * becomes one per row, a branch wraps onto a spine, a matrix below a viable
+ * cell becomes a list. Verified at 360, 390 and 780: no figure scrolls, the
+ * smallest label is 13px, no collisions.
  *
- *     role                       units    rendered
- *     .dia-label                 18.1     14.5px
- *     .dia-note, .dia-head       16.9     13.5px
- *     .dia-year                  17.5     14.0px
- *     .dia-num                   16.9     13.5px
- *
- * all of them clear of the 11px floor, and clear of the 12px floor for text
- * that is a sentence. At the 34rem (544px) this replaces, five of the seven
- * roles were UNDER 11px — .dia-num rendered at 8.6px — because the pin and the
- * unit sizes had never been checked against each other.
- *
- * Nothing in this file sets a diagram's font-size. Diagram.jsx owns the unit
- * sizes; this file owns the pin. Two layers each setting a size is how a
- * correct fix in one of them produces a wrong result on screen.
- *
- * What the pin costs. A diagram already scrolled on every phone at 34rem (a
- * 360px handset has about a 328px pane), so on a phone this is 64px more drag
- * on a box that was already dragging. What it buys is that from 1024 up a
- * diagram does not scroll at all: learn.css's --fig-bleed gives the figure
- * 612px, 644px and 676px of box at laptop, desktop and wide.
+ * `width: 100%` stays. It is what makes the figure take the column.
  */
-.dia-svg { display: block; width: 100%; min-width: 38rem; height: auto; }
+.dia-svg { display: block; width: 100%; height: auto; }
 .dia-caption {
   font-family: var(--font-sans);
   font-size: var(--type-sm);

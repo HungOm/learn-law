@@ -69,6 +69,28 @@ function serviceWorker() {
   };
 }
 
+// Moving the built site to the repository root broke `npm run dev`, and did it
+// silently: Vite's dev root is the repository, so it serves <root>/index.html —
+// which is now BUILD OUTPUT. The dev server was handing back the last build,
+// minified, with no HMR, and looking exactly like a working dev server. Every
+// source change appeared to have no effect, which is the most expensive way for
+// a tool to fail: it sends you looking for the bug in your change.
+//
+// So in dev, and only in dev, "/" serves the source entry instead.
+function devServesTheSource() {
+  return {
+    name: 'warta-dev-serves-the-source',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use((req, _res, next) => {
+        const path = (req.url || '').split('?')[0];
+        if (path === '/' || path === '/index.html') req.url = '/app/index.html';
+        next();
+      });
+    },
+  };
+}
+
 // With the entry at app/index.html, Rollup emits dist/app/index.html and, under
 // `base: './'`, points it at ../assets/. Both are wrong for what gets published:
 // the file has to sit at the root of the output, next to assets/. So the emitted
@@ -112,7 +134,7 @@ function entryAtOutputRoot() {
 // moves; every tool that talks to the dev server keeps working.
 export default defineConfig({
   base: './',
-  plugins: [react(), serviceWorker(), entryAtOutputRoot()],
+  plugins: [react(), serviceWorker(), entryAtOutputRoot(), devServesTheSource()],
   build: {
     outDir: 'dist',
     rollupOptions: {

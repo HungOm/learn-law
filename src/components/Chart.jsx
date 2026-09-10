@@ -148,7 +148,13 @@ function Rows({ data, series, unit }) {
           {data.map(d => (
             <tr key={d.label}>
               <th scope="row">{d.label}{d.note ? <span className="dtable-note">{d.note}</span> : null}</th>
-              {keys.map(s => <td key={s.key} className="is-num">{d[s.key] ?? '—'}</td>)}
+              {/* data-label: see the note in Blocks.jsx — it is what the
+                  narrow stacked layout reads to name each value. */}
+              {keys.map(s => (
+                <td key={s.key} className="is-num" data-label={`${s.label || 'Value'}${unit ? ` (${unit})` : ''}`}>
+                  {d[s.key] ?? '—'}
+                </td>
+              ))}
             </tr>
           ))}
         </tbody>

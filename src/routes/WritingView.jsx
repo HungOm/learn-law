@@ -7,6 +7,7 @@ import { plural } from '../lib/format.js';
 import PrintSheet from '../components/PrintSheet.jsx';
 import NotFound from './NotFound.jsx';
 import { focusOn, setFocus } from '../lib/focus.js';
+import { useDialog } from '../components/Overlays.jsx';
 
 /**
  * One writing exercise: brief, steps, a place to draft, and — only after the
@@ -27,6 +28,12 @@ export default function WritingView() {
   const [stepPref, setStepPref] = useState(focusOn);
   const [step, setStep] = useState(0);
   const [draft, setDraft] = useState(null);
+  // `useDialog` is a hook, so all of this sits above the early returns for a
+  // missing or locked exercise.
+  const stepping = stepPref;
+  const readerRef = useDialog(stepping, () => { setStepPref(false); setFocus(false); });
+  const closeReader = () => { setStepPref(false); setFocus(false); };
+  const toReaderTop = () => readerRef.current?.querySelector('.focusview-body')?.scrollTo({ top: 0 });
   const [revealed, setRevealed] = useState(false);
   const [saved, setSaved] = useState('');
   const timer = useRef(null);
@@ -102,20 +109,13 @@ export default function WritingView() {
   // width-free stepper on a 1920px monitor reads like an oversight if you meet
   // it without that; it is not one. Both views share `focusOn` so the reader
   // sets this once.
-  const stepping = stepPref;
   const idx = Math.min(step, visible.length - 1);
   const on = k => !stepping || visible[idx][0] === k;
 
-  return (
-    <div className="wrap sheet" data-module={w.moduleId}>
-      <p className="small taplink-row"><Link className="taplink" to="/writing">← Writing</Link></p>
-
-      <h1>{w.title}</h1>
-      <p className="lede">
-        {w.kind.replace('-', ' ')} · {w.minutes} minutes
-        {lesson && <> · from <Link to={`/lesson/${lesson.id}`}>{lesson.title}</Link></>}
-      </p>
-
+  // The stages, rendered identically whether they are inline on the page or
+  // alone inside the reader — one definition so the two cannot drift.
+  const stagesNode = (
+    <>
       {on(0) && (<>
       <h2>The brief</h2>
       <p>{w.brief}</p>
@@ -333,26 +333,23 @@ export default function WritingView() {
       <p className="small"><strong>Check your own work.</strong> {w.verify}</p>
       <p className="small">Last verified {w.lastVerified}.</p>
       </>)}
+    </>
+  );
 
-      {stepping && (
-        <nav className="stepper stepper--foot" aria-label="Writing stages">
-          <button
-            type="button"
-            className="stepper-btn"
-            disabled={idx === 0}
-            onClick={() => { setStep(i => Math.max(0, i - 1)); window.scrollTo({ top: 0 }); }}
-          >← Back</button>
-          <span className="stepper-count">
-            {visible[idx][1]} · {idx + 1} of {visible.length}
-          </span>
-          <button
-            type="button"
-            className="stepper-btn stepper-btn--next"
-            disabled={idx >= visible.length - 1}
-            onClick={() => { setStep(i => Math.min(visible.length - 1, i + 1)); window.scrollTo({ top: 0 }); }}
-          >Next →</button>
-        </nav>
-      )}
+  return (
+    <>
+    <div className="wrap sheet" data-module={w.moduleId}
+      style={stepping ? { display: 'none' } : undefined}>
+      <p className="small taplink-row"><Link className="taplink" to="/writing">← Writing</Link></p>
+
+      <h1>{w.title}</h1>
+      <p className="lede">
+        {w.kind.replace('-', ' ')} · {w.minutes} minutes
+        {lesson && <> · from <Link to={`/lesson/${lesson.id}`}>{lesson.title}</Link></>}
+      </p>
+
+      {!stepping && stagesNode}
+
 
       <p className="stepper-mode">
         <button
@@ -365,5 +362,51 @@ export default function WritingView() {
         </button>
       </p>
     </div>
+
+      {stepping && (
+        <div className="focusview" ref={readerRef} tabIndex={-1} role="dialog" aria-modal="true"
+          aria-label={`${w.title} — ${visible[idx][1]}, ${idx + 1} of ${visible.length}`}>
+          <div className="focusview-surface">
+            <div className="focusview-top">
+              <p className="focusview-where">
+                {/* The exercise title rides in the bar because a stage heading
+                    alone does not say WHICH exercise you are in, and the page
+                    that would have told you is not on screen. */}
+                <span className="stepper-count">
+                  {w.title} · {visible[idx][1]} · {idx + 1} of {visible.length}
+                </span>
+                <span className="stepper-bar" aria-hidden="true">
+                  <i style={{ width: `${((idx + 1) / Math.max(1, visible.length)) * 100}%` }} />
+                </span>
+              </p>
+              <button type="button" className="focusview-close" onClick={closeReader}>
+                Close ✕
+              </button>
+            </div>
+
+            <div className="focusview-body">
+              <div className="focusview-col">
+                {stagesNode}
+              </div>
+            </div>
+
+            <div className="focusview-foot">
+              <button
+                type="button"
+                className="stepper-btn"
+                disabled={idx === 0}
+                onClick={() => { setStep(i => Math.max(0, i - 1)); toReaderTop(); }}
+              >← Back</button>
+              <button
+                type="button"
+                className="stepper-btn stepper-btn--next"
+                disabled={idx >= visible.length - 1}
+                onClick={() => { setStep(i => Math.min(visible.length - 1, i + 1)); toReaderTop(); }}
+              >Next →</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

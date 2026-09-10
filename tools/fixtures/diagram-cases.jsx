@@ -63,6 +63,14 @@ const CASES = [
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <MotionConfig reducedMotion="always">
+    {/* `.main` is not decoration here. `.sheet` bleeds full-width with
+        `margin-inline: -16px`, and what it bleeds AGAINST decides the width:
+        against `.main`'s 16px gutter the bleed cancels it, against `body` it
+        adds to the viewport. Without this wrapper the fixture ran 32px wider
+        than the app at every width — which the old `min-width: 38rem` pin hid,
+        because both sides then rendered 608px for a reason that had nothing to
+        do with their containers matching. */}
+    <div className="main">
     <div className="lesson-layout" data-module="m05-criminal-procedure">
       <div className="lesson-main sheet">
         <section className="lsec">
@@ -72,6 +80,7 @@ createRoot(document.getElementById('root')).render(
           ))}
         </section>
       </div>
+    </div>
     </div>
   </MotionConfig>
   </StrictMode>

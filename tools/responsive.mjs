@@ -168,7 +168,32 @@ if (missing.length) {
 
 const ALL = process.argv.includes('--all');
 const builtAt = statSync(distIndex).mtime;
-const startedAgainst = builtAt.getTime();
+// Compared against `mtimeMs` below, and it must be read the same way. `.mtime`
+// is a Date and `.getTime()` truncates to whole milliseconds, while `.mtimeMs`
+// carries APFS's sub-millisecond precision — so the two were unequal on a file
+// nobody had touched and the run reported INCONCLUSIVE almost every time. A
+// guard that fires on every run is indistinguishable from no guard: it taught
+// two sessions today to read "dist was rebuilt during the run" as noise, which
+// is exactly what it must never become.
+// Guarded on WHAT dist contains, not when it was written.
+//
+// The mtime moves whenever anybody rebuilds, and on a working copy carrying
+// several sessions that is every couple of minutes — measured here: 23:10:39,
+// 23:11:53, 23:11:57, with two of the three producing byte-identical output. So
+// an mtime guard reports a rebuild that changed nothing and throws away a run
+// that was perfectly valid. Vite names each asset by a hash of its contents, so
+// the set of filenames index.html references is a content fingerprint: a no-op
+// rebuild leaves it identical, a real change does not.
+//
+// Sensitised before being trusted, and the first attempt was worthless — a CSS
+// comment appended to learn.css left the emitted stylesheet byte-identical
+// because the minifier strips it, so the guard "failed to fire" on a change
+// that had not reached the output. A real declaration moved two of the four
+// hashes. A control that cannot distinguish "did not fire" from "nothing
+// happened" proves nothing.
+const fingerprint = () => [...readFileSync(distIndex, 'utf8')
+  .matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)].map(m => m[1]).sort().join(' ');
+const startedWith = fingerprint();
 const ageMin = Math.round((Date.now() - builtAt.getTime()) / 60000);
 console.log(`measuring dist/ built ${builtAt.toTimeString().slice(0, 8)}` +
   `${ageMin > 10 ? ` — ${ageMin} minutes ago; rebuild if the tree has moved` : ''}`);
@@ -666,7 +691,7 @@ if (uniqNotes.length) {
 // code-split chunk on demand. Every lesson route is now lazy where two of them
 // used to be inert. With several sessions building through an afternoon, this
 // will fire.
-const movedDuringRun = statSync(distIndex).mtimeMs !== startedAgainst;
+const movedDuringRun = fingerprint() !== startedWith;
 if (movedDuringRun) {
   const n = new Set(failures).size;
   if (n) {

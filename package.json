@@ -3,13 +3,13 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "ST's Chambers: a self-directed curriculum in Malaysian law \u2014 lessons, spaced review, quizzes, case reading, guided writing and problem questions.",
+  "description": "ST's Chambers: a self-directed curriculum in Malaysian law — lessons, spaced review, quizzes, case reading, guided writing and problem questions.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "pages": "npm run build && node tools/publish-pages.mjs",
-    "check": "npm run check:content && npm run check:extracts && npm run check:writing && npm run check:statutes && npm run check:design && npm run check:prose && npm run check:density && npm run check:quiz && npm run check:icons && npm run check:smoke && npm run check:responsive && npm run check:diagram-cases",
+    "check": "npm run check:content && npm run check:extracts && npm run check:writing && npm run check:statutes && npm run check:provisions && npm run check:design && npm run check:prose && npm run check:density && npm run check:glossary && npm run check:quiz && npm run check:icons && npm run check:smoke && npm run check:responsive && npm run check:diagram-cases",
     "check:content": "python3 tools/check-content.py",
     "check:extracts": "python3 tools/check-extracts.py",
     "check:writing": "python3 tools/check-writing.py",
@@ -24,7 +24,10 @@
     "check:icons": "python3 tools/icons.py --check",
     "check:smoke": "node tools/smoke.mjs",
     "check:responsive": "node tools/responsive.mjs",
-    "check:diagram-cases": "node tools/diagram-cases.mjs"
+    "check:diagram-cases": "node tools/diagram-cases.mjs",
+    "check:provisions": "python3 tools/check-provisions.py",
+    "check:glossary": "python3 tools/glossary-density.py --gate",
+    "check:glossary-dom": "node tools/glossary-dom.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.3",

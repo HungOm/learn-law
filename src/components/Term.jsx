@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { createContext, Fragment, useCallback, useContext, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -158,32 +158,51 @@ function TermCard({ t, rect, onClose }) {
  * `seen` is supplied by the page so that a term links once per lesson rather
  * than once per paragraph. Pass nothing and every occurrence links, which is
  * what the glossary index itself wants.
+ *
+ * **Emphasis is split off BEFORE the glossary runs, and this order matters.**
+ * It used to be the other way round: tokenise the whole string, then apply the
+ * inline markup to whatever plain segments came back. That works until a
+ * glossary term sits inside a `**bold**` span, at which point the mark lands
+ * between the delimiters and cuts them in half — the segments handed to the
+ * emphasis pass are `…called **` and `**, which is …`, neither of which holds a
+ * complete pair, so both render literally. The reader sees
+ *
+ *     A claim of this kind is called **negligence**, which is careless conduct
+ *
+ * with the asterisks on the page. Confirmed in Chrome against the built site on
+ * l-negligence and l-liberties before this was changed; 74 of the 130 passages
+ * in the corpus that carry inline markup had a mark inside a span, and they are
+ * concentrated in exactly the sentences that introduce a term for the first
+ * time, because that is where an author bolds a word AND the glossary knows it.
+ *
+ * Splitting first means a term is looked for inside each span rather than
+ * across its edges, which is also the correct reading: `**breach of duty**` is
+ * one bolded phrase, not a bolded fragment plus a linked fragment.
  */
 export function Prose({ text, seen, as: Tag = null, className }) {
-  const parts = useMemo(() => tokenise(text, seen), [text, seen]);
-  const body = parts.map((p, i) =>
-    typeof p === 'string'
-      ? <Emphasis key={i} text={p} />
-      : <Term key={i} id={p.id}>{p.text}</Term>);
+  const body = useMemo(() => {
+    const s = String(text ?? '');
+    const link = (str, keyed) => tokenise(str, seen).map((p, i) =>
+      typeof p === 'string'
+        ? <Fragment key={`${keyed}-${i}`}>{p}</Fragment>
+        : <Term key={`${keyed}-${i}`} id={p.id}>{p.text}</Term>);
+    if (!s.includes('*')) return link(s, 0);
+    return s.split(TOKEN).filter(Boolean).map((chunk, k) => {
+      const strong = chunk.startsWith('**') && chunk.endsWith('**') && chunk.length > 4;
+      const em = !strong && chunk.startsWith('*') && chunk.endsWith('*') && chunk.length > 2;
+      const inner = strong ? chunk.slice(2, -2) : em ? chunk.slice(1, -1) : chunk;
+      const nodes = link(inner, k);
+      if (strong) return <strong key={k}>{nodes}</strong>;
+      if (em) return <em key={k}>{nodes}</em>;
+      return <Fragment key={k}>{nodes}</Fragment>;
+    });
+  }, [text, seen]);
   return Tag ? <Tag className={className}>{body}</Tag> : <>{body}</>;
 }
 
-// The two-token inline markup from the lesson prose, applied inside the
-// glossary-linked segments rather than around them.
+// The two-token inline markup from the lesson prose. Kept as one expression so
+// `split` returns the delimiters along with the text between them.
 const TOKEN = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
-
-function Emphasis({ text }) {
-  if (!text.includes('*')) return text;
-  return (
-    <>
-      {text.split(TOKEN).filter(Boolean).map((part, i) => {
-        if (part.startsWith('**') && part.endsWith('**')) return <strong key={i}>{part.slice(2, -2)}</strong>;
-        if (part.startsWith('*') && part.endsWith('*') && part.length > 2) return <em key={i}>{part.slice(1, -1)}</em>;
-        return <span key={i}>{part}</span>;
-      })}
-    </>
-  );
-}
 
 export { KINDS };
 export default Term;

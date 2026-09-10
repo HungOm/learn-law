@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 /**
@@ -14,6 +15,7 @@ import { motion } from 'framer-motion';
  */
 export default function Diagram({ kind, title, caption, alt, ...rest }) {
   const Body = KINDS[kind];
+  const [boxRef, boxW] = useBoxWidth();
   if (!Body) return null;
   // `alt` reaches the reader through the SVG's aria-label, not as visible text.
   // The scroll box needs a name of its own: `title` is what a sighted reader
@@ -46,8 +48,8 @@ export default function Diagram({ kind, title, caption, alt, ...rest }) {
           the box currently overflows — a ResizeObserver toggling tabIndex
           fails silently when it desynchronises, leaving a scrolling box
           unreachable with nothing in the gates to notice. */}
-      <div className="dia-body" tabIndex={0} role="group" aria-label={label}>
-        <Body {...rest} note={alt} />
+      <div className="dia-body" ref={boxRef} tabIndex={0} role="group" aria-label={label}>
+        {boxW > 0 && <Body {...rest} note={alt} W={Math.max(MIN_W, boxW)} />}
       </div>
       {caption && <figcaption className="dia-caption">{caption}</figcaption>}
     </motion.figure>
@@ -63,7 +65,16 @@ const draw = (i = 0) => ({
 
 /** Wrap a label onto lines of at most `n` characters, on word boundaries. */
 function wrap(text, n) {
-  const words = String(text).split(/\s+/);
+  // A word longer than the whole budget cannot be placed by word-breaking, and
+  // an unbroken one runs straight out of the viewBox — where it is clipped, not
+  // scrolled to. Statute citations and compound Malay place names both reach
+  // this. Hard-break it rather than lose it.
+  const words = String(text).split(/\s+/).flatMap(w => {
+    if (w.length <= n) return [w];
+    const parts = [];
+    for (let i = 0; i < w.length; i += n) parts.push(w.slice(i, i + n));
+    return parts;
+  });
   const lines = [];
   let line = '';
   for (const w of words) {
@@ -102,37 +113,54 @@ function Verdict({ x, y, r = 9, tone }) {
 const CH = 0.45;
 const budget = (boxW, size, pad = 0.86) => Math.max(8, Math.floor((boxW * pad) / (size * CH)));
 
-// ------------------------------------------------------------- the type floor
-// An SVG `fontSize` is in viewBox units, so it is a ratio and not a size: what
-// the reader actually sees is `size x (rendered width / VB)`. Every diagram
-// here is drawn against a 760-unit viewBox, and `.dia-svg` carries a pinned
-// `min-width` inside its `overflow-x: auto` box, so the narrowest any label
-// ever renders is that width over 760 of its unit size. At the sizes this file
-// used before, and the 34rem the pin used to be, a 14-unit note came out at
-// 10.0px and a 12-unit step number at 8.6px.
+// --------------------------------------------------------- one unit, one pixel
+// Every diagram is drawn against a viewBox as wide as the box it is rendered
+// into, so a viewBox unit IS a CSS pixel and `fontSize={15}` is 15px on screen.
 //
-// DESIGN.md section 3 puts the floor at 12px for anything that reads as a
-// sentence; 11px is for short uppercase labels only, and nothing in these
-// diagrams is uppercase, so 12px is the floor for all of it. `check:design`
-// cannot catch this - it is arithmetic between a JSX attribute and a CSS
-// min-width in another file, which is why the rule is written down rather than
-// linted, and why the pin is named here as a constant that has to be kept in
-// step with plates.css rather than left implicit.
+// It used to be drawn at a fixed 760 units and squeezed into whatever space
+// there was, which made every font size a RATIO — `size x (rendered / 760)` —
+// and a 14-unit note came out at 10px on a phone. The fix then was a
+// `min-width` on `.dia-svg` pinning the render wide enough for the ratio to
+// clear the 12px floor, and the cost was that every figure scrolled sideways
+// on a phone. That trade is now refused: figures fit the screen.
 //
-// The sizes below sit at 13.5-14.5px rather than exactly on the 12px floor.
-// These are labels read at arm's length on a phone, inside a box the reader is
-// already scrolling sideways; the floor is where text stops being legible, not
-// where it becomes comfortable.
-const VB = 760;
-const MIN_RENDERED = 608;                                  // 38rem, the min-width on .dia-svg
-const units = px => Math.round((px * VB / MIN_RENDERED) * 10) / 10;
+// Drawing 1:1 removes the whole class of problem rather than re-tuning it.
+// There is no ratio, so there is no floor arithmetic, no constant here that has
+// to be kept in step with a stylesheet, and no way for a CSS change to silently
+// shrink type. What it costs instead is LAYOUT: 326 units cannot hold four
+// boxes across, so each kind below reflows on the width it is actually given.
 const SZ = {
-  label: units(14.5),                                      // 18.1 units -> 14.5px
-  note: units(13.5),                                       // 16.9 units -> 13.5px
-  head: units(13.5),                                       // 16.9 units -> 13.5px
-  year: units(14),                                         // 17.5 units -> 14.0px
-  num: units(13.5),                                        // 16.9 units -> 13.5px
+  label: 15,
+  note: 13.5,
+  head: 13.5,
+  year: 14,
+  num: 13,
 };
+
+// The width a diagram is drawn at, measured from the box it sits in. Below
+// this a phone in portrait with the sheet's padding has nothing left to draw
+// in, and the reflow rules stop being able to help.
+const MIN_W = 260;
+
+/** The rendered width of an element, tracked as it changes. */
+function useBoxWidth() {
+  const ref = useRef(null);
+  const [w, setW] = useState(0);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node || typeof ResizeObserver !== 'function') return undefined;
+    const ro = new ResizeObserver(([entry]) => {
+      const next = entry.contentRect.width;
+      // Round: a fractional viewBox changes on every scroll-bar flicker and
+      // re-renders the whole figure for a difference nobody can see.
+      setW(prev => (Math.abs(prev - next) > 0.5 ? Math.round(next) : prev));
+    });
+    ro.observe(node);
+    setW(Math.round(node.getBoundingClientRect().width));
+    return () => ro.disconnect();
+  }, []);
+  return [ref, w];
+}
 
 // ------------------------------------------------------- stacking the labels
 // A label and its note are a vertical STACK, not two fixed offsets. They used
@@ -176,13 +204,23 @@ function Lines({ text, x, y, top, size = SZ.label, lh = lineBox(size), chars = 2
 // Rows of boxes, highest authority at the top, joined by a spine. Used for the
 // court hierarchy and for anything else where "above" means "binds".
 
-function Hierarchy({ rows = [], note }) {
-  const W = 760;
-  const geom = rows.map(row => {
+function Hierarchy({ rows = [], note, W }) {
+  // A row of two on a 326px phone is two 150px boxes holding nine characters a
+  // line. One per row is not a degraded version of the diagram — for a
+  // hierarchy it is the same claim, since "above" still means "binds".
+  const perRow = Math.max(1, Math.floor((W + 16) / (180 + 16)));
+  const laid = rows.flatMap(row => {
     const nodes = Array.isArray(row) ? row : [row];
+    if (nodes.length <= perRow) return [nodes];
+    const out = [];
+    for (let i = 0; i < nodes.length; i += perRow) out.push(nodes.slice(i, i + perRow));
+    return out;
+  });
+  const geom = laid.map(nodes => {
     const boxW = Math.min(300, (W - 40 - (nodes.length - 1) * 16) / nodes.length);
     return {
-      nodes, boxW,
+      boxW,
+      nodes,
       cells: nodes.map(n => {
         const ll = linesOf(n.label, budget(boxW, SZ.label));
         const nl = n.note ? linesOf(n.note, budget(boxW, SZ.note)) : 0;
@@ -192,7 +230,7 @@ function Hierarchy({ rows = [], note }) {
   });
   const boxH = Math.max(64, ...geom.flatMap(g => g.cells.map(c => c.h + 2 * PAD)));
   const rowH = boxH + 20;
-  const H = rows.length * rowH + 20;
+  const H = laid.length * rowH + 20;
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="dia-svg" role="img" aria-label={note || 'hierarchy'}>
       {geom.map((g, r) => {
@@ -231,11 +269,13 @@ function Hierarchy({ rows = [], note }) {
 // ---------------------------------------------------------------- flow
 // Steps in order, left to right, wrapping to a second line where needed.
 
-function Flow({ steps = [], note }) {
-  const perRow = steps.length > 4 ? Math.ceil(steps.length / 2) : steps.length;
+function Flow({ steps = [], note, W }) {
+  // 190 units is the narrowest a step box can be and still hold a label of a
+  // few words with its note; below that the budget collapses to single words.
+  const fit = Math.max(1, Math.floor((W + 30) / (190 + 30)));
+  const perRow = Math.min(steps.length, steps.length > 4 ? Math.min(fit, Math.ceil(steps.length / 2)) : fit);
   const rows = [];
   for (let i = 0; i < steps.length; i += perRow) rows.push(steps.slice(i, i + perRow));
-  const W = 760;
   const gap = 30;
   // The badge holds a two-digit numeral at SZ.num, so it is sized from the
   // type rather than left at the radius that suited 12-unit digits.
@@ -303,52 +343,92 @@ function Flow({ steps = [], note }) {
 // One question, several answers. The shape of most classification problems:
 // how possession was obtained, which limb of s 300, which mode of commencement.
 
-function Branch({ question, branches = [], note }) {
-  const W = 760;
+function Branch({ question, branches = [], note, W }) {
   const n = branches.length;
-  const boxW = Math.min(230, (W - 24 - (n - 1) * 14) / n);
-  const total = n * boxW + (n - 1) * 14;
-  const x0 = (W - total) / 2;
+  // The question box was 380 units wide against a 760-unit drawing. Drawn 1:1
+  // that is wider than a phone, so it takes the width it is given.
+  const qW = Math.min(380, W - 24);
   const qy = 10;
-  const qChars = budget(380, SZ.label);
+  const qChars = budget(qW, SZ.label);
   const qLines = linesOf(question, qChars);
   const qH = Math.max(44, qLines * lineBox(SZ.label) + 2 * PAD);
-  const condChars = budget(boxW, SZ.note, 0.9);
-  const condLines = Math.max(1, ...branches.map(b => (b.cond ? linesOf(b.cond, condChars) : 1)));
-  const condH = condLines * lineBox(SZ.note);
-  const by = qy + qH + 30 + condH;
-  const cells = branches.map(b => {
-    const ll = linesOf(b.label, budget(boxW, SZ.label));
-    const nl = b.note ? linesOf(b.note, budget(boxW, SZ.note)) : 0;
-    return { ll, nl, h: stackH(ll, nl) };
+
+  // Four branches across a phone is four 70-unit boxes: a column of single
+  // words. Wrapping to rows keeps each branch readable, and a branch nobody
+  // can read is not a branch. 170 is the narrowest box that still holds a
+  // short phrase with its condition above it.
+  const perRow = Math.max(1, Math.min(n, Math.floor((W + 14) / (170 + 14))));
+  const rows = [];
+  for (let i = 0; i < n; i += perRow) rows.push(branches.slice(i, i + perRow));
+
+  const geom = rows.map(row => {
+    const boxW = Math.min(230, (W - 24 - (row.length - 1) * 14) / row.length);
+    const condChars = budget(boxW, SZ.note, 0.9);
+    const condLines = Math.max(1, ...row.map(b => (b.cond ? linesOf(b.cond, condChars) : 1)));
+    const cells = row.map(b => {
+      const ll = linesOf(b.label, budget(boxW, SZ.label));
+      const nl = b.note ? linesOf(b.note, budget(boxW, SZ.note)) : 0;
+      return { ll, nl, h: stackH(ll, nl) };
+    });
+    return {
+      row, boxW, condChars,
+      condH: condLines * lineBox(SZ.note),
+      boxH: Math.max(74, ...cells.map(c => c.h + 2 * PAD)),
+      cells,
+    };
   });
-  const boxH = Math.max(74, ...cells.map(c => c.h + 2 * PAD));
-  const H = by + boxH + 8;
+
+  let cursor = qy + qH + 30;
+  const placed = geom.map(g => {
+    const top = cursor + g.condH;
+    cursor = top + g.boxH + 22;
+    return { ...g, top };
+  });
+  const H = cursor - 14;
+  const lastTop = placed[placed.length - 1]?.top ?? qy + qH;
+
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="dia-svg" role="img" aria-label={note || question}>
       <motion.g {...draw(0)}>
-        <rect x={W / 2 - 190} y={qy} width={380} height={qH} rx={Math.min(22, qH / 2)} className="dia-box is-question" />
+        <rect x={(W - qW) / 2} y={qy} width={qW} height={qH} rx={Math.min(22, qH / 2)} className="dia-box is-question" />
         <Lines text={question} x={W / 2} top={qy + (qH - qLines * lineBox(SZ.label)) / 2} chars={qChars} />
       </motion.g>
-      {branches.map((b, i) => {
-        const c = cells[i];
-        const x = x0 + i * (boxW + 14);
-        const cx = x + boxW / 2;
-        const condTop = by - 10 - condH;
-        return (
-          <motion.g key={i} {...draw(i + 1)}>
-            <path d={`M ${W / 2} ${qy + qH} V ${qy + qH + 16} H ${cx} V ${condTop - 6}`} className="dia-arrow" fill="none" />
-            <Lines text={b.cond} x={cx} top={condTop} size={SZ.note} chars={condChars} className="dia-cond" />
-            <rect x={x} y={by} width={boxW} height={boxH} rx={3}
-              className={`dia-box ${b.tone ? `is-${b.tone}` : ''}`} />
-            <Verdict x={x + boxW - 16} y={by + 16} r={10} tone={b.tone} />
-            <Lines text={b.label} x={cx} top={by + (boxH - c.h) / 2} chars={budget(boxW, SZ.label)} />
-            {b.note && (
-              <Lines text={b.note} x={cx} top={by + (boxH - c.h) / 2 + c.ll * lineBox(SZ.label) + GAP}
-                size={SZ.note} chars={budget(boxW, SZ.note)} className="dia-note" />
-            )}
-          </motion.g>
-        );
+
+      {/* One spine down the middle when the branches wrap, rather than a
+          separate elbow from the question to every box: at four rows the
+          elbows cross each other and read as a circuit diagram. */}
+      {placed.length > 1 && (
+        <line x1={W / 2} y1={qy + qH} x2={W / 2} y2={lastTop - 6} className="dia-arrow" />
+      )}
+
+      {placed.map((g, r) => {
+        const total = g.row.length * g.boxW + (g.row.length - 1) * 14;
+        const x0 = (W - total) / 2;
+        return g.row.map((b, i) => {
+          const c = g.cells[i];
+          const x = x0 + i * (g.boxW + 14);
+          const cx = x + g.boxW / 2;
+          const condTop = g.top - 10 - g.condH;
+          const from = placed.length > 1 ? g.top - 16 : qy + qH + 16;
+          return (
+            <motion.g key={`${r}-${i}`} {...draw(r * perRow + i + 1)}>
+              <path
+                d={placed.length > 1
+                  ? `M ${W / 2} ${from} H ${cx} V ${condTop - 6}`
+                  : `M ${W / 2} ${qy + qH} V ${from} H ${cx} V ${condTop - 6}`}
+                className="dia-arrow" fill="none" />
+              <Lines text={b.cond} x={cx} top={condTop} size={SZ.note} chars={g.condChars} className="dia-cond" />
+              <rect x={x} y={g.top} width={g.boxW} height={g.boxH} rx={3}
+                className={`dia-box ${b.tone ? `is-${b.tone}` : ''}`} />
+              <Verdict x={x + g.boxW - 16} y={g.top + 16} r={10} tone={b.tone} />
+              <Lines text={b.label} x={cx} top={g.top + (g.boxH - c.h) / 2} chars={budget(g.boxW, SZ.label)} />
+              {b.note && (
+                <Lines text={b.note} x={cx} top={g.top + (g.boxH - c.h) / 2 + c.ll * lineBox(SZ.label) + GAP}
+                  size={SZ.note} chars={budget(g.boxW, SZ.note)} className="dia-note" />
+              )}
+            </motion.g>
+          );
+        });
       })}
     </svg>
   );
@@ -358,9 +438,21 @@ function Branch({ question, branches = [], note }) {
 // Dated events on an axis. Every entry carries a real date; a timeline with an
 // invented one would be the app asserting a fact it cannot support.
 
-function Timeline({ events = [], note }) {
-  const W = 760;
-  const tx = 112;
+function Timeline({ events = [], note, W }) {
+  // The year column was 112 units against a 760-unit drawing — 15%. On a 326px
+  // phone a fixed 112 is a third of the width spent on a four-digit year, so it
+  // scales — but not below what the year itself needs. The year is anchored
+  // `end` against the spine, so a gutter narrower than the text runs it off the
+  // left edge into negative x, where it is clipped rather than scrolled to:
+  // measured at 390px before this was derived, three years off the edge.
+  // CH is the advance of average PROSE. A year is semibold and tabular, which
+  // is wider: measured, "1965" at 14 units is 33.6 units across, or 0.60 per
+  // unit of font-size against prose's 0.45. Using CH here under-reserved the
+  // gutter by a quarter and put three years at x = -3.6.
+  const CH_NUM = 0.62;
+  const yearW = Math.max(28, ...events.map(e => String(e.year || '').length * CH_NUM * SZ.year));
+  const tx = Math.max(Math.round(yearW + 36), Math.min(112, Math.round(W * 0.15)));
+  const spineX = tx - 20;
   // These used to be unwrapped <text>. A case name is long - "Adorna
   // Properties v Boonsom Boonyanit" is 38 characters before the note starts -
   // and an unwrapped label simply ran out through the right edge of the
@@ -376,16 +468,16 @@ function Timeline({ events = [], note }) {
   const H = 44 + events.length * step;
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="dia-svg" role="img" aria-label={note || 'timeline'}>
-      <line x1={92} y1={14} x2={92} y2={H - 14} className="dia-spine" />
+      <line x1={spineX} y1={14} x2={spineX} y2={H - 14} className="dia-spine" />
       {rows.map((r, i) => {
         const y = 32 + i * step;
         const top = y - 10;
         return (
           <motion.g key={i} {...draw(i)}>
-            <text x={78} y={y + 4} className="dia-year" fontSize={SZ.year} textAnchor="end">{r.e.year}</text>
+            <text x={spineX - 14} y={y + 4} className="dia-year" fontSize={SZ.year} textAnchor="end">{r.e.year}</text>
             {r.e.tone === 'correct' || r.e.tone === 'wrong'
-              ? <Verdict x={92} y={y} r={10} tone={r.e.tone} />
-              : <circle cx={92} cy={y} r={5} className="dia-dot" />}
+              ? <Verdict x={spineX} y={y} r={10} tone={r.e.tone} />
+              : <circle cx={spineX} cy={y} r={5} className="dia-dot" />}
             <Lines text={r.e.label} x={tx} top={top} chars={lc} className="dia-label is-left" />
             {r.e.note && (
               <Lines text={r.e.note} x={tx} top={top + r.ll * lineBox(SZ.label) + GAP}
@@ -402,9 +494,58 @@ function Timeline({ events = [], note }) {
 // A 2-by-N grid. The bailable/seizable cross-tabulation is the reason this
 // exists: two independent classifications that students reliably conflate.
 
-function Matrix({ cols = [], rows = [], cells = [], note }) {
-  const W = 760;
-  const labelW = 150;
+function Matrix({ cols = [], rows = [], cells = [], note, W }) {
+  // Same lesson as the timeline's year column: a gutter that scales with the
+  // width still has to hold its own text. "Non-bailable" is 81 units, and a
+  // 72-unit gutter put it at x = -21.
+  const rowLabelW = Math.max(0, ...rows.map(r => String(r).length * CH * SZ.head));
+  const labelW = Math.max(72, Math.min(Math.round(W * 0.34), Math.round(rowLabelW + 24)));
+  const rowChars = budget(labelW - 16, SZ.head);
+
+  // A cross-classification needs both axes visible at once to make its point,
+  // and at four columns on a phone each cell is 45 units — three characters a
+  // line, with the columns touching. Below a viable cell the grid becomes a
+  // LIST of the same cells, each naming its own row and column: the same
+  // claims, in an order a narrow screen can hold. It is not the diagram, and
+  // pretending a 45-unit column is the diagram would be worse.
+  const MIN_CELL = 110;
+  const asList = (W - labelW - 12) / Math.max(1, cols.length) < MIN_CELL;
+  if (asList) {
+    const cw = W - 24;
+    const items = [];
+    rows.forEach((r, ri) => cols.forEach((c, ci) => {
+      const cell = (cells[ri] || [])[ci] || {};
+      const ll = linesOf(cell.label || '\u2014', budget(cw, SZ.label));
+      const nl = cell.note ? linesOf(cell.note, budget(cw, SZ.note)) : 0;
+      items.push({ r, c, cell, ll, nl, h: stackH(ll, nl) + lineBox(SZ.head) + GAP });
+    }));
+    let y = 8;
+    const placed = items.map(it => { const top = y; y += it.h + 2 * PAD + 14; return { ...it, top }; });
+    const HL = y;
+    return (
+      <svg viewBox={`0 0 ${W} ${HL}`} className="dia-svg" role="img" aria-label={note || 'matrix'}>
+        {placed.map((it, i) => {
+          const inner = it.top + PAD;
+          return (
+            <motion.g key={i} {...draw(i)}>
+              <rect x={12} y={it.top} width={cw} height={it.h + 2 * PAD} rx={3}
+                className={`dia-cell ${it.cell.tone ? `is-${it.cell.tone}` : ''}`} />
+              <Verdict x={W - 30} y={inner + 10} r={9} tone={it.cell.tone} />
+              <Lines text={`${it.r} \u00b7 ${it.c}`} x={24} top={inner} anchor="start"
+                size={SZ.head} chars={budget(cw - 40, SZ.head)} className="dia-head" />
+              <Lines text={it.cell.label || '\u2014'} x={24} top={inner + lineBox(SZ.head) + GAP}
+                chars={budget(cw - 24, SZ.label)} className="dia-label is-left" />
+              {it.cell.note && (
+                <Lines text={it.cell.note} x={24}
+                  top={inner + lineBox(SZ.head) + GAP + it.ll * lineBox(SZ.label) + GAP}
+                  size={SZ.note} chars={budget(cw - 24, SZ.note)} className="dia-note is-left" />
+              )}
+            </motion.g>
+          );
+        })}
+      </svg>
+    );
+  }
   const cellW = (W - labelW - 12) / cols.length;
   const geom = rows.map((_, ri) => cols.map((__, ci) => {
     const cell = (cells[ri] || [])[ci] || {};
@@ -421,7 +562,8 @@ function Matrix({ cols = [], rows = [], cells = [], note }) {
       ))}
       {rows.map((r, ri) => (
         <g key={ri}>
-          <text x={labelW - 12} y={34 + ri * cellH + cellH / 2 + 4} className="dia-head is-right" fontSize={SZ.head}>{r}</text>
+          <Lines text={r} x={labelW - 12} y={34 + ri * cellH + cellH / 2}
+            size={SZ.head} chars={rowChars} className="dia-head is-right" />
           {cols.map((_, ci) => {
             const cell = (cells[ri] || [])[ci] || {};
             const c = geom[ri][ci];
@@ -451,10 +593,9 @@ function Matrix({ cols = [], rows = [], cells = [], note }) {
 // A pyramid of authority: what outranks what. Width carries rank, not quantity,
 // so it is labelled as a hierarchy rather than a chart.
 
-function Stack({ layers = [], note }) {
-  const W = 760;
-  const maxW = 560;
-  const minW = 300;
+function Stack({ layers = [], note, W }) {
+  const maxW = Math.min(560, W - 40);
+  const minW = Math.max(140, Math.min(300, maxW * 0.55));
   // Same unwrapped-text defect as the timeline had, and worse here: the top
   // layer of the pyramid is the NARROWEST box, so the label with the least
   // room is the one drawn at the apex.
@@ -495,8 +636,7 @@ function Stack({ layers = [], note }) {
 // A labelled axis. Built for the standards of proof, where the point is that
 // the two standards sit at different places on one continuum of confidence.
 
-function Spectrum({ from, to, marks = [], note }) {
-  const W = 760;
+function Spectrum({ from, to, marks = [], note, W }) {
   const x0 = 40;
   const x1 = W - 40;
   // Marks alternate above and below the bar, so a label's only real
@@ -522,14 +662,68 @@ function Spectrum({ from, to, marks = [], note }) {
       : a === 'end' ? (mine - left) / 2
       : Math.min(mine - left, right - mine);
     const chars = Math.max(10, budget(room, SZ.label, 0.9));
-    return { m, x: mine, anchor: a, chars, up: i % 2 === 0, lines: linesOf(m.label, chars) };
+    return { m, x: mine, anchor: a, chars, room, up: i % 2 === 0, lines: linesOf(m.label, chars) };
   });
   const heightOf = up => {
     const list = plan.filter(q => q.up === up);
     return list.length ? Math.max(...list.map(q => q.lines)) * lineBox(SZ.label) : 0;
   };
+  // Alternating above and below buys room only while the marks are far apart.
+  // Five marks on a phone leaves ~57 units a side, and a label narrow enough to
+  // fit is too narrow to read — measured as a 19-unit overlap between the first
+  // and third. When it is that tight the labels stop competing for the axis and
+  // go underneath it in order, numbered against their ticks.
+  // 110 units, not 90: at 90 the five-mark case cleared the threshold by a
+  // single unit and then overlapped by 19, because the budget is an estimate of
+  // text width and the rendered text is wider than the estimate. The threshold
+  // is where a centred label is worth reading, not where it barely fits.
+  const listed = plan.some(q => q.room < 110);
   const upH = heightOf(true);
   const downH = heightOf(false);
+
+  if (listed) {
+    const barY2 = 30;
+    const lw = W - 40;
+    const lc = budget(lw - 26, SZ.label);
+    let y = barY2 + 42;
+    const items = plan.map((q, i) => {
+      const lines = linesOf(q.m.label, lc);
+      const top = y;
+      y += lines * lineBox(SZ.label) + GAP + 6;
+      return { q, i, top };
+    });
+    const HL = y + 8;
+    return (
+      <svg viewBox={`0 0 ${W} ${HL}`} className="dia-svg" role="img" aria-label={note || 'spectrum'}>
+        <defs>
+          <linearGradient id="dia-spec" x1="0" x2="1">
+            <stop offset="0%" className="dia-spec-a" />
+            <stop offset="100%" className="dia-spec-b" />
+          </linearGradient>
+        </defs>
+        <rect x={x0} y={barY2} width={x1 - x0} height={8} rx={4} fill="url(#dia-spec)" />
+        <text x={x0} y={barY2 - 10} className="dia-note is-left" fontSize={SZ.note}>{from}</text>
+        <text x={x1} y={barY2 - 10} className="dia-note is-right" fontSize={SZ.note}>{to}</text>
+        {items.map(({ q, i }) => (
+          <motion.g key={`t${i}`} {...draw(i)}>
+            <line x1={q.x} y1={barY2 - 6} x2={q.x} y2={barY2 + 14} className="dia-spine" />
+            {q.m.tone === 'correct' || q.m.tone === 'wrong'
+              ? <Verdict x={q.x} y={barY2 + 4} r={9} tone={q.m.tone} />
+              : <circle cx={q.x} cy={barY2 + 4} r={5} className="dia-dot" />}
+            <text x={q.x} y={barY2 + 30} className="dia-num-list" textAnchor="middle"
+              fontSize={SZ.note} style={{ fill: 'var(--text-secondary)' }}>{i + 1}</text>
+          </motion.g>
+        ))}
+        {items.map(({ q, i, top }) => (
+          <motion.g key={`l${i}`} {...draw(i)}>
+            <text x={20} y={top + SZ.label * ASC} className="dia-note" textAnchor="start"
+              fontSize={SZ.note} style={{ fill: 'var(--text-secondary)' }}>{i + 1}</text>
+            <Lines text={q.m.label} x={38} top={top} anchor="start" chars={lc} className="dia-label" />
+          </motion.g>
+        ))}
+      </svg>
+    );
+  }
   // The bar sits below whatever the tallest label above it needs, and the axis
   // words below it clear the labels hanging underneath - both derived, because
   // a wrapped mark label used to run off the top of the viewBox and a two-line

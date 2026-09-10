@@ -100,6 +100,16 @@ export default function LessonView() {
   const [stepPref, setStepPref] = useState(focusOn);
   const [step, setStep] = useState(0);
   const stepping = stepPref;
+  // Above every early return below: this is a hook, and a lesson that is
+  // missing or locked returns before the reader is ever rendered.
+  // Escape closes, Tab cannot walk out, the page behind does not scroll, and
+  // focus returns to whatever opened it.
+  const readerRef = useDialog(stepping, () => { setStepPref(false); setFocus(false); });
+  // A hook, so it belongs up here with the others rather than beside the
+  // handler that uses it — placing it next to `closeReader`, which sits after
+  // the early returns for a missing or locked lesson, made it conditional and
+  // took the whole app down with React #310 on every route after a lesson.
+  const titleRef = useRef(null);
   useEffect(() => { setStep(0); }, [id]);
 
   // Moving between sections replaces the whole reading surface, and a swap
@@ -222,9 +232,17 @@ export default function LessonView() {
             </motion.section>
   );
 
-  // Escape closes, Tab cannot walk out, the body behind does not scroll, and
-  // focus goes back where it came from on close.
-  const readerRef = useDialog(stepping, () => { setStepPref(false); setFocus(false); });
+  const closeReader = () => {
+    setStepPref(false);
+    setFocus(false);
+    // After the page paints. The lesson title states where the reader now is,
+    // which is the announcement the close itself does not make.
+    requestAnimationFrame(() => titleRef.current?.focus());
+  };
+  // The reader scrolls inside `.focusview-body`, not the window, so moving
+  // between sections has to reset THAT box. `window.scrollTo` here would move
+  // a page that is `display: none`.
+  const toReaderTop = () => readerRef.current?.querySelector('.focusview-body')?.scrollTo({ top: 0 });
   const activeIdx = Math.min(step, sections.length - 1);
   const active = sections[activeIdx];
 
@@ -266,7 +284,7 @@ export default function LessonView() {
               <span className="module-chip">{mod.title}</span>
               {' '}{mod.level === null || mod.level === undefined ? 'Method' : `Level ${mod.level}`} · {plural(l.minutes, 'minute')}
             </p>
-            <h1 className="lesson-title">{l.title}</h1>
+            <h1 className="lesson-title" ref={titleRef} tabIndex={-1}>{l.title}</h1>
             <div className="module-rule" aria-hidden="true" />
             <p className="lesson-standfirst">{l.summary}</p>
             <Plate scene={plateFor(l)} caption={l.plateCaption} />
@@ -471,55 +489,84 @@ export default function LessonView() {
       {stepping && (
         <div className="focusview" ref={readerRef} tabIndex={-1} role="dialog" aria-modal="true"
           aria-label={`${l.title} — section ${activeIdx + 1} of ${sections.length}`}>
-          <div className="focusview-top">
-          <div className="stepper stepper--top">
-            <p className="stepper-where">
-              {/* The read time belongs here, not only on the Mark done
-                  button at the foot: a reader deciding whether to start a
-                  section needs the cost before they commit to it, which is
-                  the whole point of the annotation for someone studying
-                  after a shift. */}
-              <span className="stepper-count">
-                Section {Math.min(step, sections.length - 1) + 1} of {sections.length}
-                {' · '}
-                {plural(sections[Math.min(step, sections.length - 1)]?.readMinutes || 1, 'min')}
-              </span>
-              <span className="stepper-bar" aria-hidden="true">
-                <i style={{ width: `${((Math.min(step, sections.length - 1) + 1) / Math.max(1, sections.length)) * 100}%` }} />
-              </span>
-            </p>
-          </div>
-            <button
-              type="button"
-              className="focusview-close"
-              onClick={() => { setStepPref(false); setFocus(false); }}
-            >Close ✕</button>
-          </div>
+          <div className="focusview-surface">
+            <div className="focusview-top">
+              <p className="focusview-where">
+                {/* The read time belongs here, not only on the Mark done button
+                    at the foot: a reader deciding whether to start a section
+                    needs the cost before they commit to it, which is the whole
+                    point of the annotation for someone studying after a shift. */}
+                <span className="stepper-count">
+                  Section {activeIdx + 1} of {sections.length}
+                  {' · '}
+                  {plural(active?.readMinutes || 1, 'min')}
+                </span>
+                <span className="stepper-bar" aria-hidden="true">
+                  <i style={{ width: `${((activeIdx + 1) / Math.max(1, sections.length)) * 100}%` }} />
+                </span>
+              </p>
+              <button type="button" className="focusview-close" onClick={closeReader}>
+                Close ✕
+              </button>
+            </div>
 
-          <div className="focusview-col">
-            {renderSection(active, activeIdx)}
-          </div>
+            {/* The scroll container is a SIBLING of the sticky bars, not their
+                parent. A sticky element sticks to its scrolling ancestor, so
+                putting the scroll on `.focusview` would carry the top and foot
+                away with the text instead of pinning them. */}
+            <div className="focusview-body">
+              <div className="focusview-col">
+                {/* The lesson's illustration lives in the hero, and the hero is
+                    not on screen in focus mode — so on the default reading path
+                    a plate was shipped and never seen, the same way the reading
+                    list was. It belongs at the head of the first section, which
+                    is where it was always meant to be met. */}
+                {activeIdx === 0 && (
+                  <Plate scene={plateFor(l)} caption={l.plateCaption} />
+                )}
+                {renderSection(active, activeIdx)}
+              </div>
+            </div>
 
-          <div className="focusview-foot">
-          /* Navigation only. It never marks a section done — `lessons.js`
-             refuses to infer attention from scrolling and this refuses to
-             infer it from paging. If Next marked, every figure downstream
-             (the section counts, the resume point, the module percentages)
-             would quietly stop being a claim the reader made. */
-          <nav className="stepper stepper--foot" aria-label="Sections">
-            <button
-              type="button"
-              className="stepper-btn"
-              disabled={step <= 0}
-              onClick={() => { setStep(n => Math.max(0, n - 1)); window.scrollTo({ top: 0 }); }}
-            >← Previous</button>
-            <button
-              type="button"
-              className="stepper-btn stepper-btn--next"
-              disabled={step >= sections.length - 1}
-              onClick={() => { setStep(n => Math.min(sections.length - 1, n + 1)); window.scrollTo({ top: 0 }); }}
-            >Next section →</button>
-          </nav>
+            {/* Navigation only. It never marks a section done — `lessons.js`
+                refuses to infer attention from scrolling and this refuses to
+                infer it from paging. If Next marked, every figure downstream
+                (the section counts, the resume point, the module percentages)
+                would quietly stop being a claim the reader made. */}
+            <div className="focusview-foot">
+              <button
+                type="button"
+                className="stepper-btn"
+                disabled={activeIdx <= 0}
+                onClick={() => { setStep(n => Math.max(0, n - 1)); toReaderTop(); }}
+              >← Previous</button>
+              {activeIdx >= sections.length - 1 ? (
+                /* The last section's action marks the lesson AND closes the
+                   reader, in that order. Two things sit behind the reader that
+                   a finishing reader is exactly the audience for: the per-lesson
+                   reading list, and the quiz and problem the lesson prepares.
+                   Focus mode is on by default and nobody closes a reader they
+                   have no reason to close, so an end that only marked would
+                   dead-end every lesson — the reading list would be shipped and
+                   unseen. Closing onto the page is what "only on close should
+                   other contents be visible" means when the reader has finished.
+                   It also puts the lesson-level mark somewhere reachable: the
+                   per-section marks are inside the sections and always were,
+                   this one lived on the page that is no longer on screen. */
+                <button
+                  type="button"
+                  className="stepper-btn stepper-btn--finish"
+                  disabled={busy}
+                  onClick={async () => { if (!readAt) await toggle(); closeReader(); }}
+                >{readAt ? 'Finish — see the reading' : 'Mark as read · +60 XP'}</button>
+              ) : (
+                <button
+                  type="button"
+                  className="stepper-btn stepper-btn--next"
+                  onClick={() => { setStep(n => Math.min(sections.length - 1, n + 1)); toReaderTop(); }}
+                >Next section →</button>
+              )}
+            </div>
           </div>
         </div>
       )}

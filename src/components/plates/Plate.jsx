@@ -1,5 +1,6 @@
-import { useId } from 'react';
+import { useId, useState } from 'react';
 import { motion } from 'framer-motion';
+import Lightbox, { useNarrow } from '../Lightbox.jsx';
 import SCENES from './scenes.jsx';
 import { Defs, W, H } from './kit.jsx';
 
@@ -16,17 +17,15 @@ export default function Plate({ scene = 'statute', caption, size = 'full', delay
   const id = useId().replace(/[:]/g, '');
   const entry = SCENES[scene] || SCENES.statute;
   const Scene = entry.fn;
+  const narrow = useNarrow();
+  const [big, setBig] = useState(false);
 
-  return (
-    <motion.figure
-      className={`plate plate-${size}`}
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ delay, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <div className="plate-frame">
-        <svg viewBox={`0 0 ${W} ${H}`} className="plate-svg" role="img" aria-label={entry.alt}>
+  // The drawing is built once and rendered in two places — inline, and enlarged
+  // inside the lightbox. Two copies of this markup would drift, and a plate
+  // that differs between its small and large form is worse than no large form:
+  // the reader would be looking at a different picture.
+  const drawing = cls => (
+    <svg viewBox={`0 0 ${W} ${H}`} className={cls} role="img" aria-label={entry.alt}>
           <title>{entry.alt}</title>
           <Defs id={id} />
           {Scene(id)}
@@ -40,9 +39,30 @@ export default function Plate({ scene = 'statute', caption, size = 'full', delay
               </g>
             ))}
           </g>
-        </svg>
-      </div>
+    </svg>
+  );
+
+  return (
+    <motion.figure
+      className={`plate plate-${size}`}
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ delay, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <div className="plate-frame">{drawing('plate-svg')}</div>
       {caption && <figcaption className="plate-caption">{caption}</figcaption>}
+      {narrow && (
+        <p className="plate-enlarge">
+          <button type="button" className="btn plate-enlarge-btn" onClick={() => setBig(true)}>
+            Enlarge illustration
+          </button>
+        </p>
+      )}
+      <Lightbox open={big} onClose={() => setBig(false)} label={entry.alt}>
+        {drawing('lightbox-svg')}
+        {caption && <p className="lightbox-caption">{caption}</p>}
+      </Lightbox>
     </motion.figure>
   );
 }

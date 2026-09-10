@@ -24,6 +24,14 @@
  * pair of labels counts as touching: it must report a large number. If it
  * reports zero, the walk is broken, not the renderers.
  *
+ * Diagrams are now drawn 1:1 — the viewBox is as wide as the box it renders
+ * into, so a `fontSize` is literally a pixel size and the floor check below is
+ * a direct reading rather than the end of a chain of arithmetic. The pin this
+ * tool used to assert (`.dia-svg { min-width: 38rem }`, mirrored here as
+ * MIN_PIN) is gone with it: it existed to keep the RATIO large enough, and
+ * there is no ratio now. What that bought — figures scrolling sideways on a
+ * phone — is what it cost, and the trade has been reversed deliberately.
+ *
  * It calibrates before it measures, by ASKING THE APP rather than by trusting
  * a number written here. At each width it opens a real lesson, measures the
  * `.dia-svg` the app actually renders, and requires the fixture's calibration
@@ -140,6 +148,14 @@ async function tryRoute(width, CALIBRATION_ROUTE) {
   const page = await ctx.newPage();
   await page.setViewportSize({ width, height: 1000 });
   await page.goto(`http://localhost:${port}${CALIBRATION_ENTRY}${CALIBRATION_ROUTE}`, { waitUntil: 'load' });
+  // Read the SHEET, not the reader. Focus mode is the default, and it renders
+  // the section inside a fixed full-screen surface whose column is a different
+  // width from the page's — so with focus on, the app and this fixture are two
+  // different containers and the comparison is meaningless. The fixture mounts
+  // the sheet chain, so the app has to be showing the sheet. The reader gets
+  // its own assertion below, because it is where most reading now happens.
+  await page.evaluate(() => localStorage.setItem('lessonStepMode', 'off'));
+  await page.reload({ waitUntil: 'load' });
   // Distinguish "the entry did not boot" from "the lesson had no figure". The
   // dev entry has moved once already (a `root: 'app'` restructure landed and
   // was reverted inside five minutes), and a tool that blames the figures for
@@ -235,7 +251,8 @@ for (const width of WIDTHS) {
     for (const s of f.spill) findings.push(`${width}px ${f.name}: SPILL ${s}`);
     for (const u of f.under) findings.push(`${width}px ${f.name}: FLOOR ${u}`);
   }
-  console.log(`  ${String(width).padStart(4)}px — ${out.length - 1} cases, figure ${calib.rendered}px (app: ${app.width}px via ${app.route.split('/').pop()})`);
+  console.log(`  ${String(width).padStart(4)}px — ${out.length - 1} cases, figure ${calib.rendered}px `
+    + `(app: ${app.width}px via ${app.route.split('/').pop()})`);
   await page.close();
 }
 

@@ -141,7 +141,14 @@ function Table({ caption, columns = [], rows = [], note, source, seen }) {
                 {r.map((cell, ci) => {
                   const Tag = ci === 0 ? 'th' : 'td';
                   return (
+                    /* `data-label` is what lets a table stop being a table on a
+                       narrow screen: CSS can read it with `content: attr(...)`
+                       and turn each row into a block of label/value pairs. It
+                       is the one thing the stacked layout cannot derive from
+                       the DOM on its own, because a cell has no way back to
+                       its column heading. */
                     <Tag key={ci} scope={ci === 0 ? 'row' : undefined}
+                      data-label={columns[ci]?.label}
                       className={columns[ci]?.align === 'num' ? 'is-num' : ''}>
                       <Prose text={cell} seen={seen} />
                     </Tag>

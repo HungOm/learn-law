@@ -290,9 +290,32 @@ relax it unilaterally.
 
 ## The glossary
 
-`content/glossary.json` defines 189 terms at three depths — `gloss` (one plain
+`content/glossary.json` defines 499 terms at three depths — `gloss` (one plain
 line), `intermediate`, and `advanced`. It is maintained separately; do not edit
-it. Two consequences for you:
+it. Add terms through `tools/merge-terms.py`, which refuses a batch that would
+duplicate an alias rather than writing a file where one of the two terms silently
+never links.
+
+**Two tiers, drawn differently.** A term of art — *indefeasibility*, *ratio
+decidendi*, *seizable* — is vocabulary the reader has to acquire, and its dotted
+underline is an invitation to acquire it. An ordinary academic word —
+*circumstances*, *threshold*, *particular* — is glossed so that nobody is stopped
+by it, which is a different job. Those carry `"kind": "word"` and rest with no
+underline, revealing it when the pointer is anywhere in the passage. Drawn the
+same, the second swamps the first: measured across the corpus, the share of
+passages carrying four or more visible marks was 25% with one tier and 9% with
+two, for exactly the same glosses. `tools/glossary-density.py` measures it and
+`tools/glossary-dom.mjs` checks that measurement against a real browser.
+
+**A bare section number may only be claimed once.** This app cites section 6 of
+the Contracts Act, of the Civil Law Act and of the Penal Code. One term owns the
+string `section 6`, so two of those three sentences would open a popover
+confidently naming the wrong Act — which on a law site is worse than no popover,
+because it is indistinguishable from a right one. Those terms are named in full
+(*Penal Code section 6*) so that they stop auto-linking, and
+`tools/check-provisions.py` looks for the next one.
+
+Two consequences for you:
 
 - Your in-lesson gloss on first use should agree with the glossary's `gloss` —
   its **claim**, not its wording. Requiring the exact string would make the prose

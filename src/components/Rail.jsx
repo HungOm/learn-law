@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useStudy } from '../state/StudyContext.jsx';
 import { CountUp } from './Bits.jsx';
@@ -18,11 +19,18 @@ const NAV = [
   { to: '/settings',   label: 'Settings' },
 ];
 
-/* The five a returning reader actually opens, in NAV's own order. The bar is a
-   shortcut under the thumb, not a second navigation: all nine stay in the rail
-   above it, so nothing here is the only way to reach anything. Paths rather
-   than a second list of labels — a copy drifts the first time one is renamed. */
-const PHONE = ['/', '/lessons', '/review', '/quiz', '/progress'];
+/* The four a returning reader actually opens, in NAV's own order. The fifth
+   slot is the drawer button, because five slots is what fits: at 360px they are
+   72px each and the labels already needed their counts moved onto a second line,
+   so a sixth slot would clip "Progress". Progress therefore lives in the drawer
+   with the eight other sections.
+
+   The bar used to be a shortcut with the full rail above it. It is now the
+   phone navigation, and everything it does not list is one tap away behind the
+   drawer — so nothing here is the only route to anything, which was the point
+   of the original arrangement and is still true. Paths rather than a second
+   list of labels: a copy drifts the first time one is renamed. */
+const PHONE = ['/', '/lessons', '/review', '/quiz'];
 
 /* What each badge counts, for the accessible name only. Chrome computes the
    name of a badged link as "Modules 186" — correctly spaced, and still a bare
@@ -34,6 +42,40 @@ const nameFor = (item, n) => (n ? `${item.label}, ${n} ${COUNTS[item.badge]}` : 
 
 export default function Rail() {
   const { cat, counts, read, rank, game, goal } = useStudy();
+  const [open, setOpen] = useState(false);
+  const moreRef = useRef(null);
+  const railRef = useRef(null);
+  const { pathname } = useLocation();
+
+  const close = useCallback((returnFocus) => {
+    setOpen(false);
+    /* Focus goes back to the control that opened the drawer. Without this it
+       falls to <body> and the next Tab restarts at the top of the document,
+       which on a lesson is a long way from where the reader was. */
+    if (returnFocus) moreRef.current?.focus();
+  }, []);
+
+  /* Navigating IS dismissing: every link in the drawer leaves the page, and a
+     drawer still open over the destination reads as a failed tap. Keyed on
+     pathname rather than on each link's onClick so a route change from anywhere
+     — a redirect, the back button — closes it too. No focus return here: the
+     reader is going somewhere, and pulling focus back to the bar would fight
+     the route's own heading focus. */
+  useEffect(() => { setOpen(false); }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => { if (e.key === 'Escape') close(true); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, close]);
+
+  /* Move focus into the panel when it opens, so a keyboard or switch user is
+     not left tabbing through the page behind it. The rail takes tabindex="-1"
+     for this and loses it again — a permanently focusable <aside> would be a
+     stop in the desktop tab order, where there is no drawer and nothing to
+     announce. */
+  useEffect(() => { if (open) railRef.current?.focus(); }, [open]);
   const due = counts.due + counts.fresh;
   const unread = cat.lessons.filter(l => !read[l.id]).length;
   const sealCount = Object.keys(game.achievements).length;
@@ -47,7 +89,12 @@ export default function Rail() {
 
   return (
     <>
-      <aside className="rail">
+      <aside
+        className={open ? 'rail is-open' : 'rail'}
+        id="rail"
+        ref={railRef}
+        tabIndex={open ? -1 : undefined}
+      >
         <Wordmark />
 
         <div className="rankbox">
@@ -136,7 +183,26 @@ export default function Rail() {
             </NavLink>
           );
         })}
+
+        <button
+          type="button"
+          className="railnav-more"
+          ref={moreRef}
+          aria-expanded={open}
+          aria-controls="rail"
+          onClick={() => (open ? close(false) : setOpen(true))}
+        >
+          <span className="railnav-burger" aria-hidden="true" />
+          <span className="railnav-label">Menu</span>
+        </button>
       </nav>
+
+      {/* Rendered only while open. A permanent scrim would be a fixed element
+          over every page at every width waiting for a class, and one stale
+          `is-open` after a resize would black out the desktop. Not focusable
+          and not labelled: Escape and the button both close the drawer, and a
+          tap anywhere on the page is the gesture a drawer teaches. */}
+      {open && <div className="rail-scrim" onClick={() => close(true)} />}
     </>
   );
 }

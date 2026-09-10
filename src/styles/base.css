@@ -253,6 +253,10 @@ a:hover { text-decoration-color: currentColor; }
    transparent over the page colour, which was fine until the page colour
    started moving. */
 .rail { background: var(--surface-page); }
+/* The drawer and its scrim exist only at phone widths; above 780 the rail is
+   the navigation and there is nothing to dismiss. Declared here rather than
+   left unstyled so a stale `is-open` surviving a resize paints nothing. */
+.rail-scrim { display: none; }
 
 /* ---------- typography ---------- */
 
@@ -1239,16 +1243,66 @@ a.module-chip, button.module-chip { min-height: var(--tap-min); }
 
 @media (max-width: 780px) {
   .shell { flex-direction: column; }
+  /* The rail is a DRAWER on a phone, not a block above the page.
+     It used to lay itself out in flow here — full width, static, the identity
+     card and the level panel and twelve links stacked above the content — and
+     measured 470px tall at 360px wide. Every reader scrolled past the whole
+     navigation to reach the first line of every page.
+
+     That was a deliberate decision, not an oversight: .railnav was added as a
+     shortcut "not a replacement", so the full nav stayed above it and nothing
+     in the bar was the only route to anything. The reasoning was sound and the
+     result was wrong — two navigations on the smallest screen, the larger one
+     in the least reachable place. The bar is now the phone navigation and this
+     is what it opens.
+
+     Off-canvas rather than collapsed to zero height: a drawer keeps the rail's
+     own column layout, so the same markup reads the same way at every width and
+     there is no second arrangement of the nav to maintain. `visibility` rather
+     than transform alone — a translated rail is still focusable, so a closed
+     drawer would put twelve invisible tab stops in front of the page. The
+     visibility transition is delayed on close and immediate on open so the
+     panel is focusable the instant it starts arriving. */
   .rail {
-    width: auto;
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(86vw, 21rem);
     flex: none;
-    height: auto;
-    position: static;
-    border-right: none;
-    border-bottom: var(--line-hairline) solid var(--border-hairline);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    /* Above .railnav (30) and the focus reader (35) — it opens over a lesson.
+       Below the toast stack (40), the seal pop (45) and the level-up scrim
+       (50): a drawer must not cover something the reader just earned. */
+    z-index: 37;
+    border-right: var(--line-hairline) solid var(--border-hairline);
+    border-bottom: none;
+    box-shadow: var(--shadow-modal);
     padding: var(--space-5) var(--space-4);
+    padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom, 0px));
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition:
+      transform var(--dur-base) var(--ease-out),
+      visibility 0s linear var(--dur-base);
   }
-  .rail nav { flex-direction: row; flex-wrap: wrap; }
+
+  .rail.is-open {
+    transform: none;
+    visibility: visible;
+    transition:
+      transform var(--dur-base) var(--ease-out),
+      visibility 0s;
+  }
+
+  /* Dismiss by tapping the page, which is what a drawer teaches. It is a
+     sibling of the rail and sits one layer below it. */
+  .rail-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 36;
+    background: var(--scrim);
+  }
   /* The bottom padding reserves room for the thumb-reachable navigation bar
      and clears the home indicator under it. Reserved here, on the scrolling
      pane, rather than with a spacer element inside the bar's own markup: a

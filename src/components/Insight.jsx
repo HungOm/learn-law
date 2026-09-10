@@ -39,9 +39,11 @@ export function WeakSpots({ findings }) {
 
 // --- by module -------------------------------------------------------------
 
-function Cell({ value, note }) {
+function Cell({ value, note, label }) {
   return (
-    <td className="is-num">
+    /* `data-label`: see the note in Blocks.jsx. Without it the stacked layout
+       at narrow widths renders six unlabelled numbers per module. */
+    <td className="is-num" data-label={label}>
       {value}
       {note && <span className="dtable-note">{note}</span>}
     </td>
@@ -76,24 +78,29 @@ export function ModuleTable({ rows }) {
                   <Link to={`/module/${r.moduleId}`}>{r.title}</Link>
                 </th>
                 <Cell
+                  label="Cards"
                   value={r.cards || NONE}
                   note={r.cards ? (r.due ? `${r.due} due` : 'clear') : null}
                 />
                 <Cell
+                  label="Recall, 30 days"
                   value={rc ? (rc.enough ? `${rc.pct}%` : 'too few') : NONE}
                   note={rc ? `${plural(rc.n, 'grade')}${rc.enough ? '' : `, under ${insight.RECALL_FLOOR}`}` : 'no reviews'}
                 />
                 <Cell
+                  label="Quiz"
                   value={qz ? (qz.enough ? `${qz.pct}%` : 'too few') : NONE}
                   note={qz
                     ? `${plural(qz.answered, 'answer')} in ${plural(qz.runs, 'run')}${qz.enough ? '' : `, under ${insight.QUIZ_FLOOR}`}`
                     : 'no runs'}
                 />
                 <Cell
+                  label="Mean mark"
                   value={mk ? `${mk.meanPct}%` : NONE}
                   note={mk ? plural(mk.n, 'attempt') : 'no attempts'}
                 />
                 <Cell
+                  label="Gap, unaided"
                   value={mk ? (mk.cal ? `${mk.cal.mean > 0 ? '+' : ''}${mk.cal.mean}` : 'too few') : NONE}
                   note={mk
                     ? (mk.cal ? `over ${mk.cal.n} unaided` : `${mk.predicted} unaided, under ${insight.CAL_FLOOR}`)

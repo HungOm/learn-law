@@ -97,11 +97,23 @@ def main():
         meta["quizCount"] = len(l.get("quiz") or [])
         catalogue.append(meta)
 
-        bodies.setdefault(l["moduleId"], []).append({
-            "id": l["id"],
-            "sections": l.get("sections") or [],
-            "quiz": l.get("quiz") or [],
-        })
+        # Everything the catalogue left behind, which is what the note above
+        # promised and what this did not do. It carried exactly three keys, so
+        # `reading`, `source`, `verify` and `plateCaption` were dropped from the
+        # catalogue for weight and then never added to the chunk — they reached
+        # no reader at all. The visible symptom was that "Read alongside" never
+        # rendered on any of the 53 lessons that carry a reading assignment,
+        # because `l.reading` was undefined at runtime however carefully the
+        # content was authored. Nothing gates this: every checker reads
+        # content/lessons/*.json, where the field is present and correct.
+        #
+        # Cost of carrying them here is nil in the terms the note cares about:
+        # the chunk is fetched when the lesson opens, and these fields are text
+        # measured in bytes against sections measured in tens of kilobytes.
+        body = {k: v for k, v in l.items() if k not in ("sections", "quiz")}
+        body["sections"] = l.get("sections") or []
+        body["quiz"] = l.get("quiz") or []
+        bodies.setdefault(l["moduleId"], []).append(body)
 
     if OUT.exists():
         shutil.rmtree(OUT)
