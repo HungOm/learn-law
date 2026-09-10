@@ -62,12 +62,50 @@ export function byModule(moduleIds) {
     .filter(g => g.list.length);
 }
 
-/** Open when the lesson it hangs off has been marked read. */
+/**
+ * Open when the lesson it hangs off has been marked read.
+ *
+ * `relatedForLesson` results carry `via`, and that lesson opens them too — see
+ * the reasoning on the same line in `statutes.js`.
+ */
 export function isOpen(x, read = {}) {
-  return !!(x && read[x.lessonId]);
+  return !!(x && (read[x.lessonId] || (x.via && read[x.via.lessonId])));
 }
 
 export function counts(read = {}) {
   const open = extracts.filter(x => isOpen(x, read)).length;
   return { open, total: extracts.length };
+}
+
+// ---------------------------------------------------------------------------
+// Related reading: a case this lesson cites, extracted under another module.
+//
+// The statute tier's problem in the same shape — see the long note in
+// `statutes.js`. A case gets exactly one guided reading, under whichever module
+// claimed it, and a lesson elsewhere that relies on the same judgment currently
+// shows the reader nothing. `l-citation` in Legal Research is built around a
+// decision that superseded an earlier one, and that decision is read in full —
+// in Property.
+//
+// The match is a substring of the lesson's own `source` field, which is where
+// this corpus records what a lesson rests on. That is a stricter test than it
+// looks: `case` values are full party names, so a hit means the lesson names
+// the case, not that two strings happen to share a word. The length floor is
+// there so a malformed short `case` value can never match half the corpus.
+const CASE_NAME_FLOOR = 12;
+
+/**
+ * Extracts named in this lesson's `source` but owned by another module.
+ *
+ * Needs the loaded lesson body: `source` lives in the module chunk, not the
+ * catalogue row. Results carry `via` so the page can say why they appear here.
+ */
+export function relatedForLesson(lesson) {
+  const src = lesson?.source;
+  if (!src) return [];
+  return extracts
+    .filter(x => x.moduleId !== lesson.moduleId
+              && (x.case || '').length >= CASE_NAME_FLOOR
+              && src.includes(x.case))
+    .map(x => ({ ...x, via: { lessonId: lesson.id, moduleId: lesson.moduleId } }));
 }

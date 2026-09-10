@@ -41,7 +41,22 @@ export default function ReadAlongside({ lesson }) {
   const casePages = safe(() => extractsLib.all().filter(x => x.lessonId === lesson.id));
   const statutePages = safe(() => statutesLib.all().filter(x => x.lessonId === lesson.id));
 
-  if (!statutes.length && !cases.length && !casePages.length && !statutePages.length) return null;
+  // A fourth tier, and deliberately its own rather than folded into "Guided
+  // here". These pages cover an authority this lesson cites but were written
+  // for a lesson in another module — `st-cla-s3` lives in m01 and carries the
+  // whole argument of l-equity-reception in m15. Surfacing them is the honest
+  // half of a finding three tiers hit independently tonight: the corpus is
+  // smaller than the curriculum, so the fix for a lesson with no guided reading
+  // is usually that the reading already exists somewhere a reader never looks,
+  // not that someone should author a second copy of it. The block says where it
+  // came from, because a page that appears under a lesson it was not written
+  // for should account for itself.
+  const own = new Set([...casePages, ...statutePages].map(x => x.id));
+  const relatedStatutes = safe(() => statutesLib.relatedForLesson(lesson)).filter(x => !own.has(x.id));
+  const relatedCases = safe(() => extractsLib.relatedForLesson(lesson)).filter(x => !own.has(x.id));
+
+  if (!statutes.length && !cases.length && !casePages.length && !statutePages.length
+      && !relatedStatutes.length && !relatedCases.length) return null;
 
   const linked = new Set([...casePages.map(x => x.case), ...statutePages.map(x => x.provision)]);
 
@@ -69,6 +84,38 @@ export default function ReadAlongside({ lesson }) {
               </Link>
             ))}
             {casePages.map(x => (
+              <Link className="arr-row is-link" to={`/case/${x.id}`} key={x.id}>
+                <span className="arr-num">{x.year || '—'}</span>
+                <span>
+                  <span className="arr-title">{x.case}</span>
+                  <span className="arr-meta">{x.citation}{x.court ? ` · ${x.court}` : ''}</span>
+                </span>
+                <span className="arr-state is-clear">open</span>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+
+      {(relatedStatutes.length > 0 || relatedCases.length > 0) && (
+        <>
+          <h3>Guided elsewhere in the course</h3>
+          <p className="small">
+            Written for another lesson, on an authority this one also rests on. The
+            reading is the same; only the module it was filed under differs.
+          </p>
+          <div className="arrangement">
+            {relatedStatutes.map(x => (
+              <Link className="arr-row is-link" to={`/statute/${x.id}`} key={x.id}>
+                <span className="arr-num" aria-hidden="true">&sect;</span>
+                <span>
+                  <span className="arr-title">{x.provision}</span>
+                  <span className="arr-meta">{x.act}</span>
+                </span>
+                <span className="arr-state is-clear">open</span>
+              </Link>
+            ))}
+            {relatedCases.map(x => (
               <Link className="arr-row is-link" to={`/case/${x.id}`} key={x.id}>
                 <span className="arr-num">{x.year || '—'}</span>
                 <span>

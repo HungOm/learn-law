@@ -1,0 +1,1328 @@
+[
+  {
+    "id": "w-five-line-brief",
+    "moduleId": "m-study-method",
+    "lessonId": "l-case-brief",
+    "level": "foundation",
+    "kind": "case-note",
+    "title": "Brief a case in five lines",
+    "minutes": 25,
+    "brief": "Take any judgment you have read and brief it in exactly five lines: material facts, question, answer, reason, and what the court left open. One line each. The limit is the exercise — a brief you can write at any length is a summary wearing a brief's name.",
+    "audience": "Yourself in a revision week, with forty cases to get through and an hour to do it.",
+    "before": [
+      "Read the case-brief lesson. You need the difference between a material fact and a fact before the line limit means anything.",
+      "Have the judgment open, or the lesson's account of it if you do not have the report."
+    ],
+    "scaffold": [
+      {
+        "step": "Strike out the facts that did not matter",
+        "prompt": "List every fact you can remember, then cross out each one the outcome would survive without. What is left is the material facts line.",
+        "why": "Deciding what is immaterial is the skill. A brief that keeps the colour keeps the length, and length is what stops you rereading it."
+      },
+      {
+        "step": "Write the question as a question",
+        "prompt": "One line, ending in a question mark, stating what the court had to decide. Not the area of law — the decision.",
+        "why": "'This case is about duty of care' is a topic, not a question, and a topic cannot be answered. If you cannot phrase it as a question you have not found the issue."
+      },
+      {
+        "step": "Answer it in the same words",
+        "prompt": "Write the answer line using the words of your question line, so the two lock together.",
+        "why": "If the answer needs different words, the question was not the one the court answered."
+      },
+      {
+        "step": "Give the reason, not the conclusion again",
+        "prompt": "One line: why that answer followed. If your reason line restates the answer, you have not found the reason.",
+        "why": "This is the line that will be useful in six months. The other four are retrieval cues for it."
+      },
+      {
+        "step": "Name what was left open",
+        "prompt": "One line: a question this case did not decide, that a reader might think it did.",
+        "why": "It marks the edge of the authority, and the edge is where the next argument happens."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Material facts",
+        "does": "The facts without which the outcome changes",
+        "length": "one line"
+      },
+      {
+        "part": "Question",
+        "does": "What the court had to decide, phrased as a question",
+        "length": "one line"
+      },
+      {
+        "part": "Answer",
+        "does": "What it decided, in the question's own words",
+        "length": "one line"
+      },
+      {
+        "part": "Reason",
+        "does": "Why that answer followed",
+        "length": "one line"
+      },
+      {
+        "part": "Left open",
+        "does": "A question a reader might wrongly think this settles",
+        "length": "one line"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "More than five lines, or the facts line reads like a story rather than a set of conditions."
+      },
+      {
+        "band": "Close",
+        "test": "Five lines, but the reason line repeats the answer in different words, or nothing is named as left open."
+      },
+      {
+        "band": "There",
+        "test": "Five lines; every fact kept is one the outcome depends on; the reason would let you predict the result in a case with different facts."
+      }
+    ],
+    "faults": [
+      "Copying the headnote. Someone else decided what mattered, and their five lines are not the ones you will remember.",
+      "Keeping a fact because it is memorable. Memorable and material are different tests.",
+      "Leaving the 'left open' line blank because the judgment sounded confident. Confidence is not scope."
+    ],
+    "model": "A good answer fits the limit without abbreviating into notes. The facts line reads as a set of conditions rather than a narrative. The question and answer lines share vocabulary, so they visibly meet. The reason line states something general enough to apply to a case with different parties, and the 'left open' line names a real question rather than a polite hedge. If the whole brief could be swapped onto a different case with only the names changed, it is too general; if it could not survive one changed fact, it is too specific.",
+    "source": "Method, not doctrine. The five parts are the standard case-brief structure taught in the case-brief lesson of this corpus.",
+    "lastVerified": "2026-09-11",
+    "verify": "Compare your brief with the lesson's account of the same case. Where you disagree about what was material, work out which of you the outcome actually depends on."
+  },
+  {
+    "id": "w-which-court",
+    "moduleId": "m01-malaysian-legal-system",
+    "lessonId": "l-courts",
+    "level": "foundation",
+    "kind": "advice",
+    "title": "Tell someone which court hears their claim",
+    "minutes": 30,
+    "brief": "A friend is owed money and wants to sue. Write them a short note saying which court would hear it, what decides that, and what happens if they file in the wrong one. Write it for someone who has never been in a courtroom.",
+    "audience": "A friend with no legal training, reading on their phone.",
+    "before": [
+      "Read the courts lesson, and have its account of the civil ladder in front of you.",
+      "Decide on a figure for the debt before you start. The advice changes with the amount, and vague advice is what you are trying not to write."
+    ],
+    "scaffold": [
+      {
+        "step": "Name the thing that decides it",
+        "prompt": "Before naming any court, write one line saying what the choice turns on.",
+        "why": "A reader who knows what decides it can work out the next case themselves. A reader given only an answer has to come back."
+      },
+      {
+        "step": "Place their claim on the ladder",
+        "prompt": "Say which court, and say which court it is not, and why.",
+        "why": "Naming the neighbouring rung shows the reader the boundary. An answer with no boundary is a fact to memorise."
+      },
+      {
+        "step": "Say what going wrong costs",
+        "prompt": "Two sentences on what happens if they file in a court that cannot hear it — in time and money, not in procedural vocabulary.",
+        "why": "This is the part that makes the note worth sending. Consequences are what a non-lawyer is actually asking about."
+      },
+      {
+        "step": "Mark what you have not checked",
+        "prompt": "End with one line naming what they or you must confirm before acting — the current limits, and whether anything special applies to this kind of claim.",
+        "why": "Monetary limits are set by statute and are amended. Advice that does not say what it rests on cannot be updated when the ground moves."
+      }
+    ],
+    "structure": [
+      {
+        "part": "What decides it",
+        "does": "Names the test before applying it",
+        "length": "one or two sentences"
+      },
+      {
+        "part": "The answer",
+        "does": "Which court, and which one it is not",
+        "length": "a short paragraph"
+      },
+      {
+        "part": "The cost of getting it wrong",
+        "does": "What a misfiling actually does to them",
+        "length": "two or three sentences"
+      },
+      {
+        "part": "What to confirm",
+        "does": "The limits and assumptions this rests on",
+        "length": "one or two sentences"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Names a court without saying what decided it, or uses words like 'jurisdiction' and 'pecuniary' without explaining them."
+      },
+      {
+        "band": "Close",
+        "test": "Correct structure and plain language, but no consequence for filing wrongly, or no line saying what must be confirmed."
+      },
+      {
+        "band": "There",
+        "test": "A reader with no training could apply the same reasoning to a different figure, and knows exactly what has not been checked."
+      }
+    ],
+    "faults": [
+      "Reciting the whole ladder. They asked about one claim; the other rungs matter only as the boundary.",
+      "Stating a monetary limit as settled when you have not opened the current statute. The limits change.",
+      "Writing 'you should seek legal advice' as the whole answer. That is the one sentence that could have been written without reading anything."
+    ],
+    "model": "A good answer leads with the test rather than the conclusion, so the reader can rerun it. It names one court and the adjacent one, and the reason for the line between them. The consequence paragraph talks about wasted filing fees and lost time rather than about striking out. The closing line separates what the writer knows from what the writer has assumed, and names the current statute as the thing to check. Plain language throughout is not a simplification here; a note the reader cannot follow has not advised anyone.",
+    "source": "The civil court ladder as set out in the courts lesson of this corpus, which cites the statutes creating those courts. No monetary limit is asserted here.",
+    "lastVerified": "2026-09-11",
+    "verify": "Check the current monetary limits in the statute the courts lesson names, in the version published by the Attorney General's Chambers, before treating any figure in your note as right."
+  },
+  {
+    "id": "w-research-note",
+    "moduleId": "m02-legal-research",
+    "lessonId": "l-research",
+    "level": "foundation",
+    "kind": "advice",
+    "title": "Write the research note, including what you could not find",
+    "minutes": 40,
+    "brief": "You have spent an hour on a question and you do not have a complete answer. Write the note anyway: what the primary source says, what you found beside it, what you could not confirm, and what you would not act on. The gap is the part being marked.",
+    "audience": "The person who asked you, who will rely on this and does not have the hour to redo it.",
+    "before": [
+      "Read the research lesson, in particular the part about free Malaysian sources and what they do not give you.",
+      "Pick a real question and actually spend the hour. A note about an imaginary search cannot practise the honesty this exercise is for."
+    ],
+    "scaffold": [
+      {
+        "step": "Answer from the statute first",
+        "prompt": "Write the answer the primary source gives, and name the instrument. If the statute answers it, that is the answer until something displaces it.",
+        "why": "Starting from a case you happened to find is how people miss the Act entirely. The order is the method."
+      },
+      {
+        "step": "Place what else you found",
+        "prompt": "For each other source, one line: what it is, what weight it carries, and whether it binds anyone.",
+        "why": "A decision that does not bind and a decision that does are different objects, and a note that lists them together has hidden the difference."
+      },
+      {
+        "step": "Write the gap as a sentence, not an apology",
+        "prompt": "State precisely what you could not confirm and why — not 'I ran out of time' but which check you were unable to run.",
+        "why": "A named gap can be closed by someone else. An apology cannot."
+      },
+      {
+        "step": "Say what you would not do on this",
+        "prompt": "One line drawing the line between what the note supports and what it does not.",
+        "why": "This is the sentence that stops the note being relied on for more than it can carry, and it is the one people leave out."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The primary source answer",
+        "does": "What the instrument says, and which instrument",
+        "length": "a short paragraph"
+      },
+      {
+        "part": "Everything else, weighed",
+        "does": "Each source with its authority stated",
+        "length": "one line each"
+      },
+      {
+        "part": "The gap",
+        "does": "The specific check you could not run",
+        "length": "one or two sentences"
+      },
+      {
+        "part": "The limit",
+        "does": "What this note does not support",
+        "length": "one sentence"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Leads with a case, or lists sources without saying what weight each carries, or hides the gap in a hedge like 'it appears that'."
+      },
+      {
+        "band": "Close",
+        "test": "Statute first and sources weighed, but the gap is described as a shortage of time rather than as a named unperformed check."
+      },
+      {
+        "band": "There",
+        "test": "Someone else could pick up the note, see exactly which check is outstanding, run it, and know what changes if it comes out either way."
+      }
+    ],
+    "faults": [
+      "Presenting a High Court decision as though it settled the point. Note which court, and say what that means for weight.",
+      "Writing confidence you do not have because the note looks weak without it. A note that overstates is worse than a short one.",
+      "Omitting the negative result. What you searched and did not find is information, and the next person will otherwise search it again."
+    ],
+    "model": "A good answer reads in the order the search should have run: instrument, then anything qualifying it, then the gap. Each secondary source carries its own weight on its face, so a reader never has to ask whether something binds. The gap sentence names an operation — a citator check, a subsequent-history check, a section not available free — rather than a feeling of incompleteness. The final line is narrow and specific: it says what this note supports and what it does not, which is what makes it safe to send at all.",
+    "source": "Research method as set out in the research lesson of this corpus, including its point that free Malaysian sources lack a citator. No substantive answer is asserted here.",
+    "lastVerified": "2026-09-11",
+    "verify": "Have someone else run the check you named as outstanding. If they cannot tell from your note exactly which check that was, the gap sentence failed."
+  },
+  {
+    "id": "w-first-court-day-letter",
+    "moduleId": "m05-criminal-procedure",
+    "lessonId": "pd-l-first-court-day",
+    "level": "foundation",
+    "kind": "advice",
+    "title": "Write to the family in the public gallery",
+    "minutes": 35,
+    "brief": "Someone's relative was arrested yesterday and is in court this morning. Write the family one page explaining what they are about to watch, in the order it will happen, and what they can and cannot do about it. No legal vocabulary survives unless you explain it in the same sentence.",
+    "audience": "A family with no legal training, frightened, reading in a corridor before the list is called.",
+    "before": [
+      "Read the lock-up and first court day lesson, which is written for this audience already — read it for what it explains and what it deliberately does not promise."
+    ],
+    "scaffold": [
+      {
+        "step": "Put it in time order",
+        "prompt": "List what happens, in the order they will see it, before writing a single explanation.",
+        "why": "A frightened reader follows a sequence and cannot follow a taxonomy. Order is the whole design of this letter."
+      },
+      {
+        "step": "Explain each word as you use it",
+        "prompt": "Every term — remand, charge, plea, bail, surety — gets its explanation in the same sentence it first appears in, not in a glossary at the end.",
+        "why": "A reader who has to hold an unexplained word until later has stopped reading. The explanation is the sentence's job, not a footnote's."
+      },
+      {
+        "step": "Separate what they can do from what they cannot",
+        "prompt": "Two short lists. Be honest about the second one.",
+        "why": "Most of the harm here comes from families acting on a belief that they can change something they cannot, or missing the one thing they could have done."
+      },
+      {
+        "step": "Say what you do not know",
+        "prompt": "One line naming what depends on the charge and cannot be answered until it is read.",
+        "why": "Everything about bail and class of offence turns on the charge, and promising an outcome before it is read is the cruelty this letter exists to avoid."
+      }
+    ],
+    "structure": [
+      {
+        "part": "What happens, in order",
+        "does": "The sequence they will actually watch",
+        "length": "a short paragraph or a numbered list"
+      },
+      {
+        "part": "What each step means",
+        "does": "Terms explained where they appear",
+        "length": "woven through, not appended"
+      },
+      {
+        "part": "What you can do",
+        "does": "The concrete actions available today",
+        "length": "a short list"
+      },
+      {
+        "part": "What you cannot do, and what is not yet known",
+        "does": "Honest limits, tied to the charge not being read yet",
+        "length": "two or three sentences"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Uses a term the reader would have to look up, or promises an outcome — that bail will be granted, that it will be over today."
+      },
+      {
+        "band": "Close",
+        "test": "Plain and ordered, but mixes what the family can do with what only a lawyer or the court can do."
+      },
+      {
+        "band": "There",
+        "test": "A reader could put the page down, watch the hearing, and recognise each step as it happens — including the parts that do not go their way."
+      }
+    ],
+    "faults": [
+      "Reassurance in place of information. 'It will be fine' is the sentence that gets remembered when it is not.",
+      "A glossary at the end. If the word needed defining, it needed defining where it was used.",
+      "Stating what bail will be. Whether it is available at all turns on how the offence is classified, and the charge has not been read yet."
+    ],
+    "model": "A good answer is chronological, and its explanations are load-bearing rather than parenthetical: the reader learns what remand is because the sentence describing it cannot be understood otherwise. It distinguishes clearly between actions the family can take today, actions someone else must take, and questions that have no answer until the charge is read. Its tone is calm without being soothing, and nothing in it will be contradicted by what happens in the room. The hardest part is the honesty of the last section, and it is the part being marked.",
+    "source": "The sequence and the vocabulary are as set out in the lock-up and first court day lesson of this corpus, which names the Criminal Procedure Code as the governing instrument. No bail outcome or offence classification is asserted here.",
+    "lastVerified": "2026-09-11",
+    "verify": "Check the classification and bail provisions in the Criminal Procedure Code as currently published before letting any sentence in your letter suggest what will happen on a particular charge."
+  },
+  {
+    "id": "w-homicide-ladder",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-homicide",
+    "level": "advanced",
+    "kind": "problem-answer",
+    "title": "Take a homicide problem down the ladder",
+    "minutes": 60,
+    "brief": "Write a full answer to a homicide problem, working down the structure in order: is this culpable homicide at all, does it fall inside the narrower category, and does an exception push it back down. Each step must be reached, not assumed.",
+    "audience": "An examiner who has read forty answers that began at the wrong rung.",
+    "before": [
+      "Read the homicide lesson and the general exceptions lesson. This exercise needs both, because the last step is an exception and the exceptions have their own burden.",
+      "Have the Penal Code open at the homicide sections. You are going to need the words, not a paraphrase of them."
+    ],
+    "scaffold": [
+      {
+        "step": "Establish the wide category first",
+        "prompt": "Before anything else, show that the conduct falls inside the broader offence. Name the limb you are relying on and apply it to the facts.",
+        "why": "The narrower offence sits inside the wider one. An answer that starts at the narrow one has skipped the step that makes it available, and cannot recover if that step fails."
+      },
+      {
+        "step": "Test each narrowing limb separately",
+        "prompt": "Go through the limbs of the narrower offence one at a time. For each, say whether the facts reach it and why.",
+        "why": "The limbs are alternatives, not a mood. An answer that says the conduct was serious enough has not identified which limb it is arguing."
+      },
+      {
+        "step": "Argue the exception, and say who proves it",
+        "prompt": "If an exception is arguable, argue it — and state expressly who bears the burden of proving it and to what standard.",
+        "why": "This is the half of the answer most people leave out. An exception is not a submission; it is something the accused must establish, and the standard is not the prosecution's."
+      },
+      {
+        "step": "State the outcome as a conviction, not a conclusion",
+        "prompt": "End by naming what the accused is guilty of, on your reasoning. If your reasoning admits two possibilities, say which is stronger and why.",
+        "why": "A problem question asks what happens. An answer that surveys without landing has described the law and answered nothing."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The wide category",
+        "does": "Establishes the offence the narrower one sits inside",
+        "length": "a paragraph"
+      },
+      {
+        "part": "The narrowing limbs",
+        "does": "Each limb tested against the facts separately",
+        "length": "a paragraph each"
+      },
+      {
+        "part": "The exception",
+        "does": "Argued, with the burden and standard stated",
+        "length": "a substantial paragraph"
+      },
+      {
+        "part": "The outcome",
+        "does": "Names the offence, and the stronger reading where two survive",
+        "length": "two or three sentences"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Begins at the narrower offence, or treats the exception as a plea rather than something to be proved, or ends without naming an offence."
+      },
+      {
+        "band": "Close",
+        "test": "The ladder is climbed in order, but a limb is asserted rather than applied, or the burden on the exception is not stated."
+      },
+      {
+        "band": "There",
+        "test": "Each rung is reached from the one below it, the limb relied on is named and applied to specific facts, the burden and standard on the exception are stated, and the answer lands."
+      }
+    ],
+    "faults": [
+      "Reciting the sections before using them. The marks are in the application; the recitation is the part the examiner already knows.",
+      "Arguing every exception. Argue the one the facts raise; the others cost you the space that the real one needed.",
+      "Treating the exception's standard as the prosecution's standard. They are different, and mixing them is the error the general exceptions lesson exists to prevent."
+    ],
+    "model": "A good answer is visibly a ladder. Each section begins by saying which rung it is on and what has to be shown there, so a reader always knows how much of the case is standing. Facts are quoted back in fragments and tied to the limb they satisfy, rather than being restated in bulk. The exception paragraph is where the answer separates itself: it names who must prove what and to what standard, and it argues the facts rather than announcing that the exception applies. The closing lines commit to an offence and give the reason for preferring it over the alternative that nearly survived.",
+    "source": "The structure of the homicide sections and the burden on the general exceptions, as set out in the homicide and general exceptions lessons of this corpus, which cite the Penal Code.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the homicide sections and Chapter IV of the Penal Code in the current published reprint before relying on any limb as you have stated it. Check the reprint's own currency date on its front matter."
+  },
+  {
+    "id": "w-is-this-a-trust",
+    "moduleId": "m15-equity-trusts",
+    "lessonId": "l-trusts-certainties",
+    "level": "advanced",
+    "kind": "problem-answer",
+    "title": "Is this a trust? Three certainties, one at a time",
+    "minutes": 55,
+    "brief": "Someone has made an arrangement that may or may not be a trust. Write the answer that decides it, taking the three certainties separately, and say what the property does if the arrangement fails.",
+    "audience": "A supervisor who will ask 'and if you are wrong about the second one?'",
+    "before": [
+      "Read the trusts certainties lesson, and the reception lesson beside it — you need to know why this doctrine applies in Malaysia at all before you apply it.",
+      "Pick or invent an arrangement with at least one certainty genuinely in doubt. An arrangement that obviously is a trust teaches nothing."
+    ],
+    "scaffold": [
+      {
+        "step": "Say why this doctrine applies here",
+        "prompt": "One short paragraph on the basis for equity's rules operating in Malaysia at all, naming the instrument that received them.",
+        "why": "This is the step an English answer does not have and a Malaysian one must. Leaving it out is the commonest structural fault in this module."
+      },
+      {
+        "step": "Take each certainty in its own section",
+        "prompt": "Three sections. For each, state what must be certain, apply it to the words used, and reach a conclusion before moving on.",
+        "why": "They fail independently and they fail differently. An answer that runs them together cannot say which one killed the arrangement."
+      },
+      {
+        "step": "Argue the weakest one properly",
+        "prompt": "Identify the certainty most in doubt and spend the most space there, including the argument against your own conclusion.",
+        "why": "Even space across three sections signals that you have not identified which one the problem is actually about."
+      },
+      {
+        "step": "Say where the property goes",
+        "prompt": "State the consequence of failure — who ends up holding the property, and on what basis.",
+        "why": "A finding that there is no trust is not the end of the question. Property does not stop existing because an arrangement failed."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Basis in Malaysia",
+        "does": "Why equity's rules apply here, and under what instrument",
+        "length": "a short paragraph"
+      },
+      {
+        "part": "Certainty of intention",
+        "does": "Tested against the words actually used",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Certainty of subject matter",
+        "does": "Tested against what was to be held",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Certainty of objects",
+        "does": "Tested against who was to benefit",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Consequence",
+        "does": "Where the property goes if it fails",
+        "length": "two or three sentences"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Treats the three certainties as one test, or applies English trusts doctrine without saying why it applies in Malaysia."
+      },
+      {
+        "band": "Close",
+        "test": "Three separate sections and the reception point made, but each gets equal space regardless of which is actually in doubt, or the failure consequence is missing."
+      },
+      {
+        "band": "There",
+        "test": "The doubtful certainty is identified and argued from both sides, the other two are disposed of briskly, and the answer says what happens to the property either way."
+      }
+    ],
+    "faults": [
+      "Treating a hope or a moral obligation as intention. Precatory words are the classic trap and the whole reason the first certainty exists.",
+      "Concluding 'therefore no trust' and stopping. The property still belongs to someone; say who.",
+      "Importing English authority without the reception step, and without the qualification that comes with it."
+    ],
+    "model": "A good answer is unmistakably three arguments rather than one. Each certainty section states its test, quotes the operative words in short fragments, and concludes. Space is allocated by difficulty, so a reader can tell which certainty the problem was built around before reading the conclusion. The reception paragraph is brief but load-bearing, and it carries the qualification that comes with received law rather than treating reception as automatic. The final section is short and concrete: it names who holds the property and on what footing if the arrangement fails, which is the question a client would actually have asked.",
+    "source": "The three certainties and the reception of equity as set out in the trusts certainties and equity reception lessons of this corpus, which cite the Civil Law Act 1956.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the reception provision in the current published Civil Law Act 1956 yourself, including the qualification about local circumstances, before treating any English trusts authority as applying here unmodified."
+  },
+  {
+    "id": "w-agency-apparent",
+    "moduleId": "m19-commercial",
+    "lessonId": "l-agency-basics",
+    "level": "advanced",
+    "kind": "advice",
+    "title": "Advise the principal who never gave authority",
+    "minutes": 50,
+    "brief": "Your client says an employee signed a contract they were never authorised to sign, and the other side is holding your client to it. Advise the client. The uncomfortable part of this exercise is that the answer may be that they are bound.",
+    "audience": "A business owner who is certain they are in the right and is paying you to agree.",
+    "before": [
+      "Read the agency lesson, in particular the categories of authority and how they differ from each other.",
+      "Decide what the other side actually saw before you start writing. Apparent authority is about their position, not your client's intentions."
+    ],
+    "scaffold": [
+      {
+        "step": "Separate the categories before applying any",
+        "prompt": "List the kinds of authority the lesson distinguishes, in one line each. Do not apply them yet.",
+        "why": "They have different tests and different sources. An answer that reaches for 'authority' generally cannot say which one it has found."
+      },
+      {
+        "step": "Ask what the other side was entitled to conclude",
+        "prompt": "Write the facts from the other side's viewpoint: what they saw, what your client did or allowed, and what that would reasonably suggest.",
+        "why": "This is the switch of perspective the whole doctrine turns on, and it is the one a client instinctively resists."
+      },
+      {
+        "step": "Give the answer before the qualifications",
+        "prompt": "State your conclusion in the first line of the advice section. Then qualify it.",
+        "why": "Advice that builds to a conclusion lets a reader stop early and take the wrong half. Lead with the answer."
+      },
+      {
+        "step": "Say what to do now, and what to change",
+        "prompt": "Two short lists: steps on this contract, and what would stop it happening again.",
+        "why": "A client who is bound still needs a next action, and the second list is the part that is worth more than the first."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The question, restated",
+        "does": "Shows you have understood what is actually being asked",
+        "length": "one or two sentences"
+      },
+      {
+        "part": "The categories",
+        "does": "Distinguishes the kinds of authority in play",
+        "length": "a short paragraph"
+      },
+      {
+        "part": "The other side's view",
+        "does": "Applies the outward-looking test to the facts",
+        "length": "the longest section"
+      },
+      {
+        "part": "The advice",
+        "does": "Conclusion first, then qualifications",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Next steps and prevention",
+        "does": "What to do now, and what to change",
+        "length": "two short lists"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Argues from what the client intended, or treats the absence of actual authority as ending the matter."
+      },
+      {
+        "band": "Close",
+        "test": "Identifies the outward-looking test but softens the conclusion because the client will not like it, or omits the prevention list."
+      },
+      {
+        "band": "There",
+        "test": "States plainly whether the client is likely bound, on a test applied from the other side's position, and gives the client something to do about both this contract and the next one."
+      }
+    ],
+    "faults": [
+      "Writing what the client wants to read. The value of the advice is entirely in the part they did not want.",
+      "Confusing the categories of authority. They are not degrees of the same thing.",
+      "Advising on the contract's terms before establishing whether the client is party to it at all."
+    ],
+    "model": "A good answer switches perspective early and visibly: the longest section is written from what the counterparty could reasonably conclude, using the client's own conduct as evidence against them where that is what it is. The conclusion appears at the top of the advice section in a single unhedged sentence, with the qualifications after it rather than around it. The prevention list is specific — who may sign what, and how that is made visible to outsiders — rather than a recommendation to be careful. The whole piece is willing to disappoint the reader, and it says why in terms the reader can check.",
+    "source": "The categories of authority as set out in the agency lesson of this corpus, which names the Contracts Act 1950 as the governing statute. No section is asserted here.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the agency provisions of the Contracts Act 1950 in the current published version, and check the currency date on the front matter of that reprint — a consolidation can be many years old, and the agency provisions are old enough that this matters."
+  },
+  {
+    "id": "w-duty-to-court-letter",
+    "moduleId": "m22-ethics",
+    "lessonId": "l-duty-to-court",
+    "level": "advanced",
+    "kind": "advice",
+    "title": "Your client has told you something. Write the letter",
+    "minutes": 45,
+    "brief": "In conference, your client tells you something that means part of the case you were about to run cannot be run. Write to the client explaining what you can and cannot now do, and why the answer is not negotiable.",
+    "audience": "A client who believes they are paying you to advance their case, and who is about to feel betrayed.",
+    "before": [
+      "Read the duty to court lesson, and note that it states which duty prevails but does not set out the disciplinary rules themselves.",
+      "Decide exactly what you were told before you start. The letter changes completely depending on whether it bears on evidence you would call or on a submission you would make."
+    ],
+    "scaffold": [
+      {
+        "step": "State what does not change",
+        "prompt": "Open with what you still owe the client and will still do. Be concrete.",
+        "why": "A letter that opens with a refusal reads as abandonment, and a client who stops reading at the first line acts on the wrong understanding."
+      },
+      {
+        "step": "Name the limit, and its source",
+        "prompt": "Say what you cannot do, and say that the constraint comes from the duty owed to the court rather than from your preference.",
+        "why": "A limit presented as a personal choice invites negotiation. A limit with a source can be verified and cannot be argued away by a client."
+      },
+      {
+        "step": "Explain why the rule protects them too",
+        "prompt": "Two or three sentences on what the client's own position would be worth if this constraint did not exist.",
+        "why": "It is the only argument that reframes the constraint as something other than a loss, and it happens to be true."
+      },
+      {
+        "step": "Give them the choice that is actually theirs",
+        "prompt": "Set out what the client may now decide, including instructing someone else, without recommending it or discouraging it.",
+        "why": "The client keeps a real decision here, and stating it neutrally is what makes the rest of the letter honest rather than coercive."
+      }
+    ],
+    "structure": [
+      {
+        "part": "What continues",
+        "does": "The work you still owe and will still do",
+        "length": "a short paragraph"
+      },
+      {
+        "part": "The limit and its source",
+        "does": "What cannot be done, and why it is not your choice",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Why the rule is worth having",
+        "does": "The client's own stake in the constraint",
+        "length": "two or three sentences"
+      },
+      {
+        "part": "The client's decision",
+        "does": "Options, stated neutrally",
+        "length": "a short paragraph"
+      },
+      {
+        "part": "What to check",
+        "does": "Names the regulatory source rather than paraphrasing it",
+        "length": "one sentence"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Presents the limit as the writer's discomfort, or lectures the client, or quotes a disciplinary rule the writer has not read."
+      },
+      {
+        "band": "Close",
+        "test": "Correctly identifies which duty prevails and says so plainly, but offers no reason the client should value the constraint, or steers their decision."
+      },
+      {
+        "band": "There",
+        "test": "The client finishes the letter knowing exactly what will and will not happen, why the constraint is not negotiable, and what remains theirs to decide — without having been either scolded or managed."
+      }
+    ],
+    "faults": [
+      "Moralising. The client is not being judged; a rule is being applied, and the tone should say so.",
+      "Quoting a professional conduct rule from memory. Name the regulatory instrument and say it must be read, rather than reproducing something you have not opened.",
+      "Threatening withdrawal as leverage. The client's options should be stated because they are the client's, not to produce a change of instructions."
+    ],
+    "model": "A good answer is short, and its order does the work: continuity first, limit second, reason third, choice fourth. The limit is stated once, plainly, with its source named — the duty owed to the court — and is never restated defensively. The paragraph on why the rule is worth having is written from the client's interest rather than the profession's, which is what stops it reading as self-justification. The options section is genuinely neutral, and a reader could not tell from it what the writer hopes they will do. Nothing in the letter reproduces a disciplinary rule; it points at the instrument instead.",
+    "source": "The priority of the duty to the court as set out in the duty to court lesson of this corpus, which names the Legal Profession Act 1976 as the regulatory instrument. No rule of professional conduct is reproduced or asserted here.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the applicable professional conduct rules made under the Legal Profession Act 1976 before relying on any statement in your letter about what you may or must do. This exercise teaches the form of the letter, not the content of the rules."
+  },
+  {
+    "id": "w-llb-liberties-essay",
+    "moduleId": "m03-constitutional",
+    "lessonId": "l-liberties",
+    "level": "llb",
+    "kind": "essay",
+    "title": "A restriction on a liberty: tested by its reason, or by its effect?",
+    "minutes": 120,
+    "brief": "Write an essay on how a restriction on a fundamental liberty should be tested. The Constitution gives a closed list of permitted reasons. The question is whether falling within one of those reasons is enough, or whether a restriction must also be shown to be no more than what the reason requires. Take a position and defend it.",
+    "audience": "A tutor who will press hardest on the objection you handled most briefly.",
+    "before": [
+      "Read the fundamental liberties lesson, and note carefully where it says the courts have not settled the question. You are writing into a live argument, not summarising a settled one.",
+      "Read the guided reading on the liberty provisions in this module before you begin. An essay on how a clause should be read that was written without opening the clause is not an essay about the Constitution."
+    ],
+    "scaffold": [
+      {
+        "step": "State the question as a choice between two readings",
+        "prompt": "One paragraph putting both readings fairly, with no indication yet of which you prefer.",
+        "why": "An essay that states its own position as the question has answered nothing. The reader must be able to see the alternative as arguable."
+      },
+      {
+        "step": "Ground each reading in the constitutional text",
+        "prompt": "For each reading, identify what in the wording of the provisions supports it. Where the text is silent, say so.",
+        "why": "Both readings have textual arguments and neither is compelled by the words alone. An essay that pretends one is obvious has skipped the difficulty."
+      },
+      {
+        "step": "Take your own position and argue it",
+        "prompt": "Commit, and give the strongest reason. One reason argued fully beats three listed.",
+        "why": "This is where the marks are, and it is where a summary stops and an essay begins."
+      },
+      {
+        "step": "Answer the best objection, not the easiest",
+        "prompt": "Write the strongest argument against your position, in its best form, and then answer it. If you cannot answer it, say what it costs your position.",
+        "why": "An essay that defeats a weak objection has told the reader you could not find the strong one. Conceding a real cost is stronger than pretending there is none."
+      },
+      {
+        "step": "Say what would settle it",
+        "prompt": "Close by naming what would resolve the question — an amendment, a decision at a particular level, a particular kind of case.",
+        "why": "It shows you know the question is open, and it distinguishes an unsettled question from one you simply have not researched."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The question",
+        "does": "Puts both readings fairly, without preference",
+        "length": "a paragraph"
+      },
+      {
+        "part": "The textual ground",
+        "does": "What in the wording supports each reading, and where it is silent",
+        "length": "two or three paragraphs"
+      },
+      {
+        "part": "The argument",
+        "does": "Your position, with its strongest reason developed",
+        "length": "the longest section"
+      },
+      {
+        "part": "The objection",
+        "does": "The best counter-argument, answered or costed",
+        "length": "a substantial paragraph"
+      },
+      {
+        "part": "What would settle it",
+        "does": "Names the resolution the question is waiting for",
+        "length": "a short paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Describes the liberties and their restrictions without reaching a question, or asserts that the law is settled when the lesson says it is not."
+      },
+      {
+        "band": "Close",
+        "test": "A position is taken and argued, but the objection section answers a weaker version of the counter-argument than the essay could have found."
+      },
+      {
+        "band": "There",
+        "test": "Both readings are put at their strongest, the position is argued from the text rather than from preference, the best objection is met on its own terms, and the essay names what would resolve the question."
+      }
+    ],
+    "faults": [
+      "Arguing from what a liberty ought to mean without engaging the words that permit its restriction. The closed list is in the Constitution and an essay must deal with it.",
+      "Citing comparative material as though it decided a Malaysian question. It can illuminate the choice; it cannot settle it.",
+      "Treating an unsettled question as settled because one decision went a particular way. Say which court, and say what that means."
+    ],
+    "model": "A good answer reads as a genuine argument rather than a report of one. The opening paragraph is written so that a reader could not guess the writer's position from it. The textual sections quote only short fragments and spend their length on what the fragments do and do not decide, including an honest statement of where the words run out. The central argument develops one reason to its conclusion, including the step where it is weakest. The objection is recognisably the argument a good opponent would actually make, and the response either meets it or admits what it costs. The essay ends by naming a resolution rather than by restating the position.",
+    "source": "The closed list of permitted restrictions and the unsettled state of the test are as set out in the fundamental liberties lesson of this corpus, which cites the Federal Constitution. No case is asserted as settling the question.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the liberty provisions and their restriction clauses in the current published reprint of the Federal Constitution, and check the reprint's currency date. Then check what the Malaysian courts have most recently said before treating either reading as the law."
+  },
+  {
+    "id": "w-llb-interlocutory-argument",
+    "moduleId": "m11-civil-procedure",
+    "lessonId": "l-interlocutory",
+    "level": "llb",
+    "kind": "argument",
+    "title": "Choose the application that ends it early, and meet its threshold",
+    "minutes": 100,
+    "brief": "You act for a defendant who should not have to go to trial. Write the written submission for the application you have chosen, and open by saying why it is that application rather than the neighbouring one. The thresholds differ, and choosing the wrong one loses a case that the right one wins.",
+    "audience": "A judge who has read the neighbouring application twice this week and will ask why this is not that.",
+    "before": [
+      "Read the interlocutory lesson and note that the applications it names have different thresholds. This exercise is about the difference.",
+      "Read the Rules of Court provision your application is made under, and check whether what you are reading is a consolidated text or the original instrument with separate amendments."
+    ],
+    "scaffold": [
+      {
+        "step": "Choose, and justify the choice",
+        "prompt": "Open with one paragraph saying which application this is and why it is not the adjacent one. Name the difference in threshold.",
+        "why": "The choice is the first thing a judge will test. An advocate who cannot say why this application shows they have not understood what any of them are for."
+      },
+      {
+        "step": "State the threshold in the rule's own terms",
+        "prompt": "Set out what has to be shown, tracking the words of the rule rather than a textbook formulation.",
+        "why": "The threshold is where the application is won. A paraphrase drifts, and it drifts towards whichever test the writer remembers best."
+      },
+      {
+        "step": "Apply it to the material before the court",
+        "prompt": "Go through what is actually in evidence at this stage. Be exact about what the court can and cannot look at on this kind of application.",
+        "why": "Interlocutory applications are decided on a restricted record, and an argument that relies on material the court cannot consider fails on the procedure rather than the merits."
+      },
+      {
+        "step": "Deal with the reason to refuse",
+        "prompt": "Name the strongest reason the court might send this to trial anyway, and answer it.",
+        "why": "There is always one, and a submission that does not raise it invites the judge to raise it instead."
+      },
+      {
+        "step": "Ask for something specific",
+        "prompt": "End with the exact order sought, including costs and any alternative order.",
+        "why": "A submission that argues without asking leaves the drafting to someone else, and the alternative order is often what you actually get."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Why this application",
+        "does": "Distinguishes it from the neighbouring one by threshold",
+        "length": "a paragraph"
+      },
+      {
+        "part": "The threshold",
+        "does": "What must be shown, in the rule's terms",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Application to the record",
+        "does": "Argues on the material properly before the court",
+        "length": "the longest section"
+      },
+      {
+        "part": "The answer to refusal",
+        "does": "Meets the strongest reason to send it to trial",
+        "length": "a substantial paragraph"
+      },
+      {
+        "part": "The order sought",
+        "does": "Exact relief, costs, and an alternative",
+        "length": "a short paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Does not say why this application rather than another, or argues the merits as though at trial, or relies on material the court cannot consider at this stage."
+      },
+      {
+        "band": "Close",
+        "test": "The right application with the right threshold, but the submission never names the strongest reason to refuse, or the order sought is left vague."
+      },
+      {
+        "band": "There",
+        "test": "The choice is justified by threshold, the argument stays inside the restricted record, the reason for refusal is met head-on, and the order sought is precise enough to be made as drafted."
+      }
+    ],
+    "faults": [
+      "Arguing the case rather than the application. These procedures ask a narrower question than the trial does.",
+      "Blending two thresholds because both are roughly about weak cases. They are not the same test and a judge will notice.",
+      "Citing the Rules of Court without checking what you are reading. Subsidiary legislation may not have a consolidated text, and the original instrument plus separate amendments is not the same document as a consolidation."
+    ],
+    "model": "A good answer earns its first paragraph. It names the application, names the one it is not, and states the difference in what has to be shown — which immediately tells the judge the advocate knows the landscape. The threshold section tracks the rule closely with short fragments and no drift into a remembered formulation. The application section is disciplined about the record: it says what is properly before the court and argues within it, and where a point would need evidence not available at this stage, it says so rather than reaching. The submission closes with an order a judge could sign, and an alternative that costs less to grant.",
+    "source": "The applications and their differing thresholds are as set out in the interlocutory lesson of this corpus, which cites the Rules of Court 2012. No threshold is stated here in the rule's own words.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the Order and rule you rely on in the instrument as officially published, and establish whether a consolidated text exists or whether amendments are published as separate instruments. Check the amending instruments before relying on any rule as printed in the original."
+  },
+  {
+    "id": "w-llb-which-court-marriage",
+    "moduleId": "m16-family",
+    "lessonId": "l-family-two-systems",
+    "level": "llb",
+    "kind": "advice",
+    "title": "Which court can end this marriage",
+    "minutes": 90,
+    "brief": "A client wants a divorce. Advise them on which system applies to them, on what that turns, and what happens if the two systems both appear to have something to say. The advice may have to be that the court they want cannot help them.",
+    "audience": "A client in distress who has already been told three different things by three different people.",
+    "before": [
+      "Read the family two-systems lesson, and the syariah jurisdiction lesson beside it. You cannot advise on which system applies without knowing how the other one gets its power.",
+      "Read the guided reading on the constitutional provision that divides jurisdiction between the two systems, if this module or the syariah module has one open to you.",
+      "Fix the client's circumstances before you write. Which system applies is decided by facts, and vague facts produce advice that helps nobody."
+    ],
+    "scaffold": [
+      {
+        "step": "Identify what the division actually turns on",
+        "prompt": "One paragraph on what decides which system applies. Name the source of the division, not just its effect.",
+        "why": "Clients and commentators both describe this as a choice. It is not one, and an advice that leaves that impression will be acted on wrongly."
+      },
+      {
+        "step": "Apply it to this client",
+        "prompt": "State which system applies to them, and say what fact makes that so.",
+        "why": "Naming the operative fact lets the client tell you if it is wrong, which is the only error-correction the advice has."
+      },
+      {
+        "step": "Deal with the other party",
+        "prompt": "Address what happens if the other spouse is not in the same position, and be honest about the limits of what you can say.",
+        "why": "This is where the hard cases live, and it is where advice most often overstates. Say what is unsettled rather than resolving it in the client's favour."
+      },
+      {
+        "step": "Set out what the client can and cannot get",
+        "prompt": "Separate the relief available in the applicable system from the relief the client is asking for. Where they differ, say so plainly.",
+        "why": "Most of the distress in these cases comes from an expectation formed before anyone explained the boundary."
+      },
+      {
+        "step": "Name what must be verified",
+        "prompt": "Close with what you have assumed and what must be checked in the statutes and in the State enactment before anything is filed.",
+        "why": "One system here is State law, so the answer varies by State. Advice that does not say which State it assumed is not advice about anywhere."
+      }
+    ],
+    "structure": [
+      {
+        "part": "What decides it",
+        "does": "The basis of the division and its source",
+        "length": "a paragraph"
+      },
+      {
+        "part": "This client",
+        "does": "Which system applies, and the fact that decides it",
+        "length": "a short paragraph"
+      },
+      {
+        "part": "The other spouse",
+        "does": "Honest treatment of the harder configuration",
+        "length": "a substantial paragraph"
+      },
+      {
+        "part": "Available relief",
+        "does": "What can and cannot be obtained, against what was asked for",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Assumptions and checks",
+        "does": "State, statute and enactment to be confirmed",
+        "length": "a short paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Describes the two systems without applying either, or presents the applicable system as something the client may choose."
+      },
+      {
+        "band": "Close",
+        "test": "Correctly identifies the system and the operative fact, but resolves the harder configuration in the client's favour without saying it is contested, or never names which State's enactment is assumed."
+      },
+      {
+        "band": "There",
+        "test": "The client understands what decides it, which system applies to them, what is genuinely unsettled where the spouses are differently placed, and exactly what has been assumed."
+      }
+    ],
+    "faults": [
+      "Writing as though one national body of law governs. One of these systems is State law and differs between States.",
+      "Filling an unsettled area with the answer the client wants. Say that it is contested and say what turns on it.",
+      "Advising on relief without first settling jurisdiction. If the court cannot hear it, the relief question never arises."
+    ],
+    "model": "A good answer refuses the framing the client arrived with. It opens by locating the division in its constitutional and statutory source, so the client can see it is not a preference. It states the operative fact in one sentence, which makes the advice checkable. The section on a differently placed spouse is the test of the piece: it is where an unconfident writer either overstates or goes silent, and the strong version does neither — it says what is contested, what the competing positions are, and what would decide it. The closing section names the State and the instruments assumed, which is what makes the advice usable somewhere in particular rather than nowhere.",
+    "source": "The two-system division and its constitutional basis are as set out in the family two-systems and syariah jurisdiction lessons of this corpus, which cite the Federal Constitution and the Law Reform (Marriage and Divorce) Act 1976. No provision is asserted here beyond what those lessons state.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the constitutional provision dividing jurisdiction and the civil marriage statute in their current published versions, and read the State enactment for the State you are advising about. The State enactments are not uniform."
+  },
+  {
+    "id": "w-llb-syariah-jurisdiction",
+    "moduleId": "m17-syariah",
+    "lessonId": "l-syariah-jurisdiction",
+    "level": "llb",
+    "kind": "argument",
+    "title": "Argue that this court has no jurisdiction",
+    "minutes": 110,
+    "brief": "Write the jurisdictional submission. Your opponent has filed in a court you say cannot hear the matter. Take the limits one at a time — subject, person, and the ceiling on what may be imposed — and show which one is not met.",
+    "audience": "A court being asked to decide it has no power, which is the least welcome submission a court receives.",
+    "before": [
+      "Read the syariah jurisdiction lesson, and the constitutional lesson on the division of legislative power beside it. The limits come from more than one place.",
+      "Read the guided reading on the constitutional provision this jurisdiction rests on before you write. A jurisdictional submission built on a paraphrase is a submission built on someone else's reading.",
+      "Decide which limb you are actually running. An argument that runs all three equally has not chosen."
+    ],
+    "scaffold": [
+      {
+        "step": "Trace the power to its source",
+        "prompt": "Begin from where the court's power comes from, in order: the constitutional allocation, then the State law made under it.",
+        "why": "A jurisdiction that is conferred can only be as wide as what conferred it. Starting at the State enactment skips the ceiling."
+      },
+      {
+        "step": "Take the limits separately",
+        "prompt": "Subject matter, persons, and the limit on penalties. State each and say which one your argument runs on.",
+        "why": "They fail independently. An argument that gestures at 'jurisdiction' without naming the limb cannot be answered or accepted."
+      },
+      {
+        "step": "Argue the chosen limb on the facts",
+        "prompt": "Apply the limb to what is actually before the court, and identify precisely where the matter falls outside it.",
+        "why": "Jurisdictional arguments are won on characterisation of the matter, and characterisation is a factual exercise dressed as a legal one."
+      },
+      {
+        "step": "Answer the strongest reply",
+        "prompt": "State your opponent's best characterisation of the matter and say why it does not hold.",
+        "why": "The reply will be that the matter is really something else. Meeting it is the argument; ignoring it concedes it."
+      },
+      {
+        "step": "Say what should happen now",
+        "prompt": "Ask for a specific order, and say where the matter should go instead.",
+        "why": "A court is more willing to find it lacks power when told the dispute has somewhere to be heard."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Source of the power",
+        "does": "Traces jurisdiction from constitutional allocation to State law",
+        "length": "a paragraph"
+      },
+      {
+        "part": "The three limits",
+        "does": "States them, and names the one relied on",
+        "length": "a paragraph"
+      },
+      {
+        "part": "The argument",
+        "does": "Applies the chosen limb to the matter as characterised",
+        "length": "the longest section"
+      },
+      {
+        "part": "The reply",
+        "does": "Meets the opponent's best characterisation",
+        "length": "a substantial paragraph"
+      },
+      {
+        "part": "Order sought",
+        "does": "Specific relief, and where the matter should go",
+        "length": "a short paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Argues from the merits of the dispute, or treats jurisdiction as a single undifferentiated question, or starts from the State enactment without the constitutional ceiling above it."
+      },
+      {
+        "band": "Close",
+        "test": "The limits are separated and one is chosen, but the submission does not engage the opponent's characterisation of the matter, or asks for no particular order."
+      },
+      {
+        "band": "There",
+        "test": "The power is traced to its source, one limb is chosen and argued on characterisation, the competing characterisation is met, and the court is offered a specific order and a destination for the dispute."
+      }
+    ],
+    "faults": [
+      "Arguing the merits. If the court has no power, the merits are not its business, and reaching them undermines the submission.",
+      "Assuming the State enactments are the same everywhere. They are not, and the one that matters is the one for this State.",
+      "Treating the constitutional provision as a blanket rule. The lesson in this corpus makes the point that it is routinely described as wider than it is."
+    ],
+    "model": "A good answer is built downwards from the source of the power, so that the ceiling is established before any State provision is discussed. It names all three limits and then commits to one, which is what lets the rest of the submission be specific. The central section argues about what the matter IS, treating characterisation as the contested question it really is, and it uses the facts rather than adjectives. The reply section states the opponent's characterisation in a form the opponent would accept before answering it. The closing paragraph makes the finding easier to make by saying where the dispute goes instead.",
+    "source": "The limits by subject, person and penalty, and the constitutional basis of the jurisdiction, are as set out in the syariah jurisdiction lesson of this corpus, which cites the Federal Constitution. No State enactment is cited here.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the constitutional provision and the relevant List entry in the current published reprint of the Federal Constitution, and read the State enactment for the State in question. Check the federal limit on penalties in its own instrument rather than in any summary."
+  },
+  {
+    "id": "w-llb-unjust-law-essay",
+    "moduleId": "m18-jurisprudence",
+    "lessonId": "l-what-makes-law",
+    "level": "llb",
+    "kind": "essay",
+    "title": "Is a rule too unjust to be law still law?",
+    "minutes": 120,
+    "brief": "Write an essay taking a position on whether a validly enacted rule can fail to be law because of its content. Do not survey the two traditions. Choose, and defend the choice against the best version of the other side.",
+    "audience": "A reader who holds the opposite view and has thought about it for longer than you have.",
+    "before": [
+      "Read the lesson on what makes a rule a law, and note that it presents this as an argument that decides real cases rather than as a historical curiosity.",
+      "Decide before you write whether you are arguing about what law IS or about what a judge should DO. They are different questions and most weak essays slide between them."
+    ],
+    "scaffold": [
+      {
+        "step": "Separate the two questions",
+        "prompt": "Write one paragraph distinguishing the question of what counts as law from the question of whether an official must apply it. Say which you are answering.",
+        "why": "The strongest position on one is compatible with the opposite position on the other, and an essay that conflates them will appear to contradict itself."
+      },
+      {
+        "step": "Put the other side at its strongest",
+        "prompt": "State the opposing position as its best defender would, before stating your own.",
+        "why": "An essay that describes its opponent weakly has told the reader it did not need to think. Doing this first also stops you building a position that cannot survive it."
+      },
+      {
+        "step": "Commit and argue",
+        "prompt": "State your position in one sentence, then develop the single strongest reason for it.",
+        "why": "Depth beats coverage here. Three reasons at a paragraph each is a survey; one reason at three paragraphs is an argument."
+      },
+      {
+        "step": "Take the hard case",
+        "prompt": "Apply your position to the case that most embarrasses it. Do not choose a comfortable example.",
+        "why": "Every position in this debate has a case it handles badly. Choosing it yourself is stronger than having it chosen for you."
+      },
+      {
+        "step": "Say what turns on it",
+        "prompt": "Close by naming a practical consequence — something a court, an official or a citizen would do differently depending on which view is right.",
+        "why": "It is the difference between a position and an opinion, and this lesson's claim is that the argument decides real cases."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Which question",
+        "does": "Separates validity from obligation and picks one",
+        "length": "a paragraph"
+      },
+      {
+        "part": "The other side",
+        "does": "The opposing view at its strongest",
+        "length": "two paragraphs"
+      },
+      {
+        "part": "The argument",
+        "does": "Your position and its strongest reason, developed",
+        "length": "the longest section"
+      },
+      {
+        "part": "The hard case",
+        "does": "Your position applied where it fits worst",
+        "length": "a substantial paragraph"
+      },
+      {
+        "part": "What turns on it",
+        "does": "A practical consequence of the answer",
+        "length": "a short paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Surveys both traditions without choosing, or slides between what law is and what a judge should do without noticing."
+      },
+      {
+        "band": "Close",
+        "test": "A position is taken and the opposing view stated fairly, but the hard case chosen is one the position handles comfortably."
+      },
+      {
+        "band": "There",
+        "test": "The two questions are separated and one is answered, the opposing view is put in a form its holders would accept, the argument develops one reason properly, and the hard case is genuinely hard."
+      }
+    ],
+    "faults": [
+      "Attributing a crude version of a position to a named thinker. If you have not read them, argue the position and do not put a name on it.",
+      "Using a historical atrocity as an argument rather than as a test case. It is where both positions must be applied, not where one of them wins by association.",
+      "Concluding that both sides have a point. They may, but an essay that ends there has not been written; it has been avoided."
+    ],
+    "model": "A good answer does its hardest work early, in the paragraph separating validity from obligation, because everything afterwards depends on which question is being answered. The statement of the opposing view is generous enough that a reader who holds it would recognise themselves. The central argument develops one line of reasoning through its objections rather than listing supports. The hard case is chosen against the writer's own interest, and is answered either by biting the bullet or by showing the position never committed to what it seemed to. The closing paragraph is concrete: it names something that would actually be done differently, which is what stops the essay being about vocabulary.",
+    "source": "The two traditions and the claim that the argument decides real cases are as set out in the lesson on what makes a rule a law in this corpus, which relies on no single authority and cites none.",
+    "lastVerified": "2026-09-11",
+    "verify": "This is an essay of argument rather than of authority, so there is no citation to check. Instead, give it to someone who holds the other view and ask whether your statement of their position is one they would sign."
+  },
+  {
+    "id": "w-llb-dismissal-advice",
+    "moduleId": "m20-employment",
+    "lessonId": "l-employment-protection",
+    "level": "llb",
+    "kind": "advice",
+    "title": "Two tracks, one dismissal: advise on the route",
+    "minutes": 90,
+    "brief": "Your client has been dismissed. Malaysian employment law runs on two tracks and they lead to different places. Advise on which is open, which is worth taking, and what each will and will not deliver — before advising on the merits of the dismissal itself.",
+    "audience": "A client who has lost their income this month and needs to know what happens next, in what order.",
+    "before": [
+      "Read the employment protection lesson and note that it separates a statute setting minimum terms from a separate system for challenging a dismissal.",
+      "Decide the client's role, pay and length of service before writing. Whether the statutory track is open at all can turn on facts like these, and an advice written without them is an advice about nobody."
+    ],
+    "scaffold": [
+      {
+        "step": "Establish which track is even open",
+        "prompt": "Before any merits, say which of the two routes this client can use, and what that turns on.",
+        "why": "One route has scope conditions. Advising on the strength of a claim the client cannot bring is the most expensive kind of wasted advice."
+      },
+      {
+        "step": "Say what each route delivers",
+        "prompt": "For each open route, state what it can produce as an outcome and roughly what it demands in time and process.",
+        "why": "Clients choose on outcome and duration, not doctrine, and a route that produces the wrong remedy is the wrong route however strong the claim."
+      },
+      {
+        "step": "Separate the two limbs of the challenge",
+        "prompt": "Where the dismissal is being challenged, separate the substantive question from the procedural one and address both.",
+        "why": "They are separate failures with separate consequences, and an employer can lose on one while winning the other."
+      },
+      {
+        "step": "Deal with the deadline first in the letter, not last",
+        "prompt": "Put any time limit in a place the client cannot miss, and say what you have and have not confirmed about it.",
+        "why": "A time-barred claim is the one outcome no later quality of advice can fix, and it belongs where a frightened reader will see it."
+      },
+      {
+        "step": "Recommend, and say what would change it",
+        "prompt": "Give a recommendation, then name the fact that would reverse it.",
+        "why": "It makes the advice testable and tells the client which fact to go and check."
+      }
+    ],
+    "structure": [
+      {
+        "part": "Which route is open",
+        "does": "Scope before merits",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Deadline",
+        "does": "The time limit, prominently, with its status stated",
+        "length": "one or two sentences, placed early"
+      },
+      {
+        "part": "What each route delivers",
+        "does": "Outcome, duration, process",
+        "length": "a paragraph each"
+      },
+      {
+        "part": "Substantive and procedural limbs",
+        "does": "The two ways a dismissal can be attacked, kept apart",
+        "length": "a substantial paragraph"
+      },
+      {
+        "part": "Recommendation",
+        "does": "A choice, and the fact that would reverse it",
+        "length": "a short paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Goes straight to whether the dismissal was fair without establishing which route the client can use, or merges the two tracks into one."
+      },
+      {
+        "band": "Close",
+        "test": "Both tracks identified with their scope and outcomes, but the substantive and procedural limbs are argued as one question, or the time limit is buried."
+      },
+      {
+        "band": "There",
+        "test": "The client can see which route is open and why, what each would give them, that a dismissal can fail on process alone, and what the deadline is — and the recommendation names the fact that would change it."
+      }
+    ],
+    "faults": [
+      "Assuming the statutory minimum-terms regime covers this client. Its scope is defined and it does not cover everyone.",
+      "Treating a fair reason as the whole question. A dismissal for a good reason can still fail on how it was carried out.",
+      "Stating a limitation period from memory. Name the instrument and mark it as requiring confirmation."
+    ],
+    "model": "A good answer is sequenced by what can go irrecoverably wrong: scope, then deadline, then substance. The two tracks are described in terms of what a client actually receives at the end of each, rather than in terms of the bodies that administer them. The paragraph separating the substantive from the procedural limb is where the doctrine shows, and the strong version makes clear that these are independent failures rather than two aspects of fairness. Every scope condition and every period is marked as confirmed or unconfirmed, and the recommendation ends with the single fact that would flip it, which turns the letter into an instruction the client can act on.",
+    "source": "The two tracks, and the separation of the substantive and procedural limbs, are as set out in the employment protection lesson of this corpus, which names the Employment Act 1955 and the Industrial Relations Act 1967. No section or period is asserted here.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the scope provisions of the Employment Act 1955 and the dismissal provisions of the Industrial Relations Act 1967 in their current published versions, and confirm the applicable time limit in the instrument itself before any date in your advice is relied on."
+  },
+  {
+    "id": "w-llb-treaty-essay",
+    "moduleId": "m21-international",
+    "lessonId": "l-treaties-domestic",
+    "level": "llb",
+    "kind": "essay",
+    "title": "Why the treaty does not help your client yet",
+    "minutes": 110,
+    "brief": "Malaysia has ratified a treaty that says exactly what your client needs. Write an essay explaining why that does not decide their case in a Malaysian court, what it can still be used for, and whether the position is a good one.",
+    "audience": "A reader who thinks that ratification settles it, and who will not be persuaded by the assertion that it does not.",
+    "before": [
+      "Read the treaties lesson, and note that it presents the dualist position as a consequence of the constitutional arrangement rather than as a rule stated in a provision.",
+      "Decide whether you are arguing that the position is correct, or merely that it is the position. The essay can do either, but not by accident."
+    ],
+    "scaffold": [
+      {
+        "step": "Derive the position rather than asserting it",
+        "prompt": "Show how the result follows from who makes treaties and who makes law. Do not open by naming the doctrine.",
+        "why": "The lesson's own point is that this is a consequence, not a stated rule. An essay that names the label first has skipped the reasoning that makes it true here."
+      },
+      {
+        "step": "Say what the treaty can still do",
+        "prompt": "Set out the uses that remain: interpretation, argument, and anything else the reasoning above leaves available.",
+        "why": "The interesting part of the answer is not the refusal but the residue, and a client's case may be won in it."
+      },
+      {
+        "step": "Mark the limits of the residue",
+        "prompt": "Say where those remaining uses stop, and what a court could not do with the treaty however persuasive.",
+        "why": "An essay that expands the residue without bounding it has quietly abandoned the position it just derived."
+      },
+      {
+        "step": "Evaluate",
+        "prompt": "Say whether the arrangement is a good one, with a reason that is not simply that it is settled.",
+        "why": "A degree-level essay is expected to assess, and 'this is the law' is a description rather than an assessment."
+      },
+      {
+        "step": "Name the mechanism that would change it",
+        "prompt": "Close by naming what would have to happen for the treaty to bind a court directly.",
+        "why": "It shows the position is contingent on an arrangement rather than on the nature of international law, which is the essay's real claim."
+      }
+    ],
+    "structure": [
+      {
+        "part": "The derivation",
+        "does": "Reaches the position from the allocation of powers",
+        "length": "two paragraphs"
+      },
+      {
+        "part": "What remains available",
+        "does": "The uses a treaty still has",
+        "length": "a substantial paragraph"
+      },
+      {
+        "part": "The limits of that",
+        "does": "Bounds the residue honestly",
+        "length": "a paragraph"
+      },
+      {
+        "part": "Assessment",
+        "does": "Whether the arrangement is a good one, and why",
+        "length": "the longest section"
+      },
+      {
+        "part": "What would change it",
+        "does": "The mechanism for direct effect",
+        "length": "a short paragraph"
+      }
+    ],
+    "rubric": [
+      {
+        "band": "Not yet",
+        "test": "Opens by naming the doctrine and treats it as a rule, or claims a ratified treaty is simply irrelevant in a Malaysian court."
+      },
+      {
+        "band": "Close",
+        "test": "The position is derived and the remaining uses identified, but the essay describes rather than evaluates, or lets the residue swallow the rule."
+      },
+      {
+        "band": "There",
+        "test": "The result is derived from the constitutional allocation, the residue is stated and bounded, the arrangement is assessed with a reason beyond its settledness, and the mechanism for change is named."
+      }
+    ],
+    "faults": [
+      "Asserting the doctrine as a rule of Malaysian law found in a provision. The lesson is explicit that it is a consequence of the arrangement.",
+      "Overstating the interpretive use until it becomes direct effect by another name. If a treaty decides the case, the position has been abandoned.",
+      "Citing foreign authority on incorporation as though it stated Malaysian law. It may illustrate a different arrangement; it does not describe this one."
+    ],
+    "model": "A good answer never uses the label until it has been earned. It builds from the allocation of powers to the conclusion, so a reader who had never heard the doctrine would arrive at it. The section on remaining uses is precise about the difference between a treaty informing how a provision is read and a treaty supplying a right, and the bounding paragraph makes that line explicit rather than leaving it implied. The assessment is the longest part and takes a side, weighing accountability for law-making against the practical position of a litigant with a good treaty and no statute. The final paragraph names a mechanism, which quietly demonstrates the whole thesis: the position is a product of arrangements that could be arranged differently.",
+    "source": "The dualist position and its derivation from the constitutional arrangement are as set out in the treaties lesson of this corpus, which cites the Federal Constitution and no Malaysian authority.",
+    "lastVerified": "2026-09-11",
+    "verify": "Read the treaty-making and legislative power provisions of the Federal Constitution in the current published reprint. Then check what Malaysian courts have said about the use of unincorporated treaties before relying on any part of the residue you describe."
+  }
+]
