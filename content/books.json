@@ -255,7 +255,8 @@
       "role": "primary",
       "tier": 6,
       "modules": [
-        "m06-contract"
+        "m06-contract",
+        "m19-commercial"
       ],
       "jurisdictionFocus": "MY",
       "verified": "confirmed",
@@ -450,6 +451,119 @@
       "verified": "unconfirmed",
       "notes": "INTERIM SUBSTITUTE. No dominant current Malaysian student text on administrative law was found. Use an English text for principles (legality, procedural fairness, natural justice, legitimate expectation, reasonableness, ultra vires) and read Malaysian judicial review judgments directly for the local position. Flagged gap — revisit.",
       "priority": 25
+    },
+    {
+      "id": "ashgar-equity-trusts",
+      "title": "Equity and Trusts in Malaysia: Law & Practice",
+      "author": "Ashgar Ali Ali Mohamed (ed.)",
+      "publisher": null,
+      "role": "primary",
+      "tier": 9,
+      "modules": [
+        "m15-equity-trusts"
+      ],
+      "notes": "Located via Malaysian law booksellers and a university library catalogue. VERIFY author spelling and current edition before buying.",
+      "edition": null,
+      "jurisdictionFocus": "MY",
+      "verified": "unconfirmed",
+      "priority": 32
+    },
+    {
+      "id": "najibah-islamic-family-law",
+      "title": "Islamic Family Law in Malaysia",
+      "author": "Najibah Mohd Zin",
+      "publisher": null,
+      "role": "primary",
+      "tier": 9,
+      "modules": [
+        "m17-syariah",
+        "m16-family"
+      ],
+      "notes": "Second edition seen in bookseller listings. Covers marriage, divorce, maintenance and custody under the state enactments.",
+      "edition": null,
+      "jurisdictionFocus": "MY",
+      "verified": "unconfirmed",
+      "priority": 33
+    },
+    {
+      "id": "mimi-family-law-malaysia",
+      "title": "Family Law in Malaysia",
+      "author": "Mimi Kamariah Majid",
+      "publisher": "Malayan Law Journal",
+      "role": "reference",
+      "tier": 10,
+      "modules": [
+        "m16-family"
+      ],
+      "notes": "A standard account of the civil regime, but an OLD one — check what has changed in the Law Reform Act since.",
+      "edition": null,
+      "jurisdictionFocus": "MY",
+      "verified": "unconfirmed",
+      "priority": 34
+    },
+    {
+      "id": "maimunah-industrial-relations",
+      "title": "Malaysian Industrial Relations & Employment Law",
+      "author": "Maimunah Aminuddin",
+      "publisher": "McGraw-Hill Education",
+      "role": "primary",
+      "tier": 9,
+      "modules": [
+        "m20-employment"
+      ],
+      "notes": "Runs to many editions; the later ones are the ones to want. Covers the Industrial Court route, not only the Act.",
+      "edition": null,
+      "jurisdictionFocus": "MY",
+      "verified": "unconfirmed",
+      "priority": 35
+    },
+    {
+      "id": "legal-profession-practice-ethics",
+      "title": "Legal Profession in Malaysia: Practice and Ethics",
+      "author": "Various contributors",
+      "publisher": null,
+      "role": "primary",
+      "tier": 9,
+      "modules": [
+        "m22-ethics"
+      ],
+      "notes": "Thirty-one chapters on the Legal Profession Act, duty to the court, privilege, conflict of interest and discipline.",
+      "edition": null,
+      "jurisdictionFocus": "MY",
+      "verified": "unconfirmed",
+      "priority": 36
+    },
+    {
+      "id": "hart-concept-of-law",
+      "title": "The Concept of Law",
+      "author": "H. L. A. Hart",
+      "publisher": "Oxford University Press",
+      "role": "context",
+      "tier": 11,
+      "modules": [
+        "m18-jurisprudence"
+      ],
+      "notes": "Not Malaysian and not about any rule you will be examined on. It is the book the positivist account in this module is drawn from.",
+      "edition": null,
+      "jurisdictionFocus": "GEN",
+      "verified": "unconfirmed",
+      "priority": 37
+    },
+    {
+      "id": "shaw-international-law",
+      "title": "International Law",
+      "author": "Malcolm N. Shaw",
+      "publisher": "Cambridge University Press",
+      "role": "reference",
+      "tier": 11,
+      "modules": [
+        "m21-international"
+      ],
+      "notes": "A general text, not a Malaysian one. Use it for the sources of international law and the dualist position, then come back to the Constitution.",
+      "edition": null,
+      "jurisdictionFocus": "GEN",
+      "verified": "unconfirmed",
+      "priority": 38
     }
   ],
   "statutes": [
@@ -463,7 +577,10 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
-      "notes": "Also available as a printed reprint from PNMB/ILBS — worth buying for annotation."
+      "notes": "Also available as a printed reprint from PNMB/ILBS — worth buying for annotation.",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PUZFREVSQUwgQ09OU1RJVFVUSU9OJmxhbmc9QkkmZGF0ZT0yMDI1LTExLTMwfDFmODU0MzhlMzUwZWY1YmRiYTYzNzQ1YjMzNTFiMWFjZDRmMDc5YTVjOWYyYjgwOWZlMDU3Zjc1NGM0MDcyM2M=",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvb3V0cHV0YWt0YXAvMjYzMDk5Ml9CSS9SRVBSSU5UIDIwMjUgLSBCSSBXSlcyNe%2BAojA5MDggVGVrcyBCNS5wZGZ8MjJmNmJiYWQzZjgzMzIxNDAxYjc1MGIxN2I5MzkxYjJlOTczNjQyMDk0MjcwMzI2ODgxYjhmNzlhMjQwZGYzOA%3D%3D",
+      "currencyDate": "As at 30 November 2025"
     },
     {
       "id": "contracts-act-1950",
@@ -474,7 +591,11 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
-      "notes": "In pari materia with the Indian Contract Act 1872. Read section by section alongside Cheong."
+      "notes": "In pari materia with the Indian Contract Act 1872. Read section by section alongside Cheong.",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PTEzNiZsYW5nPUJJJmRhdGU9MDEtMDEtMjAwNnxhYWIwZWZiYzcwOGE0MjI2MTczNGRiZjhhZjZhMmM0MzZlNTYxOTBjZTE1ZWI3ODQxMTdjMWFlOThiMjNiMDQ0",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvTE9NL0VOL0FjdCAxMzYucGRmfGNjY2I0MzlhOTk1NTI0NDMyZDg1Y2NkMjgxMDhhYjBhMmZmNDg3YjQ4ODg3OTZkYTg2NGI2MjVhNzAzZDgxMGY%3D",
+      "currencyDate": "Incorporating all amendments up to 1 January 2006",
+      "secondary": "https://www.easylaw.com.my/statutes/general-litigation/contracts-act-1950"
     },
     {
       "id": "penal-code",
@@ -485,7 +606,11 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
-      "notes": "Amended by the Abolition of Mandatory Death Penalty Act 2023 (Act 846), effective 4 July 2023."
+      "notes": "Amended by the Abolition of Mandatory Death Penalty Act 2023 (Act 846), effective 4 July 2023.",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PTU3NCZsYW5nPUJJJmRhdGU9MDQtMDctMjAyM3wyYWIxODY4YWVmMWYzNjViMmY0OGM5Yzg4MTdiMGVjMWY4ZjgyYTQxYzAwMzU0OTYyOWRhZmFjNWM5NzhkNjU4",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvb3V0cHV0YWt0YXAvMTg0MTE0NV9CSS9XSlcyM%2B%2BAojEwMTEgQWN0IDU3NC5wZGZ8MGVhMzIxZTRkNGQzMzljOTQ5NjQxNTZiNmRlMTRhMTI4MmVkZDlmNmIwYTQ5OTRlN2YyMjFmZWIzOWVkNzc4OA%3D%3D",
+      "currencyDate": "As at 4 July 2023",
+      "secondary": "https://www.easylaw.com.my/statutes/general-litigation/penal-code"
     },
     {
       "id": "criminal-procedure-code",
@@ -496,7 +621,11 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
-      "notes": "Also amended by Act 846 (2023)."
+      "notes": "Also amended by Act 846 (2023).",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PTU5MyZsYW5nPUJJJmRhdGU9MDQtMDctMjAyM3xiZDI2Y2RkMWQwNTdjN2YzZTkxYzNmOGMwYjExZjAyZTRiYTk3ODQzZDIzYjA1MmQ2NmZiN2FhNjRiODEzOGJk",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvb3V0cHV0YWt0YXAvMTg0MTE0Ml9CSS9BY3QgNTkzIC0gTXVrdGFtYWQgYXMgYXQgNC43LjIzICgxLjEyLjIzKSAoMikucGRmfDE3MmZhNzZlNTc4YzAzYTI4Mzc5MDYxNGUyYTZiN2IwYWE2OGEzNGEwYjlmNjEwN2ZkZDY4YjkxNzkyYzZmNDk%3D",
+      "currencyDate": "As at 4 July 2023",
+      "secondary": "https://www.easylaw.com.my/statutes/criminal/criminal-procedure-code"
     },
     {
       "id": "evidence-act-1950",
@@ -507,7 +636,11 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
-      "notes": "3 Parts, 11 chapters, 167 sections. Part I Relevancy, Part II Proof, Part III Production and Effect of Evidence."
+      "notes": "3 Parts, 11 chapters, 167 sections. Part I Relevancy, Part II Proof, Part III Production and Effect of Evidence.",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PTU2Jmxhbmc9QkkmZGF0ZT0wMS0xMS0yMDE3fDM5ZTBkNjE3ZmRlYzZlMmY2OTMzNjM5NDY3Y2Y1YjVhYzU1NTM2YzdiMTVkMzkyMzk2YTEyMGNhMjczMWUzZDI=",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvTE9NL0VOL3JlcHJpbnQgQWN0IDU2IChSZXByaW50IDIwMTcpLnBkZnxiMjA4NmM1ZGJmMDA4ZDlhMmQ0NmE1NjEyNDM3ZWVjZmFmMDRjOTE3NmMxOWIzYTlkMzg4MjI2YjhlN2MwYWVh",
+      "currencyDate": "As at 1 November 2017",
+      "secondary": "https://www.easylaw.com.my/statutes/general-litigation/evidence-act-1950"
     },
     {
       "id": "rules-of-court-2012",
@@ -517,7 +650,11 @@
         "m11-civil-procedure"
       ],
       "source": "https://lom.agc.gov.my",
-      "cost": "free"
+      "cost": "free",
+      "official": "https://lom.agc.gov.my/act-view.php?a=dHlwZT1wdWEmbm89UC5VLiAoQSkgMjA1LzIwMTImc3RhdHVzPVBSSU5DSVBBTHwzMTBlZWQ1Nzc1YTNhZjFiNjU2N2QwMjFjODBkNzkwNTY0NDkzM2UzNWEwN2U4MWRjN2Y2MTQxODdjZjllZjZh",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvb3V0cHV0cC9wdWFfMjAxMjA3MDJfUlVMRVMgT0YgQ09VUlQgMjAxMiAoRklOQUwpIC0gMSBKdWx5IDIwMTIucGRmfDliMmY2OTU5NzU2Y2UzNGMyMTk0ODA4NjU3ZDg0ZTIxNmVjMTlkODJhNjczZGQyYTgyZWZkN2YxODQ1YTEyMDY%3D",
+      "currencyDate": null,
+      "secondary": "https://www.easylaw.com.my/statutes/general-litigation/rules-of-court-2012"
     },
     {
       "id": "companies-act-2016",
@@ -527,7 +664,11 @@
         "m09-company"
       ],
       "source": "https://lom.agc.gov.my",
-      "cost": "free"
+      "cost": "free",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PTc3NyZsYW5nPUJJJmRhdGU9MDEtMDgtMjAyMnwyYjkwZGFjZTljMGU3ZWEwYjIzMDk5MjgyYjE3MTIzYzUxZjE4N2EzZDYzN2VjMTVmOTNjMGQzYWQ0ZDJlMjZi",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvb3V0cHV0YWt0YXAvMTczODk3OV9CSS9BY3QgNzc3LSBGaW5hbCBEcmFmdCAoMS44LjIwMjIpLnBkZnwwOTQwNjlhZmViYTJjYTY0ZTk3Y2FhMDI5MTJmZGVlZDg3N2NkN2UyNzU2MmQzYmQzNDJjYjNlMWViNTU3OGJi",
+      "currencyDate": "As at 1 August 2022",
+      "secondary": "https://www.easylaw.com.my/statutes/business/companies_act_2016_2022"
     },
     {
       "id": "national-land-code",
@@ -538,7 +679,10 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
-      "notes": "Confirm current Act number after revision."
+      "notes": "Confirm current Act number after revision.",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PTgyOCZsYW5nPUJJJmRhdGU9MTUtMTAtMjAyMHxkYWVlMjQzYmU5YjUwMWEzYzA3Zjg2YmVlODIxMjQ4MmM1OGYwOWFiNWUxYzMzNWI4YzU1NTA3NzhiMDg0YThm",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvTE9NL0VOLzIwMjAxMDE1XzgyOF9CSV9XSlcwMTUxNzUgTmF0aW9uYWwgTGFuZCBDb2RlIEFjdCA4MjggKFBld2FydGFhbikucGRmfDQxMWQ0YjdkNjFmNTY2YzVhNWE5ZGJjMDMxZWQwYzRjYzFmMjQwYjViMjU2NmI0MDY1MjVmMmZkZTc0MTMyMTM%3D",
+      "currencyDate": "Revised up to 14 October 2020"
     },
     {
       "id": "interpretation-acts",
@@ -549,7 +693,10 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
-      "notes": "Essential for the statutory interpretation module."
+      "notes": "Essential for the statutory interpretation module.",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PTM4OCZsYW5nPUJJJmRhdGU9MDEtMDUtMjAxNXw4ZjhiNTBhOWQ2NDk1YjEzZDA2MTQzOWQ4YzVlMzU4OTEyYTAwOGRhMzdlYzI4ZmY0NWE3NTQwYWE0MDg5NWUw",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvb3V0cHV0YWt0YXAvMTYzMTJfQkkvQWN0IDM4OCAoTXVrdGFtYWQpLnBkZnwzNTU0MWQ5YTVmOGRjYmJjNTQyZWNlZjY4ODQyMjVhNTVhMGU5OTU3ZTM5ODY5ZjBhM2E0MDU2ZDkyODM5ZWJl",
+      "currencyDate": "As at 1 May 2015"
     },
     {
       "id": "civil-law-act-1956",
@@ -560,7 +707,11 @@
       ],
       "source": "https://lom.agc.gov.my",
       "cost": "free",
-      "notes": "Governs the reception of English common law and equity into Malaysia."
+      "notes": "Governs the reception of English common law and equity into Malaysia.",
+      "official": "https://lom.agc.gov.my/act-detail.php?a=YWN0PTY3Jmxhbmc9QkkmZGF0ZT0wMS0xMC0yMDE5fGM1NTNiMTRlZmFiMjMxZmRjNzEzNDQyOTM1ZTM3MzVkY2Y0NzBlMmZmNDk3MDI2NDU3Mjk2YjM4OWNlNmUwYTk=",
+      "officialPdf": "https://lom.agc.gov.my/processFile.php?token=aHR0cHM6Ly9sb20uYWdjLmdvdi5teS9pbGltcy91cGxvYWQvcG9ydGFsL2FrdGEvTE9NL0VOL0FjdCA2NyAtIChtdWt0YW1hZCkucGRmfGE4YTAyZDM3ZGMyZmE1OGRjOGQ4OTI3NDFhNWI5NzM2OWQzMDQ1ZGFjOTg5YWU0ZjIwNzRhNzJmMTQ3NWNjOGE%3D",
+      "currencyDate": "As at 1 October 2019",
+      "secondary": "https://www.easylaw.com.my/statutes/general-litigation/civil-law-act-1956"
     },
     {
       "id": "courts-of-judicature-act-1964",

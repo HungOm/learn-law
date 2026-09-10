@@ -165,6 +165,7 @@
 }
 
 .acttext-find { margin: var(--space-4) 0 0; color: var(--text-secondary); }
+.acttext-fallback { margin: var(--space-3) 0 0; color: var(--text-secondary); }
 .acttext-notes { margin: var(--space-3) 0 0; }
 
 /* On the statute page and in a reading list this sits under running prose, so

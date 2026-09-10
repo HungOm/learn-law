@@ -84,29 +84,82 @@ function Card({ entry, provision, act, onClose }) {
           <button type="button" className="acttext-close" onClick={onClose}>Close ✕</button>
         </div>
 
-        {/* Stated before the links, not after them. A reader who follows the
-            link and finds a different section number needs to know that is
-            expected — legislation is renumbered — rather than concluding the
-            app is wrong or, worse, that their memory of the section is. */}
-        <p className="acttext-note">
-          Read the provision in the current reprint. If the numbering or the wording
-          differs from this lesson, the reprint governs and the lesson is stale —
-          tell nobody it is settled until you have seen the words.
-        </p>
+        {/* How current the official text is, stated before the link rather than
+            after it — and stated at all, which is the whole point. Every one of
+            these dates was read off the front matter of the reprint AGC itself
+            publishes, and several are alarming: the Contracts Act's newest
+            official consolidation incorporates amendments only up to 1 January
+            2006. A reader who does not know that will read a twenty-year-old
+            text believing it current, and nothing on the page would tell them.
+
+            This is also the argument against holding the text here. A stored
+            copy inherits a date like that silently; a pointer carries it. */}
+        {entry.currencyDate ? (
+          <p className="acttext-note">
+            The official reprint is <strong>{entry.currencyDate}</strong>. Anything
+            enacted since is not in it, so check for amending Acts before relying
+            on the words. Where the reprint differs from this lesson, the reprint
+            governs and the lesson is stale.
+          </p>
+        ) : (
+          <p className="acttext-note">
+            <strong>There is no consolidated official text of this instrument.</strong>{' '}
+            What the source publishes is the original as gazetted, and the
+            amendments since are separate instruments. Read them together, and do
+            not treat the text you find as current on its face.
+          </p>
+        )}
 
         <div className="acttext-links">
-          {entry.source && (
+          {entry.officialPdf && (
             <a
               className="btn btn-primary acttext-go"
-              href={entry.source}
+              href={entry.officialPdf}
               target="_blank"
               rel="noreferrer noopener"
             >
-              Open {entry.title}
-              <span className="acttext-host">{host(entry.source)}</span>
+              Open the official reprint (PDF)
+              <span className="acttext-host">{host(entry.officialPdf)}</span>
+            </a>
+          )}
+          {entry.official && (
+            <a
+              className="btn acttext-go"
+              href={entry.official}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              The Act on the Federal Legislation Portal
+              <span className="acttext-host">{host(entry.official)}</span>
+            </a>
+          )}
+          {/* A commercial mirror, offered as convenience and nothing more. Its
+              terms forbid reproduction and framing, so it is a link out and will
+              never be anything else here. */}
+          {entry.secondary && (
+            <a
+              className="btn acttext-go"
+              href={entry.secondary}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Also published by {host(entry.secondary)}
+              <span className="acttext-host">unofficial</span>
             </a>
           )}
         </div>
+
+        {/* The official links carry a server-side signature rather than a plain
+            permalink — the portal refuses hand-built URLs outright. They are
+            verified working, but if the signing secret is ever rotated every one
+            of them dies at once, so the reader always gets a route that cannot
+            expire. */}
+        <p className="acttext-fallback small">
+          If a link above fails, search for the Act by name at{' '}
+          <a href="https://lom.agc.gov.my" target="_blank" rel="noreferrer noopener">
+            lom.agc.gov.my
+          </a>.
+        </p>
 
         {provision && (
           <p className="acttext-find">
