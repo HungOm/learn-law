@@ -295,12 +295,12 @@
           "id": "pf-q-study-1",
           "q": "What should the first ten minutes of a study session be?",
           "options": [
-            "Answering questions on old material from memory",
             "Reading the new chapter",
             "Copying out yesterday's notes",
+            "Answering questions on old material from memory",
             "Planning the rest of the week"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Testing comes before reviewing. Reading first feels better and teaches less.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -309,11 +309,11 @@
           "q": "Why does re-reading feel like it is working?",
           "options": [
             "Repetition always builds memory",
-            "The second pass is easier, and ease feels like knowing",
             "It takes longer, so more goes in",
-            "It suits people who learn by reading"
+            "It suits people who learn by reading",
+            "The second pass is easier, and ease feels like knowing"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "That feeling is fluency. It fades in about a week and it is not the same as memory.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -323,10 +323,10 @@
           "options": [
             "One two-hour session",
             "It makes no difference",
-            "Whichever is less tiring",
-            "Four half-hours"
+            "Four half-hours",
+            "Whichever is less tiring"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The gaps let you forget a little. Pulling it back is what makes it last.",
           "source": "Spacing research, as summarised in Make It Stick"
         },
@@ -348,11 +348,11 @@
           "q": "You have missed a week. What do you do on the first night back?",
           "options": [
             "A double session to catch up",
+            "Ten minutes on material you already know",
             "Start the next module",
-            "Rewrite the timetable",
-            "Ten minutes on material you already know"
+            "Rewrite the timetable"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Restarting is a habit problem. A bigger plan fails twice over.",
           "source": "Ordinary study practice"
         }
@@ -595,12 +595,12 @@
           "id": "pf-q-res-1",
           "q": "An article about an Act, and the Act itself. Which can you rely on?",
           "options": [
-            "The Act, because you can read the words yourself",
             "The article, because it is easier to follow",
+            "The Act, because you can read the words yourself",
             "Either, since they say the same thing",
             "Neither, without a lawyer"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Comment is a lead to the primary text. It is never a substitute for it.",
           "source": "Standard research practice; the primary text governs, not the comment on it"
         },
@@ -634,12 +634,12 @@
           "id": "pf-q-res-4",
           "q": "What is a citation for?",
           "options": [
-            "It proves the case was correctly decided",
             "It is an address, so any reader can find the same words",
+            "It proves the case was correctly decided",
             "It shows the case is still good law",
             "It ranks the case against others"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "It tells you where to look and usually which court. It settles nothing by itself.",
           "source": "Standard Malaysian citation practice"
         },
@@ -647,12 +647,12 @@
           "id": "pf-q-res-5",
           "q": "What must a research note contain to be worth keeping?",
           "options": [
-            "The provision, the words you relied on, where you found it, and the date",
             "The conclusion you reached",
             "A link on its own",
+            "The provision, the words you relied on, where you found it, and the date",
             "The name of the person who told you"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Research you cannot retrace is not research.",
           "source": "Standard research practice"
         },
@@ -660,12 +660,12 @@
           "id": "pf-q-res-6",
           "q": "A free portal shows nothing to suggest a case was overturned. What have you established?",
           "options": [
+            "Nothing — free portals do not track what happened later",
             "That the case is still good law",
             "That no appeal was filed",
-            "Nothing — free portals do not track what happened later",
             "That later courts followed it"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Silence is not a clean bill of health. That check needs a paid service.",
           "source": "Standard research practice; free Malaysian sources include no citator"
         }
@@ -918,11 +918,11 @@
           "q": "What makes a question an issue?",
           "options": [
             "It is the first question you thought of",
-            "The facts leave it open and both answers are arguable",
             "It is about a rule you know well",
-            "The parties disagree about what happened"
+            "The parties disagree about what happened",
+            "The facts leave it open and both answers are arguable"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "If only one answer is possible, it is not the issue. Find the ones that are actually open.",
           "source": "Standard problem-question technique"
         },
@@ -944,11 +944,11 @@
           "q": "Which of these is application?",
           "options": [
             "He was careless, so he must pay",
+            "He lifted a loaded bike alone on a wet walkway with help standing beside him",
             "The law requires reasonable care",
-            "The bike was damaged",
-            "He lifted a loaded bike alone on a wet walkway with help standing beside him"
+            "The bike was damaged"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Application ties one fact to one element. The others restate the rule or the story.",
           "source": "Standard problem-question technique; the application band of the rubric"
         },
@@ -969,12 +969,12 @@
           "id": "pf-q-reason-5",
           "q": "Before using an earlier case, what must you identify?",
           "options": [
-            "The name of the judge",
             "The facts the earlier decision actually turned on",
+            "The name of the judge",
             "How long the judgment is",
             "Whether it is recent"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Only those facts make it close to yours, and only a difference in them is worth arguing.",
           "source": "Standard common law method on ratio decidendi"
         }
@@ -1251,12 +1251,12 @@
           "id": "pf-q-sec-1",
           "q": "What is the first physical step with a hard section?",
           "options": [
+            "Copy it out with one clause per line",
             "Read it three times",
             "Look for a case about it",
-            "Read a summary of it first",
-            "Copy it out with one clause per line"
+            "Read a summary of it first"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "You cannot interpret a clause you have not isolated.",
           "source": "Standard practice for reading a provision"
         },
@@ -1279,10 +1279,10 @@
           "options": [
             "The list is closed",
             "The definition applies to every Act",
-            "The ordinary meaning stays, and the definition adds to it",
-            "The word has no settled meaning"
+            "The word has no settled meaning",
+            "The ordinary meaning stays, and the definition adds to it"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Means gives a closed list. Includes extends the ordinary sense without shutting it down.",
           "source": "Standard drafting convention; 'includes' extends the ordinary meaning, 'means' defines exhaustively"
         },
@@ -1290,12 +1290,12 @@
           "id": "pf-q-sec-4",
           "q": "What does a proviso do?",
           "options": [
-            "It cuts a piece out of the provision it is attached to",
             "It states the purpose of the Act",
             "It applies across the whole Act",
-            "It creates a defence in every section"
+            "It creates a defence in every section",
+            "It cuts a piece out of the provision it is attached to"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "It cuts down that provision and travels no further.",
           "source": "Standard drafting convention; a proviso qualifies the provision it is attached to"
         },

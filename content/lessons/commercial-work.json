@@ -156,11 +156,11 @@
           "q": "A shop manager orders ordinary stock without being told to. What kind of authority is that?",
           "options": [
             "Express authority",
-            "Implied authority, because it comes with the job",
             "No authority at all",
-            "Authority only if the principal later agrees"
+            "Authority only if the principal later agrees",
+            "Implied authority, because it comes with the job"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Implied authority is what comes with the role. A manager engaged to run a shop may do the ordinary things running a shop requires."
         },
         {
@@ -179,12 +179,12 @@
           "id": "qcom3",
           "q": "An agent takes an undisclosed commission but gets the principal a fair price. What follows?",
           "options": [
-            "The agent must account for the commission, because the duty is against undisclosed profit",
             "Nothing, because the principal suffered no loss",
             "The contract with the third party is automatically void",
-            "The principal must first prove bad faith"
+            "The principal must first prove bad faith",
+            "The agent must account for the commission, because the duty is against undisclosed profit"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Loyalty duties are strict. Absence of loss answers a damages claim; it does not answer the claim to the secret profit itself."
         }
       ],
@@ -346,47 +346,47 @@
           "q": "Which statute sets minimum terms such as leave, rest days and notice?",
           "options": [
             "The Industrial Relations Act 1967",
-            "The Contracts Act 1950",
             "The Employment Act 1955",
+            "The Contracts Act 1950",
             "The Civil Law Act 1956"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The Employment Act 1955 sets the statutory floor. The Industrial Relations Act 1967 deals with dismissal without just cause, which is a different question."
         },
         {
           "id": "qemp2",
           "q": "Where does a claim for dismissal without just cause or excuse begin?",
           "options": [
-            "Through a representation under the industrial relations system",
             "In the High Court by writ",
             "In the Sessions Court",
-            "In the Syariah court if the employee is Muslim"
+            "In the Syariah court if the employee is Muslim",
+            "Through a representation under the industrial relations system"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The Industrial Relations Act 1967 route starts with a representation and conciliation, and may be referred on to the Industrial Court."
         },
         {
           "id": "qemp3",
           "q": "An employer proves the misconduct but held no hearing. What is the likely position?",
           "options": [
+            "The dismissal may still be unfair, because procedure is a separate requirement",
             "The dismissal is safe, because the reason was true",
             "The employee must sue for breach of contract instead",
-            "The Employment Act 1955 decides it",
-            "The dismissal may still be unfair, because procedure is a separate requirement"
+            "The Employment Act 1955 decides it"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Just cause has a substantive and a procedural half, and an employer must satisfy both. A true reason does not cure an absent procedure."
         },
         {
           "id": "qemp4",
           "q": "What remedy is the unfair dismissal system built around?",
           "options": [
-            "Reinstatement, with compensation commonly awarded instead",
             "Damages for distress",
+            "Reinstatement, with compensation commonly awarded instead",
             "A criminal penalty on the employer",
             "An injunction against the employer"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "The statutory aim is to put the workman back in the job. In practice compensation is usually awarded in place of reinstatement."
         }
       ],
@@ -407,6 +407,684 @@
           "where": "for the Industrial Court route, which is where a dismissal claim actually goes and which no Act describes end to end"
         }
       ]
+    },
+    {
+      "id": "l-commercial-terms",
+      "moduleId": "m19-commercial",
+      "title": "Standard terms, and the limits of freedom of contract",
+      "summary": "Commercial parties draft their own rules. The Contracts Act sets the outer boundary, and a term outside it is void however carefully it was negotiated.",
+      "minutes": 30,
+      "readMinutes": 10,
+      "sections": [
+        {
+          "id": "sec-l-commercial-terms-0",
+          "h": "Freedom, with a boundary",
+          "readMinutes": 2,
+          "keypoint": "Commercial parties set most of their own terms, but the statute fixes an outer limit that negotiation cannot move.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Commercial law lets parties write their own rules. That is most of its usefulness."
+            },
+            {
+              "t": "p",
+              "text": "But not everything agreed is enforceable. The Contracts Act draws a boundary, and a term outside it fails regardless of how freely it was agreed."
+            },
+            {
+              "t": "p",
+              "text": "So a commercial drafting question has two parts. What do we want the term to do, and is it a term the law will give effect to?"
+            },
+            {
+              "t": "rule",
+              "text": "Section 10(1) sets out the conditions on which an agreement becomes a contract. The parties must consent freely, and each of them must be competent. What is given in return, and the purpose the arrangement serves, must each be lawful. And the agreement must not be one that the Act elsewhere declares void. Every condition has to hold at the same time, which is why the subsection repays being read slowly.",
+              "source": "Contracts Act 1950, s 10(1)."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-commercial-terms-1",
+          "h": "Read section 10(1) as a checklist",
+          "readMinutes": 3,
+          "keypoint": "Section 10(1) is a list of conditions, and each one is a separate place a commercial agreement can fail.",
+          "body": [
+            {
+              "t": "p",
+              "text": "That provision is easy to read as a single sentence about validity. It is more useful read as a list."
+            },
+            {
+              "t": "p",
+              "text": "Free consent. Competence. Lawful consideration. Lawful object. Not expressly declared void."
+            },
+            {
+              "t": "p",
+              "text": "Each is a separate requirement and each can fail on its own. In a commercial dispute, identifying which one is in issue is most of the analysis."
+            },
+            {
+              "t": "p",
+              "text": "The last limb is the one people forget. Some agreements are void because the Act says so elsewhere, not because anything is wrong with the consent."
+            },
+            {
+              "t": "predict",
+              "prompt": "Two sophisticated companies negotiate at length, with lawyers, and agree a term the Act expressly declares void. Is it enforceable?",
+              "options": [
+                "Yes — they were commercial parties with equal bargaining power and full advice",
+                "No — an express declaration of voidness is not displaced by the quality of the negotiation"
+              ],
+              "answer": 1,
+              "reveal": "Bargaining equality is an argument about consent, and consent is a different limb. Where the Act declares a class of agreement void, the care taken in reaching it is beside the point."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-commercial-terms-2",
+          "h": "Unlawful object and consideration",
+          "readMinutes": 3,
+          "keypoint": "Section 24 sets out when consideration or object is unlawful, and it reaches further than obvious illegality.",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 24 sets out the limbs on which the consideration or object of an agreement is unlawful, and provides that every agreement whose object or consideration is unlawful is void.",
+              "source": "Contracts Act 1950, s 24."
+            },
+            {
+              "t": "p",
+              "text": "The limbs are worth reading one at a time. They are not all about breaking the law."
+            },
+            {
+              "t": "p",
+              "text": "Some reach arrangements that are lawful in themselves but defeat something the law provides for. That is where commercial agreements are most likely to be caught unexpectedly."
+            },
+            {
+              "t": "p",
+              "text": "The consequence matters too. Void is not the same as unenforceable at the option of one party. Neither side can sue on it."
+            },
+            {
+              "t": "caution",
+              "text": "Do not paraphrase the limbs from a textbook. They are precisely worded, and an argument that quotes the wrong limb is an argument about the wrong thing."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-commercial-terms-3",
+          "h": "Where the Act declares a class void",
+          "readMinutes": 2,
+          "keypoint": "Section 26 makes agreements without consideration void as a class, subject to stated exceptions.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Section 26 is the clearest example of the fifth limb of section 10(1) in operation."
+            },
+            {
+              "t": "rule",
+              "text": "Section 26 provides that an agreement made without consideration is void, subject to the exceptions the section sets out, and it carries illustrations.",
+              "source": "Contracts Act 1950, s 26."
+            },
+            {
+              "t": "p",
+              "text": "Read the exceptions, and read the illustrations. Illustrations are part of how the section is understood, and they are more concrete than anything a summary will give you."
+            },
+            {
+              "t": "p",
+              "text": "Commercially, this matters most in variations and in promises to accept less. Those are exactly the situations where consideration is thin."
+            },
+            {
+              "t": "checkpoint",
+              "q": "A supplier agrees to accept less than the contract price, with nothing given in return. Which provision do you reach for first?",
+              "options": [
+                "Section 10(1), because consent was free",
+                "Section 26, and then its exceptions"
+              ],
+              "answer": 1,
+              "why": "The question is whether an agreement without consideration is enforceable, which is what section 26 addresses directly. Section 10(1) tells you validity has conditions; section 26 is the condition in issue."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-comm-terms-1",
+          "q": "Why is section 10(1) better read as a checklist than as a definition?",
+          "options": [
+            "Because it is shorter that way",
+            "Because definitions are not binding",
+            "Because it only applies to commercial contracts",
+            "Because each requirement can fail independently, and identifying which is in issue is the analysis"
+          ],
+          "answer": 3,
+          "why": "Free consent, competence, lawful consideration, lawful object and not being declared void are separate conditions. A dispute is almost always about one of them, and naming which one is what makes an answer specific."
+        },
+        {
+          "id": "q-comm-terms-2",
+          "q": "Two commercial parties with equal bargaining power agree a term the Act expressly declares void. What follows?",
+          "options": [
+            "It is void — the quality of consent does not save an agreement the Act declares void",
+            "It binds them, because both consented freely",
+            "It binds only the party who drafted it",
+            "It is enforceable if the contract says so"
+          ],
+          "answer": 0,
+          "why": "Consent and express voidness are different limbs of section 10(1). Satisfying one does not answer the other."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "contracts-act-1950",
+          "where": "section 10(1), then section 24 and section 26 with its illustrations — read the illustrations, they are part of the section"
+        },
+        {
+          "bookId": "sinnadurai-law-of-contract",
+          "where": "the chapters on legality and on consideration, for the Malaysian treatment rather than the English one"
+        }
+      ],
+      "source": "Contracts Act 1950, ss 10(1), 24 and 26 — each of which is the subject of a guided reading in this corpus. No case is cited.",
+      "verify": "Read sections 10(1), 24 and 26 in the current published version and check the currency date on the reprint's front matter. The Contracts Act's official consolidation may be many years old; confirm the limbs of section 24 from the section itself.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-commercial-remedies",
+      "moduleId": "m19-commercial",
+      "title": "What a broken commercial contract is worth",
+      "summary": "Section 74 governs compensation for breach. Section 75 governs a sum the contract itself names. They are different questions, and commercial contracts usually raise the second.",
+      "minutes": 30,
+      "readMinutes": 10,
+      "sections": [
+        {
+          "id": "sec-l-commercial-remedies-0",
+          "h": "Two provisions, two questions",
+          "readMinutes": 2,
+          "keypoint": "Compensation for loss and a sum the contract names are governed separately, and confusing them is the common error.",
+          "body": [
+            {
+              "t": "p",
+              "text": "A commercial contract is broken. There are two quite different routes to a figure."
+            },
+            {
+              "t": "p",
+              "text": "The first asks what loss the breach caused. The second asks what the contract itself said would be payable."
+            },
+            {
+              "t": "p",
+              "text": "The Act deals with them in separate sections, and the answers can differ."
+            },
+            {
+              "t": "caution",
+              "text": "An answer that runs them together produces a number with no route to it. Say which section you are under before you calculate anything."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-commercial-remedies-1",
+          "h": "Compensation for loss",
+          "readMinutes": 3,
+          "keypoint": "Section 74 compensates for loss naturally arising or in the parties' contemplation, and excludes remote loss.",
+          "body": [
+            {
+              "t": "rule",
+              "text": "Section 74(1) entitles the injured party to compensation for loss or damage caused which naturally arose in the usual course of things from the breach, or which the parties knew when they made the contract to be likely to result. Section 74(2) excludes compensation for remote and indirect loss.",
+              "source": "Contracts Act 1950, s 74, subsections (1) and (2)."
+            },
+            {
+              "t": "p",
+              "text": "Two limbs, and they do different work. The first is about ordinary consequences. The second is about what these parties knew."
+            },
+            {
+              "t": "p",
+              "text": "That second limb is why commercial parties disclose unusual exposure at the time of contracting. Knowledge at formation is what brings it in."
+            },
+            {
+              "t": "p",
+              "text": "Telling the other side afterwards does not help. The section fixes the moment."
+            },
+            {
+              "t": "predict",
+              "prompt": "A buyer has an unusually lucrative sub-sale and tells the seller about it a week after the contract is signed. The seller breaches. Is the sub-sale profit recoverable under the second limb?",
+              "options": [
+                "Yes — the seller knew about it before breaching",
+                "Not under that limb — it asks what the parties knew when they made the contract"
+              ],
+              "answer": 1,
+              "reveal": "The limb is tied to the time of contracting, because that is when the party could have priced or refused the risk. Later knowledge may matter for other purposes, but it does not retrofit contemplation."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-commercial-remedies-2",
+          "h": "When the contract names a sum",
+          "readMinutes": 3,
+          "keypoint": "Section 75 governs a sum named in the contract, and the section sets its own test rather than importing one.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Commercial contracts routinely name a figure payable on breach. Liquidated damages clauses, service credits, deposits."
+            },
+            {
+              "t": "rule",
+              "text": "Section 75 deals with the case where a sum is named in the contract as payable on breach, or the contract contains any other stipulation by way of penalty.",
+              "source": "Contracts Act 1950, s 75."
+            },
+            {
+              "t": "p",
+              "text": "Note what the section does not do. It does not simply enforce the named figure, and it does not simply strike it down."
+            },
+            {
+              "t": "p",
+              "text": "Read the words carefully rather than importing a test you remember from elsewhere. This is a codified provision, and the code governs."
+            },
+            {
+              "t": "caution",
+              "text": "The relationship between the named sum and proof of actual loss under this section has been the subject of Malaysian appellate decisions and the position has developed. Do not state it from memory or from an English textbook."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-commercial-remedies-3",
+          "h": "Drafting with the sections in view",
+          "readMinutes": 2,
+          "keypoint": "A clause drafted without regard to which section governs it may produce a figure the court will not award.",
+          "body": [
+            {
+              "t": "p",
+              "text": "This is where doctrine becomes drafting. A clause that names a sum invites section 75."
+            },
+            {
+              "t": "p",
+              "text": "A clause that instead defines what counts as recoverable loss is operating in section 74's territory."
+            },
+            {
+              "t": "p",
+              "text": "Neither is automatically better. But drafting one while expecting the other's treatment is how commercial clauses disappoint."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Your client wants certainty about what a breach will cost. What is the honest advice?",
+              "options": [
+                "Name a large sum in the contract — certainty is achieved by drafting",
+                "A named sum engages section 75, so the figure is not automatically the amount recoverable; certainty is limited by what the section allows"
+              ],
+              "answer": 1,
+              "why": "Naming a figure changes which section governs, not whether the court will scrutinise it. Advice that promises certainty from drafting alone has not read the provision the drafting attracts."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-comm-rem-1",
+          "q": "Under the second limb of section 74(1), when must the parties have known of the likely loss?",
+          "options": [
+            "At any time before the breach",
+            "When they made the contract",
+            "When the loss was suffered",
+            "When proceedings were commenced"
+          ],
+          "answer": 1,
+          "why": "The limb is fixed to the time of contracting, which is when a party could have priced or declined the risk. Knowledge acquired later does not bring the loss within it."
+        },
+        {
+          "id": "q-comm-rem-2",
+          "q": "A commercial contract names a sum payable on breach. Which provision governs?",
+          "options": [
+            "Section 74",
+            "Section 75",
+            "Section 10(1)",
+            "Section 26"
+          ],
+          "answer": 1,
+          "why": "Section 75 addresses a sum named in the contract as payable on breach. Section 74 governs compensation for loss caused, which is a different question and can produce a different figure."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "contracts-act-1950",
+          "where": "section 74 with its explanation, then section 75 — read them consecutively, because the difference between them is the lesson"
+        },
+        {
+          "bookId": "cheong-contract-law-malaysia",
+          "where": "the chapter on remedies, and specifically the treatment of section 75, where the Malaysian position differs from the English one"
+        }
+      ],
+      "source": "Contracts Act 1950, ss 74 and 75 — both the subject of guided readings in this corpus. No case is cited, and the development of the section 75 position is deliberately left to the reader to check.",
+      "verify": "Read sections 74 and 75 in the current published version and check the reprint's currency date. The section 75 position has been developed by Malaysian appellate decisions; confirm the current authority before advising on any named sum.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-who-is-an-employee",
+      "moduleId": "m20-employment",
+      "title": "Employee or contractor, and why the label does not decide",
+      "summary": "Whether someone is an employee decides which statutes apply to them at all. The contract's own description of the relationship is evidence, not the answer.",
+      "minutes": 28,
+      "readMinutes": 9,
+      "sections": [
+        {
+          "id": "sec-l-who-is-an-employee-0",
+          "h": "The question that comes first",
+          "readMinutes": 2,
+          "keypoint": "Employment protections attach to employees, so status decides whether any of the statutory regime applies.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Every employment protection begins with a category. It protects employees."
+            },
+            {
+              "t": "p",
+              "text": "So before any question about dismissal, terms or remedies, there is a prior question. Is this person an employee at all?"
+            },
+            {
+              "t": "p",
+              "text": "Get that wrong and everything after it is wasted. A well-argued unfair dismissal claim by someone who was never an employee fails on the first point."
+            },
+            {
+              "t": "caution",
+              "text": "This is also where the two Malaysian statutes can diverge. Scope is defined by each Act for its own purposes, and being covered by one does not mean being covered by the other."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-who-is-an-employee-1",
+          "h": "Why the contract's label is not decisive",
+          "readMinutes": 3,
+          "keypoint": "If a label could decide status, the protections could be drafted away, so courts look at the substance of the relationship.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Many contracts say the person is an independent contractor. Some say it several times."
+            },
+            {
+              "t": "p",
+              "text": "If that settled it, the protections would be optional. Any employer could draft its way out of the entire regime."
+            },
+            {
+              "t": "p",
+              "text": "So the label is evidence of what the parties intended, and no more. The court looks at how the relationship actually worked."
+            },
+            {
+              "t": "predict",
+              "prompt": "A contract states clearly that the worker is not an employee, and both parties signed it knowingly. Does that settle status?",
+              "options": [
+                "Yes — the parties are free to characterise their own relationship",
+                "No — otherwise the statutory protections could be removed by drafting"
+              ],
+              "answer": 1,
+              "reveal": "The reason is structural rather than paternalistic. A protection that a contract can switch off is not a protection, so the category has to be determined by what happened rather than by what the document says happened."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-who-is-an-employee-2",
+          "h": "What the courts actually look at",
+          "readMinutes": 3,
+          "keypoint": "Control, integration into the business, and who bears the financial risk are the recurring indicators.",
+          "body": [
+            {
+              "t": "p",
+              "text": "No single factor decides. The indicators recur, and they are worth knowing as a set."
+            },
+            {
+              "t": "p",
+              "text": "Control: how far the other party directs not just what is done but how it is done."
+            },
+            {
+              "t": "p",
+              "text": "Integration: whether the person is part of the business or provides services to it from outside."
+            },
+            {
+              "t": "p",
+              "text": "Financial risk: who supplies the equipment, who can profit from doing the job efficiently, who bears the loss if it goes badly."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Can the person send a substitute, or must they perform personally?",
+                "Do they work for others at the same time?",
+                "Who decides when and where the work is done?",
+                "Are they paid for time, or for a result?"
+              ]
+            },
+            {
+              "t": "p",
+              "text": "Apply them to facts rather than reciting them. A list of factors with no application to the problem earns nothing."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-who-is-an-employee-3",
+          "h": "Scope is set by each statute",
+          "readMinutes": 2,
+          "keypoint": "Even a clear employee may be outside a particular Act, because each defines its own coverage.",
+          "body": [
+            {
+              "t": "p",
+              "text": "There is a second trap after status. Being an employee is not the same as being covered by a given Act."
+            },
+            {
+              "t": "p",
+              "text": "The statute setting minimum terms defines who it applies to, and that definition has its own conditions."
+            },
+            {
+              "t": "p",
+              "text": "So an employee may have the protection of one regime and not the other. Check the scope provisions of the Act you are relying on, in the Act itself."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Your client is plainly an employee. Does it follow that the statutory minimum terms apply to them?",
+              "options": [
+                "Yes — the Act protects employees",
+                "Not necessarily — that Act defines its own scope, and the definition has conditions"
+              ],
+              "answer": 1,
+              "why": "Status and coverage are separate questions. Establishing the first without checking the second produces advice that is right about the category and wrong about the entitlement."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-emp-status-1",
+          "q": "Why is a contractual statement that someone is an independent contractor not decisive?",
+          "options": [
+            "Because such clauses are unlawful",
+            "Because employees cannot read contracts",
+            "Because only the Industrial Court may decide status",
+            "Because a protection that drafting could switch off would not be a protection"
+          ],
+          "answer": 3,
+          "why": "The reason is structural. If the label decided the category, the whole statutory regime would be optional at the employer's election, so the substance of the relationship governs."
+        },
+        {
+          "id": "q-emp-status-2",
+          "q": "Which of these is a recognised indicator of employment status?",
+          "options": [
+            "The job title",
+            "Whether the contract is in writing",
+            "How long the relationship lasted",
+            "Who bears the financial risk of the work"
+          ],
+          "answer": 3,
+          "why": "Financial risk sits alongside control and integration as a recurring indicator. Duration and formality may be evidence, but they are not the tests themselves."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "employment-act-1955",
+          "where": "the provisions defining who the Act applies to — find them and read the conditions, because this lesson deliberately does not state a section number"
+        },
+        {
+          "bookId": "maimunah-industrial-relations",
+          "where": "the treatment of employment status and of the Act's scope"
+        }
+      ],
+      "source": "The employee and independent contractor distinction is standard doctrine applied in Malaysia; the scope of the statutory minimum terms is set by the Employment Act 1955. No section of that Act is stated here, because this corpus has not verified one.",
+      "verify": "Find and read the scope provisions of the Employment Act 1955 in the current published version, and check the reprint's currency date. Confirm the conditions from the Act itself; this lesson names no section on purpose.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-industrial-remedies",
+      "moduleId": "m20-employment",
+      "title": "What a dismissal claim can actually produce",
+      "summary": "A dismissal challenge does not undo the dismissal. Knowing what the process can and cannot deliver is what makes advice on it worth having.",
+      "minutes": 28,
+      "readMinutes": 9,
+      "sections": [
+        {
+          "id": "sec-l-industrial-remedies-0",
+          "h": "Start from the outcome",
+          "readMinutes": 2,
+          "keypoint": "Clients choose a route by what it delivers and how long it takes, not by which doctrine is more elegant.",
+          "body": [
+            {
+              "t": "p",
+              "text": "A dismissed client wants to know two things. What can I get, and how long will it take."
+            },
+            {
+              "t": "p",
+              "text": "Doctrine answers neither directly, which is why advice that begins with doctrine so often misses."
+            },
+            {
+              "t": "p",
+              "text": "Start from the outcome and work back. It also tests whether the route you are recommending is the right one."
+            },
+            {
+              "t": "caution",
+              "text": "A strong claim on a route that cannot deliver what the client needs is worse than a modest claim on one that can."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-industrial-remedies-1",
+          "h": "The two limbs of a challenge",
+          "readMinutes": 3,
+          "keypoint": "A dismissal can fail because there was no good reason, or because the process was wrong — and these are independent.",
+          "body": [
+            {
+              "t": "p",
+              "text": "A challenge to a dismissal has a substantive limb and a procedural one."
+            },
+            {
+              "t": "p",
+              "text": "The substantive question is whether there was a proper reason. The procedural question is whether the employer went about it properly."
+            },
+            {
+              "t": "p",
+              "text": "They are independent. An employer with an excellent reason can lose on process, and an employer with an immaculate process can lose on reason."
+            },
+            {
+              "t": "predict",
+              "prompt": "An employer has clear evidence of serious misconduct but dismissed without giving the employee any chance to respond. What is the likely position?",
+              "options": [
+                "The dismissal stands — the reason was plainly good",
+                "The reason may be good and the dismissal may still be successfully challenged on process"
+              ],
+              "answer": 1,
+              "reveal": "Treating a good reason as curing everything is the most common employer error and the most common student one. The two limbs are asked separately because they protect different things: one against being dismissed for nothing, the other against being dismissed without being heard."
+            },
+            {
+              "t": "p",
+              "text": "In an answer, deal with them in separate paragraphs. Merging them hides which one you are relying on."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-industrial-remedies-2",
+          "h": "What the process can order",
+          "readMinutes": 2,
+          "keypoint": "Reinstatement is the primary remedy in principle, but compensation is the common outcome in practice.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The remedy most associated with this jurisdiction is being put back in the job."
+            },
+            {
+              "t": "p",
+              "text": "In practice it is often not what happens. Relationships have broken down, positions have been filled, and time has passed."
+            },
+            {
+              "t": "p",
+              "text": "So compensation is the usual outcome, and a client expecting their job back should be told early that it is not the likely result."
+            },
+            {
+              "t": "p",
+              "text": "How compensation is calculated is set by the applicable rules and practice rather than by a formula you can derive. Check it rather than estimating."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Your client's first question is whether they will get their job back. What does honest advice look like?",
+              "options": [
+                "Reassure them — reinstatement is the primary remedy",
+                "Explain that it is the primary remedy in principle but compensation is the common outcome, and say why"
+              ],
+              "answer": 1,
+              "why": "Both halves are true and the client needs both. Leading with the principle alone builds an expectation that the process is unlikely to meet, and that is the disappointment good advice exists to prevent."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-industrial-remedies-3",
+          "h": "The deadline comes first",
+          "readMinutes": 2,
+          "keypoint": "A time limit is the one thing later quality of advice cannot repair, so it belongs at the top of the letter.",
+          "body": [
+            {
+              "t": "p",
+              "text": "There is a period within which a dismissal must be challenged, and missing it is usually fatal."
+            },
+            {
+              "t": "p",
+              "text": "This is the single most consequential thing in the whole area, and it is routinely buried at the end of an advice letter."
+            },
+            {
+              "t": "p",
+              "text": "Put it at the top. A client who reads only the first paragraph should still know the deadline exists."
+            },
+            {
+              "t": "p",
+              "text": "And confirm the period in the instrument rather than from memory. A period stated wrongly is worse than no advice, because it will be relied on."
+            },
+            {
+              "t": "caution",
+              "text": "This lesson deliberately does not state the period. Find it in the Act, and note the date you checked it."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-emp-rem-1",
+          "q": "An employer has a clearly good reason but dismissed without any hearing. What is the position?",
+          "options": [
+            "The dismissal is safe, because the reason was good",
+            "The employee must prove bad faith",
+            "Only the reason matters in Malaysian law",
+            "The dismissal may still be successfully challenged, because the procedural limb is separate"
+          ],
+          "answer": 3,
+          "why": "The substantive and procedural limbs are independent. Each protects something different, so satisfying one does not answer the other."
+        },
+        {
+          "id": "q-emp-rem-2",
+          "q": "What should appear at the top of an advice letter on a dismissal?",
+          "options": [
+            "The strength of the merits",
+            "The time limit for bringing the challenge",
+            "The employer's likely defence",
+            "The client's employment history"
+          ],
+          "answer": 1,
+          "why": "A missed deadline cannot be repaired by any later quality of advice, so it belongs where a frightened reader will see it even if they read nothing else."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "industrial-relations-act-1967",
+          "where": "the provisions on dismissal without just cause or excuse, and the time limit for making a representation — find the period in the Act rather than taking it from a summary"
+        },
+        {
+          "bookId": "maimunah-industrial-relations",
+          "where": "the treatment of remedies, and of what happens in practice as against what the legislation provides for"
+        }
+      ],
+      "source": "The two limbs of a dismissal challenge and the remedial position are standard Malaysian industrial relations doctrine under the Industrial Relations Act 1967. No section and no time limit is stated here, because this corpus has not verified one.",
+      "verify": "Find the dismissal and time limit provisions in the Industrial Relations Act 1967 as currently published, and check the reprint's currency date. This lesson states no period on purpose; confirm it in the Act and record the date you checked.",
+      "lastVerified": "2026-09-11"
     }
   ]
 }

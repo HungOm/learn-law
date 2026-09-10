@@ -296,12 +296,12 @@
           "id": "qlb2",
           "q": "What does Article 10(2)(a) allow?",
           "options": [
-            "Parliament to restrict speech, but only on the grounds the Article names",
             "The government of the day to impose any restriction it likes",
             "The courts to invent new grounds for restricting speech",
-            "State legislatures to restrict speech"
+            "State legislatures to restrict speech",
+            "Parliament to restrict speech, but only on the grounds the Article names"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "The grounds are a closed list. And whether a restriction fits one of them is for the court, not for Parliament's own label.",
           "source": "Federal Constitution Art 10(2)(a)"
         },
@@ -310,11 +310,11 @@
           "q": "How do Pung Chen Choon and Sivarasa stand together?",
           "options": [
             "Sivarasa overruled Pung Chen Choon",
+            "Both still stand, and the tension between them is unresolved",
             "Pung Chen Choon overruled Sivarasa",
-            "Both have been overruled",
-            "Both still stand, and the tension between them is unresolved"
+            "Both have been overruled"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Writing that one killed off the other is a mistake. Hold both and argue in the alternative.",
           "source": "PP v Pung Chen Choon [1994] 1 MLJ 566 (FC); Sivarasa Rasiah v Badan Peguam Malaysia [2010] 2 MLJ 333 (FC)"
         },
@@ -323,11 +323,11 @@
           "q": "A law never mentions freedom of speech, but in practice it restricts speech. What follows?",
           "options": [
             "It falls outside Article 10 entirely",
-            "The court looks at what the law does, not at how it is worded",
             "It is presumed valid",
+            "The court looks at what the law does, not at how it is worded",
             "Only the drafter's stated purpose counts"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Effect matters more than form. That is what makes the whole analysis worth doing.",
           "source": "Federal Constitution Art 10; a restriction is judged by its effect on the right, not by its wording"
         },
@@ -604,11 +604,11 @@
           "q": "How do sections 299 and 300 fit together?",
           "options": [
             "They are two separate offences of equal weight",
-            "Culpable homicide is the big category; murder is a smaller one inside it",
             "Section 300 sets the sentence for section 299",
+            "Culpable homicide is the big category; murder is a smaller one inside it",
             "Section 299 applies only where section 300 does not"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Every murder is culpable homicide. Not every culpable homicide is murder.",
           "source": "Penal Code ss 299 and 300"
         },
@@ -616,12 +616,12 @@
           "id": "qhm2",
           "q": "Section 300(c) asks two questions. What are they?",
           "options": [
-            "Did the accused intend death, and did death follow",
             "Did the accused intend the injury actually caused, and is that injury enough in the ordinary course of nature to cause death",
+            "Did the accused intend death, and did death follow",
             "Was the act very dangerous, and did the accused know it",
             "Was there provocation, and was it grave and sudden"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The second question is answered by the pathologist, not by the accused. That is why (c) is often easier to prove than (a).",
           "source": "Penal Code s 300(c)"
         },
@@ -630,11 +630,11 @@
           "q": "One blow is struck with an object picked up in the moment, and the victim dies. Which limb is the natural one to run?",
           "options": [
             "(a)",
-            "(c)",
             "(b)",
-            "(d)"
+            "(d)",
+            "(c)"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "It is tempting to run (a) because someone died. On these facts an intention to kill is hard to prove, and (c) is straightforward.",
           "source": "Penal Code s 300(c)"
         },
@@ -644,10 +644,10 @@
           "options": [
             "Any provocation at all",
             "Provocation together with planning",
-            "Provocation given by someone else",
-            "Grave and sudden provocation that destroyed self-control, and the death of the person who gave it"
+            "Grave and sudden provocation that destroyed self-control, and the death of the person who gave it",
+            "Provocation given by someone else"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "And it does not set the accused free. It reduces murder to culpable homicide not amounting to murder.",
           "source": "Penal Code, Exception 1 to s 300"
         },
@@ -657,10 +657,10 @@
           "options": [
             "Which court tries it",
             "How the offence is classified",
-            "The range — the mandatory death penalty went in 2023 and sentencing is now discretionary",
-            "The elements of the offence"
+            "The elements of the offence",
+            "The range — the mandatory death penalty went in 2023 and sentencing is now discretionary"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Sentencing provisions move. Always read a current source.",
           "source": "Penal Code s 302; the sentencing provisions were amended in 2023 and must be read in a current reprint"
         }
@@ -923,11 +923,11 @@
           "q": "What single question separates theft, criminal breach of trust and cheating?",
           "options": [
             "What was taken",
+            "How the accused came to have the property",
             "How much it was worth",
-            "Whether the accused gained anything",
-            "How the accused came to have the property"
+            "Whether the accused gained anything"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Taken without consent. Received lawfully, then kept. Or handed over because of a lie.",
           "source": "Penal Code ss 378, 405 and 415"
         },
@@ -936,11 +936,11 @@
           "q": "Property is received lawfully and then treated as the receiver's own. Which offence?",
           "options": [
             "Theft",
-            "Criminal breach of trust",
             "Cheating",
+            "Criminal breach of trust",
             "Extortion"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Section 405. Entrusted with the property, then dishonestly taking it for yourself.",
           "source": "Penal Code s 405"
         },
@@ -961,12 +961,12 @@
           "id": "qpo4",
           "q": "Someone hands over property, but only because they were lied to. Which offence?",
           "options": [
+            "Cheating",
             "Theft",
             "Criminal breach of trust",
-            "Robbery",
-            "Cheating"
+            "Robbery"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Section 415. The victim consents, but the lie is what produced the consent.",
           "source": "Penal Code s 415"
         },
@@ -975,11 +975,11 @@
           "q": "Can one set of facts support more than one charge?",
           "options": [
             "No, the charges rule each other out",
+            "Yes, and charging in the alternative is ordinary practice",
             "Only with the court's leave",
-            "Only in the Sessions Court",
-            "Yes, and charging in the alternative is ordinary practice"
+            "Only in the Sessions Court"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Saying which charge is the better one, and why, is part of the answer.",
           "source": "Standard charging practice; charges may be laid in the alternative"
         }
@@ -1254,11 +1254,11 @@
           "q": "When is communication of a proposal complete?",
           "options": [
             "When it is posted",
-            "When it reaches the knowledge of the person it is made to",
             "When it is signed",
+            "When it reaches the knowledge of the person it is made to",
             "When it is written"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Section 4(1). Each kind of message has its own moment, so read the right subsection.",
           "source": "Contracts Act 1950 s 4(1)"
         },
@@ -1267,11 +1267,11 @@
           "q": "When is an acceptance communicated, as against the proposer?",
           "options": [
             "When it reaches the proposer",
-            "When it is put in a course of transmission and is out of the acceptor's power",
             "When the proposer reads it",
-            "When the acceptor makes up her mind"
+            "When the acceptor makes up her mind",
+            "When it is put in a course of transmission and is out of the acceptor's power"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Section 4(2)(a). As against the acceptor it is complete only when it comes to the proposer's knowledge.",
           "source": "Contracts Act 1950 s 4(2)"
         },
@@ -1281,10 +1281,10 @@
           "options": [
             "Until the acceptance is received",
             "At any time before the contract is performed",
-            "Until communication of the acceptance is complete as against the proposer",
-            "Until the date the offer says it expires"
+            "Until the date the offer says it expires",
+            "Until communication of the acceptance is complete as against the proposer"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Section 5(1), which is why the moment fixed by section 4(2)(a) decides the race.",
           "source": "Contracts Act 1950 s 5(1)"
         },
@@ -1293,11 +1293,11 @@
           "q": "A letter withdrawing an offer sits unopened on the offeree's desk. Has it been communicated to her?",
           "options": [
             "Yes, on delivery",
-            "Yes, on posting",
             "No — section 4(3)(b) asks for knowledge",
+            "Yes, on posting",
             "Only if it was sent by registered post"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Delivery is not knowledge, and this is the step most answers get wrong.",
           "source": "Contracts Act 1950 s 4(3)(b)"
         },
@@ -1305,12 +1305,12 @@
           "id": "qfm5",
           "q": "A proposer promises to keep an offer open for fourteen days. Is that promise binding?",
           "options": [
-            "Not unless something was given for it",
             "Yes, always",
             "Yes, if it is in writing",
-            "Yes, if the other side relied on it"
+            "Yes, if the other side relied on it",
+            "Not unless something was given for it"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "It means he could have revoked in time, not that he did. Check the timing under sections 4 and 5 first.",
           "source": "Contracts Act 1950 ss 4, 5 and 26"
         }
@@ -1555,10 +1555,10 @@
           "options": [
             "Consideration must be adequate",
             "Consideration must be in writing",
-            "Past consideration is good, and consideration need not come from the promisee",
-            "Consideration must come from the promisee alone"
+            "Consideration must come from the promisee alone",
+            "Past consideration is good, and consideration need not come from the promisee"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Both differences decide cases, and both come straight from the words of the section.",
           "source": "Contracts Act 1950 s 2(d)"
         },
@@ -1566,12 +1566,12 @@
           "id": "qcs2",
           "q": "Does section 2(d) mean a stranger to a contract can sue on it?",
           "options": [
+            "No — a stranger to the contract still cannot sue on it",
             "Yes",
             "Yes, for written contracts",
-            "No — a stranger to the contract still cannot sue on it",
             "Only where the consideration came from the stranger"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Consideration may come from a stranger. Who may sue is a separate question, and the answer is privity.",
           "source": "Contracts Act 1950 s 2(d); Kepong Prospecting Ltd v Schmidt [1968] 1 MLJ 170 (PC)"
         },
@@ -1580,11 +1580,11 @@
           "q": "What does section 26(a) require?",
           "options": [
             "Writing alone",
-            "Writing and registration, natural love and affection, and parties in a near relation",
             "Registration alone",
-            "Natural love and affection alone"
+            "Natural love and affection alone",
+            "Writing and registration, natural love and affection, and parties in a near relation"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Writing on its own is not enough. This is the limb most often stated only halfway.",
           "source": "Contracts Act 1950 s 26(a)"
         },
@@ -1592,12 +1592,12 @@
           "id": "qcs4",
           "q": "What does Explanation 2 to section 26 say?",
           "options": [
-            "Inadequate consideration does not make an agreement void, but it may bear on free consent",
             "Consideration must be adequate",
+            "Inadequate consideration does not make an agreement void, but it may bear on free consent",
             "Inadequate consideration is no consideration at all",
             "Adequacy is entirely for the parties"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "It is the bridge between consideration and the provisions on free consent.",
           "source": "Contracts Act 1950 s 26, Explanation 2"
         },
@@ -1605,12 +1605,12 @@
           "id": "qcs5",
           "q": "A promise is made in return for a past voluntary act done for the promisor. Which limb saves it?",
           "options": [
-            "Section 26(b)",
             "Section 26(a)",
+            "Section 26(b)",
             "Section 26(c)",
             "None — it fails"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "The act must have been voluntary and done for the promisor. That is the safe route where nobody asked for it.",
           "source": "Contracts Act 1950 s 26(b)"
         }
@@ -1923,11 +1923,11 @@
           "q": "What does Article 5(3) require on arrest?",
           "options": [
             "That he be produced before a magistrate within twenty-four hours",
+            "That the person be told the grounds, and be allowed a lawyer of his choice",
             "That the charge be put in writing",
-            "That a lawyer be present at all times",
-            "That the person be told the grounds, and be allowed a lawyer of his choice"
+            "That a lawyer be present at all times"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Article 5(4) is the twenty-four hour provision. Keep the two apart.",
           "source": "Federal Constitution Art 5(3)"
         },
@@ -1936,11 +1936,11 @@
           "q": "Which class means bail is at the court's discretion?",
           "options": [
             "Bailable",
+            "Non-bailable",
             "Unbailable",
-            "Seizable",
-            "Non-bailable"
+            "Seizable"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Bailable means bail as of right. Unbailable means no bail at all.",
           "source": "Criminal Procedure Code s 388 and the First Schedule"
         },
@@ -1948,12 +1948,12 @@
           "id": "qcp5",
           "q": "What does 'maximum evaluation' mean at the close of the prosecution case?",
           "options": [
+            "The court must test how believable the prosecution evidence is, not merely note that it exists",
             "The court must take the evidence at its highest",
             "The prosecution must call every possible witness",
-            "The court must test how believable the prosecution evidence is, not merely note that it exists",
             "The accused must be called to give evidence"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "The question is whether that evidence, left unanswered, would warrant a conviction.",
           "source": "Balachandran v PP [2005] 2 MLJ 301 (FC)"
         }
@@ -2228,12 +2228,12 @@
           "id": "qng1",
           "q": "What are the four questions in a negligence claim?",
           "options": [
-            "Duty, damage, defence, how much money",
             "Duty, breach, causation, remoteness",
+            "Duty, damage, defence, how much money",
             "Foreseeability, proximity, policy, damage",
             "Act, omission, causation, loss"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Take them in order, because each one assumes the one before it has been answered.",
           "source": "Standard classification; the elements of the tort of negligence"
         },
@@ -2241,12 +2241,12 @@
           "id": "qng2",
           "q": "On a doctor's duty to warn about risks, what has Malaysia adopted?",
           "options": [
-            "The Rogers v Whitaker approach — what a reasonable patient would want to know",
             "The Bolam test",
             "A duty to disclose absolutely everything",
+            "The Rogers v Whitaker approach — what a reasonable patient would want to know",
             "No duty to advise of risks at all"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Foo Fio Na is a real Malaysian departure. Note that it is about advice, not diagnosis or treatment.",
           "source": "Foo Fio Na v Dr Soo Fook Mun [2007] 1 MLJ 593 (FC); Zulhasnimar bt Hasan Basri v Dr Kuppu Velumani P [2017] 5 MLJ 438 (FC)"
         },
@@ -2254,12 +2254,12 @@
           "id": "qng3",
           "q": "What has to be foreseeable for damage not to be too remote?",
           "options": [
-            "The precise way it happened",
             "The kind of damage",
+            "The precise way it happened",
             "How bad it turned out",
             "Who exactly would be hurt"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The manner and the extent of the harm need not be foreseeable. Only the kind of harm must be.",
           "source": "The Wagon Mound (No 1) [1961] AC 388"
         },
@@ -2267,12 +2267,12 @@
           "id": "qng4",
           "q": "What does contributory negligence do to a claim?",
           "options": [
+            "The damages are cut by the share the court thinks just",
             "The claim fails altogether",
             "It affects only who pays the costs",
-            "The damages are cut by the share the court thinks just",
             "It moves the burden of proof"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "It shares out the responsibility, so it is a reduction rather than a defence.",
           "source": "Civil Law Act 1956 s 12"
         },
@@ -2281,11 +2281,11 @@
           "q": "When does the limitation clock generally start in negligence?",
           "options": [
             "When the careless act is done",
-            "When the damage occurs",
             "When the plaintiff finds out about the damage",
-            "When a lawyer is instructed"
+            "When a lawyer is instructed",
+            "When the damage occurs"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Which can be a good deal later than the careless act itself. The general period is six years.",
           "source": "Limitation Act 1953 s 6; in negligence time runs from the damage"
         }
@@ -2574,10 +2574,10 @@
           "options": [
             "Registration merely records an ownership acquired elsewhere",
             "Ownership passes on the contract and is registered later",
-            "Registration is only evidence of ownership",
-            "The register is conclusive and creates the ownership"
+            "The register is conclusive and creates the ownership",
+            "Registration is only evidence of ownership"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "A buyer deals with the register instead of investigating the history behind it.",
           "source": "National Land Code s 340"
         },
@@ -2585,12 +2585,12 @@
           "id": "qtr2",
           "q": "Why does section 6 of the Civil Law Act 1956 shut English land law out?",
           "options": [
+            "English doctrines of equitable interests and notice would cut across the Torrens system",
             "English land law is obsolete",
             "Land is a State matter",
-            "English doctrines of equitable interests and notice would cut across the Torrens system",
             "The National Land Code says so"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "The exclusion is what keeps the register conclusive, and conclusiveness is the whole mechanism.",
           "source": "Civil Law Act 1956 s 6"
         },
@@ -2611,12 +2611,12 @@
           "id": "qtr4",
           "q": "What did Tan Ying Hong do?",
           "options": [
+            "Overruled Adorna Properties and restored deferred indefeasibility",
             "Introduced immediate indefeasibility",
             "Abolished caveats",
-            "Overruled Adorna Properties and restored deferred indefeasibility",
             "Amended section 340"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "So anything written before 2010 on indefeasibility has to be checked against it.",
           "source": "Tan Ying Hong v Tan Sian San [2010] 2 MLJ 1 (FC), departing from Adorna Properties Sdn Bhd v Boonsom Boonyanit [2001] 1 MLJ 241 (FC)"
         },
@@ -2626,10 +2626,10 @@
           "options": [
             "Nothing, beyond having it removed",
             "A fine under the Code",
-            "Losing the right to sue at all",
-            "Having to compensate the person you held up"
+            "Having to compensate the person you held up",
+            "Losing the right to sue at all"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "It is not a free way to block somebody else's transaction.",
           "source": "National Land Code, the caveat provisions (ss 320-330)"
         }
@@ -2922,11 +2922,11 @@
           "q": "What follows from a company having its own legal personality?",
           "options": [
             "The company cannot be sued",
-            "Directors are always personally liable",
             "Members are not, by reason only of membership, liable for the company's debts",
+            "Directors are always personally liable",
             "The company's property belongs to its members"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Everything else in the module follows from this one idea.",
           "source": "Salomon v A Salomon & Co Ltd [1897] AC 22; Companies Act 2016 (Act 777)"
         },
@@ -2934,12 +2934,12 @@
           "id": "qcm2",
           "q": "What is the commonest route to making a director personally liable?",
           "options": [
-            "A statute that expressly imposes liability",
             "Lifting the veil for fraud",
             "Agency",
+            "A statute that expressly imposes liability",
             "The fact that he controls the company"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Prefer the statutory route where one exists, because the common law grounds are narrow.",
           "source": "Companies Act 2016 (Act 777); the statutory provisions imposing personal liability on a director"
         },
@@ -2960,12 +2960,12 @@
           "id": "qcm4",
           "q": "What did the Companies Act 2016 replace the memorandum and articles with?",
           "options": [
-            "A single optional constitution",
             "A shareholders' agreement",
             "Model articles that cannot be changed",
+            "A single optional constitution",
             "Nothing — they were kept"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "A company may have no constitution at all, and then the Act supplies its internal rules.",
           "source": "Companies Act 2016 (Act 777); the constitution replaced the memorandum and articles"
         },
@@ -2973,12 +2973,12 @@
           "id": "qcm5",
           "q": "What is the difference between a derivative action and an oppression claim?",
           "options": [
-            "A derivative action vindicates the company's right; an oppression claim vindicates the member's own",
             "They are two names for the same remedy",
+            "A derivative action vindicates the company's right; an oppression claim vindicates the member's own",
             "A derivative action needs no leave",
             "An oppression claim is brought by the company"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Confusing them is a standard and very visible error.",
           "source": "Companies Act 2016 ss 347-350 (derivative action) and s 346 (oppression)"
         }
@@ -3286,10 +3286,10 @@
           "options": [
             "Is this relevant in the ordinary sense",
             "Would it be fair to admit this",
-            "Which section makes this relevant",
-            "Does this help prove anything"
+            "Does this help prove anything",
+            "Which section makes this relevant"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "The Act is a closed list. If you cannot name a section, the evidence does not go in.",
           "source": "Evidence Act 1950, Part I; relevancy is a closed list"
         },
@@ -3298,11 +3298,11 @@
           "q": "Which of these is a relevancy provision under the Act?",
           "options": [
             "The hearsay rule at common law",
+            "Facts forming part of the same transaction",
             "The best evidence rule",
-            "A judge's discretion to exclude unfair evidence",
-            "Facts forming part of the same transaction"
+            "A judge's discretion to exclude unfair evidence"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "That is the res gestae provision, and the relevancy sections are where an answer should start.",
           "source": "Evidence Act 1950 s 6"
         },
@@ -3310,12 +3310,12 @@
           "id": "qev3",
           "q": "Which burden does not shift?",
           "options": [
-            "The legal burden",
             "The evidential burden",
             "Both of them shift",
+            "The legal burden",
             "Neither of them shifts"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Saying 'the burden shifted' without saying which one is the standard imprecision here.",
           "source": "Evidence Act 1950 ss 101 and 102"
         },
@@ -3325,10 +3325,10 @@
           "options": [
             "Where the witness is out of the country",
             "Where the party is the accused",
-            "Where the missing evidence would only repeat what is already proved",
-            "Where the evidence is a document rather than a witness"
+            "Where the evidence is a document rather than a witness",
+            "Where the missing evidence would only repeat what is already proved"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "The provision is about evidence that was withheld and would have added something.",
           "source": "Evidence Act 1950 s 114(g)"
         },
@@ -3337,11 +3337,11 @@
           "q": "Who must prove a fact he asserts, where a right or liability depends on it?",
           "options": [
             "Whichever party can get at the evidence more easily",
-            "The plaintiff, always",
             "The person who wants the court to give judgment on it",
+            "The plaintiff, always",
             "The defendant, once a prima facie case is shown"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Section 101, which is the legal burden.",
           "source": "Evidence Act 1950 s 101"
         }
@@ -3631,12 +3631,12 @@
           "id": "qcvp1",
           "q": "When does a contract cause of action accrue for limitation purposes?",
           "options": [
-            "On breach",
             "When the loss is suffered",
             "When the claimant finds out",
+            "On breach",
             "When payment is demanded"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "In tort it generally accrues when damage occurs, which can be much later than the act.",
           "source": "Limitation Act 1953 s 6; in contract the cause of action accrues on breach"
         },
@@ -3644,12 +3644,12 @@
           "id": "qcvp2",
           "q": "When is a writ the right way to begin?",
           "options": [
+            "Where there is likely to be a real dispute about the facts",
             "Where the dispute is about what a document means",
             "Where the facts are agreed",
-            "Where there is likely to be a real dispute about the facts",
             "Where urgent relief is needed"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "An originating summons suits a question of law, or of construction, on undisputed facts.",
           "source": "Rules of Court 2012, Order 5"
         },
@@ -3657,12 +3657,12 @@
           "id": "qcvp3",
           "q": "What must a pleading contain?",
           "options": [
-            "Material facts, not evidence and not law",
             "The evidence relied on",
             "The legal argument",
+            "Material facts, not evidence and not law",
             "The witness statements"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "And some matters — fraud, misrepresentation, breach of trust — must be pleaded specifically, with particulars.",
           "source": "Rules of Court 2012, Order 18"
         },
@@ -3670,12 +3670,12 @@
           "id": "qcvp4",
           "q": "What is the difference between striking out and summary judgment?",
           "options": [
+            "Striking out attacks the pleading as a document; summary judgment looks at the evidence",
             "They are two names for the same application",
             "Striking out is available to defendants only",
-            "Summary judgment is available only in the High Court",
-            "Striking out attacks the pleading as a document; summary judgment looks at the evidence"
+            "Summary judgment is available only in the High Court"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "On a strike-out for no reasonable cause of action you assume every pleaded fact is true.",
           "source": "Rules of Court 2012, Order 14 and Order 18 rule 19"
         },
@@ -3683,12 +3683,12 @@
           "id": "qcvp5",
           "q": "What is the general limitation period for an action to recover land?",
           "options": [
-            "Six years",
             "Twelve years",
+            "Six years",
             "Three years",
             "Twenty years"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Contract and tort are generally six. Land is twelve.",
           "source": "Limitation Act 1953; twelve years for an action to recover land"
         }
@@ -4005,11 +4005,11 @@
           "q": "What are the three grounds of judicial review?",
           "options": [
             "Illegality, unfairness, disproportionality",
-            "Illegality, irrationality, procedural impropriety",
             "Ultra vires, bias, error of fact",
-            "Error of law, error of fact, bad faith"
+            "Error of law, error of fact, bad faith",
+            "Illegality, irrationality, procedural impropriety"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Proportionality is argued as a fourth ground, and its status should be checked rather than assumed.",
           "source": "GCHQ [1985] AC 374, as received in Malaysia"
         },
@@ -4017,12 +4017,12 @@
           "id": "qjr2",
           "q": "What is the irrationality standard?",
           "options": [
+            "So unreasonable that no reasonable authority could have reached it",
             "Wrong, in the court's own view",
             "Not the best decision available",
-            "So unreasonable that no reasonable authority could have reached it",
             "Unsupported by any evidence"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "That is the Wednesbury standard, and it is deliberately hard to satisfy.",
           "source": "GCHQ [1985] AC 374; the Wednesbury standard of unreasonableness"
         },
@@ -4030,12 +4030,12 @@
           "id": "qjr3",
           "q": "What must an applicant for judicial review show at the threshold?",
           "options": [
-            "Leave, and that he is adversely affected by the decision",
             "A prima facie case on the merits",
             "An arguable error of law and nothing more",
-            "That he pays tax in the area"
+            "That he pays tax in the area",
+            "Leave, and that he is adversely affected by the decision"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Both are threshold requirements, reached before the merits are looked at.",
           "source": "Rules of Court 2012, Order 53"
         },
@@ -4043,12 +4043,12 @@
           "id": "qjr4",
           "q": "What did R Rama Chandran decide?",
           "options": [
-            "That in an appropriate case the court may examine substance and substitute its own decision",
             "That judicial review is a form of appeal",
             "That ouster clauses are effective",
+            "That in an appropriate case the court may examine substance and substitute its own decision",
             "That leave is not required"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "It did not turn review into an appeal, and later authority has been careful about its limits.",
           "source": "R Rama Chandran v The Industrial Court of Malaysia [1997] 1 MLJ 145 (FC)"
         },
@@ -4315,12 +4315,12 @@
           "id": "qlr1",
           "q": "What is the trade-off between a rule and a standard?",
           "options": [
-            "Rules are always better",
             "Rules buy predictability at the cost of occasionally getting the case wrong; standards buy accuracy at the cost of predictability",
+            "Rules are always better",
             "Standards are always fairer",
             "Rules come from statute and standards come from judges"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Which to prefer is a design question, and the answer depends on what the provision is for.",
           "source": "Schauer, Thinking Like a Lawyer"
         },
@@ -4341,12 +4341,12 @@
           "id": "qlr3",
           "q": "What is wrong with using legal realism to say a judge will decide as they please?",
           "options": [
+            "It is not a legal argument, and it is wrong about how most cases are decided",
             "Realism has been discredited",
             "It is true only of appellate courts",
-            "It is not a legal argument, and it is wrong about how most cases are decided",
             "Judges are not allowed to consider policy"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "The range of defensible positions is real, but it is bounded.",
           "source": "Standard jurisprudential material"
         },
@@ -4356,10 +4356,10 @@
           "options": [
             "The judge's discretion",
             "The agreement of the parties",
-            "The absence of a statute on the point",
-            "The bounded range of defensible ways to state the earlier ratio"
+            "The bounded range of defensible ways to state the earlier ratio",
+            "The absence of a statute on the point"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "You can state a ratio at more than one level of generality, but not at any level you like.",
           "source": "Standard common law method on precedent and analogy"
         }
@@ -4644,12 +4644,12 @@
           "id": "qin1",
           "q": "Where should the interpretation of a Malaysian statute start?",
           "options": [
+            "Section 17A of the Interpretation Acts 1948 and 1967",
             "The literal rule",
             "The mischief rule",
-            "The English cases on interpretation",
-            "Section 17A of the Interpretation Acts 1948 and 1967"
+            "The English cases on interpretation"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Starting from the English canons is the single most common error in this module.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         },
@@ -4659,10 +4659,10 @@
           "options": [
             "The literal rule",
             "Ejusdem generis",
-            "The presumption against retrospectivity",
-            "The purposive approach — an absurd result is unlikely to promote the Act's purpose"
+            "The purposive approach — an absurd result is unlikely to promote the Act's purpose",
+            "The presumption against retrospectivity"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The traditional rules survive as tools, not as a hierarchy to be worked through in order.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         },
@@ -4670,12 +4670,12 @@
           "id": "qin3",
           "q": "Which traditional rule is the closest ancestor of section 17A?",
           "options": [
+            "The mischief rule",
             "The literal rule",
             "The golden rule",
-            "Ejusdem generis",
-            "The mischief rule"
+            "Ejusdem generis"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Asking what defect the Act was passed to cure is the same question in older clothes.",
           "source": "Interpretation Acts 1948 and 1967, s 17A"
         },
@@ -4683,12 +4683,12 @@
           "id": "qin4",
           "q": "Which presumption applies to the mental element of a criminal offence?",
           "options": [
+            "Strict liability is not lightly inferred",
             "A mental element is never required",
             "The mental element is presumed absent",
-            "Strict liability applies to every regulatory offence",
-            "Strict liability is not lightly inferred"
+            "Strict liability applies to every regulatory offence"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "The presumption can be displaced, expressly or by necessary implication.",
           "source": "Standard common law presumption; strict liability is not lightly inferred"
         },

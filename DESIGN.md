@@ -974,6 +974,46 @@ was proposed here before anyone checked what the linker could do, which is its
 own instance of the trap two sections up: reasoning from what a reader should get
 without reading the mechanism.
 
+### The sample you own is the sample most likely to mislead
+
+Clearing a corpus-wide rewrite, an author tested that two lesson files
+round-tripped identical under `json.dumps(indent=2)` and concluded "the
+reserialisation itself is a no-op". That is a claim about eleven files supported
+by evidence about two — and the two were the two they owned.
+
+The eleventh, `content/lessons/substantive.json`, is stored at **indent 1**. The
+rewrite would have reformatted all 4714 of its lines and buried the real change
+in a 9364-line diff that nobody would ever review.
+
+**The author had already found that the corpus was mixed-indent hours earlier**,
+and had built a per-file detector because of it, before generalising past their
+own finding. That is a worse shape than a question never asked: an earlier
+correct answer makes the later wrong one feel checked.
+
+Two guards:
+
+- **Verify a clearance across the blast radius that exists, not the one the
+  clearer cared about.** "I tested the files I work in" is a statement about
+  habit, not coverage.
+- **When a mechanical rewrite would also reformat, split it.** A normalisation
+  that asserts `json.loads(before) == json.loads(after)`, committed on its own,
+  and then the real change — two reviewable diffs instead of one unreadable one.
+
+This is the second instance in one evening of knowing about a class of defect and
+producing one anyway; the `s 106` alias collision two sections up is the first,
+by the author of the checker written to catch exactly that. It is the same
+sentence both times. **Knowing about a class of defect does not protect you from
+producing one.**
+
+A footnote on the split, because it has a deadline nobody expects: **it must be
+done before the changes share a working-tree state.** Once the normalisation and
+the rewrite sit in one uncommitted diff, no choice of what to stage separates
+them — git compares against HEAD, not against the intermediate you had in mind.
+Recovering the split then means reconstructing the intermediate deterministically
+(re-serialise HEAD's copy, commit, then restore the working file), which is
+possible here only because a reformat is reproducible. A hand edit in the same
+window would not have been.
+
 ### Green and invisible: when the gate sees content the app does not
 
 Twice in one session, in two different content tiers, a batch of authored

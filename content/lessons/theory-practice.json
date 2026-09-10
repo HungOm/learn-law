@@ -130,24 +130,24 @@
           "id": "qjur1",
           "q": "What does legal positivism claim?",
           "options": [
+            "That law and morality are separate questions, so validity depends on source",
             "That a rule must be just to be law",
             "That only judges can make law",
-            "That written law is superior to custom",
-            "That law and morality are separate questions, so validity depends on source"
+            "That written law is superior to custom"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Positivism separates what law is from what it ought to be. A rule properly made is law even if it is unjust."
         },
         {
           "id": "qjur2",
           "q": "What is the practical worry about the natural law position?",
           "options": [
-            "It gives judges power to deny that a validly passed rule is law",
             "It makes statutes impossible to read",
             "It only applies to written constitutions",
+            "It gives judges power to deny that a validly passed rule is law",
             "It cannot explain custom"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "If injustice can defeat validity, someone must decide when. That is a large power, and it is the standard objection."
         },
         {
@@ -155,11 +155,11 @@
           "q": "Why is positivism sometimes said to make criticism of law easier?",
           "options": [
             "Because it treats all law as unjust",
+            "Because it lets you say a rule is both law and unjust without contradiction",
             "Because it forbids judges from interpreting",
-            "Because it requires a written constitution",
-            "Because it lets you say a rule is both law and unjust without contradiction"
+            "Because it requires a written constitution"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Keeping the questions apart means calling a law unjust does not require denying it is law. The criticism stays coherent."
         }
       ],
@@ -318,12 +318,12 @@
           "id": "qint1",
           "q": "Malaysia ratifies a treaty. What changes in Malaysian domestic law immediately?",
           "options": [
-            "Nothing, until Parliament legislates",
             "The treaty becomes enforceable in the High Court",
             "All inconsistent statutes are repealed",
-            "The treaty binds only government departments"
+            "The treaty binds only government departments",
+            "Nothing, until Parliament legislates"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Malaysia follows the dualist approach. Ratification creates an obligation in international law; domestic effect needs legislation."
         },
         {
@@ -331,23 +331,23 @@
           "q": "A statute is ambiguous and one reading fits an unincorporated treaty. What may a court do?",
           "options": [
             "Ignore the treaty entirely",
-            "Prefer the reading that fits the international obligation",
             "Apply the treaty in place of the statute",
+            "Prefer the reading that fits the international obligation",
             "Refer the question to the executive"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "An unincorporated treaty can guide interpretation where there is an ambiguity to guide. It cannot displace clear statutory words."
         },
         {
           "id": "qint3",
           "q": "What are the two elements of customary international law?",
           "options": [
-            "State practice, and a sense of legal obligation",
             "A treaty and a ratification",
             "A resolution and a vote",
-            "A statute and a regulation"
+            "A statute and a regulation",
+            "State practice, and a sense of legal obligation"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Practice alone is habit; belief alone is not practice. Custom needs both together."
         }
       ],
@@ -493,12 +493,12 @@
           "id": "qeth1",
           "q": "A client instructs you to run a story you know is false. What must you do?",
           "options": [
-            "Refuse, and withdraw if necessary, without disclosing why",
             "Run it, because you act on instructions",
+            "Refuse, and withdraw if necessary, without disclosing why",
             "Run it but tell the court you doubt it",
             "Report the client to the police"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "The duty to the court forbids the false assertion; confidentiality forbids explaining. Refusal and silence is the resolution."
         },
         {
@@ -507,10 +507,10 @@
           "options": [
             "Say nothing, because your opponent should find it",
             "Withdraw from the case",
-            "Cite it only if asked",
-            "Draw it to the court's attention, then argue why it should not decide the case"
+            "Draw it to the court's attention, then argue why it should not decide the case",
+            "Cite it only if asked"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Concealing binding authority misleads the court. Disclosing it and distinguishing it is both permitted and expected."
         },
         {
@@ -519,10 +519,10 @@
           "options": [
             "When the case ends",
             "When the client stops paying",
-            "It continues after the retainer ends",
-            "When the client dies"
+            "When the client dies",
+            "It continues after the retainer ends"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Confidence survives the retainer. It is not a term of the engagement that expires with it."
         },
         {
@@ -531,10 +531,10 @@
           "options": [
             "Because the court requires a certificate",
             "Because fees must be agreed first",
-            "Because a conflict discovered later usually means ceasing to act, which helps nobody",
-            "Because only the client can waive it"
+            "Because only the client can waive it",
+            "Because a conflict discovered later usually means ceasing to act, which helps nobody"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "There is rarely a cure once a conflict has arisen. The remedy is to stop acting, so the check belongs at the start."
         }
       ],
@@ -547,6 +547,1088 @@
           "where": "how the profession is regulated, and where the duties owed to the court get their statutory footing"
         }
       ]
+    },
+    {
+      "id": "l-conflict-of-interest",
+      "moduleId": "m22-ethics",
+      "title": "Acting for two people who want different things",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "A conflict is not a disagreement between clients. It is a position in which a lawyer cannot give one client their whole loyalty without shortchanging another, and the usual answer is to act for neither.",
+      "sections": [
+        {
+          "id": "sec-l-conflict-of-interest-0",
+          "readMinutes": 2,
+          "keypoint": "A conflict is about the position you are in, not about whether anyone has actually been harmed.",
+          "h": "The friendly transaction that goes wrong",
+          "body": [
+            {
+              "t": "p",
+              "text": "Two brothers ask one lawyer to handle the transfer of a shop lot between them. They agree on everything and want to save costs."
+            },
+            {
+              "t": "p",
+              "text": "Halfway through, a dispute appears about who pays an outstanding charge. Each brother now needs advice the other will not like."
+            },
+            {
+              "t": "p",
+              "text": "The lawyer is not merely uncomfortable. Their duty of undivided loyalty is owed to each of them, and it cannot be given to both."
+            },
+            {
+              "t": "rule",
+              "text": "An advocate and solicitor shall not accept instructions where to do so would place them in a position of conflict between the interests of two clients, or between a client's interest and their own.",
+              "source": "Legal Profession (Practice and Etiquette) Rules 1978."
+            },
+            {
+              "t": "p",
+              "text": "The test bites at the moment the position arises. It does not wait for someone to be prejudiced."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-conflict-of-interest-1",
+          "readMinutes": 2,
+          "keypoint": "Three shapes recur: two current clients, a former client, and the lawyer's own interest.",
+          "h": "The three shapes it takes",
+          "body": [
+            {
+              "t": "p",
+              "text": "Name which conflict you are looking at. The answers differ."
+            },
+            {
+              "t": "table",
+              "caption": "Three kinds of conflict",
+              "columns": [
+                "Kind",
+                "The problem",
+                "The usual answer"
+              ],
+              "rows": [
+                [
+                  "Two current clients",
+                  "Loyalty owed in full to each, and they now want different things.",
+                  "Cease acting for both, unless the matter is one where informed consent is genuinely possible."
+                ],
+                [
+                  "A former client",
+                  "Confidential information from the old retainer could help the new one.",
+                  "Do not act against the former client in a related matter."
+                ],
+                [
+                  "Own interest",
+                  "The lawyer stands to gain personally from the advice given.",
+                  "Disclose, and generally decline. A client cannot weigh advice they cannot see behind."
+                ]
+              ],
+              "alt": "Three kinds of conflict. Two current clients: loyalty is owed in full to each and they want different things, so cease acting for both unless informed consent is genuinely possible. A former client: confidential information from the old retainer could help the new one, so do not act against them in a related matter. Own interest: the lawyer stands to gain personally, so disclose and generally decline."
+            },
+            {
+              "t": "p",
+              "text": "The former-client case is the one people underrate. The retainer has ended; the duty of confidence has not."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-conflict-of-interest-2",
+          "readMinutes": 2,
+          "keypoint": "Consent can cure some conflicts, but only if it is informed, and explaining it may itself breach a confidence.",
+          "h": "Whether consent can fix it",
+          "body": [
+            {
+              "t": "p",
+              "text": "People reach for consent immediately. It works less often than they expect."
+            },
+            {
+              "t": "p",
+              "text": "Consent must be informed. The client has to understand what they are giving up before they can give it up."
+            },
+            {
+              "t": "caution",
+              "text": "Here is the trap. Explaining the conflict fully often means revealing what the other client told you in confidence, which you may not do. So the very disclosure that would make consent valid is the thing you are forbidden to make."
+            },
+            {
+              "t": "p",
+              "text": "When that happens, consent is not available and the answer is to withdraw."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Both brothers say in writing that they are happy for one lawyer to continue. Is that enough?",
+              "options": [
+                "Yes, they have consented in writing",
+                "Not if they were not told what each stands to lose",
+                "Only if the dispute is small"
+              ],
+              "answer": 1,
+              "why": "Written agreement is not informed consent. If the lawyer cannot explain the position without breaching one brother's confidence, the consent cannot be informed and cannot cure the conflict."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-conflict-of-interest-3",
+          "readMinutes": 2,
+          "keypoint": "Withdrawing has its own duties, and dropping a client mid-matter can cause the harm you were avoiding.",
+          "h": "Leaving properly",
+          "body": [
+            {
+              "t": "p",
+              "text": "Deciding to stop acting is the start of another problem rather than the end of the first."
+            },
+            {
+              "t": "p",
+              "text": "A client left without representation days before a hearing may be worse off than one whose lawyer had a conflict."
+            },
+            {
+              "t": "list",
+              "items": [
+                "Tell the client promptly, and in terms they can act on.",
+                "Give reasonable notice, measured against the hearing dates rather than convenience.",
+                "Hand over the papers the client is entitled to.",
+                "Say nothing to the other side that the retainer would not have permitted."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "The last point survives the retainer. So does everything you learned during it."
+            }
+          ]
+        }
+      ],
+      "source": "Legal Profession Act 1976 (Act 166) and the Legal Profession (Practice and Etiquette) Rules 1978.",
+      "verify": "Read the Practice and Etiquette Rules themselves, and check the Bar Council's current rulings — professional conduct is governed by rules and rulings that are amended more often than statute.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "legal-profession-act-1976",
+          "where": "the provisions on professional misconduct, and the disciplinary machinery"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-confidence-and-privilege",
+      "moduleId": "m22-ethics",
+      "title": "What you may not repeat, and what you cannot be made to",
+      "minutes": 30,
+      "readMinutes": 6,
+      "summary": "Confidentiality and legal professional privilege are different rules with different sources. One is a duty you owe; the other is a protection the client holds, and only the second can stop a court.",
+      "sections": [
+        {
+          "id": "sec-l-confidence-and-privilege-0",
+          "readMinutes": 2,
+          "keypoint": "Confidentiality is a duty you owe the client; privilege is a right the client holds against the world.",
+          "h": "Two rules, often confused",
+          "body": [
+            {
+              "t": "p",
+              "text": "A client tells their lawyer something damaging. Two separate questions follow, and mixing them produces wrong answers."
+            },
+            {
+              "t": "p",
+              "text": "The first is whether the lawyer may repeat it. That is confidentiality, and it is a professional duty."
+            },
+            {
+              "t": "p",
+              "text": "The second is whether a court can compel the disclosure. That is privilege, and it is a rule of evidence."
+            },
+            {
+              "t": "rule",
+              "text": "No advocate shall be permitted to disclose any communication made to them in the course and for the purpose of their employment as such advocate, without the express consent of the client.",
+              "source": "Evidence Act 1950, s 126."
+            },
+            {
+              "t": "caution",
+              "text": "Confidentiality is wide and yields to the law. Privilege is narrower and does not."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-confidence-and-privilege-1",
+          "readMinutes": 2,
+          "keypoint": "Privilege covers communications for legal advice, not every fact a lawyer happens to know.",
+          "h": "What privilege actually covers",
+          "body": [
+            {
+              "t": "p",
+              "text": "Privilege protects communications, and only communications of a particular kind."
+            },
+            {
+              "t": "list",
+              "items": [
+                "It covers what passed between lawyer and client for the purpose of legal advice.",
+                "It does not cover a fact merely because a lawyer knows it.",
+                "It does not turn an unprivileged document into a privileged one by sending it to a lawyer.",
+                "It belongs to the client, so only the client can waive it."
+              ]
+            },
+            {
+              "t": "p",
+              "text": "That last point decides who may hand a document over. The lawyer cannot waive it to make life easier."
+            },
+            {
+              "t": "example",
+              "text": "A client posts a letter to their lawyer enclosing a contract signed two years ago. The letter is privileged. The contract is not, and it does not become so by being enclosed."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-confidence-and-privilege-2",
+          "readMinutes": 2,
+          "keypoint": "Advice on how to commit a crime or a fraud is not protected, whatever the client thought.",
+          "h": "Where privilege stops",
+          "body": [
+            {
+              "t": "p",
+              "text": "The protection is for getting legal advice, not for arranging wrongdoing."
+            },
+            {
+              "t": "rule",
+              "text": "The protection does not extend to any communication made in furtherance of any illegal purpose, or to any fact showing that a crime or fraud has been committed since the employment began.",
+              "source": "Evidence Act 1950, s 126, proviso."
+            },
+            {
+              "t": "p",
+              "text": "Note who this depends on. The client's purpose can defeat the privilege even where the lawyer knew nothing about it."
+            },
+            {
+              "t": "predict",
+              "prompt": "A client asks how to structure a transfer so that a creditor cannot reach the asset, intending to defraud that creditor. Is the exchange privileged?",
+              "options": [
+                "Yes, it is legal advice",
+                "No, if the purpose was to further a fraud",
+                "Only if the lawyer refused to help"
+              ],
+              "answer": 1,
+              "reveal": "No. A communication in furtherance of an illegal purpose falls outside the protection, and the lawyer's innocence does not restore it."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-confidence-and-privilege-3",
+          "readMinutes": 2,
+          "keypoint": "The duty of confidence outlives the retainer and survives the client's death.",
+          "h": "How long it lasts",
+          "body": [
+            {
+              "t": "p",
+              "text": "Both rules keep running long after the file is closed."
+            },
+            {
+              "t": "p",
+              "text": "The retainer ends. The obligation not to use or repeat what you learned does not end with it."
+            },
+            {
+              "t": "p",
+              "text": "This is what makes the former-client conflict real. You are not merely embarrassed by what you know; you are forbidden to use it."
+            },
+            {
+              "t": "caution",
+              "text": "Firms manage this with information barriers between teams. Whether such an arrangement is sufficient is a question of fact in each case, not something a firm can settle by announcing it."
+            }
+          ]
+        }
+      ],
+      "source": "Evidence Act 1950, ss 126-129, and the Legal Profession (Practice and Etiquette) Rules 1978.",
+      "verify": "Read ss 126 to 129 of the Evidence Act together — s 126 states the protection, and the sections after it deal with waiver and with communications with interpreters and clerks.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "evidence-act-1950",
+          "where": "sections 126 to 129, and the proviso to section 126 in particular"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-clients-money",
+      "moduleId": "m22-ethics",
+      "title": "Money that is not yours",
+      "minutes": 25,
+      "readMinutes": 5,
+      "summary": "A lawyer holding a client's money holds it as a trustee. The rules about it are unusually mechanical, and they are the rules a practitioner is most often struck off for breaking.",
+      "sections": [
+        {
+          "id": "sec-l-clients-money-0",
+          "readMinutes": 2,
+          "keypoint": "Money held for a client stays the client's money, whatever account it sits in.",
+          "h": "Whose money is in the account",
+          "body": [
+            {
+              "t": "p",
+              "text": "A firm receives RM300,000 as a deposit on a sale. It sits in the firm's client account for six weeks until completion."
+            },
+            {
+              "t": "p",
+              "text": "During those weeks it is not the firm's money in any sense. The firm holds it, and the buyer or the seller is entitled to it."
+            },
+            {
+              "t": "p",
+              "text": "That is a trust in everything but name. The duties are the trustee duties. Do not profit from it, do not mix it with your own, and account for it."
+            },
+            {
+              "t": "caution",
+              "text": "Intending to put it back is not a defence. Borrowing from the client account is the breach, and the intention to repay does not undo it."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-clients-money-1",
+          "readMinutes": 2,
+          "keypoint": "Client money and office money are kept in separate accounts, and the separation is the whole point.",
+          "h": "Two accounts, kept apart",
+          "body": [
+            {
+              "t": "p",
+              "text": "The rules require a client account distinct from the firm's own money."
+            },
+            {
+              "t": "table",
+              "caption": "Client account and office account",
+              "columns": [
+                "",
+                "Client account",
+                "Office account"
+              ],
+              "rows": [
+                [
+                  "What goes in",
+                  "Money held for or on behalf of a client.",
+                  "The firm's own money, including fees properly billed."
+                ],
+                [
+                  "Who it belongs to",
+                  "The client.",
+                  "The firm."
+                ],
+                [
+                  "What breach looks like",
+                  "Using it for the firm, or letting it run short.",
+                  "Leaving client money in it."
+                ]
+              ],
+              "alt": "Client account and office account compared. The client account holds money held for or on behalf of a client. It belongs to the client. Breach looks like using it for the firm, or letting it run short. The office account holds the firm's own money including fees properly billed, it belongs to the firm, and breach looks like leaving client money in it."
+            },
+            {
+              "t": "p",
+              "text": "Transferring a fee across is allowed once it has actually been billed. Taking it in advance of billing is not."
+            },
+            {
+              "t": "p",
+              "text": "Records matter as much as balances. A firm must be able to show, at any moment, what it holds and for whom."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-clients-money-2",
+          "readMinutes": 1,
+          "keypoint": "A shortfall is treated seriously even where nobody ends up losing anything.",
+          "h": "Why the rules are mechanical",
+          "body": [
+            {
+              "t": "p",
+              "text": "These rules do not ask about intention, and that is deliberate."
+            },
+            {
+              "t": "p",
+              "text": "A profession that holds other people's money cannot police it case by case. The protection comes from the rule being bright and the audit being routine."
+            },
+            {
+              "t": "p",
+              "text": "So the question at a disciplinary hearing is usually not whether anyone was harmed. It is whether the account was short."
+            },
+            {
+              "t": "checkpoint",
+              "q": "A partner moves RM10,000 from client account to pay a firm expense, and replaces it the next week. What is the position?",
+              "options": [
+                "No breach, because it was replaced",
+                "A breach, whatever happened afterwards",
+                "A breach only if a client complains"
+              ],
+              "answer": 1,
+              "why": "The breach is the withdrawal of money the firm was not entitled to take. Replacing it repairs the shortfall but does not undo the misuse."
+            }
+          ]
+        }
+      ],
+      "source": "Legal Profession Act 1976 (Act 166) and the accounts rules made under it. The trustee analogy is drawn from general equitable principle.",
+      "verify": "Read the current accounts rules made under the Legal Profession Act rather than this summary — they are detailed, they are amended, and the detail is the substance of this topic.",
+      "lastVerified": "2026-09-11",
+      "reading": [
+        {
+          "statuteId": "legal-profession-act-1976",
+          "where": "the provisions on accounts, and the rule-making power under which the accounts rules are made"
+        }
+      ],
+      "quiz": []
+    },
+    {
+      "id": "l-open-texture",
+      "moduleId": "m18-jurisprudence",
+      "title": "Why rules run out",
+      "summary": "Every rule has a core where it plainly applies and an edge where it plainly does not decide. The edge is not a drafting failure. It is a property of language.",
+      "minutes": 28,
+      "readMinutes": 9,
+      "sections": [
+        {
+          "id": "sec-l-open-texture-0",
+          "h": "No vehicles in the park",
+          "readMinutes": 2,
+          "keypoint": "A rule can be perfectly clear and still fail to decide a case nobody thought about.",
+          "body": [
+            {
+              "t": "p",
+              "text": "A council passes a rule. No vehicles in the park."
+            },
+            {
+              "t": "p",
+              "text": "A car drives in. That is the case the rule was written for, and nobody argues about it."
+            },
+            {
+              "t": "p",
+              "text": "Now a child on a bicycle. An ambulance answering a call. A war memorial built around a tank."
+            },
+            {
+              "t": "p",
+              "text": "Nothing has gone wrong with the drafting. The rule is clear. It simply does not decide these cases, and it never could have."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-open-texture-1",
+          "h": "The core and the penumbra",
+          "readMinutes": 3,
+          "keypoint": "General words have settled cases at the centre and uncertain ones at the edge, and the edge cannot be drafted away.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The standard account calls the settled cases the core and the uncertain ones the penumbra."
+            },
+            {
+              "t": "p",
+              "text": "In the core, applying the rule is not interpretation at all. You recognise the case and apply the words."
+            },
+            {
+              "t": "p",
+              "text": "In the penumbra, the words have run out. Something other than the rule has to decide."
+            },
+            {
+              "t": "caution",
+              "text": "The temptation is to say the drafter should have been more precise. Try it: define vehicle. Every definition you write will have its own penumbra, because it is made of general words too."
+            },
+            {
+              "t": "p",
+              "text": "This is why the point is about language rather than about care. A rule general enough to be useful is general enough to have edges."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-open-texture-2",
+          "h": "What the edge is for",
+          "readMinutes": 2,
+          "keypoint": "Open texture is not only a cost. It lets a rule survive circumstances its author never imagined.",
+          "body": [
+            {
+              "t": "p",
+              "text": "It is easy to treat the penumbra as pure loss. It is not."
+            },
+            {
+              "t": "p",
+              "text": "A rule with no edges would be a list. It would decide the cases on the list and nothing else."
+            },
+            {
+              "t": "p",
+              "text": "Open texture is what lets a rule written in 1950 apply to a machine invented in 2020. The generality that creates the edge is the same generality that gives the rule reach."
+            },
+            {
+              "t": "predict",
+              "prompt": "Would a legal system be better if every rule were drafted as an exhaustive list of the cases it covers?",
+              "options": [
+                "Yes — certainty is the point of having rules",
+                "No — it would decide nothing the drafter had not already foreseen"
+              ],
+              "answer": 1,
+              "reveal": "You would buy certainty at the price of coverage, and the system would need amending for every new fact pattern. The trade is real, and different areas of law strike it differently — which is worth noticing when you compare a code with a body of case law."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-open-texture-3",
+          "h": "Why this matters in a problem question",
+          "readMinutes": 2,
+          "keypoint": "Identifying whether your facts are core or penumbra tells you what kind of argument is available.",
+          "body": [
+            {
+              "t": "p",
+              "text": "This is not only theory. It changes how you argue."
+            },
+            {
+              "t": "p",
+              "text": "If your facts are in the core, the argument is short. State the rule, apply it, move on. Elaborating wastes the space a harder point needed."
+            },
+            {
+              "t": "p",
+              "text": "If they are in the penumbra, the rule alone will not get you there. You need purpose, analogy, or a comparison case."
+            },
+            {
+              "t": "checkpoint",
+              "q": "You have identified that your facts sit at the edge of a statutory phrase. What follows?",
+              "options": [
+                "The provision does not apply, so the claim fails",
+                "The words will not decide it, so the argument must come from purpose or analogy"
+              ],
+              "answer": 1,
+              "why": "The edge is where argument happens rather than where it stops. Recognising that early is what stops an answer repeating the words of the section as though repetition made them decisive."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-juris-ot-1",
+          "q": "Why can more careful drafting not remove the penumbra?",
+          "options": [
+            "Because drafters work under time pressure",
+            "Because Parliament prefers flexibility",
+            "Because any definition is itself made of general words with their own edges",
+            "Because courts would ignore it anyway"
+          ],
+          "answer": 2,
+          "why": "The problem is a property of general language, not of effort. Defining a term precisely relocates the uncertainty into the defining words rather than removing it."
+        },
+        {
+          "id": "q-juris-ot-2",
+          "q": "What does open texture buy a legal system?",
+          "options": [
+            "Certainty in every case",
+            "Reach — a rule can apply to circumstances its author never foresaw",
+            "Shorter statutes",
+            "Freedom for judges to decide as they please"
+          ],
+          "answer": 1,
+          "why": "The generality that creates uncertain edges is the same generality that lets an old rule govern a new situation. It is a trade rather than a defect."
+        }
+      ],
+      "reading": [
+        {
+          "bookId": "hart-concept-of-law",
+          "where": "the chapter on formalism and rule-scepticism, where the core and penumbra distinction is set out"
+        },
+        {
+          "bookId": "schauer-thinking-like-a-lawyer",
+          "where": "on rules, for the same problem approached from how rules constrain rather than from what language does"
+        }
+      ],
+      "source": "Standard accounts of open texture in the analytic tradition, as set out in Hart, The Concept of Law. The park example is the standard teaching example and the facts are invented.",
+      "verify": "This lesson states no rule of Malaysian law and cites no authority. It is a lesson about argument; check it against the reading rather than against a statute.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-judicial-discretion",
+      "moduleId": "m18-jurisprudence",
+      "title": "What a judge does when the rule runs out",
+      "summary": "If the words do not decide, something else does. Whether that something is law, or discretion dressed as law, is the argument this module exists for.",
+      "minutes": 30,
+      "readMinutes": 10,
+      "sections": [
+        {
+          "id": "sec-l-judicial-discretion-0",
+          "h": "Two honest answers",
+          "readMinutes": 2,
+          "keypoint": "When a rule does not decide, either the judge finds law already there or the judge makes it. Both answers have a cost.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The previous lesson left a gap. In the penumbra, the words do not decide. So what does?"
+            },
+            {
+              "t": "p",
+              "text": "One answer: the law is still there, in principles and purposes underlying the rules, and the judge finds it."
+            },
+            {
+              "t": "p",
+              "text": "The other: there is nothing to find. The judge exercises a discretion, and the losing party is bound by a rule made after their conduct."
+            },
+            {
+              "t": "caution",
+              "text": "Neither answer is comfortable. The first has to explain where those principles are and why disagreement about them is so persistent. The second has to explain how that is compatible with a court applying law rather than making it."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-judicial-discretion-1",
+          "h": "The retrospectivity problem",
+          "readMinutes": 3,
+          "keypoint": "If a judge makes law in the penumbra, the loser is judged by a rule that did not exist when they acted.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Take the second answer seriously for a moment, because its cost is concrete."
+            },
+            {
+              "t": "p",
+              "text": "Your client acted. Nobody could have told them how the rule applied, because the rule did not reach their case."
+            },
+            {
+              "t": "p",
+              "text": "The court decides. Your client loses, under a rule that became determinate only when the judgment was handed down."
+            },
+            {
+              "t": "p",
+              "text": "That is a real objection to legality, and it does not disappear by calling the process interpretation."
+            },
+            {
+              "t": "compare",
+              "title": "Two accounts of the same judgment",
+              "left": {
+                "h": "Finding the law",
+                "items": [
+                  "The rule always covered this case",
+                  "The judge discovered what was there",
+                  "The loser was bound all along"
+                ]
+              },
+              "right": {
+                "h": "Making the law",
+                "items": [
+                  "The rule did not reach this case",
+                  "The judge chose an extension",
+                  "The loser is bound retrospectively"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "sec-l-judicial-discretion-2",
+          "h": "What constrains the choice",
+          "readMinutes": 3,
+          "keypoint": "Even a judge making law is not choosing freely: reasons, precedent and the duty to justify all narrow the field.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suppose the judge is making law. It does not follow that they may do as they like."
+            },
+            {
+              "t": "p",
+              "text": "A judgment has to be reasoned in public. A decision that cannot be justified in terms other judges would accept is not available in practice."
+            },
+            {
+              "t": "p",
+              "text": "Precedent narrows the field further. An extension has to fit the cases already decided, and a court that ignores them invites reversal."
+            },
+            {
+              "t": "p",
+              "text": "So the realistic picture is a constrained choice rather than a free one. The disagreement is about how much of the constraint is law and how much is professional discipline."
+            },
+            {
+              "t": "predict",
+              "prompt": "A judge says the decision was compelled by authority when a different result was clearly available. What is going on?",
+              "options": [
+                "The judge is lying",
+                "The convention of stating reasons as compulsion is doing work — it is how a choice is made accountable"
+              ],
+              "answer": 1,
+              "reveal": "It is easy to read this as dishonesty and harder to see what the convention is for. Reasoning that presents itself as compelled invites contradiction from the authorities; reasoning that admits choice is much harder to test. Whether that is a good bargain is exactly the argument."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-judicial-discretion-3",
+          "h": "Why this decides real cases",
+          "readMinutes": 2,
+          "keypoint": "The two accounts produce different arguments about departing from an earlier decision.",
+          "body": [
+            {
+              "t": "p",
+              "text": "This looks abstract until you have to argue that an earlier decision should not be followed."
+            },
+            {
+              "t": "p",
+              "text": "On the first account, you argue the earlier court misread principles that were always there. The court is being asked to correct an error."
+            },
+            {
+              "t": "p",
+              "text": "On the second, you argue that the earlier court made a choice and this court may make a different one. The court is being asked to choose again."
+            },
+            {
+              "t": "p",
+              "text": "Those are different submissions with different chances of success, and which one is available depends on a question that looks purely theoretical."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Why does the theoretical question change the shape of a practical submission?",
+              "options": [
+                "It does not — advocates argue authority, not theory",
+                "Because 'the earlier court was wrong about the law' and 'the earlier court chose, and you may choose otherwise' ask a court to do different things"
+              ],
+              "answer": 1,
+              "why": "One asks for correction, the other for a fresh exercise of judgment. Courts respond differently to each, which is why the abstract question has a practical edge."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-juris-disc-1",
+          "q": "What is the retrospectivity objection to judicial law-making?",
+          "options": [
+            "Judges are not elected",
+            "The losing party is bound by a rule that was not determinate when they acted",
+            "Judgments take too long",
+            "It makes statutes unnecessary"
+          ],
+          "answer": 1,
+          "why": "If the rule did not reach the case until the judgment settled it, the party who acted before that judgment could not have known where they stood. That is a legality objection, not a complaint about outcomes."
+        },
+        {
+          "id": "q-juris-disc-2",
+          "q": "On the view that judges find rather than make law, what is the argument for departing from an earlier decision?",
+          "options": [
+            "That this court is free to choose differently",
+            "That the earlier decision is old",
+            "That Parliament should legislate instead",
+            "That the earlier court misread principles that were always there"
+          ],
+          "answer": 3,
+          "why": "Finding implies the possibility of error, so the submission is one of correction. The rival view supports a different submission — that a choice was made and may be made again."
+        }
+      ],
+      "reading": [
+        {
+          "bookId": "hart-concept-of-law",
+          "where": "on discretion at the edges of rules, and the postscript if your edition has it"
+        },
+        {
+          "bookId": "bingham-rule-of-law",
+          "where": "on what constraint on judicial decision is supposed to secure, which is the practical stake in the argument"
+        }
+      ],
+      "source": "Standard accounts of judicial discretion in the positivist tradition and the interpretivist reply. No single authority is relied on and none is cited.",
+      "verify": "This lesson describes a live scholarly disagreement rather than a settled position. Read both sides in the reading before treating either account as the received one.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-intl-sources",
+      "moduleId": "m21-international",
+      "title": "Where international law comes from, and who it binds",
+      "summary": "Treaties, custom and general principles. Each binds states in a different way, and none of them binds a Malaysian court by itself.",
+      "minutes": 26,
+      "readMinutes": 9,
+      "sections": [
+        {
+          "id": "sec-l-intl-sources-0",
+          "h": "A body of law with no legislature",
+          "readMinutes": 2,
+          "keypoint": "International law has no parliament. Its rules come from what states agree to and what they actually do.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Every other subject in this course has a law-maker. Parliament passes an Act. A State legislature passes an enactment. A court makes law by deciding cases."
+            },
+            {
+              "t": "p",
+              "text": "International law has none of those. There is no world parliament. No body can pass a rule binding on a state that did not agree to it."
+            },
+            {
+              "t": "p",
+              "text": "So the first question is not what the rule says. It is where the rule came from, because that determines who it binds."
+            },
+            {
+              "t": "caution",
+              "text": "This is why arguments about international law so often go past each other. One side is talking about a treaty, the other about custom, and the two have completely different requirements."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-intl-sources-1",
+          "h": "Treaties bind those who signed",
+          "readMinutes": 2,
+          "keypoint": "A treaty is a contract between states. It binds the parties to it, and nobody else.",
+          "body": [
+            {
+              "t": "p",
+              "text": "A treaty is the easiest source to understand, because it works like a contract. States negotiate it, sign it, and then ratify it."
+            },
+            {
+              "t": "p",
+              "text": "Signature and ratification are not the same step. Signature usually indicates intent. Ratification is the act that commits the state."
+            },
+            {
+              "t": "p",
+              "text": "Once a state has ratified, it is bound as against the other parties. A state that never joined is not bound, however many others did."
+            },
+            {
+              "t": "example",
+              "text": "Two hundred states may ratify a convention. A state that did not is under no treaty obligation at all, and pointing at the two hundred does not change that."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-intl-sources-2",
+          "h": "Custom binds without anyone signing",
+          "readMinutes": 3,
+          "keypoint": "Customary international law needs consistent state practice plus a belief that the practice is legally required.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Custom is the harder source, and the more interesting one. It binds states that never signed anything."
+            },
+            {
+              "t": "p",
+              "text": "It has two limbs, and both must be present. The first is what states actually do, consistently and over time."
+            },
+            {
+              "t": "p",
+              "text": "The second is harder to prove. States must act that way because they believe the law requires it, not merely out of courtesy or convenience."
+            },
+            {
+              "t": "predict",
+              "prompt": "States routinely give visiting heads of state a red carpet. Is that customary international law?",
+              "options": [
+                "Yes — the practice is consistent and long-standing",
+                "No — the practice is consistent but nobody thinks it is legally required"
+              ],
+              "answer": 1,
+              "reveal": "Consistency alone is not enough. Courtesy done consistently is still courtesy. The second limb is what separates a rule from a habit, and it is where most arguments about custom are won or lost."
+            },
+            {
+              "t": "p",
+              "text": "Proving the second limb is genuinely difficult. You are trying to establish what states believed, from what they said and did."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-intl-sources-3",
+          "h": "None of this binds a Malaysian court",
+          "readMinutes": 2,
+          "keypoint": "A rule can bind Malaysia as a state and still give a litigant in a Malaysian court nothing.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Here is the step that surprises people. Malaysia may be bound by a treaty, and a Malaysian court may still be unable to apply it."
+            },
+            {
+              "t": "p",
+              "text": "The obligation runs between states. It is owed to the other parties, and it is enforced, if at all, at the international level."
+            },
+            {
+              "t": "p",
+              "text": "A domestic court applies domestic law. Something has to carry the treaty across, and the next lesson is about what that something is."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Malaysia ratifies a convention that says exactly what your client needs. Can they rely on it in the High Court?",
+              "options": [
+                "Yes, ratification makes it part of Malaysian law",
+                "Not by itself — something must bring it into domestic law first"
+              ],
+              "answer": 1,
+              "why": "Ratification binds Malaysia as a state. It does not, on its own, create a right a domestic court can enforce. Working out what would is the whole of the next lesson."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-intl-src-1",
+          "q": "What are the two limbs of customary international law?",
+          "options": [
+            "Signature and ratification",
+            "A treaty and a domestic statute",
+            "Consistent state practice, and a belief that it is legally required",
+            "Consistent practice alone"
+          ],
+          "answer": 2,
+          "why": "Practice alone is habit. The belief that the practice is legally required is what makes it law, and it is the limb that has to be proved."
+        },
+        {
+          "id": "q-intl-src-2",
+          "q": "A state never signed a widely ratified treaty. Is it bound by it?",
+          "options": [
+            "Yes, once enough states ratify",
+            "Only if it is a member of the United Nations",
+            "No, not under the treaty",
+            "Yes, automatically after ten years"
+          ],
+          "answer": 2,
+          "why": "A treaty binds its parties. A non-party may be bound by a customary rule that happens to have the same content, but that is a separate argument requiring separate proof."
+        }
+      ],
+      "reading": [
+        {
+          "bookId": "shaw-international-law",
+          "where": "the chapters on the sources of international law — read the treatment of custom twice, because the second limb is where the difficulty is"
+        }
+      ],
+      "source": "Standard accounts of the sources of international law. No Malaysian authority is cited and none is relied on; the domestic position is dealt with in the treaties lesson of this module.",
+      "verify": "Check any statement about a specific treaty or customary rule against the instrument or the state practice itself. This lesson teaches the categories, not the content of any rule.",
+      "lastVerified": "2026-09-11"
+    },
+    {
+      "id": "l-treaty-incorporation",
+      "moduleId": "m21-international",
+      "title": "Bringing a treaty home: which legislature, and under which List",
+      "summary": "If legislation is what carries a treaty into Malaysian law, the next question is which legislature may pass it. That is a federalism question, and the Ninth Schedule answers it.",
+      "minutes": 30,
+      "readMinutes": 10,
+      "sections": [
+        {
+          "id": "sec-l-treaty-incorporation-0",
+          "h": "The question nobody asks second",
+          "readMinutes": 2,
+          "keypoint": "Everyone learns that a treaty needs legislation. Far fewer ask which legislature is competent to pass it.",
+          "body": [
+            {
+              "t": "p",
+              "text": "The dualist point is usually taught and then dropped. A treaty needs legislation to take effect domestically. True, and incomplete."
+            },
+            {
+              "t": "p",
+              "text": "Malaysia has two kinds of law-maker. Saying that legislation is needed does not say whose."
+            },
+            {
+              "t": "p",
+              "text": "That second question is a federalism question, and it is answered by the same provisions that answer every other one."
+            },
+            {
+              "t": "rule",
+              "text": "Article 74(1) and (2) allocate legislative power by reference to the Lists in the Ninth Schedule. Federal power runs to the Federal List and the Concurrent List; State power to the State List and the Concurrent List.",
+              "source": "Federal Constitution, Arts 74(1) and 74(2), read with the Ninth Schedule."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-treaty-incorporation-1",
+          "h": "External affairs is on a List like anything else",
+          "readMinutes": 3,
+          "keypoint": "Treaty-making sits in the allocation of powers rather than above it, so incorporating legislation must find a List entry.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Treaty-making is itself an allocated power. It is not a separate authority floating above the constitutional structure."
+            },
+            {
+              "t": "p",
+              "text": "So legislation implementing a treaty must be traced to an entry, the same as any other Act. Read the entry, not its heading."
+            },
+            {
+              "t": "p",
+              "text": "Most of the time this is unremarkable. The Federation makes the treaty and the Federation legislates for it."
+            },
+            {
+              "t": "p",
+              "text": "The interesting case is a treaty whose subject matter falls on the State List. Then the power to make the treaty and the power to implement it sit in different hands."
+            },
+            {
+              "t": "caution",
+              "text": "Do not resolve that tension from memory. The Constitution addresses it, and the answer is in the text rather than in what would be convenient."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-treaty-incorporation-2",
+          "h": "What counts as law once it arrives",
+          "readMinutes": 3,
+          "keypoint": "Article 160(2) defines law broadly, so what a treaty becomes on arrival matters for every provision that operates on law.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suppose the legislation is passed. The treaty's content is now domestic law, and a court can apply it."
+            },
+            {
+              "t": "p",
+              "text": "It is worth asking what it has become. The Constitution defines law, and the definition has more than one limb."
+            },
+            {
+              "t": "rule",
+              "text": "Article 160(2) defines law to include written law, the common law so far as it is in operation, and any custom or usage having the force of law.",
+              "source": "Federal Constitution, Art 160(2)."
+            },
+            {
+              "t": "p",
+              "text": "An incorporated treaty arrives as written law. That places it in the same position as any other statute, and it can be amended or repealed like one."
+            },
+            {
+              "t": "predict",
+              "prompt": "Parliament passes an Act implementing a treaty, then later amends the Act so it no longer matches the treaty. What is the position?",
+              "options": [
+                "The amendment is invalid, because the treaty binds Malaysia",
+                "The amended Act governs domestically, and Malaysia may be in breach internationally"
+              ],
+              "answer": 1,
+              "reveal": "Both things are true at once, and keeping them apart is the skill. The domestic court applies the Act as amended. The international obligation is unaffected by what Parliament did, and the breach is a matter between states."
+            }
+          ]
+        },
+        {
+          "id": "sec-l-treaty-incorporation-3",
+          "h": "What an unincorporated treaty is still worth",
+          "readMinutes": 2,
+          "keypoint": "An unincorporated treaty cannot supply a right, but it is not therefore worthless in argument.",
+          "body": [
+            {
+              "t": "p",
+              "text": "Suppose no legislation was passed. Your client has a treaty that says the right thing and nothing to enforce."
+            },
+            {
+              "t": "p",
+              "text": "That is not quite nothing. A treaty may inform how an ambiguous provision is read, and it can support an argument about what a standard requires."
+            },
+            {
+              "t": "p",
+              "text": "The line is between informing a reading and supplying a right. Cross it and you have abandoned the dualist position while claiming to apply it."
+            },
+            {
+              "t": "checkpoint",
+              "q": "Where is the line between using an unincorporated treaty and relying on one?",
+              "options": [
+                "There is no line — it is either in force or it is not",
+                "Informing how existing law is read is available; supplying a right that domestic law does not give is not"
+              ],
+              "answer": 1,
+              "why": "The residue is real but bounded. If the treaty is doing the work that a statute would have done, the argument has stopped being interpretive."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q-intl-inc-1",
+          "q": "Which provisions decide whether the Federation or a State may legislate to implement a treaty?",
+          "options": [
+            "Article 160(2)",
+            "Article 121(1A)",
+            "Article 4(1)",
+            "Article 74 with the Ninth Schedule"
+          ],
+          "answer": 3,
+          "why": "Article 74 allocates legislative power by reference to the Lists, and the Lists are in the Ninth Schedule. Implementing legislation must find an entry like any other Act."
+        },
+        {
+          "id": "q-intl-inc-2",
+          "q": "Parliament amends an implementing Act so it departs from the treaty. What does a Malaysian court apply?",
+          "options": [
+            "The treaty, because it binds Malaysia",
+            "Neither, until the treaty is renegotiated",
+            "Whichever is more favourable to the litigant",
+            "The Act as amended"
+          ],
+          "answer": 3,
+          "why": "The court applies domestic law. Malaysia may simultaneously be in breach of its international obligation, but that is a matter between states and not something the court resolves."
+        }
+      ],
+      "reading": [
+        {
+          "statuteId": "federal-constitution",
+          "where": "Article 74 and the Ninth Schedule, then Article 160(2) — read the Article and the List entries together, because the Article on its own decides nothing"
+        },
+        {
+          "bookId": "shaw-international-law",
+          "where": "the chapter on the relationship between international and national law, for the dualist and monist positions side by side"
+        }
+      ],
+      "source": "Federal Constitution, Arts 74(1) and 74(2) with the Ninth Schedule, and Art 160(2). The dualist position is a consequence of the constitutional allocation rather than a rule stated in any single provision.",
+      "verify": "Read Article 74, the Ninth Schedule Lists and Article 160(2) in the current reprint from the Attorney General's Chambers, and check its currency date. Confirm the List entries themselves; they have been amended and headings are not the law.",
+      "lastVerified": "2026-09-11"
     }
   ]
 }

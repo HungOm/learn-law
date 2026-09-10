@@ -251,11 +251,11 @@
           "q": "When does a police stop become an arrest?",
           "options": [
             "When the officer says the word arrest",
-            "When you are taken into custody and are no longer free to leave",
             "When handcuffs are used",
+            "When you are taken into custody and are no longer free to leave",
             "When you reach the police station"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "It turns on control, not on any form of words. Handcuffs are not needed either.",
           "source": "Criminal Procedure Code (Act 593); arrest turns on custody and control"
         },
@@ -265,10 +265,10 @@
           "options": [
             "The name of the investigating officer",
             "The maximum sentence you face",
-            "The grounds of your arrest, as soon as may be",
-            "Nothing at all until you are charged"
+            "Nothing at all until you are charged",
+            "The grounds of your arrest, as soon as may be"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Article 5(3) says so. The trap is thinking the right only starts at the charge.",
           "source": "Federal Constitution Art 5(3)"
         },
@@ -277,11 +277,11 @@
           "q": "After an arrest, who may you ask to contact?",
           "options": [
             "A lawyer only",
+            "A lawyer of your choice, and a relative or friend",
             "A relative only",
-            "Nobody until questioning has finished",
-            "A lawyer of your choice, and a relative or friend"
+            "Nobody until questioning has finished"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Article 5(3) gives you the lawyer; the Code adds the relative or friend. Police often say later, so ask again and note the time.",
           "source": "Federal Constitution Art 5(3); Criminal Procedure Code s 28A"
         },
@@ -290,11 +290,11 @@
           "q": "How long may the police hold you before a Magistrate must see you?",
           "options": [
             "Forty-eight hours",
-            "Twenty-four hours",
             "Seven days",
-            "Until the investigation is finished"
+            "Until the investigation is finished",
+            "Twenty-four hours"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Article 5(4). Longer needs a Magistrate's order, and travel time to the Magistrate is not counted.",
           "source": "Federal Constitution Art 5(4)"
         },
@@ -303,11 +303,11 @@
           "q": "Must you answer a police question if the answer would expose you to a charge?",
           "options": [
             "Yes, always",
-            "No, though you must answer other questions truthfully",
             "No, and you need not answer anything at all",
-            "Only if a lawyer is present"
+            "Only if a lawyer is present",
+            "No, though you must answer other questions truthfully"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "The Code asks for truthful answers but protects you from ones that would incriminate you. Refusing to say anything at all is not the rule.",
           "source": "Criminal Procedure Code (Act 593); the protection against self-incriminating answers"
         },
@@ -316,11 +316,11 @@
           "q": "Arrested at nine on Sunday night, still in the lock-up at noon on Tuesday, no Magistrate seen. What is the position?",
           "options": [
             "It is lawful because the investigation is not finished",
+            "The detention has run past the constitutional limit",
             "It is lawful if a senior officer approved it",
-            "It is lawful for the first three days",
-            "The detention has run past the constitutional limit"
+            "It is lawful for the first three days"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Twenty-four hours is the limit without a Magistrate, and only a remand order extends it.",
           "source": "Federal Constitution Art 5(4)"
         }
@@ -601,12 +601,12 @@
           "id": "pd-q-fc2",
           "q": "What is the question at a remand hearing?",
           "options": [
-            "Whether further detention is needed for the investigation",
             "Whether the accused is guilty",
+            "Whether further detention is needed for the investigation",
             "Whether bail should be granted",
             "Whether the charge is properly drafted"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Guilt is not in issue yet. Arguing innocence there wastes the one argument you have.",
           "source": "Criminal Procedure Code s 117"
         },
@@ -615,11 +615,11 @@
           "q": "What must a charge tell the accused?",
           "options": [
             "The likely sentence",
+            "The offence, with enough detail of time, place and person",
             "The evidence the prosecution holds",
-            "The names of the witnesses",
-            "The offence, with enough detail of time, place and person"
+            "The names of the witnesses"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "A person cannot answer a case he has not been told. A vague charge is one to raise at once.",
           "source": "Criminal Procedure Code (Act 593); the provisions on the form of a charge"
         },
@@ -627,12 +627,12 @@
           "id": "pd-q-fc4",
           "q": "What does claiming trial mean?",
           "options": [
+            "Pleading not guilty, so the prosecution must prove the charge",
             "Asking for a faster hearing",
             "Asking to be tried in a higher court",
-            "Pleading not guilty, so the prosecution must prove the charge",
             "Admitting the facts but disputing the sentence"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "It is the ordinary way a not guilty plea is described in a Malaysian court.",
           "source": "Standard Malaysian court practice; claiming trial is a plea of not guilty"
         },
@@ -654,11 +654,11 @@
           "q": "When is bail a matter of right rather than of discretion?",
           "options": [
             "When the accused has no record",
-            "When the offence is classified as bailable",
             "When the accused is under twenty-one",
+            "When the offence is classified as bailable",
             "When the police do not object"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "The First Schedule does the classifying. Non-bailable means the court has a discretion, not that bail is impossible.",
           "source": "Criminal Procedure Code, First Schedule; ss 387 and 388"
         }
@@ -898,12 +898,12 @@
           "id": "pd-q-wo1",
           "q": "Who is the owner of registered land in Malaysia?",
           "options": [
-            "The person registered as proprietor",
             "The person who has occupied it longest",
             "The person holding the title document",
+            "The person registered as proprietor",
             "The person who paid for it"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The register is the title. Keeping the geran in a drawer is not ownership.",
           "source": "National Land Code (Act 828); title is by registration"
         },
@@ -913,10 +913,10 @@
           "options": [
             "The contract of sale",
             "The ownership itself",
-            "A copy of the register page, held by the proprietor",
-            "A licence to occupy State land"
+            "A licence to occupy State land",
+            "A copy of the register page, held by the proprietor"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "It is a copy. What settles ownership is the register at the land office.",
           "source": "National Land Code (Act 828); the issue document of title is a copy of the register"
         },
@@ -925,11 +925,11 @@
           "q": "What does a restriction in interest on a title mean?",
           "options": [
             "The land cannot be dealt with at all",
+            "State consent is needed before the land is sold or charged",
             "The land is reserved for agriculture",
-            "The proprietor is under eighteen",
-            "State consent is needed before the land is sold or charged"
+            "The proprietor is under eighteen"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "It is a condition written on the title. Missing it is a common way for a sale to stall.",
           "source": "National Land Code (Act 828); restrictions in interest endorsed on the title"
         },
@@ -939,10 +939,10 @@
           "options": [
             "The land, by long use",
             "A half share of the land",
-            "Nothing in law, unless the register says otherwise",
-            "A licence to remain"
+            "A licence to remain",
+            "Nothing in law, unless the register says otherwise"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Long occupation gives no title against the register under the Code.",
           "source": "National Land Code (Act 828); long occupation gives no title against the register"
         },
@@ -951,11 +951,11 @@
           "q": "Devi signs a sale and purchase agreement and pays her deposit. What does she have?",
           "options": [
             "Title to the land",
-            "Rights under the contract, but not title",
             "A registered charge",
+            "Rights under the contract, but not title",
             "A caveat over the land"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "A dealing takes effect on registration, and the gap before it is where the risk sits.",
           "source": "National Land Code (Act 828); a dealing takes effect on registration"
         }
@@ -1203,12 +1203,12 @@
           "id": "pd-q-lp1",
           "q": "When does a buyer become the registered owner?",
           "options": [
+            "When the transfer is registered",
             "When the agreement is signed",
             "When the price is paid in full",
-            "When the transfer is registered",
             "When the keys are handed over"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Registration is the moment. Everything before it is contract.",
           "source": "National Land Code (Act 828); a transfer takes effect on registration"
         },
@@ -1216,12 +1216,12 @@
           "id": "pd-q-lp2",
           "q": "What does a bank get when it lends against land?",
           "options": [
+            "A registered charge, as security for the debt",
             "Ownership of the land",
             "A caveat over the land",
-            "A lease of the land",
-            "A registered charge, as security for the debt"
+            "A lease of the land"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Malaysian law says charge, not mortgage, and the borrower stays the proprietor.",
           "source": "National Land Code (Act 828); the charge provisions"
         },
@@ -1229,12 +1229,12 @@
           "id": "pd-q-lp3",
           "q": "What does a private caveat do?",
           "options": [
-            "It blocks further dealings from being registered",
             "It transfers the land to the caveator",
+            "It blocks further dealings from being registered",
             "It cancels the seller's title",
             "It creates a charge over the land"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "It buys time; it gives no interest. Lodging one without a proper claim can cost compensation.",
           "source": "National Land Code (Act 828); the caveat provisions"
         },
@@ -1242,12 +1242,12 @@
           "id": "pd-q-lp4",
           "q": "A father dies with land in his name. What happens to the register?",
           "options": [
-            "Nothing, until the estate is distributed and the distribution registered",
             "It passes to the eldest child at once",
+            "Nothing, until the estate is distributed and the distribution registered",
             "It passes to the widow at once",
             "It goes back to the State"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Land does not move by itself. The distribution has to be obtained and then registered.",
           "source": "Small Estates (Distribution) Act 1955; National Land Code (Act 828)"
         },
@@ -1256,11 +1256,11 @@
           "q": "Where is a small estate usually distributed?",
           "options": [
             "At the Sessions Court",
+            "At the Land Office, in a distribution hearing",
             "At the National Registration Department",
-            "At the State Secretary's office",
-            "At the Land Office, in a distribution hearing"
+            "At the State Secretary's office"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Small estates go through the Land Office. Larger ones, or those with a will, go to court.",
           "source": "Small Estates (Distribution) Act 1955"
         },

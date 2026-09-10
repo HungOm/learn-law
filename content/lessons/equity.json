@@ -129,12 +129,12 @@
           "id": "qer1",
           "q": "Under section 3 of the Civil Law Act 1956, what happened to English equity?",
           "options": [
+            "It was applied as it stood at a fixed date, subject to local circumstances",
             "It was applied in full and continues to update automatically",
             "It was rejected in favour of a Malaysian code",
-            "It applies only in Sabah and Sarawak",
-            "It was applied as it stood at a fixed date, subject to local circumstances"
+            "It applies only in Sabah and Sarawak"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Section 3 receives the rules as administered in England at a stated date, and only so far as local circumstances and local written law permit."
         },
         {
@@ -153,12 +153,12 @@
           "id": "qer3",
           "q": "Why is it wrong to assume a 2019 English judgment states Malaysian law?",
           "options": [
-            "English judgments never apply in Malaysia",
             "It postdates the reception date, so a Malaysian court must choose to adopt it",
+            "English judgments never apply in Malaysia",
             "Only Federal Court decisions apply here",
             "Equity was never received in Malaysia"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Section 3 fixes the reception at a date. Later English decisions may be persuasive, but adopting one is a decision the Malaysian court makes."
         }
       ],
@@ -330,34 +330,34 @@
           "options": [
             "A valid trust, because the word trusting was used",
             "A valid trust, because a daughter is named",
-            "No trust, because the words express a hope rather than a duty",
-            "No trust, because a will cannot create one"
+            "No trust, because a will cannot create one",
+            "No trust, because the words express a hope rather than a duty"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Certainty of intention asks whether a duty was imposed. Words of hope leave the holder free, and there is no magic in the word trust."
         },
         {
           "id": "qtc2",
           "q": "A trust says the trustee holds \"some of my shares\" for a named nephew. Which certainty fails?",
           "options": [
-            "Intention",
             "Subject matter",
+            "Intention",
             "Objects",
             "None — it is valid"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The beneficiary is identified and a duty is clearly imposed, but nobody can say which shares are held. A court cannot administer property it cannot identify."
         },
         {
           "id": "qtc3",
           "q": "What is the difference between a resulting and a constructive trust?",
           "options": [
-            "A resulting trust sends the benefit back to the provider; a constructive trust is imposed because a conscience is affected",
             "A resulting trust is written down; a constructive trust is oral",
             "A resulting trust applies to land only; a constructive trust to money only",
+            "A resulting trust sends the benefit back to the provider; a constructive trust is imposed because a conscience is affected",
             "There is no difference in Malaysian law"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Both arise by operation of law rather than by arrangement, but they answer different questions — where the benefit should return, and whose conscience is affected."
         },
         {
@@ -365,11 +365,11 @@
           "q": "Why does certainty of objects matter?",
           "options": [
             "Because trustees must be paid",
-            "Because without an identifiable beneficiary there is nobody who can enforce the trustee's duties",
             "Because a trust must be registered",
-            "Because the settlor must be alive"
+            "Because the settlor must be alive",
+            "Because without an identifiable beneficiary there is nobody who can enforce the trustee's duties"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "A trustee's duties are owed to the beneficiaries. With no identifiable beneficiary, the duty has nobody to enforce it and the court cannot supervise it."
         }
       ],

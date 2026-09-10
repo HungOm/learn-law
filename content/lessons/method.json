@@ -265,12 +265,12 @@
           "id": "qhs2",
           "q": "Your revision feels smooth and pleasant. What should you conclude?",
           "options": [
-            "Be suspicious — smoothness is not memory",
             "It is working well",
             "You have found your learning style",
+            "Be suspicious — smoothness is not memory",
             "You should move on to the next topic"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The second pass is easier than the first, and your brain reads that ease as knowing.",
           "source": "Retrieval practice research, as summarised in Make It Stick"
         },
@@ -278,12 +278,12 @@
           "id": "qhs3",
           "q": "Why mix contract and criminal law in one sitting?",
           "options": [
-            "Mixing them teaches you to tell them apart",
             "It covers more ground per hour",
             "It is less tiring",
-            "It suits a short attention span"
+            "It suits a short attention span",
+            "Mixing them teaches you to tell them apart"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "Doing one topic at a time feels better and teaches you less about telling two bodies of rules apart.",
           "source": "Interleaving research, as summarised in Make It Stick"
         },
@@ -306,10 +306,10 @@
           "options": [
             "It leaves out the facts",
             "It is too short",
-            "It is copyrighted",
-            "Editors write it, it is sometimes wrong, and it is never authority"
+            "Editors write it, it is sometimes wrong, and it is never authority",
+            "It is copyrighted"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Read the judgment. The headnote is an editor's convenience, not the court's words.",
           "source": "Standard case-briefing method"
         }
@@ -564,12 +564,12 @@
           "id": "qsl1",
           "q": "What makes something public law rather than private law?",
           "options": [
+            "In public law the State is a party in its capacity as the State",
             "Public law is statutory and private law is common law",
             "Public law is criminal and private law is civil",
-            "In public law the State is a party in its capacity as the State",
             "Public law is decided in superior courts only"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "In private law the two sides meet as equals, and the State supplies only the court.",
           "source": "Standard classification"
         },
@@ -578,11 +578,11 @@
           "q": "What are the two standards of proof?",
           "options": [
             "Prima facie; conclusive",
+            "Beyond reasonable doubt; balance of probabilities",
             "Clear and convincing; preponderance",
-            "Certainty; likelihood",
-            "Beyond reasonable doubt; balance of probabilities"
+            "Certainty; likelihood"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Criminal and civil, in that order. The gap between them is what lets one set of facts produce two different outcomes.",
           "source": "Standard classification; Evidence Act 1950 for the civil standard"
         },
@@ -605,10 +605,10 @@
           "options": [
             "It decides which court can hear the case",
             "It decides the standard of proof",
-            "It decides who pays the costs",
-            "It decides appeals, precedent, and who does what at a trial"
+            "It decides appeals, precedent, and who does what at a trial",
+            "It decides who pays the costs"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Fact is what happened. Law is what follows from it. Almost every procedural rule turns on which is which.",
           "source": "Standard classification"
         }
@@ -875,12 +875,12 @@
           "id": "qpr1",
           "q": "State the doctrine of stare decisis.",
           "options": [
-            "A court is bound by decisions of courts above it in the same hierarchy on the same point",
             "A court must follow its own earlier decisions absolutely",
+            "A court is bound by decisions of courts above it in the same hierarchy on the same point",
             "All decisions of all courts bind all others",
             "Precedent binds only where a statute is silent"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Three limits: the same hierarchy, a court above, and the same point of law.",
           "source": "Standard common law doctrine of stare decisis"
         },
@@ -890,10 +890,10 @@
           "options": [
             "It is obiter",
             "It was not argued",
-            "No later case has those facts, so it governs nothing",
-            "It is too general"
+            "It is too general",
+            "No later case has those facts, so it governs nothing"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "A ratio has to be stated broadly enough to settle a different case.",
           "source": "Standard common law method on ratio decidendi"
         },
@@ -903,10 +903,10 @@
           "options": [
             "Decided without reasons",
             "Decided by a single judge",
-            "Decided on a concession",
-            "Decided in ignorance of a statute or binding authority that would have altered the result"
+            "Decided in ignorance of a statute or binding authority that would have altered the result",
+            "Decided on a concession"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "It is narrow. It is not a licence to ignore a decision you think is badly reasoned.",
           "source": "Standard common law doctrine; the per incuriam exception"
         },
@@ -927,12 +927,12 @@
           "id": "qpr5",
           "q": "Which of the four ways out will you use most often?",
           "options": [
-            "Distinguishing",
             "Overruling",
             "Reversing",
+            "Distinguishing",
             "Per incuriam"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "It is the only one open to a court that is bound by the earlier decision.",
           "source": "Standard common law method on precedent"
         }
@@ -1157,12 +1157,12 @@
           "id": "qvc1",
           "q": "Ultra vires means what?",
           "options": [
-            "Beyond the powers conferred, and therefore invalid",
             "Against public policy",
             "Without notice",
+            "Beyond the powers conferred, and therefore invalid",
             "Beyond the time limit for bringing a claim"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "An act outside the authority given by the statute or instrument that grants it.",
           "source": "Standard common law vocabulary; the ultra vires principle"
         },
@@ -1170,12 +1170,12 @@
           "id": "qvc2",
           "q": "Nemo judex in causa sua requires what?",
           "options": [
-            "That the other side be heard",
             "That a decision-maker have no interest in the outcome",
+            "That the other side be heard",
             "That reasons be given",
             "That the decision be published"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "No one a judge in his own cause. Hearing the other side is the other rule, audi alteram partem.",
           "source": "Standard common law vocabulary; the rule against bias"
         },
@@ -1196,12 +1196,12 @@
           "id": "qvc4",
           "q": "A public body makes a decision that hits someone, and something was wrong in how it was made. What should that bring to mind?",
           "options": [
-            "Contract",
             "Administrative law and judicial review",
+            "Contract",
             "Tort",
             "Criminal law"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Wiring a shape of facts to a body of law is what makes issue-spotting fast enough to be useful.",
           "source": "Standard issue-spotting method"
         }
@@ -1487,10 +1487,10 @@
           "options": [
             "Sessions → Magistrates → High Court → Federal Court → Court of Appeal",
             "Magistrates → High Court → Sessions → Court of Appeal → Federal Court",
-            "Magistrates → Sessions → Court of Appeal → High Court → Federal Court",
-            "Magistrates → Sessions → High Court → Court of Appeal → Federal Court"
+            "Magistrates → Sessions → High Court → Court of Appeal → Federal Court",
+            "Magistrates → Sessions → Court of Appeal → High Court → Federal Court"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "The Federal Court is the apex.",
           "source": "Courts of Judicature Act 1964; Subordinate Courts Act 1948"
         },
@@ -1500,10 +1500,10 @@
           "options": [
             "One, with two registries",
             "Two, one superior to the other",
-            "Two, of coordinate jurisdiction — Malaya, and Sabah and Sarawak",
-            "Three, one for each region"
+            "Three, one for each region",
+            "Two, of coordinate jurisdiction — Malaya, and Sabah and Sarawak"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Coordinate means level with each other. Neither binds the other, though decisions are highly persuasive.",
           "source": "Federal Constitution Art 121(1)"
         },
@@ -1511,12 +1511,12 @@
           "id": "qct3",
           "q": "Which statute creates the superior courts?",
           "options": [
-            "The Subordinate Courts Act 1948",
             "The Courts of Judicature Act 1964",
+            "The Subordinate Courts Act 1948",
             "The Federal Constitution alone",
             "The Rules of Court 2012"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "The Subordinate Courts Act 1948 creates the Sessions and Magistrates' Courts.",
           "source": "Courts of Judicature Act 1964"
         },
@@ -1524,12 +1524,12 @@
           "id": "qct4",
           "q": "Why should you not memorise the money limits of the Magistrates' and Sessions Courts?",
           "options": [
-            "They are statutory figures, raised from time to time",
             "They vary from State to State",
             "They are not published",
+            "They are statutory figures, raised from time to time",
             "They apply only to contract claims"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Cite them only from a current source. A remembered figure is the fastest way to be confidently out of date.",
           "source": "Subordinate Courts Act 1948; the limits are statutory figures, raised from time to time"
         },
@@ -1537,12 +1537,12 @@
           "id": "qct5",
           "q": "What is the Syariah hierarchy?",
           "options": [
+            "Syariah Subordinate Court → Syariah High Court → Syariah Appeal Court",
             "Syariah High Court → Syariah Court of Appeal → Federal Court",
             "A single Syariah Court in each State",
-            "Syariah Subordinate Court → High Court → Federal Court",
-            "Syariah Subordinate Court → Syariah High Court → Syariah Appeal Court"
+            "Syariah Subordinate Court → High Court → Federal Court"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "It is a separate ladder, set up by State law, and it does not feed into the Federal Court.",
           "source": "State law; Federal Constitution, Ninth Schedule List II Item 1"
         }
@@ -1818,12 +1818,12 @@
           "id": "qso1",
           "q": "How does Article 160(2) define 'law'?",
           "options": [
-            "Written law, the common law so far as in operation here, and custom having the force of law",
             "Acts of Parliament only",
             "Written law and subsidiary legislation",
+            "Written law, the common law so far as in operation here, and custom having the force of law",
             "Statute and judicial decisions"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "That definition is the map of the sources, and custom is the limb people forget.",
           "source": "Federal Constitution Art 160(2)"
         },
@@ -1831,12 +1831,12 @@
           "id": "qso2",
           "q": "Which statement about Parliament in Malaysia is wrong?",
           "options": [
+            "Parliament is sovereign",
             "Parliament has two houses",
             "Parliament may legislate on Federal and Concurrent List matters",
-            "Parliament's legislation is subject to the Constitution",
-            "Parliament is sovereign"
+            "Parliament's legislation is subject to the Constitution"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "Supremacy belongs to the Constitution under Article 4(1). The slip is carried over from English texts.",
           "source": "Federal Constitution Art 4(1)"
         },
@@ -1845,11 +1845,11 @@
           "q": "What does s 3(1) of the Civil Law Act 1956 do?",
           "options": [
             "Abolishes the common law in Malaysia",
-            "Applies all English law as it develops",
             "Applies English common law and equity as they stood on stated cut-off dates",
+            "Applies all English law as it develops",
             "Applies English law only to commercial disputes"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "7 April 1956 for West Malaysia, with different dates for Sabah and Sarawak, and only so far as local circumstances allow.",
           "source": "Civil Law Act 1956, s 3(1)"
         },
@@ -1870,12 +1870,12 @@
           "id": "qso5",
           "q": "What are the two houses of Parliament?",
           "options": [
-            "Dewan Rakyat and Dewan Negara",
             "Dewan Rakyat and Dewan Undangan Negeri",
             "Dewan Negara and Majlis Raja-Raja",
+            "Dewan Rakyat and Dewan Negara",
             "Dewan Rakyat and the Cabinet"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The elected lower house, and the appointed and State-elected upper house.",
           "source": "Federal Constitution Art 44"
         }
@@ -2126,12 +2126,12 @@
           "id": "qts2",
           "q": "What is the common misstatement of Art 121(1A)?",
           "options": [
-            "'If Islam is involved, the civil court has no jurisdiction'",
             "'The Syariah courts are subordinate to the High Court'",
+            "'If Islam is involved, the civil court has no jurisdiction'",
             "'Article 121(1A) was repealed'",
             "'Only the Federal Court may interpret it'"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "The clause removes jurisdiction only where the matter was within Syariah jurisdiction in the first place.",
           "source": "Federal Constitution Art 121(1A)"
         },
@@ -2139,12 +2139,12 @@
           "id": "qts3",
           "q": "What did Indira Gandhi decide about Art 121(1A)?",
           "options": [
+            "It does not oust the civil courts' inherent power of judicial review",
             "It gave Syariah courts exclusive family jurisdiction",
             "It repealed Art 12(4)",
-            "It does not oust the civil courts' inherent power of judicial review",
             "It made Syariah decisions appealable to the Federal Court"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "And that Syariah jurisdiction cannot reach a person who does not profess the religion of Islam.",
           "source": "Indira Gandhi a/p Mutho v Pengarah Jabatan Agama Islam Perak [2018] 1 MLJ 545 (FC)"
         },
@@ -2152,12 +2152,12 @@
           "id": "qts4",
           "q": "Article 12(4) says the religion of a person under eighteen is decided by 'his parent or guardian'. Why does that matter?",
           "options": [
-            "The Eleventh Schedule means the singular includes the plural",
             "It excludes guardians appointed by a court",
             "It applies only to Muslims",
-            "It applies only to citizens"
+            "It applies only to citizens",
+            "The Eleventh Schedule means the singular includes the plural"
           ],
-          "answer": 0,
+          "answer": 3,
           "why": "That reading is what makes the consent of both parents the question in a one-sided conversion case.",
           "source": "Federal Constitution Art 12(4) and Eleventh Schedule"
         }
@@ -2376,12 +2376,12 @@
           "id": "qrs1",
           "q": "What is the correct order of research?",
           "options": [
+            "Statute, then check it is current, then subsidiary legislation, then cases, then note up",
             "Cases first, then statute",
             "Textbook, then statute, then cases",
-            "Statute, then check it is current, then subsidiary legislation, then cases, then note up",
             "Subsidiary legislation, then statute"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "Read the section, not a summary of it, and confirm it is in force before you build on it.",
           "source": "Standard research practice"
         },
@@ -2389,12 +2389,12 @@
           "id": "qrs2",
           "q": "Where is the official free text of Malaysian Acts published?",
           "options": [
-            "CommonLII",
             "The Attorney General's Chambers portal",
+            "CommonLII",
             "The Malayan Law Journal",
             "The courts' own portal"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "That is the source to use for statute.",
           "source": "Attorney General's Chambers portal, the official free publication of federal statute"
         },
@@ -2403,11 +2403,11 @@
           "q": "What is 'noting up'?",
           "options": [
             "Adding your own notes to a report",
-            "Checking what later courts did with a case, to see if it is still good law",
             "Recording the citation in full",
-            "Summarising the ratio"
+            "Summarising the ratio",
+            "Checking what later courts did with a case, to see if it is still good law"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "It is also the step free Malaysian sources cannot complete for you.",
           "source": "Standard research practice"
         },
@@ -2417,10 +2417,10 @@
           "options": [
             "That the case is good law",
             "That no appeal was brought",
-            "Nothing — the portal does not track what later courts did",
-            "That the case was not appealed in time"
+            "That the case was not appealed in time",
+            "Nothing — the portal does not track what later courts did"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "The dangerous inference is the silent one. No warning is not a clean bill of health.",
           "source": "Standard research practice; free Malaysian sources include no citator"
         }

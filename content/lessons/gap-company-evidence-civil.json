@@ -232,12 +232,12 @@
           "id": "pe-q-cop-1",
           "q": "Aina and Rosli register a company. The company then buys rice on credit and cannot pay. Who owes the supplier?",
           "options": [
+            "The company",
             "Aina and Rosli, because they run the shop",
             "Whoever placed the order",
-            "The company",
             "Aina, Rosli and the company together"
           ],
-          "answer": 2,
+          "answer": 0,
           "why": "The company made the contract, so the company owes the money. The trap is thinking that the person who did the shopping is the person who owes.",
           "source": "Companies Act 2016 (Act 777); the company contracts in its own name"
         },
@@ -258,12 +258,12 @@
           "id": "pe-q-cop-3",
           "q": "Salomon owned almost all the shares and ran the whole business himself. What did the court hold?",
           "options": [
-            "The company was still a separate person, and the debts were its own",
             "One-man control made the company a sham",
             "He was liable because he was also a creditor",
+            "The company was still a separate person, and the debts were its own",
             "The company was separate only for tax"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Total control is not a reason to ignore the company. That is the exact point the case settled, and it is why control alone will not lift the veil.",
           "source": "Salomon v A Salomon & Co Ltd [1897] AC 22"
         },
@@ -271,12 +271,12 @@
           "id": "pe-q-cop-4",
           "q": "The bank can reach Aina's savings but not Rosli's. Why?",
           "options": [
+            "She signed a personal guarantee and he did not",
             "She holds more shares than he does",
             "She is a director and he is not",
-            "She was the one who dealt with the bank",
-            "She signed a personal guarantee and he did not"
+            "She was the one who dealt with the bank"
           ],
-          "answer": 3,
+          "answer": 0,
           "why": "The guarantee is a separate contract she made herself. Being a shareholder or a director would not have exposed her savings.",
           "source": "Standard contract principle; a personal guarantee is a separate contract"
         },
@@ -284,12 +284,12 @@
           "id": "pe-q-cop-5",
           "q": "The company owns the shop's oven. Who else owns it?",
           "options": [
-            "Nobody. The members own shares, not the company's things",
             "Aina and Rosli, half each",
             "The bank, until the loan is repaid",
+            "Nobody. The members own shares, not the company's things",
             "Aina and Rosli jointly with the company"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Owning shares is not owning the company's property. Missing this is what makes separate personality feel like a technicality when it is not.",
           "source": "Salomon v A Salomon & Co Ltd [1897] AC 22; members own shares, not the company's property"
         }
@@ -573,11 +573,11 @@
           "q": "Aina owns half the shares. Does she own half the company's oven?",
           "options": [
             "Yes, half of every asset",
-            "No. She owns shares; the company owns the oven",
             "Yes, but only once the company is wound up",
-            "Only if the constitution says so"
+            "Only if the constitution says so",
+            "No. She owns shares; the company owns the oven"
           ],
-          "answer": 1,
+          "answer": 3,
           "why": "Shares are a bundle of rights against the company, not slices of its property. The trap is treating a small company as if it were a partnership.",
           "source": "Salomon v A Salomon & Co Ltd [1897] AC 22"
         },
@@ -598,12 +598,12 @@
           "id": "pe-q-cor-3",
           "q": "Aina secretly takes a catering job that was offered to the company. Who is the proper claimant?",
           "options": [
-            "The company",
             "Rosli, as the other shareholder",
             "Rosli and the company together",
+            "The company",
             "The Companies Commission"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "The duty is owed to the company, so the loss is the company's. Rosli's route is to get permission to sue in the company's name, not to sue in his own.",
           "source": "Companies Act 2016 ss 347-350; the duty is owed to the company"
         },
@@ -611,12 +611,12 @@
           "id": "pe-q-cor-4",
           "q": "Which of these on its own is a reason to lift the corporate veil?",
           "options": [
-            "One person owns every share",
             "None of them",
+            "One person owns every share",
             "One person makes every decision",
             "The company has almost no money"
           ],
-          "answer": 1,
+          "answer": 0,
           "why": "Control and thin capital are ordinary features of small companies. Lifting the veil needs a statute, fraud, or the use of the company to evade an existing obligation.",
           "source": "Salomon v A Salomon & Co Ltd [1897] AC 22; control alone is not enough"
         },
@@ -624,12 +624,12 @@
           "id": "pe-q-cor-5",
           "q": "The company made a profit this year. Can a shareholder simply take a share of it?",
           "options": [
-            "No. Profit reaches shareholders only as a declared dividend",
             "Yes, in proportion to shares held",
             "Yes, if the other shareholders agree informally",
+            "No. Profit reaches shareholders only as a declared dividend",
             "Yes, but only in cash"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Until a dividend is properly declared, the profit is the company's money. Helping yourself to it is a director taking company property.",
           "source": "Companies Act 2016 (Act 777); profit reaches members only as a declared dividend"
         }
@@ -847,12 +847,12 @@
           "id": "pe-q-evr-1",
           "q": "Devi sues Chong over a broken gate. Which of these is a fact in issue?",
           "options": [
-            "Whether Chong's car hit the gate",
             "Whether Chong is disliked in the neighbourhood",
             "Whether Chong has been sued before",
+            "Whether Chong's car hit the gate",
             "Whether Devi can afford the repair"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "A fact in issue is one the case turns on. The others may be true and still change nothing about who broke the gate.",
           "source": "Evidence Act 1950 s 5"
         },
@@ -860,12 +860,12 @@
           "id": "pe-q-evr-2",
           "q": "Under the Evidence Act 1950, what is the right question to ask about a piece of evidence?",
           "options": [
-            "Which section of the Act makes this relevant?",
             "Is there a rule that excludes it?",
+            "Which section of the Act makes this relevant?",
             "Does it feel important to the case?",
             "Would an ordinary person want to hear it?"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "The Act is a closed list, so relevancy has to be found in a section. Starting from the English question, whether anything excludes it, gets the system backwards.",
           "source": "Evidence Act 1950, Part I; relevancy is a closed list"
         },
@@ -875,10 +875,10 @@
           "options": [
             "An admission",
             "Circumstantial evidence",
-            "Hearsay",
-            "Expert evidence"
+            "Expert evidence",
+            "Hearsay"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "It is second-hand and offered for its truth, and the person who saw the event cannot be questioned. Calling it circumstantial evidence confuses the source with the strength.",
           "source": "Evidence Act 1950; oral evidence must be direct"
         },
@@ -887,11 +887,11 @@
           "q": "Chong messages Devi: 'Sorry, I will pay for the gate this month.' What is the message worth to her?",
           "options": [
             "Nothing, because it was not made in court",
-            "It is an admission and may be proved against him",
             "Nothing, because an apology is not a promise",
+            "It is an admission and may be proved against him",
             "It settles the case and ends the trial"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "A party's own words pointing against their interest may be proved against them. But an admission is evidence, not the end of the case, and he may still explain it.",
           "source": "Evidence Act 1950; the provisions on admissions"
         },
@@ -1154,12 +1154,12 @@
           "id": "pe-q-evp-1",
           "q": "Kumar says he lent Hafiz RM3,000. Hafiz says it was a gift. Neither calls any evidence. What happens?",
           "options": [
-            "Kumar loses, because he asserted the loan",
             "Hafiz loses, because he asserted the gift",
+            "Kumar loses, because he asserted the loan",
             "The judge splits it between them",
             "The case is adjourned for evidence"
           ],
-          "answer": 0,
+          "answer": 1,
           "why": "Section 102 puts the burden on whoever would fail on an empty record. Kumar wants judgment, so the blank page defeats him.",
           "source": "Evidence Act 1950 s 102"
         },
@@ -1168,11 +1168,11 @@
           "q": "Which burden moves back and forth during a trial?",
           "options": [
             "The legal burden",
-            "Both, together",
             "The evidential burden",
+            "Both, together",
             "Neither; burdens are fixed by the pleadings"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "The legal burden is the risk of not persuading the court and stays put. Saying only that 'the burden shifted' hides which one you mean.",
           "source": "Evidence Act 1950 ss 101 and 102"
         },
@@ -1194,11 +1194,11 @@
           "q": "What does s 106 of the Evidence Act 1950 do?",
           "options": [
             "Moves the whole burden to the accused",
-            "Lets a court presume guilt from silence",
             "Puts the burden of a fact especially within someone's knowledge on that person",
+            "Lets a court presume guilt from silence",
             "Sets the standard of proof in criminal cases"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "It reaches one narrow fact only. Using it to relieve the prosecution of proving its case is the standard misuse of the section.",
           "source": "Evidence Act 1950 s 106"
         },
@@ -1207,11 +1207,11 @@
           "q": "A party could have called an available and material witness and did not. What may the court do?",
           "options": [
             "It must presume the evidence would have been unfavourable",
+            "It may presume the evidence would have been unfavourable to that party",
             "It must strike out that party's case",
-            "It must draw no inference at all",
-            "It may presume the evidence would have been unfavourable to that party"
+            "It must draw no inference at all"
           ],
-          "answer": 3,
+          "answer": 1,
           "why": "Illustration (g) to s 114 is permissive. Treating it as automatic is the mistake, and so is invoking it for a witness who would add nothing.",
           "source": "Evidence Act 1950 s 114 illustration (g)"
         }
@@ -1447,11 +1447,11 @@
           "q": "When does the six-year limitation period for a contract claim start running?",
           "options": [
             "When the claimant found out about the problem",
-            "When the claimant first asked for payment",
             "When the cause of action accrued, which in contract is the breach",
+            "When the claimant first asked for payment",
             "When the case is filed in court"
           ],
-          "answer": 2,
+          "answer": 1,
           "why": "Accrual is not discovery and not anger. Confusing accrual with the day you noticed is how a good claim gets thrown out.",
           "source": "Limitation Act 1953 s 6; in contract the cause of action accrues on breach"
         },
@@ -1779,11 +1779,11 @@
           "q": "What belongs in a pleading?",
           "options": [
             "The evidence that proves each fact",
-            "The material facts relied on",
             "The legal argument in full",
+            "The material facts relied on",
             "The witness statements"
           ],
-          "answer": 1,
+          "answer": 2,
           "why": "Pleadings fix what the case is about, in facts. Loading them with evidence or argument is a standard drafting error and invites an application to strike out.",
           "source": "Rules of Court 2012, Order 18"
         },
@@ -1791,12 +1791,12 @@
           "id": "pe-q-cvj-2",
           "q": "During discovery, must a party disclose a document that damages its own case?",
           "options": [
-            "Yes, if it is relevant and not privileged",
             "No, a party never has to help its opponent",
             "Only if the other side already knows it exists",
+            "Yes, if it is relevant and not privileged",
             "Only if the court orders it specifically"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "Relevance, not helpfulness, decides disclosure. The exception is privilege, and privileged documents are listed rather than handed over.",
           "source": "Rules of Court 2012, Order 24"
         },
@@ -1806,10 +1806,10 @@
           "options": [
             "Summary judgment",
             "Judgment in default",
-            "Striking out",
-            "An interim injunction"
+            "An interim injunction",
+            "Striking out"
           ],
-          "answer": 2,
+          "answer": 3,
           "why": "Striking out attacks the pleading as a document. Summary judgment looks at the evidence and asks whether there is a triable issue, which is a different test.",
           "source": "Rules of Court 2012, Order 18 rule 19"
         },
@@ -1817,12 +1817,12 @@
           "id": "pe-q-cvj-4",
           "q": "You win RM20,000 in court. Why might you still receive nothing?",
           "options": [
-            "A judgment must be enforced, and enforcement needs assets to reach",
             "The judgment expires after one year",
             "The court keeps the money until an appeal is over",
+            "A judgment must be enforced, and enforcement needs assets to reach",
             "Costs always cancel out the award"
           ],
-          "answer": 0,
+          "answer": 2,
           "why": "A judgment is a declaration of debt, not a payment. If the defendant has no goods, land or bank balance, there is nothing for enforcement to bite on.",
           "source": "Rules of Court 2012; enforcement is a separate exercise from obtaining judgment"
         },
@@ -1832,10 +1832,10 @@
           "options": [
             "Whether a different judge would have decided differently",
             "How much the appeal will cost",
-            "Whether new evidence has emerged",
-            "The time limit for filing the notice of appeal"
+            "The time limit for filing the notice of appeal",
+            "Whether new evidence has emerged"
           ],
-          "answer": 3,
+          "answer": 2,
           "why": "Appeal periods are short and strictly applied, so the deadline governs everything else. Merits are worth nothing once the time has gone.",
           "source": "Standard appellate practice; the time for a notice of appeal is fixed by the rules and strictly applied"
         }
