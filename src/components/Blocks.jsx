@@ -65,7 +65,11 @@ export default function Block({ b, seen }) {
       return <Diagram {...b} />;
 
     case 'figure':
-      return <Plate scene={b.scene} caption={b.caption} size={b.size || 'inline'} />;
+      // The caption goes in as a NODE rather than a string so it can carry
+      // glossary marks. `Plate` renders whatever it is handed, so this needs
+      // no change there — and the table below cannot do the same, because its
+      // caption is also its `aria-label` and that has to stay a string.
+      return <Plate scene={b.scene} caption={b.caption && <Prose text={b.caption} seen={seen} />} size={b.size || 'inline'} />;
 
     case 'steps':
       return <Steps {...b} seen={seen} />;
@@ -98,7 +102,7 @@ function Table({ caption, columns = [], rows = [], note, source, seen }) {
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.42 }}
     >
-      {caption && <figcaption className="dtable-cap">{caption}</figcaption>}
+      {caption && <figcaption className="dtable-cap"><Prose text={caption} seen={seen} /></figcaption>}
       {/* A table wide enough to scroll is operable only if the scroll box can
           be reached. Chrome makes an overflowing container focusable on its
           own; WebKit does not, so on iOS Safari this was unreachable by

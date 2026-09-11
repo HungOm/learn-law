@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { byId, tokenise, KINDS } from '../lib/glossary.js';
+import { recordLookup } from '../lib/vocab.js';
 
 /**
  * A glossary term in running prose.
@@ -32,6 +33,40 @@ export function TermLayer({ children }) {
       window.removeEventListener('scroll', onScroll, true);
     };
   }, [open]);
+
+  // The `word` tier, on a device with no pointer.
+  //
+  // Ordinary-vocabulary terms rest with no underline and reveal one when the
+  // pointer enters their passage (see `.term-word` in learn.css). On touch
+  // there is no pointer, so that reveal can never fire — and the tier built for
+  // the reader who does not know "circumstances" or "threshold" was invisible
+  // in every state on the device this audience actually reads on. Tappable, but
+  // with nothing to say so.
+  //
+  // The obvious fix is to underline them on touch, and it was measured rather
+  // than assumed: it takes the median heavy-passage share from 6.5% to 12.5%
+  // and puts 15 of 156 lessons over the density ceiling instead of 2 — a page
+  // of underlines, on the smallest screens, which is the failure the tier was
+  // created to avoid.
+  //
+  // So touch gets the faithful analogue of hover instead: the passage you just
+  // touched reveals its quiet terms, exactly as the passage under a mouse does.
+  // A tap is what precedes reading a paragraph anyway.
+  useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+    if (window.matchMedia?.('(hover: hover)')?.matches) return undefined;
+    let marked = null;
+    const clear = () => { if (marked) marked.removeAttribute('data-words'); marked = null; };
+    const onDown = (e) => {
+      const passage = e.target?.closest?.('p, li, td, th, dd, figcaption');
+      if (passage === marked) return;
+      clear();
+      if (passage) { marked = passage; marked.setAttribute('data-words', ''); }
+    };
+    document.addEventListener('pointerdown', onDown, { passive: true });
+    return () => { document.removeEventListener('pointerdown', onDown); clear(); };
+  }, []);
+
   return <OpenCtx.Provider value={value}>{children}</OpenCtx.Provider>;
 }
 
@@ -48,7 +83,14 @@ export function Term({ id, children }) {
     const r = ref.current.getBoundingClientRect();
     setOpen(uid);
     setRect({ top: r.top, bottom: r.bottom, left: r.left, right: r.right, width: r.width });
-  }, [setOpen, uid]);
+    // Opening the card is the lookup, and the lookup is what enrols the word in
+    // vocabulary review. Here rather than in `TermCard`, and not on "Go deeper":
+    // a reader who expands the deep level has already been counted once, and
+    // counting them twice would make the terms people study hardest look like
+    // the terms they find hardest. `recordLookup` de-dupes repeats inside a
+    // minute and never throws, so this is safe on a hover-opened card.
+    recordLookup(id);
+  }, [setOpen, uid, id]);
 
   const [rect, setRect] = useState(null);
 

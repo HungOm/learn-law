@@ -51,15 +51,28 @@
    anywhere in the passage. That keeps them discoverable — a reader whose mouse
    is in the paragraph they are reading sees every word that has a gloss — while
    a reader scanning down the page sees only the terms of art. Keyboard users get
-   the focus ring, which is unchanged, and on touch the tap opens the card as
-   before; `@media (hover: hover)` keeps the reveal rule off touch entirely,
-   where a "hover" is a stuck state after a tap rather than an intention. */
+   the focus ring, which is unchanged, and `@media (hover: hover)` keeps the
+   reveal rule off touch, where a "hover" is a stuck state after a tap rather
+   than an intention.
+
+   That last decision had a hole in it. On touch the reveal could never fire, so
+   the quiet tier had no affordance in ANY state — the reader who does not know
+   "circumstances" met a word that was tappable with nothing to say so, on the
+   device this audience mostly reads on. Underlining them on touch was measured
+   rather than assumed and rejected: it takes the median heavy-passage share
+   from 6.5% to 12.5% and puts 15 of 156 lessons over the ceiling instead of 2.
+   Touch gets the analogue of hover instead — `[data-words]`, set on the passage
+   the reader last touched by the effect in Term.jsx. */
 .term-word { border-bottom-color: transparent; }
 
 @media (hover: hover) {
   :is(p, li, td, th, dd, figcaption):hover .term-word {
     border-bottom-color: var(--border-strong);
   }
+}
+
+@media (hover: none) {
+  [data-words] .term-word { border-bottom-color: var(--border-strong); }
 }
 
 /* Its own hover and open states stay exactly as loud as any other term's — the

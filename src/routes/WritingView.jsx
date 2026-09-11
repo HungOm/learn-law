@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useStudy } from '../state/StudyContext.jsx';
 import * as writing from '../lib/writing.js';
@@ -8,6 +8,7 @@ import PrintSheet from '../components/PrintSheet.jsx';
 import NotFound from './NotFound.jsx';
 import { focusOn, setFocus } from '../lib/focus.js';
 import { useDialog } from '../components/Overlays.jsx';
+import { Prose, TermLayer } from '../components/Term.jsx';
 
 /**
  * One writing exercise: brief, steps, a place to draft, and — only after the
@@ -24,6 +25,12 @@ export default function WritingView() {
   const { id } = useParams();
   const { cat, read } = useStudy();
   const w = writing.byId(id);
+  // Above every early return: hooks must run in the same order on every
+  // render, and placing this next to the JSX that uses it put it after the
+  // not-found and loading branches — React error #310, and the surface
+  // rendered no terms at all. Caught by opening the page rather than by the
+  // build, which was green throughout.
+  const writeSeen = useMemo(() => new Map(), [w?.id]);
 
   const [stepPref, setStepPref] = useState(focusOn);
   const [step, setStep] = useState(0);
@@ -128,10 +135,8 @@ export default function WritingView() {
     setFocus(true);
     window.scrollTo({ top: 0 });
   };
-
-  // The stages, rendered identically whether they are inline on the page or
-  // alone inside the reader — one definition so the two cannot drift.
   const stagesNode = (
+    <TermLayer>
     <>
       {on(0) && (<>
       <h2>The brief</h2>
@@ -143,8 +148,8 @@ export default function WritingView() {
           </button>
         </p>
       )}
-      <p>{w.brief}</p>
-      <p className="small"><strong>Who you are writing for.</strong> {w.audience}</p>
+      <Prose as="p" text={w.brief} seen={writeSeen} />
+      <p className="small"><strong>Who you are writing for.</strong> <Prose text={w.audience} seen={writeSeen} /></p>
 
       {/* On the brief, not further in: this is where a reader decides whether
           to do the exercise on paper, and the old placement put the only print
@@ -196,9 +201,9 @@ export default function WritingView() {
           <div className="arr-row is-static" key={i}>
             <span className="arr-num">{i + 1}</span>
             <span>
-              <span className="arr-title">{s.step}</span>
-              <span className="arr-meta">{s.prompt}</span>
-              <span className="arr-meta"><em>Why:</em> {s.why}</span>
+              <span className="arr-title"><Prose text={s.step} seen={writeSeen} /></span>
+              <span className="arr-meta"><Prose text={s.prompt} seen={writeSeen} /></span>
+              <span className="arr-meta"><em>Why:</em> <Prose text={s.why} seen={writeSeen} /></span>
             </span>
           </div>
         ))}
@@ -393,11 +398,12 @@ export default function WritingView() {
           </button>
         </p>
       )}
-      <p className="small">{w.source}</p>
-      <p className="small"><strong>Check your own work.</strong> {w.verify}</p>
+      <p className="small"><Prose text={w.source} seen={writeSeen} /></p>
+      <p className="small"><strong>Check your own work.</strong> <Prose text={w.verify} seen={writeSeen} /></p>
       <p className="small">Last verified {w.lastVerified}.</p>
       </>)}
     </>
+    </TermLayer>
   );
 
   return (

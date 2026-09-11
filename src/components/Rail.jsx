@@ -14,6 +14,13 @@ const NAV = [
   { to: '/statutes',   label: 'Statutes' },
   { to: '/writing',    label: 'Writing' },
   { to: '/books',      label: 'Reading' },
+  // Reachable before this only from a Home tile, the `/` palette and see-also
+  // links inside popovers — i.e. only by a reader who already knew it existed.
+  // A reader stuck on a word is the least likely of anyone to go hunting for
+  // the page that defines words, so it sits in the rail beside Reading, which
+  // is the other reference surface. Not added to PHONE: that bar holds four
+  // and a fifth would clip.
+  { to: '/glossary',   label: 'Glossary' },
   { to: '/progress',   label: 'Progress' },
   { to: '/seals',      label: 'Seals',    badge: 'seals' },
   { to: '/settings',   label: 'Settings' },

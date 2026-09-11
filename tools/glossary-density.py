@@ -81,15 +81,17 @@ HEAVY_SHARE = 0.30
 # and `reveal`, which are. A table's `caption` and a steps block's `title` are
 # plain text too; only the cells, the note and the source line are prose.
 #
-# Section `keypoint` is NOT here. LessonView renders it as `<p className="lede">
-# {sec.keypoint}</p>` — plain interpolation, no Prose — so it carries no marks
-# however legal its vocabulary.
+# Section `h` and `keypoint` are not block types, so they are not in this table
+# at all — they are handled in `main` below, where the section is walked. Both
+# render through Prose now. They used to be plain interpolation, and the note
+# that used to sit here said so; the keypoint in particular was the line
+# carrying a whole section to a reader on a phone, unglossed.
 PROSE_FIELDS = {
     "rule":       ("text", "source"),
     "example":    ("text",),
     "caution":    ("text",),
     "list":       ("items",),
-    "table":      ("rows", "note", "source"),
+    "table":      ("caption", "rows", "note", "source"),
     "steps":      ("items.text",),
     "compare":    ("left.items", "right.items"),
     # `reveal` and `why` are left out on purpose. Interactive.jsx mounts them
@@ -103,6 +105,12 @@ PROSE_FIELDS = {
     # visible one, so the page showed a mark the model had already spent.
     "predict":    ("prompt",),
     "checkpoint": ("q",),
+    # A figure's caption reaches Prose even though `Plate` itself never sees a
+    # `seen` map: Blocks.jsx hands it a NODE — `caption={<Prose …/>}` — rather
+    # than a string, so the marking happens before Plate is called. The scene
+    # inside the plate is still unlinked, which is why this is one field and not
+    # the whole block.
+    "figure":     ("caption",),
 }
 # Blocks.jsx has no `case 'p'`: a paragraph block carries `t: "p"` and reaches
 # the switch's `default`, which renders `<Prose as="p" text={b.text}>`. So does
@@ -113,7 +121,10 @@ PROSE_FIELDS = {
 DEFAULT_FIELDS = ("text",)
 # Rendered, but never through Prose. Named so that a reader of this file can see
 # the difference is deliberate rather than an omission.
-UNLINKED = {"chart", "diagram", "figure"}
+# Chart and Diagram are still rendered with no `seen` map, so nothing in them
+# marks. `figure` used to be here with them and is not any more — see the
+# PROSE_FIELDS entry above.
+UNLINKED = {"chart", "diagram"}
 
 
 def build():
@@ -221,30 +232,76 @@ def main(argv):
             note_marks = 0
             if lesson.get("source") and lesson.get("verify"):
                 note_marks = len(marks(lesson["verify"], rx, alias_to_id, {}, set()))
-            for sec in lesson.get("sections", []):
+            # The lesson header renders before any section does, and it is
+            # prose now: the standfirst (`summary`) and the plate caption both
+            # go through Prose with the SAME `seen` map the sections use. So
+            # they claim their terms first, and a term introduced in the
+            # standfirst does not mark again in section one. Order matters here
+            # in a way it does not for the source note below, which has no
+            # `seen` at all.
+            standfirst = lesson.get("summary")
+            plate_caption = lesson.get("plateCaption")
+            header = [t for t in (standfirst, plate_caption) if isinstance(t, str) and t]
+            sheet_marks = 0
+            for text in header:
+                sheet_marks += len(marks(text, rx, alias_to_id, sheet_seen, set()))
+            for idx, sec in enumerate(lesson.get("sections", [])):
                 # Fresh per section: that is what `[id, stepping ? step : 'all']`
                 # does in LessonView, and focus mode is the default.
                 seen = {}
                 shown = 0
+                # Count marks, do not count `len(seen)`. They were the same
+                # number until the plate arrived in the reader: a term marks
+                # once per `seen`, so one entry meant one `<Term>` on the page.
+                # But `tokenise` is idempotent rather than one-shot — a claim is
+                # keyed by the TEXT that made it, so the identical string
+                # rendered a second time re-marks its own terms. That is what
+                # makes React StrictMode's double render survivable, and it
+                # means a passage shown twice puts two buttons on the page
+                # against one entry in the map.
+                sec_marks = 0
+                # Stepping resets `seen`, and the header is outside the stepped
+                # region — so it re-renders against the new map and claims its
+                # terms again, once per step. This is the stepped column only;
+                # `sheet_seen` took them once, above.
+                for text in header:
+                    sec_marks += len(marks(text, rx, alias_to_id, seen, set()))
+                # Then the section's own furniture, in render order: the heading,
+                # then the keypoint (stepped only — LessonView guards it on
+                # `stepping`, so it is absent from the sheet), then the body.
+                if isinstance(sec.get("h"), str) and sec["h"]:
+                    sheet_marks += len(marks(sec["h"], rx, alias_to_id, sheet_seen, set()))
+                    sec_marks += len(marks(sec["h"], rx, alias_to_id, seen, set()))
+                if isinstance(sec.get("keypoint"), str) and sec["keypoint"]:
+                    sec_marks += len(marks(sec["keypoint"], rx, alias_to_id, seen, set()))
+                # The reader shows the lesson plate again at the head of its
+                # first section, because the hero it normally lives in is
+                # `display: none` behind the overlay. Same string, so it marks
+                # again rather than finding its terms taken — which is why the
+                # model was short by one or two on section one of every lesson
+                # with a caption, and exactly right on every later section.
+                if idx == 0 and isinstance(plate_caption, str) and plate_caption:
+                    sec_marks += len(marks(plate_caption, rx, alias_to_id, seen, set()))
                 for block in sec.get("body") or []:
                     for text in passages(block):
-                        marks(text, rx, alias_to_id, sheet_seen, set())
+                        sheet_marks += len(marks(text, rx, alias_to_id, sheet_seen, set()))
                         # A fresh `local` per passage, because `tokenise` makes
                         # one per call and it is called once per string. Sharing
                         # it across a block modelled a rule the renderer does
                         # not have, and undercounted every table.
                         got = marks(text, rx, alias_to_id, seen, set())
+                        sec_marks += len(got)
                         shown += len(visible(got))
                         if got:
                             counts.append((len(visible(got)), len(got),
                                            len(text.split()), text[:60]))
-                per_section.append((len(seen) + note_marks, shown))
+                per_section.append((sec_marks + note_marks, shown))
             if not counts:
                 continue
             nums = [v for v, _, _, _ in counts]
             heavy = sum(1 for c in nums if c >= HEAVY) / len(nums)
             rows.append((lesson["id"], per_section, max(nums), heavy, len(nums),
-                         len(sheet_seen) + note_marks))
+                         sheet_marks + note_marks))
             for v, total, words, where in counts:
                 if v >= WALL_MARKS and words < v * WALL_WORDS_PER_MARK:
                     over_para.append((lesson["id"], v, total, words, where,

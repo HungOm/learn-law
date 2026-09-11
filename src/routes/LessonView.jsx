@@ -159,7 +159,7 @@ export default function LessonView() {
       <div className="wrap sheet" data-module={meta.moduleId}>
         <p className="small taplink-row"><Link className="taplink" to="/lessons">← Lessons</Link></p>
         <h1>{meta.title}</h1>
-        <p className="lede">{meta.summary}</p>
+        <Prose as="p" className="lede" text={meta.summary} seen={seen} />
         <p className="small" role="status">Fetching the text of this lesson…</p>
       </div>
     );
@@ -204,7 +204,7 @@ export default function LessonView() {
                   className="lsec-h"
                   ref={stepping ? headRef : null}
                   tabIndex={stepping ? -1 : undefined}
-                >{sec.h}</h2>
+                ><Prose text={sec.h} seen={seen} /></h2>
               </div>
               {/* The invitation to read one section at a time, offered where the
                   reader is rather than only at the foot of the lesson.
@@ -243,7 +243,7 @@ export default function LessonView() {
                   only: down a continuous column it would repeat under every
                   heading and read as noise, but on a phone it is the line that
                   tells a reader what they are about to learn. */}
-              {stepping && sec.keypoint && <p className="lede">{sec.keypoint}</p>}
+              {stepping && sec.keypoint && <Prose as="p" className="lede" text={sec.keypoint} seen={seen} />}
               {(sec.body || []).map((b, k) => <Block key={k} b={b} seen={seen} />)}
               {/* Marking is explicit, never inferred from scrolling. `lessons.js`
                   refuses to guess at a reader's attention and this is the same
@@ -262,6 +262,19 @@ export default function LessonView() {
                 </button>
               </p>
             </motion.section>
+  );
+
+  // One definition, rendered in two places — the hero on the continuous page
+  // and the head of the first section inside the reader. They were separate
+  // calls and had already drifted: the page copy glossed its caption through
+  // `Prose` and the reader copy passed the raw string, so the glossary worked
+  // on the surface that is not the default and not on the one that is. The
+  // plate itself went missing from the reader the same way once before.
+  const lessonPlate = (
+    <Plate
+      scene={plateFor(l)}
+      caption={l.plateCaption && <Prose text={l.plateCaption} seen={seen} />}
+    />
   );
 
   const closeReader = () => {
@@ -318,8 +331,8 @@ export default function LessonView() {
             </p>
             <h1 className="lesson-title" ref={titleRef} tabIndex={-1}>{l.title}</h1>
             <div className="module-rule" aria-hidden="true" />
-            <p className="lesson-standfirst">{l.summary}</p>
-            <Plate scene={plateFor(l)} caption={l.plateCaption} />
+            <Prose as="p" className="lesson-standfirst" text={l.summary} seen={seen} />
+            {lessonPlate}
             <div className="lesson-facts">
               <span className="lesson-fact">{sections.length} sections</span>
               {cards.length > 0 && <span className="lesson-fact">{plural(cards.length, 'card')} planted</span>}
@@ -577,9 +590,7 @@ export default function LessonView() {
                     a plate was shipped and never seen, the same way the reading
                     list was. It belongs at the head of the first section, which
                     is where it was always meant to be met. */}
-                {activeIdx === 0 && (
-                  <Plate scene={plateFor(l)} caption={l.plateCaption} />
-                )}
+                {activeIdx === 0 && lessonPlate}
                 {renderSection(active, activeIdx)}
               </div>
             </div>

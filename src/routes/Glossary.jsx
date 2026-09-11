@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TERMS, KINDS, byId } from '../lib/glossary.js';
-import { Prose } from '../components/Term.jsx';
+import { Prose, TermLayer } from '../components/Term.jsx';
 
 /**
  * The glossary in full.
@@ -48,6 +48,15 @@ export default function Glossary() {
     // columns are the point of the page — a reader who came here came to
     // compare them. Two columns of prose need more than one column's measure,
     // so this is the dashboard pane rather than the old 54rem middle width.
+    //
+    // Wrapped in TermLayer because this page links terms too. `Going deeper`
+    // runs through <Prose>, so its own text carries marked-up terms — and until
+    // this wrapper existed they were dead buttons. `OpenCtx` defaults to a no-op
+    // `setOpen`, so a term outside a provider renders with the full dotted
+    // underline, takes a click, and does nothing: the one page a reader reaches
+    // when they are already stuck was the one page where the glossary did not
+    // answer. It failed silently because a no-op default cannot throw.
+    <TermLayer>
     <div className="wrap wrap--dash">
       <h1>Glossary</h1>
       <p className="lede">
@@ -139,5 +148,6 @@ export default function Glossary() {
         live. Neither is a substitute for the section or the case it names.
       </p>
     </div>
+    </TermLayer>
   );
 }

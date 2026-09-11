@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useMemo} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useStudy } from '../state/StudyContext.jsx';
 import * as statutes from '../lib/statutes.js';
 import { Notice } from '../components/Bits.jsx';
 import NotFound from './NotFound.jsx';
 import ActText from '../components/ActText.jsx';
+import { Prose, TermLayer } from '../components/Term.jsx';
 
 /**
  * One provision: where to read it, what to look for, and questions answered
@@ -18,6 +19,12 @@ export default function StatuteView() {
   const { id } = useParams();
   const { cat, read } = useStudy();
   const x = statutes.byId(id);
+  // Above every early return: hooks must run in the same order on every
+  // render, and placing this next to the JSX that uses it put it after the
+  // not-found and loading branches — React error #310, and the surface
+  // rendered no terms at all. Caught by opening the page rather than by the
+  // build, which was green throughout.
+  const seen = useMemo(() => new Map(), [x?.id]);
   const [shown, setShown] = useState({});
 
   if (!x) return <NotFound />;
@@ -42,6 +49,7 @@ export default function StatuteView() {
   }
 
   return (
+    <TermLayer>
     <div className="wrap sheet" data-module={x.moduleId}>
       <p className="small taplink-row"><Link className="taplink" to="/statutes">← Statutes</Link></p>
 
@@ -52,10 +60,10 @@ export default function StatuteView() {
       </p>
 
       <h2>Why this one</h2>
-      <p>{x.why}</p>
+      <Prose as="p" text={x.why} seen={seen} />
 
       <h2>Where to read it</h2>
-      <p>{x.find}</p>
+      <Prose as="p" text={x.find} seen={seen} />
       {/* The prose above tells a reader to search for the Act. This opens it.
           It does not carry the text: see the note in ActText.jsx for the two
           measurements behind that, and src/lib/statutes.js for why a stored
@@ -68,8 +76,8 @@ export default function StatuteView() {
           <div className="arr-row is-static" key={i}>
             <span className="arr-num">{i + 1}</span>
             <span>
-              <span className="arr-title">{r.passage}</span>
-              <span className="arr-meta">{r.look_for}</span>
+              <span className="arr-title"><Prose text={r.passage} seen={seen} /></span>
+              <span className="arr-meta"><Prose text={r.look_for} seen={seen} /></span>
             </span>
           </div>
         ))}
@@ -79,10 +87,10 @@ export default function StatuteView() {
       {x.questions.map((q, i) => (
         <div className="checkpointblock" key={i}>
           <span className="xlabel">Answer before you look</span>
-          <p className="predict-prompt">{q.q}</p>
+          <Prose as="p" className="predict-prompt" text={q.q} seen={seen} />
           {shown[i] ? (
             <div className="predict-reveal" role="status">
-              <p>{q.model}</p>
+              <Prose as="p" text={q.model} seen={seen} />
             </div>
           ) : (
             <p>
@@ -106,5 +114,6 @@ export default function StatuteView() {
       <p className="small">Last verified {x.lastVerified}. Legislation is amended; if the Act
         differs from this page, the Act is right.</p>
     </div>
+    </TermLayer>
   );
 }

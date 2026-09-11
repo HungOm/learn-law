@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, useMemo} from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useStudy } from '../state/StudyContext.jsx';
@@ -7,6 +7,7 @@ import { ARENA_LIVES, ARENA_SECONDS } from '../lib/quiz.js';
 import { loadQuizPool } from '../lib/content.js';
 import { CountUp, ProgressRing } from '../components/Bits.jsx';
 import { burstFrom, fanfare, buzz } from '../lib/fx.js';
+import { Prose, TermLayer } from '../components/Term.jsx';
 
 const STAGE = { ready: 'ready', playing: 'playing', over: 'over' };
 
@@ -119,6 +120,9 @@ export default function Arena() {
   }, [secs, stage]);
 
   const q = stage === STAGE.playing ? deck[i % Math.max(1, deck.length)] : null;
+  // Per question, as in QuizRun. Options stay unglossed for the same reason
+  // there: they are <button>s, and a term is a <button>.
+  const arenaSeen = useMemo(() => new Map(), [q?.id]);
 
   const finish = useCallback(async (finalLives, finalCorrect, finalBest, finalAnswered) => {
     setStage(STAGE.over);
@@ -266,6 +270,7 @@ export default function Arena() {
   }
 
   return (
+    <TermLayer>
     <div className={`wrap sheet arena${urgent ? ' is-urgent' : ''}`} ref={boardRef}>
       {/* Polite, so a threshold warning never interrupts the question a reader
           is part-way through hearing. */}
@@ -322,7 +327,7 @@ export default function Arena() {
             {/* Once the run starts, the intro's h1 is gone and the question is
                 the only subject on screen — so it is the heading, as on the
                 review card and the lesson quiz. Styled by .quiz-q. */}
-            <h1 className="quiz-q">{q.q}</h1>
+            <Prose as="h1" className="quiz-q" text={q.q} seen={arenaSeen} />
             <div className="quiz-options">
               {q.options.map((text, n) => {
                 const decided = picked !== null;
@@ -357,12 +362,13 @@ export default function Arena() {
                 <motion.p
                   className="arena-why"
                   initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
-                >{q.why}</motion.p>
+                ><Prose text={q.why} seen={arenaSeen} /></motion.p>
               )}
             </AnimatePresence>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
+    </TermLayer>
   );
 }

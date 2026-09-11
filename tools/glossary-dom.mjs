@@ -152,10 +152,11 @@ try {
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   await page.goto(base, { waitUntil: 'load' });
   await page.evaluate(() => new Promise((res, rej) => {
-    const o = indexedDB.open('lawstudy')  // no version: the harness seeds an existing
-      // database, it does not own the schema. Naming a version here made this
-      // a second copy of DB_VERSION that nothing kept in step — when db.js went
-      // to 2, every gate holding a 1 died with VersionError mid-walk.;
+    // No version: the harness seeds an existing database, it does not own the
+    // schema. Naming a version here made this a second copy of DB_VERSION that
+    // nothing kept in step — when db.js went to 2, every gate holding a 1 died
+    // with VersionError mid-walk.
+    const o = indexedDB.open('lawstudy');
     o.onerror = () => rej(o.error);
     o.onsuccess = () => {
       const t = o.result.transaction('meta', 'readwrite');
@@ -180,6 +181,19 @@ try {
     await page.waitForSelector('.lsec-h', { timeout: 15000 }).catch(() => {});
     const model = expected.get(id);
     if (!model) continue;
+    // Wait for a control that only ONE of the two modes renders before asking
+    // which mode this is. `.lsec-h` arriving is not enough: the focus overlay
+    // mounts through framer-motion, so for a beat the section heading is on the
+    // page and the Next button is not — and reading `.stepper-btn--next` in
+    // that window says "sheet" about a page that is stepping. Every one of the
+    // eleven surviving diffs was that, and they all wore the same signature:
+    // a DOM count far BELOW the model's sheet total, because what was actually
+    // being counted was one section of a lesson compared against all of them.
+    // `.stepper-mode-btn` ("Read one section at a time") is the mirror control
+    // and renders only when `!stepping`, so waiting for either settles the
+    // question instead of racing it.
+    await page.waitForSelector('.stepper-btn--next, .stepper-mode-btn', { timeout: 10000 })
+      .catch(() => {});
     const stepped = await page.locator('.stepper-btn--next').count() > 0;
     const want = stepped ? model.steps : [model.sheet];
     const got = [];

@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useMemo} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useStudy } from '../state/StudyContext.jsx';
 import * as extracts from '../lib/extracts.js';
 import { Notice } from '../components/Bits.jsx';
 import NotFound from './NotFound.jsx';
+import { Prose, TermLayer } from '../components/Term.jsx';
 
 /**
  * One case: what to read, what to look for, and questions to answer before the
@@ -18,6 +19,12 @@ export default function CaseView() {
   const { id } = useParams();
   const { cat, read } = useStudy();
   const x = extracts.byId(id);
+  // Above every early return: hooks must run in the same order on every
+  // render, and placing this next to the JSX that uses it put it after the
+  // not-found and loading branches — React error #310, and the surface
+  // rendered no terms at all. Caught by opening the page rather than by the
+  // build, which was green throughout.
+  const seen = useMemo(() => new Map(), [x?.id]);
   const [shown, setShown] = useState({});
 
   if (!x) return <NotFound />;
@@ -45,6 +52,7 @@ export default function CaseView() {
   }
 
   return (
+    <TermLayer>
     <div className="wrap" data-module={x.moduleId}>
       <p className="small taplink-row"><Link className="taplink" to="/cases">← Case reading</Link></p>
 
@@ -55,10 +63,10 @@ export default function CaseView() {
       </p>
 
       <h2>Why this one</h2>
-      <p>{x.why}</p>
+      <Prose as="p" text={x.why} seen={seen} />
 
       <h2>Where to find it</h2>
-      <p>{x.find}</p>
+      <Prose as="p" text={x.find} seen={seen} />
 
       <h2>What to look for</h2>
       <div className="arrangement">
@@ -66,8 +74,8 @@ export default function CaseView() {
           <div className="arr-row is-static" key={i}>
             <span className="arr-num">{i + 1}</span>
             <span>
-              <span className="arr-title">{r.passage}</span>
-              <span className="arr-meta">{r.look_for}</span>
+              <span className="arr-title"><Prose text={r.passage} seen={seen} /></span>
+              <span className="arr-meta"><Prose text={r.look_for} seen={seen} /></span>
             </span>
           </div>
         ))}
@@ -77,10 +85,10 @@ export default function CaseView() {
       {x.questions.map((q, i) => (
         <div className="checkpointblock" key={i}>
           <span className="xlabel">Answer before you look</span>
-          <p className="predict-prompt">{q.q}</p>
+          <Prose as="p" className="predict-prompt" text={q.q} seen={seen} />
           {shown[i] ? (
             <div className="predict-reveal" role="status">
-              <p>{q.model}</p>
+              <Prose as="p" text={q.model} seen={seen} />
             </div>
           ) : (
             <p>
@@ -106,5 +114,6 @@ export default function CaseView() {
       <p className="small"><strong>Check before you rely on it.</strong> {x.verify}</p>
       <p className="small">Last verified {x.lastVerified}.</p>
     </div>
+    </TermLayer>
   );
 }

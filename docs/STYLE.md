@@ -19,11 +19,46 @@ The first two set the *language*. The third sets the *depth*. Both are served
 by the same lesson — see **Two speeds** below. Never write down to anyone: the
 reader is intelligent and under-served, not slow.
 
+**All three are probably reading in a second or third language.** This is
+Malaysia. Most readers here learned in Malay, Mandarin or Tamil and meet English
+as the language the law happens to be written in, and that is true of the
+teenager and the returning revisitor as much as of the adult. It is a separate
+axis from schooling, and it is the one this document used to leave out — every
+reader above was defined by what they had been *taught*, never by which language
+they were being taught in.
+
+The difference is not theoretical, because the two readers need different help
+and only one of them was getting it. Missed schooling means you have not met the
+*concept*: what a burden of proof is, why a court is bound. Reading in a second
+language means you have not met the *word* — and the word may be an entirely
+ordinary one. A reader can follow the whole argument of a lesson on burden of
+proof and be stopped by "circumstances", "threshold", "assert", "appropriate".
+Nothing about that reader is slow; they are doing the harder version of the
+task, in a language they are still acquiring, and the vocabulary that defeats
+them is not the legal vocabulary. It is the academic English the legal
+vocabulary is explained in.
+
+So when you write:
+
+- **Prefer the ordinary word, and where you cannot, gloss it.** The glossary
+  carries a `word` tier for exactly this — plain academic English, marked
+  quietly so it does not turn the page into a field of underlines. If you use a
+  word like these and it is not in the glossary, add it.
+- **A definition may not need a second definition.** Explaining a term using
+  three more terms the reader does not have is not an explanation; it is a
+  redirect. This is checkable and it is going to be checked.
+- **Sentence length costs this reader more than it costs anyone else.** A
+  28-word sentence with two subordinate clauses is a memory exercise before it
+  is a comprehension one. The ≤16 median below is not a stylistic preference.
+
+What this reader does *not* need is simplification of the law. The concepts stay
+whole. It is the English carrying them that has to get out of the way.
+
 ## The register
 
 | Measure | Target |
 |---|---|
-| Flesch–Kincaid grade | **8–10** (currently the median is 11.0) |
+| Flesch–Kincaid grade | **8–10** (currently the median is 6.7) |
 | Median sentence | **≤ 16 words** |
 | Longest sentence | **≤ 30 words**, and rare |
 | Paragraph (`p` block) | **2–4 sentences** |
@@ -244,10 +279,19 @@ than a description of it. Reword it and you change what it asserts. So:
 
 **Do not edit the `text` of a `rule` block, and never remove its `source`.**
 
-Rule blocks are 13.8% of the prose and sit at reading grade 12.6, against 10.4
-for everything else. You are not accountable for that 12.6 — `tools/readability.py`
+Rule blocks are 8.6% of the prose and sit at reading grade 11.7, against 6.5
+for everything else. You are not accountable for that 11.7 — `tools/readability.py`
 excludes rule text from the `grade` column it gates on, and reports the blended
 figure separately as `+rule`.
+
+Note what that gap has become. When those numbers were 12.6 and 10.4 the rule
+block was a hard paragraph among firm ones. The prose has since come down to
+6.5 and the rule text has not moved, because it cannot — so the step up into a
+rule block is now **five grades inside a single lesson**, and the better the
+prose gets the taller that step becomes. The blended `+rule` figure hides it:
+rule text is under a tenth of the words, so folding it into a lesson's median
+moves that median by a few tenths of a grade. The average is fine. The reader's
+experience of *that paragraph* is not, and the average is not what they read.
 
 You are accountable for making the rule *land*. Where a rule block is hard,
 surround it:

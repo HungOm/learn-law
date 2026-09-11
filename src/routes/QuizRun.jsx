@@ -5,6 +5,7 @@ import { useStudy } from '../state/StudyContext.jsx';
 import * as quizLib from '../lib/quiz.js';
 import * as prog from '../lib/progression.js';
 import { QuizStandingLine } from '../components/Insight.jsx';
+import { Prose, TermLayer } from '../components/Term.jsx';
 import { loadLesson } from '../lib/content.js';
 import { CountUp, ProgressRing } from '../components/Bits.jsx';
 import { burstFrom, fanfare, buzz } from '../lib/fx.js';
@@ -70,6 +71,11 @@ export default function QuizRun() {
 
   const q = deck && deck[i];
   const finished = deck && i >= deck.length;
+
+  // One glossary `seen` map per question. Keyed on the question id rather than
+  // the index so a retake — which reshuffles the same deck — starts each
+  // question clean rather than inheriting whatever the previous order marked.
+  const seen = useMemo(() => new Map(), [q?.id]);
 
   const choose = useCallback(async (n) => {
     if (picked !== null || !q) return;
@@ -168,6 +174,23 @@ export default function QuizRun() {
   return (
     // A question and four options, all of it read for meaning: the reading
     // measure, on a sheet, not the dashboard pane.
+    //
+    // Glossed, which it was not until now. 443 of the 499 glossary terms occur
+    // in quiz questions, and every one of them was bare here while the same
+    // word a paragraph earlier in the lesson carried a definition. This is the
+    // highest-stakes comprehension moment in the app: a reader who cannot parse
+    // the stem cannot even guess.
+    //
+    // The `seen` map is per QUESTION, not per run — each question is its own
+    // screen, and a mark spent on question 3 is no use to a reader on question
+    // 7 who never saw it.
+    //
+    // Options are deliberately NOT glossed. `Option` is a <button>, and a term
+    // renders as a <button> too; nesting them is invalid and would break both
+    // the option's click and the popover. Interactive.jsx has always drawn the
+    // line in the same place for the same reason. Options are median six words,
+    // so the loss is small and the alternative is broken.
+    <TermLayer>
     <div className="wrap sheet quizrun" data-module={lesson.moduleId} ref={boardRef}>
       <div className="review-progress">
         <span className="crumb-row"><Link className="crumb" to="/quiz">← Quizzes</Link> {lesson.title}</span>
@@ -206,7 +229,7 @@ export default function QuizRun() {
               heading. Without it this route rendered no h1 at all — the same
               gap the review card had, fixed the same way and for the same
               reason. Styled by .quiz-q, not by the tag. */}
-          <h1 className="quiz-q">{q.q}</h1>
+          <Prose as="h1" className="quiz-q" text={q.q} seen={seen} />
 
           <div className="quiz-options">
             {q.options.map((text, n) => (
@@ -233,8 +256,8 @@ export default function QuizRun() {
                 <p className="quiz-why-head">
                   {picked === q.answer ? 'Right.' : 'Not that one.'}
                 </p>
-                <p>{q.why}</p>
-                {q.source && <p className="small quiz-src">{q.source}</p>}
+                <Prose as="p" text={q.why} seen={seen} />
+                {q.source && <p className="small quiz-src"><Prose text={q.source} seen={seen} /></p>}
                 <button className="btn-primary" onClick={next} autoFocus>
                   {i + 1 === deck.length ? 'See the result' : 'Next question'}
                 </button>
@@ -244,6 +267,7 @@ export default function QuizRun() {
         </motion.div>
       </AnimatePresence>
     </div>
+    </TermLayer>
   );
 }
 
@@ -282,8 +306,12 @@ function Result({ lesson, correct, total, xp, best, wrongIds, onRestart, unlocke
   const m = quizLib.medal(correct, total);
   const pct = Math.round((correct / total) * 100);
   const missed = (lesson.quiz || []).filter(q => wrongIds.includes(q.id));
+  // One map for the whole review list: it is a single screen read in one go,
+  // so a term marks on its first appearance and is left alone after.
+  const missedSeen = useMemo(() => new Map(), [wrongIds]);
 
   return (
+    <TermLayer>
     <div className="wrap sheet quizresult" data-module={lesson.moduleId}>
       <motion.div
         className="result-head"
@@ -349,9 +377,14 @@ function Result({ lesson, correct, total, xp, best, wrongIds, onRestart, unlocke
                 initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 + n * 0.06 }}
               >
-                <p className="missed-q">{q.q}</p>
-                <p className="missed-a">{q.options[q.answer]}</p>
-                <p className="small">{q.why}</p>
+                {/* Glossed here even though the same option text is not
+                    glossed during the run: on this screen it is a paragraph
+                    rather than a button, so a term can be a term. This is the
+                    screen a reader studies after getting it wrong, which is
+                    exactly when an unknown word is worth answering. */}
+                <Prose as="p" className="missed-q" text={q.q} seen={missedSeen} />
+                <Prose as="p" className="missed-a" text={q.options[q.answer]} seen={missedSeen} />
+                <Prose as="p" className="small" text={q.why} seen={missedSeen} />
               </motion.div>
             ))}
           </div>
@@ -370,5 +403,6 @@ function Result({ lesson, correct, total, xp, best, wrongIds, onRestart, unlocke
         say whether this stuck.
       </p>
     </div>
+    </TermLayer>
   );
 }

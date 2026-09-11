@@ -7,6 +7,7 @@ import * as lessonsLib from '../lib/lessons.js';
 import { CountUp, Stat, StatGrid } from '../components/Bits.jsx';
 import { fanfare, burstFrom, buzz } from '../lib/fx.js';
 import { plural } from '../lib/format.js';
+import { Prose, TermLayer } from '../components/Term.jsx';
 
 const GRADE_KEYS = ['1', '2', '3', '4'];
 
@@ -34,6 +35,12 @@ export default function Review() {
 
   const state = queue && queue[i];
   const card = state ? cat.byId.card[state.id] : null;
+  // Above every early return: hooks must run in the same order on every
+  // render, and placing this next to the JSX that uses it put it after the
+  // not-found and loading branches — React error #310, and the surface
+  // rendered no terms at all. Caught by opening the page rather than by the
+  // build, which was green throughout.
+  const seen = useMemo(() => new Map(), [card?.id]);
   const preview = useMemo(() => (state ? sched.preview(state) : null), [state]);
   const done = queue && i >= queue.length;
 
@@ -118,6 +125,7 @@ export default function Review() {
   const pct = Math.round((i / queue.length) * 100);
 
   return (
+    <TermLayer>
     // This screen had no pane at all: the flip card ran the full width of the
     // main column, so on a wide screen a one-line question was set across a
     // metre of glass. It is a card read for meaning, so it takes the reading
@@ -153,13 +161,13 @@ export default function Review() {
                 Without it the review screen — the surface a reader spends most
                 of their time on — offered a screen reader no heading at all to
                 orient by. Styled by .card-front, not by the tag. */}
-            <h1 className="card-front">{card.front}</h1>
+            <Prose as="h1" className="card-front" text={card.front} seen={seen} />
             <p className="keyhint">Space or Enter to reveal. Try to answer out loud first.</p>
           </div>
           <div className="flip-face flip-back">
             <p className="card-kind">answer</p>
-            <p className="card-back-text">{card.back}</p>
-            {card.note && <p className="card-note">{card.note}</p>}
+            <Prose as="p" className="card-back-text" text={card.back} seen={seen} />
+            {card.note && <Prose as="p" className="card-note" text={card.note} seen={seen} />}
             {/* This one DOES take the exemption, and the measurement is why:
                 the link sits after the source citation and the words "· from"
                 in one running line (215x15 at 1920, 270x35 when it wraps at
@@ -168,7 +176,7 @@ export default function Review() {
                 containing it taller. Marked rather than left bare, so the next
                 audit sweep reads a decision instead of a defect. */}
             <p className="card-source">
-              {card.source}
+              <Prose text={card.source} seen={seen} />
               {lesson && <> · from <Link className="tap-exempt" to={`/lesson/${lesson.id}`}>{lesson.title}</Link></>}
             </p>
           </div>
@@ -239,6 +247,7 @@ export default function Review() {
         </p>
       )}
     </div>
+    </TermLayer>
   );
 }
 

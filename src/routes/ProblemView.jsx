@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, useMemo} from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useStudy } from '../state/StudyContext.jsx';
@@ -11,6 +11,7 @@ import { fanfare } from '../lib/fx.js';
 import { copyText, daysAgo, fmtClock, plural, round1 } from '../lib/format.js';
 import PrintSheet from '../components/PrintSheet.jsx';
 import NotFound from './NotFound.jsx';
+import { Prose, TermLayer } from '../components/Term.jsx';
 
 const EMPTY_RUN = { stage: 'read', text: '', startedAt: null, elapsedMs: 0, predicted: null, awarded: {} };
 
@@ -19,6 +20,12 @@ export default function ProblemView() {
   const navigate = useNavigate();
   const { cat, award, toast } = useStudy();
   const p = cat.byId.problem[id];
+  // Above every early return: hooks must run in the same order on every
+  // render, and placing this next to the JSX that uses it put it after the
+  // not-found and loading branches — React error #310, and the surface
+  // rendered no terms at all. Caught by opening the page rather than by the
+  // build, which was green throughout.
+  const problemSeen = useMemo(() => new Map(), [p?.id]);
   // Which lesson sends a reader here. Problems carry a moduleId but no lesson,
   // and a marker holding the printed sheet needs to know the topic it belongs
   // to, so it is read off the lesson that prepares it.
@@ -127,13 +134,17 @@ export default function ProblemView() {
 
   const guided = p.kind === 'guided';
   const factsInner = (
+    <TermLayer>
     <div className="facts">
       <p className="card-kind">
         {guided ? '' : `${p.kind} · `}{plural(p.minutes, 'minute')} · {total} marks
       </p>
-      {(p.scenario || []).map((t, i) => <p key={i}>{t}</p>)}
-      <p className="task"><strong>{p.task}</strong></p>
+      {(p.scenario || []).map((t, i) => (
+        <Prose as="p" key={i} text={t} seen={problemSeen} />
+      ))}
+      <p className="task"><strong><Prose text={p.task} seen={problemSeen} /></strong></p>
     </div>
+    </TermLayer>
   );
   // A guided problem is a rehearsal, and the frame says so. See
   // components/Rehearsal.jsx — sunk, dashed, and never a signal colour.
