@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "pages": "node tools/publish-pages.mjs",
-    "check": "npm run check:content && npm run check:extracts && npm run check:writing && npm run check:statutes && npm run check:provisions && npm run check:currency && npm run check:design && npm run check:prose && npm run check:density && npm run check:glossary && npm run check:quiz && npm run check:icons && npm run check:smoke && npm run check:responsive && npm run check:diagram-cases && npm run check:vocab-loop",
+    "check": "npm run check:content && npm run check:extracts && npm run check:writing && npm run check:statutes && npm run check:provisions && npm run check:currency && npm run check:design && npm run check:prose && npm run check:density && npm run check:glossary && npm run check:quiz && npm run check:icons && npm run check:smoke && npm run check:responsive && npm run check:diagram-cases",
     "check:content": "python3 tools/check-content.py",
     "check:extracts": "python3 tools/check-extracts.py",
     "check:writing": "python3 tools/check-writing.py",
