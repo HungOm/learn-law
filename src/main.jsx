@@ -35,7 +35,21 @@ createRoot(document.getElementById('root')).render(
         "user" disables transform and layout animations, which are the ones that
         cause trouble, and keeps opacity and colour, which do not. */}
     <MotionConfig reducedMotion="user">
-      <HashRouter>
+      {/* Opting in to the two v7 behaviours React Router warns about, rather
+          than carrying two console warnings on every page load for the life of
+          the app. A warning nobody can act on is noise, and noise is what a
+          real error hides in — the reading-list bug tonight was found in a
+          console that had to be read past these two first.
+
+          Both are no-ops for this app, which is why they are safe to take now
+          rather than at the upgrade. `v7_relativeSplatPath` changes how a
+          RELATIVE link resolves inside a splat route; the only splat route here
+          is the not-found fallback and its one link is absolute.
+          `v7_startTransition` wraps router state updates in startTransition,
+          which is the v7 default and, verified in the browser, leaves the page
+          transitions and the lazily-imported module chunks working as they
+          were. */}
+      <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <StudyProvider>
           <App />
         </StudyProvider>
