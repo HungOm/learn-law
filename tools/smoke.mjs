@@ -65,10 +65,10 @@ const CHROME_CANDIDATES = [
 
 let chromium;
 try { ({ chromium } = await import('playwright-core')); }
-catch { console.log('smoke: SKIPPED — playwright-core not installed (npm i)'); process.exit(0); }
+catch { console.error('smoke: CANNOT RUN — playwright-core not installed (npm i). This is not a pass: install it and re-run.'); process.exit(1); }
 
 const exe = CHROME_CANDIDATES.find(existsSync);
-if (!exe) { console.log('smoke: SKIPPED — no Chrome found'); process.exit(0); }
+if (!exe) { console.error('smoke: CANNOT RUN — no Chrome found. This is not a pass: install it and re-run.'); process.exit(1); }
 
 // Every asset index.html names must exist before we serve it.
 const distIndex = 'dist/index.html';

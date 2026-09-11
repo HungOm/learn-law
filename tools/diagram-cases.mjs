@@ -88,9 +88,9 @@ const CHROME_CANDIDATES = [
 ];
 let chromium;
 try { ({ chromium } = await import('playwright-core')); }
-catch { console.log('diagram-cases: SKIPPED — playwright-core not installed (npm i)'); process.exit(0); }
+catch { console.error('diagram-cases: CANNOT RUN — playwright-core not installed (npm i). This is not a pass: install it and re-run.'); process.exit(1); }
 const exe = CHROME_CANDIDATES.find(existsSync);
-if (!exe) { console.log('diagram-cases: SKIPPED — no Chrome found'); process.exit(0); }
+if (!exe) { console.error('diagram-cases: CANNOT RUN — no Chrome found. This is not a pass: install it and re-run.'); process.exit(1); }
 if (!existsSync(join(ROOT, 'tools/fixtures/diagram-cases.html'))) {
   console.error('diagram-cases: FAILED — fixture missing'); process.exit(1);
 }

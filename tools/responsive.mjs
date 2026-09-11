@@ -135,10 +135,10 @@ const EPS = 0.5;
 
 let chromium;
 try { ({ chromium } = await import('playwright-core')); }
-catch { console.log('responsive: SKIPPED — playwright-core not installed (npm i)'); process.exit(0); }
+catch { console.error('responsive: CANNOT RUN — playwright-core not installed (npm i). This is not a pass: install it and re-run.'); process.exit(1); }
 
 const exe = CHROME_CANDIDATES.find(existsSync);
-if (!exe) { console.log('responsive: SKIPPED — no Chrome found'); process.exit(0); }
+if (!exe) { console.error('responsive: CANNOT RUN — no Chrome found. This is not a pass: install it and re-run.'); process.exit(1); }
 
 // Same stale-dist refusal as smoke.mjs, and for the same reason: if a build
 // lands while preview is serving, every route fails to fetch its chunks and
@@ -216,8 +216,25 @@ const builtAt = statSync(distIndex).mtime;
 // that had not reached the output. A real declaration moved two of the four
 // hashes. A control that cannot distinguish "did not fire" from "nothing
 // happened" proves nothing.
-const fingerprint = () => [...readFileSync(distIndex, 'utf8')
-  .matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)].map(m => m[1]).sort().join(' ');
+const DIST_ABSENT = '\u0000dist-absent';
+const fingerprint = () => {
+  try {
+    return [...readFileSync(distIndex, 'utf8')
+      .matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)].map(m => m[1]).sort().join(' ');
+  } catch {
+    // dist/index.html is gone. Line 148 refuses up front if it is missing at the
+    // start, so absence HERE means it vanished mid-run — almost always a peer's
+    // `vite build` having cleaned the output directory and not yet written it
+    // back. That is precisely "dist moved during the run", which is the one
+    // thing this guard exists to detect.
+    //
+    // It used to throw. So the guard's own trigger condition arrived as an
+    // uncaught ENOENT at the end of a completed walk, discarding a full run of
+    // findings and reporting a stack trace where it had a considered verdict to
+    // give. A detector that crashes on the event it detects is not a detector.
+    return DIST_ABSENT;
+  }
+};
 const startedWith = fingerprint();
 const ageMin = Math.round((Date.now() - builtAt.getTime()) / 60000);
 console.log(`measuring dist/ built ${builtAt.toTimeString().slice(0, 8)}` +
