@@ -65,7 +65,7 @@ function focusModule(pathname, cat) {
 }
 
 export default function App() {
-  const { ready, error, cat } = useStudy();
+  const { ready, slow, error, cat } = useStudy();
   const location = useLocation();
   useDocumentTitle();
 
@@ -107,6 +107,17 @@ export default function App() {
             <div className="wrap" role="status">
               <h1>Opening the file</h1>
               <p className="lede">One moment — reading your progress from this device.</p>
+              {/* Only after the watchdog in StudyProvider says this has taken
+                  far longer than reading a few rows should. Saying nothing is
+                  what makes a stall look like lost progress. */}
+              {slow && (
+                <div className="notice">
+                  <strong>This is taking longer than it should.</strong> Your progress is
+                  still on this device — the app cannot open it at the moment. Close any
+                  other tabs showing this site and reload the page. If it keeps happening,
+                  Settings has an export you can take to a fresh browser.
+                </div>
+              )}
             </div>
           )
           : (

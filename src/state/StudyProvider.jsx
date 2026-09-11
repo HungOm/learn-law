@@ -12,6 +12,21 @@ let toastSeq = 0;
 
 export function StudyProvider({ children }) {
   const [ready, setReady] = useState(false);
+  // A watchdog over the opening sequence, not a timeout on it.
+  //
+  // Opening the file is a handful of IndexedDB reads and should take
+  // milliseconds. When it does not finish at all the app shows "Opening the
+  // file — reading your progress from this device" for ever, and that screen is
+  // indistinguishable from lost progress to the person reading it. It happened
+  // tonight: a blocked upgrade fired neither success nor error, so the promise
+  // never settled and nothing threw.
+  //
+  // That specific cause is fixed in db.js. This is the general case, because
+  // the next silent stall will have a different cause and the same symptom.
+  // After eight seconds the loading screen gains a line saying what to try;
+  // `ready` is untouched, so a merely slow device still finishes normally and
+  // nothing is aborted or lost.
+  const [slow, setSlow] = useState(false);
   const [error, setError] = useState(null);
   const [gameState, setGameState] = useState(game.emptyState());
   const [counts, setCounts] = useState({ total: 0, due: 0, fresh: 0, learning: 0, review: 0 });
@@ -28,6 +43,12 @@ export function StudyProvider({ children }) {
   // that also completes a streak) must both land.
   const gameRef = useRef(gameState);
   gameRef.current = gameState;
+
+  useEffect(() => {
+    if (ready || error) return undefined;
+    const t = setTimeout(() => setSlow(true), 8000);
+    return () => clearTimeout(t);
+  }, [ready, error]);
 
   useEffect(() => {
     (async () => {
@@ -113,6 +134,7 @@ export function StudyProvider({ children }) {
   const value = useMemo(() => ({
     cat: catalogue,
     ready,
+    slow,
     error,
     game: gameState,
     rank: game.rankFor(gameState.xp),
@@ -143,7 +165,7 @@ export function StudyProvider({ children }) {
       gameRef.current = g;
       setGameState(g); setRead(r); setCounts(c); setBest(b);
     },
-  }), [ready, error, gameState, counts, read, best, unlockAll, toasts, burst, levelUp, seals,
+  }), [ready, slow, error, gameState, counts, read, best, unlockAll, toasts, burst, levelUp, seals,
        refreshCounts, refreshBest, setUnlockAll, markLesson, award, toast, celebrate,
        dismissLevelUp, dismissSeal, setDailyGoal]);
 
