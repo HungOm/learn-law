@@ -1,0 +1,234 @@
+[
+  {
+    "id": "st-pc-hurt",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-non-fatal",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Sections 319-320, 323 and 325 (with the dangerous-weapon aggravations at ss 324 and 326)",
+    "find": "In the Penal Code (Act 574), published free by the Attorney General's Chambers. Read the chapter on offences affecting the human body in order — the definitions come before the punishment provisions, and the aggravated forms sit immediately after each.",
+    "why": "This lesson teaches harm as a ladder rather than a single offence, and these are the rungs. Section 319 is the base definition; section 320 lists what counts as grievous exhaustively, not by example; and the punishment sections attach different consequences to each grade, doubled again where a dangerous weapon was used.",
+    "read": [
+      {
+        "passage": "Section 319's definition of hurt.",
+        "look_for": "It names three things — bodily pain, disease, infirmity — and any one of them is enough. Note that the definition does not require lasting harm."
+      },
+      {
+        "passage": "Section 320's list of what makes hurt grievous.",
+        "look_for": "Count the listed kinds. It is a closed list, not examples of a general idea of seriousness — an injury that feels grave but matches none of the listed kinds is not grievous hurt under this section."
+      },
+      {
+        "passage": "Sections 323 and 325, the punishment provisions.",
+        "look_for": "Compare the two terms available. The gap between them is the practical weight the grading carries."
+      },
+      {
+        "passage": "Sections 324 and 326, the aggravated forms.",
+        "look_for": "Note what triggers the aggravation — it is the means used, not a separate mental state — and how the available punishment moves as a result."
+      }
+    ],
+    "questions": [
+      {
+        "q": "An injury causes ten days of severe bodily pain but no fracture and no loss of any faculty. Simple or grievous hurt?",
+        "model": "Grievous — s 320 lists severe bodily pain or incapacity of ten days as one of its own listed kinds, so a fracture is not required. A good answer checks the injury against the list rather than against an intuition of seriousness."
+      },
+      {
+        "q": "Two accused cause identical injuries; one used a knife. Same charge?",
+        "model": "No. The dangerous-weapon aggravations attach to the means used, not to the resulting injury, so the same harm caused with a weapon falls under a different, more heavily punished provision than the same harm caused without one."
+      },
+      {
+        "q": "What has to be shown in addition to the injury itself before either offence is made out?",
+        "model": "The mental element the specific provision requires — hurt or grievous hurt caused voluntarily is defined separately from the injury alone, so an answer that stops at the injury has not finished the analysis."
+      }
+    ],
+    "trap": "Reasoning from the severity of the injury to the grade, rather than checking the injury against s 320's actual list. A very serious-seeming injury that matches none of the eight listed kinds is not grievous hurt under this section, whatever it looks like.",
+    "source": "Penal Code, ss 319, 320, 323, 324, 325, 326, verified against the AGC reprint as at 31 May 2023 for the lesson 'Offences against the person short of death'.",
+    "verify": "Read all six sections in the current reprint, and confirm none has been amended since 31 May 2023 by checking the AGC portal's list of amending Acts.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-pc-assault",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-non-fatal",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Sections 349-352 and 358",
+    "find": "In the same chapter of the Penal Code as hurt, but its own division — criminal force and assault are defined and punished separately from the hurt provisions, and the two are often confused.",
+    "why": "Assault does not require any injury at all — it is defined by what the victim was made to apprehend, not by what happened to them. A lesson that only teaches hurt leaves a reader unable to charge the case where nothing landed.",
+    "read": [
+      {
+        "passage": "Section 349's definition of force, and section 350's definition of criminal force.",
+        "look_for": "Force alone is not an offence. Note what has to be added to force before it becomes criminal force."
+      },
+      {
+        "passage": "Section 351's definition of assault, and its Explanation.",
+        "look_for": "The Explanation says words alone are not enough, however threatening. Note what has to accompany them."
+      },
+      {
+        "passage": "Section 352, the general punishment provision, and section 358, its provocation counterpart.",
+        "look_for": "The same structure as the hurt provisions — a base punishment and a reduced one where grave and sudden provocation was given. Compare the two terms."
+      }
+    ],
+    "questions": [
+      {
+        "q": "An accused raises a fist at the complainant but does not touch them. Any offence?",
+        "model": "Potentially assault under s 351 — no touching is required, only a gesture or preparation that causes the complainant to apprehend imminent criminal force. A good answer identifies assault rather than looking for a hurt provision that does not fit facts where nothing landed."
+      },
+      {
+        "q": "An accused shouts a violent threat from across a road with no gesture and no proximity. Assault?",
+        "model": "No, on the Explanation to s 351 — words alone are not assault, however threatening, unless accompanied by gestures or preparation that make the apprehension of imminent force real."
+      }
+    ],
+    "trap": "Treating assault as a lesser degree of hurt. It is a different offence with no injury requirement at all, defined by apprehension rather than outcome — confusing the two loses the case where nothing physical happened.",
+    "source": "Penal Code, ss 349, 350, 351, 352, 358, verified against the AGC reprint as at 31 May 2023 for the lesson 'Offences against the person short of death'.",
+    "verify": "Read all five sections in the current reprint, in particular the Explanation to s 351, and confirm no amendment since 31 May 2023.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-pc-s511",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-inchoate-participation",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Section 511",
+    "find": "In the chapter of the Penal Code headed Attempts to Commit Offences — the last chapter of the Code, and easy to overlook because most attempts are actually punished under the specific offence's own section rather than this one.",
+    "why": "Attempt is not one provision but two systems: particular offences that name their own attempt (attempted murder, attempted robbery), and this residual section that catches everything else. A reader who only knows the residual section will miss that most attempts are not tried under it at all.",
+    "read": [
+      {
+        "passage": "The opening words of s 511, and what triggers it.",
+        "look_for": "It applies only where no other provision already punishes an attempt at that offence. Note that this makes it a fallback, not the default route to an attempt charge."
+      },
+      {
+        "passage": "The sentencing cap the section sets.",
+        "look_for": "It is expressed as a fraction of the completed offence's longest term. Work out what that means in months or years for an offence you already know the punishment for."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why might a problem never actually require citing section 511?",
+        "model": "Because many offences — murder, robbery among them — carry their own named attempt provision, and where one exists it displaces s 511 entirely. A good answer checks the specific offence first rather than reaching for the general section by habit."
+      },
+      {
+        "q": "What does s 511 cap, and against what?",
+        "model": "The sentence available under s 511, capped at one-half of the longest term available for the completed offence — so the cap moves with whichever offence was attempted rather than being a fixed figure."
+      }
+    ],
+    "trap": "Citing s 511 for an offence that has its own named attempt provision. Check the specific offence first; the residual section only applies where nothing more specific exists.",
+    "source": "Penal Code, s 511, verified against the AGC reprint as at 31 May 2023 for the lesson 'Reaching people who did not do it themselves'.",
+    "verify": "Read s 511 in full in the current reprint, and check whether the specific offence in your problem names its own attempt provision before relying on s 511 at all.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-pc-abetment",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-inchoate-participation",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Sections 107-109",
+    "find": "In the Penal Code's own chapter on abetment, which comes before the substantive offences it is used to extend.",
+    "why": "Abetment is defined by what one person did in relation to another's offence, not by the offence itself, and this lesson's whole point is that abetment and common intention are proved differently — this is the half of that pair that turns on assistance or instigation rather than a shared plan.",
+    "read": [
+      {
+        "passage": "Section 107's three limbs — instigation, engaging in a conspiracy with an act done in pursuance of it, and intentional aiding.",
+        "look_for": "They are three separate routes to abetment, not cumulative requirements. Identify which limb the facts actually support before analysing further."
+      },
+      {
+        "passage": "Section 108's definition of an abettor.",
+        "look_for": "Note that a person can abet an act that would be an offence if committed by the abettor, even where the person doing it is not liable in the same way."
+      },
+      {
+        "passage": "Section 109, the general punishment provision, and the condition attached to it.",
+        "look_for": "It applies only where no other section already provides a punishment for that particular abetment. Compare this structure to s 511's own fallback condition."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What has to be shown for abetment by aiding, as opposed to abetment by instigation?",
+        "model": "Intentional aiding of the doing of the thing under the third limb of s 107 — a good answer distinguishes it from instigation, which requires actively urging or provoking the act rather than merely facilitating it."
+      },
+      {
+        "q": "When does s 109 supply the punishment for an abetment?",
+        "model": "Only where the abetted act is committed in consequence of the abetment and no other provision already fixes a punishment for that abetment — where a specific provision exists, s 109 does not apply, mirroring s 511's structure for attempt."
+      }
+    ],
+    "trap": "Treating the three limbs of s 107 as alternative labels for one idea. They require different proof — instigation is not conspiracy, and neither is intentional aiding — and an answer should name which limb the facts support.",
+    "source": "Penal Code, ss 107, 108, 109, verified against the AGC reprint as at 31 May 2023 for the lesson 'Reaching people who did not do it themselves'.",
+    "verify": "Read ss 107 to 109 in full in the current reprint, and confirm no amendment since 31 May 2023.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-pc-s34",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-inchoate-participation",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Section 34",
+    "find": "Among the Code's general explanations near the front, rather than in the abetment chapter — it is a rule about liability that applies across the Code, not a standalone offence.",
+    "why": "This is the other half of the pair this lesson keeps apart. Where abetment asks what one person did in relation to another's offence, s 34 asks what a group did together, and makes each answerable for the group's act rather than only their own.",
+    "read": [
+      {
+        "passage": "The section's own wording, and in particular the phrase furtherance of the common intention.",
+        "look_for": "Two things have to be shown together — a criminal act done by several persons, and that it was done in furtherance of an intention they shared. Note that presence alone is not enough without the shared intention."
+      },
+      {
+        "passage": "How the section differs from abetment, which this same lesson treats as a separate route.",
+        "look_for": "Abetment looks at what one person did in relation to another's offence; s 34 looks at a group's shared act. Write down which one the facts in front of you actually support, since the same conduct can sometimes be argued either way."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does section 34 make a member of a group liable for?",
+        "model": "The criminal act done by the group in furtherance of their common intention, as if that person had done the whole act alone — liability attaches to the group's act, not only to whatever that individual personally did."
+      },
+      {
+        "q": "Is mere presence at the scene, without more, enough to establish common intention?",
+        "model": "No — the section requires the act to be done in furtherance of an intention shared by that person, so presence has to be accompanied by evidence of participation in, or sharing of, that intention."
+      }
+    ],
+    "trap": "Treating common intention as satisfied by proof that several people were present when an offence occurred. Presence is not the same as a shared intention furthered by the act, and the section requires the latter.",
+    "source": "Penal Code, s 34, verified against the AGC reprint as at 31 May 2023 for the lesson 'Reaching people who did not do it themselves'.",
+    "verify": "Read s 34 in the current reprint, and check how the courts have applied 'furtherance of the common intention' to facts resembling your problem before relying on this summary.",
+    "lastVerified": "2026-09-11"
+  },
+  {
+    "id": "st-pc-sentencing",
+    "moduleId": "m04-criminal-law",
+    "lessonId": "l-sentencing",
+    "act": "Penal Code",
+    "actId": "penal-code",
+    "provision": "Sections 57, 71, 72, 75 and 75A (Chapter III)",
+    "find": "Chapter III of the Penal Code, headed Punishments — read the whole chapter rather than only these five sections, because most of it has been repealed and seeing what is left in context is the point.",
+    "why": "This lesson teaches four purposes of sentencing — retribution, deterrence, protection, rehabilitation — and states no section for them, because there is none: they are common law doctrine. What Chapter III actually contains, once the repealed provisions are set aside, is a handful of narrow technical rules, and this page is the record of that check rather than a claim that the chapter supplies what the last section discussed.",
+    "read": [
+      {
+        "passage": "The chapter heading and the sections marked as repealed.",
+        "look_for": "Most of ss 53 to 74 no longer exist. Note how much of a chapter titled Punishments has been removed, and what that tells you about where sentencing doctrine actually comes from."
+      },
+      {
+        "passage": "Section 57, on how a term of life imprisonment is treated for fraction calculations.",
+        "look_for": "This is a conversion rule, not a sentencing power. Note what figure it fixes life imprisonment as equivalent to."
+      },
+      {
+        "passage": "Sections 71 and 72.",
+        "look_for": "One prevents double punishment for a single act that falls under more than one provision; the other fixes which punishment applies where it is unclear which of several offences was actually committed. Neither sets a sentencing purpose — both are mechanical rules for a court applying the Code."
+      },
+      {
+        "passage": "Sections 75 and 75A, on repeat offenders.",
+        "look_for": "Note which chapters they apply to, and the difference between a doubled punishment and a mandatory minimum."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Where in the Penal Code would you look for a statement of the purposes of sentencing?",
+        "model": "Nowhere — Chapter III does not contain one. A good answer says the four purposes are common law doctrine, developed by the courts, not an enacted list, and that the chapter headed Punishments in fact contains a small number of unrelated technical rules rather than a purposes framework."
+      },
+      {
+        "q": "What does section 75A do, and how does it differ from section 75?",
+        "model": "Section 75A fixes a mandatory minimum, itself doubled, for a third-strike serious offence in the specified chapters; section 75 doubles the punishment otherwise available for repeat offenders in specified chapters. A good answer keeps the mandatory-minimum provision separate from the doubling provision rather than treating them as the same rule."
+      }
+    ],
+    "trap": "Citing a Penal Code section for 'the purposes of sentencing'. Checked directly against Chapter III: no such provision exists. The purposes are common law, and citing a statutory source for them is citing something that is not there.",
+    "source": "Penal Code, Chapter III, verified against the AGC reprint as at 31 May 2023 for the lesson 'After conviction: what a court may impose'. This is a negative finding as much as a positive one — the absence of a general sentencing-purposes provision was confirmed by reading the chapter, not assumed from its silence elsewhere.",
+    "verify": "Read the whole of Chapter III in the current reprint to confirm which sections remain in force, and separately check the Criminal Procedure Code for a court's procedural sentencing powers, which this page does not cover.",
+    "lastVerified": "2026-09-11"
+  }
+]

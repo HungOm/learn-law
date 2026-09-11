@@ -5413,6 +5413,21 @@
               "text": "Each feature typically has its own provision, so an accurate answer names the offence that matches the features present rather than the most serious one available."
             },
             {
+              "t": "rule",
+              "text": "Section 320 defines grievous hurt exhaustively, as eight listed kinds. They include permanent privation of sight or hearing, fracture or dislocation, and hurt causing severe bodily pain or incapacity for ten days.",
+              "source": "Penal Code, ss 319-320"
+            },
+            {
+              "t": "rule",
+              "text": "Punishment for simple hurt is up to one year and/or a fine; for grievous hurt, up to seven years plus a fine. Each is aggravated separately where a dangerous weapon or means is used.",
+              "source": "Penal Code, ss 323, 325 (aggravated forms: ss 324, 326)"
+            },
+            {
+              "t": "rule",
+              "text": "Assault and criminal force are dealt with separately from hurt, in their own chapter. Assault is a gesture or preparation causing apprehension of imminent criminal force — words alone are not enough.",
+              "source": "Penal Code, ss 349-352"
+            },
+            {
               "t": "predict",
               "prompt": "Two accused cause identical injuries; one used a weapon. Same offence?",
               "options": [
@@ -5440,7 +5455,7 @@
             },
             {
               "t": "p",
-              "text": "So an answer must identify the mental element for the specific provision it is relying on, and apply it to the facts rather than inferring it from the harm."
+              "text": "So an answer must identify the mental element for the specific provision it relies on. It then has to apply that element to the facts, rather than inferring it from the harm."
             },
             {
               "t": "p",
@@ -5452,29 +5467,34 @@
           "id": "sec-l-non-fatal-3",
           "h": "Reading the provisions for yourself",
           "readMinutes": 2,
-          "keypoint": "This lesson names no section numbers, because this corpus has not verified them.",
+          "keypoint": "The provisions above are now verified against the official reprint; the habit of checking still matters more than the number.",
           "body": [
             {
               "t": "p",
-              "text": "You will have noticed that no section number appears above."
+              "text": "Earlier versions of this lesson named none. Nobody working on this corpus had checked them against the published Act, and an unchecked citation on a law site is worse than none."
             },
             {
               "t": "p",
-              "text": "That is deliberate. This project's rule is that a provision is cited only where someone has checked it against the published Act, and nobody here has checked the provisions on hurt."
+              "text": "They are here now because someone read the current official reprint directly. That reading was cross-checked against an earlier reprint and the most recent amendment act, and confirmed the numbers had not moved."
+            },
+            {
+              "t": "rule",
+              "text": "As at 31 May 2023, the Penal Code's provisions on hurt, grievous hurt, and criminal force and assault sit where stated above, unaffected by the amendments since.",
+              "source": "Penal Code (Act 574), AGC updated text as at 31 May 2023"
             },
             {
               "t": "p",
-              "text": "So the instruction is to open the Penal Code, find the chapter dealing with offences affecting the human body, and read the definitions and the grading provisions in order."
+              "text": "A number tells you where to look, not what you will find there. Read the definitions in full, in the chapter dealing with offences affecting the human body, before relying on this summary in an answer."
             },
             {
               "t": "checkpoint",
-              "q": "Why does this lesson give you a structure but no section numbers?",
+              "q": "A citation has appeared in a lesson that previously had none. What changed?",
               "options": [
-                "Because nobody working on this corpus has verified them against the published Act, and an unchecked citation is worse than none",
-                "Because the numbers change too often to be useful"
+                "Someone checked the section numbers against the current official reprint before writing them in — the rule was never that provisions go uncited, only that they go unverified",
+                "The rule about citing only verified provisions was relaxed for this lesson"
               ],
               "answer": 0,
-              "why": "A wrong section number on a law site looks exactly like a right one and survives every automated check. Naming the chapter and sending you to read it is the honest version, and it also builds the habit the whole reading tier exists for."
+              "why": "A wrong section number on a law site looks exactly like a right one and survives every automated check. The bar was always verification, not absence — and a citation that appears where one did not before should make you ask what changed, not assume the standard slipped."
             }
           ]
         }
@@ -5574,6 +5594,11 @@
               "text": "The mental element is demanding: an attempt generally requires the intention to commit the full offence, even where the full offence could be committed with something less."
             },
             {
+              "t": "rule",
+              "text": "The general attempt provision applies only where no other section already punishes the attempt at that particular offence. It caps the sentence at one-half of the longest term available for the completed offence.",
+              "source": "Penal Code, s 511"
+            },
+            {
               "t": "predict",
               "prompt": "Why might attempt require a higher mental element than the completed offence?",
               "options": [
@@ -5604,6 +5629,16 @@
               "text": "Common intention looks at a group acting in furtherance of an intention they shared, and can make each liable for what was done in furtherance of it."
             },
             {
+              "t": "rule",
+              "text": "Abetment is defined as instigating a thing, engaging with others in a conspiracy to do it with an act done in pursuance of it, or intentionally aiding the doing of it. An abettor who abets an act that is in fact committed, with no separate punishment provided for the abetment itself, is punished as if he had committed the offence.",
+              "source": "Penal Code, ss 107-109"
+            },
+            {
+              "t": "rule",
+              "text": "Where a criminal act is done by several persons in furtherance of a common intention, each is liable for that act. It is as if he had done it alone.",
+              "source": "Penal Code, s 34"
+            },
+            {
               "t": "p",
               "text": "The practical difference is what you must prove. For abetment, the act of assistance or instigation. For common intention, the shared intention and participation in furtherance of it."
             },
@@ -5621,21 +5656,22 @@
         },
         {
           "id": "sec-l-inchoate-participation-3",
-          "h": "Where the sections are",
+          "h": "Where the sections are, now that they are checked",
           "readMinutes": 1,
-          "keypoint": "The provisions are in the Penal Code; this lesson names none, for the same reason as the last.",
+          "keypoint": "The three routes now carry their own provisions, each verified against the current official reprint.",
           "body": [
             {
               "t": "p",
-              "text": "As with the previous lesson, no section numbers appear here."
+              "text": "As with the last lesson, no section numbers used to appear here. This project cites a provision only once someone has checked it against the published Act, and nobody had."
+            },
+            {
+              "t": "rule",
+              "text": "As at 31 May 2023, attempt, abetment and common intention sit at the sections stated above. That is unaffected by the amendments since, including a 2025 amendment act checked and confirmed to touch none of them.",
+              "source": "Penal Code (Act 574), AGC updated text as at 31 May 2023"
             },
             {
               "t": "p",
-              "text": "The Code deals with abetment and with common intention in their own places, and attempt both generally and within particular offences."
-            },
-            {
-              "t": "p",
-              "text": "Find them, read them, and write the numbers down with the date you checked."
+              "text": "Read each provision in full before applying any of it to facts. Attempt sits in the chapter on attempts, abetment in its own chapter, common intention among the Code's general explanations."
             }
           ]
         }
@@ -5771,25 +5807,34 @@
           "id": "sec-l-sentencing-3",
           "h": "What limits the court",
           "readMinutes": 1,
-          "keypoint": "A court sentences within limits set by statute, and this lesson states none of them.",
+          "keypoint": "Chapter III of the Penal Code, headed \"Punishments\", contains no general statement of sentencing purpose — that material is common law, not statute.",
           "body": [
             {
               "t": "p",
               "text": "A court is not at large. Statute sets what may be imposed for an offence, and sometimes fixes a minimum."
             },
             {
+              "t": "rule",
+              "text": "Chapter III of the Penal Code is headed \"Punishments\" (ss 53-75A), but most of it has been repealed. The original general provisions on kinds of punishment are gone. What remains is narrow. There is how a life sentence is treated for fraction calculations, a rule against double punishment for one act, which punishment applies where it is unclear which offence was committed, and doubled or mandatory-minimum sentences for repeat offenders in specified chapters.",
+              "source": "Penal Code, ss 57, 71, 72, 75, 75A"
+            },
+            {
               "t": "p",
-              "text": "Those limits are in the Penal Code and the Criminal Procedure Code, and this lesson names no section and no penalty."
+              "text": "Retribution, deterrence, protection and rehabilitation are common law doctrine. They were developed by the courts rather than enacted by Parliament. That is exactly why the last section could state them without a section number, and why one will not appear for them here."
+            },
+            {
+              "t": "p",
+              "text": "The specific range for an offence — the maximum, and any mandatory minimum — sits with that offence's own punishment provision, not in Chapter III. Sentencing procedure and a court's powers on conviction sit in the Criminal Procedure Code, which this lesson has not checked and does not cite."
             },
             {
               "t": "checkpoint",
-              "q": "Before advising a convicted client on likely sentence, what must you establish first?",
+              "q": "Where does a court find the purposes of sentencing it is meant to balance?",
               "options": [
-                "The purposes of sentencing",
-                "What the statute permits for this offence, including any minimum"
+                "Nowhere in the Penal Code — they are common law, not a statutory list",
+                "Chapter III of the Penal Code, which lists them"
               ],
-              "answer": 1,
-              "why": "Purposes shape an argument within a range. The range itself comes from the statute, and advice given without checking it can promise something the court has no power to give."
+              "answer": 0,
+              "why": "Checking Chapter III directly turned up no general sentencing-purposes provision — most of the chapter is repealed, and what remains is a handful of narrow technical rules. An answer that cites a Penal Code section for 'the purposes of sentencing' is citing something that is not there."
             }
           ]
         }
