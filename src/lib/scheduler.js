@@ -59,7 +59,11 @@ export function newState(cardId, moduleId, now = new Date()) {
   return { id: cardId, moduleId, ...serialise(empty) };
 }
 
-function serialise(c) {
+// Exported for `vocab.js`, which schedules glossary terms with the same FSRS
+// engine against its own store. Pure field mapping — Date <-> ISO string — with
+// no rating, retention or interval arithmetic in either direction. Exported so
+// there is ONE state mapping rather than two copies that drift.
+export function serialise(c) {
   return {
     due: c.due instanceof Date ? c.due.toISOString() : c.due,
     stability: c.stability,
@@ -76,7 +80,7 @@ function serialise(c) {
   };
 }
 
-function deserialise(row) {
+export function deserialise(row) {
   return {
     due: new Date(row.due),
     stability: row.stability,

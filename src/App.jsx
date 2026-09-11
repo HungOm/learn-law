@@ -27,6 +27,7 @@ import StatuteView from './routes/StatuteView.jsx';
 import Progress from './routes/Progress.jsx';
 import Seals from './routes/Seals.jsx';
 import Glossary from './routes/Glossary.jsx';
+import Vocab from './routes/Vocab.jsx';
 import Settings from './routes/Settings.jsx';
 import NotFound from './routes/NotFound.jsx';
 
@@ -131,6 +132,10 @@ export default function App() {
                 <Route path="/progress"        element={<Page><Progress /></Page>} />
                 <Route path="/seals"           element={<Page><Seals /></Page>} />
                 <Route path="/glossary"        element={<Page><Glossary /></Page>} />
+                {/* Vocabulary review is its own route rather than part of /review:
+                    legal cards and English words are different work, come from
+                    different stores, and a reader may want one without the other. */}
+                <Route path="/vocab"           element={<Page><Vocab /></Page>} />
                 <Route path="/settings"        element={<Page><Settings /></Page>} />
                 <Route path="*"                element={<Page><NotFound /></Page>} />
               </Routes>

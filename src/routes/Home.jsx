@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useStudy } from '../state/StudyContext.jsx';
 import * as sched from '../lib/scheduler.js';
 import * as lessonsLib from '../lib/lessons.js';
+import * as vocab from '../lib/vocab.js';
 import { ArrRow, CountUp, Notice, ProgressRing, TodayCard } from '../components/Bits.jsx';
 import CurriculumMap from '../components/CurriculumMap.jsx';
 import { TERMS } from '../lib/glossary.js';
@@ -12,8 +13,14 @@ import { plural } from '../lib/format.js';
 export default function Home() {
   const { cat, counts, read, game, rank, goal } = useStudy();
   const [byModule, setByModule] = useState({});
+  // Vocabulary counts, fetched here rather than held in StudyProvider because
+  // they come from their own store and nothing else on this page needs them.
+  const [words, setWords] = useState({ met: 0, due: 0 });
 
   useEffect(() => { sched.countsByModule().then(setByModule); }, [counts]);
+  // Never let a counts failure take the home page down: vocabulary is an extra
+  // here, and a reader with no words met is the normal first case, not an error.
+  useEffect(() => { vocab.counts().then(setWords).catch(() => {}); }, []);
 
   const total = counts.due + counts.fresh;
   const nextLesson = lessonsLib.nextUnread(cat.lessons, read);
@@ -76,6 +83,13 @@ export default function Home() {
                 {total ? `Review ${total}` : 'Review'}
               </Link>
               <Link className="btn" to="/arena">Arena</Link>
+              {/* Shown only once there is something to review. A reader who has
+                  never looked a word up has an empty vocabulary queue, and a
+                  permanent button to an empty page reads as a broken feature
+                  rather than an untouched one. */}
+              {words.due > 0 && (
+                <Link className="btn" to="/vocab">Words {words.due}</Link>
+              )}
               {nextLesson && <Link className="btn" to={`/lesson/${nextLesson.id}`}>Next lesson</Link>}
             </div>
           </div>

@@ -2,7 +2,16 @@
 // but not a cleared cache — hence the export in settings.
 
 const DB_NAME = 'lawstudy';
-const DB_VERSION = 1;
+// 2: added `termState`. Glossary terms are scheduled by FSRS the same way
+// cards are, but in their OWN store rather than in `cardState` with a `kind`
+// field. That is not tidiness: `buildQueue`, `counts` and `countsByModule` in
+// scheduler.js each scan the whole of `cardState` with no kind filter, so a
+// shared store would silently change every number the app shows about legal
+// cards — Home, Progress, Arena, every module page — and the damage would
+// present as a counting bug in four places rather than a scheduling decision in
+// one. A separate store makes that impossible instead of relying on a filter
+// nobody forgets.
+const DB_VERSION = 2;
 
 let _db = null;
 
@@ -52,6 +61,16 @@ export function open() {
       if (!db.objectStoreNames.contains('meta')) {
         db.createObjectStore('meta', { keyPath: 'key' });
       }
+      if (!db.objectStoreNames.contains('termState')) {
+        // one row per glossary term id, same FSRS shape as `cardState`.
+        // Terms are NOT seeded in bulk: a term enters the schedule the first
+        // time a reader looks it up, because a lookup is the honest signal
+        // that they did not know it. Seeding all 499 would hand a reader a
+        // backlog they never asked for and would say nothing about what they
+        // actually find hard.
+        const v = db.createObjectStore('termState', { keyPath: 'id' });
+        v.createIndex('due', 'due');
+      }
     };
     req.onsuccess = () => { _db = req.result; askToPersist(); resolve(_db); };
     req.onerror = () => reject(req.error);
@@ -99,6 +118,13 @@ export const attempts = {
     run('attempts', 'readonly', s => req(s.index('moduleId').getAll(moduleId))),
 };
 
+export const termState = {
+  get: (id) => run('termState', 'readonly', s => req(s.get(id))),
+  all: () => run('termState', 'readonly', s => req(s.getAll())),
+  put: (row) => run('termState', 'readwrite', s => req(s.put(row))),
+  del: (id) => run('termState', 'readwrite', s => req(s.delete(id))),
+};
+
 export const meta = {
   get: async (key, fallback = null) => {
     const row = await run('meta', 'readonly', s => req(s.get(key)));
@@ -112,21 +138,36 @@ export const meta = {
 // The single most important feature in a browser-storage app. Clearing site
 // data wipes years of review history; there is no server copy.
 
-const BACKUP_STORES = ['cardState', 'reviewLog', 'attempts', 'meta'];
+const BACKUP_STORES = ['cardState', 'reviewLog', 'attempts', 'meta', 'termState'];
 
+// `exportAll` iterates BACKUP_STORES the way `importAll` already does. It used
+// to destructure positionally — `(cs, rl, at, mt)` — and hand-build the payload
+// from four literal keys, which made the two halves asymmetric in a way that
+// was not merely lossy but destructive:
+//
+//   Adding a store to BACKUP_STORES put it in the transaction, but `exportAll`
+//   never called getAll() on it and never wrote its key into the payload. Then
+//   `importAll` — which DOES iterate — would `s.clear()` that store and restore
+//   `(payload[name] || [])`, an empty array. Restoring any backup would wipe
+//   the new store rather than fail to restore it. On a browser-storage app with
+//   no server copy that is the worst failure available.
+//
+// The asymmetry was the defect; `termState` was only the first store to meet
+// it. Iterating on both sides means the next one added cannot reintroduce it.
 export async function exportAll() {
-  const out = await run(BACKUP_STORES, 'readonly', (cs, rl, at, mt) => {
-    const reqs = { cardState: cs.getAll(), reviewLog: rl.getAll(), attempts: at.getAll(), meta: mt.getAll() };
-    return reqs;
-  });
+  const out = await run(BACKUP_STORES, 'readonly', (...stores) =>
+    Object.fromEntries(BACKUP_STORES.map((name, i) => [name, stores[i].getAll()])));
   return {
     format: 'lawstudy-backup',
-    version: 1,
+    // 2: adds `termState`. Bumped because the payload's SHAPE changed; a file
+    // whose contents differ from what its version claims is worse than either
+    // number. `importAll` does not gate on this — it restores whatever keys it
+    // finds — so the bump is honest labelling rather than a compatibility
+    // check. Restoring is a full replace, so a v1 file legitimately clears
+    // `termState`: that is the existing semantic for every store, not new.
+    version: 2,
     exportedAt: new Date().toISOString(),
-    cardState: out.cardState.result,
-    reviewLog: out.reviewLog.result,
-    attempts: out.attempts.result,
-    meta: out.meta.result,
+    ...Object.fromEntries(BACKUP_STORES.map(name => [name, out[name].result])),
   };
 }
 
