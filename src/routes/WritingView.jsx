@@ -112,12 +112,37 @@ export default function WritingView() {
   const idx = Math.min(step, visible.length - 1);
   const on = k => !stepping || visible[idx][0] === k;
 
+  // Enter focus mode AT a given stage rather than always at the first one.
+  // `step` indexes into `visible`, which has the reveal stage (k=4) filtered
+  // out until there is a draft — so a stage's k and its position in `visible`
+  // only coincide by accident, and jumping by k directly can land on the wrong
+  // stage or on none. This is the same fix LessonView already has for
+  // sections (`daf2eee`): the control lives where the reader already is,
+  // rather than only at the foot of the whole exercise where a reader four
+  // stages in would have to scroll back past everything to find it.
+  const enterAt = k => {
+    const pos = visible.findIndex(([kk]) => kk === k);
+    if (pos < 0) return;
+    setStep(pos);
+    setStepPref(true);
+    setFocus(true);
+    window.scrollTo({ top: 0 });
+  };
+
   // The stages, rendered identically whether they are inline on the page or
   // alone inside the reader — one definition so the two cannot drift.
   const stagesNode = (
     <>
       {on(0) && (<>
       <h2>The brief</h2>
+
+      {!stepping && (
+        <p className="lsec-mode">
+          <button type="button" className="stepper-mode-btn" onClick={() => enterAt(0)}>
+            Read one stage at a time
+          </button>
+        </p>
+      )}
       <p>{w.brief}</p>
       <p className="small"><strong>Who you are writing for.</strong> {w.audience}</p>
 
@@ -136,6 +161,14 @@ export default function WritingView() {
 
       {on(1) && (<>
       <h2>Before you start</h2>
+
+      {!stepping && (
+        <p className="lsec-mode">
+          <button type="button" className="stepper-mode-btn" onClick={() => enterAt(1)}>
+            Read one stage at a time
+          </button>
+        </p>
+      )}
       <div className="arrangement">
         {w.before.map((b, i) => (
           <div className="arr-row is-static" key={i}>
@@ -150,6 +183,14 @@ export default function WritingView() {
 
       {on(2) && (<>
       <h2>How to build it</h2>
+
+      {!stepping && (
+        <p className="lsec-mode">
+          <button type="button" className="stepper-mode-btn" onClick={() => enterAt(2)}>
+            Read one stage at a time
+          </button>
+        </p>
+      )}
       <div className="arrangement">
         {w.scaffold.map((s, i) => (
           <div className="arr-row is-static" key={i}>
@@ -200,6 +241,14 @@ export default function WritingView() {
       {on(3) && (<>
 
       <h2>Your draft</h2>
+
+      {!stepping && (
+        <p className="lsec-mode">
+          <button type="button" className="stepper-mode-btn" onClick={() => enterAt(3)}>
+            Read one stage at a time
+          </button>
+        </p>
+      )}
       <p className="small">
         This stays on your device. Nothing is uploaded — there is nowhere to upload it to.
       </p>
@@ -230,7 +279,15 @@ export default function WritingView() {
       {on(4) && drafted && (
         <>
           <h2>The shape a good answer has</h2>
-          <div className="arrangement">
+
+      {!stepping && (
+        <p className="lsec-mode">
+          <button type="button" className="stepper-mode-btn" onClick={() => enterAt(4)}>
+            Read one stage at a time
+          </button>
+        </p>
+      )}
+      <div className="arrangement">
             {w.structure.map((s, i) => (
               <div className="arr-row is-static" key={i}>
                 <span className="arr-num">{i + 1}</span>
@@ -240,7 +297,7 @@ export default function WritingView() {
                 </span>
               </div>
             ))}
-          </div>
+      </div>
 
           {/* Marking your own writing is the weakest part of studying alone —
               the gap between what you meant and what you wrote is invisible
@@ -279,7 +336,7 @@ export default function WritingView() {
                 </span>
               </div>
             ))}
-          </div>
+      </div>
 
           <div className="checkpointblock">
             <span className="xlabel">One thing to do differently</span>
@@ -314,8 +371,7 @@ export default function WritingView() {
               </button>
             </p>
           )}
-
-          <h2>How this usually goes wrong</h2>
+      <h2>How this usually goes wrong</h2>
           <div className="arrangement">
             {w.faults.map((f, i) => (
               <div className="arr-row is-static" key={i}>
@@ -323,12 +379,20 @@ export default function WritingView() {
                 <span><span className="arr-title">{f}</span></span>
               </div>
             ))}
-          </div>
+      </div>
         </>
       )}
 
       {on(5) && (<>
       <h2>Sources</h2>
+
+      {!stepping && (
+        <p className="lsec-mode">
+          <button type="button" className="stepper-mode-btn" onClick={() => enterAt(5)}>
+            Read one stage at a time
+          </button>
+        </p>
+      )}
       <p className="small">{w.source}</p>
       <p className="small"><strong>Check your own work.</strong> {w.verify}</p>
       <p className="small">Last verified {w.lastVerified}.</p>
