@@ -72,7 +72,33 @@ export function open() {
         v.createIndex('due', 'due');
       }
     };
-    req.onsuccess = () => { _db = req.result; askToPersist(); resolve(_db); };
+    req.onsuccess = () => {
+      _db = req.result;
+      // If ANOTHER tab later opens a higher version, it will block on this
+      // connection exactly as described below. Stepping out of the way is the
+      // only cooperative thing to do: hold on, and the other tab hangs.
+      _db.onversionchange = () => { try { _db.close(); } catch { /* already gone */ } _db = null; };
+      askToPersist();
+      resolve(_db);
+    };
+
+    // The hang this exists to stop. Raising DB_VERSION means every open
+    // connection at the old version has to close before the upgrade can run.
+    // A second tab still on the old version blocks it — and a blocked request
+    // fires NEITHER onsuccess NOR onerror, so a promise with only those two
+    // handlers never settles. The provider awaits it, `ready` never becomes
+    // true, and the app sits on "Opening the file — reading your progress from
+    // this device" for ever, with no error anywhere to say why.
+    //
+    // Rejecting is not a fix for the situation; it is a fix for the SILENCE.
+    // The reader gets a screen that names the cause and the action, which is
+    // the difference between a bug they can clear themselves and one that
+    // looks like their progress is gone.
+    req.onblocked = () => reject(new Error(
+      'Another tab has this site open and is still using an older version of its '
+      + 'storage. Close the other tabs showing this site, then reload this page. '
+      + 'Nothing has been lost.',
+    ));
     req.onerror = () => reject(req.error);
   });
 }
