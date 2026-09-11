@@ -526,7 +526,10 @@ async function unlockEverything(page) {
     process.exit(1);
   }
   await page.evaluate(() => new Promise((resolve, reject) => {
-    const open = indexedDB.open('lawstudy', 1);
+    const open = indexedDB.open('lawstudy')  // no version: the harness seeds an existing
+      // database, it does not own the schema. Naming a version here made this
+      // a second copy of DB_VERSION that nothing kept in step — when db.js went
+      // to 2, every gate holding a 1 died with VersionError mid-walk.;
     open.onerror = () => reject(open.error);
     open.onsuccess = () => {
       const db = open.result;

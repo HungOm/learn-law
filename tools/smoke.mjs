@@ -139,7 +139,11 @@ try {
   // configuration the app actually ships.
   await page.goto(base, { waitUntil: 'load' });
   await page.evaluate(() => new Promise((res, rej) => {
-    const o = indexedDB.open('lawstudy', 1);
+    // No version: the harness seeds an existing database, it does not own the
+    // schema. Naming a version here made this a second copy of DB_VERSION that
+    // nothing kept in step — when db.js went to 2, every gate holding a 1 died
+    // with VersionError mid-walk, which reads like a broken route.
+    const o = indexedDB.open('lawstudy');
     o.onerror = () => rej(o.error);
     o.onsuccess = () => { const db = o.result;
       const t = db.transaction('meta', 'readwrite');
